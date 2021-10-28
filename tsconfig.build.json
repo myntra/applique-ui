@@ -1,0 +1,13 @@
+{
+  "include": ["src/"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

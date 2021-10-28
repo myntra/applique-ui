@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should accept narrow 1`] = `"<div class=\\"column narrow narrow-mobile narrow-tablet narrow-desktop\\"></div>"`;
+
+exports[`should accept offsets 1`] = `"<div class=\\"column offset-4 offset-5-mobile offset-4-tablet offset-3-desktop\\"></div>"`;
+
+exports[`should accept sizes 1`] = `"<div class=\\"column is-4 is-5-mobile is-4-tablet is-3-desktop\\"></div>"`;
+
+exports[`should render grid wrapper 1`] = `"<div class=\\"column\\"></div>"`;

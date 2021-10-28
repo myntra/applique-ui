@@ -1,0 +1,22 @@
+@import '@accoutrement';
+
+.title {
+  padding-bottom: size('3x');
+  margin-top: 0;
+  margin-bottom: size('3x');
+  border-bottom: 1px solid color('gray-dark');
+}
+
+.wrapper {
+  min-width: 320px;
+  min-height: 320px;
+  padding: size('6x');
+  background: color('white');
+}
+
+.actions {
+  padding-top: size('6x');
+  margin-top: size('6x');
+  text-align: right;
+  border-top: 1px solid color('gray-dark');
+}

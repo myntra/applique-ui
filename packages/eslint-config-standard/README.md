@@ -1,0 +1,1 @@
+# @myntra/eslint-config-standard

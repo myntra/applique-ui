@@ -1,0 +1,137 @@
+$-vertical-grid-size: 16px !default;
+
+$-sizes: () !default;
+$-sizes: merge((
+  '2xs': $-vertical-grid-size * 0.25,
+  'xs': $-vertical-grid-size * 0.5,
+  's': $-vertical-grid-size * 0.75,
+  'r': $-vertical-grid-size,
+  'l': $-vertical-grid-size * 1.25,
+  'xl': $-vertical-grid-size * 1.5,
+  '2xl': $-vertical-grid-size * 1.75,
+), $-sizes);
+
+$-spacing: () !default;
+$-spacing: merge(
+  (
+    'small': $-vertical-grid-size * 1.25,
+    'regular': $-vertical-grid-size * 1.5,
+    'medium': $-vertical-grid-size * 2,
+    'large': $-vertical-grid-size * 2.5,
+
+    '1x': $-vertical-grid-size * 1,
+    '2x': $-vertical-grid-size * 2,
+    '3x': $-vertical-grid-size * 3,
+    '4x': $-vertical-grid-size * 4,
+    '6x': $-vertical-grid-size * 6,
+  ),
+  $-spacing
+);
+
+@function ui-size($name: r) {
+  @return map-get-or-throw(
+    $-sizes,
+    $name,
+    "UIKit(size): Unknown size name: #{$name}"
+  );
+}
+
+@function ui-relative-size($name: r) {
+  @return to-rem(
+    ui-size($name)
+  );
+}
+
+@function ui-context-size($name: r) {
+  @return to-em(
+    ui-size($name)
+  );
+}
+
+@function ui-space($name: '1x') {
+  @return map-get-or-throw(
+    $-spacing,
+    $name,
+    "UIKit(space): Unknown size name: #{$name}"
+  );
+}
+
+@function ui-relative-space($name: '1x') {
+  @return to-rem(ui-space($name));
+}
+
+@function ui-context-space($name: '1x') {
+  @return to-em(ui-space($name));
+}
+
+$-border-radii: () !default;
+$-border-radii: merge(
+  (
+    small: ui-size('2xs'),
+    medium: ui-size(xs),
+    large: ui-size(s)
+  ),
+  $-border-radii
+);
+
+@function ui-border-radius($size: small) {
+  @return map-get-or-throw(
+    $-border-radii,
+    $size,
+    "UIKit(border-radius): Unknown size name: #{$size}"
+  );
+}
+
+@function ui-relative-border-radius($size: small) {
+  @return to-rem(ui-border-radius($size));
+}
+
+@function ui-context-border-radius($size: small) {
+  @return to-em(ui-border-radius($size));
+}
+
+@function to-em($values, $current-font-size: $-vertical-grid-size) {
+  $base: strip-unit($current-font-size);
+  $result: ();
+
+  @each $value in $values {
+    $unit: unit($value);
+    $val: strip-unit($value);
+
+    @if $unit == 'px' {
+      $result: append($result, $val / $base * 1em);
+    } @else if ($unit == 'em') {
+      $result: append($result, $value);
+    } @else {
+      $result: append(
+        $result,
+        throw-error('There is no unit conversion for "#{$unit}"')
+      );
+    }
+  }
+
+  @return $result;
+}
+
+@function to-rem($values, $current-font-size: $-vertical-grid-size) {
+  $base: strip-unit($current-font-size);
+  $result: ();
+
+  @each $value in $values {
+    $unit: unit($value);
+    $val: strip-unit($value);
+
+    @if $unit == 'px' {
+      $result: append($result, $val / $base * 1rem);
+    } @else if ($unit == 'rem') {
+      $result: append($result, $value);
+    } @else {
+      $result: append(
+        $result,
+        throw-error('There is no unit conversion for "#{$unit}"')
+      );
+    }
+  }
+
+  @return $result;
+}

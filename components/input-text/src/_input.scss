@@ -1,0 +1,30 @@
+@mixin mixin-input-component {
+  padding: padding('input');
+  font-size: inherit;
+  color: text-color('dark');
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid color('gray-dark');
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: color('text-dark-medium-emphasis');
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: color('text-dark-disabled');
+  }
+
+  &:not(:read-only) {
+    &:focus {
+      border-bottom: 1px solid color('primary');
+    }
+    &:hover {
+      border-bottom: 1px solid color('primary-light');
+    }
+  }
+}

@@ -1,0 +1,146 @@
+import JobTracker from './src/job-tracker'
+
+# JobTracker
+
+<Documenter component={JobTracker}>
+
+```jsx preview
+const [data] = useState([
+  {
+    id: 123,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "IN_PROGRESS",
+    totalStepCount: 100,
+    completedStepCount: 30
+  },
+  {
+    id: 321,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "HALTED",
+    totalStepCount: 100,
+    completedStepCount: 30
+  },
+  {
+    id: 234,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1544643683000,
+    successFileName: "success.xslx",
+    errorFileName: "error.xslx",
+    status: "FAILED",
+    totalStepCount: 100,
+    completedStepCount: 30
+  },
+  {
+    id: 444,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1544643683000,
+    fileName: "success.xslx",
+    status: "COMPLETED",
+    totalStepCount: 100,
+    completedStepCount: 30
+  }
+]);
+
+<JobTracker data={data}/>
+```
+
+</Documenter>
+
+# JobTracker for workflow service
+
+```jsx preview
+const [data] = useState([
+  {
+    id: 123,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "IN_PROGRESS",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  },
+  {
+    id: 321,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "HALTED",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  },
+  {
+    id: 234,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1544643683000,
+    status: "FAILED",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  },
+  {
+    id: 444,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1544643683000,
+    fileName: "success.xslx",
+    status: "COMPLETED",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  }
+]);
+
+<JobTracker data={data} service='workflow' projectName='mdirect'/>
+```
+# JobTracker with different date dateFormat
+
+```jsx preview
+const [data] = useState([
+  {
+    id: 123,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "IN_PROGRESS",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  },
+  {
+    id: 321,
+    createdBy: "Ash Ketchum",
+    remark: "Gotta catch 'em all",
+    createdOn: 1542623683000,
+    status: "HALTED",
+    workflowInstanceId: "dsdsds",
+    taskInstance: 1232,
+  }
+])
+
+<JobTracker data={data} dateFormat="ddd, MMM DD, YYYY"/>
+```
+# JobTracker with Progress bar
+
+```jsx preview
+const [value, setValue] = useState();
+const [data] = useState([
+  { id: 2334675, remarks: '0: Failed, 1: Passed', progress: {status: 'danger', value: 20}, status: 'INTERRUPTED', initiatedDate: "2020-01-01" },
+  { id: 2334676, remarks: '0: Failed, 1: Passed', progress: {status: 'success', value: 100}, status: 'COMPLETED', initiatedDate: "2020-01-01" },
+  { id: 2334677, remarks: '0: Failed, 1: Passed', progress: {status: 'warning', value: 100}, status: 'COMPLETED', initiatedDate: "2020-01-01" },
+  { id: 2334678, remarks: '0: Failed, 1: Passed', progress: {status: 'info', value: 75}, status: 'COMPLETED', initiatedDate: "2020-01-01" }
+]);
+
+<Table data={data}>
+  <Table.Column label="Id" key="id" />
+  <Table.Column label="Remarks" key="remarks" />
+  <Table.Column label="Progress" key="age" width="30%">
+    {({ data }) => <Progress type="bar" showValue appearance={data.progress.status} value={data.progress.value} />}
+  </Table.Column>
+  <Table.Column label="Status" key="status" />
+  <Table.Column label="Initiated Date" key="initiatedDate" />
+</Table>
+```

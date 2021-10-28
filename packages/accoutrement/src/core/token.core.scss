@@ -1,0 +1,9 @@
+@function token($map, $key, $default: null) {
+  $value: get-token($map, $key);
+
+  @if ($value == $key) {
+    @return $default;
+  }
+
+  @return $value;
+}

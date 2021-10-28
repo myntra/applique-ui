@@ -1,0 +1,11 @@
+@import '@accoutrement';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress {
+  @include margin-right('input-file.progress');
+}

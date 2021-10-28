@@ -1,0 +1,17 @@
+import InputRadio from './src/input-radio'
+
+# InputRadio
+
+<Documenter component={InputRadio}>
+
+```jsx preview
+const [options] = useState([
+  { title: 'PASS', value: 'ok' },
+  { title: 'RETRY', value: 'error' }
+]);
+const [value, setValue] = useState();
+
+<InputRadio value={value} onChange={setValue} options={options}/>
+```
+
+</Documenter>

@@ -1,0 +1,61 @@
+@import '@accoutrement';
+
+.bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 100px;
+
+  --u-progress-size: 8px;
+
+  &.small {
+    --u-progress-size: 4px;
+  }
+
+  &.medium {
+    --u-progress-size: 16px;
+  }
+
+  &.large {
+    --u-progress-size: 32px;
+  }
+
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .background {
+    width: 100%;
+    height: var(--u-progress-size);
+    background-color: color('gray-light');
+
+    @include border-radius('button');
+  }
+
+  .foreground {
+    height: 100%;
+    background-color: var(--u-progress-color);
+
+    @include border-radius('button');
+  }
+
+  .value {
+    margin-left: size('2x');
+  }
+}
+
+.info {
+  --u-progress-color: #{color('primary')};
+}
+
+.success {
+  --u-progress-color: #{color('success')};
+}
+
+.warning {
+  --u-progress-color: #{color('warning')};
+}
+
+.danger {
+  --u-progress-color: #{color('danger')};
+}

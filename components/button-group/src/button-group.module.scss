@@ -1,0 +1,12 @@
+@import '@accoutrement';
+
+.menu {
+  @include margin-left('large');
+
+  vertical-align: middle;
+}
+
+.items {
+  max-height: 300px;
+  background: color('white');
+}

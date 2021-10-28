@@ -1,0 +1,44 @@
+@import '@accoutrement';
+
+.title {
+  display: block;
+  text-transform: uppercase;
+
+  @include typography('caption');
+}
+
+.required {
+  padding-left: 2px;
+  color: color('danger');
+}
+
+.meta {
+  height: 1.5em;
+  margin-top: margin-top('small');
+  margin-bottom: negative(margin-bottom('field') - 1);
+  overflow: hidden;
+}
+
+.meta:hover {
+  overflow: visible;
+}
+
+.meta > * {
+  color: color('text-dark-medium-emphasis'); // TODO: Change to mid-emphasis.
+
+  @include typography('caption');
+}
+
+.meta > [role='alert'] {
+  color: color('danger');
+}
+
+.container {
+  @include margin-bottom('field');
+  &.disabled {
+    color: color('text-dark-disabled');
+    .meta > * {
+      color: color('text-dark-disabled');
+    }
+  }
+}

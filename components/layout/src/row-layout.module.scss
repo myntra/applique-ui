@@ -1,0 +1,27 @@
+@import '@accoutrement';
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  &.small {
+    --u-layout-row-margin-bottom: #{margin-bottom('small')};
+  }
+  &.medium {
+    --u-layout-row-margin-bottom: #{margin-bottom('medium')};
+  }
+  &.large {
+    --u-layout-row-margin-bottom: #{margin-bottom('large')};
+  }
+  &.none {
+    --u-layout-row-margin-bottom: #{margin-bottom('none')};
+  }
+
+  > * {
+    min-width: 100%;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: var(--u-layout-row-margin-bottom);
+  }
+}

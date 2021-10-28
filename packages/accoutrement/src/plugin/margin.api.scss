@@ -1,0 +1,101 @@
+@function margin($token) {
+  @return size('margin-#{$token}');
+}
+
+@mixin margin($token, $explode: false) {
+  @if $explode {
+    @include margin-top($token);
+    @include margin-right($token);
+    @include margin-bottom($token);
+    @include margin-left($token);
+  } @else {
+    margin: size('margin-#{$token}');
+  }
+}
+
+@function margin-top($token) {
+  @return get-direction-value(size('margin-#{$token}'), 'top');
+}
+
+@mixin margin-top($token) {
+  margin-top: margin-top($token);
+}
+
+@function margin-right($token) {
+  @return get-direction-value(size('margin-#{$token}'), 'right');
+}
+
+@mixin margin-right($token) {
+  margin-right: margin-right($token);
+}
+
+@function margin-bottom($token) {
+  @return get-direction-value(size('margin-#{$token}'), 'bottom');
+}
+
+@mixin margin-bottom($token) {
+  margin-bottom: margin-bottom($token);
+}
+
+@function margin-left($token) {
+  @return get-direction-value(size('margin-#{$token}'), 'left');
+}
+
+@mixin margin-left($token) {
+  margin-left: margin-left($token);
+}
+
+@function margin-top($token) {
+  @return get-direction-value(size('margin-#{$token}'), 'top');
+}
+
+@mixin margin-top($token) {
+  margin-top: margin-top($token);
+}
+
+@function var-margin($token) {
+  @return var-size('margin-#{$token}');
+}
+
+@mixin var-margin($token, $explode: false) {
+  @if $explode {
+    @include var-margin-top($token);
+    @include var-margin-right($token);
+    @include var-margin-bottom($token);
+    @include var-margin-left($token);
+  } @else {
+    margin: var-size('margin-#{$token}');
+  }
+}
+
+@function var-margin-top($token) {
+  @return get-direction-value(var-size('margin-#{$token}'), 'top');
+}
+
+@mixin var-margin-top($token) {
+  margin-top: var-margin-top($token);
+}
+
+@function var-margin-right($token) {
+  @return get-direction-value(var-size('margin-#{$token}'), 'right');
+}
+
+@mixin var-margin-right($token) {
+  margin-right: var-margin-right($token);
+}
+
+@function var-margin-bottom($token) {
+  @return get-direction-value(var-size('margin-#{$token}'), 'bottom');
+}
+
+@mixin var-margin-bottom($token) {
+  margin-bottom: var-margin-bottom($token);
+}
+
+@function var-margin-left($token) {
+  @return get-direction-value(var-size('margin-#{$token}'), 'left');
+}
+
+@mixin var-margin-left($token) {
+  margin-left: var-margin-left($token);
+}

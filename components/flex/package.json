@@ -1,0 +1,32 @@
+{
+  "name": "@myntra/uikit-component-flex",
+  "version": "1.13.63",
+  "main": "dist/flex.cjs.js",
+  "module": "dist/flex.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/flex",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/flex",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "latest"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@myntra/uikit-utils": "1.13.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+  }
+}

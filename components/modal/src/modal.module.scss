@@ -1,0 +1,47 @@
+@import '@accoutrement';
+
+.modal {
+  @include padding('modal');
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: z-index('modal');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.body {
+  position: relative;
+}
+
+.content {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: negative(size('3x'));
+  right: negative(size('8x'));
+  padding-right: 0;
+  color: text-color('light');
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

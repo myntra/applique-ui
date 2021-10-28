@@ -1,0 +1,17 @@
+/// @param {map} $map
+/// @param {string} $prefix
+@function map-prefix($map, $prefix) {
+  $target: ();
+  $values: map-keys($map);
+
+  @each $key, $value in $map {
+    $target: map-merge(
+      $target,
+      (
+        '#{$prefix}#{$key}': list-prefix($value, $prefix, $values),
+      )
+    );
+  }
+
+  @return $target;
+}

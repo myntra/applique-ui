@@ -1,0 +1,126 @@
+// stylelint-disable
+
+@import '../accoutrement/src/index.scss';
+@import '../accoutrement/node_modules/normalize.css/normalize';
+
+/**
+* 1. Use the system font stack as a sane default.
+* 2. Use default "normal" line-height so the user isn't forced to override it to ensure consistency.
+*/
+
+html {
+  @include font-family('body'); /* 1 */
+
+  line-height: 1.5; /* 2 */
+}
+
+body {
+  font-size: font-size('body');
+}
+
+*,
+*::before,
+*::after {
+  border-color: currentColor;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: currentColor;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: currentColor;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: currentColor;
+}
+
+button,
+[role='button'] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

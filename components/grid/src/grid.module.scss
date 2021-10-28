@@ -1,0 +1,47 @@
+@import './helper';
+
+// -- Row --
+.container {
+  --column-gap: #{size('4x')};
+  --column-inset: calc(var(--column-gap) / 2);
+  --column-outset: calc(1 - var(--column-gap) / 2);
+
+  box-sizing: border-box;
+  display: flex;
+  margin-right: var(--column-outset);
+  margin-left: var(--column-outset);
+
+  &.hcentered,
+  &.centered {
+    justify-content: center;
+  }
+  &.multiline {
+    flex-wrap: wrap;
+  }
+  &.vcentered,
+  &.centered {
+    align-items: center;
+  }
+  &.gapless .column {
+    --column-gap: 0;
+  }
+
+  &.variable-gap {
+    --column-gap: #{size('4x')};
+
+    $sizes: (
+      'none': 0,
+      'xx-small': size('1x'),
+      'x-small': size('2x'),
+      'small': size('3x'),
+      'base': size('4x'),
+      'large': size('6x'),
+    );
+
+    @each $size, $value in $sizes {
+      &.gap-#{$size} {
+        --column-gap: #{$value};
+      }
+    }
+  }
+}

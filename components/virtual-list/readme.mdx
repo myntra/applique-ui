@@ -1,0 +1,35 @@
+import VirtualList from './src/virtual-list'
+
+# VirtualList
+
+<Documenter component={VirtualList}>
+
+```jsx preview
+const [items] = useState(
+  Array(5000)
+    .fill(0)
+    .map(() => ~~(50 * Math.random()))
+);
+
+<VirtualList
+  itemCount={5000}
+  viewportSize={250}
+  style={{ height: '250px', minWidth: '200px' }}
+>
+  {({ index, style }) => (
+    <div
+      style={{
+        padding: `${10 + items[index]}px 24px`,
+        backgroundColor: `hsl(${(index * 15) % 360}deg, 75%, 80%)`,
+        ...style,
+        left: 0,
+        right: 0,
+      }}
+    >
+      Hello {index + 1} ({items[index]})
+    </div>
+  )}
+</VirtualList>
+```
+
+</Documenter>

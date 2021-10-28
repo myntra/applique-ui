@@ -1,0 +1,19 @@
+@function outline($outline, $source: $outlines) {
+  @return get-token($source, $outline);
+}
+
+@function var-outline($outline, $source: $outlines) {
+  @return var-token($source, $outline);
+}
+
+@mixin outline($outline, $source: $outlines) {
+  outline: get-token($source, $outline);
+}
+
+@mixin outline--($outline, $value, $fallback: true, $source: $outlines) {
+  @include token--($source, $outline, $value, $fallback, 'outline');
+}
+
+@mixin outlines--($source: $outlines) {
+  @include tokens--($source, 'outline');
+}

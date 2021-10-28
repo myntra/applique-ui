@@ -1,0 +1,35 @@
+{
+  "name": "@myntra/uikit-component-button-group",
+  "version": "1.13.63",
+  "main": "dist/button-group.cjs.js",
+  "module": "dist/button-group.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/button-group",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/button-group",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "latest"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@myntra/uikit-component-button": "1.13.*",
+    "@myntra/uikit-component-dropdown": "1.13.*",
+    "@myntra/uikit-component-list": "1.13.*",
+    "@myntra/uikit-utils": "1.13.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+  }
+}

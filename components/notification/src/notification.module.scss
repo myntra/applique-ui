@@ -1,0 +1,62 @@
+@import '@accoutrement';
+
+.notification {
+  @include z-index('notification');
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  flex-direction: column;
+  width: 0;
+  transition: all 0.35s;
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.54);
+  }
+
+  .body {
+    position: relative;
+    height: 100%;
+    background: color('white');
+  }
+
+  .title {
+    font-size: size('5x');
+    font-weight: 500;
+    border-bottom: 1px solid color('gray-light');
+  }
+
+  .content {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .close {
+    position: absolute;
+    top: negative(size('2x'));
+    left: negative(size('12x'));
+    color: text-color('light');
+    svg {
+      width: size('6x');
+      height: size('6x');
+    }
+    &.no-overlay {
+      color: text-color('dark');
+    }
+  }
+
+  &.is-open {
+    width: size('notification.width');
+    .title {
+      padding: size('4x');
+    }
+  }
+}

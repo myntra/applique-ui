@@ -1,0 +1,25 @@
+import Dropdown from './src/dropdown'
+
+# Dropdown
+
+<Documenter component={Dropdown}>
+
+```jsx preview
+const [isOpen, setOpen] = useState(false);
+
+<Dropdown
+  auto={true}
+  container={true}
+  trigger="Open"
+  isOpen={isOpen}
+  onOpen={() => setOpen(true)}
+  onClose={() => setOpen(false)}
+>
+  <div style={{ padding: '100px', background: 'white', boxShadow: '0 0 10px 0 rgba(0, 0, 0, .34)' }}>
+    Anything here!
+    <p>Yes. Anything!</p>
+  </div>
+</Dropdown>
+```
+
+</Documenter>

@@ -1,0 +1,73 @@
+{
+  "$id": "http://uikit.myntra.com/tokens.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "UIKit token definition schema",
+  "type": "object",
+  "properties": {
+    "tokens-colors-primary": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^hsl\\([0-9]+,\\s*[0-9]+,\\s*[0-9]+\\)$"
+        }
+      }
+    },
+    "tokens-colors-success": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^hsl\\([0-9]+,\\s*[0-9]+,\\s*[0-9]+\\)$"
+        }
+      }
+    },
+    "tokens-colors-warning": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^hsl\\([0-9]+,\\s*[0-9]+,\\s*[0-9]+\\)$"
+        }
+      }
+    },
+    "tokens-colors-danger": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^hsl\\([0-9]+,\\s*[0-9]+,\\s*[0-9]+\\)$"
+        }
+      }
+    },
+    "tokens-color": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "tokens-shadow": {
+      "type": "object",
+      "required": ["flat", "raised"],
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

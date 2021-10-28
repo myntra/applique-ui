@@ -1,0 +1,17 @@
+@import '@accoutrement';
+
+.stepper {
+  height: 100%;
+  &__pane {
+    display: flex;
+    padding: size('6x');
+    &--horizontal {
+      flex-direction: row;
+    }
+    &--vertical {
+      flex-direction: column;
+      align-items: baseline;
+      height: 100%;
+    }
+  }
+}

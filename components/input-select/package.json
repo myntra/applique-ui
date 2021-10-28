@@ -1,0 +1,39 @@
+{
+  "name": "@myntra/uikit-component-input-select",
+  "version": "1.13.63",
+  "main": "dist/input-select.cjs.js",
+  "module": "dist/input-select.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/input-select",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/input-select",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@myntra/uikit-can-i-use": "1.13.*",
+    "@myntra/uikit-component-dropdown": "1.13.*",
+    "@myntra/uikit-component-icon": "1.13.*",
+    "@myntra/uikit-component-input-text": "1.13.*",
+    "@myntra/uikit-component-list": "1.13.*",
+    "@myntra/uikit-utils": "1.13.*",
+    "sifter": "^0.5.3",
+    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+  }
+}

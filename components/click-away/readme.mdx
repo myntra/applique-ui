@@ -1,0 +1,28 @@
+import ClickAway from './src/click-away'
+
+# ClickAway
+
+<Documenter component={ClickAway}>
+
+```jsx preview
+const ref = useRef();
+const [message, setMessage] = useState('Initial State.');
+const handleInside = useCallback(() => setMessage('Clicked Inside.'), [setMessage]);
+const handleOutside = useCallback(() => setMessage('Clicked Outside.'), [setMessage]);
+
+<div>
+  <p>Status: {message}</p>
+
+  <div
+    ref={ref}
+    onClick={handleInside}
+    style={{ padding: '20px', background: '#eee', width: 250 }}
+  >
+    Click Here!
+  </div>
+
+  <ClickAway onClickAway={handleOutside} target={ref} />
+</div>
+```
+
+</Documenter>

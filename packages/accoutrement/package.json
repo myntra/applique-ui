@@ -1,0 +1,17 @@
+{
+  "name": "@myntra/accoutrement",
+  "version": "1.13.63",
+  "style": "src/index.scss",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/accoutrement",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "accoutrement": "^2.1.2",
+    "normalize.css": "^8.0.1"
+  }
+}

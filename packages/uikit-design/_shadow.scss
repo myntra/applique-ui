@@ -1,0 +1,12 @@
+$-shadows: () !default;
+$-shadows: merge(
+  (
+    'flat': none,
+    'raised': 0 3px 11px 0 rgba(0, 0, 0, 0.21)
+  ),
+  $-shadows
+);
+
+@function ui-shadow($name: raised) {
+  @return map-get-or-throw($-shadows, $name, "UIKit(shadow): unknown shadow '#{$name}'");
+}

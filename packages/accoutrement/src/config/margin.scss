@@ -1,0 +1,27 @@
+//
+// $margins share same map as $sizes (makes it easy to use sizes)
+// but all values are prefixed with 'margin-'.
+//
+// So, when referenced they should be used like '#margin-{token name}'.
+//
+
+$margins: (
+  'none': 0,
+  'small': '#small',
+  'medium': '#medium',
+  'large': '#large',
+  'banner.body': '#2x',
+  'nav-bar.item': '#1x' negative('#1x'),
+  'nav-bar.group': '#8x',
+  'tab.group': '#1x' '#margin-none',
+  'job-tracker.group': '#6x' '#2x' '#2x' '#2x',
+  'field': '#3x',
+  'input-file.progress': '#5x',
+  'list.checkbox': '#margin-field',
+);
+
+$-tokens-margins: () !default;
+
+$margins: map-merge($margins, $-tokens-margins);
+
+@include add-sizes(map-prefix($margins, 'margin-'));

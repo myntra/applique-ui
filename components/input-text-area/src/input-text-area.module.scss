@@ -1,0 +1,18 @@
+@import '@accoutrement';
+@import '@myntra/uikit-component-input-text/style.scss';
+
+.input {
+  @include mixin-input-component();
+
+  width: 100%;
+  vertical-align: baseline;
+
+  &:disabled,
+  &[disabled] {
+    resize: none;
+  }
+}
+
+.no-resize {
+  resize: none;
+}

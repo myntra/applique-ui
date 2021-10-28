@@ -1,0 +1,52 @@
+import Fab from './src/fab'
+
+# Fab
+
+<Documenter component={Fab}>
+
+```jsx preview
+const [direction, setDirection] = useState('up')
+
+<div style={{
+  'height': '500px',
+  position: 'relative'
+}}>
+  <Fab icon={InfoCircleSolid} direction='down' position="left-top">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='up' position="left-bottom">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='down' position="right-top">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='up' position="right-bottom">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='down' position="center-center">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='left' position="right-center">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+  <Fab icon={InfoCircleSolid} direction='right' position="left-center">
+    <Button icon={ChevronLeftSolid} label="Angle Left" />
+    <Button icon={ChevronRightSolid} label="Angle Right" />
+    <Button icon={ChevronUpSolid} label="Angle Up" />
+  </Fab>
+</div>
+```
+
+</Documenter>

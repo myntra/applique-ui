@@ -1,0 +1,32 @@
+{
+  "name": "@myntra/uikit-component-text",
+  "version": "1.13.63",
+  "main": "dist/text.cjs.js",
+  "module": "dist/text.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/text",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/text",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@myntra/uikit-utils": "1.13.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+  }
+}

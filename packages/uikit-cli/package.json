@@ -1,0 +1,54 @@
+{
+  "name": "@myntra/uikit-cli",
+  "version": "1.13.63",
+  "description": "A command line utility for @myntra/uikit",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "Sunil Jhamnani <sunil.jhamnani@myntra.com>",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/uikit-cli",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "bin": {
+    "uikit": "bin/uikit-cli.js"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@myntra/eslint-config-standard": "1.13.*",
+    "@znck/promised": "^1.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.4.1",
+    "cli-highlight": "^2.0.0",
+    "commander": "^2.15.1",
+    "diff": "^3.5.0",
+    "eslint": "^4.19.1",
+    "execa": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "glob": "^7.1.2",
+    "globby": "^8.0.1",
+    "jscodeshift": "^0.5.1",
+    "jsdoc-api": "^4.0.3",
+    "path": "^0.12.7",
+    "progress": "^2.0.0",
+    "semver": "^7.1.3"
+  },
+  "devDependencies": {
+    "@types/loader-utils": "^1.1.3",
+    "@types/node": "^12.12.29",
+    "@types/webpack-bundle-analyzer": "^2.13.3",
+    "copyfiles": "^2.2.0",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": ">8.0.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && copyfiles -u 1 'src/**/*.js' 'src/**/*.jsx' dist"
+  }
+}

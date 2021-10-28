@@ -1,0 +1,65 @@
+@import '@accoutrement';
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem -0.282rem; // Would give correct 32px width for icon.
+
+  @include padding('nav-bar.item');
+  @include margin('nav-bar.item');
+  @include border-radius('nav-bar.item');
+  @include typography('body');
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color('nav-bar.background:focus');
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include outline('nav-bar');
+  }
+
+  a {
+    flex: 1;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  &.is-active {
+    color: color('nav-bar.item.text:active');
+    background-color: color('nav-bar.item.background:active');
+  }
+
+  .item-icon {
+    @include margin-right('large');
+
+    display: inline-flex;
+    flex: 0 0 size('#6x');
+    align-items: center;
+    justify-content: center;
+    width: size('#6x');
+    height: size('#6x');
+    font-size: font-size('h2');
+  }
+
+  &.no-icon {
+    padding-left: 0.75rem;
+    .item-icon {
+      display: none;
+    }
+  }
+}

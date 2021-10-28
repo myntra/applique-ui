@@ -1,0 +1,17 @@
+$-z-indices: () !default;
+$-z-indices: merge(
+  (
+    nav: 1000,
+    modal: 1100,
+    pop-over: 1200,
+  ),
+  $-z-indices
+);
+
+@function ui-z-index($name) {
+  @return map-get-or-throw(
+    $-z-indices,
+    $name,
+    "UIKit(z-index): Unknown z-index: #{$name}"
+  );
+}

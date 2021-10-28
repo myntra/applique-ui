@@ -1,0 +1,78 @@
+import Badge from './src/badge'
+
+# Badge
+
+<Documenter component={Badge}>
+
+```jsx preview
+<Badge>10</Badge>
+```
+
+</Documenter>
+
+
+## Appearances
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around'
+}}>
+  <Badge type="error">error</Badge>
+  <Badge type="warning">warning</Badge>
+  <Badge type="success">success</Badge>
+  <Badge type="gray">gray</Badge>
+  <Badge type="primary">primary</Badge>
+  <Badge type="brown">brown</Badge>
+</div>
+```
+
+## Size
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  flexDirection: 'column',
+  height: '200px'
+}}>
+  <Badge type="primary" size="small">small</Badge>
+  <Badge type="primary" size="regular">regular</Badge>
+  <Badge type="primary" size="large">large</Badge>
+</div>
+```
+
+## Variant
+
+### Solid
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around'
+}}>
+  <Badge type="error">error</Badge>
+  <Badge type="warning">warning</Badge>
+  <Badge type="success">success</Badge>
+  <Badge type="gray">gray</Badge>
+  <Badge type="primary">primary</Badge>
+  <Badge type="brown">brown</Badge>
+</div>
+```
+
+### Outlined
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around'
+}}>
+  <Badge type="error" variant="outlined">error</Badge>
+  <Badge type="warning" variant="outlined">warning</Badge>
+  <Badge type="success" variant="outlined">success</Badge>
+  <Badge type="gray" variant="outlined">gray</Badge>
+  <Badge type="primary" variant="outlined">primary</Badge>
+  <Badge type="brown" variant="outlined">brown</Badge>
+</div>
+```

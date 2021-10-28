@@ -1,0 +1,7 @@
+@function -u-color-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+$functions: (
+  'opacity': get-function('-u-color-opacity'),
+);

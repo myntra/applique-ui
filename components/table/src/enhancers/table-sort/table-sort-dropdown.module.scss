@@ -1,0 +1,14 @@
+@import '@accoutrement';
+
+.sort-container {
+  width: 160px;
+  max-height: 240px;
+  background: #fff;
+}
+
+.sort-trigger {
+  display: inline-block;
+  padding-left: 0.25rem;
+  cursor: pointer;
+  transform: translateY(0.125rem);
+}

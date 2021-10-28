@@ -1,0 +1,41 @@
+$directions: (
+  'top': 1,
+  'right': 2,
+  'bottom': 3,
+  'left': 4,
+);
+
+@function get-direction-value($value, $direction) {
+  @if type-of($direction) == 'string' {
+    $direction: map-get($directions, $direction);
+  }
+
+  @if (
+    type-of($direction) !=
+      'number' or
+      unitless($direction) !=
+      true or
+      $direction <
+      1 or
+      $direction >
+      4
+  ) {
+    @error 'Invalid direction: #{$direction}';
+  }
+
+  @if type-of($value) == 'list' {
+    $length: length($value);
+
+    @if $length == 1 {
+      @return index($value, 1);
+    }
+
+    @if $length <= $direction {
+      @return index($value, $direction);
+    }
+
+    @return index($value, $direction - 2);
+  }
+
+  @return $value;
+}

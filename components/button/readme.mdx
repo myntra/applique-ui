@@ -1,0 +1,145 @@
+import Button from './src/button'
+
+# Button
+
+<Documenter component={Button}>
+
+```jsx preview
+<Button>My Button</Button>
+```
+
+</Documenter>
+
+### Writing Labels
+
+Buttons are clickable items used to perform an action. Use buttons to trigger actions and links. Buttons can contain a combination of a clear label and an icon while links are always text.
+
+### What to do
+
+* Prioritize the most important actions, based on the hierarchy. Too many calls to action can cause confusion and make users unsure of what to do next.
+* Be positioned in consistent locations in the interface. for example, most Primary call to action are placed on the extreme right side of the screen on babylon.
+
+## Types of Buttons
+
+### Primary Button
+
+To call attention to an action on a form, or highlight the strongest call to action on a page. Primary buttons should only appear once per screen
+(application header or modal dialog aren’t included).
+
+```jsx preview
+<Button type="primary">Primary Button</Button>
+```
+
+### Secondary Button
+
+Use against shaded or colorful backgrounds. An Secondary button will maintain the appropriate visual weight and won’t clash with the
+background color and maintain the visual hierarchy.
+
+```jsx preview
+<Button type="secondary">Secondary Button</Button>
+```
+
+### Text Button
+
+Use for less important or less commonly used actions since they’re less prominent. The drop menu shows a list of related actions.
+
+```jsx preview
+<Button type="text">Text Button</Button>
+```
+
+
+
+### Icon Button
+
+```jsx preview
+<Button icon={EllipsisVSolid} />
+```
+
+### Notification Button
+
+```jsx preview
+<Button icon={Bell} notifications={12}/>
+```
+
+### Small button
+
+```jsx preview
+<Button size="small">My Button</Button>
+```
+
+### Large button
+
+```jsx preview
+<Grid>
+  <Grid.Column size="3">
+    <Button size="large" color="blue" caption="Yes this is caption">Primary</Button>
+  </Grid.Column>
+  <Grid.Column size="4">
+    <Button size="large" color="red" caption="Yes this is caption">red</Button>
+  </Grid.Column>
+  <Grid.Column size="5">
+    <Button size="large" color="yellow" caption="Yes this is caption">yellow</Button>
+  </Grid.Column>
+  <Grid.Column size="6">
+    <Button size="large" color="green" caption="Yes this is caption">green</Button>
+  </Grid.Column>
+  <Grid.Column size="7">
+    <Button size="large" color="gray" caption="Yes this is caption">gray</Button>
+  </Grid.Column>
+  <Grid.Column size="8">
+    <Button size="large" color="black" caption="Yes this is caption">black</Button>
+  </Grid.Column>
+</Grid>
+```
+
+## Button State
+
+### Button in disabled state
+
+```jsx preview
+<Button type="primary" disabled>Disabled</Button>
+```
+
+### Button in loading state after click
+
+```jsx preview
+<Button type="primary" loading>Loading</Button>
+```
+
+## Composition
+
+A button can have an icon.
+
+```jsx preview
+<>
+  <Button type="primary" icon={ChevronLeftSolid}>prev</Button>
+  <Button type="primary" disabled>current</Button>
+  <Button type="primary" secondaryIcon={ChevronRightSolid}>next</Button>
+</>
+```
+
+## Interactions
+
+We can use `onClick` prop for handling custom logic.
+
+```jsx preview
+const [count, setCount] = useState(0);
+
+<Button onClick={() => setCount(count + 1)}>
+  {count ? `Clicked ${count} time(s)` : 'Click Me!'}
+</Button>
+```
+
+The `loading` prop can be used to show loading status.
+
+```jsx preview
+const [isLoading, setLoading] = useState(false)
+
+useEffect(() => {
+  if (isLoading) setTimeout(setLoading, 3000, false)
+}, [isLoading])
+
+<Button onClick={() => setLoading(true)} loading={isLoading}>
+  {'Start Now'}
+</Button>
+```

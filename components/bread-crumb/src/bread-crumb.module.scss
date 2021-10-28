@@ -1,0 +1,51 @@
+@import '@accoutrement';
+
+.pages {
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1em;
+  }
+}
+
+.page {
+  position: relative;
+
+  @include margin-right('large');
+
+  cursor: pointer;
+}
+
+.page,
+.page a {
+  color: color('primary');
+
+  @include typography('paragraph');
+
+  text-decoration: none;
+}
+
+.page:last-child,
+.page:last-child a {
+  color: color('text-dark');
+  pointer-events: none;
+}
+
+.page + .page::before {
+  position: absolute;
+  bottom: 0;
+  left: -1em;
+  display: inline-block;
+  padding: 2px;
+  content: ' ';
+  border-color: color('text-dark');
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  opacity: 0.6;
+  transform: translateY(-50%) rotate(-45deg);
+}

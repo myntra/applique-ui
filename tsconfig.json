@@ -1,0 +1,19 @@
+{
+  "include": ["components/", "packages/", "themes/", "@types/"],
+  "exclude": ["dist", "node_modules", "old-packages"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@myntra/uikit-component-*": ["components/*/src/index.ts"],
+      "@myntra/*": ["packages/*/src/index.ts"]
+    }
+  }
+}

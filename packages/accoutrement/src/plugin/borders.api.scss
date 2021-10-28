@@ -1,0 +1,39 @@
+@function border($token, $source: $borders) {
+  @return get-token($borders, $token);
+}
+
+@function var-border($token, $source: $borders) {
+  @return var-token($source, $token);
+}
+
+@mixin border($token) {
+  border: border($token);
+}
+
+@mixin var-border($token) {
+  border: var-border($token);
+}
+
+@function border-bottom($token, $source: $borders) {
+  @return get-token($borders, $token);
+}
+
+@mixin border-bottom($token) {
+  border-bottom: border-bottom($token);
+}
+
+@function border-right($token, $source: $borders) {
+  @return get-token($borders, $token);
+}
+
+@mixin border-right($token) {
+  border-right: border-bottom($token);
+}
+
+@function border-left($token, $source: $borders) {
+  @return get-token($borders, $token);
+}
+
+@mixin border-left($token) {
+  border-left: border-left($token);
+}

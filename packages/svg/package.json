@@ -1,0 +1,20 @@
+{
+  "name": "@myntra/svg",
+  "version": "1.13.63",
+  "main": "src/index.js",
+  "module": "dist/svg.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/svg",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "svg-parser": "^1.0.5"
+  }
+}

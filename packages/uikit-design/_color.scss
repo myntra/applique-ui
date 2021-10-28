@@ -1,0 +1,105 @@
+$-color-primary: make-color(
+  hsl(244, 53.5%, 52.7%),
+  hsla(244, 53.5%, 52.7%, 0.87),
+  hsl(244, 53.9%, 71.8%),
+  hsl(244, 47.1%, 32%),
+  hsl(244, 56.4%, 93.1%),
+  null
+) !default;
+
+$-color-success: make-color(
+  hsl(138, 38.2%, 54.7%),
+  hsla(138, 38.2%, 54.7%, 0.87),
+  hsl(138, 37.9%, 72.6%),
+  hsl(138, 30.7%, 32.9%),
+  hsl(138, 37.4%, 88.8%),
+  null
+) !default;
+
+$-color-warning: make-color(
+  hsl(40, 83.6%, 63.5%),
+  hsla(40, 83.6%, 63.5%, 0.87),
+  hsl(40, 82%, 77.8%),
+  hsl(40, 48.1%, 37.8%),
+  hsl(40, 79.7%, 90.2%),
+  null
+) !default;
+
+$-color-error: make-color(
+  hsl(2, 55.5%, 61.8%),
+  hsla(2, 55.5%, 61.8%, 0.87),
+  hsl(2, 55.8%, 77.4%),
+  hsl(2, 34.2%, 37.3%),
+  hsl(2, 56.9%, 90.7%),
+  null
+) !default;
+
+$-color-gray: make-color(
+  #e6e6e6,
+  rgba(0, 0, 0, 0.54),
+  #eee,
+  #d4d4d4,
+  #f4f6f8,
+  #d4d4d4,
+  #f9f9f9,
+  null
+) !default;
+
+$-colors: () !default;
+$-text-colors: () !default;
+
+$-colors: merge(
+  (
+    'primary': $-color-primary,
+    'green': $-color-success,
+    'red': $-color-error,
+    'yellow': $-color-warning,
+    'gray': $-color-gray,
+    'white': make-color(#fff, #fff),
+  ),
+  $-colors
+);
+
+$-text-colors: merge(
+  (
+    'light': (
+      'disabled': rgba(255, 255, 255, 0.27),
+      'mid-emphasis': rgba(255, 255, 255, 0.54),
+      'default': rgba(255, 255, 255, 0.87),
+    ),
+    'dark': (
+      'disabled': rgba(0, 0, 0, 0.27),
+      'mid-emphasis': rgba(0, 0, 0, 0.54),
+      'default': rgba(0, 0, 0, 0.87),
+    ),
+  ),
+  $-text-colors
+);
+
+@function ui-color($name, $variant: base) {
+  @return map-get-or-throw(
+    map-get-or-throw(
+      $-colors,
+      $name,
+      "UIKit(color): Unknown color name #{type-of($name) + ' ' + $variant} '#{$name}'"
+    ),
+    $variant,
+    "UIKit(color): Unknown variant name '#{$variant}' of color '#{$name}'"
+  );
+}
+
+@function ui-text-color($name, $variant: default) {
+  @if ($name == dark or $name == light) {
+    @return map-get-or-throw(
+      map-get($-text-colors, $name),
+      $variant,
+      'UIKit(text-color): Unknown #{$name} color: #{$variant}'
+    );
+  }
+
+  @return ui-color($name, 'text');
+}
+
+@function color-names() {
+  @return map-keys($map: $-colors);
+}

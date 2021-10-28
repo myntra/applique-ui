@@ -1,0 +1,28 @@
+@import '@accoutrement';
+
+.step-separator {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid color('gray-dark');
+  &--horizontal {
+    width: 100%;
+  }
+  &--vertical {
+    flex-direction: column;
+    height: 100%;
+  }
+  &--completed {
+    border-color: color('primary');
+  }
+  &--has-small-steps {
+    border: none;
+  }
+  &__half-complete {
+    position: absolute;
+    left: 0;
+    width: 15%;
+    border-color: color('primary');
+  }
+}

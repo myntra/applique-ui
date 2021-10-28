@@ -1,0 +1,5 @@
+node_modules
+coverage
+dist
+**/*/__codemod__/**/*.js
+__codemod__/**/*.js

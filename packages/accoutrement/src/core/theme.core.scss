@@ -1,0 +1,87 @@
+// Shades Of
+// ---------
+/// Generates color variants from base color.
+/// @access private
+/// @param {map} $origin -
+///    user color map to generate theme colors.
+@function uikit-shades-of($origin) {
+  $theme: ();
+
+  @each $name, $value in $origin {
+    $theme: map-merge(
+      $theme,
+      (
+        '#{$name}-light-3':
+          '##{$name}-0'(
+            tint: 80%,
+          ),
+        '#{$name}-light-2':
+          '##{$name}-0'(
+            tint: 40%,
+          ),
+        '#{$name}-light-1':
+          '##{$name}-0'(
+            tint: 20%,
+          ),
+        '#{$name}-0': $value,
+        '#{$name}-dark-1':
+          '##{$name}-0'(
+            shade: 20%,
+          ),
+        '#{$name}-dark-2':
+          '##{$name}-0'(
+            shade: 40%,
+          ),
+        '#{$name}-dark-3':
+          '##{$name}-0'(
+            shade: 60%,
+          ),
+        // Backward compatible names.
+          '#{$name}-lightest':
+          '##{$name}-light-3',
+        '#{$name}-lighter': '##{$name}-light-2',
+        '#{$name}-light': '##{$name}-light-1',
+        '#{$name}-dark': '##{$name}-dark-1',
+        '#{$name}-darker': '##{$name}-dark-2',
+        '#{$name}-darkest': '##{$name}-dark-3',
+      )
+    );
+  }
+
+  @return $theme;
+}
+
+// Text shades Of
+// --------------
+/// Generates color variants from base color.
+/// @access private
+/// @param {map} $origin -
+///    user color map to generate theme colors.
+@function uikit-text-variants-of($origin) {
+  $theme: ();
+
+  @each $name, $value in $origin {
+    $theme: map-merge(
+      $theme,
+      (
+        'text-#{$name}-disabled':
+          '#text-#{$name}-high-emphasis'
+          (
+            opacity: 38%,
+          ),
+        'text-#{$name}-medium-emphasis':
+          '#text-#{$name}-high-emphasis'
+          (
+            opacity: 60%,
+          ),
+        'text-#{$name}-high-emphasis': $value,
+        'text-#{$name}': '#text-#{$name}-high-emphasis',
+        // For simplifying get logic.
+          'text-#{$name}-disabled-emphasis':
+          '#text-#{$name}-disabled',
+      )
+    );
+  }
+
+  @return $theme;
+}

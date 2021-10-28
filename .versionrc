@@ -1,0 +1,13 @@
+{
+  "types": [
+    {"type":"feat","section":"Features"},
+    {"type":"fix","section":"Bug Fixes"},
+    {"type":"test","section":"Tests", "hidden": true},
+    {"type":"build","section":"Build System", "hidden": true},
+    {"type":"chore","section":"Maintenance", "hidden": true},
+    {"type":"ci","hidden":true}
+  ],
+  "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commits/{{hash}}",
+  "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/branches/compare/{{previousTag}}...{{currentTag}}",
+  "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/pull-requests/{{id}}"
+}

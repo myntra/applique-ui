@@ -1,0 +1,16 @@
+$radius: (
+  'default': 0,
+  'banner': '#1x',
+  'button': '#5x',
+  'button.circle': '#5x',
+  'notification.circle': '#7x',
+  'tooltip': '#1x',
+  'nav-bar.item': '#8x',
+  'checkbox': 2px,
+);
+
+$-tokens-radius: () !default;
+
+$radius: map-merge($radius, $-tokens-radius);
+
+@include add-sizes(map-prefix($radius, 'radius-'));

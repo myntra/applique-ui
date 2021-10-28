@@ -1,0 +1,1 @@
+import Bar from 'bar'

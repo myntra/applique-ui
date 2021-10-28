@@ -1,0 +1,22 @@
+import InputAzureFile from './src/input-azure-file'
+
+# InputAzureFile
+
+<Documenter component={InputAzureFile}>
+
+```jsx preview
+const [error, setError] = useState(null)
+const [file, setFile] = useState({})
+<>
+  <InputAzureFile
+    apiRoot="http://apidev.myntrainfo.com:18793"
+    onError={setError}
+    onSuccess={setFile}
+    autoStartUpload={false}
+    />
+  <div>{error && error.message}</div>
+  {file.name && <div>{`${file.name} has been uploaded to ${file.url}`}</div>}
+</>
+```
+
+</Documenter>

@@ -1,0 +1,94 @@
+@import '@accoutrement';
+
+.tooltip {
+  display: flex;
+}
+
+.tooltip.right,
+.tooltip.left {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tooltip-content {
+  @include padding('medium');
+  @include border-radius('tooltip');
+
+  box-shadow: shadow('raised');
+}
+
+.tooltip-content.light {
+  color: text-color('dark');
+  background-color: color('white');
+}
+
+.tooltip-content.dark {
+  color: text-color('light');
+  background-color: color('black');
+}
+
+.tooltip-content.up {
+  margin-bottom: 10px;
+}
+
+.tooltip-content.down {
+  margin-top: 10px;
+}
+
+.tooltip-content.left {
+  margin-right: 10px;
+}
+
+.tooltip-content.right {
+  margin-left: 10px;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent;
+}
+
+.arrow.up {
+  bottom: -6px;
+  left: var(--u-tooltip-x);
+  border-top-color: color('white');
+}
+
+.arrow.down {
+  top: -6px;
+  left: var(--u-tooltip-x);
+  border-bottom-color: color('white');
+}
+
+.arrow.left {
+  right: -6px;
+  border-left-color: color('white');
+}
+
+.arrow.right {
+  left: -6px;
+  border-right-color: color('white');
+}
+
+.arrow.up.dark {
+  border-top-color: color('black');
+}
+
+.arrow.down.dark {
+  border-bottom-color: color('black');
+}
+
+.arrow.left.dark {
+  border-left-color: color('black');
+}
+
+.arrow.right.dark {
+  border-right-color: color('black');
+}
+
+.dropdown > * {
+  box-shadow: none;
+}

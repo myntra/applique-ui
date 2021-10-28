@@ -1,0 +1,21 @@
+import ErrorBoundary from './src/error-boundary'
+
+# ErrorBoundary
+
+<Documenter component={ErrorBoundary}>
+
+```jsx preview
+function Example() {
+  return (
+    <ErrorBoundary>
+      <ErroroneousComponent />
+    </ErrorBoundary>
+  )
+}
+
+function ErroroneousComponent({ foo }) {
+  return <div>{foo.length}</div>
+}
+```
+
+</Documenter>

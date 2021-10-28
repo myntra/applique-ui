@@ -1,0 +1,37 @@
+@import '@accoutrement';
+@import 'input';
+
+.input {
+  @include mixin-input-component();
+  &[type='search'] {
+    padding-right: 0.125em;
+  }
+
+  width: 100%;
+
+  &.with-icon {
+    padding: padding('input.with-icon');
+  }
+}
+
+.container {
+  position: relative;
+  .icon {
+    position: absolute;
+    top: 0.4em;
+  }
+
+  .input-adornment {
+    position: absolute;
+    top: 0;
+    color: shade(color('gray-dark'), 40%);
+
+    &--start {
+      left: 0;
+    }
+
+    &--end {
+      right: 0;
+    }
+  }
+}

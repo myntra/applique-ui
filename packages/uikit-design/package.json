@@ -1,0 +1,14 @@
+{
+  "name": "@myntra/uikit-design",
+  "version": "1.13.63",
+  "main": "design.scss",
+  "module": "dist/uikit-design.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/uikit-design",
+  "files": [
+    "*.scss"
+  ],
+  "sideEffects": false
+}

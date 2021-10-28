@@ -1,0 +1,29 @@
+@import '@accoutrement';
+
+.img {
+  display: block;
+  outline: none;
+  animation: fadeIn 350ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  display: none;
+}
+
+.image-container {
+  display: inline-block;
+}
+
+.bg-error {
+  background: color('danger-lighter');
+}

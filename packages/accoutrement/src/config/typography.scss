@@ -1,0 +1,109 @@
+$-tokens-fonts: () !default;
+$-default-fonts: (
+  'body': '#system',
+  'heading': '#body',
+  'anchor': '#body',
+  'button': '#body',
+  'caption': '#body',
+  'title': '#body',
+  'subtitle': '#body',
+);
+
+$fonts: map-merge($-default-fonts, $-tokens-fonts);
+
+@include add-font(
+  'system',
+  (
+    'name': Roboto,
+    'stack': (
+      Helvetica,
+      sans-serif,
+    ),
+  )
+);
+
+$-tokens-root-font-size: 16px !default;
+
+$text-sizes: (
+  'root': $-tokens-root-font-size,
+  'title': 28,
+  'h1': 24,
+  'h2': 20,
+  'h3': 16,
+  'h4': 14,
+  'h5': 14,
+  'h6': 14,
+  'subtitle': 16,
+  'body': 14,
+  'content': 12,
+  'caption': 10,
+  'interface': 12,
+  'button': '#interface',
+);
+
+$-tokens-font-sizes: () !default;
+
+@include add-sizes(map-prefix($text-sizes, 'font-size-'));
+@include add-sizes(map-prefix($-tokens-font-sizes, 'font-size-'));
+
+$-default-typography: (
+  'title': (
+    'size': 'title',
+    'family': 'title',
+    'weight': 700,
+  ),
+  'subtitle': (
+    'size': 'subtitle',
+    'family': 'subtitle',
+    'weight': 700,
+  ),
+  'h1': (
+    'size': 'h1',
+    'family': 'heading',
+    'weight': 400,
+  ),
+  'h2': (
+    'size': 'h2',
+    'family': 'heading',
+    'weight': 500,
+  ),
+  'h3': (
+    'size': 'h3',
+    'family': 'heading',
+    'weight': 500,
+  ),
+  'h4': (
+    'size': 'h4',
+    'family': 'heading',
+    'weight': 700,
+  ),
+  'body': (
+    'size': 'body',
+    'family': 'body',
+    'weight': 400,
+  ),
+  'paragraph': (
+    'size': 'content',
+    'family': 'body',
+    'weight': 400,
+  ),
+  'caption': (
+    'size': 'caption',
+    'family': 'body',
+    'weight': 400,
+  ),
+  'button': (
+    'size': 'interface',
+    'family': 'body',
+    'weight': 500,
+    'text-transform': uppercase,
+    'letter-spacing': 0,
+  ),
+  'anchor': (
+    'size': 'interface',
+    'family': 'body',
+    'weight': 500,
+  ),
+);
+$-tokens-typography: () !default;
+$typography: map-merge($-default-typography, $-tokens-typography);

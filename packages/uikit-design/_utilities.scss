@@ -1,0 +1,290 @@
+@import 'constants';
+
+$is-testing-environment: false !default;
+$errors: ();
+
+@function testing-reset-errors() {
+  $errors: ();
+}
+
+@function throw-error(
+  $message: 'Unexpected error',
+  $capture: $is-testing-environment
+) {
+  @if $capture {
+    $errors: append($errors, $message);
+
+    @return 'ERROR: #{$message}';
+  }
+
+  @error 'ERROR: #{$message}';
+}
+
+@function assert($expected, $actual, $message) {
+  @if $actual != $expected {
+    @return throw-error('assert(#{$expect} == #{$actual}): #{$message}');
+  }
+
+  @return null;
+}
+
+@function map-get-or-throw($map, $key, $error) {
+  @if type-of($map) != map {
+    @if type-of($map) == string and str-slice($map, 1, 5) == 'ERROR' {
+      @return $map;
+    }
+
+    @return throw-error(
+      '(map-get-or-throw): expects first argument to be a map, found: #{$map}'
+    );
+  } @else if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @return throw-error($error);
+  }
+}
+
+@function find-color-from-surface($surface) {
+  @if type-of($surface) == map {
+    @if map-has($surface, 'background-color') {
+      @return map-get($surface, 'background-color');
+    }
+
+    @if map-has($surface, 'border-color') {
+      @return map-get($surface, 'border-color');
+    }
+  }
+
+  @return $surface;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin not-implemented($name) {
+  --error-not-implemented: throw-error('@#{$name}: NOT IMPLEMENTED');
+}
+
+@mixin extract-border($border) {
+  @if type-of($border) == map {
+    border: map-get($border, 'border');
+    border-top: map-get($border, 'border-top');
+    border-right: map-get($border, 'border-right');
+    border-bottom: map-get($border, 'border-bottom');
+    border-left: map-get($border, 'border-left');
+    border-color: map-get($border, 'border-color');
+    border-style: map-get($border, 'border-style');
+    border-width: map-get($border, 'border-width');
+    border-radius: map-get($border, 'border-radius');
+    border-top-left-radius: map-get($border, 'border-top-left-radius');
+    border-top-right-radius: map-get($border, 'border-top-right-radius');
+    border-bottom-left-radius: map-get($border, 'border-bottom-left-radius');
+    border-bottom-right-radius: map-get($border, 'border-bottom-right-radius');
+  } @else if type-of($border) == color {
+    border-color: $border;
+  } @else if type-of($border) == list {
+    @if is-non-empty-list($border) {
+      border: $border;
+    }
+  } @else {
+    @include not-implemented('extract-border(#{$border})');
+  }
+}
+
+@function is-non-empty-list($value) {
+  @return type-of($value) == list and length($value) > 0;
+}
+
+@mixin extract-margin($margin) {
+  @if type-of($margin) == map {
+    margin: map-get($margin, 'margin');
+    margin-left: map-get($margin, 'margin-left');
+    margin-right: map-get($margin, 'margin-right');
+    margin-top: map-get($margin, 'margin-top');
+    margin-bottom: map-get($margin, 'margin-bottom');
+  } @else {
+    @include not-implemented('extract-margin(#{$margin})');
+  }
+}
+
+@mixin extract-padding($padding) {
+  @if type-of($padding) == map {
+    padding: map-get($padding, 'padding');
+    padding-left: map-get($padding, 'padding-left');
+    padding-right: map-get($padding, 'padding-right');
+    padding-top: map-get($padding, 'padding-top');
+    padding-bottom: map-get($padding, 'padding-bottom');
+  } @else {
+    @include not-implemented('extract-padding(#{$padding})');
+  }
+}
+
+@mixin extract-font($font) {
+  @if type-of($font) == map {
+    font-family: map-get($font, 'font-family');
+    font-size: map-get($font, 'font-size');
+    font-style: map-get($font, 'font-style');
+    font-variant: map-get($font, 'font-variant');
+    font-size-adjust: map-get($font, 'font-size-adjust');
+    font-stretch: map-get($font, 'font-stretch');
+    text-transform: map-get($font, 'text-transform');
+  } @else if type-of($font) == string {
+    font: $font;
+  } @else {
+    @include not-implemented('extract-font(#{$font})');
+  }
+}
+
+@mixin extract-text($text) {
+  @if type-of($text) == color {
+    color: $text;
+  } @else if type-of($text) == map {
+    color: map-get($text, 'color');
+    white-space: map-get($text, 'white-space');
+
+    @include extract-font($text);
+  } @else {
+    @include not-implemented('extract-text(#{$text})');
+  }
+}
+
+@mixin extract-surface($surface) {
+  filter: map-get($surface, 'filter');
+  outline: map-get($surface, 'outline');
+  box-shadow: map-get($surface, 'box-shadow');
+
+  @include extract-background($surface);
+  @include extract-border($surface);
+}
+
+@mixin extract-shape($shape) {
+  @if type-of($shape) == map {
+    @include extract-border($shape);
+    @include extract-margin($shape);
+    @include extract-padding($shape);
+
+    transform: map-get($shape, 'transform');
+  } @else {
+    @include not-implemented('extract-shape(#{$text})');
+  }
+}
+
+@mixin extract-background($background) {
+  @if type-of($background) == map {
+    background: map-get($background, 'background');
+    background-color: map-get($background, 'background-color');
+    background-image: map-get($background, 'background-image');
+    background-repeat: map-get($background, 'background-repeat');
+    background-attachment: map-get($background, 'background-attachment');
+    background-position: map-get($background, 'background-position');
+    background-position-x: map-get($background, 'background-position-x');
+    background-position-y: map-get($background, 'background-position-y');
+    background-clip: map-get($background, 'background-clip');
+    background-origin: map-get($background, 'background-origin');
+    background-size: map-get($background, 'background-size');
+    background-blend-mode: map-get($background, 'background-blend-mode');
+  } @else if type-of($background) == color {
+    background-color: $background;
+  } @else if type-of($background) == list {
+    @if is-non-empty-list($background) {
+      background: $background;
+    }
+  } @else {
+    @include not-implemented('extract-background(#{$background})');
+  }
+}
+
+@mixin extract($config) {
+  @if map-has-key($config, 'shape') {
+    @include extract-shape(map-get($config, 'shape'));
+  }
+
+  @if map-has-key($config, 'surface') {
+    @include extract-surface(map-get($config, 'surface'));
+  }
+
+  @if map-has-key($config, 'text') {
+    @include extract-text(map-get($config, 'text'));
+  }
+}
+
+// Calculate the luminance for a color.
+// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+@function luminance($color) {
+  $red: nth($linear-channel-values, red($color) + 1);
+  $green: nth($linear-channel-values, green($color) + 1);
+  $blue: nth($linear-channel-values, blue($color) + 1);
+
+  @return 0.2126 * $red + 0.7152 * $green + 0.0722 * $blue;
+}
+
+// Calculate the contrast ratio between two colors.
+// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+@function contrast($back, $front) {
+  $back-lum: luminance($back) + 0.05;
+  $fore-lum: luminance($front) + 0.05;
+
+  @return max($back-lum, $fore-lum) / min($back-lum, $fore-lum);
+}
+
+// Deep merge maps.
+@function merge($map1, $map2, $depth: 1) {
+  @if type-of($map2) != map {
+    @return $map1;
+  }
+
+  @if $depth == 1 {
+    @return map-merge($map1, $map2);
+  }
+
+  @each $key, $value in $map2 {
+    @if map-has-key($map1, $key) {
+      $map1: map-merge(
+        $map1,
+        merge(map-get($map1, $key), (#{$key}: $value), $depth - 1)
+      );
+    } @else {
+      $map1: map-merge($map1, (#{$key}: $value));
+    }
+  }
+
+  @return $map1;
+}
+
+@function make-color(
+  $base,
+  $text,
+  $light: lighten($base, 20%),
+  $dark: darken($base, 20%),
+  $lighter: lighten($base, 40%),
+  $darker: darken($base, 40%),
+  $lightest: null,
+  $darkest: null
+) {
+  $_: assert(
+    color,
+    type-of($base),
+    '(make-color): base [=#{$base}] should be a valid color.'
+  );
+  $_: assert(
+    color,
+    type-of($text),
+    '(make-color): text [=#{$text}] should be a valid color.'
+  );
+
+  @return (
+    'lightest': $lightest,
+    'lighter': $lighter,
+    'light': $light,
+    'base': $base,
+    'dark': $dark,
+    'darker': $darker,
+    'darkest': $darkest,
+    'text': $text
+  );
+}

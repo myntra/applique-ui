@@ -1,0 +1,19 @@
+@function str-prefix($value, $prefix, $filtered: null) {
+  @if type-of($value) == 'string' {
+    $index: str-index($value, '#');
+
+    @if $index == 1 {
+      @if type-of($filtered) == 'list' {
+        $key: str-slice($value, 1);
+
+        @if index($filtered, $key) == null {
+          @return $value;
+        }
+      }
+
+      @return str-insert($value, $prefix, $index + 1);
+    }
+  }
+
+  @return $value;
+}

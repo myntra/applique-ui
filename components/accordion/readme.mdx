@@ -1,0 +1,42 @@
+import Accordion from './src/accordion'
+
+# Accordion
+
+<Documenter component={Accordion}>
+
+```jsx preview
+const style = { margin: '1rem', padding: '3rem 1rem', background: '#cecece' };
+
+<Accordion>
+  <Accordion.Item title="One">
+    <div style={style}>First component</div>
+  </Accordion.Item>
+  <Accordion.Item title="Two">
+    <div style={style}>Second component</div>
+  </Accordion.Item>
+  <Accordion.Item title="Three">
+    <div style={style}>Third component</div>
+  </Accordion.Item>
+ </Accordion>
+```
+
+</Documenter>
+
+
+## Sub-components
+
+### Accordion.Item
+
+<Documenter component={Accordion.Item} sub>
+
+```jsx preview
+const style = { margin: '1rem', padding: '3rem 1rem', background: '#cecece' };
+
+<Accordion>
+  <Accordion.Item title="One">
+    <div style={style}>First component</div>
+  </Accordion.Item>
+</Accordion>
+```
+
+</Documenter>

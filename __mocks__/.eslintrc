@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "node/no-unpublished-import": "off",
+    "import/export": "off"
+  }
+}

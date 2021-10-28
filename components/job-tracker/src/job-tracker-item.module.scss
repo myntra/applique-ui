@@ -1,0 +1,30 @@
+@import '@accoutrement';
+
+.item {
+  @include padding('large');
+
+  .actions {
+    margin-right: negative(size('3x'));
+    text-align: right;
+  }
+
+  .field {
+    margin: 0.5em 0;
+  }
+
+  .primary {
+    --current-color: #{text-color('primary')};
+  }
+  .success {
+    --current-color: #{text-color('success')};
+  }
+  .error {
+    --current-color: #{text-color('danger')};
+  }
+  .warning {
+    --current-color: #{text-color('warning')};
+  }
+  .icon {
+    color: var(--current-color, currentColor);
+  }
+}

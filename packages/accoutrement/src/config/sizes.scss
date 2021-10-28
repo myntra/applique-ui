@@ -1,0 +1,71 @@
+$-tokens-root-font-size: 16px !default;
+
+$ratios: ();
+
+$sizes: (
+  'root': $-tokens-root-font-size,
+  '_unit': '#root'
+    (
+      'times': 0.25,
+    ),
+  '1x': '#_unit'
+    (
+      'times': 1,
+    ),
+  '2x': '#_unit'
+    (
+      'times': 2,
+    ),
+  '3x': '#_unit'
+    (
+      'times': 3,
+    ),
+  '4x': '#_unit'
+    (
+      'times': 4,
+    ),
+  '5x': '#_unit'
+    (
+      'times': 5,
+    ),
+  '6x': '#_unit'
+    (
+      'times': 6,
+    ),
+  '7x': '#_unit'
+    (
+      'times': 7,
+    ),
+  '8x': '#_unit'
+    (
+      'times': 8,
+    ),
+  '10x': '#_unit'
+    (
+      'times': 10,
+    ),
+  '12x': '#_unit'
+    (
+      'times': 12,
+    ),
+  '14x': '#_unit'
+    (
+      'times': 14,
+    ),
+  '16x': '#_unit'
+    (
+      'times': 16,
+    ),
+  '24x': '#_unit'
+    (
+      'times': 24,
+    ),
+  'small': '#1x',
+  'medium': '#2x',
+  'large': '#4x',
+  'nav-bar.icon': 16px,
+  'nav-bar.min-width': 56px,
+  'nav-bar.max-width': 252px,
+  'notification.width': 600px,
+  'top-bar.height': '#nav-bar.min-width',
+);

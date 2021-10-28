@@ -1,0 +1,28 @@
+import TopBar from './src/top-bar'
+
+# TopBar
+
+<Documenter component={TopBar}>
+
+```jsx preview
+<TopBar
+    title="UIKit Documentation"
+    user={{ name: 'Jane' }}
+ >
+  <BreadCrumb>
+    <BreadCrumb.Item>Home</BreadCrumb.Item>
+    <BreadCrumb.Item>Components</BreadCrumb.Item>
+    <BreadCrumb.Item>TopBar</BreadCrumb.Item>
+  </BreadCrumb>
+
+  <TopBar.Item icon={UserSolid}>Profile</TopBar.Item>
+  <TopBar.Item icon={SignOutAltSolid}>Logout</TopBar.Item>
+</TopBar>
+```
+
+</Documenter>
+
+
+```jsx preview
+<TopBar title="UIKit Documentation" />
+```

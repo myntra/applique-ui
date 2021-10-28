@@ -1,0 +1,27 @@
+@import '@accoutrement';
+
+.stack {
+  display: flex;
+  flex-direction: row;
+
+  &.small {
+    --u-layout-stack-margin-right: #{margin-right('small')};
+  }
+  &.medium {
+    --u-layout-stack-margin-right: #{margin-right('medium')};
+  }
+  &.large {
+    --u-layout-stack-margin-right: #{margin-right('large')};
+  }
+  &.none {
+    --u-layout-stack-margin-right: #{margin-right('none')};
+  }
+
+  > * {
+    max-width: 100%;
+  }
+
+  > *:not(:last-child) {
+    margin-right: var(--u-layout-stack-margin-right);
+  }
+}

@@ -1,0 +1,54 @@
+@import '@accoutrement';
+
+.container {
+  width: 100%;
+
+  .button {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &.disabled {
+    .button {
+      cursor: default;
+    }
+
+    pointer-events: none;
+  }
+
+  .trigger {
+    cursor: pointer;
+  }
+}
+
+// Renders in Portal
+.selector {
+  max-height: 360px;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: shadow('small');
+  animation-name: slidein;
+  animation-duration: 0.5s;
+}
+
+.list {
+  background: color('white');
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.empty {
+  padding: 0.5rem 1rem;
+}
+
+@keyframes slidein {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 360px;
+  }
+}

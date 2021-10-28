@@ -1,0 +1,90 @@
+import Tooltip from './src/tooltip'
+
+# Tooltip
+
+<Documenter component={Tooltip}>
+
+```jsx preview
+<Tooltip renderContent={() => <div>Hello</div>}>
+  <p>
+    <Icon name={InfoCircleSolid} /> hover over me!
+  </p>
+</Tooltip>
+```
+
+</Documenter>
+
+## Positioned Tooltips
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around'
+}}>
+  <Tooltip renderContent={() => <div>Hello</div>} position="up">
+    <p>
+      <Icon name={InfoCircleSolid} /> Top
+    </p>
+  </Tooltip>
+  <Tooltip renderContent={() => <div>Hello</div>} position="down">
+    <p>
+      <Icon name={InfoCircleSolid} /> Bottom
+    </p>
+  </Tooltip>
+  <Tooltip renderContent={() => <div>Hello</div>} position="left">
+    <p>
+      <Icon name={InfoCircleSolid} /> Left
+    </p>
+  </Tooltip>
+  <Tooltip renderContent={() => <div>Hello</div>} position="right">
+    <p>
+      <Icon name={InfoCircleSolid} /> Right
+    </p>
+  </Tooltip>
+</div>
+```
+
+## Custom Tooltips
+
+```jsx preview
+<div style={{
+  display: 'flex',
+  justifyContent: 'space-around'
+}}>
+  <Tooltip renderContent={() => <div>Hello</div>}>
+    <p>
+      <Icon name={InfoCircleSolid} /> Top
+    </p>
+  </Tooltip>
+  <Tooltip renderContent={() => <div>Hello</div>} dark>
+    <p>
+      <Icon name={InfoCircleSolid} /> Bottom
+    </p>
+  </Tooltip>
+</div>
+```
+
+## Long Text
+
+```jsx preview
+<p>
+  What is{' '}
+  <Tooltip
+    triggerOn="click"
+    renderContent={() => (
+      <Section title="Lorem Ipsum" style={{ minWidth: 300 }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </Section>
+    )}
+  >
+    Lorem Impsum
+  </Tooltip>
+  ?
+</p>
+```

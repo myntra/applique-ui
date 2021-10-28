@@ -1,0 +1,148 @@
+import Banner from './src/banner'
+
+# Banner
+
+<Documenter component={Banner}>
+
+```jsx preview
+<Banner>
+  {'An alert message.'}
+</Banner>
+```
+
+</Documenter>
+
+* Put banners close in context to the problem they’re referring to.
+* Give banners with a lot of information a clear title(if needed) that summarizes their content.
+* Be concise and scannable—users shouldn’t need to spend a lot of time figuring out what they need to know and do.
+* Use the default icon for success, info, warning and critical statuses.
+
+## Types
+
+### Solid
+
+```jsx preview
+<>
+  <Banner type="error">An example of error alert.</Banner>
+  <br />
+  <Banner type="warning">An example of warning alert.</Banner>
+  <br />
+  <Banner type="success">An example of success alert.</Banner>
+</>
+```
+
+### Outlined
+```jsx preview
+<>
+  <Banner type="error" noFill>An example of error alert.</Banner>
+  <br />
+  <Banner type="warning" noFill>An example of warning alert.</Banner>
+  <br />
+  <Banner type="success" noFill>An example of success alert.</Banner>
+</>
+``` 
+
+## Banner with Title
+
+```jsx preview
+<Banner title="SUCCESS!">The file has been uploaded.</Banner>
+```
+
+## Customising Icon
+
+```jsx preview
+<Banner title="CRITICAL ERROR" icon="bomb">We cannot reach to the backend service, your changes could not be persisted.</Banner>
+```
+
+```jsx preview
+<Banner icon={null}>Your email address is required to send the report.</Banner>
+```
+
+## Dismissable Banner
+
+```jsx preview
+function Example() {
+  const [isVisible, setVisible] = useState(true);
+
+  return isVisible &&
+    <Banner type="warning" title={'CAUTION!'} onClose={() => setVisible(false)}>
+      The image you are trying to upload has invalid format. It might not render well.
+    </Banner>
+}
+```
+
+## Sub-components
+
+### Banner.Actionable
+
+* This type of banner is designed for mobile, click on view and switch to mobile view in browser to have a better visual experience.
+
+<Documenter component={Banner.Actionable} sub>
+
+```jsx preview
+function Example() {
+  const [isVisible, setVisible] = useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>WARNING</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Already Scanned!',
+        type: 'warning',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Masterbag ID',
+        entityId: '100309334556',
+        actionToTake: <>Move to <b>Container No: #2233983 </b></>
+      }}/>;
+  return component;
+}
+```
+
+```jsx preview
+function Example() {
+  const [isVisible, setVisible] = useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>SUCCESS</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Completed!',
+        type: 'success',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Item ID',
+        entityId: '100309334556',
+        actionToTake: 'Put it in completed Bin'
+      }}/>;
+  return component;
+}
+```
+
+```jsx preview
+function Example() {
+  const [isVisible, setVisible] = useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>ERROR</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Wrong Carton!',
+        type: 'error',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Carton ID',
+        entityId: '100309334556',
+        actionToTake: 'Keep This Carton Aside'
+      }}/>;
+  return component;
+}
+```
+
+</Documenter>

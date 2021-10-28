@@ -1,0 +1,27 @@
+{
+  "name": "@myntra/docgen",
+  "version": "1.13.63",
+  "main": "src/index.js",
+  "module": "dist/docgen.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/docgen",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "loader.js"
+  ],
+  "sideEffects": false,
+  "description": "@myntra/docgen",
+  "dependencies": {
+    "de-indent": "^1.0.2",
+    "doctrine": "^2.1.0",
+    "loader-utils": "^1.2.3",
+    "lodash.camelcase": "^4.3.0",
+    "react-docgen": "^2.20.1",
+    "react-docgen-typescript": "^1.12.3",
+    "typescript": "^3.3.3333"
+  }
+}

@@ -1,0 +1,31 @@
+@import '@accoutrement';
+
+.tab {
+  @include padding('tab.item');
+  @include typography('h2');
+  position: relative;
+  display: inline-block;
+
+  color: text-color('dark', 'medium');
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    height: 4px;
+    content: ' ';
+    border-radius: 3px;
+    transition: all 350ms;
+  }
+
+  &.active {
+    color: text-color('dark');
+
+    &::after {
+      background-color: color('primary');
+    }
+  }
+}

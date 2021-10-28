@@ -1,0 +1,27 @@
+{
+  "name": "@myntra/uikit-can-i-use",
+  "version": "1.13.63",
+  "main": "dist/uikit-can-i-use.cjs.js",
+  "module": "dist/uikit-can-i-use.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/uikit-can-i-use",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}

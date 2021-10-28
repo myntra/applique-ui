@@ -1,0 +1,13 @@
+import VirtualGrid from './src/virtual-grid'
+
+# VirtualGrid
+
+<Documenter component={VirtualGrid}>
+
+```jsx preview
+<VirtualGrid rows={100} columns={100} width={Math.min(600, window.innerWidth)} height={360}>
+ {({ style, rowIndex, columnIndex }) => <div style={{ ...style, width: '300px', height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: `hsl(${(30 * rowIndex) % 361}, ${40 + (5 * columnIndex) % 61}%, 80%)` }}>{rowIndex}, {columnIndex}</div>}
+</VirtualGrid>
+```
+
+</Documenter>

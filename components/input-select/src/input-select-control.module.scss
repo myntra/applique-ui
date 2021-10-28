@@ -1,0 +1,37 @@
+@import '@accoutrement';
+@import '@myntra/uikit-component-input-text/style.scss';
+
+.control {
+  position: relative;
+  display: flex;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    opacity: 0.6;
+    transform: translateY(-50%);
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.input {
+  @include mixin-input-component();
+  &.with-icon {
+    padding: padding('input.with-icon');
+  }
+}
+
+.buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+}

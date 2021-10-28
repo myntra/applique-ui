@@ -1,0 +1,53 @@
+@import '@accoutrement';
+
+.filter-container {
+  min-width: 160px;
+  max-width: 300px;
+  background: color('white');
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+
+    @include border-bottom('table.tr');
+
+    border-color: color('table.border');
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .tiny {
+    font-size: 0.75em;
+  }
+
+  .search {
+    padding: 0.5rem 0.5rem 0;
+    margin-bottom: -1px;
+  }
+
+  .list {
+    max-height: 200px;
+  }
+
+  .list li {
+    background: color('white');
+  }
+}
+
+.filter-trigger {
+  display: inline-block;
+  padding-left: 0.25rem;
+  cursor: pointer;
+  transform: translateY(0.125rem);
+
+  &.active {
+    color: text-color('primary');
+  }
+}

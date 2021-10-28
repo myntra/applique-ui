@@ -1,0 +1,12 @@
+@import '@accoutrement';
+
+.group {
+  @include margin('tab.group');
+
+  background-color: color('white');
+}
+
+.pane {
+  border-bottom: border('tab.pane');
+  border-bottom-color: color('tab.border');
+}

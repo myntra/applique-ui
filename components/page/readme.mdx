@@ -1,0 +1,95 @@
+import Page from './src/page'
+
+# Page
+
+<Documenter component={Page}>
+
+```jsx preview
+const [value, setValue] = useState(null);
+const onSubmit = useCallback((value) => console.log(value));
+const [showBanner, setBanner] = useState(true)
+const [data] = useState([
+  { id: 1, name: 'Jane Doe', createdAt: 1557208976092 },
+  { id: 2, name: 'John Doe', createdAt: 1557208976092 },
+  { id: 3, name: 'Daksh Bahuguna', createdAt: 1557208976092 },
+  { id: 4, name: 'Rahul Das', createdAt: 1557208976092 },
+  { id: 5, name: 'Suraj Badkar', createdAt: 1557208976092 },
+]);
+
+<Page
+  renderNavBar={() => (
+    <NavBar title="My Application">
+      <NavBar.Item icon={InfoCircleSolid}>Dice 1</NavBar.Item>
+      <NavBar.Item icon={BoxSolid}>Dice 2</NavBar.Item>
+
+      <NavBar.Group title="Dices" icon={AtSolid}>
+        <NavBar.Item icon={Bell}>Dice 5</NavBar.Item>
+        <NavBar.Item icon={InfoCircleSolid}>Dice 1</NavBar.Item>
+      </NavBar.Group>
+    </NavBar>
+  )}
+  renderTopBar={() => (
+    <TopBar title="Dices" user={{ email: 'jane.doe@myntra.com' }}>
+      <BreadCrumb>
+        <BreadCrumb.Item>Home</BreadCrumb.Item>
+        <BreadCrumb.Item>Dices</BreadCrumb.Item>
+        <BreadCrumb.Item>Dices 5</BreadCrumb.Item>
+      </BreadCrumb>
+
+      <TopBar.Item>Profile</TopBar.Item>
+      <TopBar.Item>Logout</TopBar.Item>
+    </TopBar>
+  )}
+>
+  {showBanner ? (
+    <Banner title="SUCCESS" type="success" onClose={() => setBanner(false)}>
+      The page loaded successfully.
+    </Banner>
+  ) : null}
+
+  <Layout type="row">
+    <Text.Title>Page Title</Text.Title>
+
+    <Section title="Section 1">
+      <Form
+        onSubmit={onSubmit}
+        value={value}
+        onChange={setValue}
+        defaultFieldSize={4}
+      >
+        <Form.Text label="Field 1" />
+        <Form.Select options={[]} label="Field 2" />
+
+        <ButtonGroup structure="primary-group">
+          <Button type="primary">Search</Button>
+          <Button type="text">Action 1</Button>
+          <Button type="text">Action 2</Button>
+        </ButtonGroup>
+      </Form>
+    </Section>
+
+    <Section>
+      <Layout type="row">
+        <Text>{data.length} items found.</Text>
+
+        <Table data={data}>
+          <Table.Column key="id" label="ID" />
+          <Table.Column key="full-name" label="Name" accessor="name" />
+          <Table.Column
+            key="created-at"
+            label="Created At"
+            accessor={(item) => new Date(item.createdAt).toLocaleString()}
+          />
+        </Table>
+
+        <Layout type="stack" space={[1]}>
+          <div />
+          <Pagination />
+        </Layout>
+      </Layout>
+    </Section>
+  </Layout>
+</Page>
+```
+
+</Documenter>

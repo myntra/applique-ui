@@ -1,0 +1,28 @@
+{
+  "name": "@myntra/tokenizer",
+  "version": "1.13.63",
+  "main": "src/index.js",
+  "module": "dist/tokenizer.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/tokenizer",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "sideEffects": false,
+  "description": "@myntra/tokenizer",
+  "bin": {
+    "tokenize": "bin/tokenize.js"
+  },
+  "dependencies": {
+    "ajv": "^6.9.2",
+    "camelcase": "^5.0.0",
+    "js-yaml": "^3.11.0",
+    "lodash.isplainobject": "^4.0.6",
+    "prettier": "^1.12.1",
+    "tidify": "^0.3.0"
+  }
+}

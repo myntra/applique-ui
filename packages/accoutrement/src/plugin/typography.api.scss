@@ -1,0 +1,27 @@
+/// @param {string} $type -
+///   Name of the type style.
+/// @param {map} $source [$typography] -
+///   Typography styles source.
+@mixin typography($type, $source: $typography) {
+  $current: token($source, $type);
+
+  font-family: font-family(token($current, 'family'));
+  font-size: font-size(token($current, 'size'), 'px');
+  font-weight: token($current, 'weight');
+  text-transform: token($current, 'text-transform');
+  letter-spacing: token($current, 'letter-spacing');
+}
+
+@mixin var-typography($type, $source: $typography) {
+  $current: get-token($source, $type);
+
+  font-family: var-font(get-token($current, 'family'));
+  font-size: var-size(get-token($current, 'size'), 'px');
+  font-weight: get-token($current, 'weight');
+  text-transform: get-token($current, 'text-transform');
+  letter-spacing: get-token($current, 'letter-spacing');
+}
+
+@function font-size($token, $unit: 'px') {
+  @return size('font-size-#{$token}', $unit);
+}

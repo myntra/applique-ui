@@ -1,0 +1,37 @@
+//
+// $paddings share same map as $sizes (makes it easy to use sizes)
+// but all values are prefixed with 'padding-'.
+//
+// So, when referenced they should be used like '#padding-{token name}'.
+//
+
+$paddings: (
+  'none': 0,
+  'default': '#4x',
+  'container': '#4x' '#6x',
+  'small': '#small',
+  'medium': '#medium',
+  'large': '#large',
+  'banner': '#padding-default',
+  'button': '#2x' '#8x',
+  'icon-button': '#3x',
+  'table.th': '#2x',
+  'table.td': '#2x',
+  'top-bar': '#3x' '#4x',
+  'nav-bar.body': '#padding-none' '#4x' '#4x' '#4x',
+  'nav-bar.item': '#padding-small',
+  'modal': '#padding-default',
+  'tab.item': '#4x' '#8x',
+  'badge': '#small' '#2x',
+  'input': '#small' '#5x' '#small' '#padding-none',
+  'input.with-icon': '#small' '#5x' '#small' '#4x',
+  'group-elements': '#3x' '#6x' '#3x' '#padding-none',
+  'list.item': '#2x' '#3x',
+  'input-date.month': '#small' '#4x',
+);
+
+$-tokens-paddings: () !default;
+
+$paddings: map-merge($paddings, $-tokens-paddings);
+
+@include add-sizes(map-prefix($paddings, 'padding-'));

@@ -1,0 +1,35 @@
+{
+  "name": "@myntra/uikit-component-section",
+  "version": "1.13.63",
+  "main": "dist/section.cjs.js",
+  "module": "dist/section.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/section",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/section",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@myntra/uikit-can-i-use": "1.13.*",
+    "@myntra/uikit-component-button": "1.13.*",
+    "@myntra/uikit-utils": "1.13.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+  }
+}

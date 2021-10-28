@@ -1,0 +1,187 @@
+@import '@design';
+
+.text {
+  font-family: ui-font-face('default');
+}
+
+.alternate {
+  font-family: ui-font-face('alternate');
+}
+
+.current {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.title {
+  @include use-text-style('title');
+}
+
+.paragraph {
+  @include use-text-style('p');
+}
+
+.table {
+  @include use-text-style('table');
+}
+
+.small {
+  @include use-text-style('small');
+}
+
+.caption {
+  @include use-text-style('caption');
+}
+
+.heading1 {
+  @include use-text-style('h1');
+}
+
+.heading2 {
+  @include use-text-style('h2');
+}
+
+.heading3 {
+  @include use-text-style('h3');
+}
+
+.heading4 {
+  @include use-text-style('h4');
+}
+
+.inherit {
+  color: inherit;
+}
+
+.primary {
+  color: ui-text-color('primary');
+}
+
+.accent {
+  color: ui-text-color('primary');
+}
+
+.dark {
+  color: ui-text-color('dark');
+}
+
+.dark.secondary {
+  color: ui-text-color('dark', 'mid-emphasis');
+}
+
+.dark.disabled {
+  color: ui-text-color('dark', 'disabled');
+}
+
+.light {
+  color: ui-text-color('light');
+}
+
+.light.secondary {
+  color: ui-text-color('light', 'mid-emphasis');
+}
+
+.light.disabled {
+  color: ui-text-color('light', 'disabled');
+}
+
+.info {
+  color: ui-text-color('primary');
+}
+
+.success {
+  color: ui-text-color('green');
+}
+
+.warning {
+  color: ui-text-color('yellow');
+}
+
+.error {
+  color: ui-text-color('red');
+}
+
+.gray400 {
+  color: ui-color('gray', 'dark');
+}
+
+.gray300 {
+  color: ui-color('gray');
+}
+
+.gray200 {
+  color: ui-color('gray', 'light');
+}
+
+.gray100 {
+  color: ui-color('gray', 'lighter');
+}
+
+.gray50 {
+  color: ui-color('gray', 'lightest');
+}
+
+.text900 {
+  font-size: ui-font-size('3x');
+}
+
+.text800 {
+  font-size: ui-font-size('2x');
+}
+
+.text700 {
+  font-size: ui-font-size('xx-large');
+}
+
+.text600 {
+  font-size: ui-font-size('x-large');
+}
+
+.text500 {
+  font-size: ui-font-size('large');
+}
+
+.text400 {
+  font-size: ui-font-size('base');
+}
+
+.text300 {
+  font-size: ui-font-size('small');
+}
+
+.text200 {
+  font-size: ui-font-size('small');
+}
+
+.italic {
+  font-style: italic;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.lighter {
+  font-weight: lighter;
+}

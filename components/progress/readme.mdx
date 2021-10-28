@@ -1,0 +1,46 @@
+import Progress from './src/progress'
+
+# Progress
+
+<Documenter component={Progress}>
+
+```jsx preview
+<Progress type="bar" appearance="info" value={25}/>
+```
+
+</Documenter>
+
+## Bar
+
+```jsx preview
+<Progress type="bar" value={50}/>
+```
+
+### Display value
+
+```jsx preview
+<Progress type="bar" value={75} showValue/>
+```
+
+## Circle
+
+```jsx preview
+<Progress type="circle" value={30} style={{ width: '50px' }} />
+```
+
+### Display value
+
+```jsx preview
+<Progress type="circle" value={25} style={{ width: '50px' }} showValue/>
+```
+
+## Progress State
+
+```jsx preview
+<>
+<Progress type="bar" appearance="success" value={20} style={{ marginBottom: '16px' }} />
+<Progress type="bar" appearance="info" value={30} style={{ marginBottom: '16px' }} />
+<Progress type="bar" appearance="warning" value={40} style={{ marginBottom: '16px' }} />
+<Progress type="bar" appearance="danger" value={50} />
+</>
+```

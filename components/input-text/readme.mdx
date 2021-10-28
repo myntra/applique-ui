@@ -1,0 +1,78 @@
+import InputText from './src/input-text'
+
+# InputText
+
+export const _styles = (function () {
+  // Add some styles for showing grid column examples.
+  const style =  document.createElement('style')
+  style.id = 'input-example-override'
+  style.textContent = `.u-input-text-container .adornment {
+    background-color: transparent;
+    border-color: transparent;
+    bottom: 5px;
+    position: relative;
+  }`
+  document.head.appendChild(style)
+})();
+
+<Documenter component={InputText}>
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputText value={value} onChange={setValue} />
+```
+
+</Documenter>
+
+## Examples
+
+
+## Disabled
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputText value="Disabled" disabled placeholder="Your name" />
+```
+
+## With placeholder text
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputText value={value} onChange={setValue} placeholder="Your name" />
+```
+
+## With label text
+
+```jsx preview
+const [value, setValue] = useState();
+
+<Field title="Name" description="Your name">
+  <InputText value={value} onChange={setValue} />
+</Field>
+``` 
+
+## With icon
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputText value={value} onChange={setValue} placeholder="Your name" icon={UserSolid}/>
+```
+
+## With prefix/suffix text or element
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputText value={value} onChange={setValue} adornment="/Kg"/>
+```
+
+```jsx preview
+const [value, setValue] = useState();
+const onClick = useCallback(() => console.log("clicked icon"))
+
+<InputText value={value} onChange={setValue} adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+```

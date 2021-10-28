@@ -1,0 +1,55 @@
+@import '@accoutrement';
+
+.day {
+  --day-size: 2.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--day-size);
+  height: var(--day-size);
+  margin: 0;
+  user-select: none;
+  transition: all 250ms;
+
+  &.today {
+    color: color('primary');
+  }
+
+  &.focused {
+    box-shadow: shadow('raised');
+  }
+
+  &.focused:not(.selected) {
+    border-radius: var(--day-size);
+  }
+
+  &.selected {
+    color: color('text-light');
+    background-color: color('primary');
+  }
+
+  &.selected.start {
+    border-top-left-radius: var(--day-size);
+    border-bottom-left-radius: var(--day-size);
+  }
+
+  &.selected.end {
+    border-top-right-radius: var(--day-size);
+    border-bottom-right-radius: var(--day-size);
+  }
+
+  &.disabled {
+    color: color('text-dark-disabled');
+    cursor: not-allowed;
+  }
+
+  &.selected.disabled {
+    background-color: color('gray-dark');
+  }
+
+  &.empty,
+  &.empty.disabled {
+    color: transparent;
+  }
+}

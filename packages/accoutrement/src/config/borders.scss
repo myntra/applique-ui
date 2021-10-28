@@ -1,0 +1,15 @@
+$borders: (
+  'default': 1px solid,
+  'keyboard-focus': 1px dashed color('primary'),
+  'banner': '#default',
+  'button': '#default',
+  'table': '#default',
+  'table.tr': '#default',
+  'nav-bar': '#default',
+  'top-bar': '#nav-bar',
+  'tab.pane': '#default',
+);
+
+$-tokens-borders: () !default;
+
+$borders: map-merge($borders, $-tokens-borders);

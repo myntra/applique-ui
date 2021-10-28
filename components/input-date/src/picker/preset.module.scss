@@ -1,0 +1,31 @@
+@import '@accoutrement';
+
+.presets {
+  display: inline-flex;
+  flex-direction: column;
+  padding: size('small') 0;
+  overflow-y: auto;
+  background-color: color('white');
+}
+
+.preset {
+  padding: size('medium');
+  color: color('text-dark');
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.preset + .preset {
+  margin-bottom: -1px;
+  border-top: solid 1px color(gray-light);
+}
+
+.preset.active {
+  color: color(primary);
+}
+
+.preset:hover {
+  background-color: color(gray-light);
+}

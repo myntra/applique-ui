@@ -1,0 +1,81 @@
+import Section from './src/section'
+
+# Section
+
+<Documenter component={Section}>
+
+```jsx preview
+<Section title="The title">
+  This is America!
+</Section>
+```
+
+</Documenter>
+
+## Examples
+
+- [Action Buttons](#action-buttons)
+
+### Action Buttons
+
+```jsx preview
+<Section title="Gotta catch 'em all">
+  <Button type="link">Badges</Button>
+  <Button type="secondary">Pokeballs</Button>
+  <Button>Pokedex</Button>
+
+  <p>
+    I will travel across the land,<br />
+    Searching far and wide.<br />
+    Each Pokemon to understand<br />
+    The power that's inside!<br />
+    Pokemon!<br />
+    Gotta catch em' all!
+  </p>
+</Section>
+```
+
+```jsx preview
+const [data] = useState(
+  Array(1000).fill(0).map((_, id) => ({ id: id + 1, firstName: "Jane", lastName: "Doe" }))
+);
+<Section title="Gotta catch 'em all">
+    <div style={{ height: 300, minWidth: 600 }}>
+     <Table virtualized data={data}>
+       {/* Table Configuration */}
+      <Table.Column key="id" label="ID" fixed>
+        {({ data }) => <div>{data.id}</div>}
+      </Table.Column>
+      <Table.Column key="name" label="Name" fixed>
+      <Table.Column key="firstName" label="First Name" minWidth={120}>
+          {({ data }) => <div>{data.firstName}</div>}
+        </Table.Column>
+      <Table.Column key="lastName" label="Last Name" minWidth={120}>
+        {({ data }) => <div>{data.lastName}</div>}
+      </Table.Column>
+      </Table.Column>
+    
+      {Array(20).fill(0).map((_, group) => (
+        <Table.Column key={'group' + group} label={`Group (${group + 1})`} minWidth={100}>
+          {
+            Array(50).fill(0).map((_, index) => (
+              <Table.Column key={`group-${group}-column-${index}`} label={`Column ${index + 1}`} minWidth={120}>
+                {({ data }) => <div>{data.lastName}</div>}
+              </Table.Column>
+            ))
+          }
+        </Table.Column>
+      ))}
+    
+      <Table.Column key="options" label=" " fixed="end">
+        {() => <Icon name={EllipsisVSolid} />}
+      </Table.Column>
+    
+      {/* Table Customization */}
+      <Table.Row selector={index => index % 2}>
+        {({ children, style,  rowId }) => <Table.TR key={rowId} style={{ ...style, color: 'red' }}>{children}</Table.TR>}
+      </Table.Row>
+     </Table>
+    </div>
+</Section> 
+```

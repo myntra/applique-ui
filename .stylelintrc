@@ -1,0 +1,3 @@
+{
+  "extends": "@myntra/stylelint-config-standard"
+}

@@ -1,0 +1,109 @@
+@import '@accoutrement';
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+}
+
+.loader.inline {
+  display: inline-block;
+}
+
+.loader.small {
+  height: 120px;
+  font-size: 48px;
+}
+
+.loader.large {
+  height: 100%;
+  min-height: 284px;
+  font-size: 64px;
+}
+
+.spinner {
+  --current-color: #{color('primary')};
+
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-bottom: -0.125em;
+  font-size: inherit;
+}
+
+.spinner div {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0.125em;
+  font-size: inherit;
+  border: 0.125em solid #fff;
+  border-color: var(--current-color) transparent transparent transparent;
+  border-radius: 50%;
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.spinner div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.bar {
+  --current-bar-color: #{color('primary')};
+  --current-bar-color-secondary: #{color('gray')};
+
+  min-width: 20em;
+
+  div:first-child {
+    height: 4px;
+    background: #aaa;
+    border-radius: 25px;
+  }
+
+  &.is-loading {
+    div:first-child {
+      background: linear-gradient(
+        0.25turn,
+        var(--current-bar-color) 0%,
+        var(--current-bar-color-secondary) 50%,
+        var(--current-bar-color) 100%
+      );
+      animation: bar 1.2s ease-in infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bar {
+  @for $i from 0 to 101 {
+    #{$i * 1%} {
+      background: linear-gradient(
+        0.25turn,
+        #4f47c8 0%,
+        #e4e3fc #{$i * 1%},
+        #4f47c8 100%
+      );
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@function list-prefix($value, $prefix, $filtered: null) {
+  @if type-of($value) == 'string' {
+    @return str-prefix($value, $prefix, $filtered);
+  } @else if type-of($value) == 'list' {
+    $result: ();
+
+    @each $item in $value {
+      $result: append($result, str-prefix($item, $prefix, $filtered));
+    }
+
+    @return $result;
+  }
+
+  @return $value;
+}

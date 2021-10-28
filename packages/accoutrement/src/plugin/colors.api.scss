@@ -1,0 +1,62 @@
+@function contrast-text-color($background, $emphasis: 'high', $contrast: 'AA') {
+  @return contrast(
+    $background,
+    text-color('light', $emphasis),
+    text-color('dark', $emphasis),
+    $contrast
+  );
+}
+
+@function var-contrast-text-color(
+  $background,
+  $emphasis: 'high',
+  $contrast: 'AA'
+) {
+  @return var-contrast(
+    $background,
+    'text-#{$background}-#{$emphasis}-emphasis',
+    'text-#{$background}-#{$emphasis}-emphasis',
+    $contrast
+  );
+}
+
+// Text Color
+// ----------
+/// @param {string} $color -
+///   The name of a color in your palette,
+///   or a color description in the
+/// @param {string} $emphasis ['high'] -
+///   Emphasis of text. One of 'high', 'medium' or 'disabled'.
+///
+@function text-color($color, $emphasis: 'high') {
+  @return color('text-#{$color}-#{$emphasis}-emphasis');
+}
+
+// Var Color
+// ---------
+/// Access the CSS variable associated with a given token,
+/// along with a fallback value based on the token itself
+///
+/// @param {*} $color -
+///   Color name available in the `$source` map
+/// @param {string} $emphasis ['high'] -
+///   Emphasis of text. One of 'high', 'medium' or 'disabled'.
+/// @param {*} $fallback [true] -
+///   The optional fallback value for a `var()` function:
+///   - `true` will generate a fallback based on the token value
+///   - A token name will fallback to the value of that
+///     css-variable and then to the token's calculated value
+///   - Any other fallback will be passed through unchanged
+/// @param {map} $source -
+///   Optional Accoutrement map of colors to use as source
+/// @return {string} -
+///   CSS variable call, in the format:
+///   `var(--<token>, <fallback>)`
+@function var-text-color(
+  $color,
+  $emphasis: 'high',
+  $fallback: true,
+  $source: $colors
+) {
+  @return var-color('text-#{$color}-#{$emphasis}-emphasis', $fallback, $source);
+}

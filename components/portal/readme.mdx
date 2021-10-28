@@ -1,0 +1,34 @@
+import Portal from './src/portal'
+
+# Portal
+
+<Documenter component={Portal}>
+
+```jsx preview
+function Example() {
+  const container = useMemo(() => {
+    const container = document.createElement('div')
+    container.style.position = 'fixed'
+    container.style.top = '16px'
+    container.style.right = '200px'
+    container.style.zIndex = '10000'
+    container.style.background = 'white'
+
+    document.body.appendChild(container)
+
+    return container
+  }, []);
+  const [value, setValue] = useState(0);
+
+  return (
+    <div onClick={() => setValue(value + 1)}>
+      <span>{`This is in react controlled root. Click to update value in portal.`}</span>
+      <Portal container={container}>
+        <span>{`This is in document body. (${value})`}</span>
+      </Portal>
+    </div>
+  )
+}
+```
+
+</Documenter>

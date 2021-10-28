@@ -1,0 +1,15 @@
+@function radius($token) {
+  @return size('radius-#{$token}');
+}
+
+@function var-radius($token) {
+  @return var-size('radius-#{$token}');
+}
+
+@mixin border-radius($token) {
+  border-radius: radius($token);
+}
+
+@mixin var-border-radius($token) {
+  border-radius: var-radius($token);
+}

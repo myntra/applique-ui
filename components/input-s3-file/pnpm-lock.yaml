@@ -1,0 +1,87 @@
+dependencies:
+  '@myntra/uikit-can-i-use': 'link:../../packages/uikit-can-i-use'
+  '@myntra/uikit-component-button': 'link:../button'
+  '@myntra/uikit-component-input-text': 'link:../input-text'
+  '@myntra/uikit-utils': 'link:../../packages/uikit-utils'
+devDependencies:
+  '@types/react': 16.8.24
+lockfileVersion: 5.1
+optionalDependencies:
+  react: 16.8.6
+packages:
+  /@types/prop-types/15.7.1:
+    dev: true
+    resolution:
+      integrity: sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
+  /@types/react/16.8.24:
+    dependencies:
+      '@types/prop-types': 15.7.1
+      csstype: 2.6.6
+    dev: true
+    resolution:
+      integrity: sha512-VpFHUoD37YNY2+lr/+c7qL/tZsIU/bKuskUF3tmGUArbxIcQdb5j3zvo4cuuzu2A6UaVmVn7sJ4PgWYNFEBGzg==
+  /csstype/2.6.6:
+    dev: true
+    resolution:
+      integrity: sha512-RpFbQGUE74iyPgvr46U9t1xoQBM8T4BL8SxrN66Le2xYAPSaDJJKeztV3awugusb3g3G9iL8StmkBBXhcbbXhg==
+  /js-tokens/4.0.0:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
+  /loose-envify/1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
+    hasBin: true
+    optional: true
+    resolution:
+      integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /object-assign/4.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    optional: true
+    resolution:
+      integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+  /prop-types/15.7.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.8.6
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  /react-is/16.8.6:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+  /react/16.8.6:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      scheduler: 0.13.6
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    optional: true
+    resolution:
+      integrity: sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
+  /scheduler/0.13.6:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+specifiers:
+  '@myntra/uikit-can-i-use': 1.0.*
+  '@myntra/uikit-component-button': 1.0.*
+  '@myntra/uikit-component-input-text': 1.0.*
+  '@myntra/uikit-utils': 1.0.*
+  '@types/react': ^16.8
+  react: '>=15.4'

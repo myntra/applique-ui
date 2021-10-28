@@ -1,0 +1,137 @@
+import ButtonGroup from './src/button-group'
+
+# ButtonGroup
+
+<Documenter component={ButtonGroup}>
+
+```jsx preview
+<ButtonGroup>
+  <Button type="primary">primary</Button>
+  <Button type="secondary">secondary</Button>
+  <Button type="link">link</Button>
+</ButtonGroup>
+```
+
+</Documenter>
+
+## Writing labels
+
+Button labels use Upper case and are as short as possible, while clearly explaining what happens when the button is activated. Buttons should be limited to 3 words where possible
+
+## What to do
+
+* Button Group hierarchy should be Tertiary > Secondary > Primary > Icon Button
+
+* Be used with consideration that too many calls to action can cause user to be unsure of what to do next.
+
+* The main action of a group set can be a primary button, select a single button variation and do not mix them.
+
+* Introduce the icon button to the group when there are more than 3 actions
+
+## Appearances
+
+Button group with all type of buttons.
+
+```jsx preview
+<>
+  <ButtonGroup>
+    <Button type="primary">primary</Button>
+    <Button type="secondary">secondary</Button>
+    <Button type="link">link</Button>
+    <Button type="primary">secondary</Button>
+    <Button type="secondary">secondary</Button>
+    <Button type="link">link</Button>
+  </ButtonGroup>
+</>
+```
+
+Button group with default primary and secondary buttons
+
+```jsx preview
+<>
+  <ButtonGroup>
+    <Button type="primary">primary</Button>
+    <Button type="secondary">secondary</Button>
+  </ButtonGroup>
+</>
+```
+
+Button group with default primary and secondary buttons and rest of buttons under more
+
+```jsx preview
+<>
+  <ButtonGroup>
+    <Button type="primary">primary</Button>
+    <Button type="secondary">secondary</Button>
+    <Button type="primary">link</Button>
+    <Button type="primary">secondary</Button>
+    <Button type="secondary">secondary</Button>
+  </ButtonGroup>
+</>
+```
+
+Omit secondary and only showing primary and link button
+
+```jsx preview
+<>
+  <ButtonGroup>
+    <Button type="primary">primary</Button>
+    <Button type="link">link</Button>
+    <Button type="primary">link</Button>
+    <Button type="primary">secondary</Button>
+    <Button type="secondary">secondary</Button>
+  </ButtonGroup>
+</>
+```
+
+In cases where there is no primary button
+
+```jsx preview
+<>
+  <ButtonGroup>
+    <Button type="secondary">secondary</Button>
+    <Button type="link">link</Button>
+    <Button type="primary">link</Button>
+    <Button type="primary">secondary</Button>
+    <Button type="secondary">secondary</Button>
+  </ButtonGroup>
+</>
+```
+
+## Using structure param for definite button Group
+
+primary-group: Needs everything other than primary button in more
+
+```jsx preview
+<>
+  <ButtonGroup structure="primary-group">
+    <Button type="primary">primary</Button>
+    <Button type="secondary">link</Button>
+    <Button type="link">link</Button>
+  </ButtonGroup>
+</>
+```
+
+secondary-group: Needs everything other than secondary button in more
+
+```jsx preview
+<>
+  <ButtonGroup structure="secondary-group">
+    <Button type="secondary">secondary</Button>
+    <Button type="primary">primary</Button>
+    <Button type="link">link</Button>
+  </ButtonGroup>
+</>
+```
+
+link-group: Needs everything other than link button in more
+
+```jsx preview
+<>
+  <ButtonGroup structure="link-group">
+    <Button type="link">link</Button>
+    <Button type="secondary">link</Button>
+    <Button type="primary">primary</Button>
+  </ButtonGroup>
+</>
+```

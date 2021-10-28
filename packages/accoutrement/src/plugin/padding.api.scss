@@ -1,0 +1,93 @@
+@function padding($token) {
+  @return size('padding-#{$token}');
+}
+
+@mixin padding($token, $explode: false) {
+  @if $explode {
+    @include padding-top($token);
+    @include padding-right($token);
+    @include padding-bottom($token);
+    @include padding-left($token);
+  } @else {
+    padding: size('padding-#{$token}');
+  }
+}
+
+@function padding-top($token) {
+  @return get-direction-value(size('padding-#{$token}'), 'top');
+}
+
+@mixin padding-top($token) {
+  padding-top: padding-top($token);
+}
+
+@function padding-right($token) {
+  @return get-direction-value(size('padding-#{$token}'), 'right');
+}
+
+@mixin padding-right($token) {
+  padding-right: padding-right($token);
+}
+
+@function padding-bottom($token) {
+  @return get-direction-value(size('padding-#{$token}'), 'bottom');
+}
+
+@mixin padding-bottom($token) {
+  padding-bottom: padding-bottom($token);
+}
+
+@function padding-left($token) {
+  @return get-direction-value(size('padding-#{$token}'), 'left');
+}
+
+@mixin padding-left($token) {
+  padding-left: padding-left($token);
+}
+
+@function var-padding($token) {
+  @return var-size('padding-#{$token}');
+}
+
+@mixin var-padding($token, $explode: false) {
+  @if $explode {
+    @include var-padding-top($token);
+    @include var-padding-right($token);
+    @include var-padding-bottom($token);
+    @include var-padding-left($token);
+  } @else {
+    padding: var-size('padding-#{$token}');
+  }
+}
+
+@function var-padding-top($token) {
+  @return get-direction-value(var-size('padding-#{$token}'), 'top');
+}
+
+@mixin var-padding-top($token) {
+  padding-top: var-padding-top($token);
+}
+
+@function var-padding-right($token) {
+  @return get-direction-value(var-size('padding-#{$token}'), 'right');
+}
+
+@mixin var-padding-right($token) {
+  padding-right: var-padding-right($token);
+}
+
+@function var-padding-bottom($token) {
+  @return get-direction-value(var-size('padding-#{$token}'), 'bottom');
+}
+
+@mixin var-padding-bottom($token) {
+  padding-bottom: var-padding-bottom($token);
+}
+
+@function var-padding-left($token) {
+  @return get-direction-value(var-size('padding-#{$token}'), 'left');
+}
+
+@mixin var-padding-left($token) {
+  padding-left: var-padding-left($token);
+}
