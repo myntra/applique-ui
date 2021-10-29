@@ -1,0 +1,65 @@
+colors:
+  primary:
+    name: SCM Blue
+    value:
+      - hsl(185, 68%, 30%) # darker
+      - hsl(185, 68%, 40%) # dark
+      - hsl(185, 68%, 50%) # default/base
+      - hsl(185, 68%, 69%) # light
+      - hsl(185, 68%, 85%) # lighter
+
+  success:
+    name: success
+    value:
+      - hsl(138, 54%, 22%) 
+      - hsl(138, 54%, 36%) 
+      - hsl(138, 53%, 53%)
+      - hsl(138, 54%, 73%)
+      - hsl(138, 53%, 85%)
+
+  warning:
+    name: warning
+    value:
+      - hsl(40, 86%, 28%) 
+      - hsl(40, 87%, 44%) 
+      - hsl(40, 87%, 53%) 
+      - hsl(40, 87%, 73%) 
+      - hsl(40, 87%, 85%) 
+
+  danger:
+    name: danger
+    value:
+      - hsl(0, 54%, 22%)
+      - hsl(0, 54%, 36%)
+      - hsl(0, 54%, 53%)
+      - hsl(0, 54%, 73%) 
+      - hsl(0, 53%, 85%) 
+
+  gray:
+    name: Gray
+    value:
+      - hsl(0, 0%, 83%) 
+      - hsl(0, 0%, 90%) 
+      - hsl(0, 0%, 93%) 
+      - hsl(210, 22%, 96%) 
+      - hsl(0, 0%, 98%) 
+  
+  "primary-dark-1": hsl(243, 47%, 32%)
+  "nav-bar.background": hsl(270, 21%, 15%)
+  "nav-bar.background:focus": hsl(185, 64%, 51%)
+  "nav-bar.border": hsl(270, 21%, 15%)
+  "nav-bar.item.background:active": hsl(185, 64%, 51%)
+  "nav-bar.text": hsl(0, 0%, 100%)
+  "nav-bar.item.text:active": hsl(0, 0%, 100)
+  "top-bar.background": hsl(0, 0%, 100%)
+  "top-bar.border": hsl(0, 0%, 100%)
+shadow:
+  flat:
+    value: none
+  raised:
+    value: 0 3px 11px 0 rgba(0, 0, 0, 0.21)
+
+radius:
+  button: 4
+
+root-font-size: 16px

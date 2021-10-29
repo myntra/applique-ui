@@ -1,0 +1,151 @@
+colors:
+  primary:
+    name: SCM Purple
+    value:
+      - hsl(244, 53%, 22%) # darker
+      - hsl(244, 54%, 36%) # dark
+      - hsl(244, 54%, 53%) # default/base
+      - hsl(244, 54%, 73%) # light
+      - hsl(244, 53%, 85%) # lighter
+
+  success:
+    name: success
+    value:
+      - hsl(138, 54%, 22%) 
+      - hsl(138, 54%, 36%) 
+      - hsl(138, 53%, 53%)
+      - hsl(138, 54%, 73%)
+      - hsl(138, 53%, 85%)
+
+  warning:
+    name: warning
+    value:
+      - hsl(40, 86%, 28%) 
+      - hsl(40, 87%, 44%) 
+      - hsl(40, 87%, 53%) 
+      - hsl(40, 87%, 73%) 
+      - hsl(40, 87%, 85%) 
+
+  danger:
+    name: danger
+    value:
+      - hsl(0, 54%, 22%)
+      - hsl(0, 54%, 36%)
+      - hsl(0, 54%, 53%)
+      - hsl(0, 54%, 73%) 
+      - hsl(0, 53%, 85%) 
+
+  gray:
+    name: Gray
+    value:
+      - hsl(0, 0%, 83%) 
+      - hsl(0, 0%, 90%) 
+      - hsl(0, 0%, 93%) 
+      - hsl(210, 22%, 96%) 
+      - hsl(0, 0%, 98%) 
+
+text-color:
+  dark:
+    name: Black
+    value:
+      - rgba(0, 0, 0, 0.87)  # High Emphasis
+      - rgba(0, 0, 0, 0.54)  # Mid Emphasis
+      - rgba(0, 0, 0, 0.27)  # Disabled
+
+  light:
+    name: White
+    value:
+      - rgba(255, 255, 255, 0.87)
+      - rgba(255, 255, 255, 0.54)
+      - rgba(255, 255, 255, 0.27)
+
+shadow:
+  flat:
+    value: none
+  raised:
+    value: 0 3px 11px 0 rgba(0, 0, 0, 0.21)
+
+font-family:
+  default:
+    name: Roboto
+    value:
+      - Roboto
+      - sans-serif
+
+text-style:
+  title:
+    name: Title
+    value:
+      font-family: default
+      font-size: 28
+      font-weight: 700
+  h1:
+    name: H1
+    value:
+      font-family: default
+      font-size: 24
+      font-weight: 400
+  h2:
+    name: H2
+    value:
+      font-family: default
+      font-size: 20
+      font-weight: 500
+  h3:
+    name: H3
+    value:
+      font-family: default
+      font-size: 16
+      font-weight: 400
+  h4:
+    name: H4
+    value:
+      font-family: default
+      font-size: 14
+      font-weight: 700
+  body:
+    name: Body
+    value:
+      font-family: default
+      font-size: 14
+      font-weight: 400
+  p: &ParagraphTextStyle
+    name: Paragraph
+    value:
+      font-family: default
+      font-size: 12
+      font-weight: 400
+  paragraph: *ParagraphTextStyle
+  caption:
+    name: Caption
+    value:
+      font-family: default
+      font-size: 10
+      font-weight: 400
+  button:
+    description: Button
+    value:
+      font-family: default
+      font-size: 12
+      font-weight: 500
+      text-transform: uppercase
+  text-link:
+    name: Text Link
+    value:
+      font-family: default
+      font-size: 12
+      font-weight: 500
+      text-transform: uppercase
+
+size:
+  2xs: 4
+  xs: 8
+  s: 12
+  r: 16
+  m: 20
+  l: 24
+  xl: 32
+  2xl: 40
+
+grid:
+  value: 16

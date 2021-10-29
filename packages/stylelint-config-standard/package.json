@@ -1,6 +1,6 @@
 {
   "name": "@myntra/stylelint-config-standard",
-  "version": "1.13.63",
+  "version": "1.13.64",
   "main": "src/index.js",
   "module": "dist/stylelint-config-standard.esm.js",
   "types": "dist/index.d.ts",

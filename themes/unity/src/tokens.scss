@@ -1,0 +1,58 @@
+$-tokens-colors-primary: hsl(185, 68%, 50%);
+$-tokens-colors-success: hsl(138, 53%, 53%);
+$-tokens-colors-warning: hsl(40, 87%, 53%);
+$-tokens-colors-danger: hsl(0, 54%, 53%);
+$-tokens-colors-gray: hsl(0, 0%, 93%);
+$-tokens-colors: (
+  'primary-darker': hsl(185, 68%, 30%),
+  'primary-dark': hsl(185, 68%, 40%),
+  'primary-base': hsl(185, 68%, 50%),
+  'primary-text': hsla(185, 68%, 50%, 0.87),
+  'primary-light': hsl(185, 68%, 69%),
+  'primary-lighter': hsl(185, 68%, 85%),
+  'primary-lightest': undefined,
+  'success-darker': hsl(138, 54%, 22%),
+  'success-dark': hsl(138, 54%, 36%),
+  'success-base': hsl(138, 53%, 53%),
+  'success-text': hsla(138, 53%, 53%, 0.87),
+  'success-light': hsl(138, 54%, 73%),
+  'success-lighter': hsl(138, 53%, 85%),
+  'success-lightest': undefined,
+  'warning-darker': hsl(40, 86%, 28%),
+  'warning-dark': hsl(40, 87%, 44%),
+  'warning-base': hsl(40, 87%, 53%),
+  'warning-text': hsla(40, 87%, 53%, 0.87),
+  'warning-light': hsl(40, 87%, 73%),
+  'warning-lighter': hsl(40, 87%, 85%),
+  'warning-lightest': undefined,
+  'danger-darker': hsl(0, 54%, 22%),
+  'danger-dark': hsl(0, 54%, 36%),
+  'danger-base': hsl(0, 54%, 53%),
+  'danger-text': hsla(0, 54%, 53%, 0.87),
+  'danger-light': hsl(0, 54%, 73%),
+  'danger-lighter': hsl(0, 53%, 85%),
+  'danger-lightest': undefined,
+  'gray-darker': hsl(0, 0%, 83%),
+  'gray-dark': hsl(0, 0%, 90%),
+  'gray-base': hsl(0, 0%, 93%),
+  'gray-text': hsla(0, 0%, 93%, 0.87),
+  'gray-light': hsl(210, 22%, 96%),
+  'gray-lighter': hsl(0, 0%, 98%),
+  'gray-lightest': undefined,
+  'primary-dark-1': hsl(243, 47%, 32%),
+  'nav-bar.background': hsl(270, 21%, 15%),
+  'nav-bar.background:focus': hsl(185, 64%, 51%),
+  'nav-bar.border': hsl(270, 21%, 15%),
+  'nav-bar.item.background:active': hsl(185, 64%, 51%),
+  'nav-bar.text': hsl(0, 0%, 100%),
+  'nav-bar.item.text:active': hsl(0, 0%, 100),
+  'top-bar.background': hsl(0, 0%, 100%),
+  'top-bar.border': hsl(0, 0%, 100%),
+);
+$-tokens-shadows: (
+  'flat': none,
+  'raised': 0 3px 11px 0 rgba(0, 0, 0, 0.21),
+);
+$-tokens-radius: (
+  'button': 4px,
+);

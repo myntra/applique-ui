@@ -1,0 +1,28 @@
+{
+  "name": "@myntra/uikit-theme-unity",
+  "version": "1.13.64",
+  "main": "dist/unity.cjs.js",
+  "module": "dist/unity.esm.js",
+  "author": "Myntra",
+  "license": "UNLICENSED",
+  "repository": "https://bitbucket.org/myntra/uikit/src/master/themes/unity",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js",
+    "*.scss"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build:tokens": "tokenize src/tokens.yml"
+  },
+  "dependencies": {
+    "@myntra/uikit": "1.13.*"
+  },
+  "devDependencies": {
+    "@myntra/accoutrement": "1.13.*",
+    "@myntra/uikit-design": "1.13.*",
+    "@myntra/tokenizer": "1.13.*"
+  }
+}

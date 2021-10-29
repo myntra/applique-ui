@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-radio",
-  "version": "1.13.63",
+  "version": "1.13.64",
   "main": "dist/input-radio.cjs.js",
   "module": "dist/input-radio.esm.js",
   "types": "dist/index.d.ts",

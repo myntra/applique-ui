@@ -1,0 +1,167 @@
+$-tokens-colors-primary: hsl(244, 54%, 53%);
+$-tokens-colors-success: hsl(138, 53%, 53%);
+$-tokens-colors-warning: hsl(40, 87%, 53%);
+$-tokens-colors-danger: hsl(0, 54%, 53%);
+$-tokens-colors-gray: hsl(0, 0%, 93%);
+$-tokens-colors: (
+  'primary-darker': hsl(244, 53%, 22%),
+  'primary-dark': hsl(244, 54%, 36%),
+  'primary-base': hsl(244, 54%, 53%),
+  'primary-text': hsla(244, 54%, 53%, 0.87),
+  'primary-light': hsl(244, 54%, 73%),
+  'primary-lighter': hsl(244, 53%, 85%),
+  'primary-lightest': undefined,
+  'success-darker': hsl(138, 54%, 22%),
+  'success-dark': hsl(138, 54%, 36%),
+  'success-base': hsl(138, 53%, 53%),
+  'success-text': hsla(138, 53%, 53%, 0.87),
+  'success-light': hsl(138, 54%, 73%),
+  'success-lighter': hsl(138, 53%, 85%),
+  'success-lightest': undefined,
+  'warning-darker': hsl(40, 86%, 28%),
+  'warning-dark': hsl(40, 87%, 44%),
+  'warning-base': hsl(40, 87%, 53%),
+  'warning-text': hsla(40, 87%, 53%, 0.87),
+  'warning-light': hsl(40, 87%, 73%),
+  'warning-lighter': hsl(40, 87%, 85%),
+  'warning-lightest': undefined,
+  'danger-darker': hsl(0, 54%, 22%),
+  'danger-dark': hsl(0, 54%, 36%),
+  'danger-base': hsl(0, 54%, 53%),
+  'danger-text': hsla(0, 54%, 53%, 0.87),
+  'danger-light': hsl(0, 54%, 73%),
+  'danger-lighter': hsl(0, 53%, 85%),
+  'danger-lightest': undefined,
+  'gray-darker': hsl(0, 0%, 83%),
+  'gray-dark': hsl(0, 0%, 90%),
+  'gray-base': hsl(0, 0%, 93%),
+  'gray-text': hsla(0, 0%, 93%, 0.87),
+  'gray-light': hsl(210, 22%, 96%),
+  'gray-lighter': hsl(0, 0%, 98%),
+  'gray-lightest': undefined,
+);
+$-tokens-text-colors: (
+  'dark': (
+    'default': rgba(0, 0, 0, 0.87),
+    'disabled': rgba(0, 0, 0, 0.27),
+    'mid-emphasis': rgba(0, 0, 0, 0.54),
+  ),
+  'light': (
+    'default': rgba(255, 255, 255, 0.87),
+    'disabled': rgba(255, 255, 255, 0.27),
+    'mid-emphasis': rgba(255, 255, 255, 0.54),
+  ),
+);
+$-tokens-font-faces: (
+  'default': (
+    Roboto,
+    sans-serif,
+  ),
+);
+$-tokens-shadows: (
+  'flat': none,
+  'raised': 0 3px 11px 0 rgba(0, 0, 0, 0.21),
+);
+$-tokens-text-styles: (
+  'title': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 28px,
+    'font-weight': 700,
+  ),
+  'h1': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 24px,
+    'font-weight': 400,
+  ),
+  'h2': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 20px,
+    'font-weight': 500,
+  ),
+  'h3': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 16px,
+    'font-weight': 400,
+  ),
+  'h4': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 14px,
+    'font-weight': 700,
+  ),
+  'body': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 14px,
+    'font-weight': 400,
+  ),
+  'p': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 12px,
+    'font-weight': 400,
+  ),
+  'paragraph': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 12px,
+    'font-weight': 400,
+  ),
+  'caption': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 10px,
+    'font-weight': 400,
+  ),
+  'button': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 12px,
+    'font-weight': 500,
+    'text-transform': uppercase,
+  ),
+  'text-link': (
+    'font-family': (
+      Roboto,
+      sans-serif,
+    ),
+    'font-size': 12px,
+    'font-weight': 500,
+    'text-transform': uppercase,
+  ),
+);
+$-tokens-sizes: (
+  '2xs': 4px,
+  'xs': 8px,
+  's': 12px,
+  'r': 16px,
+  'm': 20px,
+  'l': 24px,
+  'xl': 32px,
+  '2xl': 40px,
+);
+$-tokens-vertical-grid-size: 16px;

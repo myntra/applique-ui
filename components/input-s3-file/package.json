@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-s3-file",
-  "version": "1.13.63",
+  "version": "1.13.64",
   "main": "dist/input-s3-file.cjs.js",
   "module": "dist/input-s3-file.esm.js",
   "types": "dist/index.d.ts",

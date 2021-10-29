@@ -5,13 +5,13 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "1.13.63",
+  "version": "1.13.64",
   "engines": {
     "node": ">=8.0"
   },
   "scripts": {
     "build": "npm run :build --",
-    "pre:build": "pnpm recursive --filter ./components --filter ./packages --filter ./themes run build",
+    "pre:build": "pnpm recursive --filter ./components --filter ./packages run build",
     ":build": "node scripts/build.js",
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
@@ -26,10 +26,10 @@
     "test": "IGNORE='@myntra/uikit-theme-nuclei,@myntra/uikit-theme-unity' jest",
     "coverage": "jest --coverage",
     "coverage:open": "run-s coverage 'open coverage/lcov-report/index.html'",
-    "update:master": "git checkout master && git rebase develop && git push origin master && git checkout develop",
+    "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
     "pre:publish": "CI=true npm run build",
     ":publish": "node ./scripts/publish.js",
-    "pre:release": "git checkout develop && git pull origin develop",
+    "pre:release": "git checkout deploy && git pull origin deploy",
     ":release": "standard-version -a -r patch",
     "post:release": "npm run :publish && git push --follow-tags && npm run update:master",
     "release": "npm run :release",

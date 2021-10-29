@@ -1,6 +1,6 @@
 {
   "name": "@myntra/rollup-plugin-classnames",
-  "version": "1.13.63",
+  "version": "1.13.64",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-classnames.esm.js",
   "types": "dist/index.d.ts",

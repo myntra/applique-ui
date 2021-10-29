@@ -4,7 +4,7 @@ const { TopologicalSort } = require('topological-sort')
 
 const packagesDir = path.resolve(__dirname, '../packages')
 const componentsDir = path.resolve(__dirname, '../components')
-// const themesDir = path.resolve(__dirname, '../themes')
+const themesDir = path.resolve(__dirname, '../themes')
 const { version } = require('../package.json')
 
 /**
@@ -23,16 +23,16 @@ function findPackages(dir) {
 
 const packages = findPackages(packagesDir)
 const components = findPackages(componentsDir)
-// const themes = findPackages(themesDir)
+const themes = findPackages(themesDir)
 const targets = sortedPackages([
   ...packages.map((pkg) => `@myntra/${pkg}`),
   ...components.map((component) => `@myntra/uikit-component-${component}`),
-  // ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
+  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
 ])
 const targetsMap = sortedPackagesMap([
   ...packages.map((pkg) => `@myntra/${pkg}`),
   ...components.map((component) => `@myntra/uikit-component-${component}`),
-  // ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
+  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
 ])
 
 function readPackage(name) {
@@ -138,7 +138,7 @@ function getFullName(name) {
   name = getShortName(name)
   if (packages.includes(name)) return `@myntra/${name}`
   if (components.includes(name)) return `@myntra/uikit-component-${name}`
-  // if (themes.includes(name)) return `@myntra/uikit-theme-${name}`
+  if (themes.includes(name)) return `@myntra/uikit-theme-${name}`
 
   throw new Error(`Unknown package '${name}'`)
 }
@@ -158,7 +158,11 @@ function getPackageDir(name) {
   const dir = getShortName(name)
 
   return path.resolve(
-    isComponent(packageName) ? componentsDir : packagesDir,
+    isComponent(packageName)
+      ? componentsDir
+      : isTheme(packageName)
+      ? themesDir
+      : packagesDir,
     dir
   )
 }
@@ -170,7 +174,7 @@ function getPackageRepository(name) {
   const packageName = getFullName(name)
   const dir = getShortName(name)
 
-  return `https://github.com/myntra/uikit/tree/release/${
+  return `https://bitbucket.org/myntra/uikit/src/master/${
     isComponent(packageName)
       ? 'components'
       : isTheme(packageName)
@@ -232,8 +236,10 @@ export default ${pascalCase(shortName)}
 module.exports = {
   componentsDir,
   packagesDir,
+  themesDir,
   components,
   packages,
+  themes,
   targets,
   targetsMap,
   fuzzyMatchTarget,
