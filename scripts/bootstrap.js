@@ -30,7 +30,7 @@ targets.forEach((name) => {
     license: 'UNLICENSED',
     repository: getPackageRepository(name),
     publishConfig: {
-      registry: 'https://registry.myntra.com',
+      registry: 'https://registry.npmjs.org',
     },
     keywords: ['uikit', 'component'],
     homepage: 'https://uikit.myntra.com/components/' + shortName,

@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-top-bar",
-  "version": "1.13.64",
+  "version": "1.13.65",
   "main": "dist/top-bar.cjs.js",
   "module": "dist/top-bar.esm.js",
   "types": "dist/index.d.ts",

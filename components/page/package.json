@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-page",
-  "version": "1.13.64",
+  "version": "1.13.65",
   "main": "dist/page.cjs.js",
   "module": "dist/page.esm.js",
   "types": "dist/index.d.ts",
