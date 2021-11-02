@@ -56,7 +56,7 @@ function findImport(root, startsWith = null) {
 }
 
 function createComponentsFile(component) {
-  const fileName = Path.resolve(getPackageDir(component), 'readme.mdx')
+  const fileName = Path.resolve(getPackageDir(component), 'example.mdx')
   const source = Fs.readFileSync(fileName, { encoding: 'utf8' })
   const root = jscodeshift(source.toString().split('#')[0], {})
   const RE = /<([A-Z](?:[a-zA-Z0-9]+))/gm
@@ -131,7 +131,7 @@ function startWebpackDevServer(component, port) {
     )
     .set('@design', Path.resolve(__dirname, '../themes/nuclei/design.scss'))
     .set('@documenter', Path.resolve(__dirname, './app/documenter.tsx'))
-    .set('@component', Path.resolve(getPackageDir(component), 'readme.mdx'))
+    .set('@component', Path.resolve(getPackageDir(component), 'example.mdx'))
     .set('@mdx-js/tag$', require.resolve('@mdx-js/tag'))
     .set('react$', require.resolve('react'))
     .set('react-dom$', require.resolve('react-dom'))
