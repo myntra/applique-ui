@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/(components|spectrum|guide|contributing)/**",
+      "destination": "/index.html"
+    }
+  ]
+}
