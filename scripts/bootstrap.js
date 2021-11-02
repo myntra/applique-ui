@@ -64,7 +64,7 @@ targets.forEach((name) => {
 
   console.log(`Package file created at ${pkgFile}`)
   if (isComponent(name)) {
-    const readmeFile = path.join(rootDir, `readme.mdx`)
+    const readmeFile = path.join(rootDir, `example.mdx`)
 
     if (!fs.existsSync(readmeFile)) {
       const component = pascalCase(shortName)
