@@ -1,4 +1,5 @@
 import NavBar from './src/nav-bar'
+import {Bell, BoxSolid, InfoCircleSolid, AtSolid, ClockRegular} from "uikit-icons"
 
 # NavBar
 
@@ -6,11 +7,11 @@ import NavBar from './src/nav-bar'
 
 ```jsx preview align=left
 <NavBar title="My Application">
-  <NavBar.Item icon={InfoCircleSolid}>Dice 1</NavBar.Item>
+  <NavBar.Item showUpdateBadge icon={InfoCircleSolid}>Dice 1</NavBar.Item>
   <NavBar.Item icon={BoxSolid}>Dice 2</NavBar.Item>
 
   <NavBar.Group title="Dices" icon={AtSolid}>
-    <NavBar.Item icon={Bell}>Dice 5</NavBar.Item>
+    <NavBar.Item showUpdateBadge icon={Bell}>Dice 5</NavBar.Item>
     <NavBar.Item icon={InfoCircleSolid}>Dice 1</NavBar.Item>
   </NavBar.Group>
 </NavBar>

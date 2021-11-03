@@ -62,4 +62,12 @@
       display: none;
     }
   }
+
+  .update-badge {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 0.6rem;
+    background: color('danger');
+    border-radius: 0.25rem;
+  }
 }
