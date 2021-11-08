@@ -13,12 +13,13 @@ export default function Tab({
   title,
   className,
   children,
+  type,
   ...props
 }: Props) {
   return (
     <div
       {...props}
-      className={classnames('tab', className, { active: isActive })}
+      className={classnames('tab', className, type, { active: isActive })}
     >
       {title}
     </div>

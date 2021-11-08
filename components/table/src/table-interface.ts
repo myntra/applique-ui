@@ -74,6 +74,7 @@ export interface Column<T = any, V = any> {
   columns: Column<T, V>[]
   align: string
   width: string
+  editorComponent: ReactNode
 }
 
 export interface Row<T = any> {

@@ -29,6 +29,11 @@ const MASKS: InputMaskedProps['masks'] = {
       return /\d/.test(token)
     },
   },
+  H: {
+    validate(token) {
+      return /\d/.test(token)
+    },
+  },
 }
 
 export interface Props extends BaseProps {
@@ -42,6 +47,7 @@ export interface Props extends BaseProps {
   range?: boolean
   onRangeFocus?(active: 'from' | 'to'): void
   onFocus?(event: FocusEvent): void
+  includeTime?: boolean
 }
 
 /**
@@ -52,6 +58,10 @@ export default class InputDateValue extends PureComponent<
   { value: string | StringDateRange }
 > {
   state = { value: null }
+
+  static defaultProps = {
+    includeTime: false,
+  }
 
   get value() {
     return this.state.value
@@ -64,7 +74,7 @@ export default class InputDateValue extends PureComponent<
   get pattern() {
     return this.props.format
       .toUpperCase()
-      .replace(/[^YMD]+/g, (match) => `"${match}"`)
+      .replace(/[^YMDH]+/g, (match) => `"${match}"`)
   }
 
   handleFromChange = (value) => this.handleChange(value, 'from')
@@ -73,9 +83,12 @@ export default class InputDateValue extends PureComponent<
     if (!this.props.onchange) return // readOnly input.
 
     try {
-      const date = parse(value, this.props.format)
+      const date = parse(value, this.props.format, this.props.includeTime)
 
-      if (date && format(date, this.props.format) === value) {
+      if (
+        date &&
+        format(date, this.props.format, this.props.includeTime) === value
+      ) {
         this.setState({ value: null })
         this.props.onChange(typeof key === 'string' ? { [key]: date } : date)
       }
@@ -119,6 +132,7 @@ export default class InputDateValue extends PureComponent<
       onchange,
       value: _,
       disabled,
+      includeTime,
       ...props
     } = this.props
 

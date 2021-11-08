@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-file",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/input-file.cjs.js",
   "module": "dist/input-file.esm.js",
   "types": "dist/index.d.ts",
@@ -29,6 +29,6 @@
     "@myntra/uikit-component-button": "1.13.*",
     "@myntra/uikit-component-input-text": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

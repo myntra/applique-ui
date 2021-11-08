@@ -1,5 +1,4 @@
 import Table from './src/table'
-import { EllipsisVSolid } from 'uikit-icons'
 
 # Table
 
@@ -16,7 +15,7 @@ const [data] = useState([
   <Table.Column label="ID" key="id">
     {({ data }) => <span>{ data.id }</span>}
   </Table.Column>
-  <Table.Column label="Name" key="name" />
+  <Table.Column label="Name" key="name"/>
   <Table.Column label="Info" key="info">
     <Table.Column label="Age" key="age">
       {({ data }) => <span>{ data.age } years</span>}
@@ -32,6 +31,7 @@ const [data] = useState([
 ## Examples
 
 - [Basic Table](#basic-table)
+- [Editable Table](#editable-table)
 - [Fixed Column Table](#fixed-column-table)
 - [Sortable Column Table](#sortable-column-table)
 - [Filterable Column Table](#filterable-column-table)
@@ -59,6 +59,32 @@ const [data] = useState([
   <Table.Column key="id" label="ID" />
   <Table.Column key="full-name" label="Name" accessor="name" />
   <Table.Column key="created-at" label="Created At" accessor={item => new Date(item.createdAt).toLocaleString()} />
+</Table>
+```
+
+### Editable Table
+
+Table in which data can be edited. Pass __isEditable__ Flag and function handler __onEdit__ to get the updated 
+data to the table. Pass __editorComponent__ to <Table.Column> to render the component which should be rendered for editing.
+
+```jsx preview
+const [value, setValue] = useState();
+const [data] = useState([
+  { name: 'Jane Doe', age: 24, status: 'single', details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
+  { name: 'John Doe', age: 26, status: 'single', details: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.' }
+]);
+
+const handleEdit = (value,rowIndex,key) => {
+  const updatedData = { ...data }
+  updatedData[rowIndex][key] = value
+  setValue(updatedData)
+}
+
+<Table data={data} editable={true} onEdit={handleEdit}>
+  <Table.Column label="Name" key="name" editorComponent={<InputText />}/>
+  <Table.Column label="Age" key="age" editorComponent={<InputNumber />}/>
+  <Table.Column label="Status" key="status" editorComponent={<InputSelect options={[{label:'single',value:'single'},{label:'married',value:'married'}]} />}/>
+  <Table.Column label="Details" key="details" editorComponent={<InputTextArea />}/>
 </Table>
 ```
 

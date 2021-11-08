@@ -81,6 +81,11 @@
       height: size('nav-bar.icon');
       font-size: size('nav-bar.icon');
     }
+    .logo {
+      svg {
+        width: 100px;
+      }
+    }
   }
 
   .body {

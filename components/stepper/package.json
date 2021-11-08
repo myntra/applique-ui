@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-stepper",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",
@@ -32,6 +32,6 @@
     "@myntra/uikit-component-layout": "1.13.*",
     "@myntra/uikit-component-icon": "1.13.*",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

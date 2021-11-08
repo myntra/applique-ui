@@ -15,7 +15,9 @@ const [value, setValue] = useState();
 ## Examples
 
 - [Date input](#date-input)
+- [Date input with time](#date-input-with-time)
 - [Date range input](#date-range-input)
+- [Date range input with time](#date-range-input-with-time)
 - [Date range input with presets](#date-range-input-preset)
 - [InputDate.Picker component](#inputdatepicker)
 - [Presets component](#inputdatepicker) 
@@ -28,12 +30,28 @@ const [value, setValue] = useState();
 <InputDate value={value} onChange={setValue} />
 ```
 
+### Date input with time
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputDate value={value} onChange={setValue} includeTime />
+```
+
 ### Date range input
 
 ```jsx preview
 const [value, setValue] = useState();
 
 <InputDate value={value} onChange={setValue} range active="from" />
+```
+
+### Date range input with time
+
+```jsx preview
+const [value, setValue] = useState();
+
+<InputDate value={value} onChange={setValue} range active="from"  includeTime/>
 ```
 
 ### Date range input preset

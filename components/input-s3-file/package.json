@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-s3-file",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/input-s3-file.cjs.js",
   "module": "dist/input-s3-file.esm.js",
   "types": "dist/index.d.ts",
@@ -32,6 +32,6 @@
     "@myntra/uikit-component-input-file": "1.13.*",
     "@myntra/uikit-component-progress": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

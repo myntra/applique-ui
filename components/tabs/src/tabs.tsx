@@ -19,6 +19,7 @@ export interface Props extends BaseProps {
    * @param activeIndex - New active tab.
    */
   onChange?(activeIndex: number): void
+  type?: 'primary' | 'secondary'
 }
 
 export { Tab }
@@ -44,6 +45,10 @@ export default class Tabs extends PureComponent<
         throw new Error('`onChange` prop is required when using `active` props')
       }
     },
+  }
+
+  static defaultProps = {
+    type: 'primary',
   }
 
   state = {
@@ -76,6 +81,7 @@ export default class Tabs extends PureComponent<
       onChange,
       children: _,
       activeIndex: __,
+      type,
       ...props
     } = this.props
 
@@ -83,13 +89,14 @@ export default class Tabs extends PureComponent<
 
     return (
       <div className={classnames('group', className)} {...props}>
-        <div className={classnames('pane')}>
+        <div className={classnames('pane', type)}>
           {Children.map(children, (child: any, index) =>
             cloneElement(child, {
               'data-index': index,
               isActive: index === activeIndex,
               onClick: this.handleClick,
               children: null,
+              type,
             })
           )}
         </div>

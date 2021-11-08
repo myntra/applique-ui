@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-month",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/input-month.cjs.js",
   "module": "dist/input-month.esm.js",
   "types": "dist/index.d.ts",
@@ -33,6 +33,6 @@
     "@myntra/uikit-component-input-masked": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
     "luxon": "^1.21.1",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

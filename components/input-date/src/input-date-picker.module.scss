@@ -1,0 +1,8 @@
+@import '@accoutrement';
+.input-date-picker {
+  &__actions {
+    padding: size('4x');
+    text-align: right;
+    background-color: color('white');
+  }
+}

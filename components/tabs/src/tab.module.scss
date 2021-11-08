@@ -1,31 +1,48 @@
 @import '@accoutrement';
 
 .tab {
-  @include padding('tab.item');
-  @include typography('h2');
+  &.primary {
+    @include padding('tab.item');
+    @include typography('h2');
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      height: 4px;
+      content: ' ';
+      border-radius: 3px;
+      transition: all 350ms;
+    }
+    &.active {
+      &::after {
+        background-color: color('primary');
+      }
+    }
+  }
+  &.secondary {
+    @include padding('tab.item.secondary');
+    @include typography('body');
+
+    min-width: size('3x') * 10;
+    margin-right: size('4x');
+    text-align: center;
+    border: 1px solid color('gray-light');
+    transition: all 350ms;
+    &.active {
+      background-color: color('primary-light-3');
+      border-color: color('primary');
+    }
+  }
+
   position: relative;
   display: inline-block;
-
   color: text-color('dark', 'medium');
   cursor: pointer;
 
-  &::after {
-    position: absolute;
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    display: block;
-    height: 4px;
-    content: ' ';
-    border-radius: 3px;
-    transition: all 350ms;
-  }
-
   &.active {
     color: text-color('dark');
-
-    &::after {
-      background-color: color('primary');
-    }
   }
 }

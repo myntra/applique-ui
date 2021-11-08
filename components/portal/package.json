@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-portal",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/portal.cjs.js",
   "module": "dist/portal.esm.js",
   "types": "dist/index.d.ts",
@@ -31,6 +31,6 @@
     "@myntra/uikit-can-i-use": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

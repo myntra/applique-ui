@@ -29,6 +29,7 @@ export default class SmallStep extends PureComponent<Props> {
       error,
       orientation,
       showLabel,
+      active,
       ...props
     } = this.props
 
@@ -57,8 +58,20 @@ export default class SmallStep extends PureComponent<Props> {
               }
             )}
           >
-            <Text color="light">{label}</Text>
-            {description && <Text.p color="light">{description}</Text.p>}
+            <Text.p
+              color={orientation === 'horizontal' ? 'light' : 'dark'}
+              weight={active ? 'bolder' : null}
+            >
+              {label}
+            </Text.p>
+            {description && (
+              <Text.p
+                color={orientation === 'horizontal' ? 'light' : 'dark'}
+                weight={active ? 'bolder' : null}
+              >
+                {description}
+              </Text.p>
+            )}
           </Layout>
         </div>
         <StepSeparator

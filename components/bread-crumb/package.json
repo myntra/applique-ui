@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-bread-crumb",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/bread-crumb.cjs.js",
   "module": "dist/bread-crumb.esm.js",
   "types": "dist/index.d.ts",
@@ -29,6 +29,6 @@
   "dependencies": {
     "@myntra/uikit-can-i-use": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

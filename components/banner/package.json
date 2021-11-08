@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-banner",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/banner.cjs.js",
   "module": "dist/banner.esm.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
     "@myntra/uikit-component-text": "1.13.*",
     "@myntra/uikit-component-layout": "1.13.*",
     "@myntra/uikit-component-icon": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9",
+    "uikit-icons": "npm:@myntra/uikit-icons@latest",
     "@myntra/uikit-utils": "1.13.*"
   }
 }

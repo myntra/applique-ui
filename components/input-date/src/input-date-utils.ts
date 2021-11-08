@@ -1,5 +1,5 @@
 import { parse as _parse, format as _format } from 'date-fns'
-
+import dayJS from 'dayjs'
 import { DateRange, StringDateRange, is } from './input-date-helpers'
 export const RE_ISO_DATE = /^(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+)|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d)|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d)$/
 
@@ -23,7 +23,11 @@ export function onlyDate(date: Date | { toDate(): Date }) {
   return UTCDate(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
 }
 
-export function parse(str: string | Date, format: string) {
+export function parse(
+  str: string | Date,
+  format: string,
+  includeTime?: boolean
+) {
   if (str instanceof Date) return str
   if (typeof str !== 'string' || str === '') return null
   if (RE_ISO_DATE.test(str)) return new Date(str)
@@ -32,7 +36,18 @@ export function parse(str: string | Date, format: string) {
   const date = _parse(str, format, new Date())
 
   if (date instanceof Date && !Number.isNaN(date.getTime())) {
-    return UTCDate(date.getFullYear(), date.getMonth(), date.getDate())
+    let parsedDate = UTCDate(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    )
+    if (includeTime) {
+      parsedDate = dayJS(parsedDate)
+        .hour(parseInt(padStartWithZeros(date.getHours(), 2)))
+        .minute(parseInt(padStartWithZeros(date.getMinutes(), 2)))
+        .toDate()
+    }
+    return parsedDate
   }
 
   throw new Error(`Date parse exception: '${str}' does not match '${format}'`)
@@ -40,12 +55,14 @@ export function parse(str: string | Date, format: string) {
 
 export function format(
   value: Date | string | { from?: Date | string; to?: Date | string },
-  pattern: string
+  pattern: string,
+  includeTime?: boolean
 ) {
   if (!value) return value
   if (!pattern) throw new Error(`'format' is required.`)
   if (value instanceof Date) return _format(value, pattern)
-  if (typeof value === 'string') return format(parse(value, pattern), pattern)
+  if (typeof value === 'string')
+    return format(parse(value, pattern, includeTime), pattern)
 
   const result: { from?: Date; to?: Date } = {}
   if (value.from) result.from = format(value.from, pattern)

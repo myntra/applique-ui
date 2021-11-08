@@ -8,13 +8,14 @@ import NavBarItem from './nav-bar-item'
 import { is } from '@myntra/uikit-utils'
 
 import LogoMyntraJabong from './logos/myntra-jabong.png'
-
+import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
 // TODO: Use click away to close NavBar (if mouse leave fails)
 
 import classnames from './nav-bar.module.scss'
 import { createRef } from '@myntra/uikit-utils'
 
 import BarsSolid from 'uikit-icons/svgs/BarsSolid'
+import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 
 // TODO: Use hooks.
 const LinkFromUIKitContext = ({ href, children }: LinkProps) => (
@@ -108,6 +109,8 @@ interface Props extends BaseProps {
    * @deprecated - Use [renderLink](#NavBar-renderLink) prop.
    */
   linkComponent?(props: { href: string; children: JSX.Element }): JSX.Element
+
+  enableBackNavigation?: boolean
 }
 
 const ROOT_NAV_GROUP_ID = [0]
@@ -277,6 +280,10 @@ export default class NavBar extends PureComponent<
     this.props.overlayClickHandler && this.props.overlayClickHandler()
   }
 
+  backNavigationHandler = () => {
+    window.history && window.history.back()
+  }
+
   get attrs() {
     const {
       children,
@@ -300,7 +307,16 @@ export default class NavBar extends PureComponent<
   }
 
   render() {
-    const { className, needOverlay, currentPath, title, children } = this.props
+    const {
+      className,
+      needOverlay,
+      currentPath,
+      title,
+      children,
+      enableBackNavigation,
+    } = this.props
+
+    const showBackNavigation = enableBackNavigation && is.mobile()
 
     return (
       <NavBarContext.Provider
@@ -339,15 +355,20 @@ export default class NavBar extends PureComponent<
           <header
             id={`${this.idPrefix}header`}
             className={classnames('header')}
-            onClick={this.headerClickHandler}
+            onClick={
+              showBackNavigation
+                ? this.backNavigationHandler
+                : this.headerClickHandler
+            }
           >
             <Icon
               className={classnames('hamburger')}
-              name={BarsSolid}
+              name={showBackNavigation ? ChevronLeftSolid : BarsSolid}
               title="Navigation"
             />
-            <img src={LogoMyntraJabong} alt="Myntra Jabong" />
-            {title}
+            <div className={classnames('logo')}>
+              <MyntraLogo />
+            </div>
           </header>
 
           <NavBarGroup

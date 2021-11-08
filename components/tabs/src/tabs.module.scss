@@ -7,6 +7,8 @@
 }
 
 .pane {
-  border-bottom: border('tab.pane');
-  border-bottom-color: color('tab.border');
+  &.primary {
+    border-bottom: border('tab.pane');
+    border-bottom-color: color('tab.border');
+  }
 }

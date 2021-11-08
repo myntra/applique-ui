@@ -174,7 +174,7 @@ function getPackageRepository(name) {
   const packageName = getFullName(name)
   const dir = getShortName(name)
 
-  return `https://bitbucket.org/myntra/uikit/src/master/${
+  return `https://github.com/myntra/uikit/tree/release/${
     isComponent(packageName)
       ? 'components'
       : isTheme(packageName)

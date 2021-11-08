@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-image",
-  "version": "1.13.65",
+  "version": "1.13.78",
   "main": "dist/image.cjs.js",
   "module": "dist/image.esm.js",
   "types": "dist/index.d.ts",
@@ -31,6 +31,6 @@
     "@myntra/uikit-utils": "1.13.*",
     "intersection-observer-polyfill": "^0.1.0",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

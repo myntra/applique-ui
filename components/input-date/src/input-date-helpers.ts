@@ -26,6 +26,10 @@ export function isStringDateRange(
   return range === true
 }
 
+export function range(n: number): number[] {
+  return Array.apply(null, { length: n }).map((_, i) => i)
+}
+
 export interface DateRange {
   from?: Date
   to?: Date

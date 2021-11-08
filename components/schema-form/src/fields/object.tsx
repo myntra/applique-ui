@@ -49,7 +49,8 @@ export default class SchemaFormObject extends Component<Props> {
   shouldComponentUpdate(newProps) {
     const shouldUpdate = !(
       looseEquals(this.props.value, newProps.value) &&
-      looseEquals(this.props.error, newProps.error)
+      looseEquals(this.props.error, newProps.error) &&
+      looseEquals(this.props.properties, newProps.properties)
     )
 
     return shouldUpdate
@@ -90,10 +91,10 @@ export default class SchemaFormObject extends Component<Props> {
 
   render() {
     const Wrapper = this.props.component || FallbackWrapper
-    const { _fields, props, layout } = this.props as any // Hidden _field prop
+    const { _fields, props, layout, ui } = this.props as any // Hidden _field prop
     const { properties: derivedProps = {} } =
       this.props.getDerivedPropsFromValue(this.props.value) || {}
-
+    console.log(ui)
     return (
       <Grid.Column
         {...layout}

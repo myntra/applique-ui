@@ -60,12 +60,16 @@ export default class InputDate extends PureComponent<
   }
 
   get displayFormat() {
-    return this.props.displayFormat || this.props.format || 'yyyy-MM-dd'
+    return (
+      this.props.displayFormat ||
+      this.props.format ||
+      (this.props.includeTime ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd')
+    )
   }
 
   get displayValue() {
     return this.props.value
-      ? format(this.props.value, this.displayFormat)
+      ? format(this.props.value, this.displayFormat, this.props.includeTime)
       : this.props.range
       ? {}
       : ''
@@ -81,7 +85,7 @@ export default class InputDate extends PureComponent<
   }
 
   get openToDate() {
-    const { value, range, format } = this.props
+    const { value, range, format, includeTime } = this.props
     if (this.state.openToDate) return this.state.openToDate
 
     if (value) {
@@ -90,10 +94,11 @@ export default class InputDate extends PureComponent<
           this.state.activeRangeEnd === 'to'
             ? value.to || value.from
             : value.from || value.to,
-          format
+          format,
+          includeTime
         )
       } else {
-        return parse(value, format)
+        return parse(value, format, includeTime)
       }
     }
 
@@ -125,7 +130,11 @@ export default class InputDate extends PureComponent<
       value = newValue
     }
 
-    onChange(this.props.format ? format(value, this.props.format) : value)
+    onChange(
+      this.props.format
+        ? format(value, this.props.format, this.props.includeTime)
+        : value
+    )
   }
 
   handleRangeFocus = (value: 'from' | 'to') =>
@@ -133,7 +142,7 @@ export default class InputDate extends PureComponent<
   handleChange = (newValue: Date | DateRange) => {
     if (!this.props.onChange) return
 
-    const { value: oldValue, range } = this.props
+    const { value: oldValue, range, includeTime } = this.props
     let shouldBeClosed = !!(newValue && !this.props.value)
 
     if (isDateRange(oldValue, range) && isDateRange(newValue, range)) {
@@ -162,10 +171,12 @@ export default class InputDate extends PureComponent<
     }
 
     this.props.onChange(
-      this.props.format ? format(newValue, this.props.format) : newValue
+      this.props.format
+        ? format(newValue, this.props.format, this.props.includeTime)
+        : newValue
     )
 
-    if (shouldBeClosed) {
+    if (shouldBeClosed && !includeTime) {
       this.close()
     }
   }
@@ -184,6 +195,7 @@ export default class InputDate extends PureComponent<
       children,
       wrapperClassName,
       disabled,
+      includeTime,
       ...props
     } = this.props
     const { isOpen, activeRangeEnd } = this.state
@@ -205,6 +217,7 @@ export default class InputDate extends PureComponent<
             disabled={disabled}
             onChange={this.handleDisplayValueChange}
             onRangeFocus={this.handleRangeFocus}
+            includeTime={includeTime}
           />
         )}
         onOpen={disabled ? null : this.handleDropdownOpen}
@@ -221,6 +234,8 @@ export default class InputDate extends PureComponent<
               onOpenToDateChange={this.handleOpenToDateChange}
               onChange={this.handleChange}
               active={activeRangeEnd}
+              includeTime={includeTime}
+              closePicker={this.close}
             />
           </div>
         )}
