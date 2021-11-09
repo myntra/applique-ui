@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-badge",
-  "version": "1.13.78",
+  "version": "1.13.79",
   "main": "dist/badge.cjs.js",
   "module": "dist/badge.esm.js",
   "types": "dist/index.d.ts",

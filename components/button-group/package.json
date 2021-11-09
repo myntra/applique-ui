@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-button-group",
-  "version": "1.13.78",
+  "version": "1.13.79",
   "main": "dist/button-group.cjs.js",
   "module": "dist/button-group.esm.js",
   "types": "dist/index.d.ts",

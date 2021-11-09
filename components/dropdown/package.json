@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-dropdown",
-  "version": "1.13.78",
+  "version": "1.13.79",
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",
   "types": "dist/index.d.ts",

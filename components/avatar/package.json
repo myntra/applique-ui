@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-avatar",
-  "version": "1.13.78",
+  "version": "1.13.79",
   "main": "dist/avatar.cjs.js",
   "module": "dist/avatar.esm.js",
   "types": "dist/index.d.ts",
