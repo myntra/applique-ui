@@ -24,7 +24,7 @@
     ":stylelint": "stylelint",
     ":serve": "serve",
     "deploy": "npm run docs:build && npm run docs:deploy",
-    "test": "IGNORE='@myntra/uikit-theme-nuclei,@myntra/uikit-theme-unity' jest",
+    "test": "jest",
     "coverage": "jest --coverage",
     "coverage:open": "run-s coverage 'open coverage/lcov-report/index.html'",
     "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
