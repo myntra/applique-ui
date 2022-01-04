@@ -45,7 +45,7 @@
   }
 
   .item-icon {
-    @include margin-right('large');
+    @include margin-right('medium');
 
     display: inline-flex;
     flex: 0 0 size('#6x');
