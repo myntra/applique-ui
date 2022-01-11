@@ -383,7 +383,6 @@ export default class NavBar extends PureComponent<
             <ClickAway
               target={this.navbarRef}
               onClickAway={this.handleClickAway}
-              data-test-id="click-away"
             />
           )}
         </nav>
