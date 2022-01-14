@@ -15,7 +15,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@myntra/uikit-utils": ">1.13.81",
+    "@myntra/uikit-utils": ">=1.13.81",
     "loader-utils": "^1.1.0"
   }
 }
