@@ -11,12 +11,13 @@
     "src/",
     "dist/",
     "bin/",
-    "codemods/"
+    "codemods/",
+    ".npmrc"
   ],
   "sideEffects": false,
   "description": "@myntra/codemod-utils",
   "dependencies": {
-    "@myntra/eslint-config-standard": "1.13.*",
+    "@myntra/eslint-config-standard": ">=1.13.81",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",

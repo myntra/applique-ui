@@ -10,14 +10,15 @@
   "files": [
     "src/",
     "dist/",
-    "bin/"
+    "bin/",
+    ".npmrc"
   ],
   "bin": {
     "uikit": "bin/uikit-cli.js"
   },
   "sideEffects": false,
   "dependencies": {
-    "@myntra/eslint-config-standard": "1.13.*",
+    "@myntra/eslint-config-standard": ">=1.13.81",
     "@znck/promised": "^1.0.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",

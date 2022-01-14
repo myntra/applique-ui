@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-theme-unity",
-  "version": "1.13.81",
+  "version": "1.13.79-beta.3",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",
@@ -11,18 +11,19 @@
     "dist/",
     "bin/",
     "*.codemod.js",
-    "*.scss"
+    "*.scss",
+    ".npmrc"
   ],
   "sideEffects": false,
   "scripts": {
     "build:tokens": "tokenize src/tokens.yml"
   },
   "dependencies": {
-    "@myntra/uikit": "1.13.*"
+    "@myntra/uikit": ">=1.13.81"
   },
   "devDependencies": {
-    "@myntra/accoutrement": "1.13.*",
-    "@myntra/uikit-design": "1.13.*",
-    "@myntra/tokenizer": "1.13.*"
+    "@myntra/accoutrement": ">=1.13.81",
+    "@myntra/tokenizer": ">=1.13.81",
+    "@myntra/uikit-design": ">=1.13.81"
   }
 }
