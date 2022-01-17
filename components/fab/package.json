@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-fab",
-  "version": "1.13.81",
+  "version": "1.13.83",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",
   "types": "dist/index.d.ts",
