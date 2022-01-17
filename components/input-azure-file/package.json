@@ -1,12 +1,15 @@
 {
   "name": "@myntra/uikit-component-input-azure-file",
-  "version": "1.13.65",
+  "version": "1.13.81",
   "main": "dist/input-azure-file.cjs.js",
   "module": "dist/input-azure-file.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/azure-upload",
+  "publishConfig": {
+    "registry": "http://registry.myntra.com"
+  },
   "keywords": [
     "uikit",
     "component"
@@ -33,6 +36,6 @@
     "@myntra/uikit-component-input-file": "1.13.*",
     "@myntra/uikit-component-progress": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

@@ -7,14 +7,15 @@ import NavBarGroup from './nav-bar-group'
 import NavBarItem from './nav-bar-item'
 import { is } from '@myntra/uikit-utils'
 
-import LogoMyntraJabong from './logos/myntra-jabong.png'
-
+import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
+import MyntraLogoTextRightWhite from 'uikit-icons/svgs/MyntraLogoTextRightWhite'
 // TODO: Use click away to close NavBar (if mouse leave fails)
 
 import classnames from './nav-bar.module.scss'
 import { createRef } from '@myntra/uikit-utils'
 
 import BarsSolid from 'uikit-icons/svgs/BarsSolid'
+import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 
 // TODO: Use hooks.
 const LinkFromUIKitContext = ({ href, children }: LinkProps) => (
@@ -108,6 +109,15 @@ interface Props extends BaseProps {
    * @deprecated - Use [renderLink](#NavBar-renderLink) prop.
    */
   linkComponent?(props: { href: string; children: JSX.Element }): JSX.Element
+
+  /**
+   * Flag to enable back button in mobile view
+   */
+  enableBackNavigation?: boolean
+  /**
+   * Chose a theme
+   */
+  theme?: 'dark' | 'light'
 }
 
 const ROOT_NAV_GROUP_ID = [0]
@@ -277,6 +287,10 @@ export default class NavBar extends PureComponent<
     this.props.overlayClickHandler && this.props.overlayClickHandler()
   }
 
+  backNavigationHandler = () => {
+    window.history && window.history.back()
+  }
+
   get attrs() {
     const {
       children,
@@ -300,7 +314,17 @@ export default class NavBar extends PureComponent<
   }
 
   render() {
-    const { className, needOverlay, currentPath, title, children } = this.props
+    const {
+      className,
+      needOverlay,
+      currentPath,
+      title,
+      children,
+      enableBackNavigation,
+      theme,
+    } = this.props
+
+    const showBackNavigation = enableBackNavigation && is.mobile()
 
     return (
       <NavBarContext.Provider
@@ -339,15 +363,20 @@ export default class NavBar extends PureComponent<
           <header
             id={`${this.idPrefix}header`}
             className={classnames('header')}
-            onClick={this.headerClickHandler}
+            onClick={
+              showBackNavigation
+                ? this.backNavigationHandler
+                : this.headerClickHandler
+            }
           >
             <Icon
               className={classnames('hamburger')}
-              name={BarsSolid}
+              name={showBackNavigation ? ChevronLeftSolid : BarsSolid}
               title="Navigation"
             />
-            <img src={LogoMyntraJabong} alt="Myntra Jabong" />
-            {title}
+            <div className={classnames('logo')}>
+              {theme === 'dark' ? <MyntraLogoTextRightWhite /> : <MyntraLogo />}
+            </div>
           </header>
 
           <NavBarGroup
@@ -362,7 +391,6 @@ export default class NavBar extends PureComponent<
             <ClickAway
               target={this.navbarRef}
               onClickAway={this.handleClickAway}
-              data-test-id="click-away"
             />
           )}
         </nav>

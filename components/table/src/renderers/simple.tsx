@@ -3,6 +3,7 @@ import { TableMeta, FixedPosition, Column } from '../table-interface'
 import classnames from './simple.module.scss'
 import { Provider } from '../table-context'
 import Measure, { MeasureData } from '@myntra/uikit-component-measure'
+import Button from '@myntra/uikit-component-button'
 
 export interface Props extends BaseProps {
   config: TableMeta
@@ -17,11 +18,15 @@ const TD = (props: BaseProps) => <td {...props} />
 
 export default class SimpleTable extends PureComponent<
   Props,
-  { offsets: Record<number, number> }
+  {
+    offsets: Record<number, number>
+    editing: boolean
+  }
 > {
   nextAnimationFrame: number
   state = {
     offsets: {},
+    editing: false,
   }
 
   tableContext = { TR, TD }
@@ -35,16 +40,28 @@ export default class SimpleTable extends PureComponent<
     },
   }
 
-  warpIfNeeded(node: ReactNode, key: string, props: Record<string, any>) {
+  warpIfNeeded(
+    node: ReactNode,
+    props: Record<string, any>,
+    column: Object | any,
+    rowIndex: number
+  ) {
+    const key = column.id
+    const { editing } = this.state
     if (isValidElement(node)) {
       if (node.type === 'td') {
         return React.cloneElement(node, { key })
       }
     }
-
     return (
       <td key={key} {...props}>
-        {node}
+        {editing && typeof node !== 'object' && column.editorComponent
+          ? React.cloneElement(column.editorComponent, {
+              value: node,
+              onChange: (value) =>
+                this.props.onEdit(value, rowIndex, column.id),
+            })
+          : node}
       </td>
     )
   }
@@ -71,6 +88,10 @@ export default class SimpleTable extends PureComponent<
     return this.props.getEnhancerState(enhancer)
   }
 
+  toggleEdit = () => {
+    this.setState({ editing: !this.state.editing })
+  }
+
   render() {
     const {
       config,
@@ -79,13 +100,25 @@ export default class SimpleTable extends PureComponent<
       children,
       style,
       getEnhancerState: getEnhancerStateForColumn,
+      editable,
+      isEditing,
       ...props
     } = this.props
     const maxDepth = config.columnsByLevel.length
+    const { editing } = this.state
 
     return (
       <Provider value={this.tableContext}>
         <div className={classnames('simple', className)} style={style}>
+          {editable && (
+            <Button
+              type="secondary"
+              className={classnames('edit-button')}
+              onClick={this.toggleEdit}
+            >
+              {editing ? `Cancel` : `Edit`}
+            </Button>
+          )}
           <div className={classnames('container')}>
             <table {...props} className={classnames('table')}>
               <thead>
@@ -175,8 +208,9 @@ export default class SimpleTable extends PureComponent<
                             data: item,
                             value: column.accessor(item, rowId),
                           }),
-                          column.id,
-                          cellProps
+                          cellProps,
+                          column,
+                          rowId
                         )
                       }),
                     }) as any,

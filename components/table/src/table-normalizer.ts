@@ -129,6 +129,7 @@ function processColumn(
     fixed,
     label,
     renderEditor,
+    editorComponent,
     sortable,
     children,
     editing,
@@ -158,6 +159,7 @@ function processColumn(
       return value
     },
     renderEditor,
+    editorComponent,
     fixed:
       fixed === true || fixed === 'start'
         ? I.FixedPosition.START

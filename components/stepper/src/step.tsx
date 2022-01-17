@@ -97,6 +97,10 @@ export default class Step extends PureComponent<Props> {
                   'data-index': `step.${this.props['data-index']}.${index}`,
                   orientation,
                   children: null,
+                  active:
+                    active &&
+                    index ===
+                      children.findIndex((child) => !child.props.completed),
                 })
               )}
             </StepSeparator>
@@ -110,11 +114,17 @@ export default class Step extends PureComponent<Props> {
           gutter="none"
           className={classnames('step__label', `step__label--${orientation}`)}
         >
-          <Text emphasis={completed || active ? 'high' : 'disabled'}>
+          <Text
+            emphasis={completed || active ? 'high' : 'disabled'}
+            weight={active ? 'bolder' : null}
+          >
             {label}
           </Text>
           {description && (
-            <Text.p emphasis={completed || active ? 'high' : 'disabled'}>
+            <Text.p
+              emphasis={completed || active ? 'high' : 'disabled'}
+              weight={active ? 'bolder' : null}
+            >
               {description}
             </Text.p>
           )}

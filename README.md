@@ -95,3 +95,14 @@ import BoxSolid from "@myntra/uikit-icons/svgs/BoxSolid"
 
 ## Contributing
 Pull requests are welcome. See the [contribution guidelines](https://uikit.myntra.com/contributing) for more information.
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/sunil-jhamnani"><img src="https://avatars.githubusercontent.com/u/54964764?v=4" width="100px;" alt=""/><br /><sub><b>Sunil Jhamnani</b></sub></a></td>
+    </tr>
+  <table>

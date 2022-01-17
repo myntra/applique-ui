@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-layout",
-  "version": "1.13.65",
+  "version": "1.13.81",
   "main": "dist/layout.cjs.js",
   "module": "dist/layout.esm.js",
   "types": "dist/index.d.ts",
@@ -27,6 +27,6 @@
   "peerDependencies": {},
   "dependencies": {
     "@myntra/uikit-utils": "1.13.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

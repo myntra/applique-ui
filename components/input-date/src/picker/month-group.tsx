@@ -2,19 +2,12 @@ import React, { Component, ReactNode } from 'react'
 import dayJS from 'dayjs'
 
 import { UTCDate, onlyDate } from '../input-date-utils'
-import { isDateRange, DateRange } from '../input-date-helpers'
+import { isDateRange, range, DateRange } from '../input-date-helpers'
 
 import Month from './month'
 import Jumper from './jumper'
 
 import classnames from './month-group.module.scss'
-
-/**
- * Create range.
- */
-function range(n: number): number[] {
-  return Array.apply(null, { length: n }).map((_, i) => i)
-}
 
 export interface Props extends BaseProps {
   /**
@@ -201,8 +194,32 @@ export default class MonthGroup extends Component<
     return { from, to }
   }
 
+  getUTCDate = (date: Date | DateRange) => {
+    if (date) {
+      if (!isDateRange(date, this.props.range)) {
+        return UTCDate(date.getFullYear(), date.getMonth(), date.getDate())
+      } else if (date) {
+        if (date.from) {
+          date.from = UTCDate(
+            date.from.getFullYear(),
+            date.from.getMonth(),
+            date.from.getDate()
+          )
+        }
+        if (date.to) {
+          date.to = UTCDate(
+            date.to.getFullYear(),
+            date.to.getMonth(),
+            date.to.getDate()
+          )
+        }
+      }
+    }
+    return date
+  }
+
   createSelectionData(date: Date) {
-    const value = this.props.value
+    const value = this.getUTCDate(this.props.value)
     const focused = this.state.focused
     const selecting = this.props.active
     if (!isDateRange(value, this.props.range)) {

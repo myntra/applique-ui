@@ -1,11 +1,11 @@
 {
   "name": "@myntra/uikit-theme-unity",
-  "version": "1.13.65",
+  "version": "1.13.81",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",
-  "license": "UNLICENSED",
-  "repository": "https://bitbucket.org/myntra/uikit/src/master/themes/unity",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/themes/unity",
   "files": [
     "src/",
     "dist/",

@@ -1,5 +1,5 @@
 import React, { ReactElement, isValidElement, ReactNode } from 'react'
-import { EditableCellRendererProps, CellRendererProps } from './table-interface'
+import { EditableCellRendererProps } from './table-interface'
 
 export interface Props<T = any> extends BaseProps {
   /**
@@ -34,6 +34,11 @@ export interface Props<T = any> extends BaseProps {
    * Text alignment for the column.
    */
   align?: string
+
+  /**
+   * Component which should be passed to render the edit field. (Eg: InputText, InputSelect, etc)
+   */
+  editorComponent?: ReactNode
 }
 
 /**

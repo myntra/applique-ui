@@ -30,7 +30,7 @@
   }
 
   a {
-    flex: 1;
+    flex: 0;
     color: currentColor;
     text-decoration: none;
   }
@@ -45,7 +45,7 @@
   }
 
   .item-icon {
-    @include margin-right('large');
+    @include margin-right('medium');
 
     display: inline-flex;
     flex: 0 0 size('#6x');
@@ -61,5 +61,13 @@
     .item-icon {
       display: none;
     }
+  }
+
+  .update-badge {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 0.6rem;
+    background: color('danger');
+    border-radius: 0.25rem;
   }
 }

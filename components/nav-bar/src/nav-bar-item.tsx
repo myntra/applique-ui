@@ -5,6 +5,11 @@ import Context, { NavBarContext } from './context'
 
 export interface Props extends BaseProps {
   /**
+   * Conditions that checks if we need to show the update badge.
+   */
+  showUpdateBadge?: boolean
+
+  /**
    * The title of the link.
    */
   children: any
@@ -45,6 +50,7 @@ export interface Props extends BaseProps {
 export default function NavBarItem({
   to,
   icon,
+  showUpdateBadge,
   renderIcon,
   children,
   className,
@@ -87,6 +93,7 @@ export default function NavBarItem({
           ) : (
             children
           )}
+          {showUpdateBadge && <div className={classnames('update-badge')} />}
         </li>
       )}
     </Context.Consumer>

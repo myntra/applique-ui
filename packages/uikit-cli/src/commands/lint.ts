@@ -84,7 +84,7 @@ function createPlugin(api: Service) {
           (report) =>
             new Promise((resolve) => {
               setTimeout(() => {
-                CLIEngine.outputFixes(report)
+                CLIEngine.outputFixes(report as any)
                 progress.tick()
                 progress.render()
                 // TODO: Output errors.

@@ -13,6 +13,15 @@
   &.large {
     --u-layout-stack-margin-right: #{margin-right('large')};
   }
+  &.xl {
+    --u-layout-stack-margin-right: #{margin-right('xl')};
+  }
+  &.xxl {
+    --u-layout-stack-margin-right: #{margin-right('xxl')};
+  }
+  &.xxxl {
+    --u-layout-stack-margin-right: #{margin-right('xxxl')};
+  }
   &.none {
     --u-layout-stack-margin-right: #{margin-right('none')};
   }

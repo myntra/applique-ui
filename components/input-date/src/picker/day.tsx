@@ -130,9 +130,9 @@ export default class Day extends PureComponent<Props> {
           : typeof children === 'function'
           ? children({
               date,
-              children: date.getUTCDate(),
+              children: date.getDate(), //date.getUTCDate(),
             })
-          : date.getUTCDate()}
+          : date.getDate()}
       </div>
     )
   }

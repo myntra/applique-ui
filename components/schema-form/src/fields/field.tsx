@@ -57,7 +57,7 @@ export default class SchemaFormField extends PureComponent<Props> {
   }
 
   resetError() {
-    if (this.props.error) this.props.onError(null)
+    if (this.props.error) this.props.onError(this.props.value)
   }
 
   handleChange = (value) => {

@@ -30,6 +30,16 @@ export interface Props<T = any> extends BaseProps {
   onSort?(props: { columnId: string; order: 'asc' | 'desc' }): void
 
   onFilter?(props: Record<string, any[]>): void
+
+  /**
+   * Flag to set to make the table data editable
+   */
+  editable?: boolean
+
+  /**
+   * Handler which is called when edit happens
+   */
+  onEdit?(value: string | number | boolean, rowIndex: number, key: string): void
 }
 
 interface State {
@@ -102,6 +112,14 @@ export default class Table extends PureComponent<Props, State> {
     }
 
     return this.enhancerSetters[enhancer]
+  }
+
+  onEdit = (
+    value: string | number | boolean,
+    rowIndex: number,
+    key: string
+  ) => {
+    this.props.onEdit && this.props.onEdit(value, rowIndex, key)
   }
 
   componentWillUnmount() {
@@ -190,6 +208,7 @@ export default class Table extends PureComponent<Props, State> {
         data={preparedData}
         getEnhancerState={this.getEnhancerState}
         config={table}
+        onEdit={this.onEdit}
       />
     )
   }
