@@ -7,8 +7,8 @@ import NavBarGroup from './nav-bar-group'
 import NavBarItem from './nav-bar-item'
 import { is } from '@myntra/uikit-utils'
 
-import LogoMyntraJabong from './logos/myntra-jabong.png'
 import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
+import MyntraLogoTextRightWhite from 'uikit-icons/svgs/MyntraLogoTextRightWhite'
 // TODO: Use click away to close NavBar (if mouse leave fails)
 
 import classnames from './nav-bar.module.scss'
@@ -110,7 +110,14 @@ interface Props extends BaseProps {
    */
   linkComponent?(props: { href: string; children: JSX.Element }): JSX.Element
 
+  /**
+   * Flag to enable back button in mobile view
+   */
   enableBackNavigation?: boolean
+  /**
+   * Chose a theme
+   */
+  theme?: 'dark' | 'light'
 }
 
 const ROOT_NAV_GROUP_ID = [0]
@@ -314,6 +321,7 @@ export default class NavBar extends PureComponent<
       title,
       children,
       enableBackNavigation,
+      theme,
     } = this.props
 
     const showBackNavigation = enableBackNavigation && is.mobile()
@@ -367,7 +375,7 @@ export default class NavBar extends PureComponent<
               title="Navigation"
             />
             <div className={classnames('logo')}>
-              <MyntraLogo />
+              {theme === 'dark' ? <MyntraLogoTextRightWhite /> : <MyntraLogo />}
             </div>
           </header>
 
