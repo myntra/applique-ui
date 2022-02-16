@@ -35,10 +35,22 @@
 
 .container {
   @include margin-bottom('field');
+
+  position: relative;
   &.disabled {
     color: color('text-dark-disabled');
     .meta > * {
       color: color('text-dark-disabled');
+    }
+  }
+
+  .input-tooltip {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .tootltip-title {
+      font-size: 45px;
     }
   }
 }

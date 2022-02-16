@@ -274,7 +274,18 @@ function withField<P extends object>(BaseComponent: any) {
     id = ++counter
 
     render() {
-      const { label, error, description, required, ...props } = this.props
+      const {
+        label,
+        error,
+        description,
+        required,
+        info,
+        infoTitle,
+        tooltipPosition,
+        tooltipDark,
+        tooltipTriggerOn,
+        ...props
+      } = this.props
       let id = props.id || `__uikit_field_${this.id}_`
 
       return (
@@ -287,6 +298,11 @@ function withField<P extends object>(BaseComponent: any) {
               required={required}
               htmlFor={id}
               disabled={props.disabled}
+              info={info}
+              infoTitle={infoTitle}
+              tooltipTriggerOn={tooltipTriggerOn}
+              tooltipDark={tooltipDark}
+              tooltipPosition={tooltipPosition}
             >
               <BaseComponent
                 {...createFieldProps(props.name || createFieldName(label))}
