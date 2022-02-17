@@ -284,6 +284,7 @@ function withField<P extends object>(BaseComponent: any) {
         tooltipPosition,
         tooltipDark,
         tooltipTriggerOn,
+        renderConditions,
         ...props
       } = this.props
       let id = props.id || `__uikit_field_${this.id}_`

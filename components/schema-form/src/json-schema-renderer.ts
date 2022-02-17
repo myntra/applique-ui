@@ -94,6 +94,7 @@ const defaultProcessors: Record<string, PropPostProcessor> = {
   tooltipPosition: (tooltipPosition) => ({ tooltipPosition }),
   tooltipDark: (tooltipDark) => ({ tooltipDark }),
   tooltipTriggerOn: (tooltipTriggerOn) => ({ tooltipTriggerOn }),
+  renderConditions: (renderConditions) => ({ renderConditions }),
 }
 function resolveProps(
   schema: Schema,

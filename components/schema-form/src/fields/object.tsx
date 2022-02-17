@@ -89,6 +89,17 @@ export default class SchemaFormObject extends Component<Props> {
     return this.getHandler('error', name)
   }
 
+  checkRenderConditions(conditions) {
+    let flag = true
+    for (let key in conditions) {
+      if (this.getValue(key) !== conditions[key]) {
+        flag = false
+        break
+      }
+    }
+    return flag
+  }
+
   render() {
     const Wrapper = this.props.component || FallbackWrapper
     const { _fields, props, layout, ui } = this.props as any // Hidden _field prop
@@ -105,6 +116,13 @@ export default class SchemaFormObject extends Component<Props> {
           <Grid multiline gapless>
             {this.props.properties.map(({ type, name, ...ui }) => {
               const Input = _fields[type] as ComponentType<any>
+              const { renderConditions } = ui.props || {}
+
+              if (
+                renderConditions &&
+                !this.checkRenderConditions(renderConditions)
+              )
+                return null
 
               return (
                 <Input

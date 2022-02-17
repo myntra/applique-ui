@@ -10,7 +10,7 @@ const [schema] = useState({
   description: 'This document defines json schema for PO terms.',
   type: 'object',
   properties: {
-    brand: { title: 'Brand', type: 'string', format: 'brandPO' },
+    brand: { title: 'Brand', type: 'string', format: 'brandPO', renderConditions: {margin: 10, minMargin: 5} },
     agreementType: {
       title: 'Agreement Type',
       type: 'string',

@@ -56,6 +56,10 @@ export default class SchemaFormField extends PureComponent<Props> {
     }
   }
 
+  componentWillUnmount() {
+    this.props.onChange(undefined)
+  }
+
   resetError() {
     if (this.props.error) this.props.onError(this.props.value)
   }
