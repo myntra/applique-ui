@@ -95,6 +95,8 @@ const defaultProcessors: Record<string, PropPostProcessor> = {
   tooltipDark: (tooltipDark) => ({ tooltipDark }),
   tooltipTriggerOn: (tooltipTriggerOn) => ({ tooltipTriggerOn }),
   renderConditions: (renderConditions) => ({ renderConditions }),
+  href: (href) => ({ href }),
+  hrefTitle: (hrefTitle) => ({ hrefTitle }),
 }
 function resolveProps(
   schema: Schema,

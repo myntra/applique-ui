@@ -285,6 +285,8 @@ function withField<P extends object>(BaseComponent: any) {
         tooltipDark,
         tooltipTriggerOn,
         renderConditions,
+        href,
+        hrefTitle,
         ...props
       } = this.props
       let id = props.id || `__uikit_field_${this.id}_`
@@ -304,6 +306,8 @@ function withField<P extends object>(BaseComponent: any) {
               tooltipTriggerOn={tooltipTriggerOn}
               tooltipDark={tooltipDark}
               tooltipPosition={tooltipPosition}
+              href={href}
+              hrefTitle={hrefTitle}
             >
               <BaseComponent
                 {...createFieldProps(props.name || createFieldName(label))}

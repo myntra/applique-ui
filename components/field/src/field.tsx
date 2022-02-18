@@ -2,6 +2,7 @@ import React, { PureComponent, ReactNode } from 'react'
 import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
 import Tooltip from '@myntra/uikit-component-tooltip'
 import Icon from '@myntra/uikit-component-icon'
+import Text from '@myntra/uikit-component-text'
 
 import classnames from './field.module.scss'
 
@@ -27,21 +28,32 @@ export interface Props extends BaseProps {
   disabled?: boolean
   /**
    * Used to show info using tooltip
-   * */
+   */
   info?: string
   /**
    * Used to identify info
-   * */
+   */
   infoTitle?: string
-
-  /** tooltipPosition with relative to icon */
+  /**
+   * tooltipPosition with relative to icon
+   */
   tooltipPosition?: 'up' | 'down' | 'left' | 'right'
-
-  /** Displays a tooltip with dark background */
+  /**
+   * Displays a tooltip with dark background
+   */
   tooltipDark?: boolean
-
-  /** Event to display the tooltip */
+  /**
+   * Event to display the tooltip
+   */
   tooltipTriggerOn?: 'hover' | 'click' | 'focus'
+  /**
+   * href open a file in new tab
+   */
+  href?: string
+  /**
+   * hrefTitle to describe the file
+   */
+  hrefTitle?: string
 }
 
 /**
@@ -64,6 +76,8 @@ export default function Field({
   tooltipPosition,
   tooltipDark,
   tooltipTriggerOn,
+  href,
+  hrefTitle,
   ...props
 }: Props) {
   const renderContent = () => (
@@ -113,17 +127,29 @@ export default function Field({
         </div>
       )}
       {children}
-      {error || description ? (
+      {error || description || (href && hrefTitle) ? (
         <div className={classnames('meta')}>
           {error ? (
             <div id={htmlFor ? htmlFor + '__error' : null} role="alert">
               {Array.isArray(error) ? error.join(' ') : error}
             </div>
+          ) : description ? (
+            <div id={htmlFor ? htmlFor + '__description' : null}>
+              {description}
+            </div>
           ) : (
-            description && (
-              <div id={htmlFor ? htmlFor + '__description' : null}>
-                {description}
-              </div>
+            href &&
+            hrefTitle && (
+              <a href={href} target="_blank">
+                <Text.Caption
+                  tag="span"
+                  color="primary"
+                  weight="bolder"
+                  style={{ lineHeight: 1.2, fontSize: '1em' }}
+                >
+                  {hrefTitle}
+                </Text.Caption>
+              </a>
             )
           )}
         </div>
