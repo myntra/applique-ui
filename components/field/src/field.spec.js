@@ -29,7 +29,7 @@ describe('Field', () => {
     expect(wrapper.find('label').prop('htmlFor')).toEqual('name')
   })
   it('should render as a required field', () => {
-    wrapper.setProps({ required: true })
+    wrapper.setProps({ showAsterisk: true })
     expect(wrapper.find('span.required')).toHaveLength(1)
   })
   it('should render with error param', () => {
