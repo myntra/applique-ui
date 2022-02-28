@@ -21,7 +21,7 @@ export interface Props extends BaseProps {
   /**
    * Visually conveys that the field is required.
    */
-  required?: boolean
+  showAsterisk?: boolean
   /**
    * Visually conveys that the field is disabled.
    */
@@ -66,7 +66,7 @@ export default function Field({
   title,
   error,
   description,
-  required,
+  showAsterisk,
   htmlFor,
   children,
   className,
@@ -112,7 +112,7 @@ export default function Field({
         htmlFor={htmlFor}
       >
         {title}
-        {required && <span className={classnames('required')}>*</span>}
+        {showAsterisk && <span className={classnames('required')}>*</span>}
       </label>
       {info && (
         <div className={classnames('input-tooltip')}>
@@ -166,7 +166,14 @@ export function withField<P extends object>(BaseComponent: any) {
     id = ++counter
 
     render() {
-      const { label, error, description, required, ...props } = this.props
+      const {
+        label,
+        error,
+        description,
+        required,
+        showAsterisk,
+        ...props
+      } = this.props
       let id = props.id || `__uikit_field_${this.id}_`
 
       return (
@@ -174,7 +181,7 @@ export function withField<P extends object>(BaseComponent: any) {
           title={label}
           error={error}
           description={description}
-          required={required}
+          showAsterisk={showAsterisk}
           htmlFor={id}
         >
           <BaseComponent

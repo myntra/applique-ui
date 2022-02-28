@@ -108,7 +108,6 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
       onError: onValidation,
       optionsProvider,
       componentProvider,
-      schema,
       ...props
     } = this.props
 
@@ -122,6 +121,8 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
           fieldSize={12}
           value={this.props.value}
           error={this.props.error}
+          colGap={props.schema.colGap}
+          rowGap={props.schema.rowGap}
           onChange={this.handleChange}
           onError={this.handleError}
         />

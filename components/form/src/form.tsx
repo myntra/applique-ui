@@ -279,6 +279,7 @@ function withField<P extends object>(BaseComponent: any) {
         error,
         description,
         required,
+        showAsterisk,
         info,
         infoTitle,
         tooltipPosition,
@@ -299,6 +300,7 @@ function withField<P extends object>(BaseComponent: any) {
               error={error}
               description={description}
               required={required}
+              showAsterisk={showAsterisk}
               htmlFor={id}
               disabled={props.disabled}
               info={info}

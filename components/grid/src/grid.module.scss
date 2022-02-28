@@ -3,8 +3,11 @@
 // -- Row --
 .container {
   --column-gap: #{size('4x')};
+  --row-gap: #{size('2x')};
   --column-inset: calc(var(--column-gap) / 2);
   --column-outset: calc(1 - var(--column-gap) / 2);
+  --row-inset: calc(var(--row-gap) / 2);
+  --row-outset: calc(1 - var(--row-gap) / 2);
 
   box-sizing: border-box;
   display: flex;
@@ -28,6 +31,7 @@
 
   &.variable-gap {
     --column-gap: #{size('4x')};
+    --row-gap: #{size('2x')};
 
     $sizes: (
       'none': 0,
@@ -39,7 +43,11 @@
     );
 
     @each $size, $value in $sizes {
-      &.gap-#{$size} {
+      &.row-gap-#{$size} {
+        --row-gap: #{$value};
+      }
+
+      &.col-gap-#{$size} {
         --column-gap: #{$value};
       }
     }

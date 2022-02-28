@@ -4,7 +4,8 @@ import classnames from './grid.module.scss'
 import GridColumn from './grid-column'
 
 export interface Props extends BaseProps {
-  gap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none'
+  colGap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none'
+  rowGap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none'
   gapless?: boolean
   centered?: boolean
   hcentered?: boolean
@@ -25,7 +26,8 @@ export default class Grid extends PureComponent<Props> {
     const {
       className,
       children,
-      gap,
+      colGap,
+      rowGap,
       gapless,
       centered,
       hcentered,
@@ -42,7 +44,8 @@ export default class Grid extends PureComponent<Props> {
           'container',
           className,
           { multiline, centered, hcentered, vcentered, gapless },
-          gap && ['variable-gap', 'gap-' + (gap || 'none')]
+          colGap && ['variable-gap', 'col-gap-' + (colGap || 'none')],
+          rowGap && ['row-gap-' + (rowGap || 'none')]
         )}
       >
         {children}

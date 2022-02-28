@@ -14,6 +14,8 @@ export interface Props extends BaseProps {
   adornment?: string | JSX.Element
   /** Position of the adornment */
   adornmentPosition?: 'start' | 'end'
+  /** left padding incase of adornmentPosition as start */
+  adornmentLeftPadding?: string
 }
 
 /**
@@ -31,6 +33,7 @@ export default function InputNumber({
   value,
   adornment,
   adornmentPosition,
+  adornmentLeftPadding,
   ...props
 }: Props): JSX.Element {
   const newVal: number = parseFloat(value as string)
@@ -43,6 +46,11 @@ export default function InputNumber({
         className={classnames('input')}
         onChange={(event) =>
           onChange && onChange(parseFloat(event.target.value))
+        }
+        style={
+          adornmentPosition === 'start'
+            ? { paddingLeft: adornmentLeftPadding || '2em' }
+            : null
         }
       />
       {adornment && (

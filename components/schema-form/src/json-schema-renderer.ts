@@ -89,14 +89,6 @@ const defaultProcessors: Record<string, PropPostProcessor> = {
   title: (label) => ({ label }),
   description: (description) => ({ description }),
   default: (defaultValue) => ({ defaultValue }),
-  info: (info) => ({ info }),
-  infoTitle: (infoTitle) => ({ infoTitle }),
-  tooltipPosition: (tooltipPosition) => ({ tooltipPosition }),
-  tooltipDark: (tooltipDark) => ({ tooltipDark }),
-  tooltipTriggerOn: (tooltipTriggerOn) => ({ tooltipTriggerOn }),
-  renderConditions: (renderConditions) => ({ renderConditions }),
-  href: (href) => ({ href }),
-  hrefTitle: (hrefTitle) => ({ hrefTitle }),
 }
 function resolveProps(
   schema: Schema,
@@ -179,6 +171,9 @@ function generateObjectField(
     children.forEach((child) => {
       if (schema.required.includes(child.name)) {
         child.props.required = true
+        child.props.showAsterisk = !(schema.hideAsterisk || []).includes(
+          child.name
+        )
       }
     })
   }

@@ -72,6 +72,12 @@ const [value, setValue] = useState();
 
 ```jsx preview
 const [value, setValue] = useState();
+
+<InputText value={value} onChange={setValue} adornment="Rs." adornmentPosition="start"/>
+```
+
+```jsx preview
+const [value, setValue] = useState();
 const onClick = useCallback(() => console.log("clicked icon"))
 
 <InputText value={value} onChange={setValue} adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>

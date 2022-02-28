@@ -9,8 +9,15 @@ const [schema] = useState({
   title: 'Purchase Order Term',
   description: 'This document defines json schema for PO terms.',
   type: 'object',
+  colGap: 'x-small',
+  rowGap: 'xx-small',
   properties: {
-    brand: { title: 'Brand', type: 'string', format: 'brandPO', renderConditions: {margin: 10, minMargin: 5} },
+    brand: { 
+      title: 'Brand',
+      type: 'string',
+      format: 'brandPO',
+      props: { renderConditions: {margin: 10, minMargin: 5} }
+    },
     agreementType: {
       title: 'Agreement Type',
       type: 'string',
@@ -49,8 +56,10 @@ const [schema] = useState({
       type: 'string',
       format: 'taxonomy',
       taxonomyType: 'brandType',
-      href: 'https://google.com',
-      hrefTitle: 'Google',
+      props: {
+        href: 'https://google.com',
+        hrefTitle: 'Google',
+      },
     },
     billTo: {
       title: 'Bill To',
@@ -64,11 +73,13 @@ const [schema] = useState({
       type: 'number',
       minimum: 0,
       maximum: 100,
-      info: 'msg',
-      infoTitle: 'title',
-      tooltipPosition: 'down',
-      tooltipDark: true,
-      tooltipTriggerOn: 'hover',
+      props: {
+        info: 'msg',
+        infoTitle: 'title',
+        tooltipPosition: 'down',
+        tooltipDark: true,
+        tooltipTriggerOn: 'hover',
+      },
     },
     marginBasis: {
       title: 'Margin Basis',
@@ -76,7 +87,15 @@ const [schema] = useState({
       format: 'taxonomy',
       taxonomyType: 'marginBasis',
     },
-    minMargin: { title: 'Minimum Margin', type: 'number' },
+    minMargin: { 
+      title: 'Minimum Margin', 
+      type: 'number',
+      props: {
+        adornment: 'Rs',
+        adornmentPosition: 'start',
+        adornmentLeftPadding: '1.5em',
+      } 
+    },
     creditPeriodInDays: {
       title: 'Credit Period Days',
       type: 'integer',
@@ -193,7 +212,8 @@ const [schema] = useState({
     id: { type: 'string' },
     taxonomy: { type: 'string', format: 'taxonomy' },
   },
-  required: ['agreementType'],
+  hideAsterisk: ['agreementType'],
+  required: ['agreementType', 'articleType'],
 });
 const [value, setValue] = useState();
 

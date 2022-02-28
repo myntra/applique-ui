@@ -17,8 +17,9 @@ $named-sizes: (
   box-sizing: border-box;
   display: block;
   flex: 1 1 var(--column-width, #{percentage(1 / 12)});
+  padding-top: var(--row-inset);
   padding-right: var(--column-inset);
-  padding-bottom: var(--column-gap);
+  padding-bottom: var(--row-inset);
   padding-left: var(--column-inset);
 
   &.narrow {

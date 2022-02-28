@@ -24,8 +24,9 @@
 
   .input-adornment {
     position: absolute;
-    top: 0;
+    top: 50%;
     color: shade(color('gray-dark'), 40%);
+    transform: translateY(-50%);
 
     &--start {
       left: 0;

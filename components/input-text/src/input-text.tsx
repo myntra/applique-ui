@@ -19,6 +19,8 @@ export interface Props extends BaseProps {
   adornment?: string | JSX.Element
   /** Position of the adornment */
   adornmentPosition?: 'start' | 'end'
+  /** left padding incase of adornmentPosition as start */
+  adornmentLeftPadding?: string
 }
 
 /**
@@ -37,6 +39,7 @@ export default function InputText({
   icon,
   adornment,
   adornmentPosition,
+  adornmentLeftPadding,
   ...props
 }: Props) {
   readOnly = readOnly || !onChange
@@ -50,6 +53,11 @@ export default function InputText({
         value={typeof value !== 'string' ? '' : value}
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
         className={classnames('input', { 'with-icon': !!icon })}
+        style={
+          adornmentPosition === 'start'
+            ? { paddingLeft: adornmentLeftPadding || '2em' }
+            : null
+        }
       />
       {adornment && (
         <div

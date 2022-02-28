@@ -27,6 +27,8 @@ export interface Props {
   onError(error: Record<string, string | string[]>): void
 
   properties: UI[]
+
+  gap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none'
 }
 
 /**
@@ -102,7 +104,7 @@ export default class SchemaFormObject extends Component<Props> {
 
   render() {
     const Wrapper = this.props.component || FallbackWrapper
-    const { _fields, props, layout, ui } = this.props as any // Hidden _field prop
+    const { _fields, props, layout, rowGap, colGap, ui } = this.props as any // Hidden _field prop
     const { properties: derivedProps = {} } =
       this.props.getDerivedPropsFromValue(this.props.value) || {}
     console.log(ui)
@@ -113,7 +115,7 @@ export default class SchemaFormObject extends Component<Props> {
         data-path={this.props.path}
       >
         <Wrapper {...props}>
-          <Grid multiline gapless>
+          <Grid multiline colGap={colGap} rowGap={rowGap}>
             {this.props.properties.map(({ type, name, ...ui }) => {
               const Input = _fields[type] as ComponentType<any>
               const { renderConditions } = ui.props || {}
