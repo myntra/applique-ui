@@ -175,6 +175,9 @@ function generateObjectField(
           child.name
         )
       }
+      if (schema.disabled) {
+        child.props.disabled = true
+      }
     })
   }
 
