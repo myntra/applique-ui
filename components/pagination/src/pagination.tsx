@@ -89,7 +89,9 @@ export default class Pagination extends PureComponent<Props> {
                   )
                 })}
               </select>
-              <i className={classnames('select-chevron-down')} />
+              <span className={classnames('select-chevron')}>
+                <i className={classnames('select-chevron-down')} />
+              </span>
             </div>
           </div>
         )}
@@ -100,39 +102,24 @@ export default class Pagination extends PureComponent<Props> {
           </strong>{' '}
           of {total}
         </div>
-
-        <div
-          role="button"
-          className={classnames('arrow-container')}
-          onClick={() => this.updatePage(page - 1)}
-        >
-          <Icon
-            name={ChevronLeftSolid}
-            className={classnames('pagination-arrow')}
-          />
-        </div>
-        <select
-          className={classnames('select-page')}
-          value={page}
-          onChange={this.handlePageChange}
-        >
-          {pages.map((pageList) => {
-            return (
-              <option value={pageList} key={pageList}>
-                {pageList}
-              </option>
-            )
-          })}
-        </select>
-        <div
-          role="button"
-          className={classnames('arrow-container')}
-          onClick={() => this.updatePage(page + 1)}
-        >
-          <Icon
-            name={ChevronRightSolid}
-            className={classnames('pagination-arrow')}
-          />
+        <div className={classnames('page-select')}>
+          <span>Page</span>
+          <select
+            className={classnames('select-page')}
+            value={page}
+            onChange={this.handlePageChange}
+          >
+            {pages.map((pageList) => {
+              return (
+                <option value={pageList} key={pageList}>
+                  {pageList >= 10 ? pageList : '0' + pageList}
+                </option>
+              )
+            })}
+          </select>
+          <span className={classnames('select-chevron')}>
+            <i className={classnames('select-chevron-down')} />
+          </span>
         </div>
       </div>
     )
