@@ -1,7 +1,8 @@
 @import '@accoutrement';
 
 .title {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-transform: uppercase;
 
   @include typography('caption');

@@ -27,6 +27,10 @@ export interface Props extends BaseProps {
    * Visually conveys that the field is disabled.
    */
   disabled?: boolean
+  /**
+   * Block to show info about the field. Should be a react component.
+   */
+  fieldInfo?: ReactNode
 }
 
 /**
@@ -44,6 +48,7 @@ export default function Field({
   children,
   className,
   disabled,
+  fieldInfo,
   ...props
 }: Props) {
   return (
@@ -60,6 +65,7 @@ export default function Field({
       >
         {title}
         {required && <span className={classnames('required')}>*</span>}
+        {isValidElement(fieldInfo) && fieldInfo}
       </label>
       {Children.map(children, (child, index) => {
         if (isValidElement(child)) {
