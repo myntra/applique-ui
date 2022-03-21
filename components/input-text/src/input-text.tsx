@@ -42,8 +42,24 @@ export default function InputText({
   readOnly = readOnly || !onChange
 
   return (
-    <div className={classnames('container', className)}>
+    <div
+      className={classnames(
+        'container',
+        { 'with-adornment': adornment },
+        className
+      )}
+    >
       {icon && <Icon className={classnames('icon')} name={icon} />}
+      {adornment && adornmentPosition === 'start' && (
+        <div
+          className={classnames(
+            'input-adornment',
+            `input-adornment--${adornmentPosition}`
+          )}
+        >
+          {adornment}
+        </div>
+      )}
       <input
         {...props}
         readOnly={readOnly}
@@ -51,7 +67,7 @@ export default function InputText({
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
         className={classnames('input', { 'with-icon': !!icon })}
       />
-      {adornment && (
+      {adornment && adornmentPosition === 'end' && (
         <div
           className={classnames(
             'input-adornment',

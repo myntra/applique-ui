@@ -4,7 +4,7 @@
 @mixin add-colors($map) {
   @each $class, $value in $map {
     &.#{$class} {
-      color: contrast-text-color($value);
+      color: contrast-text-color($value, 'high', 'AAA');
       background-color: $value;
       border-color: $value;
       &:not(:disabled) {
@@ -280,6 +280,7 @@
       'green': color('success'),
       'gray': color('gray-dark'),
       'black': color('black'),
+      'pink': color('pink'),
     )
   );
 

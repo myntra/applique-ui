@@ -16,22 +16,38 @@
 
 .container {
   position: relative;
+  display: flex;
+  align-items: center;
+  &.with-adornment {
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      content: ' ';
+      border-bottom: 1px solid color('gray-dark');
+    }
+  }
   .icon {
     position: absolute;
     top: 0.4em;
   }
 
   .input-adornment {
-    position: absolute;
-    top: 0;
+    display: flex;
+    align-items: center;
+    height: 0.01em;
+    max-height: 2em;
     color: shade(color('gray-dark'), 40%);
+    white-space: nowrap;
 
     &--start {
-      left: 0;
+      margin-right: size('2x');
     }
 
     &--end {
-      right: 0;
+      margin-left: size('2x');
     }
   }
 }

@@ -102,9 +102,13 @@ export interface Props<T extends Record<string, unknown> = {}>
    */
   onChange?(value: T): void
   /**
-   *
+   * Position of form related cta
    */
   actions?: 'left' | 'right' | 'centered'
+  /**
+   * Disable the complete form
+   */
+  disabled?: boolean
 }
 
 export interface FormFieldProps
@@ -203,7 +207,9 @@ export default class Form extends PureComponent<Props> {
         actions.push(child)
       } else if (isReactNodeType(child, ButtonGroup)) {
         group = child
-      } else if (isValidElement(child) || child) {
+      } else if (isValidElement(child)) {
+        fields.push(React.cloneElement(child, { ...props }))
+      } else if (child) {
         fields.push(child)
       }
     })

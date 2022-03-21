@@ -1,4 +1,9 @@
-import React, { PureComponent, ReactNode } from 'react'
+import React, {
+  PureComponent,
+  ReactNode,
+  Children,
+  isValidElement,
+} from 'react'
 
 import classnames from './field.module.scss'
 
@@ -56,7 +61,14 @@ export default function Field({
         {title}
         {required && <span className={classnames('required')}>*</span>}
       </label>
-      {children}
+      {Children.map(children, (child, index) => {
+        if (isValidElement(child)) {
+          return React.cloneElement(child, {
+            disabled: disabled,
+          } as any)
+        }
+        return child
+      })}
       {error || description ? (
         <div className={classnames('meta')}>
           {error ? (
