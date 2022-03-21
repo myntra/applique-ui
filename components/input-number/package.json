@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-number",
-  "version": "1.13.84",
+  "version": "1.13.85",
   "main": "dist/input-number.cjs.js",
   "module": "dist/input-number.esm.js",
   "types": "dist/index.d.ts",
