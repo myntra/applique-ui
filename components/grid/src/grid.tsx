@@ -4,7 +4,7 @@ import classnames from './grid.module.scss'
 import GridColumn from './grid-column'
 
 export interface Props extends BaseProps {
-  gap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none'
+  gap?: 'small' | 'base' | 'large' | 'xx-small' | 'x-small' | 'none' | number
   gapless?: boolean
   centered?: boolean
   hcentered?: boolean
@@ -34,7 +34,12 @@ export default class Grid extends PureComponent<Props> {
       allowAnyChild,
       ...forwardedProps
     } = this.props
-
+    const style: any =
+      typeof gap === 'number'
+        ? {
+            '--column-gap': `${gap * 4}px`,
+          }
+        : null
     return (
       <div
         {...forwardedProps}
@@ -44,6 +49,7 @@ export default class Grid extends PureComponent<Props> {
           { multiline, centered, hcentered, vcentered, gapless },
           gap && ['variable-gap', 'gap-' + (gap || 'none')]
         )}
+        style={style}
       >
         {children}
       </div>

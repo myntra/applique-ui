@@ -1,5 +1,7 @@
 import Grid from './src/grid'
 
+# Grid
+
 export const _styles = (function () {
   // Add some styles for showing grid column examples.
   if (document.querySelector('#grid-example-override')) return
@@ -16,10 +18,7 @@ export const _styles = (function () {
   document.head.appendChild(style)
 })();
 
-# Grid
-
 <Documenter component={Grid}>
-  
 ```jsx preview
 <div className="grid-example">
   <Grid>
@@ -31,8 +30,7 @@ export const _styles = (function () {
     </Grid.Column>
   </Grid>
 </div>
-```
-
+```jsx preview
 </Documenter>
 
 ## Examples
@@ -83,7 +81,7 @@ Common sizes:
       <div>-</div>
     </Grid.Column>
   </Grid>
-  <Grid>
+  <Grid gap={8}>
     <Grid.Column size="one-quarter">
       <div>one-quarter</div>
     </Grid.Column>
@@ -617,19 +615,3 @@ Custom Gap:
 
 ### Grid.Column
 
-<Documenter component={Grid}>
-
-```jsx preview
-<div className="grid-example">
-  <Grid>
-    <Grid.Column>
-      <div>-</div>
-    </Grid.Column>
-    <Grid.Column size={4}>
-      <div>4</div>
-    </Grid.Column>
-  </Grid>
-</div>
-```
-
-</Documenter>

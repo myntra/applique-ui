@@ -109,6 +109,10 @@ export interface Props<T extends Record<string, unknown> = {}>
    * Disable the complete form
    */
   disabled?: boolean
+  /**
+   * Padding required between rows.
+   */
+  rowGap?: number
 }
 
 export interface FormFieldProps
@@ -192,6 +196,7 @@ export default class Form extends PureComponent<Props> {
       actions: actionPosition,
       value,
       onChange,
+      rowGap,
       ...props
     } = this.props
 
@@ -236,7 +241,7 @@ export default class Form extends PureComponent<Props> {
           onSubmit={this.handleSubmit}
         >
           {title && <div className={classnames('title')}>{title}</div>}
-          <Grid multiline gapless key="body">
+          <Grid multiline gap={rowGap} key="body">
             {fields.map((field, index) => (
               <Grid.Column
                 key={field.key || index}
