@@ -14,8 +14,8 @@ export interface Props extends BaseProps {
   value?: FileList
   onError?(error: Error): void
   validations?: Array<InputFileValidationFunction> | InputFileValidationFunction
-  showProgress: boolean
-  progress: number
+  showProgress?: boolean
+  progress?: number
 }
 
 /**
