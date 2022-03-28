@@ -2,9 +2,10 @@ import React, { PureComponent } from 'react'
 import classnames from './input-file.module.scss'
 import Input from '@myntra/uikit-component-input-text'
 import Button from '@myntra/uikit-component-button'
+import Progress from '@myntra/uikit-component-progress'
 import { createRef } from '@myntra/uikit-utils'
 
-export type InputFileValidationFunction = {(file: FileList): void}
+export type InputFileValidationFunction = { (file: FileList): void }
 
 export interface Props extends BaseProps {
   placeholder?: string
@@ -13,6 +14,8 @@ export interface Props extends BaseProps {
   value?: FileList
   onError?(error: Error): void
   validations?: Array<InputFileValidationFunction> | InputFileValidationFunction
+  showProgress: boolean
+  progress: number
 }
 
 /**
@@ -42,11 +45,11 @@ export default class InputFile extends PureComponent<Props> {
   }
 
   runValidations = (files: FileList) => {
-    if(!this.props.validations) return
+    if (!this.props.validations) return
 
-    if(Array.isArray(this.props.validations)) {
-      for(const validation of this.props.validations) {
-        validation(files);
+    if (Array.isArray(this.props.validations)) {
+      for (const validation of this.props.validations) {
+        validation(files)
       }
 
       return
@@ -60,8 +63,8 @@ export default class InputFile extends PureComponent<Props> {
     try {
       this.runValidations(files)
       this.props.onChange && this.props.onChange(files)
-    } catch(e) {
-      this.props.onError && this.props.onError(e);
+    } catch (e) {
+      this.props.onError && this.props.onError(e)
     }
   }
 
@@ -84,21 +87,33 @@ export default class InputFile extends PureComponent<Props> {
 
     return (
       <div className={classnames('input-file')}>
-        <Input
-          className={classnames('preview')}
-          placeholder={placeholder}
-          onClick={this.handleBrowseClick}
-          value={this.filenames}
-          title={this.filenames}
-        />
-        <input
-          {...props}
-          className={classnames('file')}
-          onChange={this.handleOnChange}
-          hidden
-          type="file"
-          ref={this.refInputFile}
-        />
+        <div>
+          <Input
+            className={classnames('preview')}
+            placeholder={placeholder}
+            onClick={this.handleBrowseClick}
+            value={this.filenames}
+            title={this.filenames}
+          />
+          <input
+            {...props}
+            className={classnames('file')}
+            onChange={this.handleOnChange}
+            hidden
+            type="file"
+            ref={this.refInputFile}
+          />
+          {this.props.showProgress ? (
+            <Progress
+              className={classnames('progress')}
+              type="bar"
+              value={this.props.progress || 0}
+              showValue
+              appearance="info"
+            />
+          ) : null}
+        </div>
+
         {typeof actions === 'function'
           ? actions(this.handleBrowseClick)
           : actions}

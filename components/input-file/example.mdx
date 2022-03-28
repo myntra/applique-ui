@@ -1,4 +1,5 @@
 import InputFile from './src/input-file'
+import Button from '../button/src/';
 
 # InputFile
 
@@ -7,7 +8,43 @@ import InputFile from './src/input-file'
 ```jsx preview
 const [files, setFiles] = useState()
 
-<InputFile multiple onChange={files => setFiles(files)} value={files}/>
+<InputFile multiple onChange={files => setFiles(files)} value={files} />
 ```
-
 </Documenter>
+
+## InputFile with Progress Bar
+
+```jsx preview
+const [files, setFiles] = useState()
+const [showProgress, setShowProgress] = useState(false);
+const [progress, setProgress] = useState(0);
+const timer = useRef();
+
+const startUpload = ()=>{
+    setProgress(0)
+    setShowProgress(true);
+    // Simulate Upload process
+    const incrementProgress = ()=>{
+        setTimeout(()=>{
+            setProgress((prevProgress)=>{
+                if(prevProgress >=100) {
+                    return setShowProgress(false)
+                }
+                incrementProgress();
+                return prevProgress+10
+            })
+            
+        }, 400)
+    }
+    incrementProgress();
+}
+
+<InputFile multiple onChange={files => setFiles(files)} value={files} showProgress={showProgress} progress={progress} actions={
+    (browse)=>{
+        return <>
+            <Button onClick={browse}>Browse</Button>
+            <Button onClick ={startUpload}>Upload</Button>
+        </>
+    }
+}/>
+```
