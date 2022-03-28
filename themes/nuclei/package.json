@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-theme-nuclei",
-  "version": "1.13.86",
+  "version": "1.13.87",
   "main": "dist/nuclei.cjs.js",
   "module": "dist/nuclei.esm.js",
   "author": "Myntra",

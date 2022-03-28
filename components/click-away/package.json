@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-click-away",
-  "version": "1.13.86",
+  "version": "1.13.87",
   "main": "dist/click-away.cjs.js",
   "module": "dist/click-away.esm.js",
   "types": "dist/index.d.ts",
