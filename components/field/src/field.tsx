@@ -63,8 +63,10 @@ export default function Field({
         className={classnames('title')}
         htmlFor={htmlFor}
       >
-        {title}
-        {required && <span className={classnames('required')}>*</span>}
+        <span>
+          {title}
+          {required && <span className={classnames('required')}>*</span>}
+        </span>
         {isValidElement(fieldInfo) && fieldInfo}
       </label>
       {Children.map(children, (child, index) => {
