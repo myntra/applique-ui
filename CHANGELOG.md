@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.13.88"></a>
+## [1.13.88](https://bitbucket.org/myntra/uikit/compare/v1.13.87...v1.13.88) (2022-03-29)
+
+
+
 <a name="1.13.87"></a>
 ## [1.13.87](https://bitbucket.org/myntra/uikit/compare/v1.13.86...v1.13.87) (2022-03-28)
 
