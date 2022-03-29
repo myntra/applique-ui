@@ -109,6 +109,7 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
       optionsProvider,
       componentProvider,
       schema,
+      disabled,
       ...props
     } = this.props
 
@@ -124,6 +125,7 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
           error={this.props.error}
           onChange={this.handleChange}
           onError={this.handleError}
+          disabled={disabled}
         />
         {this.props.children}
       </Form>

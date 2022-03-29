@@ -77,6 +77,7 @@ export default class SchemaFormField extends PureComponent<Props> {
       layout,
       getDerivedPropsFromValue,
       value,
+      disabled, // TODO: Remove explicitly assigning this props.
     } = this.props
     const { defaultValue = undefined, ...derivedProps } = {
       ...props,
@@ -102,6 +103,7 @@ export default class SchemaFormField extends PureComponent<Props> {
           onChange={this.handleChange}
           error={this.error}
           onBlur={this.handleBlur}
+          disabled={disabled}
         />
       </Grid.Column>
     )

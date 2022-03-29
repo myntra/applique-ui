@@ -28,3 +28,9 @@
     }
   }
 }
+
+@mixin mixin-input-label-component {
+  &.disabled {
+    color: color('text-dark-disabled');
+  }
+}

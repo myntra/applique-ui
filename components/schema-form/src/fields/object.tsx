@@ -91,10 +91,9 @@ export default class SchemaFormObject extends Component<Props> {
 
   render() {
     const Wrapper = this.props.component || FallbackWrapper
-    const { _fields, props, layout, ui } = this.props as any // Hidden _field prop
+    const { _fields, props, layout, ui, disabled } = this.props as any // Hidden _field prop
     const { properties: derivedProps = {} } =
       this.props.getDerivedPropsFromValue(this.props.value) || {}
-    console.log(ui)
     return (
       <Grid.Column
         {...layout}
@@ -120,6 +119,7 @@ export default class SchemaFormObject extends Component<Props> {
                   error={this.getError(name)}
                   onChange={this.getChangeHandler(name)}
                   onError={this.getErrorHandler(name)}
+                  disabled={disabled} // TODO: Remove explicitly assigning this props.
                 />
               )
             })}
