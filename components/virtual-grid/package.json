@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-virtual-grid",
-  "version": "1.13.89",
+  "version": "1.13.90",
   "main": "dist/virtual-grid.cjs.js",
   "module": "dist/virtual-grid.esm.js",
   "types": "dist/index.d.ts",
