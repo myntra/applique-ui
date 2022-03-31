@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-date",
-  "version": "1.13.88",
+  "version": "1.13.89",
   "main": "dist/input-date.cjs.js",
   "module": "dist/input-date.esm.js",
   "types": "dist/index.d.ts",
