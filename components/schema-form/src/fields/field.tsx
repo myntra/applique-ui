@@ -97,13 +97,13 @@ export default class SchemaFormField extends PureComponent<Props> {
         data-path={this.props.path}
       >
         <Input
-          {...derivedProps}
           name={name}
           value={value}
           onChange={this.handleChange}
           error={this.error}
           onBlur={this.handleBlur}
           disabled={disabled}
+          {...derivedProps}
         />
       </Grid.Column>
     )
