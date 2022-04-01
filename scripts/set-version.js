@@ -3,7 +3,6 @@ const { version } = require('../package.json')
 const { resolve } = require('path')
 const { readFileSync, writeFile } = require('fs-extra')
 const prettier = require('prettier')
-const target = ['@myntra/uikit']
 const depVersion = /-(alpha|beta)\./.test(version) ? version : version.replace(/\.[^.]+$/, '') + '.*'
 
 const config = JSON.parse(readFileSync(resolve(__dirname, '../.prettierrc')))
@@ -14,12 +13,12 @@ function format(source) {
   return prettier.format(source, { ...config, parser: 'json' })
 }
 
-const _targets = new Set(target)
+const _targets = new Set(targets)
 /**
  * @param {string} target
  */
 function isLocalPackage(target) {
-  return _targets.has(target)
+  return _targets.has(targets)
 }
 
 /**
@@ -48,4 +47,4 @@ async function updateVersion(target) {
   await writeFile(packageFile, format(JSON.stringify(pkg)))
 }
 
-Promise.all(target.map(updateVersion))
+Promise.all(targets.map(updateVersion))

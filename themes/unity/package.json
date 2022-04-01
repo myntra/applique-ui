@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-theme-unity",
-  "version": "1.13.91",
+  "version": "1.13.94",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",

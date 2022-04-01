@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "1.13.94",
+  "version": "1.13.95",
   "engines": {
     "node": ">=8.0"
   },
@@ -13,7 +13,7 @@
     "start": "node tools/start-dev-server",
     "build": "npm run :build --",
     "pre:build": "pnpm recursive --filter ./components --filter ./packages run build",
-    ":build": "node scripts/build.js -- @myntra/uikit",
+    ":build": "node scripts/build.js",
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
@@ -28,7 +28,7 @@
     "coverage": "jest --coverage",
     "coverage:open": "run-s coverage 'open coverage/lcov-report/index.html'",
     "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
-    "pre:publish": "npm run build",
+    "pre:publish": "CI=true npm run build",
     ":publish": "node ./scripts/publish.js",
     "pre:release": "git checkout deploy && git pull origin deploy",
     ":release": "standard-version -a -r patch",

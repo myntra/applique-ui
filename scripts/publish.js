@@ -2,7 +2,6 @@ const { default: chalk } = require('chalk')
 const { resolve } = require('path')
 const { execSync } = require('child_process')
 const { targets, getPackageDir } = require('./utils')
-const target = ['@myntra/uikit']
 target.forEach((target) => {
   try {
     const packageDir = getPackageDir(target)
