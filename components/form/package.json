@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-form",
-  "version": "1.13.94",
+  "version": "1.13.95",
   "main": "dist/form.cjs.js",
   "module": "dist/form.esm.js",
   "types": "dist/index.d.ts",

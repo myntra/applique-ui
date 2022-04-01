@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit",
-  "version": "1.13.94",
+  "version": "1.13.95",
   "main": "dist/uikit.cjs.js",
   "module": "dist/uikit.esm.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,14 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/uikit-components",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js", "*.scss", "*.css"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js",
+    "*.scss",
+    "*.css"
+  ],
   "scripts": {
     "build": "sass design.scss:design.css",
     "postinstall": "node src/postinstall.js"
@@ -71,5 +78,7 @@
     "normalize.css": "^8.0.1",
     "print-message": "^3.0.1"
   },
-  "devDependencies": { "sass": "^1.26.5" }
+  "devDependencies": {
+    "sass": "^1.26.5"
+  }
 }

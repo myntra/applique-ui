@@ -150,7 +150,10 @@
     "webpackbar": "^5.0.0-3"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "lint-staged ",
+      "pre-push": "npm run test -- --silent --changedSince $(./scripts/remote-tracking-branch.sh)"
+    }
   },
   "standard-version": {
     "scripts": {

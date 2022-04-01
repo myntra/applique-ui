@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-nav-bar",
-  "version": "1.13.94",
+  "version": "1.13.95",
   "main": "dist/nav-bar.cjs.js",
   "module": "dist/nav-bar.esm.js",
   "types": "dist/index.d.ts",

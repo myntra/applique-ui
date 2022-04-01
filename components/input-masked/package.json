@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-masked",
-  "version": "1.13.94",
+  "version": "1.13.95",
   "main": "dist/input-masked.cjs.js",
   "module": "dist/input-masked.esm.js",
   "types": "dist/index.d.ts",
