@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "1.13.91",
+  "version": "1.13.92",
   "engines": {
     "node": ">=8.0"
   },
@@ -13,7 +13,7 @@
     "start": "node tools/start-dev-server",
     "build": "npm run :build --",
     "pre:build": "pnpm recursive --filter ./components --filter ./packages run build",
-    ":build": "node scripts/build.js",
+    ":build": "node scripts/build.js @myntra/uikit",
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
@@ -150,14 +150,10 @@
     "webpackbar": "^5.0.0-3"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged ",
-      "pre-push": "npm run test -- --silent --changedSince $(./scripts/remote-tracking-branch.sh)"
-    }
+    "hooks": {}
   },
   "standard-version": {
     "scripts": {
-      "prechangelog": "npm run test",
       "postbump": "npm run :update:versions && git add -A"
     }
   }

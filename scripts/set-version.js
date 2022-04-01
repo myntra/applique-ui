@@ -3,10 +3,8 @@ const { version } = require('../package.json')
 const { resolve } = require('path')
 const { readFileSync, writeFile } = require('fs-extra')
 const prettier = require('prettier')
-
-const depVersion = /-(alpha|beta)\./.test(version)
-  ? version
-  : version.replace(/\.[^.]+$/, '') + '.*'
+const target = ['@myntra/uikit']
+const depVersion = /-(alpha|beta)\./.test(version) ? version : version.replace(/\.[^.]+$/, '') + '.*'
 
 const config = JSON.parse(readFileSync(resolve(__dirname, '../.prettierrc')))
 /**
@@ -16,7 +14,7 @@ function format(source) {
   return prettier.format(source, { ...config, parser: 'json' })
 }
 
-const _targets = new Set(targets)
+const _targets = new Set(target)
 /**
  * @param {string} target
  */
@@ -35,12 +33,7 @@ async function updateVersion(target) {
 
   pkg.version = version
 
-  const depFields = [
-    'dependencies',
-    'devDependencies',
-    'peerDependencies',
-    'optionalDependencies',
-  ]
+  const depFields = ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']
 
   depFields.forEach((field) => {
     if (field in pkg) {
@@ -55,4 +48,4 @@ async function updateVersion(target) {
   await writeFile(packageFile, format(JSON.stringify(pkg)))
 }
 
-Promise.all(targets.map(updateVersion))
+Promise.all(target.map(updateVersion))
