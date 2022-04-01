@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit",
-  "version": "1.13.93",
+  "version": "1.13.94",
   "main": "dist/uikit.cjs.js",
   "module": "dist/uikit.esm.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,6 @@
     "@myntra/uikit-component-group": ">=1.13.90",
     "@myntra/uikit-component-icon": ">=1.13.90",
     "@myntra/uikit-component-image": ">=1.13.90",
-    "@myntra/uikit-component-input-azure-file": ">=1.13.90",
     "@myntra/uikit-component-input-checkbox": ">=1.13.90",
     "@myntra/uikit-component-input-date": ">=1.13.90",
     "@myntra/uikit-component-input-file": ">=1.13.90",

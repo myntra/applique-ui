@@ -16,7 +16,6 @@ export { default as Grid } from "@myntra/uikit-component-grid";
 export { default as Group } from "@myntra/uikit-component-group";
 export { default as Icon } from "@myntra/uikit-component-icon";
 export { default as Image } from "@myntra/uikit-component-image";
-export { default as InputAzureFile } from "@myntra/uikit-component-input-azure-file";
 export { default as InputCheckbox } from "@myntra/uikit-component-input-checkbox";
 export { default as InputDate } from "@myntra/uikit-component-input-date";
 export { default as InputFile } from "@myntra/uikit-component-input-file";
