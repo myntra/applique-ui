@@ -13,7 +13,7 @@
     "start": "node tools/start-dev-server",
     "build": "npm run :build --",
     "pre:build": "pnpm recursive --filter ./components --filter ./packages run build",
-    ":build": "node scripts/build.js @myntra/uikit",
+    ":build": "node scripts/build.js -- @myntra/uikit",
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
