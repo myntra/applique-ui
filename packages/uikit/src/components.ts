@@ -24,6 +24,7 @@ export { default as InputMonth } from "@myntra/uikit-component-input-month";
 export { default as InputNumber } from "@myntra/uikit-component-input-number";
 export { default as InputRadio } from "@myntra/uikit-component-input-radio";
 export { default as InputS3File } from "@myntra/uikit-component-input-s3-file";
+export { default as InputAzureFile } from "@myntra/uikit-component-input-azure-file";
 export { default as InputSelect } from "@myntra/uikit-component-input-select";
 export { default as InputText } from "@myntra/uikit-component-input-text";
 export { default as InputTextArea } from "@myntra/uikit-component-input-text-area";
