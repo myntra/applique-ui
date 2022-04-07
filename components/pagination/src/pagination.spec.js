@@ -66,6 +66,7 @@ describe('Pagination', () => {
 
     expect(handleChange).not.toHaveBeenCalled()
   })
+
   it('triggers change event on page selection', () => {
     const handleChange = jest.fn()
     const wrapper = mount(
