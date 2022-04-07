@@ -102,6 +102,16 @@ export default class Pagination extends PureComponent<Props> {
           </strong>{' '}
           of {total}
         </div>
+        <div
+          role="button"
+          className={classnames('arrow-container')}
+          onClick={() => this.updatePage(page - 1)}
+        >
+          <Icon
+            name={ChevronLeftSolid}
+            className={classnames('pagination-arrow')}
+          />
+        </div>
         <div className={classnames('page-select')}>
           <span>Page</span>
           <select
@@ -120,6 +130,16 @@ export default class Pagination extends PureComponent<Props> {
           <span className={classnames('select-chevron')}>
             <i className={classnames('select-chevron-down')} />
           </span>
+        </div>
+        <div
+          role="button"
+          className={classnames('arrow-container')}
+          onClick={() => this.updatePage(page + 1)}
+        >
+          <Icon
+            name={ChevronRightSolid}
+            className={classnames('pagination-arrow')}
+          />
         </div>
       </div>
     )
