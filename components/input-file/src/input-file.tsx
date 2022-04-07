@@ -103,7 +103,7 @@ export default class InputFile extends PureComponent<Props> {
             type="file"
             ref={this.refInputFile}
           />
-          {!this.props.showProgress ? (
+          {this.props.showProgress ? (
             <Progress
               className={classnames('progress')}
               type="bar"
