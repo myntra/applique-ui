@@ -19,6 +19,20 @@ export interface Props extends BaseProps {
   adornment?: string | JSX.Element
   /** Position of the adornment */
   adornmentPosition?: 'start' | 'end'
+  /*** Field Context Passed from parent Field */
+  __fieldContext?: FieldContext
+  /*** Visually Representing error state of component */
+  error?: boolean
+  /*** Visually Representing focused state of component */
+  focused?: boolean
+  /*** Visually Representing filled state of component */
+  filled?: boolean
+  /*** Represent the variant of input box */
+  variant: 'bordered' | 'standard'
+}
+type FieldContext = {
+  error?: boolean
+  disabled?: boolean
 }
 
 /**
@@ -37,9 +51,17 @@ export default function InputText({
   icon,
   adornment,
   adornmentPosition,
+  __fieldContext = {},
+  variant,
   ...props
 }: Props) {
   readOnly = readOnly || !onChange
+
+  const { error, disabled } = {
+    error: __fieldContext.error || props.error,
+    disabled: __fieldContext.disabled || props.disabled,
+  }
+  const { placeholder = ' ' } = props
 
   return (
     <div className={classnames('container', className)}>
@@ -49,7 +71,14 @@ export default function InputText({
         readOnly={readOnly}
         value={typeof value !== 'string' ? '' : value}
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
-        className={classnames('input', { 'with-icon': !!icon })}
+        className={classnames(
+          'input',
+          { 'with-icon': !!icon },
+          { underline: !!(variant === 'standard') },
+          { error: !!error }
+        )}
+        disabled={!!disabled}
+        placeholder={placeholder}
       />
       {adornment && (
         <div
@@ -68,4 +97,6 @@ export default function InputText({
 InputText.defaultProps = {
   type: 'text',
   adornmentPosition: 'end',
+  __fieldContext: {},
+  variant: 'bordered',
 }

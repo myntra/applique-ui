@@ -1,30 +1,43 @@
-@mixin mixin-input-component {
+@mixin mixin-input-component($border-type) {
   padding: padding('input');
   font-size: inherit;
-  color: text-color('dark');
+  color: text-color('input.text');
   background-color: transparent;
-  border: none;
-  border-bottom: 1px solid color('gray-dark');
+  #{$border-type}: 1px solid color('input.border');
+  border-radius: 4px;
 
-  &:focus {
-    outline: none;
+  @if $border-type == 'border' {
+    border-radius: 4px;
+  } @else {
+    border-radius: 0;
   }
 
   &::placeholder {
+    /*
+    Do we need to change placeholder color ?
+    */
     color: color('text-dark-medium-emphasis');
+  }
+
+  &:not(:placeholder-shown) {
+    border: none;
+    #{$border-type}: 1px solid color('input.filled');
+  }
+
+  &:hover {
+    border: none;
+    #{$border-type}: 1px solid color('input.hover');
+  }
+  &:focus {
+    border: none;
+    outline: none;
+    #{$border-type}: 1px solid color('input.focused');
   }
 
   &:disabled,
   &[disabled] {
-    color: color('text-dark-disabled');
-  }
-
-  &:not(:read-only) {
-    &:focus {
-      border-bottom: 1px solid color('primary');
-    }
-    &:hover {
-      border-bottom: 1px solid color('primary-light');
-    }
+    color: color('input.disabled');
+    border: none;
+    #{$border-type}: 1px solid color('input.disabled');
   }
 }

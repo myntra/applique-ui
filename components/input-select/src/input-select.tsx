@@ -104,6 +104,24 @@ export interface Props<Value = any, Option = any> extends BaseProps {
    * Whether to display the dropdown options above the input selection.
    */
   up?: boolean
+
+  /*** Field Context Passed from parent Field */
+  __fieldContext?: FieldContext
+  /*** Visually Representing error state of component */
+  error?: boolean
+  /*** Visually Representing focused state of component */
+  focused?: boolean
+  /*** Visually Representing filled state of component */
+  filled?: boolean
+  /*** Represent the variant of input box */
+  variant: 'bordered' | 'standard'
+  /** Can be used to add prefix, suffix or any jsx element */
+  adornment?: string | JSX.Element
+}
+
+export type FieldContext = {
+  error?: boolean
+  disabled?: boolean
 }
 
 let SELECT_COMPONENT_COUNTER = 0
@@ -193,7 +211,20 @@ export default class InputSelect<Value = any, Option = any> extends Component<
   }
 
   render() {
-    const { valueKey, labelKey, disabled, readOnly, up } = this.props
+    let {
+      valueKey,
+      labelKey,
+      disabled,
+      readOnly,
+      up,
+      __fieldContext,
+      error,
+      variant = 'outlined',
+      adornment,
+    } = this.props
+    console.log('*** Variant is ***', variant)
+    __fieldContext = { error: true, disabled: false }
+    disabled = disabled || __fieldContext.disabled
     return (
       <Dropdown
         left
@@ -209,7 +240,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
           <div className={classnames('trigger')} {...props}>
             <InputSelectControl
               ref={this.controlRef}
-              disabled={this.props.disabled}
+              disabled={disabled}
               icon={this.props.icon}
               value={this.props.value}
               onChange={this.handleChange}
@@ -222,11 +253,15 @@ export default class InputSelect<Value = any, Option = any> extends Component<
               searchableKeys={this.props.searchableKeys}
               searchable={this.props.searchable}
               resettable={!this.props.required && !this.props.readOnly}
+              __fieldContext={__fieldContext}
+              error={error}
+              adornment={adornment}
+              variant={variant}
               renderPlaceholder={() => (
                 <InputSelectValue
                   icon={this.props.icon}
                   placeholder={this.props.placeholder}
-                  disabled={this.props.disabled}
+                  disabled={disabled}
                   value={this.props.value}
                   valueKey={this.props.valueKey}
                   labelKey={this.props.labelKey}
