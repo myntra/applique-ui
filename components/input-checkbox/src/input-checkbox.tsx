@@ -58,6 +58,7 @@ export default function InputCheckbox({
   onChange,
   title,
   readOnly,
+  disabled,
   ...props
 }: Props) {
   readOnly = readOnly || !onChange
@@ -78,7 +79,9 @@ export default function InputCheckbox({
         />
         <span className={classnames('checkbox')} aria-hidden="true" />
       </div>
-      <div className={classnames('content')}>{title}</div>
+      <div className={classnames('content', { disabled: disabled })}>
+        {title}
+      </div>
     </label>
   )
 }

@@ -8,6 +8,10 @@
   border-bottom-color: transparent;
 }
 
+.content {
+  @include mixin-input-label-component();
+}
+
 .checkbox-input {
   display: inline-block;
 }

@@ -6,6 +6,7 @@ $-tokens-colors-warning: hsl(40, 87, 53) !default;
 $-tokens-colors-danger: hsl(0, 54, 53) !default;
 $-tokens-colors-gray: hsl(0, 0, 90) !default;
 $-tokens-colors-brown: hsl(26, 40, 54) !default;
+$-tokens-colors-pink: hsl(346, 100, 62) !default;
 
 $brand-colors: (
   'primary': $-tokens-colors-primary,
@@ -14,6 +15,7 @@ $brand-colors: (
   'danger': $-tokens-colors-danger,
   'gray': $-tokens-colors-gray,
   'brown': $-tokens-colors-brown,
+  'pink': $-tokens-colors-pink,
 );
 
 $base-colors: (
@@ -33,6 +35,7 @@ $colors: (
   'nav-bar.item.background:active': '#primary-lighter',
   'nav-bar.item.text:active': $-tokens-colors-primary,
   'nav-bar.border': '#gray-light',
+  "nav-bar.text": #000,
   'top-bar.background': '#nav-bar.background',
   'top-bar.border': '#nav-bar.border',
   'page.background': '#gray-light',

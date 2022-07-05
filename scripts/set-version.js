@@ -3,10 +3,7 @@ const { version } = require('../package.json')
 const { resolve } = require('path')
 const { readFileSync, writeFile } = require('fs-extra')
 const prettier = require('prettier')
-
-const depVersion = /-(alpha|beta)\./.test(version)
-  ? version
-  : version.replace(/\.[^.]+$/, '') + '.*'
+const depVersion = /-(alpha|beta)\./.test(version) ? version : version.replace(/\.[^.]+$/, '') + '.*'
 
 const config = JSON.parse(readFileSync(resolve(__dirname, '../.prettierrc')))
 /**
@@ -21,7 +18,7 @@ const _targets = new Set(targets)
  * @param {string} target
  */
 function isLocalPackage(target) {
-  return _targets.has(target)
+  return _targets.has(targets)
 }
 
 /**
@@ -35,12 +32,7 @@ async function updateVersion(target) {
 
   pkg.version = version
 
-  const depFields = [
-    'dependencies',
-    'devDependencies',
-    'peerDependencies',
-    'optionalDependencies',
-  ]
+  const depFields = ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']
 
   depFields.forEach((field) => {
     if (field in pkg) {

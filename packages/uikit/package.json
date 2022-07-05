@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit",
-  "version": "1.13.83",
+  "version": "1.13.96",
   "main": "dist/uikit.cjs.js",
   "module": "dist/uikit.esm.js",
   "types": "dist/index.d.ts",
@@ -41,7 +41,6 @@
     "@myntra/uikit-component-group": "1.13.*",
     "@myntra/uikit-component-icon": "1.13.*",
     "@myntra/uikit-component-image": "1.13.*",
-    "@myntra/uikit-component-input-azure-file": "1.13.*",
     "@myntra/uikit-component-input-checkbox": "1.13.*",
     "@myntra/uikit-component-input-date": "1.13.*",
     "@myntra/uikit-component-input-file": "1.13.*",
@@ -50,6 +49,7 @@
     "@myntra/uikit-component-input-number": "1.13.*",
     "@myntra/uikit-component-input-radio": "1.13.*",
     "@myntra/uikit-component-input-s3-file": "1.13.*",
+    "@myntra/uikit-component-input-azure-file": "1.13.*",
     "@myntra/uikit-component-input-select": "1.13.*",
     "@myntra/uikit-component-input-text": "1.13.*",
     "@myntra/uikit-component-input-text-area": "1.13.*",

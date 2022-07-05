@@ -102,9 +102,17 @@ export interface Props<T extends Record<string, unknown> = {}>
    */
   onChange?(value: T): void
   /**
-   *
+   * Position of form related cta
    */
   actions?: 'left' | 'right' | 'centered'
+  /**
+   * Disable the complete form
+   */
+  disabled?: boolean
+  /**
+   * Padding required between rows.
+   */
+  rowGap?: number
 }
 
 export interface FormFieldProps
@@ -188,6 +196,7 @@ export default class Form extends PureComponent<Props> {
       actions: actionPosition,
       value,
       onChange,
+      rowGap,
       ...props
     } = this.props
 
@@ -200,10 +209,12 @@ export default class Form extends PureComponent<Props> {
         isReactNodeType(child, Form.Action) ||
         isReactNodeType(child, Button)
       ) {
-        actions.push(child)
+        actions.push(React.cloneElement(child, { disabled: props.disabled }))
       } else if (isReactNodeType(child, ButtonGroup)) {
         group = child
-      } else if (isValidElement(child) || child) {
+      } else if (isValidElement(child)) {
+        fields.push(React.cloneElement(child, { ...props }))
+      } else if (child) {
         fields.push(child)
       }
     })
@@ -230,7 +241,7 @@ export default class Form extends PureComponent<Props> {
           onSubmit={this.handleSubmit}
         >
           {title && <div className={classnames('title')}>{title}</div>}
-          <Grid multiline gapless key="body">
+          <Grid multiline gap={rowGap} key="body">
             {fields.map((field, index) => (
               <Grid.Column
                 key={field.key || index}
@@ -274,7 +285,14 @@ function withField<P extends object>(BaseComponent: any) {
     id = ++counter
 
     render() {
-      const { label, error, description, required, ...props } = this.props
+      const {
+        label,
+        error,
+        description,
+        required,
+        fieldInfo,
+        ...props
+      } = this.props
       let id = props.id || `__uikit_field_${this.id}_`
 
       return (
@@ -287,6 +305,7 @@ function withField<P extends object>(BaseComponent: any) {
               required={required}
               htmlFor={id}
               disabled={props.disabled}
+              fieldInfo={fieldInfo}
             >
               <BaseComponent
                 {...createFieldProps(props.name || createFieldName(label))}

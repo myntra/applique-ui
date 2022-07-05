@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "1.13.83",
+  "version": "1.13.96",
   "engines": {
     "node": ">=8.0"
   },
@@ -58,6 +58,7 @@
     "@myntra/rollup-plugin-classnames": "link:packages/rollup-plugin-classnames",
     "@myntra/rollup-plugin-scss": "link:packages/rollup-plugin-scss",
     "@myntra/stylelint-config-standard": "link:packages/stylelint-config-standard",
+    "@myntra/uikit-icons": ">=1.0.*",
     "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.11",
     "any-observable": "^0.3.0",
@@ -109,6 +110,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.16.4",
+    "prop-types": "^15.8.1",
     "raw-loader": "^1.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -145,8 +147,7 @@
     "webpack-chain": "^6.5.1",
     "webpack-dev-server": "^3.7",
     "webpack-filter-warnings-plugin": "^1.2.1",
-    "webpackbar": "^5.0.0-3",
-    "@myntra/uikit-icons": ">=1.0.*"
+    "webpackbar": "^5.0.0-3"
   },
   "husky": {
     "hooks": {
@@ -156,7 +157,6 @@
   },
   "standard-version": {
     "scripts": {
-      "prechangelog": "npm run test",
       "postbump": "npm run :update:versions && git add -A"
     }
   }

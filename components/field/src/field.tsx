@@ -1,4 +1,9 @@
-import React, { PureComponent, ReactNode } from 'react'
+import React, {
+  PureComponent,
+  ReactNode,
+  Children,
+  isValidElement,
+} from 'react'
 
 import classnames from './field.module.scss'
 
@@ -22,6 +27,10 @@ export interface Props extends BaseProps {
    * Visually conveys that the field is disabled.
    */
   disabled?: boolean
+  /**
+   * Block to show info about the field. Should be a react component.
+   */
+  fieldInfo?: ReactNode
 }
 
 /**
@@ -39,6 +48,7 @@ export default function Field({
   children,
   className,
   disabled,
+  fieldInfo,
   ...props
 }: Props) {
   return (
@@ -53,10 +63,20 @@ export default function Field({
         className={classnames('title')}
         htmlFor={htmlFor}
       >
-        {title}
-        {required && <span className={classnames('required')}>*</span>}
+        <span>
+          {title}
+          {required && <span className={classnames('required')}>*</span>}
+        </span>
+        {isValidElement(fieldInfo) && fieldInfo}
       </label>
-      {children}
+      {Children.map(children, (child, index) => {
+        if (isValidElement(child)) {
+          return React.cloneElement(child, {
+            disabled: disabled,
+          } as any)
+        }
+        return child
+      })}
       {error || description ? (
         <div className={classnames('meta')}>
           {error ? (

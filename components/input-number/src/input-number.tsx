@@ -10,10 +10,6 @@ export interface Props extends BaseProps {
   value?: number | string
   /** The handler to call when the value changes. */
   onChange?(value: number): void
-  /** Can be used to add prefix, suffix or any jsx element */
-  adornment?: string | JSX.Element
-  /** Position of the adornment */
-  adornmentPosition?: 'start' | 'end'
 }
 
 /**
@@ -29,8 +25,6 @@ export default function InputNumber({
   className,
   onChange,
   value,
-  adornment,
-  adornmentPosition,
   ...props
 }: Props): JSX.Element {
   const newVal: number = parseFloat(value as string)
@@ -45,20 +39,6 @@ export default function InputNumber({
           onChange && onChange(parseFloat(event.target.value))
         }
       />
-      {adornment && (
-        <div
-          className={classnames(
-            'input-adornment',
-            `input-adornment--${adornmentPosition}`
-          )}
-        >
-          {adornment}
-        </div>
-      )}
     </div>
   )
-}
-
-InputNumber.defaultProps = {
-  adornmentPosition: 'end',
 }
