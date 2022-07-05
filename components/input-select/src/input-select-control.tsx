@@ -8,6 +8,7 @@ import { memoize, debounce, createRef } from '@myntra/uikit-utils'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
 import classnames from './input-select-control.module.scss'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import { FieldContext } from './input-select'
 
 export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
   /**
@@ -88,6 +89,17 @@ export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
    * Is options dropdown open?
    */
   disabled: boolean
+
+  /*** Field Context Passed from parent Field */
+  __fieldContext?: FieldContext
+  /*** Visually Representing error state of component */
+  error?: boolean
+  /*** Visually Representing focused state of component */
+  focused?: boolean
+  /*** Visually Representing filled state of component */
+  filled?: boolean
+  /*** Represent the variant of input box */
+  variant: 'bordered' | 'standard'
 }
 
 /**
@@ -196,7 +208,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
   resetValue = () => this.props.onChange(null)
 
   render() {
-    const {
+    let {
       isOpen,
       instancePrefix,
       children,
@@ -215,11 +227,19 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
       options,
       value,
       icon,
+      variant,
+      __fieldContext = {},
+      adornment,
       disabled,
       // ---
       ...props
     } = this.props
 
+    const { error } = {
+      error: __fieldContext.error || this.props.error,
+    }
+
+    const placeholder = value ? null : ' '
     return (
       <div
         className={classnames('control', className)}
@@ -227,20 +247,25 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
       >
         {(!this.state.searchText || !searchable) && renderPlaceholder()}
         {icon && (
-          <Icon
+          <div
             className={classnames('icon', {
               active: value || this.state.searchText,
             })}
-            name={icon}
-          />
+          >
+            <Icon name={icon} />
+          </div>
         )}
         {searchable && (
           <input
-            disabled={disabled}
             value={this.state.searchText}
             ref={this.inputRef}
             onChange={this.handleSearchTextChange}
-            className={classnames('input', { 'with-icon': !!icon })}
+            className={classnames(
+              'input',
+              { 'with-icon': !!icon },
+              { standard: !!(variant === 'standard') },
+              { error: !!error }
+            )}
             {...props}
             onBlur={this.handleBlur}
             role="combobox"
@@ -250,11 +275,17 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
             aria-autocomplete="both"
             aria-controls={`${instancePrefix}-options`}
             aria-owns={`${instancePrefix}-options`}
+            placeholder={placeholder}
+            disabled={disabled}
           />
         )}
 
         {!disabled && (
-          <div className={classnames('buttons')}>
+          <div
+            className={classnames('buttons', {
+              'no-offset': !!(variant === 'standard'),
+            })}
+          >
             {resettable && (value || this.state.searchText) && (
               <div
                 className={classnames('button')}
@@ -266,6 +297,9 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
               </div>
             )}
             {children}
+            {adornment && (
+              <div className={classnames('input-adornment')}>{adornment}</div>
+            )}
           </div>
         )}
       </div>

@@ -8,8 +8,9 @@
   .icon {
     position: absolute;
     top: 50%;
+    padding-left: 12px;
     opacity: 0.6;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
 
     &.active {
       opacity: 1;
@@ -18,20 +19,50 @@
 }
 
 .input {
-  @include mixin-input-component();
+  @include mixin-input-component(border);
+
+  padding: padding('input.select');
   &.with-icon {
-    padding: padding('input.with-icon');
+    padding: padding('input-select.with-icon');
   }
 }
+.standard {
+  padding: padding('input');
+  border: none;
 
-.buttons {
+  @include mixin-input-component('border-bottom');
+}
+
+.buttons.no-offset {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 0;
 }
+.buttons {
+  position: absolute;
+  right: 13px;
+  z-index: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100%;
+}
 
 .button {
   display: inline-block;
   cursor: pointer;
+}
+
+.input.error,
+.error.underline {
+  border-color: color('input.error');
+}
+
+.input-adornment {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 8px;
+  color: text-color('input.text');
 }

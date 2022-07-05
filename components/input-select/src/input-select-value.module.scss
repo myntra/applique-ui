@@ -11,19 +11,31 @@
   white-space: nowrap;
 }
 
+.standard.input,
+.standard.input:not(:placeholder-shown),
+.standard.input:disabled,
+.standard.input[disabled] {
+  padding: padding('input');
+}
+.no-border {
+  border: none !important;
+}
+
 .input {
   z-index: 0;
   width: 100%;
+  padding: padding('input.select');
   color: color('text-dark-medium-emphasis');
   cursor: pointer;
-
   &.with-icon {
-    padding: padding('input.with-icon');
+    padding: padding('input-select.with-icon');
   }
 }
 
-.value .input {
+.value .input,
+.value .input:not(:placeholder-shown) {
   width: 90%;
   text-overflow: ellipsis;
+  border: none;
   border-bottom: transparent;
 }

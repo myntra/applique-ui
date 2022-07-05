@@ -1,10 +1,10 @@
 // - Solid Colors
 // https://zpl.io/a8w1k0d
-$-tokens-colors-primary: hsl(244, 54, 53) !default;
+$-tokens-colors-primary: hsl(244, 54%, 53%) !default;
 $-tokens-colors-success: hsl(138, 53, 53) !default;
 $-tokens-colors-warning: hsl(40, 87, 53) !default;
-$-tokens-colors-danger: hsl(0, 54, 53) !default;
-$-tokens-colors-gray: hsl(0, 0, 90) !default;
+$-tokens-colors-danger: hsl(0, 54%, 53%) !default;
+$-tokens-colors-gray: hsl(0, 0%, 90%) !default;
 $-tokens-colors-brown: hsl(26, 40, 54) !default;
 $-tokens-colors-pink: hsl(346, 100, 62) !default;
 
@@ -22,6 +22,15 @@ $base-colors: (
   'black': #000,
   'white': #fff,
 );
+$input-colors: (
+  'primary-light-new': #cac8ee,
+  'gray-base-new': #cfcfd1,
+  'gray-dark-new': #86878b,
+  'danger-base-new': #c84646,
+  'success-base-1': #239d56,
+  'primary-base-1': #4f47c8,
+  'gray-darkest': #0e0f17,
+);
 
 $colors: (
   'disabled': '#gray-light',
@@ -35,14 +44,22 @@ $colors: (
   'nav-bar.item.background:active': '#primary-lighter',
   'nav-bar.item.text:active': $-tokens-colors-primary,
   'nav-bar.border': '#gray-light',
-  "nav-bar.text": #000,
+  'nav-bar.text': #000,
   'top-bar.background': '#nav-bar.background',
   'top-bar.border': '#nav-bar.border',
   'page.background': '#gray-light',
   'tab.border': '#gray-light',
+  'input.hover': '#primary-light-new',
+  'input.focused': '#primary-base-1',
+  'input.disabled': '#gray-base-new',
+  'input.error': '#danger-base-new',
+  'input.border': '#gray-base-new',
+  'input.filled': '#gray-dark-new',
+  'input.text': '#gray-darkest',
 );
 $-tokens-colors: () !default;
 
+@include add-colors($input-colors);
 @include add-colors($base-colors);
 @include add-colors($brand-colors);
 @include add-colors(uikit-shades-of($brand-colors));
@@ -52,10 +69,12 @@ $-tokens-colors: () !default;
 
 $-tokens-text-colors-dark: #000 !default;
 $-tokens-text-colors-light: #fff !default;
+$-tokens-text-colors-dark-new: #0e0f17 !default;
 
 $text-colors: (
   'dark': $-tokens-text-colors-dark,
   'light': $-tokens-text-colors-light,
+  'input.text': $-tokens-text-colors-dark-new,
 );
 
 @include add-colors(uikit-text-variants-of($text-colors));
