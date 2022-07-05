@@ -219,10 +219,9 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       up,
       __fieldContext,
       error,
-      variant = 'outlined',
+      variant,
       adornment,
     } = this.props
-    console.log('*** Variant is ***', variant)
     __fieldContext = { error: true, disabled: false }
     disabled = disabled || __fieldContext.disabled
     return (

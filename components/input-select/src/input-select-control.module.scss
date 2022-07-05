@@ -19,18 +19,18 @@
 }
 
 .input {
-  @include mixin-input-component(border);
-
-  padding: padding('input.select');
   &.with-icon {
     padding: padding('input-select.with-icon');
   }
+}
+.outline {
+  @include mixin-input-component-bordered();
 }
 .standard {
   padding: padding('input');
   border: none;
 
-  @include mixin-input-component('border-bottom');
+  @include mixin-input-component();
 }
 
 .buttons.no-offset {

@@ -68,6 +68,7 @@ export default function InputText({
       className={classnames(
         'container',
         { 'with-adornment': adornment },
+        { input: !!adornment },
         className
       )}
     >

@@ -264,6 +264,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
               'input',
               { 'with-icon': !!icon },
               { standard: !!(variant === 'standard') },
+              { outline: !!(variant === 'bordered') },
               { error: !!error }
             )}
             {...props}

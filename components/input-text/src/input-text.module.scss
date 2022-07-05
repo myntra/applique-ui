@@ -2,7 +2,7 @@
 @import 'input';
 
 .input {
-  @include mixin-input-component(border);
+  @include mixin-input-component-bordered();
   &[type='search'] {
     padding-right: 0.125em;
   }
@@ -20,14 +20,9 @@
   display: flex;
   align-items: center;
   &.with-adornment {
-    &::before {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      content: ' ';
-      border-bottom: 1px solid color('gray-dark');
+    input {
+      padding: 0;
+      border: 0;
     }
   }
   .icon {
@@ -36,7 +31,6 @@
   }
 
   .input-adornment {
-    position: absolute;
     top: 0;
     display: flex;
     align-items: center;
@@ -57,7 +51,7 @@
   .underline {
     border: none;
 
-    @include mixin-input-component('border-bottom');
+    @include mixin-input-component();
   }
   .error,
   .error.underline {

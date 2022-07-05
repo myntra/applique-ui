@@ -1,17 +1,46 @@
-@mixin mixin-input-component($border-type) {
+@mixin mixin-input-component($border-type: false) {
   padding: padding('input');
+  font-size: inherit;
+  color: text-color('dark');
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid color('gray-dark');
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: color('text-dark-medium-emphasis');
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: color('text-dark-disabled');
+    border-bottom: 1px solid color('input.disabled');
+  }
+
+  &:not(:read-only) {
+    &:focus {
+      border-bottom: 1px solid color('input.focused');
+    }
+    &:hover {
+      border-bottom: 1px solid color('input.hover');
+    }
+  }
+}
+
+@mixin mixin-input-component-bordered() {
+  padding: padding('input.select');
   font-size: inherit;
   color: text-color('input.text');
   background-color: transparent;
-  #{$border-type}: 1px solid color('input.border');
-  border-radius: 4px;
-
-  @if $border-type == 'border' {
-    border-radius: 4px;
-  } @else {
-    border-radius: 0;
+  border: 1px solid color('input.border');
+  &:not(:placeholder-shown) {
+    border: 1px solid color('input.filled');
   }
 
+  border-radius: 4px;
   &::placeholder {
     /*
     Do we need to change placeholder color ?
@@ -19,26 +48,18 @@
     color: color('text-dark-medium-emphasis');
   }
 
-  &:not(:placeholder-shown) {
-    border: none;
-    #{$border-type}: 1px solid color('input.filled');
-  }
-
   &:hover {
-    border: none;
-    #{$border-type}: 1px solid color('input.hover');
+    border: 1px solid color('input.hover');
   }
   &:focus {
-    border: none;
+    border: 1px solid color('input.focused');
     outline: none;
-    #{$border-type}: 1px solid color('input.focused');
   }
 
   &:disabled,
   &[disabled] {
     color: color('input.disabled');
-    border: none;
-    #{$border-type}: 1px solid color('input.disabled');
+    border: 1px solid color('input.disabled');
   }
 }
 
