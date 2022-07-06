@@ -2,59 +2,125 @@
 @import 'input';
 
 .input {
-  @include mixin-input-component-bordered();
   &[type='search'] {
     padding-right: 0.125em;
   }
 
   width: 100%;
-  padding: padding('input.bordered');
-
-  &.with-icon {
+  padding: padding('input.select');
+}
+.bordered {
+  input {
+    @include mixin-input-component-bordered();
+  }
+  .with-icon {
     padding: padding('input.with-icon');
   }
+  &.disabled {
+    color: color('input.disabled');
+  }
+}
+.standard {
+  input {
+    @include mixin-input-component();
+  }
+  .with-icon {
+    padding: 4px 8px 4px 20px;
+  }
+  &.disabled {
+    color: color('input.disabled');
+  }
+}
+.error {
+  border-color: color('input.error') !important;
+}
+.icon-border {
+  position: absolute;
+  top: 0.8em;
+  left: 0.8em;
+}
+.icon-standard {
+  position: absolute;
+  top: 0.6em;
 }
 
 .container {
   position: relative;
   display: flex;
   align-items: center;
-  &.with-adornment {
-    input {
-      padding: 0;
-      border: 0;
-    }
+  .input-adornment-start {
+    margin-left: size('1x');
   }
-  .icon {
-    position: absolute;
-    top: 0.4em;
+  .input-adornment-end {
+    margin-right: size('1x');
+  }
+  &.with-adornment {
+    &.adornment-bordered {
+      padding: padding('input.select');
+      font-size: inherit;
+      color: text-color('dark');
+      background-color: transparent;
+      border: 1px solid color('input.border');
+      border-radius: 4px;
+      &.filled {
+        border: 1px solid color('input.filled');
+      }
+      &:hover {
+        border: 1px solid color('input.hover');
+      }
+      &:focus-within {
+        border: 1px solid color('input.focused');
+      }
+      &.disable {
+        border: 1px solid color('input.disabled');
+      }
+      &.disable > * {
+        color: color('input.disabled');
+      }
+    }
+    &.adornment-standard {
+      padding: padding('input.select');
+      padding-bottom: size('1x');
+      padding-left: 0;
+      font-size: inherit;
+      color: text-color('dark');
+      background-color: transparent;
+      border-bottom: 1px solid color('input.border');
+      &.filled {
+        border-bottom: 1px solid color('input.filled');
+      }
+      &:hover {
+        border-bottom: 1px solid color('input.hover');
+      }
+      &:focus-within {
+        border-bottom: 1px solid color('input.focused');
+      }
+      &.disable {
+        border: 1px solid color('input.disabled');
+      }
+      &.disable > * {
+        color: color('input.disabled');
+      }
+      .input-adornment-end {
+        margin-right: 0;
+      }
+    }
+    input {
+      flex-grow: 1;
+      padding: 0;
+      margin-left: size('1x');
+      background-color: transparent;
+      border: 0;
+      outline: none;
+    }
   }
 
   .input-adornment {
-    top: 0;
     display: flex;
     align-items: center;
     height: 100%;
-    max-height: 2em;
+    max-height: 1.5em;
     color: text-color('input.text');
     white-space: nowrap;
-
-    &--start {
-      margin-right: size('2x');
-    }
-
-    &--end {
-      margin-left: size('2x');
-    }
-  }
-
-  .underline {
-    border: none;
-
-    @include mixin-input-component();
-  }
-  .error,
-  .error.underline {
-    border-color: color('input.error');
   }
 }

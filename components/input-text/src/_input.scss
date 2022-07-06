@@ -1,4 +1,4 @@
-@mixin mixin-input-component($border-type: false) {
+@mixin mixin-input-component() {
   padding: padding('input');
   font-size: inherit;
   color: text-color('dark');
@@ -30,8 +30,8 @@
   }
 }
 
-@mixin mixin-input-component-bordered() {
-  padding: padding('input.select');
+@mixin mixin-input-component-bordered($padding: padding('input.select')) {
+  padding: $padding;
   font-size: inherit;
   color: text-color('input.text');
   background-color: transparent;
@@ -52,7 +52,6 @@
     border: 1px solid color('input.hover');
   }
   &:focus {
-    border: 1px solid color('input.focused');
     outline: none;
   }
 
@@ -60,6 +59,16 @@
   &[disabled] {
     color: color('input.disabled');
     border: 1px solid color('input.disabled');
+  }
+  &:not(:read-only) {
+    &:hover {
+      border: 1px solid color('input.hover');
+    }
+    &:focus {
+      border: 1px solid color('input.focused');
+    }
+
+    outline: none;
   }
 }
 

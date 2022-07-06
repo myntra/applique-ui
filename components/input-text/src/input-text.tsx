@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from './input-text.module.scss'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
+import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
 
 export interface Props extends BaseProps {
   /** Sets the text format for the field. */
@@ -34,6 +35,9 @@ type FieldContext = {
   error?: boolean
   disabled?: boolean
 }
+function isEmptyValue(value) {
+  return typeof value !== 'string' || !value
+}
 
 /**
  * A component to input text-like data (email, tel, text, password and url).
@@ -58,28 +62,31 @@ export default function InputText({
   readOnly = readOnly || !onChange
 
   const { error, disabled } = {
-    error: __fieldContext.error || props.error,
-    disabled: __fieldContext.disabled || props.disabled,
+    error: __fieldContext.error || props.error || false,
+    disabled: __fieldContext.disabled || props.disabled || false,
   }
   const { placeholder = ' ' } = props
+  icon = SpinnerSolid
+  variant = 'bordered'
+  const bordered = variant === 'bordered'
+  const standard = variant === 'standard'
 
-  return (
+  return adornment ? (
     <div
       className={classnames(
         'container',
         { 'with-adornment': adornment },
-        { input: !!adornment },
+        { disable: !!disabled },
+        { 'adornment-standard': standard },
+        { 'adornment-bordered': bordered },
+        { filled: !isEmptyValue(value) },
+        { error: !!error },
         className
       )}
     >
       {icon && <Icon className={classnames('icon')} name={icon} />}
       {adornment && adornmentPosition === 'start' && (
-        <div
-          className={classnames(
-            'input-adornment',
-            `input-adornment--${adornmentPosition}`
-          )}
-        >
+        <div className={classnames('input-adornment', `input-adornment-start`)}>
           {adornment}
         </div>
       )}
@@ -89,24 +96,52 @@ export default function InputText({
         value={typeof value !== 'string' ? '' : value}
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
         className={classnames(
-          'input',
+          { input: !!!adornment },
+          { 'without-adornment': !adornment },
           { 'with-icon': !!icon },
-          { underline: !!(variant === 'standard') },
-          { error: !!error }
+          { standard: !!(variant === 'standard') }
         )}
         disabled={!!disabled}
         placeholder={placeholder}
       />
       {adornment && adornmentPosition === 'end' && (
-        <div
-          className={classnames(
-            'input-adornment',
-            `input-adornment--${adornmentPosition}`
-          )}
-        >
+        <div className={classnames('input-adornment', `input-adornment-end`)}>
           {adornment}
         </div>
       )}
+    </div>
+  ) : (
+    <div
+      className={classnames(
+        'container',
+        { standard },
+        { bordered },
+        { disabled },
+        className
+      )}
+    >
+      {icon && (
+        <Icon
+          className={classnames(
+            { 'icon-border': bordered },
+            { 'icon-standard': standard }
+          )}
+          name={icon}
+        />
+      )}
+      <input
+        {...props}
+        readOnly={readOnly}
+        value={typeof value !== 'string' ? '' : value}
+        onChange={readOnly ? null : (event) => onChange(event.target.value)}
+        className={classnames(
+          'input',
+          { 'with-icon': !!icon },
+          { error: !!error }
+        )}
+        disabled={!!disabled}
+        placeholder={placeholder}
+      />
     </div>
   )
 }

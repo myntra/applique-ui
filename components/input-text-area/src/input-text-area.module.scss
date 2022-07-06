@@ -2,17 +2,51 @@
 @import '@myntra/uikit-component-input-text/style.scss';
 
 .input {
-  @include mixin-input-component();
-
   width: 100%;
+  padding: padding('input.select');
   vertical-align: baseline;
+  border: none;
+  outline: none;
 
   &:disabled,
   &[disabled] {
     resize: none;
   }
 }
-
+.standard > .input {
+  @include mixin-input-component();
+  &.error {
+    border-color: color('input.error') !important;
+  }
+}
+.bordered > .input {
+  @include mixin-input-component-bordered();
+  &.error {
+    border-color: color('input.error') !important;
+  }
+}
+.bordered > .with-icon {
+  padding-left: 2.2em;
+}
+.standard > .with-icon {
+  padding-left: 1.4em;
+}
+.container {
+  position: relative;
+}
+.bordered > .icon {
+  position: absolute;
+  top: 0.8em;
+  left: 0.8em;
+}
+.standard > .icon {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+}
 .no-resize {
   resize: none;
+}
+.disable {
+  color: color('input.disabled');
 }
