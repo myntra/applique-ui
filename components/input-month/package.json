@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-month",
-  "version": "1.13.97-beta.1",
+  "version": "1.13.97-beta.2",
   "main": "dist/input-month.cjs.js",
   "module": "dist/input-month.esm.js",
   "types": "dist/index.d.ts",
