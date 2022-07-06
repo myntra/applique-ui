@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-file",
-  "version": "1.13.97-beta.2",
+  "version": "1.13.97-beta.3",
   "main": "dist/input-file.cjs.js",
   "module": "dist/input-file.esm.js",
   "types": "dist/index.d.ts",

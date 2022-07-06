@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-text",
-  "version": "1.13.97-beta.2",
+  "version": "1.13.97-beta.3",
   "main": "dist/text.cjs.js",
   "module": "dist/text.esm.js",
   "types": "dist/index.d.ts",
