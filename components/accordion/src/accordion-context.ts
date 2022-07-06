@@ -1,10 +1,10 @@
 import { createContext } from '@myntra/uikit-context'
 import AccordionItem from './accordion-item'
+import { Props as ItemProps } from './accordion-item'
 
 export interface AccordionContext {
-  active: number
-  onActivation(index: number): void
   getIndex(item: AccordionItem): number
+  itemProps: ItemProps
 }
 
 export default createContext<AccordionContext>(null)

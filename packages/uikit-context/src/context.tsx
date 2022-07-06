@@ -65,7 +65,7 @@ export function createContext<T>(defaultValue: T): Context<T> {
     }
 
     render() {
-      return Children.only(this.props.children)
+      return this.props.children
     }
   }
 

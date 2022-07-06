@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react'
 import AccordionItem from './accordion-item'
 import AccordionContext from './accordion-context'
+import { IconName } from '@myntra/uikit-component-icon'
+import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
+import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 
 export interface Props extends BaseProps {
   /**
@@ -13,6 +16,10 @@ export interface Props extends BaseProps {
    * @param active - Next expanded item.
    */
   onChange?(active: number): void
+  /**
+   * The icon used to
+   */
+  controlIcons?: { open: IconName; close: IconName }
 }
 
 /**
@@ -31,6 +38,10 @@ export default class Accordion extends PureComponent<
 
   static defaultProps = {
     active: 0,
+    controlIcons: {
+      close: ChevronDownSolid,
+      open: ChevronUpSolid,
+    },
   }
 
   itemsCount = 0
@@ -42,12 +53,6 @@ export default class Accordion extends PureComponent<
     this.state = {
       active: props.active || 0,
     }
-  }
-
-  get active() {
-    return typeof this.props.onChange === 'function'
-      ? this.props.active
-      : this.state.active
   }
 
   getItemIndex = (item) => {
@@ -62,26 +67,15 @@ export default class Accordion extends PureComponent<
     return index
   }
 
-  handleClick = (active) => {
-    if (this.props.onChange) this.props.onChange(active)
-    else this.setState({ active })
-  }
-
   render() {
+    const { active, ...props } = this.props
     this.itemsCount = 0
-
-    if (!React.createContext) {
-      const { active, onChange, ...props } = this.props
-
-      return <div {...props} />
-    }
 
     return (
       <AccordionContext.Provider
         value={{
-          active: this.active,
-          onActivation: this.handleClick,
           getIndex: this.getItemIndex,
+          itemProps: props,
         }}
       >
         {this.props.children}

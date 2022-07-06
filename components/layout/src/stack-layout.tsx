@@ -61,11 +61,13 @@ export default function StackLayout({
   gutter,
   style,
   space,
+  reference,
   ...props
 }: Props) {
   return (
     <div
       {...props}
+      ref={reference}
       className={classnames('stack', className, gutter)}
       style={{
         alignItems: alignments[alignment],
