@@ -89,14 +89,10 @@ export default class AccordionItem extends Component<
                 onClick={this.onTitleClick}
                 className={classnames('item-title')}
                 reference={this.titleRef}
+                data-accordion-index={index}
+                {...props}
               >
-                {cloneElement(
-                  typeof title === 'string' ? <div>{title}</div> : title,
-                  {
-                    'data-accordion-index': index,
-                    ...props,
-                  }
-                )}
+                {typeof title === 'string' ? <div>{title}</div> : title}
                 <Icon
                   name={
                     active

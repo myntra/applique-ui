@@ -26,18 +26,9 @@ describe('Accordion', () => {
     expect(wrapper.find(AccordionItem)).toHaveLength(3)
   })
 
-  it('renders first AccordionItem', () => {
-    const wrapper = mount(element)
-    expect(
-      wrapper
-        .find('div')
-        .at(1)
-        .text()
-    ).toEqual('First component')
-  })
-
   it('renders second AccordionItem', () => {
     const wrapper = mount(element)
+    console.log(wrapper.find('[data-accordion-index=1]')[0])
     wrapper.find('[data-accordion-index=1]').prop('onClick')()
     wrapper.update()
     expect(
