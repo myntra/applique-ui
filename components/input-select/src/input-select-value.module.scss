@@ -31,11 +31,12 @@
   &.with-icon {
     padding: padding('input-select.with-icon');
   }
-  &::placeholder {
-    color: color('text-dark-medium-emphasis');
-  }
+  // &::placeholder {
+  //   color: color('text-dark-medium-emphasis');
+  // }
   &:disabled,
   &[disabled] {
+    color: color('input.disabled');
     background-color: transparent;
   }
 }

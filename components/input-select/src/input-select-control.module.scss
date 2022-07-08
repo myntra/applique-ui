@@ -67,3 +67,49 @@
   margin-right: 8px;
   color: text-color('input.text');
 }
+.control-r {
+  display: flex;
+  align-items: center;
+  &.standard-r {
+    @include mixin-input-text-revamp(
+      border-bottom,
+      padding('input-text-standard')
+    );
+  }
+  &.bordered-r {
+    @include mixin-input-text-revamp(border, padding('input.select'));
+  }
+
+  .icon-r {
+    z-index: 1;
+    margin-right: size('2x');
+    opacity: 0.6;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .input-adornment-r {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-height: 1.5em;
+    margin-right: 8px;
+    color: text-color('input.text');
+  }
+  .input-container {
+    position: relative;
+    flex-grow: 1;
+    input {
+      padding: 0;
+      border: 0;
+      outline: none;
+    }
+  }
+  .buttons-r {
+    display: flex;
+    align-items: center;
+  }
+}

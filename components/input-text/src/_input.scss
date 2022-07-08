@@ -82,6 +82,9 @@
   @if not($border-type == 'border-bottom') {
     border-radius: 4px;
   }
+  input:not([disabled])::placeholder {
+    color: color('text-dark-medium-emphasis');
+  }
   &.filled {
     #{$border-type}: 1px solid color('input.filled');
   }
@@ -94,8 +97,11 @@
   &.disable {
     #{$border-type}: 1px solid color('input.disabled');
   }
-  &.disable > * {
+  &.disable * {
     color: color('input.disabled');
+  }
+  &.error {
+    border-color: color('input.error');
   }
 }
 
