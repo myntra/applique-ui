@@ -255,6 +255,9 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
             <Icon name={icon} />
           </div>
         )}
+        {adornment && (
+          <div className={classnames('input-adornment')}>{adornment}</div>
+        )}
         {searchable && (
           <input
             value={this.state.searchText}

@@ -12,20 +12,21 @@
   white-space: nowrap;
 }
 
-.standard.input,
-.standard.input:not(:placeholder-shown),
-.standard.input:disabled,
-.standard.input[disabled] {
-  padding: padding('input');
-}
+// .standard.input,
+// .standard.input:disabled,
+// .standard.input[disabled] {
+//   padding: padding('input');
+// }
 .no-border {
+  /*
+    we don't want to show border of internal input in any case
+  */
   border: none !important;
 }
 
 .input {
   z-index: 0;
   width: 100%;
-  padding: padding('input.select');
   cursor: pointer;
   &.with-icon {
     padding: padding('input-select.with-icon');
@@ -37,6 +38,9 @@
   &[disabled] {
     background-color: transparent;
   }
+}
+.bordered {
+  padding: padding('input.select');
 }
 
 .value .input,

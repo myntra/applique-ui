@@ -72,6 +72,33 @@
   }
 }
 
+@mixin mixin-input-text-revamp($border-type, $padding) {
+  padding: $padding;
+  font-size: inherit;
+  color: text-color('dark');
+  background-color: transparent;
+  #{$border-type}: 1px solid color('input.border');
+
+  @if not($border-type == 'border-bottom') {
+    border-radius: 4px;
+  }
+  &.filled {
+    #{$border-type}: 1px solid color('input.filled');
+  }
+  &:hover {
+    #{$border-type}: 1px solid color('input.hover');
+  }
+  &:focus-within {
+    #{$border-type}: 1px solid color('input.focused');
+  }
+  &.disable {
+    #{$border-type}: 1px solid color('input.disabled');
+  }
+  &.disable > * {
+    color: color('input.disabled');
+  }
+}
+
 @mixin mixin-input-label-component {
   &.disabled {
     color: color('text-dark-disabled');

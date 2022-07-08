@@ -10,7 +10,7 @@ export interface InputSelectValueProps<V = any, T = any> extends BaseProps {
   labelKey: string
   valueKey: string
   disabled?: boolean
-  variant?: 'standard' | 'outline'
+  variant?: 'standard' | 'bordered'
 }
 
 export default class InputSelectValue extends PureComponent<
@@ -49,6 +49,8 @@ export default class InputSelectValue extends PureComponent<
 
   render() {
     const { disabled, placeholder, hasOverlay, icon, variant } = this.props
+    console.log('**** Variant is **', variant)
+
     const options = this.getSelectedOptions()
     const value = this.getValue(options)
     const displayValue = this.getDisplayValue(options)
@@ -62,7 +64,8 @@ export default class InputSelectValue extends PureComponent<
           className={classnames(
             'input',
             { 'with-icon': !!icon },
-            { standard: !!(variant === 'standard') },
+            { standard: variant === 'standard' },
+            { bordered: variant === 'bordered' },
             'no-border'
           )}
           placeholder={placeholder}

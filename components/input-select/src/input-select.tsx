@@ -219,10 +219,10 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       up,
       __fieldContext,
       error,
-      variant,
-      adornment,
+      variant = 'bordered',
+      adornment = <Icon name={SpinnerSolid} />,
     } = this.props
-    __fieldContext = { error: true, disabled: false }
+    __fieldContext = { error: false, disabled: false }
     disabled = disabled || __fieldContext.disabled
     return (
       <Dropdown
@@ -267,6 +267,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
                   hasOverlay={this.state.isOpen}
                   options={this.props.options}
                   data-test-id="value"
+                  variant={variant}
                 />
               )}
               instancePrefix={this.state.prefix}

@@ -6,42 +6,11 @@
     padding-right: 0.125em;
   }
 
-  width: 100%;
   padding: padding('input.select');
 }
-.bordered {
-  input {
-    @include mixin-input-component-bordered();
-  }
-  .with-icon {
-    padding: padding('input.with-icon');
-  }
-  &.disabled {
-    color: color('input.disabled');
-  }
-}
-.standard {
-  input {
-    @include mixin-input-component();
-  }
-  .with-icon {
-    padding: 4px 8px 4px 20px;
-  }
-  &.disabled {
-    color: color('input.disabled');
-  }
-}
+
 .error {
   border-color: color('input.error') !important;
-}
-.icon-border {
-  position: absolute;
-  top: 0.8em;
-  left: 0.8em;
-}
-.icon-standard {
-  position: absolute;
-  top: 0.6em;
 }
 
 .container {
@@ -56,51 +25,13 @@
   }
   &.with-adornment {
     &.adornment-bordered {
-      padding: padding('input.select');
-      font-size: inherit;
-      color: text-color('dark');
-      background-color: transparent;
-      border: 1px solid color('input.border');
-      border-radius: 4px;
-      &.filled {
-        border: 1px solid color('input.filled');
-      }
-      &:hover {
-        border: 1px solid color('input.hover');
-      }
-      &:focus-within {
-        border: 1px solid color('input.focused');
-      }
-      &.disable {
-        border: 1px solid color('input.disabled');
-      }
-      &.disable > * {
-        color: color('input.disabled');
-      }
+      @include mixin-input-text-revamp(border, padding('input.select'));
     }
     &.adornment-standard {
-      padding: padding('input.select');
-      padding-bottom: size('1x');
-      padding-left: 0;
-      font-size: inherit;
-      color: text-color('dark');
-      background-color: transparent;
-      border-bottom: 1px solid color('input.border');
-      &.filled {
-        border-bottom: 1px solid color('input.filled');
-      }
-      &:hover {
-        border-bottom: 1px solid color('input.hover');
-      }
-      &:focus-within {
-        border-bottom: 1px solid color('input.focused');
-      }
-      &.disable {
-        border: 1px solid color('input.disabled');
-      }
-      &.disable > * {
-        color: color('input.disabled');
-      }
+      @include mixin-input-text-revamp(
+        border-bottom,
+        padding('input-text-standard')
+      );
       .input-adornment-end {
         margin-right: 0;
       }
@@ -112,6 +43,9 @@
       background-color: transparent;
       border: 0;
       outline: none;
+    }
+    input::placeholder {
+      color: color('text-dark-medium-emphasis');
     }
   }
 

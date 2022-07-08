@@ -71,11 +71,11 @@ export default function InputText({
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
 
-  return adornment ? (
+  return (
     <div
       className={classnames(
         'container',
-        { 'with-adornment': adornment },
+        'with-adornment',
         { disable: !!disabled },
         { 'adornment-standard': standard },
         { 'adornment-bordered': bordered },
@@ -95,12 +95,7 @@ export default function InputText({
         readOnly={readOnly}
         value={typeof value !== 'string' ? '' : value}
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
-        className={classnames(
-          { input: !!!adornment },
-          { 'without-adornment': !adornment },
-          { 'with-icon': !!icon },
-          { standard: !!(variant === 'standard') }
-        )}
+        className={classnames('input')}
         disabled={!!disabled}
         placeholder={placeholder}
       />
@@ -109,39 +104,6 @@ export default function InputText({
           {adornment}
         </div>
       )}
-    </div>
-  ) : (
-    <div
-      className={classnames(
-        'container',
-        { standard },
-        { bordered },
-        { disabled },
-        className
-      )}
-    >
-      {icon && (
-        <Icon
-          className={classnames(
-            { 'icon-border': bordered },
-            { 'icon-standard': standard }
-          )}
-          name={icon}
-        />
-      )}
-      <input
-        {...props}
-        readOnly={readOnly}
-        value={typeof value !== 'string' ? '' : value}
-        onChange={readOnly ? null : (event) => onChange(event.target.value)}
-        className={classnames(
-          'input',
-          { 'with-icon': !!icon },
-          { error: !!error }
-        )}
-        disabled={!!disabled}
-        placeholder={placeholder}
-      />
     </div>
   )
 }
