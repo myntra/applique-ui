@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-design",
-  "version": "1.13.97-beta.5",
+  "version": "1.13.97-beta.6",
   "main": "design.scss",
   "module": "dist/uikit-design.esm.js",
   "types": "dist/index.d.ts",
