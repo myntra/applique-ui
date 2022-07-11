@@ -23,7 +23,7 @@
     }
   }
   &.secondary {
-    @include padding('tab.item.secondary');
+    @include padding('tab.item');
     @include typography('body');
 
     min-width: size('3x') * 10;

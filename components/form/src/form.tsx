@@ -209,7 +209,11 @@ export default class Form extends PureComponent<Props> {
         isReactNodeType(child, Form.Action) ||
         isReactNodeType(child, Button)
       ) {
-        actions.push(React.cloneElement(child, { disabled: props.disabled }))
+        actions.push(
+          React.cloneElement(child, {
+            disabled: props.disabled || child.props.disabled,
+          })
+        )
       } else if (isReactNodeType(child, ButtonGroup)) {
         group = child
       } else if (isValidElement(child)) {
