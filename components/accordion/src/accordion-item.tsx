@@ -83,6 +83,7 @@ export default class AccordionItem extends Component<
               className={classnames('item-container', className, {
                 active,
               })}
+              data-accordion-index={index}
               style={style}
             >
               <Layout
@@ -92,7 +93,6 @@ export default class AccordionItem extends Component<
                 onClick={() => this.onTitleClick(onActivation)}
                 className={classnames('item-title')}
                 reference={this.titleRef}
-                data-accordion-index={index}
                 {...props}
               >
                 {typeof title === 'string' ? <div>{title}</div> : title}

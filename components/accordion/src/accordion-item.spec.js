@@ -26,21 +26,25 @@ describe('Accordion', () => {
     expect(wrapper.find(AccordionItem)).toHaveLength(3)
   })
 
-  it('renders second AccordionItem', () => {
+  it('renders any AccordionItem', () => {
     const wrapper = mount(element)
-    console.log(wrapper.find('[data-accordion-index=1]')[0])
-    wrapper.find('[data-accordion-index=1]').prop('onClick')()
+    const accordian = wrapper
+      .find('div[data-accordion-index=1]')
+      .find('div')
+      .at(1)
+    expect(
+      wrapper.find('div[data-accordion-index=1]').hasClass('active')
+    ).toEqual(false)
+    accordian.prop('onClick')()
     wrapper.update()
     expect(
-      wrapper
-        .find('div')
-        .at(2)
-        .text()
-    ).toEqual('Second component')
+      wrapper.find('div[data-accordion-index=1]').hasClass('active')
+    ).toEqual(true)
   })
 
   it('calls onChange function provided as props', () => {
     const onChange = jest.fn()
+    onChange.mockReturnValueOnce(0, true).mockReturnValueOnce(0, false)
     afterEach(() => {
       onChange.mockClear()
     })
@@ -51,7 +55,20 @@ describe('Accordion', () => {
         </Accordion.Item>
       </Accordion>
     )
-    wrapper.find('[data-accordion-index=0]').prop('onClick')()
-    expect(onChange).toHaveBeenCalled()
+    // Open the Accordion item
+    wrapper
+      .find('div[data-accordion-index=0]')
+      .find('div')
+      .at(1)
+      .prop('onClick')()
+    expect(onChange.mock.calls[0]).toEqual([0, true]) // 0 is index of item and true being is active
+
+    // Close the Accordion item
+    wrapper
+      .find('div[data-accordion-index=0]')
+      .find('div')
+      .at(1)
+      .prop('onClick')()
+    expect(onChange.mock.calls[1]).toEqual([0, false]) // 0 is index of item and false being is not active
   })
 })
