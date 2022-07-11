@@ -50,19 +50,22 @@ export default class AccordionItem extends Component<
     })
   }
 
-  onTitleClick = () => {
-    console.log(this.titleRef.current.clientHeight)
-    console.log(this.contentRef.current.clientHeight)
-    this.setState({
-      active: !this.state.active,
-      style: {
-        ...this.state.style,
-        height: !this.state.active
-          ? this.contentRef.current.clientHeight +
-            this.titleRef.current.clientHeight
-          : this.titleRef.current.clientHeight,
+  onTitleClick = (callback) => {
+    this.setState(
+      {
+        active: !this.state.active,
+        style: {
+          ...this.state.style,
+          height: !this.state.active
+            ? this.contentRef.current.clientHeight +
+              this.titleRef.current.clientHeight
+            : this.titleRef.current.clientHeight,
+        },
       },
-    })
+      () => {
+        callback && callback(this.index, this.state.active)
+      }
+    )
   }
   render() {
     const { title, children, className, ...props } = this.props
@@ -70,7 +73,7 @@ export default class AccordionItem extends Component<
 
     return (
       <AccordionContext.Consumer>
-        {({ getIndex, itemProps }) => {
+        {({ getIndex, onActivation, itemProps }) => {
           const index = (this.index = getIndex(this))
 
           return (
@@ -86,7 +89,7 @@ export default class AccordionItem extends Component<
                 type="stack"
                 distribution="spaceBetween"
                 alignment="middle"
-                onClick={this.onTitleClick}
+                onClick={() => this.onTitleClick(onActivation)}
                 className={classnames('item-title')}
                 reference={this.titleRef}
                 data-accordion-index={index}

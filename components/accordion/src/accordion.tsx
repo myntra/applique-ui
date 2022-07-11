@@ -13,9 +13,9 @@ export interface Props extends BaseProps {
   /**
    * The callback function called when an item is expanded.
    *
-   * @param active - Next expanded item.
+   * @param currentIndex - Index of accordian item clicked.
    */
-  onChange?(active: number): void
+  onChange?(currentIndex: number, active: boolean): void
   /**
    * The icon used to
    */
@@ -55,6 +55,12 @@ export default class Accordion extends PureComponent<
     }
   }
 
+  get active() {
+    return typeof this.props.onChange === 'function'
+      ? this.props.active
+      : this.state.active
+  }
+
   getItemIndex = (item) => {
     if (this.itemsToIndex.has(item)) {
       return this.itemsToIndex.get(item)
@@ -67,6 +73,10 @@ export default class Accordion extends PureComponent<
     return index
   }
 
+  handleClick = (currentIndex, active) => {
+    if (this.props.onChange) this.props.onChange(currentIndex, active)
+  }
+
   render() {
     const { active, ...props } = this.props
     this.itemsCount = 0
@@ -74,6 +84,7 @@ export default class Accordion extends PureComponent<
     return (
       <AccordionContext.Provider
         value={{
+          onActivation: this.handleClick,
           getIndex: this.getItemIndex,
           itemProps: props,
         }}

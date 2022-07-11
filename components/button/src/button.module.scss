@@ -29,6 +29,7 @@
   @include padding('button');
   @include typography('button');
   @include transition('button');
+  position: relative;
 
   display: inline-block;
   line-height: 1.4;
@@ -146,7 +147,6 @@
 
   &.icon {
     @include padding('icon-button');
-    @include border-radius('button.circle');
 
     box-sizing: content-box;
     width: 1em;
@@ -158,8 +158,6 @@
   }
 
   &.notification-button {
-    @include border-radius('notification.circle');
-
     z-index: z-index('notification');
     width: 2em;
     height: 2em;
@@ -181,7 +179,6 @@
     }
 
     .notification-icon {
-      position: relative;
       z-index: z-index('notification');
       svg {
         width: 1.4em;
@@ -333,5 +330,12 @@
         }
       }
     }
+  }
+  .icon-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
   }
 }

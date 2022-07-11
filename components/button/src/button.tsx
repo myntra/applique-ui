@@ -164,6 +164,7 @@ export default class Button extends PureComponent<Props> {
           <span
             className={classnames(
               'icon',
+              { 'icon-button': isIconButton },
               { leading: !isIconButton },
               { 'notification-icon': notificationsActive }
             )}
