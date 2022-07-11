@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-job-tracker",
-  "version": "1.13.97-beta.6",
+  "version": "1.13.97",
   "main": "dist/job-tracker.cjs.js",
   "module": "dist/job-tracker.esm.js",
   "types": "dist/index.d.ts",

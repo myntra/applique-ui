@@ -1,6 +1,6 @@
 {
   "name": "@myntra/accoutrement",
-  "version": "1.13.97-beta.6",
+  "version": "1.13.97",
   "style": "src/index.scss",
   "author": "Myntra",
   "license": "MIT",

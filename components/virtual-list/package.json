@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-virtual-list",
-  "version": "1.13.97-beta.6",
+  "version": "1.13.97",
   "main": "dist/virtual-list.cjs.js",
   "module": "dist/virtual-list.esm.js",
   "types": "dist/index.d.ts",
