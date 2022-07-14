@@ -6,11 +6,6 @@ import React, {
 } from 'react'
 
 import classnames from './field.module.scss'
-const VALIDATION_STATUS_ERROR = 'error'
-const VALIDATION_STATUS_SUCCESS = 'success'
-import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
-
 export interface Props extends BaseProps {
   /**
    * The name of the value.
@@ -63,8 +58,6 @@ export default function Field({
   fieldInfo,
   success,
   hovered,
-  focused,
-  filled,
   info,
   ...props
 }: Props) {
