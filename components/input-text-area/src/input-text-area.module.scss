@@ -16,6 +16,7 @@
     @include mixin-input-text-revamp('border', padding('input.textarea'));
   }
   textarea {
+    color: text-color('input.text');
     resize: none;
   }
   &.disable {

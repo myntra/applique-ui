@@ -33,7 +33,7 @@
 @mixin mixin-input-text-revamp($border-type, $padding) {
   padding: $padding;
   font-size: inherit;
-  color: text-color('dark');
+  color: text-color('input.text');
   background-color: transparent;
   #{$border-type}: 1px solid color('input.border');
 
