@@ -253,7 +253,11 @@ export default class InputDatePicker extends PureComponent<
                 value={normalizedDate}
                 onChange={this.handleChange}
                 presets={
-                  !!this.props.presets ? DEFAULT_PRESETS : this.props.presets
+                  Array.isArray(this.props.presets)
+                    ? this.props.presets
+                    : !!this.props.presets
+                    ? DEFAULT_PRESETS
+                    : null
                 }
               />
             )}

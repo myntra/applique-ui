@@ -50,7 +50,7 @@ export default class PresetView extends PureComponent<Props> {
             (preset: Preset) =>
               preset.range === undefined || preset.range === this.props.range
           )
-          .map((preset) => (
+          .map((preset: Preset) => (
             <div
               key={preset.label}
               onClick={() => this.handleChange(preset)}
