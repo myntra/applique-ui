@@ -62,12 +62,10 @@ export default function InputText({
   readOnly = readOnly || !onChange
 
   const { error, disabled } = {
-    error: __fieldContext.error || props.error || false,
-    disabled: __fieldContext.disabled || props.disabled || false,
+    error: __fieldContext.error || props.error,
+    disabled: __fieldContext.disabled || props.disabled,
   }
   const { placeholder = ' ' } = props
-  icon = SpinnerSolid
-  variant = 'bordered'
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
 

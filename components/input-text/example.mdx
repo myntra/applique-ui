@@ -9,7 +9,7 @@ export const _styles = (function () {
   style.textContent = `.u-input-text-container .adornment {
     background-color: transparent;
     border-color: transparent;
-    bottom: 5px;
+    bottom: 2px;
     position: relative;
   }`
   document.head.appendChild(style)
@@ -20,7 +20,7 @@ export const _styles = (function () {
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value={value} onChange={setValue} />
+<InputText value={value} onChange={setValue} error={true} />
 ```
 
 </Documenter>
@@ -33,7 +33,7 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value="Disabled" disabled placeholder="Your name" />
+<InputText  disabled placeholder="Your name" />
 ```
 
 ## With placeholder text
@@ -74,5 +74,5 @@ const [value, setValue] = useState();
 const [value, setValue] = useState();
 const onClick = useCallback(() => console.log("clicked icon"))
 
-<InputText value={value} onChange={setValue} adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+<InputText value={value} onChange={setValue} adornmentPosition='start' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
 ```

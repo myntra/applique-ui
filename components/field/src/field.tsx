@@ -54,7 +54,7 @@ export interface Props extends BaseProps {
 export default function Field({
   title,
   error = false,
-  description = 'This is description',
+  description,
   required,
   htmlFor,
   children,
@@ -90,16 +90,12 @@ export default function Field({
         if (isValidElement(child)) {
           return React.cloneElement(child, {
             disabled: disabled,
+            __fieldContext: { error, disabled },
           } as any)
         }
         return child
       })}
-      {React.Children.map(children, (child) => {
-        return React.cloneElement(child, {
-          __fieldContext: { error, disabled },
-        })
-      })}
-      {children}
+      {/* {children} */}
       {error || description || success ? (
         <div className={classnames('meta')}>
           {error ? (

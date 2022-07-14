@@ -219,10 +219,9 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       up,
       __fieldContext,
       error,
-      variant = 'standard',
+      variant = 'bordered',
       adornment = <Icon name={SpinnerSolid} />,
     } = this.props
-    __fieldContext = { error: false, disabled: false }
     disabled = disabled || __fieldContext.disabled
     return (
       <Dropdown
