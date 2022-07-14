@@ -6,7 +6,7 @@
     padding-right: 0.125em;
   }
 
-  padding: padding('input.select');
+  padding: padding('input.text');
 }
 
 .container {
@@ -21,7 +21,7 @@
   }
   &.with-adornment {
     &.adornment-bordered {
-      @include mixin-input-text-revamp(border, padding('input.select'));
+      @include mixin-input-text-revamp(border, padding('input.text'));
     }
     &.adornment-standard {
       @include mixin-input-text-revamp(

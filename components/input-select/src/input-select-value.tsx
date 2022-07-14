@@ -49,7 +49,6 @@ export default class InputSelectValue extends PureComponent<
 
   render() {
     const { disabled, placeholder, hasOverlay, icon, variant } = this.props
-    console.log('**** Variant is **', variant)
 
     const options = this.getSelectedOptions()
     const value = this.getValue(options)

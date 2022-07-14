@@ -24,10 +24,6 @@ export interface Props extends BaseProps {
   __fieldContext?: FieldContext
   /*** Visually Representing error state of component */
   error?: boolean
-  /*** Visually Representing focused state of component */
-  focused?: boolean
-  /*** Visually Representing filled state of component */
-  filled?: boolean
   /*** Represent the variant of input box */
   variant: 'bordered' | 'standard'
 }

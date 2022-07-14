@@ -1,12 +1,14 @@
 // - Solid Colors
 // https://zpl.io/a8w1k0d
-$-tokens-colors-primary: hsl(244, 54%, 53%) !default;
+$-tokens-colors-primary: hsl(244, 54, 53) !default;
 $-tokens-colors-success: hsl(138, 53, 53) !default;
 $-tokens-colors-warning: hsl(40, 87, 53) !default;
-$-tokens-colors-danger: hsl(0, 54%, 53%) !default;
-$-tokens-colors-gray: hsl(0, 0%, 90%) !default;
+$-tokens-colors-danger: hsl(0, 54, 53) !default;
+$-tokens-colors-gray: hsl(0, 0, 90) !default;
 $-tokens-colors-brown: hsl(26, 40, 54) !default;
 $-tokens-colors-pink: hsl(346, 100, 62) !default;
+
+// Revamp colors
 
 $brand-colors: (
   'primary': $-tokens-colors-primary,
@@ -22,13 +24,13 @@ $base-colors: (
   'black': #000,
   'white': #fff,
 );
-$input-colors: (
+$token-colors-revamp: (
   'primary-light-new': #cac8ee,
   'gray-base-new': #cfcfd1,
   'gray-dark-new': #86878b,
   'danger-base-new': #c84646,
-  'success-base-1': #239d56,
-  'primary-base-1': #4f47c8,
+  'success-base-new': #239d56,
+  'primary-base-new': #4f47c8,
   'gray-darkest': #0e0f17,
 );
 
@@ -50,7 +52,7 @@ $colors: (
   'page.background': '#gray-light',
   'tab.border': '#gray-light',
   'input.hover': '#primary-light-new',
-  'input.focused': '#primary-base-1',
+  'input.focused': '#primary-base-new',
   'input.disabled': '#gray-base-new',
   'input.error': '#danger-base-new',
   'input.border': '#gray-base-new',
@@ -59,7 +61,7 @@ $colors: (
 );
 $-tokens-colors: () !default;
 
-@include add-colors($input-colors);
+@include add-colors($token-colors-revamp);
 @include add-colors($base-colors);
 @include add-colors($brand-colors);
 @include add-colors(uikit-shades-of($brand-colors));

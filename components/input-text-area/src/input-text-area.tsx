@@ -37,6 +37,9 @@ type FieldContext = {
   error?: boolean
   disabled?: boolean
 }
+function isEmptyValue(value) {
+  return typeof value !== 'string' || !value
+}
 
 /**
  * A large text input component.
@@ -59,37 +62,32 @@ export default function InputTextArea({
   icon = <Icon name={SpinnerSolid} />,
   ...props
 }: Props) {
-  error = !!(error || __fieldContext.error)
-  disabled = !!(disabled || __fieldContext.disabled)
+  error = !!(error || __fieldContext.error || true)
+  disabled = !!(disabled || __fieldContext.disabled || false)
   return (
-    <div
-      className={classnames(
-        className,
-        'container',
-        { standard: variant === 'standard' },
-        { bordered: variant === 'bordered' }
-      )}
-    >
-      {icon && (
-        <Icon
-          className={classnames('icon', { disable: disabled })}
-          name={SpinnerSolid}
-        />
-      )}
-
-      <textarea
-        {...props}
-        value={value || ''}
-        disabled={disabled}
+    <>
+      <div
         className={classnames(
-          'input',
-          { 'no-resize': noResize },
-          { error: error },
-          { 'with-icon': !!icon }
+          className,
+          'container-r',
+          { error },
+          { disable: disabled },
+          { 'standard-r': variant === 'standard' },
+          { 'bordered-r': variant === 'bordered' },
+          { filled: !isEmptyValue(value) }
         )}
-        onChange={(event) => onChange && onChange(event.target.value)}
-      />
-    </div>
+      >
+        {icon && <Icon className={classnames('icon-r')} name={SpinnerSolid} />}
+
+        <textarea
+          {...props}
+          value={value || ''}
+          disabled={disabled}
+          className={classnames('input-r')}
+          onChange={(event) => onChange && onChange(event.target.value)}
+        />
+      </div>
+    </>
   )
 }
 

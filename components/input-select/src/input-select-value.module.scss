@@ -11,12 +11,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-// .standard.input,
-// .standard.input:disabled,
-// .standard.input[disabled] {
-//   padding: padding('input');
-// }
 .no-border {
   /*
     we don't want to show border of internal input in any case
@@ -31,9 +25,6 @@
   &.with-icon {
     padding: padding('input-select.with-icon');
   }
-  // &::placeholder {
-  //   color: color('text-dark-medium-emphasis');
-  // }
   &:disabled,
   &[disabled] {
     color: color('input.disabled');

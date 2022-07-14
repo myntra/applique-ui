@@ -1,9 +1,35 @@
 @import '@accoutrement';
 @import '@myntra/uikit-component-input-text/style.scss';
 
-.input {
+.container-r {
+  position: relative;
+  display: flex;
+  overflow: scroll;
+  resize: vertical;
+  &.standard-r {
+    @include mixin-input-text-revamp(
+      'border-bottom',
+      padding('input-text-standard')
+    );
+  }
+  &.bordered-r {
+    @include mixin-input-text-revamp('border', padding('input.textarea'));
+  }
+  textarea {
+    resize: none;
+  }
+  &.disable {
+    resize: none;
+  }
+  &.disable textarea {
+    background-color: transparent;
+  }
+}
+.icon-r {
+  margin-right: size('2x');
+}
+.input-r {
   width: 100%;
-  padding: padding('input.select');
   vertical-align: baseline;
   border: none;
   outline: none;
@@ -12,41 +38,4 @@
   &[disabled] {
     resize: none;
   }
-}
-.standard > .input {
-  @include mixin-input-component();
-  &.error {
-    border-color: color('input.error') !important;
-  }
-}
-.bordered > .input {
-  @include mixin-input-component-bordered();
-  &.error {
-    border-color: color('input.error') !important;
-  }
-}
-.bordered > .with-icon {
-  padding-left: 2.2em;
-}
-.standard > .with-icon {
-  padding-left: 1.4em;
-}
-.container {
-  position: relative;
-}
-.bordered > .icon {
-  position: absolute;
-  top: 0.8em;
-  left: 0.8em;
-}
-.standard > .icon {
-  position: absolute;
-  top: 0.6em;
-  left: 0;
-}
-.no-resize {
-  resize: none;
-}
-.disable {
-  color: color('input.disabled');
 }

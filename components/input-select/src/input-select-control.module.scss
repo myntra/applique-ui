@@ -23,15 +23,6 @@
     padding: padding('input-select.with-icon');
   }
 }
-.outline {
-  @include mixin-input-component-bordered();
-}
-.standard {
-  padding: padding('input');
-  border: none;
-
-  @include mixin-input-component();
-}
 
 .buttons.no-offset {
   position: absolute;

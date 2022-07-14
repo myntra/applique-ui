@@ -30,48 +30,6 @@
   }
 }
 
-@mixin mixin-input-component-bordered($padding: padding('input.select')) {
-  padding: $padding;
-  font-size: inherit;
-  color: text-color('input.text');
-  background-color: transparent;
-  border: 1px solid color('input.border');
-  &:not(:placeholder-shown) {
-    border: 1px solid color('input.filled');
-  }
-
-  border-radius: 4px;
-  &::placeholder {
-    /*
-    Do we need to change placeholder color ?
-    */
-    color: color('text-dark-medium-emphasis');
-  }
-
-  &:hover {
-    border: 1px solid color('input.hover');
-  }
-  &:focus {
-    outline: none;
-  }
-
-  &:disabled,
-  &[disabled] {
-    color: color('input.disabled');
-    border: 1px solid color('input.disabled');
-  }
-  &:not(:read-only) {
-    &:hover {
-      border: 1px solid color('input.hover');
-    }
-    &:focus {
-      border: 1px solid color('input.focused');
-    }
-
-    outline: none;
-  }
-}
-
 @mixin mixin-input-text-revamp($border-type, $padding) {
   padding: $padding;
   font-size: inherit;

@@ -9,12 +9,13 @@ describe('Should render textarea tag', () => {
     const wrapper = shallow(
       <InputTextArea onChange={handleChange} value={value} />
     )
-    expect(wrapper.find('div').children()).toHaveLength(1)
+    console.log(wrapper.debug())
+    expect(wrapper.find('div').children()).toHaveLength(2)
 
     expect(
       wrapper
         .find('div')
-        .childAt(0)
+        .childAt(1)
         .is('textarea')
     ).toBe(true)
   })
@@ -27,7 +28,7 @@ describe('Props check', () => {
     const wrapper = shallow(
       <InputTextArea onChange={handleChange} value={value} />
     )
-    expect(wrapper.find('div').children()).toHaveLength(1)
+    expect(wrapper.find('div').children()).toHaveLength(2)
 
     expect(wrapper.find('textarea').props()).toHaveProperty('value', 'Hello')
     wrapper.setProps({ disabled: true })
