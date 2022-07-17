@@ -41,7 +41,7 @@
     border-radius: 4px;
   }
   input:not([disabled])::placeholder {
-    color: color('text-dark-medium-emphasis');
+    color: color('input.placeholder');
   }
   &.filled {
     #{$border-type}: 1px solid color('input.filled');

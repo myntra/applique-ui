@@ -69,10 +69,9 @@ export default function InputText({
     <div
       className={classnames(
         'container',
-        'with-adornment',
         { disable: !!disabled },
-        { 'adornment-standard': standard },
-        { 'adornment-bordered': bordered },
+        { standard: standard },
+        { bordered: bordered },
         { filled: !isEmptyValue(value) },
         { error: !!error },
         className

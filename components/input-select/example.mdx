@@ -14,15 +14,55 @@ const [options] = useState([
 ]);
 
 <>
+  <p><b>Bordered Variant</b></p>
+  <br/>
   {'Choose your color: '}
   <InputSelect
     options={options}
     value={value} onChange={setValue}
   />
+  <p><b>Standard Variant</b></p>
+  <br/>
+    {'Choose your color: '}
+  <InputSelect
+    options={options}
+    value={value} onChange={setValue}
+    variant="standard"
+  />
 </>
 ```
 
 </Documenter>
+
+## Error State 
+```jsx preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+
+<>
+<p><b>Bordered Variant</b></p>
+  {'Choose your colors: '}
+  <InputSelect
+    multiple
+    options={options}
+    value={value} onChange={setValue}
+    error={true}
+  />
+  <p><b>Standard Variant</b></p>
+   {'Choose your colors: '}
+  <InputSelect
+    multiple
+    options={options}
+    value={value} onChange={setValue}
+    error={true}
+    variant="standard"
+  />
+</>
+```
 
 ## Multiple Selection
 
@@ -35,11 +75,20 @@ const [options] = useState([
 ]);
 
 <>
+  <p><b>Bordered Variant</b></p>
   {'Choose your colors: '}
   <InputSelect
     multiple
     options={options}
     value={value} onChange={setValue}
+  />
+  <p><b>Standard Variant</b></p>
+  {'Choose your colors: '}
+  <InputSelect
+    multiple
+    options={options}
+    value={value} onChange={setValue}
+    variant="standard"
   />
 </>
 ```
@@ -55,11 +104,59 @@ const [options] = useState([
 ]);
 
 <>
+  <p><b>Bordered </b></p>
   {'Choose your colors: '}
   <InputSelect
     icon={Bell}
     options={options}
     value={value} onChange={setValue}
+  />
+  <p><b>Standard </b></p>
+   {'Choose your colors: '}
+  <InputSelect
+    icon={Bell}
+    options={options}
+    value={value} onChange={setValue}
+    variant="standard"
+  />
+</>
+```
+## With Adornment
+
+```jsx preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+
+<>
+  <p><b>Bordered </b></p>
+  {'Choose your colors: '}
+  <InputSelect
+    icon={Bell}
+    options={options}
+    value={value} onChange={setValue}
+    adornment={<p>/kg</p>}
+  />
+  <p><b>Standard </b></p>
+   {'Choose your colors: '}
+  <InputSelect
+    icon={Bell}
+    options={options}
+    value={value} onChange={setValue}
+    variant="standard"
+    adornment={<p>/kg</p>}
+  />
+   <p><b>AdornmentPosition Start </b></p>
+   {'Choose your colors: '}
+  <InputSelect
+    icon={Bell}
+    options={options}
+    value={value} onChange={setValue}
+    adornment={<p>/kg</p>}
+    adornmentPosition="start"
   />
 </>
 ```
@@ -125,6 +222,14 @@ const [options] = useState([
     options={options}
     value={value} onChange={setValue}
     disabled={true}
+  />
+  <p><b>Standard Variant</b></p>
+    {'Choose your color: '}
+  <InputSelect
+    options={options}
+    value={value} onChange={setValue}
+    disabled={true}
+    variant="standard"
   />
 </>
 ```

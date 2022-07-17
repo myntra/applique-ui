@@ -213,10 +213,11 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       disabled,
       readOnly,
       up,
-      __fieldContext,
+      __fieldContext = {},
       error,
       variant = 'bordered',
-      adornment = <Icon name={SpinnerSolid} />,
+      adornment,
+      adornmentPosition = 'end',
     } = this.props
     disabled = disabled || __fieldContext.disabled
     return (
@@ -250,6 +251,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
               __fieldContext={__fieldContext}
               error={error}
               adornment={adornment}
+              adornmentPosition={adornmentPosition}
               variant={variant}
               renderPlaceholder={() => (
                 <InputSelectValue

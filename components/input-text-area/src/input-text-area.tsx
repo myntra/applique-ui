@@ -54,40 +54,39 @@ export default function InputTextArea({
   noResize,
   value,
   onChange,
-  variant = 'standard',
+  variant = 'bordered',
   error = false,
   disabled,
   __fieldContext = {},
   adornmentPosition = 'start',
-  icon = <Icon name={SpinnerSolid} />,
+  icon,
   ...props
 }: Props) {
-  error = !!(error || __fieldContext.error || true)
-  disabled = !!(disabled || __fieldContext.disabled || false)
+  error = !!(error || __fieldContext.error)
+  disabled = !!(disabled || __fieldContext.disabled)
   return (
-    <>
-      <div
-        className={classnames(
-          className,
-          'container-r',
-          { error },
-          { disable: disabled },
-          { 'standard-r': variant === 'standard' },
-          { 'bordered-r': variant === 'bordered' },
-          { filled: !isEmptyValue(value) }
-        )}
-      >
-        {icon && <Icon className={classnames('icon-r')} name={SpinnerSolid} />}
+    <div
+      className={classnames(
+        className,
+        'container',
+        { error },
+        { disable: disabled },
+        { standard: variant === 'standard' },
+        { bordered: variant === 'bordered' },
+        { filled: !isEmptyValue(value) },
+        { noResize }
+      )}
+    >
+      {icon && <Icon className={classnames('icon')} name={SpinnerSolid} />}
 
-        <textarea
-          {...props}
-          value={value || ''}
-          disabled={disabled}
-          className={classnames('input-r')}
-          onChange={(event) => onChange && onChange(event.target.value)}
-        />
-      </div>
-    </>
+      <textarea
+        {...props}
+        value={value || ''}
+        disabled={disabled}
+        className={classnames('input')}
+        onChange={(event) => onChange && onChange(event.target.value)}
+      />
+    </div>
   )
 }
 

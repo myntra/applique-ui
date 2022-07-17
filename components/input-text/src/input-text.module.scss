@@ -13,35 +13,26 @@
   position: relative;
   display: flex;
   align-items: center;
-  .input-adornment-start {
+  &.bordered {
+    @include mixin-input-text-revamp(border, padding('input.text'));
+  }
+  &.standard {
+    @include mixin-input-text-revamp(
+      border-bottom,
+      padding('input-text-standard')
+    );
+    .input-adornment-end {
+      margin-right: 0;
+    }
+  }
+  input {
+    flex-grow: 1;
+    padding: 0;
     margin-left: size('1x');
+    background-color: transparent;
+    border: 0;
+    outline: none;
   }
-  .input-adornment-end {
-    margin-right: size('1x');
-  }
-  &.with-adornment {
-    &.adornment-bordered {
-      @include mixin-input-text-revamp(border, padding('input.text'));
-    }
-    &.adornment-standard {
-      @include mixin-input-text-revamp(
-        border-bottom,
-        padding('input-text-standard')
-      );
-      .input-adornment-end {
-        margin-right: 0;
-      }
-    }
-    input {
-      flex-grow: 1;
-      padding: 0;
-      margin-left: size('1x');
-      background-color: transparent;
-      border: 0;
-      outline: none;
-    }
-  }
-
   .input-adornment {
     display: flex;
     align-items: center;
@@ -49,5 +40,11 @@
     max-height: 1.5em;
     color: text-color('input.text');
     white-space: nowrap;
+    &.start {
+      margin-left: size('1x');
+    }
+    &.end {
+      margin-right: size('1x');
+    }
   }
 }

@@ -1,18 +1,18 @@
 @import '@accoutrement';
 @import '@myntra/uikit-component-input-text/style.scss';
 
-.container-r {
+.container {
   position: relative;
   display: flex;
   overflow: scroll;
   resize: vertical;
-  &.standard-r {
+  &.standard {
     @include mixin-input-text-revamp(
       'border-bottom',
       padding('input-text-standard')
     );
   }
-  &.bordered-r {
+  &.bordered {
     @include mixin-input-text-revamp('border', padding('input.textarea'));
   }
   textarea {
@@ -25,11 +25,14 @@
   &.disable textarea {
     background-color: transparent;
   }
+  &.noResize {
+    resize: none;
+  }
 }
-.icon-r {
+.icon {
   margin-right: size('2x');
 }
-.input-r {
+.input {
   width: 100%;
   vertical-align: baseline;
   border: none;

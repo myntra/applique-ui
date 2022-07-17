@@ -27,11 +27,12 @@ $base-colors: (
 $token-colors-revamp: (
   'primary-light-new': #cac8ee,
   'gray-base-new': #cfcfd1,
-  'gray-dark-new': #86878b,
+  'gray-base-new-1': #86878b,
   'danger-base-new': #c84646,
   'success-base-new': #239d56,
   'primary-base-new': #4f47c8,
-  'gray-darkest': #0e0f17,
+  'gray-base-new-2': #bababc,
+  'gray-base-new-5': #0e0f17,
 );
 
 $colors: (
@@ -56,8 +57,9 @@ $colors: (
   'input.disabled': '#gray-base-new',
   'input.error': '#danger-base-new',
   'input.border': '#gray-base-new',
-  'input.filled': '#gray-dark-new',
-  'input.text': '#gray-darkest',
+  'input.filled': '#gray-base-new-1',
+  'input.text': '#gray-base-new-5',
+  'input.placeholder': '#gray-base-new-2',
 );
 $-tokens-colors: () !default;
 

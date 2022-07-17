@@ -96,6 +96,8 @@ export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
   error?: boolean
   /*** Represent the variant of input box */
   variant: 'bordered' | 'standard'
+  /**Adornment Position */
+  adornmentPosition: string
 }
 
 /**
@@ -236,6 +238,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
       variant,
       __fieldContext = {},
       adornment,
+      adornmentPosition,
       disabled,
       // ---
       ...props
@@ -252,26 +255,26 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
     return (
       <div
         className={classnames(
-          'control-r',
+          'control',
           className,
           { filled: !isEmptyValue(value) },
           { error },
           { disable: disabled },
-          { 'standard-r': standard, 'bordered-r': bordered }
+          { standard: standard, bordered: bordered }
         )}
         onClick={() => this.inputRef.current && this.inputRef.current.focus()}
       >
         {icon && (
           <div
-            className={classnames('icon-r', {
+            className={classnames('icon', {
               active: value || this.state.searchText,
             })}
           >
             <Icon name={icon} />
           </div>
         )}
-        {adornment && (
-          <div className={classnames('input-adornment-r')}>{adornment}</div>
+        {adornment && adornmentPosition === 'start' && (
+          <div className={classnames('input-adornment')}>{adornment}</div>
         )}
         <div className={classnames('input-container')}>
           {(!this.state.searchText || !searchable) && renderPlaceholder()}
@@ -296,14 +299,10 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
           )}
         </div>
 
-        <div
-          className={classnames('buttons-r', {
-            'no-offset': !!(variant === 'standard'),
-          })}
-        >
-          {adornment && (
-            <div className={classnames('input-adornment')}>{adornment}</div>
-          )}
+        {adornment && adornmentPosition === 'end' && (
+          <div className={classnames('input-adornment')}>{adornment}</div>
+        )}
+        <div className={classnames('buttons')}>
           {!disabled && resettable && (value || this.state.searchText) && (
             <div
               className={classnames('button')}
