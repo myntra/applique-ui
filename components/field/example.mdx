@@ -1,4 +1,6 @@
 import Field from './src/field'
+import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
+
 
 # Field
 
@@ -19,12 +21,79 @@ import Field from './src/field'
 The `<Field>` component can display description for the input.
 
 ```jsx preview
-<Field
-  title="Name"
-  description="Enter your full name."
->
-  <InputText value="" onChange={() => null} />
-</Field>
+<div style={{display:"flex", flexWrap:"wrap"}}>
+  <div style={{width:"400px", marginLeft:"16px"}}>
+  <Field
+    title="Name"
+    description="Enter your full name."
+  >
+    <InputText value="" placeholder="Enter your name" onChange={() => null} />
+  </Field>
+  </div>
+
+  <div style={{width:"400px", marginLeft:"16px"}}>
+  <Field
+    title="Name"
+    description="Enter your full name."
+    error="Invalid Name"
+  >
+    <InputText value="" onChange={() => null} />
+  </Field>
+  </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Name"
+        description="Enter your full name."
+        success="You are all fine"
+      >
+        <InputText value="" onChange={() => null} />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Name"
+        description="Enter your full name."
+      >
+        <InputText value="Filled Text Box" onChange={() => null} />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Weight"
+        description="Enter the Weight"
+      >
+        <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Weight"
+        description="Enter the Weight"
+        error="weight must be less than 100"
+      >
+        <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Weight"
+        description="Enter the Weight"
+        error="weight must be less than 100"
+      >
+        <InputText value="230" icon={"SpinnerSolid"} adornment={<p><b>/kg</b></p>} onChange={() => null} />
+      </Field>
+    </div>
+
+    <h2>Input Select </h2>
+  
+
+
+</div>
 ```
 
 ### Required Field
