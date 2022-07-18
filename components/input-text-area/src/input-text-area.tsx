@@ -77,7 +77,7 @@ export default function InputTextArea({
         { noResize }
       )}
     >
-      {icon && <Icon className={classnames('icon')} name={SpinnerSolid} />}
+      {icon && <Icon className={classnames('icon')} name={icon} />}
 
       <textarea
         {...props}

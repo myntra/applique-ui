@@ -43,6 +43,9 @@
   input:not([disabled])::placeholder {
     color: color('input.placeholder');
   }
+  textarea:not([disabled])::placeholder {
+    color: color('input.placeholder');
+  }
   &.filled {
     #{$border-type}: 1px solid color('input.filled');
   }
