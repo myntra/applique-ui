@@ -57,7 +57,6 @@ export default function Field({
   disabled,
   fieldInfo,
   success,
-  hovered,
   info,
   ...props
 }: Props) {
@@ -88,7 +87,6 @@ export default function Field({
         }
         return child
       })}
-      {/* {children} */}
       {error || description || success ? (
         <div className={classnames('meta')}>
           {error ? (
