@@ -159,5 +159,8 @@
     "scripts": {
       "postbump": "npm run :update:versions && git add -A"
     }
+  },
+  "dependencies": {
+    "@myntra/uikit-component-input-text-area": "^1.13.96"
   }
 }

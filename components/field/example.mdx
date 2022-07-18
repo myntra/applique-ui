@@ -25,7 +25,7 @@ The `<Field>` component can display description for the input.
   <div style={{width:"400px", marginLeft:"16px"}}>
   <Field
     title="Name"
-    description="Enter your full name."
+    description="Focused state with placeholder"
   >
     <InputText value="" placeholder="Enter your name" onChange={() => null} />
   </Field>
@@ -45,7 +45,7 @@ The `<Field>` component can display description for the input.
       <Field
         title="Name"
         description="Enter your full name."
-        success="You are all fine"
+        success="Success message with hovered input text"
       >
         <InputText value="" onChange={() => null} />
       </Field>
@@ -83,17 +83,212 @@ The `<Field>` component can display description for the input.
       <Field
         title="Weight"
         description="Enter the Weight"
-        error="weight must be less than 100"
+        disabled
       >
-        <InputText value="230" icon={"SpinnerSolid"} adornment={<p><b>/kg</b></p>} onChange={() => null} />
+        <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
       </Field>
     </div>
+</div>
+```
 
-    <h2>Input Select </h2>
-  
+## Readonly state
 
+```jsx preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+const [weight, setweight] = useState('1');
+const [optionsW] = useState([
+  { value: '1', label: '1' },
+  { value: '5', label: '5' },
+  { value: '10', label: '10' },
+]);
+
+<>
+<div style={{display:"flex", flexWrap:"wrap"}} >
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Filled State"
+    >
+      <InputSelect
+        options={options}
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Choose your color"
+      error="Wrong Color selected"
+    >
+      <InputSelect
+        options={options}
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+   <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Choose your color"
+      success="Everything is fine"
+    >
+      <InputSelect
+        options={options}
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="A Disabled Input select"
+      disabled
+    >
+      <InputSelect
+        options={options}
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Empty selection "
+    >
+      <InputSelect
+        options={options}
+        value={''} onChange={setValue}
+      />
+    </Field>
+  </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Weight"
+      description="Adornment Text with focused"
+    >
+      <InputSelect
+        options={optionsW}
+        adornment={<p><b>/kg</b></p>}
+        value={weight} onChange={setweight}
+      />
+    </Field>
+  </div>
+
+     <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Weight"
+      description="Adornment Text with Hovered "
+    >
+      <InputSelect
+        options={optionsW}
+        adornment={<p><b>/kg</b></p>}
+        adornmentPosition="start"
+        value={weight} onChange={setweight}
+      />
+    </Field>
+  </div>
+</div>
+</>
+```
+
+## Readonly state
+
+```jsx preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+
+<>
+<div style={{display:"flex", flexWrap:"wrap"}} >
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="With placeholder text"
+    >
+      <InputTextArea
+        value={''} placeholder={"Enter Description"} onChange={setValue}
+      />
+    </Field>
+  </div>
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Choose your color"
+      error="Wrong Color selected"
+    >
+    <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+   <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Choose your color"
+      success="Everything is fine"
+    >
+      <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="A Disabled Input Text Area"
+      disabled
+    >
+      <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Hovered State"
+    >
+      <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+
+  <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Focused State"
+    >
+      <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Color"
+      description="Focused State"
+    >
+      <InputTextArea
+        value={'Green'} onChange={setValue}
+      />
+    </Field>
+  </div>
 
 </div>
+</>
 ```
 
 ### Required Field

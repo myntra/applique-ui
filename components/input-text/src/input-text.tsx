@@ -64,6 +64,7 @@ export default function InputText({
   const { placeholder = ' ' } = props
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
+  icon = SpinnerSolid
 
   return (
     <div
