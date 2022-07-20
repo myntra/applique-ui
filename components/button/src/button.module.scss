@@ -29,8 +29,8 @@
   @include padding('button');
   @include typography('button');
   @include transition('button');
-  position: relative;
 
+  position: relative;
   display: inline-block;
   line-height: 1.4;
   text-decoration: none;
@@ -277,60 +277,6 @@
     )
   );
 
-  @include media-breakpoint-up('sm') {
-    + .container {
-      @include margin-left('large');
-    }
-  }
-
-  @include media-breakpoint-down('sm') {
-    border-radius: 0;
-    &.primary {
-      color: color('primary');
-      background-color: color('white');
-      border-color: color('white');
-      box-shadow: shadow('raised');
-
-      &:disabled {
-        color: contrast-text-color('button.disabled', 'disabled');
-        background-color: color('white');
-        border-color: color('white');
-      }
-
-      &:not(:disabled) {
-        &:hover,
-        &:active,
-        &:active:hover {
-          color: color('primary-dark-3');
-          background-color: color('white');
-          border-color: color('white');
-        }
-      }
-    }
-
-    &.secondary {
-      color: color('black');
-      background-color: color('white');
-      border-color: color('white');
-      box-shadow: shadow('raised');
-
-      &:disabled {
-        color: contrast-text-color('button.disabled', 'disabled');
-        background-color: color('white');
-        border-color: color('white');
-      }
-
-      &:not(:disabled) {
-        &:hover,
-        &:active,
-        &:active:hover {
-          color: color('primary-dark-3');
-          background-color: color('white');
-          border-color: color('white');
-        }
-      }
-    }
-  }
   .icon-button {
     position: absolute;
     top: 50%;
