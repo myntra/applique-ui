@@ -55,7 +55,7 @@ export default function InputTextArea({
   disabled,
   __fieldContext = {},
   adornmentPosition = 'start',
-  icon,
+  icon = SpinnerSolid,
   ...props
 }: Props) {
   error = !!(error || __fieldContext.error)
