@@ -110,9 +110,11 @@ export interface Props<Value = any, Option = any> extends BaseProps {
   /*** Visually Representing error state of component */
   error?: boolean
   /*** Represent the variant of input box */
-  variant: 'bordered' | 'standard'
+  variant?: 'bordered' | 'standard'
   /** Can be used to add prefix, suffix or any jsx element */
   adornment?: string | JSX.Element
+  /** Position of the adornment */
+  adornmentPosition?: 'start' | 'end'
 }
 
 export type FieldContext = {

@@ -95,7 +95,7 @@ export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
   /*** Visually Representing error state of component */
   error?: boolean
   /*** Represent the variant of input box */
-  variant: 'bordered' | 'standard'
+  variant?: 'bordered' | 'standard'
   /**Adornment Position */
   adornmentPosition: string
 }

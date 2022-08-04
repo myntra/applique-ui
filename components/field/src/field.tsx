@@ -39,7 +39,7 @@ export interface Props extends BaseProps {
   /**
    * Display Info Icon
    */
-  info: Boolean
+  info?: Boolean
 }
 
 /**

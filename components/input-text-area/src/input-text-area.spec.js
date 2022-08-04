@@ -37,7 +37,7 @@ describe('Props check', () => {
     const wrapper = shallow(
       <InputTextArea onChange={handleChange} value={value} />
     )
-    expect(wrapper.find('textarea').props()).toHaveProperty('rows', 1)
+    expect(wrapper.find('textarea').props()).toHaveProperty('rows', 3)
   })
   it('should have classes as defined by props', () => {
     const wrapper = shallow(
