@@ -89,5 +89,5 @@ export default function InputTextArea({
 InputTextArea.defaultProps = {
   disabled: false,
   noResize: false,
-  rows: 1,
+  rows: 3,
 }

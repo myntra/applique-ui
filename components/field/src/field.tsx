@@ -6,6 +6,8 @@ import React, {
 } from 'react'
 
 import classnames from './field.module.scss'
+import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
+import Icon, { IconName } from '@myntra/uikit-component-icon'
 export interface Props extends BaseProps {
   /**
    * The name of the value.
@@ -60,6 +62,11 @@ export default function Field({
   info,
   ...props
 }: Props) {
+  fieldInfo = isValidElement(fieldInfo) ? (
+    fieldInfo
+  ) : info ? (
+    <Icon className={classnames('icon')} name={InfoCircleSolid} />
+  ) : null
   return (
     <div
       className={classnames('container', className, {
