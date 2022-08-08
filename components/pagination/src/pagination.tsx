@@ -19,6 +19,8 @@ export interface Props extends BaseProps {
   sizes?: number[]
   /** Hide size selector */
   hideSize?: boolean
+  /** Hide page selector dropdown */
+  hidePageSelection?: boolean
   /** @private */
   className?: string
 }
@@ -69,7 +71,15 @@ export default class Pagination extends PureComponent<Props> {
   }
 
   render() {
-    const { total, size, page, className, sizes, hideSize } = this.props
+    const {
+      total,
+      size,
+      page,
+      className,
+      sizes,
+      hideSize,
+      hidePageSelection,
+    } = this.props
     const totalPages = Math.ceil(total / size)
     const pages = range(1, totalPages).map((page) => page)
     const start = (page - 1) * size + 1
@@ -111,19 +121,23 @@ export default class Pagination extends PureComponent<Props> {
             className={classnames('pagination-arrow')}
           />
         </div>
-        <select
-          className={classnames('select-page')}
-          value={page}
-          onChange={this.handlePageChange}
-        >
-          {pages.map((pageList) => {
-            return (
-              <option value={pageList} key={pageList}>
-                {pageList}
-              </option>
-            )
-          })}
-        </select>
+        {hidePageSelection ? (
+          <span>{page}</span>
+        ) : (
+          <select
+            className={classnames('select-page')}
+            value={page}
+            onChange={this.handlePageChange}
+          >
+            {pages.map((pageList) => {
+              return (
+                <option value={pageList} key={pageList}>
+                  {pageList}
+                </option>
+              )
+            })}
+          </select>
+        )}
         <div
           role="button"
           className={classnames('arrow-container')}
