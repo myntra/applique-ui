@@ -3,13 +3,12 @@ const path = require('path')
 const docgen = require('@myntra/docgen')
 const prettier = require('prettier')
 const { componentsDir, components, pascalCase } = require('./utils')
-const {
-  getDeclaredTypes,
-  getInferredTypes,
-} = require('./bundle-types/extractor')
+const apiDocGenerator = require('./docs/apiDocGenerator')
 
-writeUIKitAsyncImports(components)
-writeUIKitTypesForDocsEditor()
+let META = []
+let DOCS = []
+
+extractDataFromComponents(components)
 
 // Helpers.
 function getComponentName(name) {
@@ -24,23 +23,19 @@ function getPackageJSON(component) {
   return require(path.resolve(componentsDir, component, 'package.json'))
 }
 
-function writeUIKitTypesForDocsEditor() {
-  fs.writeFileSync(
-    path.resolve(__dirname, '../uikit.myntra.com/src/uikit.d.ts'),
-    getInferredTypes() + getDeclaredTypes()
-  )
-}
-
-function writeUIKitAsyncImports(components) {
-  const META = []
-
+function extractDataFromComponents(components) {
   components.forEach((component, index) => {
     const file = getComponentFileName(component)
     try {
       const docs = docgen(file)
+      const name = getComponentName(component)
+      DOCS.push({
+        doc: docs,
+        name: component,
+      })
 
       META.push({
-        name: getComponentName(component),
+        name,
         since: docs.since,
         status: docs.status,
         path: '/components/' + components[index],
@@ -51,6 +46,19 @@ function writeUIKitAsyncImports(components) {
     }
   })
 
+  writeUIKitAsyncImports(components)
+  writeAPITabMDXFiles()
+  apiDocGenerator(DOCS)
+}
+
+function writeAPITabMDXFiles() {
+  fs.writeFileSync(
+    path.resolve(__dirname, '../docs.json'),
+    JSON.stringify(DOCS, null, 2)
+  )
+}
+
+function writeUIKitAsyncImports(components) {
   fs.writeFileSync(
     path.resolve(__dirname, '../packages/uikit/src/components.ts'),
     prettier.format(
@@ -73,7 +81,7 @@ function writeUIKitAsyncImports(components) {
   )
 
   fs.writeFileSync(
-    path.resolve(__dirname, '../uikit.myntra.com/src/uikit.js'),
+    path.resolve(__dirname, '../uikit.js'),
     prettier.format(
       `
       import { lazy } from 'react'
