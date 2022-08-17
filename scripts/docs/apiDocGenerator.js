@@ -52,6 +52,11 @@ function writeAPIDocFile(doc) {
     ' at location ',
     mdxLocation
   )
+
+  const docDir = getPackageDir(componentName) + '/docs'
+
+  if (!fs.existsSync(docDir)) fs.mkdirSync(docDir)
+
   fs.writeFileSync(path.resolve(mdxLocation), boilerplateCode())
   fs.writeFileSync(path.resolve(jsonLocation), jsonCode(data))
 }

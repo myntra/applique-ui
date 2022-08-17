@@ -7,7 +7,7 @@
   "private": true,
   "version": "1.13.99",
   "engines": {
-    "node": ">=8.0"
+    "node": ">=14.17.6"
   },
   "scripts": {
     "start": "node tools/start-dev-server",
@@ -17,8 +17,8 @@
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
-    "refresh:types": "node scripts/bundle-types-browser.js",
-    "refresh:docs": "node scripts/build-docs.mjs",
+    "docs:prepare": "node scripts/bundle-types-browser.js",
+    "docs:compile": "node scripts/build-docs.mjs",
     "preinstall": "node scripts/ensure-pnpm.js",
     ":eslint": "eslint",
     ":prettier": "prettier",

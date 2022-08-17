@@ -1,4 +1,5 @@
-  
+import { Button0, Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Button10, Button11, Button12, Button13, Button14, Button15, Button16, Button17, Button18, Button19 } from "./images"  
+
 This section contains components attributes, anatomy and variation of component type.
 
 <Documenter component={props.components}>
@@ -49,10 +50,7 @@ Fill, size, and width can all be mixed and matched to get the exact button neede
 States referes to the different forms an element can take based on context that it is being used in or it can be said - its a visual representation to communicate the status of component or interactive element.   
 
 
-<Documenter component={props.components}>
-
-```
-return (
+<ImagePreview background={true}>
   <Grid multiline={true} centered gap="large">
     <Grid.Column size="one-fifth">
       <div></div>
@@ -74,86 +72,83 @@ return (
       Default
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="primary">Button Label</Button>
+      <Button0 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="secondary">Button Label</Button>
+      <Button1 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="tertiary">Button Label</Button>
+      <Button2 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="warning">Button Label</Button>
+      <Button3 />
     </Grid.Column>
 
     <Grid.Column size="one-fifth">
       Hover
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="primary">Button Label</Button>
+      <Button4 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="secondary">Button Label</Button>
+      <Button5 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="tertiary">Button Label</Button>
+      <Button6 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="warning">Button Label</Button>
+      <Button7 />
     </Grid.Column>
 
     <Grid.Column size="one-fifth">
       Clicked
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="primary">Button Label</Button>
+      <Button8 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="secondary">Button Label</Button>
+      <Button9 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="tertiary">Button Label</Button>
+      <Button10 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="warning">Button Label</Button>
+      <Button11 />
     </Grid.Column>
 
     <Grid.Column size="one-fifth">
       Disabled
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="primary" disabled>Button Label</Button>
+      <Button12 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="secondary" disabled>Button Label</Button>
+      <Button13 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="tertiary" disabled>Button Label</Button>
+      <Button14 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="warning" disabled>Button Label</Button>
+      <Button15 />
     </Grid.Column>
 
     <Grid.Column size="one-fifth">
       Loading
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="primary" loading>Button Label</Button>
+      <Button16 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="secondary" loading>Button Label</Button>
+      <Button17 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="tertiary" loading>Button Label</Button>
+      <Button18 />
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      <Button type="warning" loading>Button Label</Button>
+      <Button19 />
     </Grid.Column>
   </Grid>
-)
-```
-
-</Documenter>
+</ImagePreview>
 
 # Variants
 ## Primary Button
@@ -245,7 +240,7 @@ When pairing an Icon and an action, an Icon-only Button is used to control the i
 
 ```preview
 return (
-  <Button type="warning">Button Label</Button>
+  <Button icon={EllipsisVSolid} />
 )
 
 ```

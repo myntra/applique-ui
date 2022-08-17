@@ -47,15 +47,7 @@ function extractDataFromComponents(components) {
   })
 
   writeUIKitAsyncImports(components)
-  writeAPITabMDXFiles()
   apiDocGenerator(DOCS)
-}
-
-function writeAPITabMDXFiles() {
-  fs.writeFileSync(
-    path.resolve(__dirname, '../docs.json'),
-    JSON.stringify(DOCS, null, 2)
-  )
 }
 
 function writeUIKitAsyncImports(components) {
