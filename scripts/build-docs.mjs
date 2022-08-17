@@ -1,8 +1,8 @@
+import path from 'path'
+import fs from 'fs'
 import { rollup } from 'rollup2'
 import config from '../mdx_rollup.config.mjs'
-import path from 'path'
 import utils from './utils.mjs'
-
 
 import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -18,6 +18,9 @@ function outputOptions(component) {
         outro: `window.Docs = window.Docs || {}; \n window.Docs.${component} = exports;`,
         format: 'iife',
         name: component,
+        globals: {
+            'react': 'React',
+        },
     }]
 }
 
@@ -30,15 +33,16 @@ async function generateOutputs(bundle, component) {
 
 async function build() {
     for (const component of components) {
-        // if (component != 'button') continue
         await buildDoc(component)
     }
     console.log('.... Done')
 }
 
 async function buildDoc(component) {
-    console.log('build docs : ', component)
     const inputFile = path.resolve(componentsDir, component, './docs/index.mdx')
+    
+    if (!fs.existsSync(inputFile)) return
+    console.log('build docs : ', component)
     
     let bundle
     try {
