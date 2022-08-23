@@ -64,6 +64,9 @@
   &.error {
     border-color: color('input.error');
   }
+  &.readonly {
+    background-color: color('input.readonly');
+  }
 }
 
 @mixin mixin-input-label-component {

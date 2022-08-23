@@ -32,6 +32,7 @@ $token-colors-revamp: (
   'success-base-new': #239d56,
   'primary-base-new': #4f47c8,
   'gray-base-new-2': #bababc,
+  'gray-base-new-3': #e7e7e8,
   'gray-base-new-5': #0e0f17,
 );
 
@@ -60,6 +61,7 @@ $colors: (
   'input.filled': '#gray-base-new-1',
   'input.text': '#gray-base-new-5',
   'input.placeholder': '#gray-base-new-2',
+  'input.readonly': '#gray-base-new-3',
 );
 $-tokens-colors: () !default;
 

@@ -25,7 +25,7 @@ export interface Props extends BaseProps {
   /*** Visually Representing error state of component */
   error?: boolean
   /*** Represent the variant of input box */
-  variant: 'bordered' | 'standard'
+  variant?: 'bordered' | 'standard'
 }
 type FieldContext = {
   error?: boolean
@@ -74,6 +74,7 @@ export default function InputText({
         { bordered: bordered },
         { filled: !isEmptyValue(value) },
         { error: !!error },
+        { readOnly: !!readOnly },
         className
       )}
     >
@@ -91,6 +92,7 @@ export default function InputText({
         className={classnames('input')}
         disabled={!!disabled}
         placeholder={placeholder}
+        readonly={readOnly}
       />
       {adornment && adornmentPosition === 'end' && (
         <div className={classnames('input-adornment', `input-adornment-end`)}>
