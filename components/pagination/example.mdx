@@ -16,5 +16,5 @@ import Pagination from './src/pagination'
 const [total] = useState(200)
 const [size, setSize] = useState(10)
 const [page, setPage] = useState(1)
-<Pagination total={total} size={size} page={page} onChange={({page, size}) => { setSize(size); setPage(page) }}/>
+<Pagination total={total} size={size} page={page} pageInputDisabled onChange={({page, size}) => { setSize(size); setPage(page) }}/>
 ```
