@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.13.101"></a>
+## [1.13.101](https://bitbucket.org/myntra/uikit/compare/v1.13.100...v1.13.101) (2022-09-02)
+
+
+### Bug Fixes
+
+* Added small change to optionally load page selector dropdown ([74c721f](https://bitbucket.org/myntra/uikit/commits/74c721f))
+
+
+
 <a name="1.13.100"></a>
 ## [1.13.100](https://bitbucket.org/myntra/uikit/compare/v1.13.99...v1.13.100) (2022-07-20)
 
