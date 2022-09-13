@@ -36,7 +36,11 @@ export interface Props extends BaseProps {
   /**
    * The handler called if any error occurs.
    */
-  onError?(error: Error): void
+   isUploadDisable?(): boolean
+  /**
+   * The handler called to check if upload button should be disabled or not.
+   */
+   onError?(error: Error): void
   /**
    * The validations passed from parent to be done before upload
    */
@@ -90,10 +94,11 @@ export default class InputAzureFile extends PureComponent<Props> {
   }
 
   async triggerUpload() {
-    if (this.state.files === null || this.state.files.length === 0) {
+    const files = this.props.value || this.state.files;
+    if (files === null || files.length === 0) {
       return this.emitFileNotFoundError()
     }
-    const file = this.state.files.item(0)
+    const file = files.item(0)
     this.setState({ isUploading: true })
     const url = `${this.props.apiRoot}/api/file-manager/getUploadToken/${this.props.appName}?fileNames=${file.name}`
     try {
@@ -165,7 +170,8 @@ export default class InputAzureFile extends PureComponent<Props> {
   }
 
   private handleUploadClick = () => {
-    if (!this.state.files) {
+    const files = this.props.value || this.state.files;
+    if (!files) {
       this.emitFileNotFoundError()
     } else {
       this.triggerUpload()
@@ -180,6 +186,7 @@ export default class InputAzureFile extends PureComponent<Props> {
       onSuccess,
       appName,
       clearOnSuccess,
+      isUploadDisable,
       ...props
     } = this.props
 
@@ -203,7 +210,7 @@ export default class InputAzureFile extends PureComponent<Props> {
                 className={classnames('button')}
                 type="secondary"
                 loading={autoStartUpload ? this.state.isUploading : false}
-                disabled={autoStartUpload ? false : this.state.isUploading}
+                disabled={autoStartUpload ? false : (this.state.isUploading || props.disabled)}
                 onClick={browse}
                 size="small"
               >
@@ -214,7 +221,7 @@ export default class InputAzureFile extends PureComponent<Props> {
               <Button
                 className={classnames('button')}
                 type="secondary"
-                disabled={this.state.isUploading}
+                disabled={this.state.isUploading || props.disabled || (isUploadDisable && isUploadDisable())}
                 onClick={this.handleUploadClick}
                 size="small"
               >
