@@ -94,11 +94,10 @@ export default class InputAzureFile extends PureComponent<Props> {
   }
 
   async triggerUpload() {
-    const files = this.props.value || this.state.files;
-    if (files === null || files.length === 0) {
+    if (this.state.files === null || this.state.files.length === 0) {
       return this.emitFileNotFoundError()
     }
-    const file = files.item(0)
+    const file = this.state.files.item(0)
     this.setState({ isUploading: true })
     const url = `${this.props.apiRoot}/api/file-manager/getUploadToken/${this.props.appName}?fileNames=${file.name}`
     try {
@@ -170,8 +169,7 @@ export default class InputAzureFile extends PureComponent<Props> {
   }
 
   private handleUploadClick = () => {
-    const files = this.props.value || this.state.files;
-    if (!files) {
+    if (!this.state.files) {
       this.emitFileNotFoundError()
     } else {
       this.triggerUpload()
@@ -187,6 +185,7 @@ export default class InputAzureFile extends PureComponent<Props> {
       appName,
       clearOnSuccess,
       isUploadDisable,
+      onChange,
       ...props
     } = this.props
 
