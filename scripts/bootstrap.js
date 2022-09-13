@@ -64,24 +64,23 @@ targets.forEach((name) => {
 
   console.log(`Package file created at ${pkgFile}`)
   if (isComponent(name)) {
-    const readmeFile = path.join(rootDir, `example.mdx`)
+    const docDir = path.join(rootDir, 'docs')
+
+    if (!fs.existsSync(docDir)) fs.mkdirSync(docDir)
+
+    const readmeFile = path.join(docDir, `index.mdx`)
 
     if (!fs.existsSync(readmeFile)) {
-      const component = pascalCase(shortName)
       fs.writeFileSync(
         readmeFile,
         `
-import ${component} from './src/${shortName}'
+import Api from './Api.mdx'
 
-# ${component}
+# ${pascalCase(shortName)}
 
-<Documenter component={${component}}>
-
-\`\`\`jsx preview
-// TODO: Add example.
-\`\`\`
-
-</Documenter>
+<Tabs>
+    <Tabs.Tab title="APIs" ><Api components={props.components} /></Tabs.Tab>
+</Tabs>
 `.trimLeft()
       )
     }

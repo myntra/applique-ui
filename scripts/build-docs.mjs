@@ -15,9 +15,10 @@ function outputOptions(component) {
     return [{
         dir: outputDir,
         exports: 'named',
-        outro: `window.Docs = window.Docs || {}; \n window.Docs.${component} = exports;`,
+        outro: `window.Docs = window.Docs || {}; \n window.Docs['${component}'] = exports;`,
         format: 'iife',
         name: component,
+        extend: true,
         globals: {
             'react': 'React',
         },
