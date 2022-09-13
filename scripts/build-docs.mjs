@@ -11,9 +11,11 @@ const __dirname = path.dirname(__filename);
 const { componentsDir, components } = utils
 
 function outputOptions(component) {
-    const outputDir = path.resolve(componentsDir, component, './dist/docs')
+    const outputDir = path.resolve(__dirname, '../dist/')
+    const fileName = path.resolve(outputDir, `${component}.js`)
+
     return [{
-        dir: outputDir,
+        file: fileName,
         exports: 'named',
         outro: `window.Docs = window.Docs || {}; \n window.Docs['${component}'] = exports;`,
         format: 'iife',
