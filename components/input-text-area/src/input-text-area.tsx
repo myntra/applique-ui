@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from './input-text-area.module.scss'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
-import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
+import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 
 export interface Props extends BaseProps {
   /** @private */
@@ -50,16 +50,21 @@ export default function InputTextArea({
   noResize,
   value,
   onChange,
-  variant = 'bordered',
+  variant = 'standard',
   error = false,
   disabled,
   __fieldContext = {},
   adornmentPosition = 'start',
   icon,
+  readOnly,
   ...props
 }: Props) {
   error = !!(error || __fieldContext.error)
   disabled = !!(disabled || __fieldContext.disabled)
+  const hasValue = !isEmptyValue(value)
+  const handleClearClick = () => {
+    if (!readOnly && !disabled) onChange && onChange(null)
+  }
   return (
     <div
       className={classnames(
@@ -70,6 +75,7 @@ export default function InputTextArea({
         { standard: variant === 'standard' },
         { bordered: variant === 'bordered' },
         { filled: !isEmptyValue(value) },
+        { readonly: readOnly },
         { noResize }
       )}
     >
@@ -81,7 +87,18 @@ export default function InputTextArea({
         disabled={disabled}
         className={classnames('input')}
         onChange={(event) => onChange && onChange(event.target.value)}
+        readOnly={readOnly}
       />
+      {hasValue && (
+        <div
+          className={classnames('button')}
+          role="button"
+          onClick={handleClearClick}
+          data-test-id="reset"
+        >
+          <Icon name={TimesSolid} title="reset" />
+        </div>
+      )}
     </div>
   )
 }

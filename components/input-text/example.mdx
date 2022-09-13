@@ -65,13 +65,13 @@ const [value, setValue] = useState();
 ## With placeholder text
 
 ```jsx preview
-const [value, setValue] = useState();
+const [value, setValue] = useState("This is dummy");
 
 <div>
  <p>Bordered </p>
-  <InputText value={value} onChange={setValue} placeholder="Your name" />
+  <InputText value={value} onChange={setValue} placeholder="Your name" readOnly />
 <p>Standard</p>
-  <InputText value={value} onChange={setValue} placeholder="Your name" variant="standard" />
+  <InputText value={value} onChange={setValue} placeholder="Your name" variant="standard"/>
 </div>
 ```
 
@@ -80,7 +80,7 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<Field title="Name" description="Your name">
+<Field title="Name" description="Your name" info>
   <InputText value={value} onChange={setValue} />
 </Field>
 ``` 

@@ -33,6 +33,9 @@
     border: 0;
     outline: none;
   }
+  .button {
+    margin-right: size('1x');
+  }
   .input-adornment {
     display: flex;
     align-items: center;

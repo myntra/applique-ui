@@ -30,6 +30,8 @@
     color: color('input.disabled');
     background-color: transparent;
   }
+
+  background-color: inherit;
 }
 .bordered {
   padding: padding('input.select');

@@ -217,7 +217,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       up,
       __fieldContext = {},
       error,
-      variant = 'bordered',
+      variant = 'standard',
       adornment,
       adornmentPosition = 'end',
     } = this.props
@@ -252,6 +252,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
               resettable={!this.props.required && !this.props.readOnly}
               __fieldContext={__fieldContext}
               error={error}
+              readOnly={readOnly}
               adornment={adornment}
               adornmentPosition={adornmentPosition}
               variant={variant}

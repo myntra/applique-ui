@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 100%;
   padding-bottom: size('1x');
+  color: color('gray-base-new-4');
 
   @include typography('caption-revamp');
 }

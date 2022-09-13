@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from './input-text.module.scss'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
-import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
+import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 
 export interface Props extends BaseProps {
   /** Sets the text format for the field. */
@@ -64,6 +64,10 @@ export default function InputText({
   const { placeholder = ' ' } = props
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
+  const hasValue = !isEmptyValue(value)
+  const handleClearClick = () => {
+    if (!readOnly && !disabled) onChange && onChange(null)
+  }
 
   return (
     <div
@@ -74,7 +78,7 @@ export default function InputText({
         { bordered: bordered },
         { filled: !isEmptyValue(value) },
         { error: !!error },
-        { readOnly: !!readOnly },
+        { readonly: !!readOnly },
         className
       )}
     >
@@ -92,11 +96,20 @@ export default function InputText({
         className={classnames('input')}
         disabled={!!disabled}
         placeholder={placeholder}
-        readonly={readOnly}
       />
       {adornment && adornmentPosition === 'end' && (
         <div className={classnames('input-adornment', `input-adornment-end`)}>
           {adornment}
+        </div>
+      )}
+      {hasValue && (
+        <div
+          className={classnames('button')}
+          role="button"
+          onClick={handleClearClick}
+          data-test-id="reset"
+        >
+          <Icon name={TimesSolid} title="reset" />
         </div>
       )}
     </div>
@@ -107,5 +120,6 @@ InputText.defaultProps = {
   type: 'text',
   adornmentPosition: 'end',
   __fieldContext: {},
-  variant: 'bordered',
+  variant: 'standard',
+  onchange,
 }

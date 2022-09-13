@@ -33,9 +33,13 @@
   margin-top: size('1x');
   margin-right: size('2x');
 }
+.button {
+  margin-right: size('1x');
+}
 .input {
   width: 100%;
   vertical-align: baseline;
+  background-color: inherit;
   border: none;
   outline: none;
 

@@ -240,6 +240,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
       adornment,
       adornmentPosition,
       disabled,
+      readOnly,
       // ---
       ...props
     } = this.props
@@ -260,7 +261,8 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
           { filled: !isEmptyValue(value) },
           { error },
           { disable: disabled },
-          { standard: standard, bordered: bordered }
+          { standard: standard, bordered: bordered },
+          { readonly: readOnly }
         )}
         onClick={() => this.inputRef.current && this.inputRef.current.focus()}
       >
@@ -284,6 +286,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
               ref={this.inputRef}
               onChange={this.handleSearchTextChange}
               className={classnames('input', { 'with-icon': !!icon })}
+              readOnly={readOnly}
               {...props}
               onBlur={this.handleBlur}
               role="combobox"
