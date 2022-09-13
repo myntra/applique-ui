@@ -79,7 +79,7 @@ export default function InputTextArea({
         { noResize }
       )}
     >
-      {icon && <Icon className={classnames('icon')} name={icon} />}
+      {/* {icon && <Icon className={classnames('icon')} name={icon} />} */}
 
       <textarea
         {...props}
