@@ -8,19 +8,20 @@ import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const { componentsDir, components } = utils
+const { componentsDir, components, pascalCase } = utils
 
 function outputOptions(component) {
+    
     const outputDir = path.resolve(__dirname, '../dist/')
-    const fileName = path.resolve(outputDir, `${component}.js`)
-
+    const pascalCaseComponent = pascalCase(component)
+    const fileName = path.resolve(outputDir, `${pascalCaseComponent}.js`)
     return [{
         file: fileName,
         exports: 'named',
-        outro: `window.Docs = window.Docs || {}; \n window.Docs['${component}'] = exports;`,
+        outro: `window.Docs = window.Docs || {}; \n window.Docs['${pascalCaseComponent}'] = exports;`,
         format: 'iife',
-        name: component,
-        extend: true,
+        name: pascalCaseComponent,
+        // extend: true,
         globals: {
             'react': 'React',
         },
