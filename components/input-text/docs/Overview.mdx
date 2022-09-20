@@ -1,0 +1,98 @@
+import { Overview1, Overview2 } from './images'
+
+This section contains components attributes, anatomy and variation of component type.
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview1 />
+    </Layout>
+</ImagePreview>
+
+**Text input:** When the expected user input is a single line of text, as opposed to a paragraph.
+
+**Text Area:** When the expected user input is more than one sentence.
+
+The Input Fields component has a lot of variations we can use. It contains a label and optional icons before or after the label. 
+
+Fill, size, and width can all be mixed and matched to get the exact Input field needed.
+
+## States
+Input Fields have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, active, inputted, etc).
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview2 />
+    </Layout>
+</ImagePreview>
+
+## Variants
+
+### Single line text fields
+
+An Input comes with a label display only one line of text
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = useState();
+
+return (
+    <Field title="Label">
+    <InputText value={value} onChange={setValue} placeholder='Type / Scan'/>
+    </Field>
+)
+```
+</Documenter>
+
+### Multi-line Text area
+
+An Input comes with a label and grow to accommodate multiple lines of text
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = useState();
+
+return (
+    <Field title="Label">
+    <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
+    </Field>
+)
+```
+</Documenter>
+
+### Prefix
+
+An Input comes with a label and prefix information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = useState();
+
+return (
+    <Field title="Label">
+    <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign}/>
+    </Field>
+)
+```
+</Documenter>
+
+### Sufix
+
+An Input comes with a label and sufix information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = useState();
+
+return (
+    <Field title="Label">
+    <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg"/>
+    </Field>
+)
+```
+</Documenter>
+
+
