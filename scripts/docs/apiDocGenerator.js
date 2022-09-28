@@ -1,34 +1,14 @@
 const fs = require('fs')
 const path = require('path')
-const { getPackageDir } = require('../utils')
+const { getPackageDir, pascalCase } = require('../utils')
 
-function processDocJSON(componentDoc) {
-  return {
-    name: componentDoc.name,
-    data: componentDoc.doc.props.map(function(prop) {
-      return {
-        name: prop.name,
-        default:
-          prop.defaultValue != null
-            ? prop.defaultValue.value
-            : prop.defaultValue,
-        description: prop.description,
-        type: prop.type.name,
-      }
-    }),
-  }
-}
-
-function boilerplateCode() {
+function boilerplateCode(componentName) {
   const code = `
 import data from './data.js'
 
-<Table data={data}>
-    <Table.Column label="Name" key="name"/>
-    <Table.Column label="Type" key="type"/>
-    <Table.Column label="Default" key="default"/>
-    <Table.Column label="Description" key="description"/>
-</Table>
+## ${pascalCase(componentName)}
+
+<Api data={data['${pascalCase(componentName)}'].data} />
     `
 
   return code
@@ -41,9 +21,7 @@ export default json
             `
 }
 
-function writeAPIDocFile(doc) {
-  const componentName = doc.name
-  const data = doc.data
+function writeAPIDocFile(data, componentName) {
   const mdxLocation = getPackageDir(componentName) + '/docs/Api.mdx'
   const jsonLocation = getPackageDir(componentName) + '/docs/data.js'
   console.log(
@@ -57,14 +35,19 @@ function writeAPIDocFile(doc) {
 
   if (!fs.existsSync(docDir)) fs.mkdirSync(docDir)
 
-  fs.writeFileSync(path.resolve(mdxLocation), boilerplateCode())
+  if (!fs.existsSync(path.resolve(mdxLocation)))
+    fs.writeFileSync(path.resolve(mdxLocation), boilerplateCode(componentName))
+
   fs.writeFileSync(path.resolve(jsonLocation), jsonCode(data))
 }
 
 function main(docs) {
-  const processedDoc = docs.map(processDocJSON)
-
-  processedDoc.forEach(writeAPIDocFile)
+  for (const component in docs) {
+    if (Object.hasOwnProperty.call(docs, component)) {
+      const doc = docs[component]
+      writeAPIDocFile(doc, component)
+    }
+  }
 }
 
 module.exports = main

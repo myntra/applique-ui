@@ -6,7 +6,7 @@ const { componentsDir, components, pascalCase } = require('./utils')
 const apiDocGenerator = require('./docs/apiDocGenerator')
 
 let META = []
-let DOCS = []
+let DOCS = {}
 
 extractDataFromComponents(components)
 
@@ -15,39 +15,64 @@ function getComponentName(name) {
   return pascalCase(name)
 }
 
-function getComponentFileName(component) {
-  return path.resolve(componentsDir, component, 'src', component + '.tsx')
+function getComponentFileDirectory(component) {
+  return path.resolve(componentsDir, component, 'src')
 }
 
 function getPackageJSON(component) {
   return require(path.resolve(componentsDir, component, 'package.json'))
 }
 
+function processDocJSON(componentDoc) {
+  return {
+    name: componentDoc.name,
+    data: componentDoc.props.map(function(prop) {
+      return {
+        name: prop.name,
+        default:
+          prop.defaultValue != null
+            ? prop.defaultValue.value
+            : prop.defaultValue,
+        description: prop.description,
+        type: prop.type.name,
+      }
+    }),
+  }
+}
+
 function extractDataFromComponents(components) {
   components.forEach((component, index) => {
-    const file = getComponentFileName(component)
-    try {
-      const docs = docgen(file)
-      const name = getComponentName(component)
-      DOCS.push({
-        doc: docs,
-        name: component,
-      })
+    const directory = getComponentFileDirectory(component)
+    const files = fs
+      .readdirSync(directory)
+      .filter((v) => /\.[j|t]sx$/.test(v))
+      .filter((v) => !/(spec)/.test(v))
+    files.forEach((file) => {
+      try {
+        const docs = docgen(path.join(directory, file))
+        const componentName = getComponentName(component)
 
-      META.push({
-        name,
-        since: docs.since,
-        status: docs.status,
-        path: '/components/' + components[index],
-      })
-    } catch (error) {
-      console.error(`In ${component}: ${file}`)
-      console.error(error)
-    }
+        if (!DOCS[component]) DOCS[component] = {}
+
+        DOCS[component][docs.displayName] = processDocJSON(docs)
+
+        console.log(docs.displayName)
+
+        META.push({
+          name: componentName,
+          since: docs.since,
+          status: docs.status,
+          path: '/components/' + components[index],
+        })
+      } catch (error) {
+        console.error(`In ${component}: ${file}`)
+        console.error(error)
+      }
+    })
   })
-
   writeUIKitAsyncImports(components)
   apiDocGenerator(DOCS)
+  console.log('done...')
 }
 
 function writeUIKitAsyncImports(components) {
