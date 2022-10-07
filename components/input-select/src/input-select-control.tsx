@@ -8,6 +8,7 @@ import { memoize, debounce, createRef } from '@myntra/uikit-utils'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
 import classnames from './input-select-control.module.scss'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import { FieldContext } from './input-select'
 
 export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
   /**
@@ -88,6 +89,15 @@ export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
    * Is options dropdown open?
    */
   disabled: boolean
+
+  /*** Field Context Passed from parent Field */
+  __fieldContext?: FieldContext
+  /*** Visually Representing error state of component */
+  error?: boolean
+  /*** Represent the variant of input box */
+  variant: 'bordered' | 'standard'
+  /**Adornment Position */
+  adornmentPosition: string
 }
 
 /**
@@ -96,6 +106,16 @@ export interface InputSelectControlProps<V = any, T = any> extends BaseProps {
  * @status REVIEWING
  * @category internal
  */
+function isEmptyValue(value) {
+  // Case multiple selection
+  if (Array.isArray(value)) {
+    return value.length === 0
+  }
+  if (value === undefined || value === null) {
+    return true
+  }
+  return false
+}
 
 export default class InputSelectControl<V = any, T = any> extends PureComponent<
   InputSelectControlProps<V, T>,
@@ -196,7 +216,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
   resetValue = () => this.props.onChange(null)
 
   render() {
-    const {
+    let {
       isOpen,
       instancePrefix,
       children,
@@ -215,59 +235,86 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
       options,
       value,
       icon,
+      variant,
+      __fieldContext = {},
+      adornment,
+      adornmentPosition,
       disabled,
       // ---
       ...props
     } = this.props
 
+    const { error } = {
+      error: __fieldContext.error || this.props.error,
+    }
+
+    const placeholder = value ? null : ' '
+    const bordered = variant === 'bordered'
+    const standard = variant === 'standard'
+
     return (
       <div
-        className={classnames('control', className)}
+        className={classnames(
+          'control',
+          className,
+          { filled: !isEmptyValue(value) },
+          { error },
+          { disable: disabled },
+          { standard: standard, bordered: bordered }
+        )}
         onClick={() => this.inputRef.current && this.inputRef.current.focus()}
       >
-        {(!this.state.searchText || !searchable) && renderPlaceholder()}
         {icon && (
-          <Icon
+          <div
             className={classnames('icon', {
               active: value || this.state.searchText,
             })}
-            name={icon}
-          />
-        )}
-        {searchable && (
-          <input
-            disabled={disabled}
-            value={this.state.searchText}
-            ref={this.inputRef}
-            onChange={this.handleSearchTextChange}
-            className={classnames('input', { 'with-icon': !!icon })}
-            {...props}
-            onBlur={this.handleBlur}
-            role="combobox"
-            autoComplete="off"
-            aria-haspopup={isOpen}
-            aria-expanded={isOpen}
-            aria-autocomplete="both"
-            aria-controls={`${instancePrefix}-options`}
-            aria-owns={`${instancePrefix}-options`}
-          />
-        )}
-
-        {!disabled && (
-          <div className={classnames('buttons')}>
-            {resettable && (value || this.state.searchText) && (
-              <div
-                className={classnames('button')}
-                role="button"
-                onClick={this.handleClearClick}
-                data-test-id="reset"
-              >
-                <Icon name={TimesSolid} title="reset" />
-              </div>
-            )}
-            {children}
+          >
+            <Icon name={icon} />
           </div>
         )}
+        {adornment && adornmentPosition === 'start' && (
+          <div className={classnames('input-adornment')}>{adornment}</div>
+        )}
+        <div className={classnames('input-container')}>
+          {(!this.state.searchText || !searchable) && renderPlaceholder()}
+          {searchable && (
+            <input
+              value={this.state.searchText}
+              ref={this.inputRef}
+              onChange={this.handleSearchTextChange}
+              className={classnames('input', { 'with-icon': !!icon })}
+              {...props}
+              onBlur={this.handleBlur}
+              role="combobox"
+              autoComplete="off"
+              aria-haspopup={isOpen}
+              aria-expanded={isOpen}
+              aria-autocomplete="both"
+              aria-controls={`${instancePrefix}-options`}
+              aria-owns={`${instancePrefix}-options`}
+              placeholder={placeholder}
+              disabled={disabled}
+            />
+          )}
+        </div>
+
+        {adornment && adornmentPosition === 'end' && (
+          <div className={classnames('input-adornment')}>{adornment}</div>
+        )}
+        <div className={classnames('buttons')}>
+          {!disabled && resettable && (value || this.state.searchText) && (
+            <div
+              className={classnames('button')}
+              role="button"
+              onClick={this.handleClearClick}
+              data-test-id="reset"
+            >
+              <Icon name={TimesSolid} title="reset" />
+            </div>
+          )}
+          {!disabled && children}
+        </div>
       </div>
     )
   }

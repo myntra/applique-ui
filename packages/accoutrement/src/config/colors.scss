@@ -8,6 +8,8 @@ $-tokens-colors-gray: hsl(0, 0%, 90%) !default;
 $-tokens-colors-brown: hsl(26, 40%, 54%) !default;
 $-tokens-colors-pink: hsl(346, 100%, 62%) !default;
 
+// Revamp colors
+
 $brand-colors: (
   'primary': $-tokens-colors-primary,
   'success': $-tokens-colors-success,
@@ -21,6 +23,16 @@ $brand-colors: (
 $base-colors: (
   'black': #000,
   'white': #fff,
+);
+$token-colors-revamp: (
+  'primary-light-new': #cac8ee,
+  'gray-base-new': #cfcfd1,
+  'gray-base-new-1': #86878b,
+  'danger-base-new': #c84646,
+  'success-base-new': #239d56,
+  'primary-base-new': #4f47c8,
+  'gray-base-new-2': #bababc,
+  'gray-base-new-5': #0e0f17,
 );
 
 $colors: (
@@ -40,9 +52,18 @@ $colors: (
   'top-bar.border': '#nav-bar.border',
   'page.background': '#gray-light',
   'tab.border': '#gray-light',
+  'input.hover': '#primary-light-new',
+  'input.focused': '#primary-base-new',
+  'input.disabled': '#gray-base-new',
+  'input.error': '#danger-base-new',
+  'input.border': '#gray-base-new',
+  'input.filled': '#gray-base-new-1',
+  'input.text': '#gray-base-new-5',
+  'input.placeholder': '#gray-base-new-2',
 );
 $-tokens-colors: () !default;
 
+@include add-colors($token-colors-revamp);
 @include add-colors($base-colors);
 @include add-colors($brand-colors);
 @include add-colors(uikit-shades-of($brand-colors));
@@ -52,10 +73,12 @@ $-tokens-colors: () !default;
 
 $-tokens-text-colors-dark: #000 !default;
 $-tokens-text-colors-light: #fff !default;
+$-tokens-text-colors-dark-new: #0e0f17 !default;
 
 $text-colors: (
   'dark': $-tokens-text-colors-dark,
   'light': $-tokens-text-colors-light,
+  'input.text': $-tokens-text-colors-dark-new,
 );
 
 @include add-colors(uikit-text-variants-of($text-colors));

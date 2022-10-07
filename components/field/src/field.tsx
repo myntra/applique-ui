@@ -6,6 +6,8 @@ import React, {
 } from 'react'
 
 import classnames from './field.module.scss'
+import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
+import Icon, { IconName } from '@myntra/uikit-component-icon'
 
 export interface Props extends BaseProps {
   /**
@@ -18,7 +20,7 @@ export interface Props extends BaseProps {
   /**
    * Display an error message instead of deccription
    */
-  error?: ReactNode
+  error?: ReactNode | boolean
   /**
    * Visually conveys that the field is required.
    */
@@ -31,6 +33,14 @@ export interface Props extends BaseProps {
    * Block to show info about the field. Should be a react component.
    */
   fieldInfo?: ReactNode
+  /*
+   * Display a success message instead of description
+   */
+  success?: ReactNode
+  /**
+   * Display Info Icon
+   */
+  info: Boolean
 }
 
 /**
@@ -41,14 +51,15 @@ export interface Props extends BaseProps {
  */
 export default function Field({
   title,
-  error,
+  error = false,
   description,
   required,
   htmlFor,
   children,
   className,
   disabled,
-  fieldInfo,
+  fieldInfo = <Icon className={classnames('icon')} name={InfoCircleSolid} />,
+  success,
   ...props
 }: Props) {
   return (
@@ -60,7 +71,7 @@ export default function Field({
     >
       <label
         id={htmlFor ? htmlFor + '__label' : null}
-        className={classnames('title')}
+        className={classnames('title', { error: !!error })}
         htmlFor={htmlFor}
       >
         <span>
@@ -73,15 +84,27 @@ export default function Field({
         if (isValidElement(child)) {
           return React.cloneElement(child, {
             disabled: disabled,
+            __fieldContext: { error, disabled },
           } as any)
         }
         return child
       })}
-      {error || description ? (
+      {error || description || success ? (
         <div className={classnames('meta')}>
           {error ? (
-            <div id={htmlFor ? htmlFor + '__error' : null} role="alert">
+            <div
+              id={htmlFor ? htmlFor + '__error' : null}
+              role="alert"
+              className={classnames({ error: !!error })}
+            >
               {Array.isArray(error) ? error.join(' ') : error}
+            </div>
+          ) : success ? (
+            <div
+              id={htmlFor ? htmlFor + '__success' : null}
+              className={classnames('success')}
+            >
+              {success}
             </div>
           ) : (
             description && (

@@ -72,12 +72,13 @@ function createComponentsFile(component) {
       localComponents.add(component)
   }
   let iconImports = findImport(root, 'uikit-icons').paths()
-  iconImports = iconImports.length
-    ? iconImports[0].value.specifiers.map(
-        (specifier) => specifier.imported.name
-      )
-    : []
-
+  console.log(iconImports[0].value.specifiers[0].imported, 'Icon Imports')
+  // iconImports = iconImports.length
+  //   ? iconImports[0].value.specifiers.map(
+  //       (specifier) => specifier.imported.name
+  //     )
+  //   : []
+  iconImports = []
   Fs.writeFileSync(
     Path.resolve(__dirname, `app/uikit.${component}.js`),
     [
