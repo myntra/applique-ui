@@ -19,6 +19,8 @@ export interface Props extends BaseProps {
   sizes?: number[]
   /** Hide size selector */
   hideSize?: boolean
+  /** Hide page selector dropdown */
+  pageInputDisabled?: boolean
   /** @private */
   className?: string
 }
@@ -69,9 +71,19 @@ export default class Pagination extends PureComponent<Props> {
   }
 
   render() {
-    const { total, size, page, className, sizes, hideSize } = this.props
+    const {
+      total,
+      size,
+      page,
+      className,
+      sizes,
+      hideSize,
+      pageInputDisabled,
+    } = this.props
     const totalPages = Math.ceil(total / size)
-    const pages = range(1, totalPages).map((page) => page)
+    const pages = range(1, pageInputDisabled ? 1 : totalPages).map(
+      (page) => page
+    )
     const start = (page - 1) * size + 1
     const end = total < start + size - 1 ? total : start + size - 1
     return (
@@ -115,6 +127,7 @@ export default class Pagination extends PureComponent<Props> {
           className={classnames('select-page')}
           value={page}
           onChange={this.handlePageChange}
+          disabled={!!pageInputDisabled}
         >
           {pages.map((pageList) => {
             return (
