@@ -25,7 +25,7 @@ export interface Props extends BaseProps {
   /*** Visually Representing error state of component */
   error?: boolean
   /*** Represent the variant of input box */
-  variant: 'bordered' | 'standard'
+  variant?: 'bordered' | 'standard'
 }
 type FieldContext = {
   error?: boolean
@@ -52,7 +52,7 @@ export default function InputText({
   adornment,
   adornmentPosition,
   __fieldContext = {},
-  variant,
+  variant = 'standard',
   ...props
 }: Props) {
   readOnly = readOnly || !onChange

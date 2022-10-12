@@ -29,6 +29,7 @@
   "dependencies": {
     "@myntra/uikit-can-i-use": "1.13.*",
     "@myntra/uikit-component-input-text": "1.13.*",
+    "@myntra/uikit-component-icon": "1.13.*",
     "@myntra/uikit-utils": "1.13.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
