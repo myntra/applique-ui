@@ -1,0 +1,51 @@
+.sidebar-container {
+  width: fit-content;
+  margin: 10px 16px;
+  background-color: #fff;
+}
+.sidebar-menu-icon {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.sidebar-menu-link-title {
+  color: #56575d;
+}
+
+.sidebar-menu-child.sidebar-menu-dropdown .sidebar-menu-link-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #56575d;
+
+  &.active-link {
+    font-weight: 600;
+    color: #4f47c8;
+  }
+}
+
+.sidebar-menu-title,
+.sidebar-menu-child {
+  padding: 10px;
+  margin: 4px 8px;
+  font-family: sans-serif;
+  list-style: none;
+  cursor: pointer;
+}
+
+.sidebar-menu-child-link {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active-link {
+  color: #4f47c8;
+}
+
+.sidebar-menu-child.sidebar-menu-dropdown {
+  font-weight: 500;
+
+  &.active-link {
+    color: #4f47c8;
+  }
+}
