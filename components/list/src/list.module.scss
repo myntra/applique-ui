@@ -36,11 +36,6 @@
   }
 
   &.is-active,
-  &.is-selected {
-    font-weight: 500;
-    color: color('primary');
-    background-color: transparent;
-  }
   &:not(.is-disabled):hover {
     background-color: color('primary-lightest');
   }
@@ -67,17 +62,18 @@
   cursor: pointer;
 }
 
-.is-single-selectable {
-  .is-selected::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: size('small');
-    color: color('primary');
-    content: ' ';
-  }
+.is-selected {
+  font-weight: 500;
+  color: color('primary');
+  background-color: transparent;
+}
 
+.is-single-selectable {
+  .is-selected {
+    font-weight: 500;
+    color: color('primary');
+    background-color: transparent;
+  }
   .checkbox {
     display: none;
   }
