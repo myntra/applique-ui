@@ -6,6 +6,7 @@ import VirtualList, {
 import InputCheckbox from '@myntra/uikit-component-input-checkbox'
 import classnames from './list.module.scss'
 import { createRef, isNullOrUndefined } from '@myntra/uikit-utils'
+import InputRadio from '@myntra/uikit-component-input-radio'
 
 export interface Props<T = any> extends BaseProps {
   /**
@@ -48,7 +49,6 @@ export interface Props<T = any> extends BaseProps {
    */
   virtualized?: boolean
 }
-
 /**
  * An accessible list of item.
  *
@@ -59,7 +59,7 @@ export interface Props<T = any> extends BaseProps {
  */
 export default class List extends PureComponent<
   Props,
-  { activeIndex: number }
+  { activeIndex: number; areSelectedAll: boolean }
 > {
   static defaultProps = {
     idForItem: (item) => item,
@@ -74,6 +74,7 @@ export default class List extends PureComponent<
 
   state = {
     activeIndex: -1,
+    areSelectedAll: false,
   }
 
   constructor(props) {
@@ -122,6 +123,12 @@ export default class List extends PureComponent<
         })
       }
     }
+    const selectedIds = this.computeSelectedIds()
+    if (selectedIds.size === this.props.items.length - this.computeDisabled()) {
+      this.setState({ areSelectedAll: true })
+    } else {
+      this.setState({ areSelectedAll: false })
+    }
   }
 
   get activeItemHTMLId() {
@@ -139,6 +146,16 @@ export default class List extends PureComponent<
             : [this.props.value]
         )
       : new Set()
+  }
+
+  computeDisabled() {
+    var numDisabled = 0
+    for (let i = 0; i < this.props.items.length; i++) {
+      if (this.props.isItemDisabled(this.props.items[i])) {
+        numDisabled++
+      }
+    }
+    return numDisabled
   }
 
   updateValueById(id: any) {
@@ -175,7 +192,10 @@ export default class List extends PureComponent<
 
     for (let index = start; index <= end; ++index) {
       const id = idForItem(items[index])
-
+      const isDisabled = isItemDisabled(items[index])
+      if (isDisabled) {
+        continue
+      }
       if (ids.has(id)) {
         if (toggle) value.splice(value.indexOf(id), 1)
       } else {
@@ -286,6 +306,21 @@ export default class List extends PureComponent<
     this.setState({ activeIndex: -1 })
   }
 
+  selectAll = (children) => {
+    // compute number of disabled items
+    var numDisabled = this.computeDisabled()
+    const ids = this.computeSelectedIds()
+    // if count of selected items === total items - disabled items
+    // deselct all since all items are selected
+    if (children.length - numDisabled === ids.size) {
+      this.updateValueByRange(0, children.length - 1, true)
+      this.setState({ areSelectedAll: false })
+    } else {
+      this.updateValueByRange(0, children.length - 1, false)
+      this.setState({ areSelectedAll: true })
+    }
+  }
+
   render() {
     const {
       items,
@@ -337,6 +372,26 @@ export default class List extends PureComponent<
         onBlur={this.handleBlur}
         onKeyDown={this.handleKeyPress as any}
       >
+        {multiple ? (
+          <li
+            role="option"
+            className={classnames('item', {
+              'is-selected': this.state.areSelectedAll,
+              selectall: true,
+            })}
+            onClick={() => this.selectAll(children)}
+          >
+            <InputCheckbox
+              className={classnames('checkbox', {
+                'is-selected': this.state.areSelectedAll,
+              })}
+              value={this.state.areSelectedAll}
+              boxtype={'dashbox'}
+              readOnly={false}
+            ></InputCheckbox>
+            Select All
+          </li>
+        ) : null}
         {children}
       </ul>
     )
@@ -363,6 +418,13 @@ export default class List extends PureComponent<
           })}
           onClick={() => !isDisabled && this.handleClick({ id, index })}
         >
+          {!multiple ? (
+            <InputRadio
+              className={classnames('radio')}
+              value={isSelected ? 'ok' : 'error'}
+              options={[{ value: 'ok', label: '' }]}
+            />
+          ) : null}
           <InputCheckbox
             className={classnames('checkbox')}
             value={isSelected}
