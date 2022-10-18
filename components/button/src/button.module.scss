@@ -123,6 +123,52 @@
     }
   }
 
+  &.tertiary {
+    color: text-color('primary');
+    background-color: color('white');
+    border-color: color('white');
+
+    &:disabled {
+      color: contrast-text-color('gray-light-3', 'disabled');
+      background-color: color('gray-light-3');
+      border-color: color('white');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        color: color('primary-dark-1');
+      }
+
+      &:active,
+      &:active:hover {
+        color: color('primary-dark-2');
+      }
+    }
+  }
+
+  &.warning {
+    color: contrast-text-color('danger');
+    background-color: color('danger');
+    border-color: color('danger');
+
+    &:disabled {
+      color: contrast-text-color('button.disabled', 'disabled');
+      background-color: color('button.disabled');
+      border-color: color('button.disabled');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: color('danger-dark-1');
+      }
+
+      &:active,
+      &:active:hover {
+        background-color: color('danger-dark-2');
+      }
+    }
+  }
+
   &.inherit {
     color: var(--current-color, currentColor);
 

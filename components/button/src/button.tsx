@@ -14,7 +14,7 @@ import Bell from 'uikit-icons/svgs/Bell'
 
 export interface Props extends BaseProps {
   /** The visual style to convey purpose of the button. */
-  type?: 'primary' | 'secondary' | 'link' | 'text'
+  type?: 'primary' | 'secondary' | 'tertiary' | 'warning' | 'link' | 'text'
   /** Will show the button as a notification button with the number of notifications. (provided)*/
   notifications?: number
   /** The label text of the button. */
