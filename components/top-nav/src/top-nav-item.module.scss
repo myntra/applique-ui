@@ -2,7 +2,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 16px 16px 18px 16px;
+  padding: 16px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -16,9 +16,21 @@
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: #4f47c8;
+    color: #0e0f17;
     cursor: pointer;
     background-color: #ededf9;
     border-bottom: 2px solid #4f47c8;
+  }
+
+  &.active-label {
+    color: #4f47c8;
+    border-bottom: 2px solid #4f47c8;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 8px;
+    vertical-align: middle;
   }
 }

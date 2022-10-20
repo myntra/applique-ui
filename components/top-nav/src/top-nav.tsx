@@ -3,15 +3,10 @@ import classnames from './top-nav.module.scss'
 import Context from './context'
 import TopNavItem from './top-nav-item'
 import Layout from '@myntra/uikit-component-layout'
-import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
 import TopNavHover from './top-nav-hover'
 import TopNavSidebar from './top-nav-sidebar'
-import Button from '@myntra/uikit-component-button'
 import Icon from '@myntra/uikit-component-icon'
-import CheckSolid from 'uikit-icons/svgs/CheckSolid'
-import Bell from 'uikit-icons/svgs/Bell'
-import { fullData } from './utils'
-import Dropdown from '@myntra/uikit-component-dropdown'
+import { fullData as utilData } from './utils'
 import QuickLinkHover from './quicklink-hover'
 
 export interface Props extends BaseProps {
@@ -32,7 +27,7 @@ export default class TopNav extends PureComponent<
   {
     isHovering: boolean
     hoverTitle: string
-    position: number
+    hoverItemPos: number
     sidebarTitle: string
     sidebarEnabled: boolean
     activeMenu: string
@@ -45,37 +40,53 @@ export default class TopNav extends PureComponent<
   state = {
     isHovering: false,
     hoverTitle: null,
-    position: null,
+    hoverItemPos: null,
+
     sidebarEnabled: false,
     sidebarTitle: null,
+
     activeMenu: null,
+
     activeItem: null,
+
     quickLinkHover: false,
     quickLinkPos: null,
     quickLinkRenderItem: null,
   }
 
+  componentDidMount(): void {
+    /*
+    get window url, set l0, l1, l2 based on it
+    */
+  }
+
   enableHover = (index, title) => {
     const parent = document.getElementsByClassName('tabs-container')[0]
-    const position =
+    const hoverItemPos =
       parent.children[index].getBoundingClientRect().left -
       parent.getBoundingClientRect().left / 2
-    this.setState({ isHovering: true, position, hoverTitle: title })
+    this.setState({ isHovering: true, hoverItemPos, hoverTitle: title })
   }
   disableHover = () => {
     this.setState({ isHovering: false })
   }
 
-  handleClick = () => {
-    const defaultState = {
-      isHovering: false,
-      position: null,
-      sidebarEnabled: false,
+  handleSidebarItemClicked = (object: any) => {
+    this.setState({
+      activeMenu: object.activeMenu,
+      activeItem: object.child.title,
+    })
+    this.props.dispatchFunction(object.child.dispatchFunctionObject)
+  }
+
+  handleNoHoverClicked = (object: any) => {
+    this.setState({
       activeMenu: null,
       activeItem: null,
-    }
-    console.log('Clicked')
-    this.setState({ ...defaultState })
+      sidebarEnabled: false,
+      sidebarTitle: null,
+    })
+    this.props.dispatchFunction(object.dispatchFunctionObject)
   }
 
   hoverItemClicked = (item) => {
@@ -85,6 +96,7 @@ export default class TopNav extends PureComponent<
       activeMenu: item.menuTitle,
       activeItem: item.clickedTitle,
     })
+    this.props.dispatchFunction(item.dispatchFunctionObject)
   }
 
   showState = () => {
@@ -100,60 +112,20 @@ export default class TopNav extends PureComponent<
     })
   }
 
-  renderADiv = () => {
-    return (
-      <div>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
-      </div>
-    )
-  }
-
   render() {
-    const labels = Object.keys(fullData)
+    const fullData = this.props.data || utilData
+    const labels = Object.keys(fullData).filter(
+      (it) => it !== 'quickLinks' && it !== 'logo'
+    )
     const {
       isHovering,
       sidebarEnabled,
+      sidebarTitle,
       activeItem,
       activeMenu,
       quickLinkHover,
     } = this.state
-    const quickLinks = [
-      {
-        icon: Bell,
-        renderFunction: () => {
-          return (
-            <div>
-              <ul>
-                <li>First Item 1</li>
-                <li>First Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-              </ul>
-            </div>
-          )
-        },
-      },
-      {
-        icon: CheckSolid,
-        renderFunction: () => {
-          return (
-            <div>
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Second Item 3</li>
-                <li>Second Item 4</li>
-              </ul>
-            </div>
-          )
-        },
-      },
-    ]
+    const { quickLinks } = fullData
     return (
       <Context.Provider
         value={{
@@ -165,15 +137,17 @@ export default class TopNav extends PureComponent<
           gutter="none"
           className={classnames('header-container')}
         >
-          <div className={classnames('logo')}>
-            <MyntraLogo />
-          </div>
+          <div className={classnames('logo')}>{fullData.logo}</div>
           <Layout
             type="stack"
             distribution="spaceBetween"
             className={classnames('tabs-and-quick-links-container')}
           >
-            <Layout type="stack" className={classnames('tabs-container')}>
+            <Layout
+              type="stack"
+              gutter="none"
+              className={classnames('tabs-container')}
+            >
               {labels.map((title, index) => {
                 return (
                   <TopNavItem
@@ -182,6 +156,12 @@ export default class TopNav extends PureComponent<
                     title={title}
                     onMouseEnter={() => this.enableHover(index, title)}
                     onMouseLeave={this.disableHover}
+                    onClick={
+                      fullData[title].noHover
+                        ? () => this.handleNoHoverClicked(fullData[title])
+                        : null
+                    }
+                    isActive={sidebarTitle == title}
                   />
                 )
               })}
@@ -211,7 +191,7 @@ export default class TopNav extends PureComponent<
             onItemClick={this.hoverItemClicked}
             data={fullData[this.state.hoverTitle].data}
             onMouseLeave={this.disableHover}
-            position={this.state.position}
+            position={this.state.hoverItemPos}
             onMouseEnter={() => this.setState({ isHovering: true })}
           />
         )}
@@ -220,6 +200,7 @@ export default class TopNav extends PureComponent<
             data={fullData[this.state.sidebarTitle].data}
             activeMenu={activeMenu}
             activeItem={activeItem}
+            onItemClick={this.handleSidebarItemClicked}
           />
         )}
         {quickLinkHover && (
@@ -234,9 +215,6 @@ export default class TopNav extends PureComponent<
             renderFunction={this.state.quickLinkRenderItem}
           />
         )}
-
-        {/* <Button onClick={this.handleClick}>Reset to Default State</Button>
-          <Button onClick={this.showState}>See State</Button> */}
       </Context.Provider>
     )
   }

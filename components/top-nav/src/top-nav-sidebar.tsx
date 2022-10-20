@@ -4,7 +4,7 @@ import Context, { TopNavContext } from './context'
 import Layout from '@myntra/uikit-component-layout'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
 import Icon from '@myntra/uikit-component-icon'
-import Bell from 'uikit-icons/svgs/Bell'
+import Bell from 'uikit-icons/svgs/BoxSolid'
 
 export interface Props extends BaseProps {
   classname?: string
@@ -21,8 +21,25 @@ export interface Props extends BaseProps {
  */
 
 export default class TopNavSidebar extends PureComponent<Props, {}> {
+  handleMenuItemClicked = (parent, child) => {
+    const clickObject = {
+      activeMenu: parent.title,
+      child,
+    }
+    this.props.onItemClick(clickObject)
+  }
+
+  handleDirectItemClicked = (child) => {
+    const clickObject = {
+      activeMenu: null,
+      child,
+    }
+    this.props.onItemClick(clickObject)
+  }
+
   render() {
     const { data, activeMenu, activeItem } = this.props
+
     return (
       <div className={classnames('sidebar-container')}>
         {data.map((item) => {
@@ -32,11 +49,21 @@ export default class TopNavSidebar extends PureComponent<Props, {}> {
               activeItem={activeItem}
               data={item}
               key={item.title}
+              onItemClick={(child) => this.handleMenuItemClicked(item, child)}
             />
           ) : (
-            <label className={classnames('sidebar-menu-child-link')}>
-              <li className={classnames('sidebar-menu-child')} key={item.title}>
-                <Layout type="stack">
+            <label
+              className={classnames('sidebar-menu-child-link')}
+              onClick={() => this.handleDirectItemClicked(item)}
+            >
+              <li
+                className={classnames(
+                  'sidebar-menu-child',
+                  activeItem == item.title ? 'active-link' : null
+                )}
+                key={item.title}
+              >
+                <Layout type="stack" gutter="none" alignment="middle">
                   <Icon className="sidebar-menu-icon" name={Bell} />
                   <div
                     className={classnames(

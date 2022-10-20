@@ -26,6 +26,8 @@ export default class TopNavHover extends PureComponent<Props, {}> {
     const obj = {
       clickedTitle: child.title,
       menuTitle: menu ? menu.title : null,
+      ...child,
+      //   ...menu
     }
     this.props.onItemClick(obj)
   }

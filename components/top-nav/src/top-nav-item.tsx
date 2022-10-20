@@ -28,16 +28,21 @@ export default function TopNavItem({
   data,
   onClick,
   icon,
+  isActive,
   ...props
 }: Props) {
   return (
     <li
-      className={classnames('top-nav-label', className)}
+      className={classnames(
+        'top-nav-label',
+        className,
+        isActive ? 'active-label' : null
+      )}
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}
       onClick={onClick}
     >
-      {icon ? <Icon name={icon} /> : null}
+      {icon ? <Icon className={classnames('icon')} name={icon} /> : null}
       {title}
     </li>
   )

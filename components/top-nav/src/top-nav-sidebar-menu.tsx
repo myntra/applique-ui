@@ -4,7 +4,7 @@ import Context, { TopNavContext } from './context'
 import Layout from '@myntra/uikit-component-layout'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
 import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
-import Bell from 'uikit-icons/svgs/Bell'
+import Bell from 'uikit-icons/svgs/BoxSolid'
 import Icon from '@myntra/uikit-component-icon'
 
 export interface Props extends BaseProps {
@@ -32,12 +32,9 @@ export default class TopNavSidebarMenu extends PureComponent<
   componentDidMount(): void {
     this.setState({ isOpen: this.props.isActive })
   }
-  // componentDidUpdate(): void {
-  //     this.setState({isOpen: this.props.isActive})
-  // }
 
   render() {
-    const { data, isActive, activeItem } = this.props
+    const { data, isActive, activeItem, onItemClick } = this.props
     return (
       <React.Fragment>
         <li
@@ -50,7 +47,7 @@ export default class TopNavSidebarMenu extends PureComponent<
             this.setState({ isOpen: !this.state.isOpen })
           }}
         >
-          <Layout type="stack">
+          <Layout type="stack" gutter="none" alignment="middle">
             <Icon className="sidebar-menu-icon" name={Bell} />
             <div
               className={classnames(
@@ -69,7 +66,10 @@ export default class TopNavSidebarMenu extends PureComponent<
         {this.state.isOpen &&
           data.data.map((child) => {
             return (
-              <label className={classnames('sidebar-menu-child-link')}>
+              <label
+                className={classnames('sidebar-menu-child-link')}
+                onClick={() => onItemClick(child)}
+              >
                 <li
                   className={classnames(
                     'sidebar-menu-child',
@@ -77,7 +77,7 @@ export default class TopNavSidebarMenu extends PureComponent<
                   )}
                   key={child.title}
                 >
-                  <Layout type="stack">
+                  <Layout type="stack" gutter="none">
                     <Icon className="sidebar-menu-icon" name={null} />
                     <div
                       className={classnames(
