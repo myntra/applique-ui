@@ -77,7 +77,6 @@ function createComponentsFile(component) {
         (specifier) => specifier.imported.name
       )
     : []
-
   Fs.writeFileSync(
     Path.resolve(__dirname, `app/uikit.${component}.js`),
     [

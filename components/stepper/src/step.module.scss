@@ -46,13 +46,13 @@
   &__label {
     position: absolute;
     &--horizontal {
-      left: size('3x') - (size('small') / 2);
+      left: size('3x') - (size('small') * 0.5);
       padding-top: size('small');
       text-align: center;
       transform: translateX(-50%);
     }
     &--vertical {
-      top: size('3x') - (size('small') / 2);
+      top: size('3x') - (size('small') * 0.5);
       left: 100%;
       min-width: size('3x') * 10;
       padding-left: size('3x');
@@ -70,7 +70,7 @@
     position: absolute;
     left: size('5x');
     width: 15%;
-    height: size('1x') / 2;
+    height: size('1x') * 0.5;
     background: color('primary');
   }
   &__item {
@@ -88,7 +88,7 @@
       #{ $self }__half-complete {
         top: size('5x');
         left: 50%;
-        width: size('1x') / 2;
+        width: size('1x') * 0.5;
         height: 15%;
         transform: translateX(-50%);
       }

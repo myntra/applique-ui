@@ -1,0 +1,64 @@
+import { Anatomy, Do1, Do2, Do3, Dont1, Dont2, Dont3, Specs0, Specs1 } from "./images"
+
+## Anatomy
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="spaceAround" alignment="top">
+        <Anatomy />
+    </Layout>
+</ImagePreview>
+
+A. **Label**: Indicates what sort of information the field requires and is left-aligned directly above the input area.
+
+B. **Input Area**: This is where people enter text.
+
+C. **Placeholder Text**: Lets people know how they should use the field, for example, “Type / Scan Item Code.”
+
+D. **Main Icon**: Provide Visual hint as icon.
+
+E. **Helper Text / Link / Message (Error and Success)**: Provides context about a field's input. and In filled State gives message.
+
+F. **More info icon (optional)**: In certain cases where detailed help or context required this provide detailed info of an Input field
+
+## Specs
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="spaceAround" alignment="middle">
+        <Specs0 />
+        <Specs1 />
+    </Layout>
+</ImagePreview>
+
+<small>Padding and size measurements (in px) with icon and without icon.</small>
+
+## Dos and Don'ts
+
+1. Minimum width should be greater or equals to 240px
+
+<ImagePreview>
+    <Layout type="stack" distribution="spaceAround"  alignment="middle">
+        <Do1 />
+        <Dont1 />
+    </Layout>
+</ImagePreview>
+
+2. Label text shouldn't be truncated or wrap over two or more lines. Keep it short, clear, and fully visible.
+
+<ImagePreview>
+    <Layout type="stack" distribution="spaceAround" alignment="middle">
+        <Do2 />
+        <Dont2 />
+    </Layout>
+</ImagePreview>
+
+3. Use Space Layout between Input Fields
+
+<ImagePreview>
+    <Layout type="row" alignment="middle">
+        <Do3 />
+        <Dont3 />
+    </Layout>
+</ImagePreview>
+
+<small>This section contains components attributes, anatomy and variation of component type.</small>
+

@@ -35,7 +35,7 @@
   }
 
   &.small {
-    font-size: size('5x') / 2;
+    font-size: size('5x') * 0.5;
   }
 
   &.large {
@@ -45,7 +45,7 @@
 
 @include media-breakpoint-down('sm') {
   .badge {
-    padding: size('small') / 2 size('2x');
+    padding: size('small') * 0.5 size('2x');
 
     @include typography('caption');
   }

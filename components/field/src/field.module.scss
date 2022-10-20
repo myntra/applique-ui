@@ -2,15 +2,16 @@
 
 .title {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  text-transform: uppercase;
+  width: 100%;
 
-  @include typography('caption');
+  @include typography('caption-revamp');
 }
 
 .required {
   padding-left: 2px;
-  color: color('danger');
+  color: color('input.error');
 }
 
 .meta {
@@ -25,21 +26,34 @@
 }
 
 .meta > * {
+  padding-left: 8px;
   color: color('text-dark-medium-emphasis'); // TODO: Change to mid-emphasis.
 
-  @include typography('caption');
+  @include typography('caption-revamp-light');
 }
 
 .meta > [role='alert'] {
-  color: color('danger');
+  color: color('input.error');
 }
 
 .container {
   @include margin-bottom('field');
   &.disabled {
-    color: color('text-dark-disabled');
+    color: color('input.disabled');
     .meta > * {
-      color: color('text-dark-disabled');
+      color: color('input.disabled');
+    }
+    .meta > [role='alert'] {
+      color: color('input.error');
     }
   }
+}
+.error {
+  color: color('input.error');
+}
+.success {
+  color: color('success-base-new');
+}
+.icon {
+  color: color('primary-base-new');
 }

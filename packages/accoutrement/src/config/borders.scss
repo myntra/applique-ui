@@ -8,6 +8,12 @@ $borders: (
   'nav-bar': '#default',
   'top-bar': '#nav-bar',
   'tab.pane': '#default',
+  'error': 1px solid color('danger-base-new'),
+  'input-default': 1px solid color('input.border'),
+  'disabled': 1px solid color('input.disabled'),
+  'focused': 1px solid color('input.focused'),
+  'filled': 1px solid color('input.filled'),
+  'hovered': 1px solid color('input.hovered'),
 );
 
 $-tokens-borders: () !default;

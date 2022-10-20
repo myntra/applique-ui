@@ -1,0 +1,88 @@
+import { Overview0, Overview1, Overview2 } from './images'
+
+This section contains component attributes, anatomy and variation of component type.
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview0 />
+        <Overview1 />
+    </Layout>
+</ImagePreview>
+
+**Dropdown:** Allows the user to select one option from a list.
+
+**Multi-select:** Allows the user to select multiple options from a list and filter.
+
+The dropdown component has a lot of variations we can use. It contains a label and optional icons before or after the label. 
+
+Fill, size, and width can all be mixed and matched to get the exact Dropdown needed.
+
+## States
+Dropdown have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, active, inputted, etc).
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview2 />
+    </Layout>
+</ImagePreview>
+
+## Variants
+
+### Dropdown
+
+By default, the dropdown displays Lable, placeholder text and chevron icon at the end.
+
+<Documenter component={Dropdown}>
+
+```preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+
+return (
+<>
+  {'Label'}
+  <InputSelect
+    options={options}
+    value={value} onChange={setValue}
+  />
+</>
+)
+```
+
+</Documenter>
+
+### Multi-select
+
+By default, the Multi select displays Lable, placeholder text and chevron icon at the end. it can be used to select multiple options from a list or to filter information.
+
+<Documenter component={Dropdown}>
+
+```preview
+const [value, setValue] = useState();
+const [options] = useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+
+return (
+<>
+  {'Label'}
+  <InputSelect
+    multiple
+    options={options}
+    value={value} onChange={setValue}
+  />
+</>
+)
+```
+
+</Documenter>
+
+
+
+
