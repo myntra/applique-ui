@@ -132,89 +132,91 @@ export default class TopNav extends PureComponent<
           isOpen: true,
         }}
       >
-        <Layout
-          type="stack"
-          gutter="none"
-          className={classnames('header-container')}
-        >
-          <div className={classnames('logo')}>{fullData.logo}</div>
+        <div>
           <Layout
             type="stack"
-            distribution="spaceBetween"
-            className={classnames('tabs-and-quick-links-container')}
+            gutter="none"
+            className={classnames('header-container')}
           >
+            <div className={classnames('logo')}>{fullData.logo}</div>
             <Layout
               type="stack"
-              gutter="none"
-              className={classnames('tabs-container')}
+              distribution="spaceBetween"
+              className={classnames('tabs-and-quick-links-container')}
             >
-              {labels.map((title, index) => {
-                return (
-                  <TopNavItem
-                    icon={fullData[title].icon}
-                    key={title}
-                    title={title}
-                    onMouseEnter={() => this.enableHover(index, title)}
-                    onMouseLeave={this.disableHover}
-                    onClick={
-                      fullData[title].noHover
-                        ? () => this.handleNoHoverClicked(fullData[title])
-                        : null
-                    }
-                    isActive={sidebarTitle == title}
-                  />
-                )
-              })}
-            </Layout>
-            <Layout
-              type="stack"
-              className={classnames('quick-links-container')}
-              gutter="none"
-            >
-              {quickLinks.map((link) => {
-                return (
-                  <div
-                    onClick={(event) =>
-                      this.enableQuickLinkHover(event, link.renderFunction)
-                    }
-                    className={classnames('quick-links-icon')}
-                  >
-                    <Icon name={link.icon} fontSize="small" />
-                  </div>
-                )
-              })}
+              <Layout
+                type="stack"
+                gutter="none"
+                className={classnames('tabs-container')}
+              >
+                {labels.map((title, index) => {
+                  return (
+                    <TopNavItem
+                      icon={fullData[title].icon}
+                      key={title}
+                      title={title}
+                      onMouseEnter={() => this.enableHover(index, title)}
+                      onMouseLeave={this.disableHover}
+                      onClick={
+                        fullData[title].noHover
+                          ? () => this.handleNoHoverClicked(fullData[title])
+                          : null
+                      }
+                      isActive={sidebarTitle == title}
+                    />
+                  )
+                })}
+              </Layout>
+              <Layout
+                type="stack"
+                className={classnames('quick-links-container')}
+                gutter="none"
+              >
+                {quickLinks.map((link) => {
+                  return (
+                    <div
+                      onClick={(event) =>
+                        this.enableQuickLinkHover(event, link.renderFunction)
+                      }
+                      className={classnames('quick-links-icon')}
+                    >
+                      <Icon name={link.icon} fontSize="small" />
+                    </div>
+                  )
+                })}
+              </Layout>
             </Layout>
           </Layout>
-        </Layout>
-        {isHovering && !fullData[this.state.hoverTitle].noHover && (
-          <TopNavHover
-            onItemClick={this.hoverItemClicked}
-            data={fullData[this.state.hoverTitle].data}
-            onMouseLeave={this.disableHover}
-            position={this.state.hoverItemPos}
-            onMouseEnter={() => this.setState({ isHovering: true })}
-          />
-        )}
-        {sidebarEnabled && (
-          <TopNavSidebar
-            data={fullData[this.state.sidebarTitle].data}
-            activeMenu={activeMenu}
-            activeItem={activeItem}
-            onItemClick={this.handleSidebarItemClicked}
-          />
-        )}
-        {quickLinkHover && (
-          <div
-            onClick={() => this.setState({ quickLinkHover: false })}
-            className={classnames('quicklink-overlay')}
-          ></div>
-        )}
-        {quickLinkHover && (
-          <QuickLinkHover
-            position={this.state.quickLinkPos}
-            renderFunction={this.state.quickLinkRenderItem}
-          />
-        )}
+          {isHovering && !fullData[this.state.hoverTitle].noHover && (
+            <TopNavHover
+              onItemClick={this.hoverItemClicked}
+              data={fullData[this.state.hoverTitle].data}
+              onMouseLeave={this.disableHover}
+              position={this.state.hoverItemPos}
+              onMouseEnter={() => this.setState({ isHovering: true })}
+            />
+          )}
+          {sidebarEnabled && (
+            <TopNavSidebar
+              data={fullData[this.state.sidebarTitle].data}
+              activeMenu={activeMenu}
+              activeItem={activeItem}
+              onItemClick={this.handleSidebarItemClicked}
+            />
+          )}
+          {quickLinkHover && (
+            <div
+              onClick={() => this.setState({ quickLinkHover: false })}
+              className={classnames('quicklink-overlay')}
+            ></div>
+          )}
+          {quickLinkHover && (
+            <QuickLinkHover
+              position={this.state.quickLinkPos}
+              renderFunction={this.state.quickLinkRenderItem}
+            />
+          )}
+        </div>
       </Context.Provider>
     )
   }
