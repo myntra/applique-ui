@@ -124,7 +124,9 @@ export default class List extends PureComponent<
       }
     }
     const selectedIds = this.computeSelectedIds()
-    if (selectedIds.size === this.props.items.length - this.computeDisabled()) {
+    const totalItems = this.computeTotalItems()
+    const disabledItems = this.computeDisabled()
+    if (selectedIds.size === totalItems - disabledItems) {
       this.setState({ areSelectedAll: true })
     } else {
       this.setState({ areSelectedAll: false })
@@ -156,6 +158,24 @@ export default class List extends PureComponent<
       }
     }
     return numDisabled
+  }
+
+  computeTotalItems = () => {
+    // compute total items
+    var lenItems = 0
+    if (typeof this.props.items === 'string') {
+      // single list
+      lenItems = this.props.children.length
+    } else {
+      // grouped list
+      for (let index = 0; index < this.props.items.length; index++) {
+        const item = this.props.items[index]
+        const key = Object.keys(item)[0]
+        const listGroup = item[key]
+        lenItems = lenItems + listGroup.length
+      }
+    }
+    return lenItems
   }
 
   updateValueById(id: any) {
@@ -196,13 +216,30 @@ export default class List extends PureComponent<
       if (isDisabled) {
         continue
       }
-      if (ids.has(id)) {
-        if (toggle) value.splice(value.indexOf(id), 1)
+      if (typeof id === 'string') {
+        // single list
+        if (ids.has(id)) {
+          if (toggle) {
+            value.splice(value.indexOf(id), 1)
+          }
+        } else {
+          value.push(id)
+        }
       } else {
-        value.push(id)
+        // grouped list
+        const key = Object.keys(id)[0]
+        const listGroup = id[key]
+        for (let i = 0; i < listGroup.length; i++) {
+          if (ids.has(listGroup[i])) {
+            if (toggle) {
+              value.splice(value.indexOf(listGroup[i], 1))
+            }
+          } else {
+            value.push(listGroup[i])
+          }
+        }
       }
     }
-
     this.props.onChange(value)
   }
 
@@ -307,12 +344,7 @@ export default class List extends PureComponent<
   }
 
   selectAll = (children) => {
-    // compute number of disabled items
-    var numDisabled = this.computeDisabled()
-    const ids = this.computeSelectedIds()
-    // if count of selected items === total items - disabled items
-    // deselct all since all items are selected
-    if (children.length - numDisabled === ids.size) {
+    if (this.state.areSelectedAll) {
       this.updateValueByRange(0, children.length - 1, true)
       this.setState({ areSelectedAll: false })
     } else {
@@ -401,59 +433,98 @@ export default class List extends PureComponent<
       const isSelected = selectedIDs.has(id)
       const isActive = index === activeIndex
       const isDisabled = isItemDisabled(item)
-
-      return (
-        <li
-          key={id}
-          role="option"
-          aria-selected={isSelected}
-          id={`${this.idPrefix}-option-${index}`}
-          data-index={index}
-          data-id={id}
-          style={style}
-          className={classnames('item', {
-            'is-selected': isSelected,
-            'is-active': isActive,
-            'is-disabled': isDisabled,
-          })}
-          onClick={() => !isDisabled && this.handleClick({ id, index })}
-        >
-          {!multiple ? (
-            <InputRadio
-              className={classnames('radio')}
-              value={isSelected ? 'ok' : 'error'}
-              options={[{ value: 'ok', label: '' }]}
+      if (typeof item !== 'string') {
+        const key = Object.keys(item)[0]
+        const listValue = item[key]
+        return (
+          <div>
+            <div className={classnames('listheading')}>
+              {key}
+              <hr></hr>
+            </div>
+            {listValue.map((currItem, currIndex) => {
+              var item = currItem
+              const id = idForItem(item)
+              const isSelected = selectedIDs.has(id)
+              const isActive = currIndex === activeIndex
+              const isDisabled = isItemDisabled(item)
+              return (
+                <li
+                  key={id}
+                  role="option"
+                  aria-selected={isSelected}
+                  id={`${this.idPrefix}-option-${currIndex}`}
+                  data-index={currIndex}
+                  data-id={id}
+                  style={style}
+                  className={classnames('item', {
+                    'is-selected': isSelected,
+                    'is-active': isActive,
+                    'is-disabled': isDisabled,
+                  })}
+                  onClick={() =>
+                    !isDisabled && this.handleClick({ id, index: currIndex })
+                  }
+                >
+                  {!multiple && this.props.onChange ? (
+                    <InputRadio
+                      className={classnames('radio')}
+                      value={isSelected ? 'ok' : 'error'}
+                      options={[{ value: 'ok', label: '' }]}
+                    />
+                  ) : null}
+                  <InputCheckbox
+                    className={classnames('checkbox')}
+                    value={isSelected}
+                    htmlValue={id}
+                    tabIndex={-1}
+                    readOnly
+                    hidden={!multiple}
+                    disabled={isDisabled}
+                  />
+                  {children({ index: currIndex, id, item })}
+                </li>
+              )
+            })}
+          </div>
+        )
+      } else {
+        return (
+          <li
+            key={id}
+            role="option"
+            aria-selected={isSelected}
+            id={`${this.idPrefix}-option-${index}`}
+            data-index={index}
+            data-id={id}
+            style={style}
+            className={classnames('item', {
+              'is-selected': isSelected,
+              'is-active': isActive,
+              'is-disabled': isDisabled,
+            })}
+            onClick={() => !isDisabled && this.handleClick({ id, index })}
+          >
+            {!multiple && this.props.onChange ? (
+              <InputRadio
+                className={classnames('radio')}
+                value={isSelected ? 'ok' : 'error'}
+                options={[{ value: 'ok', label: '' }]}
+              />
+            ) : null}
+            <InputCheckbox
+              className={classnames('checkbox')}
+              value={isSelected}
+              htmlValue={id}
+              tabIndex={-1}
+              readOnly
+              hidden={!multiple}
+              disabled={isDisabled}
             />
-          ) : null}
-          <InputCheckbox
-            className={classnames('checkbox')}
-            value={isSelected}
-            htmlValue={id}
-            tabIndex={-1}
-            readOnly
-            hidden={!multiple}
-            disabled={isDisabled}
-          />
-          {children({ index, id, item })}
-        </li>
-      )
-    }
-
-    if (virtualized) {
-      return (
-        <VirtualList
-          ref={this.virtualListRef}
-          itemCount={items.length}
-          className={classnames(className, 'scroller')}
-          estimatedItemSize={33}
-          viewportSize={Math.min(360, items.length * 33)}
-          renderContainer={renderContainer}
-          renderScroller={renderScroller}
-          getCellKey={(index) => idForItem(items[index])}
-        >
-          {renderItem}
-        </VirtualList>
-      )
+            {children({ index, id, item })}
+          </li>
+        )
+      }
     }
 
     return renderContainer({

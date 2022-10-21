@@ -21,7 +21,7 @@
   width: 100%;
   min-width: 240px;
   height: 36px;
-  padding: 10px 10px 8px 8px;
+  padding: 10px 10px 8px 12px;
   cursor: pointer;
 
   @include typography('body');
@@ -49,14 +49,34 @@
   .radio {
     display: flex;
     align-items: center;
-    padding: 11px 11px 8px 6px;
+    padding: 11px 11px 8px 2px;
+  }
+}
+
+.listheading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: size('2x') size('3x');
+  font-size: 12px;
+  font-weight: 600;
+  color: #bababc;
+  text-transform: uppercase;
+  hr {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    margin-left: 8px;
+    color: #cfcfd1;
+    background-color: #cfcfd1;
+    border: none;
   }
 }
 
 .checkbox {
   margin: 0;
   margin-right: size('3x');
-  margin-left: size('2x');
+  margin-left: 2px;
   pointer-events: none;
   cursor: pointer;
 }

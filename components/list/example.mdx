@@ -52,7 +52,7 @@ TODO: Add keybord shortcuts.
 const items = [
   'Foo',
   'Bar',
-  'Baz',
+  'Baz'
 ];
 
 const [value, setValue] = useState(null);
@@ -67,15 +67,15 @@ const [value, setValue] = useState(null);
 </List>
 ```
 
-### Multiple Selection List
+### Multiple Selection List Groups
 
 TODO: Add keybord shortcuts.
 
 ```jsx preview
 const items = [
-  'Foo',
-  'Bar',
-  'Baz',
+  {'Foo': ['Item1', 'Item2', 'Item3']},
+  {'Bar': ['Hi', 'yo', 'bye']},
+  {'Baz':['No','Valo']}
 ];
 
 const [value, setValue] = useState(null);
@@ -84,7 +84,8 @@ const [value, setValue] = useState(null);
   items={items}
   value={value}
   onChange={value => setValue(value)}
-  multiple>
+  multiple
+  >
 
   {({ item }) => <span>{item}</span>}
 
