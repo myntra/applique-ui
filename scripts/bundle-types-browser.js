@@ -3,54 +3,79 @@ const path = require('path')
 const docgen = require('@myntra/docgen')
 const prettier = require('prettier')
 const { componentsDir, components, pascalCase } = require('./utils')
-const {
-  getDeclaredTypes,
-  getInferredTypes,
-} = require('./bundle-types/extractor')
+const apiDocGenerator = require('./docs/apiDocGenerator')
 
-writeUIKitAsyncImports(components)
-writeUIKitTypesForDocsEditor()
+let META = []
+let DOCS = {}
+
+extractDataFromComponents(components)
 
 // Helpers.
 function getComponentName(name) {
   return pascalCase(name)
 }
 
-function getComponentFileName(component) {
-  return path.resolve(componentsDir, component, 'src', component + '.tsx')
+function getComponentFileDirectory(component) {
+  return path.resolve(componentsDir, component, 'src')
 }
 
 function getPackageJSON(component) {
   return require(path.resolve(componentsDir, component, 'package.json'))
 }
 
-function writeUIKitTypesForDocsEditor() {
-  fs.writeFileSync(
-    path.resolve(__dirname, '../uikit.myntra.com/src/uikit.d.ts'),
-    getInferredTypes() + getDeclaredTypes()
-  )
+function processDocJSON(componentDoc) {
+  return {
+    name: componentDoc.name,
+    data: componentDoc.props.map(function(prop) {
+      return {
+        name: prop.name,
+        default:
+          prop.defaultValue != null
+            ? prop.defaultValue.value
+            : prop.defaultValue,
+        description: prop.description,
+        type: prop.type.name,
+      }
+    }),
+  }
+}
+
+function extractDataFromComponents(components) {
+  components.forEach((component, index) => {
+    const directory = getComponentFileDirectory(component)
+    const files = fs
+      .readdirSync(directory)
+      .filter((v) => /\.[j|t]sx$/.test(v))
+      .filter((v) => !/(spec)/.test(v))
+    files.forEach((file) => {
+      try {
+        const docs = docgen(path.join(directory, file))
+        const componentName = getComponentName(component)
+
+        if (!DOCS[component]) DOCS[component] = {}
+
+        DOCS[component][docs.displayName] = processDocJSON(docs)
+
+        console.log(docs.displayName)
+
+        META.push({
+          name: componentName,
+          since: docs.since,
+          status: docs.status,
+          path: '/components/' + components[index],
+        })
+      } catch (error) {
+        console.error(`In ${component}: ${file}`)
+        console.error(error)
+      }
+    })
+  })
+  writeUIKitAsyncImports(components)
+  apiDocGenerator(DOCS)
+  console.log('done...')
 }
 
 function writeUIKitAsyncImports(components) {
-  const META = []
-
-  components.forEach((component, index) => {
-    const file = getComponentFileName(component)
-    try {
-      const docs = docgen(file)
-
-      META.push({
-        name: getComponentName(component),
-        since: docs.since,
-        status: docs.status,
-        path: '/components/' + components[index],
-      })
-    } catch (error) {
-      console.error(`In ${component}: ${file}`)
-      console.error(error)
-    }
-  })
-
   fs.writeFileSync(
     path.resolve(__dirname, '../packages/uikit/src/components.ts'),
     prettier.format(
@@ -73,7 +98,7 @@ function writeUIKitAsyncImports(components) {
   )
 
   fs.writeFileSync(
-    path.resolve(__dirname, '../uikit.myntra.com/src/uikit.js'),
+    path.resolve(__dirname, '../uikit.js'),
     prettier.format(
       `
       import { lazy } from 'react'

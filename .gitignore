@@ -137,3 +137,5 @@ GitHub.sublime-settings
 # Rollup
 .rpt2_cache/
 
+# Docs
+components/*/docs/data.js

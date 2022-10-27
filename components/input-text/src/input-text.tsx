@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from './input-text.module.scss'
 import Icon, { IconName } from '@myntra/uikit-component-icon'
+import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
 
 export interface Props extends BaseProps {
   /** Sets the text format for the field. */
@@ -19,6 +20,19 @@ export interface Props extends BaseProps {
   adornment?: string | JSX.Element
   /** Position of the adornment */
   adornmentPosition?: 'start' | 'end'
+  /*** Field Context Passed from parent Field */
+  __fieldContext?: FieldContext
+  /*** Visually Representing error state of component */
+  error?: boolean
+  /*** Represent the variant of input box */
+  variant?: 'bordered' | 'standard'
+}
+type FieldContext = {
+  error?: boolean
+  disabled?: boolean
+}
+function isEmptyValue(value) {
+  return typeof value !== 'string' || !value
 }
 
 /**
@@ -37,26 +51,36 @@ export default function InputText({
   icon,
   adornment,
   adornmentPosition,
+  __fieldContext = {},
+  variant = 'standard',
   ...props
 }: Props) {
   readOnly = readOnly || !onChange
+
+  const { error, disabled } = {
+    error: __fieldContext.error || props.error,
+    disabled: __fieldContext.disabled || props.disabled,
+  }
+  const { placeholder = ' ' } = props
+  const bordered = variant === 'bordered'
+  const standard = variant === 'standard'
+  icon = SpinnerSolid
 
   return (
     <div
       className={classnames(
         'container',
-        { 'with-adornment': adornment },
+        { disable: !!disabled },
+        { standard: standard },
+        { bordered: bordered },
+        { filled: !isEmptyValue(value) },
+        { error: !!error },
         className
       )}
     >
       {icon && <Icon className={classnames('icon')} name={icon} />}
       {adornment && adornmentPosition === 'start' && (
-        <div
-          className={classnames(
-            'input-adornment',
-            `input-adornment--${adornmentPosition}`
-          )}
-        >
+        <div className={classnames('input-adornment', `input-adornment-start`)}>
           {adornment}
         </div>
       )}
@@ -65,15 +89,12 @@ export default function InputText({
         readOnly={readOnly}
         value={typeof value !== 'string' ? '' : value}
         onChange={readOnly ? null : (event) => onChange(event.target.value)}
-        className={classnames('input', { 'with-icon': !!icon })}
+        className={classnames('input')}
+        disabled={!!disabled}
+        placeholder={placeholder}
       />
       {adornment && adornmentPosition === 'end' && (
-        <div
-          className={classnames(
-            'input-adornment',
-            `input-adornment--${adornmentPosition}`
-          )}
-        >
+        <div className={classnames('input-adornment', `input-adornment-end`)}>
           {adornment}
         </div>
       )}
@@ -84,4 +105,6 @@ export default function InputText({
 InputText.defaultProps = {
   type: 'text',
   adornmentPosition: 'end',
+  __fieldContext: {},
+  variant: 'bordered',
 }

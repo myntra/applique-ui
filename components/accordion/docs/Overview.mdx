@@ -1,0 +1,83 @@
+import { Accordion0, Accordion1, Accordion2, Accordion3 } from './images'
+
+The accordion component delivers large amounts of content in a small space through progressive disclosure. The header title give the user a high level overview of the content allowing the user to decide which sections to read.
+
+Accordions can make information processing and discovering more effective. However, it does hide content from users and it’s important to account for a user not noticing or reading all of the included content. If a user is likely to read all of the content then don’t use an accordion as it adds the burden of an extra click; instead use a full scrolling page with normal headers.
+
+<Documenter component={props.components}>
+
+```
+return (
+<Accordion>
+    <Accordion.Item title={<div><Icon name={MapPin} fontSize="small" /> Accordion Title</div>}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+        Etiam nec nunc nec nisl luctus tincidunt efficitur vitae elit. Vestibulum iaculis nibh commodo neque ultrices lobortis. Cras magna massa, pretium vitae mattis varius, pharetra nec massa. Aliquam ac ex enim. Quisque consequat dui libero, vel blandit lorem porttitor sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed lobortis nisl, quis eleifend metus.
+    </Accordion.Item>
+    <Accordion.Item title="Accordion Title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+        Etiam nec nunc nec nisl luctus tincidunt efficitur vitae elit. Vestibulum iaculis nibh commodo neque ultrices lobortis. Cras magna massa, pretium vitae mattis varius, pharetra nec massa. Aliquam ac ex enim. Quisque consequat dui libero, vel blandit lorem porttitor sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed lobortis nisl, quis eleifend metus.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>
+
+Accordion can come up with icon or without icon and will have chevron icon to open and close it. 
+Width would be adjustable and height is fixed.
+
+## States
+The accordion component has two main states: collapsed and expanded. The chevron icon at the end of the accordion indicates which state the accordion is in. The chevron points down to indicate collapsed and up to indicate expanded.
+Accordions begin by default in the collapsed state with all content panels closed. Starting in a collapsed state gives the user a high level overview of the available information.
+A user can then independently expand each section of the accordion allowing for multiple sections to be open at once.
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Accordion0 />
+        <Accordion1 />
+        <Accordion2 />
+        <Accordion3 />
+    </Layout>
+</ImagePreview>
+
+<small>Default , Opened, Hover and Disabled</small>
+
+In addition to the collapsed and expanded states, accordions also have interactive states for hover, and disabled.
+
+## Variants
+
+### Default
+
+By default, the accordion will be in collapsed state. It would have an icon, label  and chevron icon
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Accordion>
+    <Accordion.Item title={<div><Icon name={MapPin} fontSize="small" /> Accordion Title</div>}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>
+
+### Default without icon
+
+This variant would have label and chevron icon. 
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Accordion>
+    <Accordion.Item title="Accordion Title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>

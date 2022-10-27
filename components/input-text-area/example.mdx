@@ -1,4 +1,6 @@
 import InputTextArea from './src/input-text-area'
+import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
+
 
 # InputTextArea
 
@@ -7,7 +9,12 @@ import InputTextArea from './src/input-text-area'
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputTextArea value={value} onChange={setValue} />
+<div>
+<p>Bordered Variant</p>
+<InputTextArea value={value} variant="bordered" onChange={setValue} />
+<p>Standard Variant</p>
+<InputTextArea value={value} variant="standard" onChange={setValue} />
+</div>
 ```
 
 </Documenter>
@@ -17,5 +24,37 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputTextArea value={"Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live"} disabled onChange={setValue} />
+<div>
+<p>Bordered Variant</p>
+<InputTextArea value={"Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live"} disabled variant="bordered"/>
+<p>Standard Variant</p>
+<InputTextArea value={"Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live"} disabled variant="standard"/>
+</div>
+
+```
+
+# InputTextArea With Icon
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+<p>Bordered Variant</p>
+<InputTextArea value={"Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live"} icon="SpinnerSolid" variant="bordered"/>
+<p>Standard Variant</p>
+<InputTextArea value={"Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live"} icon="SpinnerSolid"  variant="standard"/>
+</div>
+
+```
+
+# InputTextArea in error State
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+<p>Bordered Variant</p>
+<InputTextArea value={value} variant="bordered" onChange={setValue} error />
+<p>Standard Variant</p>
+<InputTextArea value={value} variant="standard" onChange={setValue} error />
+</div>
 ```

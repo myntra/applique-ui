@@ -7,23 +7,38 @@
   display: inline-block;
   width: 100%;
   overflow: hidden;
+  color: text-color('input.text');
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.no-border {
+  /*
+    we don't want to show border of internal input in any case
+  */
+  border: none !important;
 }
 
 .input {
   z-index: 0;
   width: 100%;
-  color: color('text-dark-medium-emphasis');
   cursor: pointer;
-
   &.with-icon {
-    padding: padding('input.with-icon');
+    padding: padding('input-select.with-icon');
+  }
+  &:disabled,
+  &[disabled] {
+    color: color('input.disabled');
+    background-color: transparent;
   }
 }
+.bordered {
+  padding: padding('input.select');
+}
 
-.value .input {
+.value .input,
+.value .input:not(:placeholder-shown) {
   width: 90%;
   text-overflow: ellipsis;
+  border: none;
   border-bottom: transparent;
 }

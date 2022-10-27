@@ -1,4 +1,5 @@
 import InputText from './src/input-text'
+import UserSolid from 'uikit-icons/svgs/UserSolid'
 
 # InputText
 
@@ -9,7 +10,7 @@ export const _styles = (function () {
   style.textContent = `.u-input-text-container .adornment {
     background-color: transparent;
     border-color: transparent;
-    bottom: 5px;
+    bottom: 2px;
     position: relative;
   }`
   document.head.appendChild(style)
@@ -20,7 +21,12 @@ export const _styles = (function () {
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value={value} onChange={setValue} />
+<div>
+  <p>Bordered Variant</p>
+  <InputText value={value} onChange={setValue} variant="bordered" />
+  <p>Standard Variant</p>
+  <InputText value={value} onChange={setValue} variant="standard" />
+</div>
 ```
 
 </Documenter>
@@ -33,7 +39,27 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value="Disabled" disabled placeholder="Your name" />
+<div>
+  <p>Bordered Variant</p>
+  <InputText  disabled placeholder="Your name" variant="bordered"/>
+  <p>Standard Variant</p>
+  <InputText disabled placeholder="Your Name" variant="standard" />
+</div>
+
+```
+## Inputs with error
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+  <p>Bordered </p>
+    <InputText error value={value} onChange={setValue} variant="bordered" placeholder="Your name" />
+  <p>Standard </p>
+  <InputText error value={value} onChange={setValue} variant="standard" placeholder="Your name" />
+
+</div>
+
 ```
 
 ## With placeholder text
@@ -41,7 +67,12 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value={value} onChange={setValue} placeholder="Your name" />
+<div>
+ <p>Bordered </p>
+  <InputText value={value} onChange={setValue} placeholder="Your name" />
+<p>Standard</p>
+  <InputText value={value} onChange={setValue} placeholder="Your name" variant="standard" />
+</div>
 ```
 
 ## With label text
@@ -58,8 +89,12 @@ const [value, setValue] = useState();
 
 ```jsx preview
 const [value, setValue] = useState();
-
-<InputText value={value} onChange={setValue} placeholder="Your name" icon={UserSolid}/>
+<div>
+ <p>Bordered </p>
+ <InputText value={value} onChange={setValue} placeholder="Your name" icon={UserSolid}/>
+<p>Standard</p>
+  <InputText value={value} onChange={setValue} placeholder="Your name" variant="standard" />
+</div>
 ```
 
 ## With prefix/suffix text or element
@@ -67,12 +102,33 @@ const [value, setValue] = useState();
 ```jsx preview
 const [value, setValue] = useState();
 
-<InputText value={value} onChange={setValue} adornment="/Kg" adornmentPosition='start'/>
+<div>
+<p> Prefix Text </p>
+  <InputText value={value} onChange={setValue} adornment="/Kg" adornmentPosition='start'/>
+<p> Suffix Text </p>
+  <InputText value={value} onChange={setValue} adornment="/Kg" adornmentPosition='end'/>
+</div>
 ```
 
 ```jsx preview
 const [value, setValue] = useState();
 const onClick = useCallback(() => console.log("clicked icon"))
-
-<InputText value={value} onChange={setValue} adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+<div>
+  <p>Prefix Element</p>
+  <p>Bordered</p>
+  <InputText value={value}  icon={UserSolid} onChange={setValue} adornmentPosition='start' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+  <p>Standard</p>
+  <InputText value={value}  icon={UserSolid} variant="standard" onChange={setValue} adornmentPosition='start' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+</div>  
+```
+```jsx preview
+const [value, setValue] = useState();
+const onClick = useCallback(() => console.log("clicked icon"))
+<div>
+  <p>Suffix Element</p>
+  <p>Bordered</p>
+  <InputText value={value}  icon={UserSolid} onChange={setValue} adornmentPosition='end' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+  <p>Standard</p>
+  <InputText value={value}  icon={UserSolid} variant="standard" onChange={setValue} adornmentPosition='end' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+</div>
 ```
