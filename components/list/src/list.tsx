@@ -440,7 +440,7 @@ export default class List extends PureComponent<
           <div>
             <div className={classnames('listheading')}>
               {key}
-              <hr></hr>
+              <div className={classnames('hr1')}></div>
             </div>
             {listValue.map((currItem, currIndex) => {
               var item = currItem
