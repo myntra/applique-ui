@@ -68,7 +68,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
     if (firstLevelId && firstLevelConfig.config) {
       return (
-        <div className={classnames('top-nav-sidebar')}>
+        <div className={classnames('top-nav-page-content-sidebar')}>
           {firstLevelConfig.config.map((item) => (
             <TopNavSidebarMenu
               selectedMenuId={
@@ -126,7 +126,9 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
           className={classnames('top-nav-page-content')}
         >
           {this.getSidebarView()}
-          {this.props.children}
+          <div className={classnames('top-nav-page-content-view')}>
+            {this.props.children}
+          </div>
         </Layout>
       </div>
     )

@@ -4,7 +4,7 @@ import Layout from '@myntra/uikit-component-layout'
 import { MENU_TYPES } from './config'
 import classnames from './top-nav-hover.module.scss'
 
-export interface Props extends BaseProps {
+export interface TopNavHoverProps extends BaseProps {
   classname?: string
   data?: any
   position?: number
@@ -47,7 +47,7 @@ function getFilteredNavs(config) {
   )
 }
 
-export default class TopNavHover extends PureComponent<Props, {}> {
+export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   onSubNavItemClick = (subNav) => {
     this.props.handleSubNavItemClick(subNav.dispatchFunctionObject)
   }
