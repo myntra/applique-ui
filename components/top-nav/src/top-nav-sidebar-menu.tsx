@@ -8,13 +8,15 @@ import Bell from 'uikit-icons/svgs/BoxSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
 
+export interface MenuItem {
+  type: String
+  icon: Node
+  title: String
+  config: Array<{ title: String }>
+}
+
 export interface TopNavSideBarMenuProps extends BaseProps {
-  menuItem: {
-    type: String
-    icon: Node
-    title: String
-    config: Array<{ title: String }>
-  }
+  menuItem: MenuItem
   isActive: boolean
   handleMenuItemClick: Function
   handleDirectItemClick: Function

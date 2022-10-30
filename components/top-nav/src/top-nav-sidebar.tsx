@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 
-import TopNavSidebarMenu from './top-nav-sidebar-menu'
+import TopNavSidebarMenu, { MenuItem } from './top-nav-sidebar-menu'
 import classnames from './top-nav-sidebar.module.scss'
 
 export interface Props extends BaseProps {
-  classname?: string
-  data?: any
+  activeConfig: {
+    config: Array<MenuItem>
+  }
 }
 
 /**
@@ -44,7 +45,6 @@ export default class TopNavSidebar extends PureComponent<Props, {}> {
             isActive={activeMenu && item.title == activeMenu}
             activeItem={activeItem}
             menuItem={item}
-            key={item.title}
             handleMenuItemClick={this.handleMenuItemClick}
             handleDirectItemClick={this.handleDirectItemClick}
           />
