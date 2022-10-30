@@ -1,17 +1,9 @@
 .top-nav-button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 16px;
-  font-family: Roboto, sans-serif;
   font-size: 14px;
+  font-weight: 600;
   line-height: 20px;
-  color: rgb(128, 128, 128);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  white-space: nowrap;
-  list-style-type: none;
+  color: #56575d;
   background-color: #fff;
   border: 0;
   border-bottom: 2px solid transparent;
@@ -29,8 +21,8 @@
   }
 
   &-icon {
+    align-self: center;
     width: 20px;
     padding-right: 8px;
-    vertical-align: middle;
   }
 }
