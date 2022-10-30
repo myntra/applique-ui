@@ -18,7 +18,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Catalog Management',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Catalog Dashboard',
@@ -42,7 +42,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Listings',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Listings Management',
@@ -68,7 +68,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Myntra Returns',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'RTV Requests',
@@ -86,22 +86,22 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Fulfillment View Dashboard',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
           dispatchFunctionObject: {
             path: '/fulfillmentViewDashboard',
           },
         },
         {
           title: 'Orders',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Customer Returns',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
-          title: 'Mdirect',
-          type: 'direct',
+          title: 'MMENU_DIRECT_LINK',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
@@ -110,7 +110,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Incentive For You',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Event Offers',
@@ -125,7 +125,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Discount For Customers',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Manage Discounts',
@@ -146,7 +146,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Coupons For Customers',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Global Coupons',
@@ -161,7 +161,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Myntra Ads',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Ads Summary',
@@ -182,7 +182,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Why Advertise',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
@@ -191,7 +191,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Financial Reports',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Payment Summary',
@@ -206,7 +206,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Settlement Reports',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Settlements',
@@ -227,27 +227,27 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Reconciliation Dashboard',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Order Fulfillment',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Invoices',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'E-Invoicing',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Commercial Terms',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Lower Deduction Certificate',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
@@ -256,7 +256,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Performance Overview',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Performance Snapshot',
@@ -274,7 +274,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Key Trends',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Performance',
@@ -294,7 +294,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Financial Reports',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Catalog',
@@ -321,15 +321,15 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Operational Reports',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Stock Movement Report',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Older Invoices',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
@@ -338,7 +338,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Partner University',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'B2B (OR/SOR)',
@@ -350,7 +350,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Raise A Ticket',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'OR/SOR',
@@ -362,11 +362,11 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Rate Cards and Policies',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Help and Support',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
@@ -375,7 +375,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Admin',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Partners',
@@ -396,7 +396,7 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Slot Mgmt',
-          type: 'menu',
+          type: 'MENU',
           config: [
             {
               title: 'Manage Slot',
@@ -420,19 +420,19 @@ export const DUMMY_DATA = {
         },
         {
           title: 'Events Admin',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Reporting Centre (Admin)',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'SPF Calculator',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
         {
           title: 'Rate Cards and Policies (Admin)',
-          type: 'direct',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },

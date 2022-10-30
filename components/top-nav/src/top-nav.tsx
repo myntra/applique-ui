@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import Layout from '@myntra/uikit-component-layout'
 
-import Context from './context'
 import TopNavItem, {
   TopNavItemProps as TopNavItemInterface,
 } from './top-nav-item'
@@ -49,40 +48,38 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     const { sidebarEnabled, activeItem, activeMenu } = this.state
 
     return (
-      <Context.Provider value={{ isOpen: true }}>
-        <div>
-          <Layout
-            gutter="xxxl"
-            type="stack"
-            alignment="middle"
-            className={classnames('top-nav')}
-          >
-            <div className={classnames('top-nav-logo')}>{logo}</div>
-            <div className={classnames('top-nav-content-container')}>
-              <Layout type="stack" gutter="none">
-                {Object.values(configurations.navigationConfig).map(
-                  (navigationItem) => (
-                    <TopNavItem itemData={navigationItem} isActive={true} />
-                  )
-                )}
-              </Layout>
-              <Layout type="stack" gutter="none">
-                {quickLinks.map((link) => (
-                  <QuickLink link={link} />
-                ))}
-              </Layout>
-            </div>
-          </Layout>
-          {sidebarEnabled && (
-            <TopNavSidebar
-              // data={fullData[this.state.sidebarTitle].data}
-              activeMenu={activeMenu}
-              activeItem={activeItem}
-              // onItemClick={this.handleSidebarItemClicked}
-            />
-          )}
-        </div>
-      </Context.Provider>
+      <div>
+        <Layout
+          gutter="xxxl"
+          type="stack"
+          alignment="middle"
+          className={classnames('top-nav')}
+        >
+          <div className={classnames('top-nav-logo')}>{logo}</div>
+          <div className={classnames('top-nav-content-container')}>
+            <Layout type="stack" gutter="none">
+              {Object.values(configurations.navigationConfig).map(
+                (navigationItem) => (
+                  <TopNavItem itemData={navigationItem} isActive={true} />
+                )
+              )}
+            </Layout>
+            <Layout type="stack" gutter="none">
+              {quickLinks.map((link) => (
+                <QuickLink link={link} />
+              ))}
+            </Layout>
+          </div>
+        </Layout>
+        {
+          <TopNavSidebar
+            activeConfig={configurations.navigationConfig.PRICING_N_PROMOTIONS}
+            activeMenu={activeMenu}
+            activeItem={activeItem}
+            // onItemClick={this.handleSidebarItemClicked}
+          />
+        }
+      </div>
     )
   }
 }
