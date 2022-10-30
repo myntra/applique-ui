@@ -1,28 +1,31 @@
-.sidebar {
-  &-menu {
-    width: 100%;
-    padding: 10px 16px;
-    margin-bottom: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #56575d;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+.sidebar-menu {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #56575d;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 
-    &-active {
-      font-weight: 600;
-      color: #4f47c8;
-    }
+  &-sub-item {
+    padding: 10px 15px 10px 45px;
+    text-align: left;
+  }
 
-    &-dropdown-icon {
-      align-self: center;
-    }
+  &-active {
+    font-weight: 600;
+    color: #4f47c8;
+  }
 
-    &:hover {
-      background: #ededf9;
-      border-radius: 20px;
-    }
+  &-dropdown-icon {
+    align-self: center;
+  }
+
+  &:hover {
+    background: #ededf9;
+    border-radius: 20px;
   }
 }

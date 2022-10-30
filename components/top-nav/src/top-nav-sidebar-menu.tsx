@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { MouseEventHandler, PureComponent } from 'react'
 
 import Layout from '@myntra/uikit-component-layout'
 import Icon from '@myntra/uikit-component-icon'
@@ -21,8 +21,8 @@ export interface TopNavSideBarMenuProps extends BaseProps {
   menuItem: MenuItem
   selectedMenuId?: string
   selectedSubMenuId?: string
-  handleMenuItemClick?: Function
-  handleDirectItemClick?: Function
+  handleMenuItemClick?: MouseEventHandler
+  handleDirectItemClick?: MouseEventHandler
 }
 
 interface TopNavSideBarMenuState {
@@ -44,14 +44,15 @@ export default class TopNavSidebarMenu extends PureComponent<
 > {
   constructor(props) {
     super(props)
+    const { menuItem, selectedMenuId } = this.props
     this.state = {
-      isOpen: this.props.isActive,
+      isOpen: menuItem.id === selectedMenuId,
     }
   }
 
   handleSectionClick = () => this.setState({ isOpen: !this.state.isOpen })
 
-  getViewRowItemView = (menuType, rowItem, isActive, handleSectionClick) => {
+  getMenuRowItemView = (menuType, rowItem, isActive, handleSectionClick) => {
     return (
       <button
         className={classnames(
@@ -62,15 +63,7 @@ export default class TopNavSidebarMenu extends PureComponent<
       >
         <Layout type="stack" distribution="spaceBetween">
           <Layout type="stack" gutter="large" alignment="middle">
-            <Icon
-              name={
-                [MENU_TYPES.MENU, MENU_TYPES.MENU_DIRECT_LINK].includes(
-                  menuType
-                )
-                  ? rowItem.icon || Bell
-                  : null
-              }
-            />
+            <Icon name={rowItem.icon || Bell} />
             <span>{rowItem.title}</span>
           </Layout>
           {menuType === MENU_TYPES.MENU && (
@@ -96,27 +89,33 @@ export default class TopNavSidebarMenu extends PureComponent<
     if (menuItem.type === MENU_TYPES.MENU) {
       return (
         <React.Fragment>
-          {this.getViewRowItemView(
+          {this.getMenuRowItemView(
             MENU_TYPES.MENU,
             menuItem,
             menuItem.id === selectedMenuId,
             this.handleSectionClick
           )}
           {this.state.isOpen &&
-            menuItem.config.map((subMenuItem) =>
-              this.getViewRowItemView(
-                MENU_TYPES.MENU_ITEM,
-                subMenuItem,
-                subMenuItem.id === selectedSubMenuId,
-                handleMenuItemClick
-              )
-            )}
+            menuItem.config.map((subMenuItem) => (
+              <button
+                className={classnames(
+                  'sidebar-menu',
+                  'sidebar-menu-sub-item',
+                  subMenuItem.id === selectedSubMenuId
+                    ? 'sidebar-menu-active'
+                    : null
+                )}
+                onClick={handleMenuItemClick}
+              >
+                <span>{subMenuItem.title}</span>
+              </button>
+            ))}
         </React.Fragment>
       )
     }
 
     if (menuItem.type === MENU_TYPES.MENU_DIRECT_LINK) {
-      return this.getViewRowItemView(
+      return this.getMenuRowItemView(
         MENU_TYPES.MENU_DIRECT_LINK,
         menuItem,
         menuItem.id === selectedMenuId,
