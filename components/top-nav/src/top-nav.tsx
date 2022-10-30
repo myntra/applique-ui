@@ -56,6 +56,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
             <Layout
               type="stack"
               distribution="spaceBetween"
+              alignment="stretch"
               className={classnames('top-nav-content-container')}
             >
               <Layout type="stack" gutter="none">

@@ -42,7 +42,7 @@ export default class TopNavItem extends PureComponent<
 
   enableHover = () => this.setState({ isHovering: true })
 
-  disableHover = () => this.setState({ isHovering: false })
+  disableHover = () => this.setState({ isHovering: true })
 
   handleNavItemClick = () =>
     this.props.dispatchFunction(this.props.itemData.dispatchFunctionObject)

@@ -62,7 +62,7 @@ export default class TopNavHover extends PureComponent<Props, {}> {
 
     return (
       <div
-        className={classnames('hover-item-container')}
+        className={classnames('hover-item')}
         onMouseLeave={disableHover}
         style={{
           top: `${parentPositions.bottom}px`,
@@ -72,11 +72,7 @@ export default class TopNavHover extends PureComponent<Props, {}> {
         <Layout type="stack" gutter="xl">
           {menus.map((menu) => {
             return (
-              <Layout
-                type="row"
-                key={menu.title}
-                className={classnames('hover-item-menu')}
-              >
+              <div key={menu.title} className={classnames('hover-item-menu')}>
                 <label className={classnames('hover-item-menu-title')}>
                   {menu.title}
                 </label>
@@ -86,23 +82,27 @@ export default class TopNavHover extends PureComponent<Props, {}> {
                     <button
                       onClick={() => this.onSubNavItemClick(it)}
                       key={it.title}
-                      className={classnames('hover-item-link')}
+                      className={classnames('hover-item-menu-link')}
                     >
                       {it.title}
                     </button>
                   )
                 })}
-              </Layout>
+              </div>
             )
           })}
           {directs && directs.length ? (
-            <Layout type="row" className={classnames('hover-item-direct')}>
+            <Layout
+              type="row"
+              gutter="xxl"
+              className={classnames('hover-item-direct')}
+            >
               {directs.map((directLink) => {
                 return (
                   <button
                     onClick={() => this.onSubNavItemClick(directLink)}
                     key={directLink.title}
-                    className={classnames('hover-item-link')}
+                    className={classnames('hover-item-direct-link')}
                   >
                     {directLink.title}
                   </button>
