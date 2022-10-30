@@ -10,17 +10,19 @@ import classnames from './top-nav-sidebar.module.scss'
 import { MENU_TYPES } from './config'
 
 export interface MenuItem {
+  id: string
   type: String
   icon: Node
   title: String
-  config: Array<{ title: String }>
+  config: Array<{ id: string; title: String }>
 }
 
 export interface TopNavSideBarMenuProps extends BaseProps {
   menuItem: MenuItem
-  isActive: boolean
-  handleMenuItemClick: Function
-  handleDirectItemClick: Function
+  selectedMenuId?: string
+  selectedSubMenuId?: string
+  handleMenuItemClick?: Function
+  handleDirectItemClick?: Function
 }
 
 interface TopNavSideBarMenuState {
@@ -53,8 +55,8 @@ export default class TopNavSidebarMenu extends PureComponent<
     return (
       <button
         className={classnames(
-          'sidebar-navigation-menu',
-          isActive ? 'sidebar-navigation-menu-active' : null
+          'sidebar-menu',
+          isActive ? 'sidebar-menu-active' : null
         )}
         onClick={handleSectionClick}
       >
@@ -73,7 +75,7 @@ export default class TopNavSidebarMenu extends PureComponent<
           </Layout>
           {menuType === MENU_TYPES.MENU && (
             <Icon
-              className={classnames('sidebar-navigation-menu-dropdown-icon')}
+              className={classnames('sidebar-menu-dropdown-icon')}
               name={this.state.isOpen ? ChevronUpSolid : ChevronDownSolid}
             />
           )}
@@ -85,8 +87,8 @@ export default class TopNavSidebarMenu extends PureComponent<
   getView() {
     const {
       menuItem,
-      isActive,
-      activeItem,
+      selectedMenuId,
+      selectedSubMenuId,
       handleMenuItemClick,
       handleDirectItemClick,
     } = this.props
@@ -97,7 +99,7 @@ export default class TopNavSidebarMenu extends PureComponent<
           {this.getViewRowItemView(
             MENU_TYPES.MENU,
             menuItem,
-            isActive,
+            menuItem.id === selectedMenuId,
             this.handleSectionClick
           )}
           {this.state.isOpen &&
@@ -105,7 +107,7 @@ export default class TopNavSidebarMenu extends PureComponent<
               this.getViewRowItemView(
                 MENU_TYPES.MENU_ITEM,
                 subMenuItem,
-                isActive,
+                subMenuItem.id === selectedSubMenuId,
                 handleMenuItemClick
               )
             )}
@@ -117,7 +119,7 @@ export default class TopNavSidebarMenu extends PureComponent<
       return this.getViewRowItemView(
         MENU_TYPES.MENU_DIRECT_LINK,
         menuItem,
-        isActive,
+        menuItem.id === selectedMenuId,
         handleDirectItemClick
       )
     }

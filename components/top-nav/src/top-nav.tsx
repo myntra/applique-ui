@@ -4,23 +4,36 @@ import Layout from '@myntra/uikit-component-layout'
 import TopNavItem, {
   TopNavItemProps as TopNavItemInterface,
 } from './top-nav-item'
-import TopNavSidebar from './top-nav-sidebar'
+import TopNavSidebarMenu from './top-nav-sidebar-menu'
 import QuickLink, { LinkInterface } from './quick-link'
 import { DUMMY_DATA } from './config'
 import classnames from './top-nav.module.scss'
+import { getPathToInfoMapping } from './utils'
 
 export interface TopNavProps extends BaseProps {
   config: {
     quickLinks: Array<LinkInterface>
     logo: Node
-    navigationConfig: { [key: string]: TopNavItemInterface }
+    navigationConfig: Array<TopNavItemInterface>
   }
 }
 
 interface TopNavState {
-  sidebarEnabled: boolean
-  activeMenu: string
-  activeItem: string
+  selectedTabDetails: {
+    currentPath: string
+    currentLebels: {
+      L1_LEVEL_ID?: string
+      L2_LEVEL_ID?: string
+      L3_LEVEL_ID?: string
+    }
+  }
+  pathToDetailMapping: {
+    [key: string]: {
+      L1_LEVEL_ID?: string
+      L2_LEVEL_ID?: string
+      L3_LEVEL_ID?: string
+    }
+  }
 }
 
 /**
@@ -33,19 +46,49 @@ interface TopNavState {
  */
 
 export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
-  state = {
-    sidebarEnabled: false,
+  constructor(props) {
+    super(props)
+    const currentPath = '/testingpath'
+    const pathToDetailsMapping = getPathToInfoMapping(
+      DUMMY_DATA.navigationConfig
+    )
+    this.state = {
+      selectedTabDetails: {
+        currentPath,
+        currentLebels: pathToDetailsMapping[currentPath] || {},
+      },
+      pathToDetailMapping: pathToDetailsMapping,
+    }
+  }
 
-    activeMenu: null,
+  getSidebarView() {
+    const configurations = this.props.config || DUMMY_DATA
+    const firstLevelId = this.state.selectedTabDetails.currentLebels.L1_LEVEL_ID
+    const firstLevelConfig = configurations.navigationConfig[firstLevelId]
 
-    activeItem: null,
+    if (firstLevelId && firstLevelConfig.config) {
+      return (
+        <div className={classnames('top-nav-sidebar')}>
+          {firstLevelConfig.config.map((item) => (
+            <TopNavSidebarMenu
+              selectedMenuId={
+                this.state.selectedTabDetails.currentLebels.L2_LEVEL_ID
+              }
+              selectedSubMenuId={
+                this.state.selectedTabDetails.currentLebels.L3_LEVEL_ID
+              }
+              menuItem={item}
+            />
+          ))}
+        </div>
+      )
+    }
+    return null
   }
 
   render() {
     const configurations = this.props.config || DUMMY_DATA
     const { quickLinks, logo } = configurations
-
-    const { sidebarEnabled, activeItem, activeMenu } = this.state
 
     return (
       <div className={classnames('top-nav')}>
@@ -58,9 +101,15 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
             <Layout type="stack" gutter="none">
-              {Object.values(configurations.navigationConfig).map(
-                (navigationItem) => (
-                  <TopNavItem itemData={navigationItem} isActive={true} />
+              {Object.entries(configurations.navigationConfig).map(
+                ([levelId, navigationItem]) => (
+                  <TopNavItem
+                    itemData={navigationItem}
+                    isActive={
+                      this.state.selectedTabDetails.currentLebels
+                        .L1_LEVEL_ID === levelId
+                    }
+                  />
                 )
               )}
             </Layout>
@@ -76,11 +125,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          <TopNavSidebar
-            activeConfig={configurations.navigationConfig.PRICING_N_PROMOTIONS}
-            activeMenu={activeMenu}
-            activeItem={activeItem}
-          />
+          {this.getSidebarView()}
           {this.props.children}
         </Layout>
       </div>

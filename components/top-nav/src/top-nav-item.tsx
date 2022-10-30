@@ -6,6 +6,7 @@ import TopNavHover from './top-nav-hover'
 
 export interface TopNavItemProps extends BaseProps {
   itemData?: {
+    id: string
     icon: Node
     label: string
     config: Array<any>
