@@ -1,4 +1,4 @@
-import React, { Children, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import VirtualList, {
   Props as VirtualListProps,
