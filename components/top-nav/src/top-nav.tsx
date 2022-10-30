@@ -1,219 +1,83 @@
 import React, { PureComponent } from 'react'
-import classnames from './top-nav.module.scss'
-import Context from './context'
-import TopNavItem from './top-nav-item'
 import Layout from '@myntra/uikit-component-layout'
-import TopNavHover from './top-nav-hover'
-import TopNavSidebar from './top-nav-sidebar'
-import Icon from '@myntra/uikit-component-icon'
-import { fullData as utilData } from './utils'
-import QuickLinkHover from './quicklink-hover'
 
-export interface Props extends BaseProps {
-  /** @private */
-  className?: string
+import Context from './context'
+import TopNavItem, {
+  TopNavItemProps as TopNavItemInterface,
+} from './top-nav-item'
+import TopNavSidebar from './top-nav-sidebar'
+import QuickLink, { LinkInterface } from './quick-link'
+import { DUMMY_DATA } from './utils'
+import classnames from './top-nav.module.scss'
+
+export interface TopNavProps extends BaseProps {
+  config: {
+    quickLinks: Array<LinkInterface>
+    logo: Node
+    navigationConfig: { [key: string]: TopNavItemInterface }
+  }
+}
+
+interface TopNavState {
+  sidebarEnabled: boolean
+  activeMenu: string
+  activeItem: string
 }
 
 /**
- * <Component description goes here>
+ * <Top Navigation that handled the Single Page Application navigation>
  *
  * @since 1.13.101
  * @status REVIEWING
  * @category basic
  * @see http://uikit.myntra.com/components/top-nav
  */
-export default class TopNav extends PureComponent<
-  Props,
-  {
-    isHovering: boolean
-    hoverTitle: string
-    hoverItemPos: number
-    sidebarTitle: string
-    sidebarEnabled: boolean
-    activeMenu: string
-    activeItem: string
-    quickLinkHover: boolean
-    quickLinkPos: any
-    quickLinkRenderItem: any
-  }
-> {
-  state = {
-    isHovering: false,
-    hoverTitle: null,
-    hoverItemPos: null,
 
+export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
+  state = {
     sidebarEnabled: false,
-    sidebarTitle: null,
 
     activeMenu: null,
 
     activeItem: null,
-
-    quickLinkHover: false,
-    quickLinkPos: null,
-    quickLinkRenderItem: null,
-  }
-
-  componentDidMount(): void {
-    /*
-    get window url, set l0, l1, l2 based on it
-    */
-  }
-
-  enableHover = (index, title) => {
-    const parent = document.getElementsByClassName('tabs-container')[0]
-    const hoverItemPos =
-      parent.children[index].getBoundingClientRect().left -
-      parent.getBoundingClientRect().left / 2
-    this.setState({ isHovering: true, hoverItemPos, hoverTitle: title })
-  }
-  disableHover = () => {
-    this.setState({ isHovering: false })
-  }
-
-  handleSidebarItemClicked = (object: any) => {
-    this.setState({
-      activeMenu: object.activeMenu,
-      activeItem: object.child.title,
-    })
-    this.props.dispatchFunction(object.child.dispatchFunctionObject)
-  }
-
-  handleNoHoverClicked = (object: any) => {
-    this.setState({
-      activeMenu: null,
-      activeItem: null,
-      sidebarEnabled: false,
-      sidebarTitle: null,
-    })
-    this.props.dispatchFunction(object.dispatchFunctionObject)
-  }
-
-  hoverItemClicked = (item) => {
-    this.setState({
-      sidebarEnabled: true,
-      sidebarTitle: this.state.hoverTitle,
-      activeMenu: item.menuTitle,
-      activeItem: item.clickedTitle,
-    })
-    this.props.dispatchFunction(item.dispatchFunctionObject)
-  }
-
-  showState = () => {
-    console.log(this.state)
-  }
-
-  enableQuickLinkHover = (event, renderFunction) => {
-    const endPos = event.currentTarget.getBoundingClientRect()
-    this.setState({
-      quickLinkHover: !this.state.quickLinkHover,
-      quickLinkPos: endPos,
-      quickLinkRenderItem: renderFunction,
-    })
   }
 
   render() {
-    const fullData = this.props.data || utilData
-    const labels = Object.keys(fullData).filter(
-      (it) => it !== 'quickLinks' && it !== 'logo'
-    )
-    const {
-      isHovering,
-      sidebarEnabled,
-      sidebarTitle,
-      activeItem,
-      activeMenu,
-      quickLinkHover,
-    } = this.state
-    const { quickLinks } = fullData
+    const configurations = this.props.config || DUMMY_DATA
+    const { quickLinks, logo } = configurations
+
+    const { sidebarEnabled, activeItem, activeMenu } = this.state
+
     return (
-      <Context.Provider
-        value={{
-          isOpen: true,
-        }}
-      >
+      <Context.Provider value={{ isOpen: true }}>
         <div>
-          <Layout
-            type="stack"
-            gutter="none"
-            className={classnames('header-container')}
-          >
-            <div className={classnames('logo')}>{fullData.logo}</div>
+          <div className={classnames('top-nav-header-container')}>
+            <div className={classnames('top-nav-logo')}>{logo}</div>
             <Layout
               type="stack"
               distribution="spaceBetween"
-              className={classnames('tabs-and-quick-links-container')}
+              className={classnames('top-nav-content-container')}
             >
-              <Layout
-                type="stack"
-                gutter="none"
-                className={classnames('tabs-container')}
-              >
-                {labels.map((title, index) => {
-                  return (
-                    <TopNavItem
-                      icon={fullData[title].icon}
-                      key={title}
-                      title={title}
-                      onMouseEnter={() => this.enableHover(index, title)}
-                      onMouseLeave={this.disableHover}
-                      onClick={
-                        fullData[title].noHover
-                          ? () => this.handleNoHoverClicked(fullData[title])
-                          : null
-                      }
-                      isActive={sidebarTitle == title}
-                    />
+              <Layout type="stack" gutter="none">
+                {Object.values(configurations.navigationConfig).map(
+                  (navigationItem) => (
+                    <TopNavItem itemData={navigationItem} isActive={true} />
                   )
-                })}
+                )}
               </Layout>
-              <Layout
-                type="stack"
-                className={classnames('quick-links-container')}
-                gutter="none"
-              >
-                {quickLinks.map((link) => {
-                  return (
-                    <div
-                      onClick={(event) =>
-                        this.enableQuickLinkHover(event, link.renderFunction)
-                      }
-                      className={classnames('quick-links-icon')}
-                    >
-                      <Icon name={link.icon} fontSize="small" />
-                    </div>
-                  )
-                })}
+              <Layout type="stack" gutter="none">
+                {quickLinks.map((link) => (
+                  <QuickLink link={link} />
+                ))}
               </Layout>
             </Layout>
-          </Layout>
-          {isHovering && !fullData[this.state.hoverTitle].noHover && (
-            <TopNavHover
-              onItemClick={this.hoverItemClicked}
-              data={fullData[this.state.hoverTitle].data}
-              onMouseLeave={this.disableHover}
-              position={this.state.hoverItemPos}
-              onMouseEnter={() => this.setState({ isHovering: true })}
-            />
-          )}
+          </div>
           {sidebarEnabled && (
             <TopNavSidebar
-              data={fullData[this.state.sidebarTitle].data}
+              // data={fullData[this.state.sidebarTitle].data}
               activeMenu={activeMenu}
               activeItem={activeItem}
-              onItemClick={this.handleSidebarItemClicked}
-            />
-          )}
-          {quickLinkHover && (
-            <div
-              onClick={() => this.setState({ quickLinkHover: false })}
-              className={classnames('quicklink-overlay')}
-            ></div>
-          )}
-          {quickLinkHover && (
-            <QuickLinkHover
-              position={this.state.quickLinkPos}
-              renderFunction={this.state.quickLinkRenderItem}
+              // onItemClick={this.handleSidebarItemClicked}
             />
           )}
         </div>

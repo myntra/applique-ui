@@ -1,4 +1,4 @@
-import { createContext, LinkProps } from '@myntra/uikit-context'
+import { createContext } from '@myntra/uikit-context'
 
 export interface TopNavContext {
   isOpen: boolean

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
-import classnames from './top-nav-hover.module.scss'
-import Context, { TopNavContext } from './context'
 import Layout from '@myntra/uikit-component-layout'
+
+import classnames from './top-nav-hover.module.scss'
 
 export interface Props extends BaseProps {
   classname?: string
@@ -21,77 +21,91 @@ export interface Props extends BaseProps {
  * @see http://uikit.myntra.com/components/top-nav
  */
 
-export default class TopNavHover extends PureComponent<Props, {}> {
-  onItemClick = (child, menu = null) => {
-    const obj = {
-      clickedTitle: child.title,
-      menuTitle: menu ? menu.title : null,
-      ...child,
-      //   ...menu
+function getFilteredNavs(config) {
+  return config.reduce(
+    (aggregate, currentValue) => {
+      switch (currentValue.type) {
+        case 'menu':
+          return {
+            ...aggregate,
+            menus: [...aggregate.menus, currentValue],
+          }
+        case 'direct':
+          return {
+            ...aggregate,
+            directs: [...aggregate.menus, currentValue],
+          }
+        default:
+          return aggregate
+      }
+    },
+    {
+      menus: [],
+      directs: [],
     }
-    this.props.onItemClick(obj)
+  )
+}
+
+export default class TopNavHover extends PureComponent<Props, {}> {
+  onSubNavItemClick = (subNav) => {
+    this.props.handleSubNavItemClick(subNav.dispatchFunctionObject)
   }
 
   render() {
-    const {
-      className,
-      data: sampleData,
-      position,
-      onMouseEnter,
-      onMouseLeave,
-    } = this.props
-    const menus = sampleData.filter((it) => {
-      return it.type == 'menu'
-    })
-    const directs = sampleData.filter((it) => {
-      return it.type == 'direct'
-    })
+    const { navTabConfig, disableHover, parentPositions } = this.props
+
+    if (!navTabConfig) {
+      return null
+    }
+
+    const { menus, directs } = getFilteredNavs(navTabConfig)
+
     return (
       <div
         className={classnames('hover-item-container')}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        style={{ left: `${position}px` }}
+        onMouseLeave={disableHover}
+        style={{
+          top: `${parentPositions.bottom}px`,
+          left: `${parentPositions.left}px`,
+        }}
       >
         <Layout type="stack" gutter="xl">
-          {menus &&
-            menus.length &&
-            menus.map((child) => {
-              return (
-                <Layout
-                  type="row"
-                  key={child.title}
-                  className={classnames('hover-item-menu')}
-                >
-                  <label className={classnames('hover-item-menu-title')}>
-                    {child.title}
-                  </label>
-                  <hr className={classnames('hover-item-menu-hr')} />
-                  {child.data.map((it) => {
-                    return (
-                      <label
-                        onClick={() => this.onItemClick(it, child)}
-                        key={it.title}
-                        className={classnames('hover-item-link')}
-                      >
-                        {it.title}
-                      </label>
-                    )
-                  })}
-                </Layout>
-              )
-            })}
+          {menus.map((menu) => {
+            return (
+              <Layout
+                type="row"
+                key={menu.title}
+                className={classnames('hover-item-menu')}
+              >
+                <label className={classnames('hover-item-menu-title')}>
+                  {menu.title}
+                </label>
+                <hr className={classnames('hover-item-menu-hr')} />
+                {menu.config.map((it) => {
+                  return (
+                    <button
+                      onClick={() => this.onSubNavItemClick(it)}
+                      key={it.title}
+                      className={classnames('hover-item-link')}
+                    >
+                      {it.title}
+                    </button>
+                  )
+                })}
+              </Layout>
+            )
+          })}
           {directs && directs.length ? (
             <Layout type="row" className={classnames('hover-item-direct')}>
-              {directs.map((child) => {
+              {directs.map((directLink) => {
                 return (
-                  <label
-                    onClick={() => this.onItemClick(child)}
-                    key={child.title}
+                  <button
+                    onClick={() => this.onSubNavItemClick(directLink)}
+                    key={directLink.title}
                     className={classnames('hover-item-link')}
                   >
-                    {child.title}
-                  </label>
+                    {directLink.title}
+                  </button>
                 )
               })}
             </Layout>

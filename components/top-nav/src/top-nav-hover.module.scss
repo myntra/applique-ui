@@ -1,48 +1,45 @@
-.hover-item-container {
-  position: absolute;
-  z-index: 1;
-  width: fit-content;
-  padding: 24px;
-  background-color: #fff;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
-}
+.hover-item {
+  &-container {
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+  }
 
-.hover-item-menu-title {
-  margin: 8px 0;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
-  color: rgba(18, 19, 25, 0.7);
-}
+  &-link {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0e0f17;
+    cursor: pointer;
+    background-color: transparent;
+  }
 
-.hover-item-menu-hr {
-  width: 200px;
-  height: 0;
-  margin-top: 0;
-  margin-bottom: 8px;
-  background-color: rgba(18, 19, 25, 0.7);
-  border: 1px solid #b8b8b8;
-}
+  &.hover-item-menu {
+    .hover-item-link {
+      margin: 8px 0;
+      font-weight: 400;
+    }
+  }
 
-.hover-item-link {
-  font-size: 14px;
-  line-height: 20px;
-  color: #0e0f17;
-  cursor: pointer;
-}
+  &-menu-title {
+    margin: 8px 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: rgba(18, 19, 25, 0.7);
+  }
 
-.hover-item-direct .hover-item-link {
-  margin: 16px 0;
-  font-weight: 500;
-}
-
-.hover-item-menu .hover-item-link {
-  margin: 8px 0;
-  font-weight: 400;
-}
-
-.hover-item-direct .hover-item-link:last-child {
-  margin-bottom: 4px;
+  &-menu-hr {
+    width: 200px;
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 8px;
+    background-color: rgba(18, 19, 25, 0.7);
+    border: 1px solid #b8b8b8;
+  }
 }

@@ -1,16 +1,21 @@
 import React, { PureComponent } from 'react'
-import classnames from './top-nav-item.module.scss'
-import Context, { TopNavContext } from './context'
-import TopNavHover from './top-nav-hover'
 import Icon from '@myntra/uikit-component-icon'
 
-export interface Props extends BaseProps {
-  className?: string
-  title: string
-  data?: any
-  onClick?: any
-  onMouseEnter?: any
-  onMouseLeave?: any
+import classnames from './top-nav-item.module.scss'
+import TopNavHover from './top-nav-hover'
+
+export interface TopNavItemProps extends BaseProps {
+  itemData?: {
+    icon: Node
+    label: string
+    config: Array<any>
+    dispatchFunctionObject: Object
+  }
+  isActive?: boolean
+}
+
+interface TopNavItemState {
+  isHovering: boolean
 }
 
 /**
@@ -22,28 +27,64 @@ export interface Props extends BaseProps {
  * @see http://uikit.myntra.com/components/top-nav
  */
 
-export default function TopNavItem({
-  className,
-  title,
-  data,
-  onClick,
-  icon,
-  isActive,
-  ...props
-}: Props) {
-  return (
-    <li
-      className={classnames(
-        'top-nav-label',
-        className,
-        isActive ? 'active-label' : null
-      )}
-      onMouseEnter={props.onMouseEnter}
-      onMouseLeave={props.onMouseLeave}
-      onClick={onClick}
-    >
-      {icon ? <Icon className={classnames('icon')} name={icon} /> : null}
-      {title}
-    </li>
-  )
+export default class TopNavItem extends PureComponent<
+  TopNavItemProps,
+  TopNavItemState
+> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isHovering: false,
+    }
+  }
+
+  tabItemRef = null
+
+  enableHover = () => this.setState({ isHovering: true })
+
+  disableHover = () => this.setState({ isHovering: false })
+
+  handleNavItemClick = () =>
+    this.props.dispatchFunction(this.props.itemData.dispatchFunctionObject)
+
+  handleSubNavItemClick = (dispatchFunctionObject) =>
+    this.props.dispatchFunction(dispatchFunctionObject)
+
+  render() {
+    const { itemData, isActive } = this.props
+
+    return (
+      <button
+        ref={(ref) => {
+          this.tabItemRef = ref
+        }}
+        className={classnames(
+          'top-nav-button',
+          isActive ? 'active-label' : null
+        )}
+        onMouseEnter={this.enableHover}
+        onMouseLeave={this.disableHover}
+        onClick={this.handleNavItemClick}
+      >
+        {itemData.icon && (
+          <Icon
+            className={classnames('top-nav-button-icon')}
+            name={itemData.icon}
+          />
+        )}
+        {itemData.label}
+        {this.state.isHovering && (
+          <TopNavHover
+            navTabConfig={itemData.config}
+            disableHover={this.disableHover}
+            handleSubNavItemClick={this.handleSubNavItemClick}
+            parentPositions={{
+              bottom: this.tabItemRef.getBoundingClientRect().bottom,
+              left: this.tabItemRef.getBoundingClientRect().left,
+            }}
+          />
+        )}
+      </button>
+    )
+  }
 }

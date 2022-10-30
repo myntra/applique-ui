@@ -1,4 +1,4 @@
-.top-nav-label {
+.top-nav-button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,6 +13,7 @@
   white-space: nowrap;
   list-style-type: none;
   background-color: #fff;
+  border: 0;
   border-bottom: 2px solid transparent;
 
   &:hover {
@@ -27,9 +28,8 @@
     border-bottom: 2px solid #4f47c8;
   }
 
-  .icon {
+  &-icon {
     width: 20px;
-    height: 20px;
     padding-right: 8px;
     vertical-align: middle;
   }
