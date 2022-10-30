@@ -48,15 +48,15 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     const { sidebarEnabled, activeItem, activeMenu } = this.state
 
     return (
-      <div>
+      <div className={classnames('top-nav')}>
         <Layout
           gutter="xxxl"
           type="stack"
           alignment="middle"
-          className={classnames('top-nav')}
+          className={classnames('top-nav-header')}
         >
-          <div className={classnames('top-nav-logo')}>{logo}</div>
-          <div className={classnames('top-nav-content-container')}>
+          <div className={classnames('top-nav-header-logo')}>{logo}</div>
+          <div className={classnames('top-nav-header-content-container')}>
             <Layout type="stack" gutter="none">
               {Object.values(configurations.navigationConfig).map(
                 (navigationItem) => (
@@ -71,14 +71,18 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
             </Layout>
           </div>
         </Layout>
-        {
+        <Layout
+          type="stack"
+          gutter="large"
+          className={classnames('top-nav-page-content')}
+        >
           <TopNavSidebar
             activeConfig={configurations.navigationConfig.PRICING_N_PROMOTIONS}
             activeMenu={activeMenu}
             activeItem={activeItem}
-            // onItemClick={this.handleSidebarItemClicked}
           />
-        }
+          {this.props.children}
+        </Layout>
       </div>
     )
   }

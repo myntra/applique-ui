@@ -65,7 +65,15 @@ export default class TopNavSidebarMenu extends PureComponent<
       >
         <Layout type="stack" distribution="spaceBetween">
           <Layout type="stack" gutter="large" alignment="middle">
-            <Icon name={menuType.type === MENU_TYPES.MENU_ITEM ? null : Bell} />
+            <Icon
+              name={
+                [MENU_TYPES.MENU, MENU_TYPES.MENU_DIRECT_LINK].includes(
+                  menuType
+                )
+                  ? rowItem.icon || Bell
+                  : null
+              }
+            />
             <span>{rowItem.title}</span>
           </Layout>
           {menuType === MENU_TYPES.MENU && (
