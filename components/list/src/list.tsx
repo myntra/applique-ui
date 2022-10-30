@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Children, PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import VirtualList, {
   Props as VirtualListProps,
@@ -101,14 +101,16 @@ export default class List extends PureComponent<
       } else {
         // TODO: Check if scroll is required.
         this.containerRef.current &&
-          scrollIntoView(
-            this.containerRef.current.children[this.state.activeIndex],
-            {
-              scrollMode: 'if-needed',
-              block: 'nearest',
-              inline: 'nearest',
-            }
-          )
+        this.containerRef.current.children.length > this.state.activeIndex
+          ? scrollIntoView(
+              this.containerRef.current.children[this.state.activeIndex],
+              {
+                scrollMode: 'if-needed',
+                block: 'nearest',
+                inline: 'nearest',
+              }
+            )
+          : null
       }
     } else {
       const { multiple, value, idForItem, items } = this.props
