@@ -7,6 +7,7 @@ import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 import Bell from 'uikit-icons/svgs/BoxSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
+import { MENU_TYPES } from './config'
 
 export interface MenuItem {
   type: String
@@ -34,12 +35,6 @@ interface TopNavSideBarMenuState {
  * @category basic
  * @see http://uikit.myntra.com/components/top-nav
  */
-
-const MENU_TYPES = {
-  MENU: 'MENU',
-  MENU_ITEM: 'MENU_ITEM',
-  MENU_DIRECT_LINK: 'MENU_DIRECT_LINK',
-}
 
 export default class TopNavSidebarMenu extends PureComponent<
   TopNavSideBarMenuProps,

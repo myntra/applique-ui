@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Layout from '@myntra/uikit-component-layout'
 
+import { MENU_TYPES } from './config'
 import classnames from './top-nav-hover.module.scss'
 
 export interface Props extends BaseProps {
@@ -25,12 +26,12 @@ function getFilteredNavs(config) {
   return config.reduce(
     (aggregate, currentValue) => {
       switch (currentValue.type) {
-        case 'menu':
+        case MENU_TYPES.MENU:
           return {
             ...aggregate,
             menus: [...aggregate.menus, currentValue],
           }
-        case 'direct':
+        case MENU_TYPES.MENU_DIRECT_LINK:
           return {
             ...aggregate,
             directs: [...aggregate.menus, currentValue],

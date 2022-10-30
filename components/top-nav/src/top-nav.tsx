@@ -6,7 +6,7 @@ import TopNavItem, {
 } from './top-nav-item'
 import TopNavSidebar from './top-nav-sidebar'
 import QuickLink, { LinkInterface } from './quick-link'
-import { DUMMY_DATA } from './utils'
+import { DUMMY_DATA } from './config'
 import classnames from './top-nav.module.scss'
 
 export interface TopNavProps extends BaseProps {

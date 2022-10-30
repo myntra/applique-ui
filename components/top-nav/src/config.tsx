@@ -3,6 +3,12 @@ import Bell from 'uikit-icons/svgs/BoxSolid'
 import CheckSolid from 'uikit-icons/svgs/CheckSolid'
 import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
 
+export const MENU_TYPES = {
+  MENU: 'MENU',
+  MENU_ITEM: 'MENU_ITEM',
+  MENU_DIRECT_LINK: 'MENU_DIRECT_LINK',
+}
+
 export const DUMMY_DATA = {
   navigationConfig: {
     HOME: {
