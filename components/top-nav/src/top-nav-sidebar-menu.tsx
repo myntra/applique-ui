@@ -8,9 +8,20 @@ import Bell from 'uikit-icons/svgs/BoxSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
 
-export interface Props extends BaseProps {
-  classname?: string
-  data?: any
+export interface TopNavSideBarMenuProps extends BaseProps {
+  menuItem: {
+    type: String
+    icon: Node
+    title: String
+    config: Array<{ title: String }>
+  }
+  isActive: boolean
+  handleMenuItemClick: Function
+  handleDirectItemClick: Function
+}
+
+interface TopNavSideBarMenuState {
+  isOpen: boolean
 }
 
 /**
@@ -29,8 +40,8 @@ const MENU_TYPES = {
 }
 
 export default class TopNavSidebarMenu extends PureComponent<
-  Props,
-  { isOpen: boolean }
+  TopNavSideBarMenuProps,
+  TopNavSideBarMenuState
 > {
   constructor(props) {
     super(props)
@@ -52,15 +63,7 @@ export default class TopNavSidebarMenu extends PureComponent<
       >
         <Layout type="stack" distribution="spaceBetween">
           <Layout type="stack" gutter="large" alignment="middle">
-            <Icon
-              name={
-                [MENU_TYPES.MENU, MENU_TYPES.MENU_DIRECT_LINK].includes(
-                  menuType
-                )
-                  ? Bell
-                  : null
-              }
-            />
+            <Icon name={menuType.type === MENU_TYPES.MENU_ITEM ? null : Bell} />
             <span>{rowItem.title}</span>
           </Layout>
           {menuType === MENU_TYPES.MENU && (
