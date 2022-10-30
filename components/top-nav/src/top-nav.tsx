@@ -51,14 +51,14 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     return (
       <Context.Provider value={{ isOpen: true }}>
         <div>
-          <div className={classnames('top-nav-header-container')}>
+          <Layout
+            gutter="xxxl"
+            type="stack"
+            alignment="middle"
+            className={classnames('top-nav')}
+          >
             <div className={classnames('top-nav-logo')}>{logo}</div>
-            <Layout
-              type="stack"
-              distribution="spaceBetween"
-              alignment="stretch"
-              className={classnames('top-nav-content-container')}
-            >
+            <div className={classnames('top-nav-content-container')}>
               <Layout type="stack" gutter="none">
                 {Object.values(configurations.navigationConfig).map(
                   (navigationItem) => (
@@ -71,8 +71,8 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
                   <QuickLink link={link} />
                 ))}
               </Layout>
-            </Layout>
-          </div>
+            </div>
+          </Layout>
           {sidebarEnabled && (
             <TopNavSidebar
               // data={fullData[this.state.sidebarTitle].data}

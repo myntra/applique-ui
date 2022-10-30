@@ -73,7 +73,7 @@ export default class TopNavItem extends PureComponent<
           />
         )}
         {itemData.label}
-        {this.state.isHovering && (
+        {this.state.isHovering && itemData.config && (
           <TopNavHover
             navTabConfig={itemData.config}
             disableHover={this.disableHover}

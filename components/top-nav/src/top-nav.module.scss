@@ -1,16 +1,16 @@
 .top-nav {
-  &-header-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 28px;
-    background-color: #fff;
-  }
+  padding: 0 28px;
+  background-color: #fff;
+
   &-logo {
     margin-right: 24px;
     cursor: pointer;
   }
+
   &-content-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
     width: 100%;
   }
 }

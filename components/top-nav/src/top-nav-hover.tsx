@@ -54,10 +54,6 @@ export default class TopNavHover extends PureComponent<Props, {}> {
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
-    if (!navTabConfig) {
-      return null
-    }
-
     const { menus, directs } = getFilteredNavs(navTabConfig)
 
     return (
