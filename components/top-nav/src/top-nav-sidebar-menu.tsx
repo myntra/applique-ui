@@ -7,18 +7,10 @@ import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 import Bell from 'uikit-icons/svgs/BoxSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
-import { MENU_TYPES } from './config'
-
-export interface MenuItem {
-  id: string
-  type: String
-  icon: Node
-  title: String
-  config: Array<{ id: string; title: String }>
-}
+import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
 
 export interface TopNavSideBarMenuProps extends BaseProps {
-  menuItem: MenuItem
+  menuItem: NAVIGATION_ITEM_L2_INTERFACE
   selectedMenuId?: string
   selectedSubMenuId?: string
   handleMenuItemClick?: MouseEventHandler

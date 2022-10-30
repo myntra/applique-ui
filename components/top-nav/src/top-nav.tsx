@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react'
 import Layout from '@myntra/uikit-component-layout'
 
-import TopNavItem, {
-  TopNavItemProps as TopNavItemInterface,
-} from './top-nav-item'
+import TopNavItem from './top-nav-item'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
 import QuickLink, { LinkInterface } from './quick-link'
-import { DUMMY_DATA } from './config'
+import { DUMMY_DATA, NAVIGATION_ITEM_L1_INTERFACE } from './config'
 import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
 
@@ -14,7 +12,7 @@ export interface TopNavProps extends BaseProps {
   config: {
     quickLinks: Array<LinkInterface>
     logo: Node
-    navigationConfig: Array<TopNavItemInterface>
+    navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
   }
 }
 

@@ -3,15 +3,10 @@ import Icon from '@myntra/uikit-component-icon'
 
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
+import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
 
 export interface TopNavItemProps extends BaseProps {
-  itemData?: {
-    id: string
-    icon: Node
-    label: string
-    config: Array<any>
-    dispatchFunctionObject: Object
-  }
+  itemData: NAVIGATION_ITEM_L1_INTERFACE
   isActive?: boolean
 }
 
@@ -45,6 +40,7 @@ export default class TopNavItem extends PureComponent<
 
   disableHover = () => this.setState({ isHovering: false })
 
+  //@ts-ignore
   handleNavItemClick = () =>
     this.props.dispatchFunction(this.props.itemData.dispatchFunctionObject)
 

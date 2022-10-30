@@ -9,11 +9,30 @@ export const MENU_TYPES = {
   MENU_DIRECT_LINK: 'MENU_DIRECT_LINK',
 }
 
+export interface NAVIGATION_ITEM_L1_INTERFACE {
+  label: string
+  icon: Node
+  path?: string
+  config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
+}
+
+export interface NAVIGATION_ITEM_L2_INTERFACE {
+  id: string
+  title: string
+  type: string
+  config: Array<NAVIGATION_ITEM_L3_INTERFACE>
+}
+
+export interface NAVIGATION_ITEM_L3_INTERFACE {
+  id: string
+  title: string
+  path: string
+}
+
 export const DUMMY_DATA = {
   navigationConfig: {
     HOME: {
       label: 'Home',
-      noHover: true,
       icon: Bell,
       path: '/Home',
     },

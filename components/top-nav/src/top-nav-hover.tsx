@@ -1,16 +1,17 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, MouseEventHandler } from 'react'
 import Layout from '@myntra/uikit-component-layout'
 
-import { MENU_TYPES } from './config'
+import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'
 
 export interface TopNavHoverProps extends BaseProps {
-  classname?: string
-  data?: any
-  position?: number
-  onMouseEnter?: any
-  onMouseLeave?: any
-  onItemClick?: any
+  navTabConfig: Array<NAVIGATION_ITEM_L2_INTERFACE>
+  handleSubNavItemClick?: Function
+  disableHover: MouseEventHandler
+  parentPositions: {
+    left: number
+    bottom: number
+  }
 }
 
 /**
