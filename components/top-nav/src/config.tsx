@@ -18,6 +18,7 @@ export interface NAVIGATION_ITEM_L1_INTERFACE {
   label: string
   icon: Node
   routingInfo?: ROUTING_INFO_INTERFACE
+  noHover: boolean
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
   dispatchFunctionObject?: Function
 }

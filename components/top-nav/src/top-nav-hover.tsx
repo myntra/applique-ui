@@ -35,7 +35,7 @@ function getFilteredNavs(config) {
         case MENU_TYPES.MENU_DIRECT_LINK:
           return {
             ...aggregate,
-            directs: [currentValue],
+            directs: [...aggregate.directs, currentValue],
           }
         default:
           return aggregate
@@ -49,10 +49,6 @@ function getFilteredNavs(config) {
 }
 
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
-  onSubNavItemClick = (subNav) => {
-    this.props.handleSubNavItemClick(subNav)
-  }
-
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
@@ -78,7 +74,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                 {menu.config.map((it) => {
                   return (
                     <button
-                      onClick={() => this.onSubNavItemClick(it)}
+                      onClick={() => this.props.handleSubNavItemClick(it)}
                       key={it.title}
                       className={classnames('hover-item-menu-link')}
                     >
@@ -98,7 +94,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
               {directs.map((directLink) => {
                 return (
                   <button
-                    onClick={() => this.onSubNavItemClick(directLink)}
+                    onClick={() => this.props.handleSubNavItemClick(directLink)}
                     key={directLink.title}
                     className={classnames('hover-item-direct-link')}
                   >

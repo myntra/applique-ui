@@ -13,8 +13,8 @@ export interface TopNavSideBarMenuProps extends BaseProps {
   menuItem: NAVIGATION_ITEM_L2_INTERFACE
   selectedMenuId?: string
   selectedSubMenuId?: string
-  handleMenuItemClick?: any
-  handleDirectItemClick?: any
+  handleMenuItemClick?: Function
+  handleDirectItemClick?: Function
 }
 
 interface TopNavSideBarMenuState {
