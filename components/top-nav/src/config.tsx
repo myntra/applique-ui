@@ -9,10 +9,15 @@ export const MENU_TYPES = {
   MENU_DIRECT_LINK: 'MENU_DIRECT_LINK',
 }
 
+export interface ROUTING_INFO_INTERFACE {
+  path: string
+  meta: Object
+}
+
 export interface NAVIGATION_ITEM_L1_INTERFACE {
   label: string
   icon: Node
-  path?: string
+  routingInfo?: ROUTING_INFO_INTERFACE
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
   dispatchFunctionObject?: Function
 }
@@ -27,48 +32,93 @@ export interface NAVIGATION_ITEM_L2_INTERFACE {
 export interface NAVIGATION_ITEM_L3_INTERFACE {
   id: string
   title: string
-  path: string
+  routingInfo?: string
 }
 
 export const DUMMY_DATA = {
   navigationConfig: {
     HOME: {
       label: 'Home',
-      icon: Bell,
-      path: '/Home',
+      noHover: true,
+      routingInfo: {
+        path: '/Dashboard',
+        type: 'Dashboard/HOME',
+        meta: {},
+      },
     },
     CATALOG: {
+      id: 'Job Tracker',
       label: 'Catalog',
       config: [
         {
-          id: 'CATALOG_MANAGEMENT',
           title: 'Catalog Management',
           type: 'MENU',
           config: [
             {
-              id: 'CATALOG_DASHBOARD',
+              id: 'DIY_DASHBOAR',
               title: 'Catalog Dashboard',
-              path: '/testingpath',
+              routingInfo: {
+                path: '/DiyCataloguing/Home',
+                type: 'DiyCataloguing/Home',
+                meta: {},
+              },
             },
             {
-              id: 'ADD_LISTING_TO_EXISTING_STYLES',
+              id: 'DIY_DASHBO_STY',
               title: 'Add Listing to Existing Styles',
+              routingInfo: {
+                path: '/DiyCataloguing/StyleListing',
+                type: 'DiyCataloguing/StyleListing',
+                meta: {},
+              },
             },
             {
-              id: 'MODEL_IMAGE_APPROVAL_FORM',
+              id: 'DIY_DASHBO_STY_MODEL',
               title: 'Model/Image Approval Form',
+              routingInfo: {
+                path: '/DiyCataloguing/StyleListingDummy',
+                type: '', // NOT FOUND ("@@redux-first-router/NOT_FOUND")
+                meta: {
+                  notFoundPath:
+                    'https://docs.google.com/forms/d/1OdZ0h0eSdJ9oWnV9D4oQamHfGKaTkJVLe3L3Nbvo6nY/edit',
+                },
+              },
             },
             {
-              id: 'IMAGE_UPLOADER',
+              id: 'DIY_DASHBO_STY_IMAGE',
               title: 'Image Uploader',
+              routingInfo: {
+                path: '/DiyCataloguing/ImageCapturing',
+                type: 'DiyCataloguing/ImageCapturing',
+                meta: {},
+              },
             },
             {
-              id: 'TRAINING_N_FAQ',
+              id: 'DIY_DASHBO_STY_TAIN',
               title: 'Training & FAQ',
+              routingInfo: {
+                type: '', // NOT FOUND ("@@redux-first-router/NOT_FOUND")
+                meta: {
+                  path: '/DiyCataloguing/Training',
+                  notFoundPath:
+                    'https://www.youtube.com/channel/UCc3qmCh62AT9hReqNYdDn1w/featured',
+                  query: {
+                    disable_polymer: '1',
+                  },
+                },
+              },
             },
             {
-              id: 'MAS_FORM',
+              id: 'DIY_DASHBO_MAS_FORM',
               title: 'MAS Form',
+              routingInfo: {
+                path: '/DiyCataloguing/Training',
+                type: '',
+                meta: {
+                  url:
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdpU3uyUPkfaLZgrG_zgbMUVG7PBj9EilzK3Cg4vgq3eQhq-w/viewform',
+                },
+              },
             },
           ],
         },
@@ -76,26 +126,61 @@ export const DUMMY_DATA = {
           id: 'LISTINGS',
           title: 'Listings',
           type: 'MENU',
+          check: [
+            {
+              roles: [],
+              permissions: [
+                ['pp$ListingManagementBeta$rw'],
+                ['pp$ListingManagement$rw'],
+              ],
+              operation: 'or',
+            },
+          ],
           config: [
             {
-              id: 'LISTINGS_MANAGEMENT',
+              id: 'Listings Management',
               title: 'Listings Management',
+              routingInfo: {
+                path: '/DiyCataloguing/Ting',
+                type: 'Listing/ListingsManagement',
+                meta: {},
+              },
             },
             {
-              id: 'ADD_LISTING_TO_EXISTING_STYLES',
+              id: 'Add Listing to Existing Styles',
               title: 'Add Listing to Existing Styles',
+              routingInfo: {
+                path: '/Listing/StyleListingOI',
+                type: '/Listing/StyleListingOI',
+                meta: {},
+              },
             },
             {
-              id: 'PLATFORM_SELLERS',
+              id: 'Platform Sellers',
               title: 'Platform Sellers',
+              routingInfo: {
+                path: '/Listing/StyleListingOI',
+                type: 'Listing/Home',
+                meta: {},
+              },
             },
             {
-              id: 'B2B_SELLERS',
+              id: 'B2B Sellers',
               title: 'B2B Sellers',
+              routingInfo: {
+                path: '/Listing/Beta',
+                type: 'Listing/Beta',
+                meta: {},
+              },
             },
             {
-              id: 'JOB_TRACKER',
+              id: 'Job Tracker',
               title: 'Job Tracker',
+              routingInfo: {
+                path: '/Listing/JobTracker',
+                type: 'Listing/JobTracker',
+                meta: {},
+              },
             },
           ],
         },
