@@ -42,7 +42,7 @@ export default class TopNavItem extends PureComponent<
 
   //@ts-ignore
   handleNavItemClick = () => {
-    this.props.dispatchFunction(this.props.itemData.path)
+    this.props.dispatchFunction(this.props.itemData)
   }
   handleSubNavItemClick = (dispatchFunctionObject) => {
     this.props.dispatchFunction(dispatchFunctionObject)
@@ -62,7 +62,7 @@ export default class TopNavItem extends PureComponent<
         )}
         onMouseEnter={this.enableHover}
         onMouseLeave={this.disableHover}
-        onClick={itemData.path ? this.handleNavItemClick : null}
+        onClick={itemData.routingInfo ? this.handleNavItemClick : null}
       >
         {itemData.icon && (
           <Icon

@@ -50,7 +50,7 @@ function getFilteredNavs(config) {
 
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   onSubNavItemClick = (subNav) => {
-    this.props.handleSubNavItemClick(subNav.path || subNav.id)
+    this.props.handleSubNavItemClick(subNav)
   }
 
   render() {

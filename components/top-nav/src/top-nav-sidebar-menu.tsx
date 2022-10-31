@@ -97,9 +97,7 @@ export default class TopNavSidebarMenu extends PureComponent<
                     ? 'sidebar-menu-active'
                     : null
                 )}
-                onClick={() =>
-                  handleMenuItemClick(subMenuItem.path || subMenuItem.id)
-                }
+                onClick={() => handleMenuItemClick(subMenuItem)}
               >
                 <span>{subMenuItem.title}</span>
               </button>
@@ -113,7 +111,7 @@ export default class TopNavSidebarMenu extends PureComponent<
         MENU_TYPES.MENU_DIRECT_LINK,
         menuItem,
         menuItem.id === selectedMenuId,
-        () => handleDirectItemClick(menuItem.path || menuItem.id)
+        () => handleDirectItemClick(menuItem)
       )
     }
 

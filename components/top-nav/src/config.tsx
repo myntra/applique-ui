@@ -33,7 +33,7 @@ export interface NAVIGATION_ITEM_L2_INTERFACE {
 export interface NAVIGATION_ITEM_L3_INTERFACE {
   id: string
   title: string
-  routingInfo?: string
+  routingInfo?: ROUTING_INFO_INTERFACE
 }
 
 export const DUMMY_DATA = {
@@ -53,6 +53,7 @@ export const DUMMY_DATA = {
       config: [
         {
           title: 'Catalog Management',
+          id: 'CATALOG_MANAGEMENT',
           type: 'MENU',
           config: [
             {
@@ -99,8 +100,8 @@ export const DUMMY_DATA = {
               title: 'Training & FAQ',
               routingInfo: {
                 type: '', // NOT FOUND ("@@redux-first-router/NOT_FOUND")
+                path: '/DiyCataloguing/Training',
                 meta: {
-                  path: '/DiyCataloguing/Training',
                   notFoundPath:
                     'https://www.youtube.com/channel/UCc3qmCh62AT9hReqNYdDn1w/featured',
                   query: {
@@ -113,7 +114,7 @@ export const DUMMY_DATA = {
               id: 'DIY_DASHBO_MAS_FORM',
               title: 'MAS Form',
               routingInfo: {
-                path: '/DiyCataloguing/Training',
+                path: '/DiyCataloguing/MASForm',
                 type: '',
                 meta: {
                   url:
@@ -186,9 +187,14 @@ export const DUMMY_DATA = {
           ],
         },
         {
-          id: 'TEST',
-          title: 'Test',
+          id: 'TESTING',
+          title: 'Test 123',
           type: 'MENU_DIRECT_LINK',
+          routingInfo: {
+            path: '/test',
+            type: 'Testing/Test',
+            meta: {},
+          },
         },
       ],
     },

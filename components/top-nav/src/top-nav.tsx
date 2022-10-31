@@ -76,8 +76,10 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
                 this.state.selectedTabDetails.currentLevels.L3_LEVEL_ID
               }
               menuItem={item}
-              handleDirectItemClick={(path) => this.setPath(path)}
-              handleMenuItemClick={(path) => this.setPath(path)}
+              handleDirectItemClick={(object) =>
+                this.setPath(object.routingInfo)
+              }
+              handleMenuItemClick={(object) => this.setPath(object.routingInfo)}
             />
           ))}
         </div>
@@ -86,7 +88,8 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     return null
   }
 
-  setPath(path) {
+  setPath(routingInfo) {
+    const { path } = routingInfo
     const { pathToDetailMapping } = this.state
     this.setState({
       selectedTabDetails: {
@@ -94,6 +97,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
         currentLevels: pathToDetailMapping[path],
       },
     })
+    this.props.dispatchFunction(routingInfo)
   }
 
   render() {
@@ -119,8 +123,8 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
                       this.state.selectedTabDetails.currentLevels
                         .L1_LEVEL_ID === levelId
                     }
-                    dispatchFunction={(path) => {
-                      this.setPath(path)
+                    dispatchFunction={(object) => {
+                      this.setPath(object.routingInfo)
                     }}
                   />
                 )
