@@ -48,7 +48,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     super(props)
     const currentPath = '/testingpath'
     const pathToDetailsMapping = getPathToInfoMapping(
-      DUMMY_DATA.navigationConfig
+      props.config.navigationConfig || DUMMY_DATA.navigationConfig
     )
     this.state = {
       selectedTabDetails: {
