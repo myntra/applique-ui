@@ -35,7 +35,7 @@ function getFilteredNavs(config) {
         case MENU_TYPES.MENU_DIRECT_LINK:
           return {
             ...aggregate,
-            directs: [...aggregate.menus, currentValue],
+            directs: [currentValue],
           }
         default:
           return aggregate
@@ -50,7 +50,7 @@ function getFilteredNavs(config) {
 
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   onSubNavItemClick = (subNav) => {
-    this.props.handleSubNavItemClick(subNav.dispatchFunctionObject)
+    this.props.handleSubNavItemClick(subNav.path || subNav.id)
   }
 
   render() {

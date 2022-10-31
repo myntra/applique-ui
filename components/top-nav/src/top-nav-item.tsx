@@ -41,11 +41,12 @@ export default class TopNavItem extends PureComponent<
   disableHover = () => this.setState({ isHovering: false })
 
   //@ts-ignore
-  handleNavItemClick = () =>
-    this.props.dispatchFunction(this.props.itemData.dispatchFunctionObject)
-
-  handleSubNavItemClick = (dispatchFunctionObject) =>
+  handleNavItemClick = () => {
+    this.props.dispatchFunction(this.props.itemData.path)
+  }
+  handleSubNavItemClick = (dispatchFunctionObject) => {
     this.props.dispatchFunction(dispatchFunctionObject)
+  }
 
   render() {
     const { itemData, isActive } = this.props
@@ -61,7 +62,7 @@ export default class TopNavItem extends PureComponent<
         )}
         onMouseEnter={this.enableHover}
         onMouseLeave={this.disableHover}
-        onClick={this.handleNavItemClick}
+        onClick={itemData.path ? this.handleNavItemClick : null}
       >
         {itemData.icon && (
           <Icon

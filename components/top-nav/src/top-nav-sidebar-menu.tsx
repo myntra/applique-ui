@@ -13,8 +13,8 @@ export interface TopNavSideBarMenuProps extends BaseProps {
   menuItem: NAVIGATION_ITEM_L2_INTERFACE
   selectedMenuId?: string
   selectedSubMenuId?: string
-  handleMenuItemClick?: MouseEventHandler
-  handleDirectItemClick?: MouseEventHandler
+  handleMenuItemClick?: any
+  handleDirectItemClick?: any
 }
 
 interface TopNavSideBarMenuState {
@@ -97,7 +97,9 @@ export default class TopNavSidebarMenu extends PureComponent<
                     ? 'sidebar-menu-active'
                     : null
                 )}
-                onClick={handleMenuItemClick}
+                onClick={() =>
+                  handleMenuItemClick(subMenuItem.path || subMenuItem.id)
+                }
               >
                 <span>{subMenuItem.title}</span>
               </button>
@@ -111,7 +113,7 @@ export default class TopNavSidebarMenu extends PureComponent<
         MENU_TYPES.MENU_DIRECT_LINK,
         menuItem,
         menuItem.id === selectedMenuId,
-        handleDirectItemClick
+        () => handleDirectItemClick(menuItem.path || menuItem.id)
       )
     }
 

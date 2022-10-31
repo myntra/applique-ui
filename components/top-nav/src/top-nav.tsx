@@ -19,7 +19,7 @@ export interface TopNavProps extends BaseProps {
 interface TopNavState {
   selectedTabDetails: {
     currentPath: string
-    currentLebels: {
+    currentLevels: {
       L1_LEVEL_ID?: string
       L2_LEVEL_ID?: string
       L3_LEVEL_ID?: string
@@ -53,7 +53,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     this.state = {
       selectedTabDetails: {
         currentPath,
-        currentLebels: pathToDetailsMapping[currentPath] || {},
+        currentLevels: pathToDetailsMapping[currentPath] || {},
       },
       pathToDetailMapping: pathToDetailsMapping,
     }
@@ -61,7 +61,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
   getSidebarView() {
     const configurations = this.props.config || DUMMY_DATA
-    const firstLevelId = this.state.selectedTabDetails.currentLebels.L1_LEVEL_ID
+    const firstLevelId = this.state.selectedTabDetails.currentLevels.L1_LEVEL_ID
     const firstLevelConfig = configurations.navigationConfig[firstLevelId]
 
     if (firstLevelId && firstLevelConfig.config) {
@@ -70,18 +70,30 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
           {firstLevelConfig.config.map((item) => (
             <TopNavSidebarMenu
               selectedMenuId={
-                this.state.selectedTabDetails.currentLebels.L2_LEVEL_ID
+                this.state.selectedTabDetails.currentLevels.L2_LEVEL_ID
               }
               selectedSubMenuId={
-                this.state.selectedTabDetails.currentLebels.L3_LEVEL_ID
+                this.state.selectedTabDetails.currentLevels.L3_LEVEL_ID
               }
               menuItem={item}
+              handleDirectItemClick={(path) => this.setPath(path)}
+              handleMenuItemClick={(path) => this.setPath(path)}
             />
           ))}
         </div>
       )
     }
     return null
+  }
+
+  setPath(path) {
+    const { pathToDetailMapping } = this.state
+    this.setState({
+      selectedTabDetails: {
+        currentPath: path,
+        currentLevels: pathToDetailMapping[path],
+      },
+    })
   }
 
   render() {
@@ -104,9 +116,12 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
                   <TopNavItem
                     itemData={navigationItem}
                     isActive={
-                      this.state.selectedTabDetails.currentLebels
+                      this.state.selectedTabDetails.currentLevels
                         .L1_LEVEL_ID === levelId
                     }
+                    dispatchFunction={(path) => {
+                      this.setPath(path)
+                    }}
                   />
                 )
               )}

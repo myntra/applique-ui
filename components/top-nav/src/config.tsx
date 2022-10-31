@@ -21,6 +21,7 @@ export interface NAVIGATION_ITEM_L2_INTERFACE {
   title: string
   type: string
   config: Array<NAVIGATION_ITEM_L3_INTERFACE>
+  path: string
 }
 
 export interface NAVIGATION_ITEM_L3_INTERFACE {
@@ -50,8 +51,9 @@ export const DUMMY_DATA = {
               path: '/testingpath',
             },
             {
-              id: 'ADD_LISTING_TO_EXISTING_STYLES',
-              title: 'Add Listing to Existing Styles',
+              id: 'ADD_LISTING_TO_EXISTING_STYLES_OLD',
+              title: 'Add Listing to Existing Styles (Old)',
+              path: '/add-listing-to-existing-styles',
             },
             {
               id: 'MODEL_IMAGE_APPROVAL_FORM',
@@ -79,6 +81,7 @@ export const DUMMY_DATA = {
             {
               id: 'LISTINGS_MANAGEMENT',
               title: 'Listings Management',
+              path: '/listings-mgmt',
             },
             {
               id: 'ADD_LISTING_TO_EXISTING_STYLES',
@@ -97,6 +100,11 @@ export const DUMMY_DATA = {
               title: 'Job Tracker',
             },
           ],
+        },
+        {
+          id: 'TEST',
+          title: 'Test',
+          type: 'MENU_DIRECT_LINK',
         },
       ],
     },
