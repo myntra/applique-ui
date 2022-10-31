@@ -7,6 +7,7 @@
     background-color: #fff;
 
     &-logo {
+      min-width: 65px;
       margin-right: 24px;
       cursor: pointer;
     }
@@ -20,6 +21,7 @@
   }
 
   &-page-content {
+    height: 100%;
     padding: 10px 16px;
     background: #f3f5f7;
 

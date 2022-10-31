@@ -36,6 +36,8 @@ export default class QuickLink extends PureComponent<
     }
   }
 
+  overlayButtonRef = null
+
   enableQuickLinkHover = () => this.setState({ quickLinkHover: true })
 
   disableQuickLinkHover = () => this.setState({ quickLinkHover: false })
@@ -45,24 +47,39 @@ export default class QuickLink extends PureComponent<
     return (
       <div className={classnames('quick-link')}>
         <button
+          ref={(ref) => {
+            this.overlayButtonRef = ref
+          }}
           onClick={this.enableQuickLinkHover}
-          className={classnames('quick-link-icon-button')}
+          className={classnames(
+            'quick-link-icon-button',
+            this.state.quickLinkHover ? 'quick-link-icon-button-active' : null
+          )}
         >
           <Icon name={link.icon} fontSize="small" />
-          {this.state.quickLinkHover && (
-            <div className={classnames('quick-link-hover-container')}>
-              {link.renderFunction({
-                enableQuickLinkHover: this.enableQuickLinkHover,
-                disableQuickLinkHover: this.disableQuickLinkHover,
-              })}
-            </div>
-          )}
         </button>
+        {this.state.quickLinkHover && (
+          <div
+            className={classnames('quick-link-hover-container')}
+            style={{
+              top: `${this.overlayButtonRef.getBoundingClientRect().bottom}px`,
+              right: `${window.innerWidth -
+                this.overlayButtonRef.getBoundingClientRect().right}px`,
+            }}
+          >
+            {link.renderFunction({
+              enableQuickLinkHover: this.enableQuickLinkHover,
+              disableQuickLinkHover: this.disableQuickLinkHover,
+            })}
+          </div>
+        )}
         {this.state.quickLinkHover && (
           <button
             onClick={this.disableQuickLinkHover}
             className={classnames('quick-link-overlay')}
-          />
+          >
+            <span className={classnames('quick-link-overlay-section')}></span>
+          </button>
         )}
       </div>
     )
