@@ -45,6 +45,7 @@ export default class TopNavItem extends PureComponent<
   }
 
   handleSubNavItemClick = (dispatchFunctionObject) => {
+    this.disableHover()
     this.props.dispatchFunction(dispatchFunctionObject)
   }
 
