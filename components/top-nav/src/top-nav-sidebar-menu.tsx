@@ -80,7 +80,7 @@ export default class TopNavSidebarMenu extends PureComponent<
 
     if (menuItem.type === MENU_TYPES.MENU) {
       return (
-        <React.Fragment>
+        <div>
           {this.getMenuRowItemView(
             MENU_TYPES.MENU,
             menuItem,
@@ -102,7 +102,7 @@ export default class TopNavSidebarMenu extends PureComponent<
                 <span>{subMenuItem.title}</span>
               </button>
             ))}
-        </React.Fragment>
+        </div>
       )
     }
 

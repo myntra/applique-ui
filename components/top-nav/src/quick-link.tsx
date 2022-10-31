@@ -43,7 +43,7 @@ export default class QuickLink extends PureComponent<
   render() {
     const { link } = this.props
     return (
-      <React.Fragment>
+      <div className={classnames('quick-link')}>
         <button
           onClick={this.enableQuickLinkHover}
           className={classnames('quick-link-icon-button')}
@@ -64,7 +64,7 @@ export default class QuickLink extends PureComponent<
             className={classnames('quick-link-overlay')}
           />
         )}
-      </React.Fragment>
+      </div>
     )
   }
 }

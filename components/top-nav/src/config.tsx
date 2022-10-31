@@ -14,6 +14,7 @@ export interface NAVIGATION_ITEM_L1_INTERFACE {
   icon: Node
   path?: string
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
+  dispatchFunctionObject?: Function
 }
 
 export interface NAVIGATION_ITEM_L2_INTERFACE {
