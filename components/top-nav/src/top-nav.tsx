@@ -10,7 +10,7 @@ import { getPathToInfoMapping } from './utils'
 
 export interface TopNavProps extends BaseProps {
   config: {
-    quickLinks: Array<LinkInterface>
+    quickLinks: any
     logo: Node
     navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
   }
