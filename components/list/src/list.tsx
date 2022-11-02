@@ -153,7 +153,7 @@ export default class List extends PureComponent<
   }
 
   computeDisabled() {
-    var numDisabled = 0
+    let numDisabled = 0
     for (let i = 0; i < this.props.items.length; i++) {
       if (this.props.isItemDisabled(this.props.items[i])) {
         numDisabled++
@@ -527,6 +527,23 @@ export default class List extends PureComponent<
           </li>
         )
       }
+    }
+
+    if (virtualized) {
+      return (
+        <VirtualList
+          ref={this.virtualListRef}
+          itemCount={items.length}
+          className={classnames(className, 'scroller')}
+          estimatedItemSize={33}
+          viewportSize={Math.min(360, items.length * 33)}
+          renderContainer={renderContainer}
+          renderScroller={renderScroller}
+          getCellKey={(index) => idForItem(items[index])}
+        >
+          {renderItem}
+        </VirtualList>
+      )
     }
 
     return renderContainer({

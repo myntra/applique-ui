@@ -8,9 +8,9 @@
   display: block;
   cursor: pointer;
   input {
-    width: 15px;
-    height: 15px;
-    border: 1.5px solid #3e3f45;
+    width: size('input-radio');
+    height: size('input-radio');
+    border: border('input-checkbox');
     border-radius: 50%;
     appearance: none;
   }

@@ -37,7 +37,7 @@
     cursor: pointer;
     content: '';
     background-color: transparent;
-    border: 1.5px solid color(#3e3f45);
+    border: border('input-checkbox');
 
     @include border-radius('checkbox');
     @include transition('checkbox');
@@ -79,7 +79,7 @@
     cursor: pointer;
     content: '';
     background-color: transparent;
-    border: 1.5px solid color(#3e3f45);
+    border: border('input-checkbox');
 
     @include border-radius('checkbox');
     @include transition('checkbox');
@@ -133,7 +133,7 @@
       border-color: color('primary');
     }
     &::after {
-      z-index: 2;
+      z-index: z-index('sidebar');
       opacity: 1;
     }
   }
