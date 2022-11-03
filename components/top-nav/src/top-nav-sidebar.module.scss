@@ -1,3 +1,5 @@
+@import '@accoutrement';
+
 .sidebar-menu {
   width: 100%;
   padding: 10px 16px;
@@ -5,7 +7,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: #56575d;
+  color: color('dark-gray-base');
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -17,7 +19,7 @@
 
   &-active {
     font-weight: 600;
-    color: #4f47c8;
+    color: color('primary');
   }
 
   &-dropdown-icon {
@@ -25,7 +27,7 @@
   }
 
   &:hover {
-    background: #ededf9;
+    background: color('primary-light-new-2');
     border-radius: 20px;
   }
 }

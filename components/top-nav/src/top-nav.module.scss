@@ -1,10 +1,12 @@
+@import '@accoutrement';
+
 .top-nav {
   width: 100vw;
   height: 100vh;
 
   &-header {
     padding: 0 28px;
-    background-color: #fff;
+    background-color: color('white');
 
     &-logo {
       min-width: 65px;
@@ -23,12 +25,12 @@
   &-page-content {
     height: 100%;
     padding: 10px 16px;
-    background: #f3f5f7;
+    background: color('gray-base-new-3');
 
     &-sidebar {
       width: 468px;
       padding: 8px;
-      background-color: #fff;
+      background-color: color('white');
     }
     &-view {
       width: 100%;
