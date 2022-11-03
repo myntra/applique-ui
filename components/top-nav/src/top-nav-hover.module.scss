@@ -3,9 +3,9 @@
 .hover-item {
   position: absolute;
   z-index: 1;
-  padding: 32px 24px;
+  padding: size('8x') size('6x');
   background-color: color('white');
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 size('2x') size('3x') rgba(0, 0, 0, 0.25);
 
   &-menu {
     display: flex;
@@ -14,25 +14,25 @@
     text-align: left;
 
     &-title {
-      margin: 0 0 8px 0;
-      font-size: 16px;
+      margin: 0 0 size('2x') 0;
+      font-size: size('4x');
       font-weight: 300;
-      line-height: 24px;
+      line-height: size('6x');
       color: color('dark-gray-base-2');
     }
 
     &-hr {
       width: 100%;
       height: 0;
-      margin: 0 0 16px 0;
+      margin: 0 0 size('4x') 0;
       background-color: rgba(18, 19, 25, 0.7);
       border: 1px solid color('gray');
     }
 
     &-link {
-      padding: 8px 0;
-      font-size: 14px;
-      line-height: 20px;
+      padding: size('2x') 0;
+      font-size: font-size('h4');
+      line-height: size('5x');
       color: color('dark-gray-base');
       text-align: left;
       cursor: pointer;
@@ -44,9 +44,9 @@
   &-direct {
     min-width: 200px;
     &-link {
-      font-size: 14px;
+      font-size: font-size('h4');
       font-weight: 500;
-      line-height: 20px;
+      line-height: size('5x');
       color: color('input.text');
       background-color: transparent;
       border: 0;

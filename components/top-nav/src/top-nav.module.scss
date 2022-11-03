@@ -5,12 +5,12 @@
   height: 100vh;
 
   &-header {
-    padding: 0 28px;
+    padding: 0 size('7x');
     background-color: color('white');
 
     &-logo {
       min-width: 65px;
-      margin-right: 24px;
+      margin-right: size('6x');
       cursor: pointer;
     }
 
@@ -24,12 +24,12 @@
 
   &-page-content {
     height: 100%;
-    padding: 10px 16px;
+    padding: size('3x') size('4x');
     background: color('gray-base-new-3');
 
     &-sidebar {
       width: 468px;
-      padding: 8px;
+      padding: size('2x');
       background-color: color('white');
     }
     &-view {

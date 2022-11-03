@@ -52,7 +52,7 @@
     z-index: 1000;
     min-width: 200px;
     background-color: color('white');
-    border-radius: 4px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+    border-radius: size('1x');
+    box-shadow: 0 size('2x') size('3x') rgba(0, 0, 0, 0.25);
   }
 }

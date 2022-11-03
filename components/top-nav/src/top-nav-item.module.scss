@@ -1,10 +1,10 @@
 @import '@accoutrement';
 
 .top-nav-button {
-  padding: 16px;
-  font-size: 14px;
+  padding: size('4x');
+  font-size: font-size('h4');
   font-weight: 600;
-  line-height: 20px;
+  line-height: size('5x');
   color: color('dark-gray-base');
   background-color: color('white');
   border: 0;
@@ -24,7 +24,7 @@
 
   &-icon {
     align-self: center;
-    width: 20px;
-    padding-right: 8px;
+    width: size('5x');
+    padding-right: size('2x');
   }
 }
