@@ -4,6 +4,7 @@ const docgen = require('@myntra/docgen')
 const prettier = require('prettier')
 const { componentsDir, components, pascalCase } = require('./utils')
 const apiDocGenerator = require('./docs/apiDocGenerator')
+const csvDataGenerator = require('./docs/csvDataGenerator')
 
 let META = []
 let DOCS = {}
@@ -39,7 +40,21 @@ function processDocJSON(componentDoc) {
     }),
   }
 }
+function objectToCsv(jsonData) {
+  const csvRows = []
+  const headers = Object.keys(jsonData[0])
+  csvRows.push(headers.join(','))
+  for (const row of jsonData) {
+    const values = headers.map((header) => {
+      const val = row[header]
+      return `"${val}"`
+    })
 
+    // To add, sepearater between each value
+    csvRows.push(values.join(','))
+  }
+  return csvRows.join('\n')
+}
 function extractDataFromComponents(components) {
   components.forEach((component, index) => {
     const directory = getComponentFileDirectory(component)
@@ -55,6 +70,11 @@ function extractDataFromComponents(components) {
         if (!DOCS[component]) DOCS[component] = {}
 
         DOCS[component][docs.displayName] = processDocJSON(docs)
+
+        if (DOCS[component][docs.displayName].data.length !== 0) {
+          const csvData = objectToCsv(DOCS[component][docs.displayName].data)
+          csvDataGenerator(csvData, component)
+        }
 
         console.log(docs.displayName)
 
