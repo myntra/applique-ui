@@ -3,7 +3,8 @@
   height: 100vh;
 
   &-header {
-    padding: 0 28px;
+    height: 54px;
+    padding: 0 0 0 28px;
     background-color: #fff;
 
     &-logo {
@@ -21,13 +22,16 @@
   }
 
   &-page-content {
-    height: 100%;
+    height: calc(100% - 54px);
     padding: 10px 16px;
     background: #f3f5f7;
 
     &-sidebar {
-      width: 468px;
+      min-width: 275px;
+      max-width: 275px;
+      max-height: 100%;
       padding: 8px;
+      overflow-y: scroll;
       background-color: #fff;
     }
     &-view {
