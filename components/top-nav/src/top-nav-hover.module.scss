@@ -28,7 +28,8 @@
     }
 
     &-link {
-      padding: 8px 0;
+      padding: 4px 8px;
+      margin: 4px 0;
       font-size: 14px;
       line-height: 20px;
       color: #56575d;
@@ -36,18 +37,28 @@
       cursor: pointer;
       background-color: transparent;
       border: none;
+
+      &:hover {
+        background-color: #ededf9;
+      }
     }
   }
 
   &-direct {
     min-width: 200px;
     &-link {
+      padding: 4px 8px;
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
       color: #0e0f17;
+      text-align: left;
       background-color: transparent;
       border: 0;
+
+      &:hover {
+        background-color: #ededf9;
+      }
     }
   }
 }
