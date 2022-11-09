@@ -24,16 +24,8 @@ function findPackages(dir) {
 const packages = findPackages(packagesDir)
 const components = findPackages(componentsDir)
 const themes = findPackages(themesDir)
-const targets = sortedPackages([
-  ...packages.map((pkg) => `@myntra/${pkg}`),
-  ...components.map((component) => `@myntra/uikit-component-${component}`),
-  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
-])
-const targetsMap = sortedPackagesMap([
-  ...packages.map((pkg) => `@myntra/${pkg}`),
-  ...components.map((component) => `@myntra/uikit-component-${component}`),
-  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
-])
+const targets = []
+const targetsMap = []
 
 function readPackage(name) {
   const pkgDir = getPackageDir(name)

@@ -1,1 +1,0 @@
-# @myntra/uikit-component-avatar

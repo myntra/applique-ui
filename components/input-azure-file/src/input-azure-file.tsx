@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import Button from '@myntra/uikit-component-button'
-import classnames from './input-azure-file.module.scss'
 import InputFile from '@myntra/uikit-component-input-file'
 import Progress from '@myntra/uikit-component-progress'
+import classnames from './input-azure-file.module.scss'
 
 import type { InputFileValidationFunction } from '@myntra/uikit-component-input-file'
 
@@ -32,11 +32,15 @@ export interface Props extends BaseProps {
   /**
    * The handler called when file is uploaded successfully.
    */
+  isUploadDisable?: boolean
+ /**
+  * The handler called to check if upload button should be disabled or not.
+  */
   onSuccess?(payload: { name: string; url: string }): void
   /**
    * The handler called if any error occurs.
    */
-  onError?(error: Error): void
+   onError?(error: Error): void
   /**
    * The validations passed from parent to be done before upload
    */
@@ -180,6 +184,8 @@ export default class InputAzureFile extends PureComponent<Props> {
       onSuccess,
       appName,
       clearOnSuccess,
+      isUploadDisable,
+      onChange,
       ...props
     } = this.props
 
@@ -203,7 +209,7 @@ export default class InputAzureFile extends PureComponent<Props> {
                 className={classnames('button')}
                 type="secondary"
                 loading={autoStartUpload ? this.state.isUploading : false}
-                disabled={autoStartUpload ? false : this.state.isUploading}
+                disabled={autoStartUpload ? false : (this.state.isUploading || props.disabled)}
                 onClick={browse}
                 size="small"
               >
@@ -214,7 +220,7 @@ export default class InputAzureFile extends PureComponent<Props> {
               <Button
                 className={classnames('button')}
                 type="secondary"
-                disabled={this.state.isUploading}
+                disabled={this.state.isUploading || props.disabled || isUploadDisable}
                 onClick={this.handleUploadClick}
                 size="small"
               >
