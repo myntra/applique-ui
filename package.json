@@ -17,7 +17,7 @@
     "clean": "rm -rf {components,packages}/*/{dist,node_modules} node_modules",
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
-    "docs:prepare": "node scripts/bundle-types-browser.js",
+    "docs:prepare": "node scripts/bundle-types-browser.js $CSV",
     "docs:compile": "node scripts/build-docs.mjs",
     "docs": "npm run docs:prepare && npm run docs:compile",
     "preinstall": "node scripts/ensure-pnpm.js",

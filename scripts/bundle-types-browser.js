@@ -40,21 +40,7 @@ function processDocJSON(componentDoc) {
     }),
   }
 }
-function objectToCsv(jsonData) {
-  const csvRows = []
-  const headers = Object.keys(jsonData[0])
-  csvRows.push(headers.join(','))
-  for (const row of jsonData) {
-    const values = headers.map((header) => {
-      const val = row[header]
-      return `"${val}"`
-    })
 
-    // To add, sepearater between each value
-    csvRows.push(values.join(','))
-  }
-  return csvRows.join('\n')
-}
 function extractDataFromComponents(components) {
   components.forEach((component, index) => {
     const directory = getComponentFileDirectory(component)
@@ -71,9 +57,11 @@ function extractDataFromComponents(components) {
 
         DOCS[component][docs.displayName] = processDocJSON(docs)
 
-        if (DOCS[component][docs.displayName].data.length !== 0) {
-          const csvData = objectToCsv(DOCS[component][docs.displayName].data)
-          csvDataGenerator(csvData, component)
+        if (
+          process.env.CSV === 'true' &&
+          DOCS[component][docs.displayName].data.length !== 0
+        ) {
+          csvDataGenerator(DOCS[component][docs.displayName].data, component)
         }
 
         console.log(docs.displayName)
