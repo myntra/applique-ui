@@ -1,23 +1,25 @@
+@import '@accoutrement';
+
 .sidebar-menu {
   width: 100%;
-  padding: 10px 16px;
-  margin-bottom: 8px;
-  font-size: 14px;
+  padding: size('3x') size('4x');
+  margin-bottom: size('2x');
+  font-size: font-size('h4');
   font-weight: 500;
-  line-height: 20px;
-  color: #56575d;
+  line-height: size('5x');
+  color: color('dark-gray-base');
   cursor: pointer;
   background-color: transparent;
   border: none;
 
   &-sub-item {
-    padding: 10px 15px 10px 45px;
+    padding: size('3x') size('4x') size('3x') size('12x');
     text-align: left;
   }
 
   &-active {
     font-weight: 600;
-    color: #4f47c8;
+    color: color('primary');
   }
 
   &-dropdown-icon {
@@ -25,7 +27,7 @@
   }
 
   &:hover {
-    background: #ededf9;
-    border-radius: 20px;
+    background: color('primary-light-new-2');
+    border-radius: size('5x');
   }
 }
