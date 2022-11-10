@@ -17,15 +17,8 @@ export interface TopNavProps extends BaseProps {
 }
 
 interface TopNavState {
-  selectedTabDetails: {
-    currentPath: string
-    currentLevels: {
-      L1_LEVEL_ID?: string
-      L2_LEVEL_ID?: string
-      L3_LEVEL_ID?: string
-    }
-  }
-  pathToDetailMapping: {
+  currentNavigationValue: string
+  navigationKeyToLevelsMapping: {
     [key: string]: {
       L1_LEVEL_ID?: string
       L2_LEVEL_ID?: string
@@ -46,48 +39,34 @@ interface TopNavState {
 export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
   constructor(props) {
     super(props)
-    const currentPath = '/testingpath'
-    const pathToDetailsMapping = getPathToInfoMapping(
+    const navigationKeyToLevelsMapping = getPathToInfoMapping(
       (props.config && props.config.navigationConfig) ||
-        DUMMY_DATA.navigationConfig
+        DUMMY_DATA.navigationConfig,
+      props.navigationKey
     )
     this.state = {
-      selectedTabDetails: {
-        currentPath,
-        currentLevels: pathToDetailsMapping[currentPath] || {},
-      },
-      pathToDetailMapping: pathToDetailsMapping,
+      currentNavigationValue: '',
+      navigationKeyToLevelsMapping,
     }
   }
 
-  setPath(routingInfo) {
-    const { path } = routingInfo
-    const { pathToDetailMapping } = this.state
-    this.setState({
-      selectedTabDetails: {
-        currentPath: path,
-        currentLevels: pathToDetailMapping[path],
-      },
-    })
+  setPath = ({ routingInfo }) => {
+    const { navigationKey } = this.props
+    this.setState({ currentNavigationValue: routingInfo[navigationKey] })
     this.props.dispatchFunction(routingInfo)
   }
 
-  getSidebarView() {
+  getSidebarView = ({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID }) => {
     const configurations = this.props.config || DUMMY_DATA
-    const firstLevelId = this.state.selectedTabDetails.currentLevels.L1_LEVEL_ID
-    const firstLevelConfig = configurations.navigationConfig[firstLevelId]
+    const firstLevelConfig = configurations.navigationConfig[L1_LEVEL_ID]
 
-    if (firstLevelId && firstLevelConfig.config) {
+    if (L1_LEVEL_ID && firstLevelConfig.config) {
       return (
         <div className={classnames('top-nav-page-content-sidebar')}>
           {firstLevelConfig.config.map((item) => (
             <TopNavSidebarMenu
-              selectedMenuId={
-                this.state.selectedTabDetails.currentLevels.L2_LEVEL_ID
-              }
-              selectedSubMenuId={
-                this.state.selectedTabDetails.currentLevels.L3_LEVEL_ID
-              }
+              selectedMenuId={L2_LEVEL_ID}
+              selectedSubMenuId={L3_LEVEL_ID}
               menuItem={item}
               handleDirectItemClick={this.setPath}
               handleMenuItemClick={(object) => this.setPath(object.routingInfo)}
@@ -100,6 +79,12 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
   }
 
   render() {
+    console.log(this.state)
+    const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
+      this.state.navigationKeyToLevelsMapping[
+        this.state.currentNavigationValue
+      ] || {}
+
     const configurations = this.props.config || DUMMY_DATA
     const { quickLinks, logo } = configurations
 
@@ -118,13 +103,8 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
                 ([levelId, navigationItem]) => (
                   <TopNavItem
                     itemData={navigationItem}
-                    isActive={
-                      this.state.selectedTabDetails.currentLevels
-                        .L1_LEVEL_ID === levelId
-                    }
-                    dispatchFunction={(object) => {
-                      this.setPath(object.routingInfo)
-                    }}
+                    isActive={L1_LEVEL_ID === levelId}
+                    dispatchFunction={this.setPath}
                   />
                 )
               )}
@@ -141,7 +121,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          {this.getSidebarView()}
+          {this.getSidebarView({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID })}
           <div className={classnames('top-nav-page-content-view')}>
             {this.props.children}
           </div>

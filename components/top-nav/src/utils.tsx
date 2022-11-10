@@ -1,6 +1,6 @@
 import { MENU_TYPES } from './config'
 
-function getPathToInfoMapping(navigationConfig) {
+function getPathToInfoMapping(navigationConfig, navigationKey) {
   const pathMap = {}
   Object.entries(navigationConfig).forEach(([l1LevelId, l1Config]) => {
     const L1_LEVEL_ID = l1LevelId
@@ -14,7 +14,7 @@ function getPathToInfoMapping(navigationConfig) {
           l2Config.config.forEach((l3Config) => {
             //@ts-ignore
             const L3_LEVEL_ID = l3Config.id || l3Config.title
-            pathMap[l3Config.routingInfo.path || L3_LEVEL_ID] = {
+            pathMap[l3Config.routingInfo[navigationKey] || L3_LEVEL_ID] = {
               L1_LEVEL_ID,
               L2_LEVEL_ID,
               L3_LEVEL_ID,
@@ -22,7 +22,7 @@ function getPathToInfoMapping(navigationConfig) {
           })
         } else if (l2Config.type === MENU_TYPES.MENU_DIRECT_LINK) {
           //@ts-ignore
-          pathMap[l2Config.routingInfo.path || L2_LEVEL_ID] = {
+          pathMap[l2Config.routingInfo[navigationKey] || L2_LEVEL_ID] = {
             L1_LEVEL_ID,
             L2_LEVEL_ID,
           }
@@ -30,7 +30,7 @@ function getPathToInfoMapping(navigationConfig) {
       })
     } else {
       //@ts-ignore
-      pathMap[l1Config.routingInfo.path] = { L1_LEVEL_ID }
+      pathMap[l1Config.routingInfo[navigationKey]] = { L1_LEVEL_ID }
     }
   })
   return pathMap
