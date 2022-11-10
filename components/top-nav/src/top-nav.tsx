@@ -14,10 +14,12 @@ export interface TopNavProps extends BaseProps {
     logo: Node
     navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
   }
+  dispatchFunction: Function
+  navigationKey: String
+  currentNavigationValue: String
 }
 
 interface TopNavState {
-  currentNavigationValue: string
   navigationKeyToLevelsMapping: {
     [key: string]: {
       L1_LEVEL_ID?: string
@@ -44,16 +46,10 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
         DUMMY_DATA.navigationConfig,
       props.navigationKey
     )
-    this.state = {
-      currentNavigationValue:
-        props.getInitNavigationKeyValue && props.getInitNavigationKeyValue(),
-      navigationKeyToLevelsMapping,
-    }
+    this.state = { navigationKeyToLevelsMapping }
   }
 
   setPath = ({ routingInfo }) => {
-    const { navigationKey } = this.props
-    this.setState({ currentNavigationValue: routingInfo[navigationKey] })
     this.props.dispatchFunction(routingInfo)
   }
 
@@ -80,10 +76,9 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
   }
 
   render() {
-    console.log(this.state)
     const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
       this.state.navigationKeyToLevelsMapping[
-        this.state.currentNavigationValue
+        `${this.props.currentNavigationValue}`
       ] || {}
 
     const configurations = this.props.config || DUMMY_DATA
