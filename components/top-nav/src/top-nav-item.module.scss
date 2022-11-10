@@ -1,27 +1,29 @@
+@import '@accoutrement';
+
 .top-nav-button {
-  padding: 16px;
-  font-size: 14px;
+  padding: size('4x');
+  font-size: font-size('h4');
   font-weight: 600;
-  line-height: 20px;
-  color: #56575d;
-  background-color: #fff;
+  line-height: size('5x');
+  color: color('dark-gray-base');
+  background-color: color('white');
   border: 0;
   border-bottom: 2px solid transparent;
 
   &:hover {
     cursor: pointer;
-    background-color: #ededf9;
-    border-bottom: 2px solid #4f47c8;
+    background-color: color('primary-light-new-2');
+    border-bottom: 2px solid color('primary');
   }
 
   &-active {
-    color: #4f47c8;
-    border-bottom: 2px solid #4f47c8;
+    color: color('primary');
+    border-bottom: 2px solid color('primary');
   }
 
   &-icon {
     align-self: center;
-    width: 20px;
-    padding-right: 8px;
+    width: size('5x');
+    padding-right: size('2x');
   }
 }

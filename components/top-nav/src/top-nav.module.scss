@@ -1,3 +1,5 @@
+@import '@accoutrement';
+
 .top-nav {
   width: 100vw;
   height: 100vh;
@@ -5,11 +7,11 @@
   &-header {
     height: 54px;
     padding: 0 0 0 28px;
-    background-color: #fff;
+    background-color: color('white');
 
     &-logo {
       min-width: 65px;
-      margin-right: 24px;
+      margin-right: size('6x');
       cursor: pointer;
     }
 
