@@ -5,7 +5,7 @@
   z-index: 1;
   padding: size('8x') size('6x');
   background-color: color('white');
-  box-shadow: 0 size('2x') size('3x') rgba(0, 0, 0, 0.25);
+  box-shadow: shadow('topnav-hover');
 
   &-menu {
     display: flex;

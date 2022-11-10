@@ -29,6 +29,7 @@
 
   &:hover {
     background: color('primary-base-light');
-    border-radius: size('1x');
+
+    @include border-radius('button');
   }
 }
