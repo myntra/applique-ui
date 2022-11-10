@@ -45,7 +45,8 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
       props.navigationKey
     )
     this.state = {
-      currentNavigationValue: '',
+      currentNavigationValue:
+        props.getInitNavigationKeyValue && props.getInitNavigationKeyValue(),
       navigationKeyToLevelsMapping,
     }
   }
