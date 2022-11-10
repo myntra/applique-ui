@@ -12,15 +12,10 @@
   background-color: transparent;
   border: none;
 
-  &-sub-item {
-    padding: size('3x') size('4x') size('3x') size('12x');
-    text-align: left;
-  }
-
   &-active {
     font-weight: 600;
     color: color('primary');
-    background: #f3f3f3;
+    background: color('primary-base-light');
   }
 
   &-dropdown-icon {
@@ -31,5 +26,10 @@
     background: color('primary-base-light');
 
     @include border-radius('button');
+  }
+
+  &-sub-item {
+    padding: size('3x') size('4x') size('3x') size('12x');
+    text-align: left;
   }
 }
