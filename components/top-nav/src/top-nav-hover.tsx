@@ -65,25 +65,27 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
       >
         <Layout type="stack" gutter="xl">
           {menus.map((menu) => {
-            return (
-              <div key={menu.title} className={classnames('hover-item-menu')}>
-                <label className={classnames('hover-item-menu-title')}>
-                  {menu.title}
-                </label>
-                <hr className={classnames('hover-item-menu-hr')} />
-                {menu.config.map((it) => {
-                  return (
-                    <button
-                      onClick={() => this.props.handleSubNavItemClick(it)}
-                      key={it.title}
-                      className={classnames('hover-item-menu-link')}
-                    >
-                      {it.title}
-                    </button>
-                  )
-                })}
-              </div>
-            )
+            if (menu.config.length) {
+              return (
+                <div key={menu.title} className={classnames('hover-item-menu')}>
+                  <label className={classnames('hover-item-menu-title')}>
+                    {menu.title}
+                  </label>
+                  <hr className={classnames('hover-item-menu-hr')} />
+                  {menu.config.map((it) => {
+                    return (
+                      <button
+                        onClick={() => this.props.handleSubNavItemClick(it)}
+                        key={it.title}
+                        className={classnames('hover-item-menu-link')}
+                      >
+                        {it.title}
+                      </button>
+                    )
+                  })}
+                </div>
+              )
+            }
           })}
           {directs && directs.length ? (
             <Layout
