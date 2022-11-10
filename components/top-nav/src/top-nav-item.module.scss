@@ -5,14 +5,14 @@
   font-size: font-size('h4');
   font-weight: 600;
   line-height: size('5x');
-  color: color('dark-gray-base');
+  color: color('gray-dark-base');
   background-color: color('white');
   border: 0;
   border-bottom: 2px solid transparent;
 
   &:hover {
     cursor: pointer;
-    background-color: color('primary-light-new-2');
+    background-color: color('primary-base-light');
     border-bottom: 2px solid color('primary');
   }
 

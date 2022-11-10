@@ -6,7 +6,7 @@
 
   &-header {
     height: 54px;
-    padding: 0 0 0 28px;
+    padding: 0 0 0 size('6x');
     background-color: color('white');
 
     &-logo {
@@ -25,16 +25,16 @@
 
   &-page-content {
     height: calc(100% - 54px);
-    padding: 10px 16px;
+    padding: size('3x') size('4x');
     background: #f3f5f7;
 
     &-sidebar {
       min-width: 275px;
       max-width: 275px;
       max-height: 100%;
-      padding: 8px;
+      padding: size('2x');
       overflow-y: scroll;
-      background-color: #fff;
+      background-color: color('white');
       -ms-overflow-style: none;
       scrollbar-width: none;
 

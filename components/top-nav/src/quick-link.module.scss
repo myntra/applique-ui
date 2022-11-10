@@ -13,13 +13,13 @@
 
     &:hover {
       color: color('primary');
-      background-color: color('primary-light-new-2');
+      background-color: color('primary-base-light');
       border-bottom: 2px solid color('primary');
     }
 
     &-active {
       color: color('primary');
-      background-color: color('primary-light-new-2');
+      background-color: color('primary-base-light');
       border-bottom: 2px solid color('primary');
     }
   }

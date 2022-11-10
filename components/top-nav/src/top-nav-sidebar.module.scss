@@ -7,7 +7,7 @@
   font-size: font-size('h4');
   font-weight: 500;
   line-height: size('5x');
-  color: color('dark-gray-base');
+  color: color('gray-dark-base');
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -28,7 +28,7 @@
   }
 
   &:hover {
-    background: color('primary-light-new-2');
+    background: color('primary-base-light');
     border-radius: size('1x');
   }
 }
