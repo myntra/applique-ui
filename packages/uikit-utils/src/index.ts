@@ -124,7 +124,12 @@ export function classnames(...args) {
 
   classes.use = (cssModule) => {
     return unique(
-      classes.map((it) => cssModule[it] || it).filter(isString)
+      classes
+        .map(
+          (it) =>
+            cssModule[it] || (cssModule.default && cssModule.default[it]) || it
+        )
+        .filter(isString)
     ).join(' ')
   }
 
