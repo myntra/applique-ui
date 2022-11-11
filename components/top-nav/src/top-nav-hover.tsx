@@ -28,9 +28,16 @@ function getFilteredNavs(config) {
     (aggregate, currentValue) => {
       switch (currentValue.type) {
         case MENU_TYPES.MENU:
-          return {
-            ...aggregate,
-            menus: [...aggregate.menus, currentValue],
+          if (
+            currentValue.config.length &&
+            currentValue.hoverMenuColumnBucket >= 0 &&
+            currentValue.hoverMenuColumnBucket < 4
+          ) {
+            const menus = aggregate.menus
+            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
+            return { ...aggregate, menus }
+          } else {
+            return aggregate
           }
         case MENU_TYPES.MENU_DIRECT_LINK:
           return {
@@ -42,7 +49,7 @@ function getFilteredNavs(config) {
       }
     },
     {
-      menus: [],
+      menus: new Array([], [], [], []),
       directs: [],
     }
   )
@@ -64,29 +71,34 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
         }}
       >
         <Layout type="stack" gutter="xl">
-          {menus.map((menu) => {
-            if (menu.config.length) {
-              return (
-                <div key={menu.title} className={classnames('hover-item-menu')}>
-                  <label className={classnames('hover-item-menu-title')}>
-                    {menu.title}
-                  </label>
-                  <hr className={classnames('hover-item-menu-hr')} />
-                  {menu.config.map((it) => {
-                    return (
-                      <button
-                        onClick={() => this.props.handleSubNavItemClick(it)}
-                        key={it.title}
-                        className={classnames('hover-item-menu-link')}
-                      >
-                        {it.title}
-                      </button>
-                    )
-                  })}
-                </div>
-              )
-            }
-          })}
+          {menus.map((menusBucket) =>
+            menusBucket.length ? (
+              <div>
+                {menusBucket.map((menu) => (
+                  <div
+                    key={menu.title}
+                    className={classnames('hover-item-menu')}
+                  >
+                    <label className={classnames('hover-item-menu-title')}>
+                      {menu.title}
+                    </label>
+                    <hr className={classnames('hover-item-menu-hr')} />
+                    {menu.config.map((it) => {
+                      return (
+                        <button
+                          onClick={() => this.props.handleSubNavItemClick(it)}
+                          key={it.title}
+                          className={classnames('hover-item-menu-link')}
+                        >
+                          {it.title}
+                        </button>
+                      )
+                    })}
+                  </div>
+                ))}
+              </div>
+            ) : null
+          )}
           {directs && directs.length ? (
             <Layout
               type="row"

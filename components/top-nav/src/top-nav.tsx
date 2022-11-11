@@ -3,8 +3,8 @@ import Layout from '@myntra/uikit-component-layout'
 
 import TopNavItem from './top-nav-item'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
-import QuickLink, { LinkInterface } from './quick-link'
-import { DUMMY_DATA, NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import QuickLink from './quick-link'
+import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
 import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
 
@@ -42,8 +42,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
   constructor(props) {
     super(props)
     const navigationKeyToLevelsMapping = getPathToInfoMapping(
-      (props.config && props.config.navigationConfig) ||
-        DUMMY_DATA.navigationConfig,
+      props.config && props.config.navigationConfig,
       props.navigationKey
     )
     this.state = { navigationKeyToLevelsMapping }
@@ -54,7 +53,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
   }
 
   getSidebarView = ({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID }) => {
-    const configurations = this.props.config || DUMMY_DATA
+    const configurations = this.props.config
     const firstLevelConfig = configurations.navigationConfig[L1_LEVEL_ID]
 
     if (L1_LEVEL_ID && firstLevelConfig.config) {
@@ -81,7 +80,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
         `${this.props.currentNavigationValue}`
       ] || {}
 
-    const configurations = this.props.config || DUMMY_DATA
+    const configurations = this.props.config
     const { quickLinks, logo } = configurations
 
     return (

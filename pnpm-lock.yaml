@@ -169,7 +169,7 @@ importers:
       babel-loader2: /babel-loader/9.1.0_7uc2ny5pnz7ums2wq2q562bf6y
       babel-plugin-dynamic-import-node: 2.3.3
       chalk: 2.4.2
-      classnames-loader: 2.1.0_classnames@2.3.2
+      classnames-loader: 2.1.0
       css-loader: 3.6.0_webpack@4.46.0
       css-loader2: /css-loader/6.7.1_webpack@4.46.0
       debug: 4.3.2
@@ -207,12 +207,12 @@ importers:
       lodash.camelcase: 4.3.0
       minimist: 1.2.5
       moment: 2.29.1
-      monaco-editor-webpack-plugin: 1.9.1_7mvt5ip5plvru3xjqzpesew6je
+      monaco-editor-webpack-plugin: 1.9.1_webpack@4.46.0
       npm-run-all: 4.1.5
       portfinder: 1.0.28
       postcss-import: 12.0.1
       postcss-loader: 3.0.0
-      postcss-loader2: /postcss-loader/7.0.1_dhonik3q6ff6ozbzdscnovq2ka
+      postcss-loader2: /postcss-loader/7.0.1_webpack@4.46.0
       prettier: 1.19.1
       prop-types: 15.8.1
       raw-loader: 1.0.0_webpack@4.46.0
@@ -1312,6 +1312,30 @@ importers:
       '@myntra/uikit-component-icon': link:../icon
       '@myntra/uikit-component-list': link:../list
       '@myntra/uikit-utils': link:../../packages/uikit-utils
+      uikit-icons: /@myntra/uikit-icons/1.0.37
+    optionalDependencies:
+      react: 17.0.2
+    devDependencies:
+      '@types/react': 17.0.2
+
+  components/top-nav:
+    specifiers:
+      '@myntra/uikit-can-i-use': 1.13.*
+      '@myntra/uikit-component-icon': 1.13.*
+      '@myntra/uikit-component-layout': 1.13.*
+      '@myntra/uikit-context': 1.13.*
+      '@myntra/uikit-utils': 1.13.*
+      '@types/react': 17.0.2
+      prop-types: ^15.7.2
+      react: '>=15.4'
+      uikit-icons: npm:@myntra/uikit-icons@^1.0.9
+    dependencies:
+      '@myntra/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@myntra/uikit-component-icon': link:../icon
+      '@myntra/uikit-component-layout': link:../layout
+      '@myntra/uikit-context': link:../../packages/uikit-context
+      '@myntra/uikit-utils': link:../../packages/uikit-utils
+      prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 17.0.2
@@ -5461,10 +5485,8 @@ packages:
       ajv: 6.12.6
     dev: true
 
-  /ajv-formats/2.1.1_ajv@8.11.0:
+  /ajv-formats/2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependencies:
-      ajv: ^8.0.0
     peerDependenciesMeta:
       ajv:
         optional: true
@@ -7563,17 +7585,12 @@ packages:
       isobject: 3.0.1
       static-extend: 0.1.2
 
-  /classnames-loader/2.1.0_classnames@2.3.2:
+  /classnames-loader/2.1.0:
     resolution: {integrity: sha512-9gglVaBgNCzjllz4x1hmrsnkp965d+WghDOOXA6yDYu0cwCwZPt8cPzq/syOvSub9NPwNtglDJmfzseBPmQxKQ==}
     peerDependencies:
       classnames: ^2.2.0
     dependencies:
-      classnames: 2.3.2
       loader-utils: 0.2.17
-    dev: true
-
-  /classnames/2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: true
 
   /clean-css/4.2.4:
@@ -14131,19 +14148,14 @@ packages:
     resolution: {integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==}
     dev: true
 
-  /monaco-editor-webpack-plugin/1.9.1_7mvt5ip5plvru3xjqzpesew6je:
+  /monaco-editor-webpack-plugin/1.9.1_webpack@4.46.0:
     resolution: {integrity: sha512-x7fx1w3i/uwZERIgztHAAK3VQMsL8+ku0lFXXbO81hKDg8IieACqjGEa2mqEueg0c/fX+wd0oI+75wB19KJAsA==}
     peerDependencies:
       monaco-editor: 0.19.x || 0.20.x
       webpack: ^4.5.0
     dependencies:
       loader-utils: 1.4.0
-      monaco-editor: 0.20.0
       webpack: 4.46.0
-    dev: true
-
-  /monaco-editor/0.20.0:
-    resolution: {integrity: sha512-hkvf4EtPJRMQlPC3UbMoRs0vTAFAYdzFQ+gpMb8A+9znae1c43q8Mab9iVsgTcg/4PNiLGGn3SlDIa8uvK1FIQ==}
     dev: true
 
   /moo/0.5.1:
@@ -15304,7 +15316,7 @@ packages:
       schema-utils: 1.0.0
     dev: true
 
-  /postcss-loader/7.0.1_dhonik3q6ff6ozbzdscnovq2ka:
+  /postcss-loader/7.0.1_webpack@4.46.0:
     resolution: {integrity: sha512-VRviFEyYlLjctSM93gAZtcJJ/iSkPZ79zWbN/1fSH+NisBByEiVLqpdVDrPLVSi8DX0oJo12kL/GppTBdKVXiQ==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -15313,7 +15325,6 @@ packages:
     dependencies:
       cosmiconfig: 7.0.1
       klona: 2.0.5
-      postcss: 8.4.18
       semver: 7.3.8
       webpack: 4.46.0
     dev: true
@@ -17238,7 +17249,7 @@ packages:
     dependencies:
       '@types/json-schema': 7.0.9
       ajv: 8.11.0
-      ajv-formats: 2.1.1_ajv@8.11.0
+      ajv-formats: 2.1.1
       ajv-keywords: 5.1.0_ajv@8.11.0
     dev: true
 
