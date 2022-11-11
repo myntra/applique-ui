@@ -133,7 +133,7 @@
       border-color: color('primary');
     }
     &::after {
-      z-index: z-index('sidebar');
+      z-index: z-index('checkbox');
       opacity: 1;
     }
   }

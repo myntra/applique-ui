@@ -102,7 +102,9 @@ export default class List extends PureComponent<
         // TODO: Check if scroll is required.
         this.containerRef.current &&
         this.containerRef.current.children.length > this.state.activeIndex
-          ? scrollIntoView(
+          ? // check if activeIndex does not exceed length of children, for lists with group headings,
+            // a list group can have more elements than the total number of list groups
+            scrollIntoView(
               this.containerRef.current.children[this.state.activeIndex],
               {
                 scrollMode: 'if-needed',
@@ -153,6 +155,9 @@ export default class List extends PureComponent<
   }
 
   computeDisabled() {
+    if (!this.props.isItemDisabled) {
+      return this.computeTotalItems()
+    }
     let numDisabled = 0
     for (let i = 0; i < this.props.items.length; i++) {
       if (this.props.isItemDisabled(this.props.items[i])) {
@@ -165,17 +170,12 @@ export default class List extends PureComponent<
   computeTotalItems = () => {
     // compute total items
     var lenItems = 0
-    if (typeof this.props.items === 'string') {
-      // single list
-      lenItems = this.props.children.length
-    } else {
-      // grouped list
-      for (let index = 0; index < this.props.items.length; index++) {
-        const item = this.props.items[index]
-        const key = Object.keys(item)[0]
-        const listGroup = item[key]
-        lenItems = lenItems + listGroup.length
-      }
+    // grouped list
+    for (let index = 0; index < this.props.items.length; index++) {
+      const item = this.props.items[index]
+      const key = Object.keys(item)[0]
+      const listGroup = item[key]
+      lenItems = lenItems + listGroup.length
     }
     return lenItems
   }
@@ -214,9 +214,11 @@ export default class List extends PureComponent<
 
     for (let index = start; index <= end; ++index) {
       const id = idForItem(items[index])
-      const isDisabled = isItemDisabled(items[index])
-      if (isDisabled) {
-        continue
+      if (isItemDisabled) {
+        const isDisabled = isItemDisabled(items[index])
+        if (isDisabled) {
+          continue
+        }
       }
       if (typeof id === 'string') {
         // single list
@@ -409,9 +411,8 @@ export default class List extends PureComponent<
         {multiple ? (
           <li
             role="option"
-            className={classnames('item', {
+            className={classnames('item', 'selectall', {
               'is-selected': this.state.areSelectedAll,
-              selectall: true,
             })}
             onClick={() => this.selectAll(children)}
           >
