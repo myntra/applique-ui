@@ -42,6 +42,15 @@ export default class TopNavSidebarMenu extends PureComponent<
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (
+      nextProps.menuItem.id === nextProps.selectedMenuId &&
+      !this.state.isOpen
+    ) {
+      this.setState({ isOpen: true })
+    }
+  }
+
   handleSectionClick = () => this.setState({ isOpen: !this.state.isOpen })
 
   getMenuRowItemView = (menuType, rowItem, isActive, handleSectionClick) => {
