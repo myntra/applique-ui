@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const { getPackageDir } = require('../utils')
 
 function objectToCsv(jsonData) {
   const csvRows = []
@@ -20,7 +19,12 @@ function objectToCsv(jsonData) {
 
 function main(docs, componentName) {
   const csvData = objectToCsv(docs)
-  const csvLocation = getPackageDir(componentName) + '/docs/csvData.csv'
+
+  const distDir = path.resolve(__dirname, '../../dist/')
+  const csvLocation = path.resolve(distDir, componentName + '.csv')
+
+  if (!fs.existsSync(distDir)) fs.mkdirSync(distDir)
+
   console.log(
     'writing csv data for component ',
     componentName,

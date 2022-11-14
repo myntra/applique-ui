@@ -58,7 +58,7 @@ function extractDataFromComponents(components) {
         DOCS[component][docs.displayName] = processDocJSON(docs)
 
         if (
-          process.env.CSV === 'true' &&
+          process.argv.includes('--csv') &&
           DOCS[component][docs.displayName].data.length !== 0
         ) {
           csvDataGenerator(DOCS[component][docs.displayName].data, component)
