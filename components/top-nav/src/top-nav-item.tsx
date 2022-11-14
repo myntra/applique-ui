@@ -52,33 +52,32 @@ export default class TopNavItem extends PureComponent<
   render() {
     const { itemData, isActive } = this.props
 
-    return (
-      <button
-        ref={(ref) => {
-          this.tabItemRef = ref
-        }}
-        className={classnames(
-          'top-nav-button',
-          isActive ? 'top-nav-button-active' : null
-        )}
-        onMouseEnter={this.enableHover}
-        onMouseLeave={this.disableHover}
-        onClick={
-          itemData.routingInfo && itemData.noHover
-            ? this.handleNavItemClick
-            : null
-        }
-      >
-        {itemData.icon && (
-          <Icon
-            className={classnames('top-nav-button-icon')}
-            name={itemData.icon}
-          />
-        )}
-        {itemData.label}
-        {this.state.isHovering &&
-          Array.isArray(itemData.config) &&
-          itemData.config.length && (
+    if (Array.isArray(itemData.config) && itemData.config.length) {
+      return (
+        <button
+          ref={(ref) => {
+            this.tabItemRef = ref
+          }}
+          className={classnames(
+            'top-nav-button',
+            isActive ? 'top-nav-button-active' : null
+          )}
+          onMouseEnter={this.enableHover}
+          onMouseLeave={this.disableHover}
+          onClick={
+            itemData.routingInfo && itemData.noHover
+              ? this.handleNavItemClick
+              : null
+          }
+        >
+          {itemData.icon && (
+            <Icon
+              className={classnames('top-nav-button-icon')}
+              name={itemData.icon}
+            />
+          )}
+          {itemData.label}
+          {this.state.isHovering && (
             <TopNavHover
               navTabConfig={itemData.config}
               disableHover={this.disableHover}
@@ -89,7 +88,9 @@ export default class TopNavItem extends PureComponent<
               }}
             />
           )}
-      </button>
-    )
+        </button>
+      )
+    }
+    return null
   }
 }
