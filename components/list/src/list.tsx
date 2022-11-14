@@ -156,7 +156,7 @@ export default class List extends PureComponent<
 
   computeDisabled() {
     if (!this.props.isItemDisabled) {
-      return this.computeTotalItems()
+      return 0
     }
     let numDisabled = 0
     for (let i = 0; i < this.props.items.length; i++) {
@@ -214,12 +214,12 @@ export default class List extends PureComponent<
 
     for (let index = start; index <= end; ++index) {
       const id = idForItem(items[index])
-      if (isItemDisabled) {
-        const isDisabled = isItemDisabled(items[index])
-        if (isDisabled) {
-          continue
-        }
+
+      const isDisabled = isItemDisabled(items[index])
+      if (isDisabled) {
+        continue
       }
+
       if (typeof id === 'string') {
         // single list
         if (ids.has(id)) {
