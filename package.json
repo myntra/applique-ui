@@ -18,6 +18,7 @@
     "refresh": "run-p refresh:*",
     "refresh:packages": "node scripts/bootstrap.js",
     "docs:prepare": "node scripts/bundle-types-browser.js",
+    "docs:csv": "npm run docs:prepare --csv",
     "docs:compile": "node scripts/build-docs.mjs",
     "docs": "npm run docs:prepare && npm run docs:compile",
     "preinstall": "node scripts/ensure-pnpm.js",
