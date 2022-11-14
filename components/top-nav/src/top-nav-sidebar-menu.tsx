@@ -87,7 +87,11 @@ export default class TopNavSidebarMenu extends PureComponent<
       handleDirectItemClick,
     } = this.props
 
-    if (menuItem.type === MENU_TYPES.MENU) {
+    if (
+      menuItem.type === MENU_TYPES.MENU &&
+      Array.isArray(menuItem.config) &&
+      menuItem.config.length
+    ) {
       return (
         <div>
           {this.getMenuRowItemView(

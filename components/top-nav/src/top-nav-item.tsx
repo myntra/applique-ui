@@ -76,17 +76,19 @@ export default class TopNavItem extends PureComponent<
           />
         )}
         {itemData.label}
-        {this.state.isHovering && itemData.config && (
-          <TopNavHover
-            navTabConfig={itemData.config}
-            disableHover={this.disableHover}
-            handleSubNavItemClick={this.handleSubNavItemClick}
-            parentPositions={{
-              bottom: this.tabItemRef.getBoundingClientRect().bottom,
-              left: this.tabItemRef.getBoundingClientRect().left,
-            }}
-          />
-        )}
+        {this.state.isHovering &&
+          Array.isArray(itemData.config) &&
+          itemData.config.length && (
+            <TopNavHover
+              navTabConfig={itemData.config}
+              disableHover={this.disableHover}
+              handleSubNavItemClick={this.handleSubNavItemClick}
+              parentPositions={{
+                bottom: this.tabItemRef.getBoundingClientRect().bottom,
+                left: this.tabItemRef.getBoundingClientRect().left,
+              }}
+            />
+          )}
       </button>
     )
   }
