@@ -52,7 +52,10 @@ export default class TopNavItem extends PureComponent<
   render() {
     const { itemData, isActive } = this.props
 
-    if (Array.isArray(itemData.config) && itemData.config.length) {
+    if (
+      (itemData.routingInfo && itemData.noHover) ||
+      (Array.isArray(itemData.config) && itemData.config.length)
+    ) {
       return (
         <button
           ref={(ref) => {
