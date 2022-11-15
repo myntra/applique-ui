@@ -51,11 +51,10 @@ export default class TopNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
+    const isDirectLink = itemData.routingInfo && itemData.noHover
+    const isMenu = Array.isArray(itemData.config) && itemData.config.length
 
-    if (
-      (itemData.routingInfo && itemData.noHover) ||
-      (Array.isArray(itemData.config) && itemData.config.length)
-    ) {
+    if (isDirectLink || isMenu) {
       return (
         <button
           ref={(ref) => {
@@ -80,7 +79,7 @@ export default class TopNavItem extends PureComponent<
             />
           )}
           {itemData.label}
-          {this.state.isHovering && (
+          {this.state.isHovering && isMenu && (
             <TopNavHover
               navTabConfig={itemData.config}
               disableHover={this.disableHover}
