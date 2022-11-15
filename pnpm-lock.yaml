@@ -224,11 +224,21 @@ importers:
 
   components/input-azure-file:
     specifiers:
+      '@myntra/accoutrement': ^1.13.101
+      '@myntra/uikit-component-button': 1.13.*
+      '@myntra/uikit-component-input-file': 1.13.*
       '@myntra/uikit-component-progress': 1.13.*
+      '@myntra/uikit-utils': 1.13.*
       '@types/react': ^16.8
       react: '>=15.4'
+      uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
+      '@myntra/accoutrement': link:../../packages/accoutrement
+      '@myntra/uikit-component-button': 1.13.96
+      '@myntra/uikit-component-input-file': 1.13.96
       '@myntra/uikit-component-progress': 1.13.96
+      '@myntra/uikit-utils': link:../../packages/uikit-utils
+      uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: registry.npmjs.org/react/17.0.2
     devDependencies:

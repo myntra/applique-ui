@@ -32,6 +32,10 @@
     "react": ">=15.4"
   },
   "dependencies": {
-    "@myntra/uikit-component-progress": "1.13.*"
+    "@myntra/uikit-component-button": "1.13.*",
+    "@myntra/uikit-component-input-file": "1.13.*",
+    "@myntra/uikit-component-progress": "1.13.*",
+    "@myntra/uikit-utils": "1.13.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }
