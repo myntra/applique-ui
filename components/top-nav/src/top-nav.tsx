@@ -100,7 +100,11 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
         >
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
-            <Layout type="stack" gutter="none">
+            <Layout
+              type="stack"
+              gutter="none"
+              className={classnames('top-nav-header-content-tabs')}
+            >
               {Object.entries(configurations.navigationConfig).map(
                 ([levelId, navigationItem]) => (
                   <TopNavItem

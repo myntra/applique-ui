@@ -14,11 +14,17 @@
       cursor: pointer;
     }
 
-    &-content-container {
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      width: 100%;
+    &-content {
+      &-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &-tabs {
+        overflow-x: scroll;
+      }
     }
   }
 
@@ -41,6 +47,7 @@
         display: none;
       }
     }
+
     &-view {
       width: 100%;
       height: 100%;
