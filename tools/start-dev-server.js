@@ -2,11 +2,11 @@
 
 // Configuration file for dev server for running one component at a time.
 const Inquirer = require('inquirer')
-const webpack = require('webpack')
-const WebpackHTMLPlugin = require('html-webpack-plugin')
-const { DefinePlugin } = require('webpack')
+const webpack = require('webpack2')
+const WebpackHTMLPlugin = require('html-webpack-plugin2')
+const { DefinePlugin } = require('webpack2')
 const WebpackChain = require('webpack-chain')
-const WebpackDevServer = require('webpack-dev-server')
+const WebpackDevServer = require('webpack-dev-server2')
 const {
   components,
   getPackageDir,
@@ -19,6 +19,10 @@ const Fs = require('fs')
 const portfinder = require('portfinder')
 const jscodeshift = require('jscodeshift/src/core')
 const component = process.argv[2]
+
+const entryFile = './docs/index.mdx'
+// const entryFile = './example.mdx'
+const localComponents = new Set()
 
 start(component).catch(console.error)
 
@@ -56,27 +60,33 @@ function findImport(root, startsWith = null) {
 }
 
 function createComponentsFile(component) {
-  const fileName = Path.resolve(getPackageDir(component), 'example.mdx')
-  const source = Fs.readFileSync(fileName, { encoding: 'utf8' })
-  const root = jscodeshift(source.toString().split('#')[0], {})
-  const RE = /<([A-Z](?:[a-zA-Z0-9]+))/gm
-
+  const files = Fs.readdirSync(
+    Path.resolve(getPackageDir(component), './docs')
+  ).filter((v) => v.endsWith('.mdx'))
   let match
 
-  const localComponents = new Set()
+  files.forEach((file) => {
+    const fileName = Path.resolve(getPackageDir(component), './docs', file)
+    const source = Fs.readFileSync(fileName, { encoding: 'utf8' })
+    // console.log(source)
+    // const root = jscodeshift(source.toString().split('#')[0], {})
+    const RE = /<([A-Z](?:[a-zA-Z0-9]+))/gm
 
-  while ((match = RE.exec(source))) {
-    const [, component] = match
+    while ((match = RE.exec(source))) {
+      const [, component] = match
 
-    if (components.includes(kebabCase(component)))
-      localComponents.add(component)
-  }
-  let iconImports = findImport(root, 'uikit-icons').paths()
-  iconImports = iconImports.length
-    ? iconImports[0].value.specifiers.map(
-        (specifier) => specifier.imported.name
-      )
-    : []
+      if (components.includes(kebabCase(component)))
+        localComponents.add(component)
+    }
+
+    // let iconImports = findImport(root, 'uikit-icons').paths()
+    // iconImports = iconImports.length
+    // ? iconImports[0].value.specifiers.map(
+    //     (specifier) => specifier.imported.name
+    //   )
+    // : []
+  })
+
   Fs.writeFileSync(
     Path.resolve(__dirname, `app/uikit.${component}.js`),
     [
@@ -90,12 +100,12 @@ function createComponentsFile(component) {
               : ''
           }`
       ),
-      ...iconImports.map(
-        (iconName) =>
-          `
-        export { default as ${iconName} } from '@myntra/uikit-icons/svgs/${iconName}'
-        `
-      ),
+      // ...iconImports.map(
+      //   (iconName) =>
+      //     `
+      //   export { default as ${iconName} } from '@myntra/uikit-icons/svgs/${iconName}'
+      //   `
+      // ),
     ].join('\n')
   )
 }
@@ -111,7 +121,6 @@ function startWebpackDevServer(component, port) {
   chain.mode('development')
 
   chain.resolve.alias
-    .set('@code', Path.resolve(__dirname, './app/code.tsx'))
     .set('@uikit', Path.resolve(__dirname, `./app/uikit.${component}.js`))
     .set(
       'accoutrement$',
@@ -129,8 +138,7 @@ function startWebpackDevServer(component, port) {
       Path.resolve(__dirname, '../packages/uikit/design.scss')
     )
     .set('@design', Path.resolve(__dirname, '../themes/nuclei/design.scss'))
-    .set('@documenter', Path.resolve(__dirname, './app/documenter.tsx'))
-    .set('@component', Path.resolve(getPackageDir(component), 'example.mdx'))
+    .set('@component', Path.resolve(getPackageDir(component), entryFile))
     .set('@mdx-js/tag$', require.resolve('@mdx-js/tag'))
     .set('react$', require.resolve('react'))
     .set('react-dom$', require.resolve('react-dom'))
@@ -153,14 +161,12 @@ function startWebpackDevServer(component, port) {
     )
   )
 
-  chain.devServer
-    .contentBase(false)
-    .hot(true)
-    .open(true)
-    .noInfo(true)
+  chain.devServer.hot(true).open(true)
+
+  chain.set('infrastructureLogging', { level: 'warn' })
 
   chain.stats('errors-warnings')
-  chain.plugin('bar').use(require('webpackbar'))
+  // chain.plugin('bar').use(require('webpackbar'))
 
   chain.resolve.extensions
     .add('.ts')
@@ -188,13 +194,16 @@ function startWebpackDevServer(component, port) {
     .loader(require.resolve('../packages/classnames-loader'))
     .end()
     .use('style-loader')
-    .loader(require.resolve('style-loader'))
+    .loader(require.resolve('style-loader2'))
     .end()
     .use('css-loader')
-    .loader(require.resolve('css-loader'))
+    .loader(require.resolve('css-loader2'))
     .options({
       importLoaders: 2,
       modules: {
+        mode: 'local',
+        auto: true,
+        exportGlobals: true,
         localIdentName: '[name]_[local]_[hash:base64:5]',
         getLocalIdent(context, _, name) {
           const filename = context.resourcePath
@@ -205,33 +214,35 @@ function startWebpackDevServer(component, port) {
 
           return `u-${component}-${name}`
         },
+        namedExport: true,
+        exportOnlyLocals: false,
       },
     })
     .end()
     .use('postcss-loader')
-    .loader(require.resolve('postcss-loader'))
+    .loader(require.resolve('postcss-loader2'))
     .end()
     .use('sass-loader')
-    .loader(require.resolve('sass-loader'))
-    .options({
-      implementation: require('sass'),
-    })
+    .loader(require.resolve('sass-loader2'))
+    // .options({
+    //   implementation: require('sass'),
+    // })
     .end()
 
   chain.module
     .rule('css')
     .test(/\.css/)
     .use('style-loader')
-    .loader(require.resolve('style-loader'))
+    .loader(require.resolve('style-loader2'))
     .end()
     .use('css-loader')
-    .loader(require.resolve('css-loader'))
+    .loader(require.resolve('css-loader2'))
     .options({
       importLoaders: 1,
     })
     .end()
     .use('postcss-loader')
-    .loader(require.resolve('postcss-loader'))
+    .loader(require.resolve('postcss-loader2'))
     .end()
 
   chain.module
@@ -240,7 +251,7 @@ function startWebpackDevServer(component, port) {
     .exclude.add(/node_modules/)
     .end()
     .use('babel-loader')
-    .loader(require.resolve('babel-loader'))
+    .loader(require.resolve('babel-loader2'))
     .options({
       presets: [
         [
@@ -262,7 +273,7 @@ function startWebpackDevServer(component, port) {
     .exclude.add(/node_modules/)
     .end()
     .use('babel-loader')
-    .loader(require.resolve('babel-loader'))
+    .loader(require.resolve('babel-loader2'))
     .options({
       presets: [
         [
@@ -278,23 +289,30 @@ function startWebpackDevServer(component, port) {
       // plugins: ['@babel/plugin-proposal-object-rest-spread']
     })
     .end()
-    .use('post-mdx-loader')
-    .loader(require.resolve('./post-mdx-helper-loader'))
-    .end()
+    // .use('post-mdx-loader')
+    // .loader(require.resolve('./post-mdx-helper-loader'))
+    // .options({
+    //   components: Array.from(localComponents).reduce((acc, comp) => {
+    //     acc[comp] = `'${comp}'`
+    //     return acc
+    //   }, {})
+    // })
+    // .end()
     .use('mdx-loader')
     .loader(require.resolve('@mdx-js/loader'))
     .options({
-      mdPlugins: require('./markdown-plugins'),
+      providerImportSource: '@mdx-js/react',
+      remarkPlugins: require('./markdown-plugins'),
     })
     .end()
-    .use('mdx-polyfill-loader')
-    .loader(require.resolve('./polyfill-mdx-loader'))
+  // .use('mdx-polyfill-loader')
+  // .loader(require.resolve('./polyfill-mdx-loader'))
 
   chain.module
     .rule('ts')
     .test(/\.tsx?$/)
     .use('ts-loader')
-    .loader(require.resolve('ts-loader'))
+    .loader(require.resolve('ts-loader2'))
     .options({ transpileOnly: true })
     .end()
 

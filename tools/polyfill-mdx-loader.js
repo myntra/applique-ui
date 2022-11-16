@@ -1,3 +1,3 @@
 module.exports = function loader(source) {
-  return `import Documenter from '@documenter'\nimport Code from '@code'\n${source}`
+  return `import Code, { Documenter, CodePreview } from '@code'\nimport ImagePreview from '@imagePreview'\n${source}`
 }
