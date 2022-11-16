@@ -33,3 +33,9 @@
     text-align: left;
   }
 }
+
+@media only screen and (max-width: 1080px) {
+  .sidebar-menu {
+    font-size: size('3x');
+  }
+}

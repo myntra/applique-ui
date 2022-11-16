@@ -62,3 +62,28 @@
     }
   }
 }
+
+@media only screen and (max-width: 1080px) {
+  .hover-item {
+    padding: size('8x') size('4x');
+    &-menu {
+      min-width: 170px;
+
+      &-title {
+        font-size: font-size('h6');
+      }
+
+      &-link {
+        font-size: size('3x');
+      }
+    }
+
+    &-direct {
+      min-width: 170px;
+
+      &-link {
+        font-size: size('3x');
+      }
+    }
+  }
+}

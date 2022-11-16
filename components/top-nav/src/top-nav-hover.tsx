@@ -56,18 +56,27 @@ function getFilteredNavs(config) {
 }
 
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
+  state = {
+    width: null,
+  }
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
     const { menus, directs } = getFilteredNavs(navTabConfig)
-
     return (
       <div
         className={classnames('hover-item')}
+        ref={(el) => {
+          this.setState({ width: el?.offsetWidth })
+        }}
         onMouseLeave={disableHover}
         style={{
           top: `${parentPositions.bottom}px`,
-          left: `${parentPositions.left}px`,
+          left: `${
+            parentPositions.left + this.state?.width > screen.width
+              ? screen.width - this.state?.width
+              : parentPositions.left
+          }px`,
         }}
       >
         <Layout type="stack" gutter="xl">
