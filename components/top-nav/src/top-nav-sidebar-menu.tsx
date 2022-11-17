@@ -42,6 +42,15 @@ export default class TopNavSidebarMenu extends PureComponent<
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (
+      nextProps.menuItem.id === nextProps.selectedMenuId &&
+      !this.state.isOpen
+    ) {
+      this.setState({ isOpen: true })
+    }
+  }
+
   handleSectionClick = () => this.setState({ isOpen: !this.state.isOpen })
 
   getMenuRowItemView = (menuType, rowItem, isActive, handleSectionClick) => {
@@ -78,7 +87,11 @@ export default class TopNavSidebarMenu extends PureComponent<
       handleDirectItemClick,
     } = this.props
 
-    if (menuItem.type === MENU_TYPES.MENU) {
+    if (
+      menuItem.type === MENU_TYPES.MENU &&
+      Array.isArray(menuItem.config) &&
+      menuItem.config.length
+    ) {
       return (
         <div>
           {this.getMenuRowItemView(

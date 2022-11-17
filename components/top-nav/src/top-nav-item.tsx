@@ -51,43 +51,48 @@ export default class TopNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
+    const isDirectLink = itemData.routingInfo && itemData.noHover
+    const isMenu = Array.isArray(itemData.config) && itemData.config.length
 
-    return (
-      <button
-        ref={(ref) => {
-          this.tabItemRef = ref
-        }}
-        className={classnames(
-          'top-nav-button',
-          isActive ? 'top-nav-button-active' : null
-        )}
-        onMouseEnter={this.enableHover}
-        onMouseLeave={this.disableHover}
-        onClick={
-          itemData.routingInfo && itemData.noHover
-            ? this.handleNavItemClick
-            : null
-        }
-      >
-        {itemData.icon && (
-          <Icon
-            className={classnames('top-nav-button-icon')}
-            name={itemData.icon}
-          />
-        )}
-        {itemData.label}
-        {this.state.isHovering && itemData.config && (
-          <TopNavHover
-            navTabConfig={itemData.config}
-            disableHover={this.disableHover}
-            handleSubNavItemClick={this.handleSubNavItemClick}
-            parentPositions={{
-              bottom: this.tabItemRef.getBoundingClientRect().bottom,
-              left: this.tabItemRef.getBoundingClientRect().left,
-            }}
-          />
-        )}
-      </button>
-    )
+    if (isDirectLink || isMenu) {
+      return (
+        <button
+          ref={(ref) => {
+            this.tabItemRef = ref
+          }}
+          className={classnames(
+            'top-nav-button',
+            isActive ? 'top-nav-button-active' : null
+          )}
+          onMouseEnter={this.enableHover}
+          onMouseLeave={this.disableHover}
+          onClick={
+            itemData.routingInfo && itemData.noHover
+              ? this.handleNavItemClick
+              : null
+          }
+        >
+          {itemData.icon && (
+            <Icon
+              className={classnames('top-nav-button-icon')}
+              name={itemData.icon}
+            />
+          )}
+          {itemData.label}
+          {this.state.isHovering && isMenu && (
+            <TopNavHover
+              navTabConfig={itemData.config}
+              disableHover={this.disableHover}
+              handleSubNavItemClick={this.handleSubNavItemClick}
+              parentPositions={{
+                bottom: this.tabItemRef.getBoundingClientRect().bottom,
+                left: this.tabItemRef.getBoundingClientRect().left,
+              }}
+            />
+          )}
+        </button>
+      )
+    }
+    return null
   }
 }

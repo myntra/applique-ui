@@ -4,7 +4,11 @@ import Layout from '@myntra/uikit-component-layout'
 import TopNavItem from './top-nav-item'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
 import QuickLink from './quick-link'
-import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import {
+  NAVIGATION_ITEM_L1_INTERFACE,
+  MENU_TYPES,
+  HOVER_MENU_COLUMN_BUCKET,
+} from './config'
 import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
 
@@ -38,7 +42,10 @@ interface TopNavState {
  * @see http://uikit.myntra.com/components/top-nav
  */
 
-export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
+class TopNav extends PureComponent<TopNavProps, TopNavState> {
+  static MENU_TYPES = MENU_TYPES
+  static HOVER_MENU_COLUMN_BUCKET = HOVER_MENU_COLUMN_BUCKET
+
   constructor(props) {
     super(props)
     const navigationKeyToLevelsMapping = getPathToInfoMapping(
@@ -65,7 +72,7 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
               selectedSubMenuId={L3_LEVEL_ID}
               menuItem={item}
               handleDirectItemClick={this.setPath}
-              handleMenuItemClick={(object) => this.setPath(object.routingInfo)}
+              handleMenuItemClick={this.setPath}
             />
           ))}
         </div>
@@ -93,7 +100,11 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
         >
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
-            <Layout type="stack" gutter="none">
+            <Layout
+              type="stack"
+              gutter="none"
+              className={classnames('top-nav-header-content-tabs')}
+            >
               {Object.entries(configurations.navigationConfig).map(
                 ([levelId, navigationItem]) => (
                   <TopNavItem
@@ -125,3 +136,5 @@ export default class TopNav extends PureComponent<TopNavProps, TopNavState> {
     )
   }
 }
+
+export default TopNav

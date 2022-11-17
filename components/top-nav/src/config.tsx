@@ -4,6 +4,13 @@ export const MENU_TYPES = {
   MENU_DIRECT_LINK: 'MENU_DIRECT_LINK',
 }
 
+export const HOVER_MENU_COLUMN_BUCKET = {
+  COLUMN_1: 0,
+  COLUMN_2: 1,
+  COLUMN_3: 2,
+  COLUMN_4: 3,
+}
+
 export interface ROUTING_INFO_INTERFACE {
   path: string
   meta: Object
