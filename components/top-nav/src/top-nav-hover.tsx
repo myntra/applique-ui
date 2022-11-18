@@ -73,7 +73,6 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
     const { menus, directs } = getFilteredNavs(navTabConfig)
-    console.log('D: ', this.hoverItemRef)
     return (
       <div
         className={classnames('hover-item')}
