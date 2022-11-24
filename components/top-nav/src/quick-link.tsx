@@ -78,16 +78,15 @@ export default class QuickLink extends PureComponent<
           <button
             onClick={this.disableQuickLinkHover}
             className={classnames('quick-link-overlay')}
-          >
-            <span
-              style={{
-                top: `${
-                  this.overlayButtonRef.getBoundingClientRect().bottom
-                }px`,
-              }}
-              className={classnames('quick-link-overlay-section')}
-            />
-          </button>
+          ></button>
+        )}
+        {this.state.quickLinkHover && (
+          <span
+            style={{
+              top: `${this.overlayButtonRef.getBoundingClientRect().bottom}px`,
+            }}
+            className={classnames('quick-link-overlay-section')}
+          />
         )}
       </div>
     )
