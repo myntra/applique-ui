@@ -1,7 +1,7 @@
 @import '@accoutrement';
 
 .hover-item {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   padding: size('8x') size('6x');
   background-color: color('white');
