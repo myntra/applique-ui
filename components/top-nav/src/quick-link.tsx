@@ -17,7 +17,7 @@ interface QuickLinkState {
 }
 
 /**
- * <Component description goes here>
+ * <Component handles the render logic and other functionalities for showing the quick lick view>
  *
  * @since 1.13.101
  * @status REVIEWING
@@ -67,10 +67,11 @@ export default class QuickLink extends PureComponent<
                 this.overlayButtonRef.getBoundingClientRect().right}px`,
             }}
           >
-            {link.renderFunction({
-              enableQuickLinkHover: this.enableQuickLinkHover,
-              disableQuickLinkHover: this.disableQuickLinkHover,
-            })}
+            {link.renderFunction &&
+              link.renderFunction({
+                enableQuickLinkHover: this.enableQuickLinkHover,
+                disableQuickLinkHover: this.disableQuickLinkHover,
+              })}
           </div>
         )}
         {this.state.quickLinkHover && (

@@ -8,6 +8,7 @@ import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
   isActive?: boolean
+  dispatchFunction: Function
 }
 
 interface TopNavItemState {
@@ -15,7 +16,7 @@ interface TopNavItemState {
 }
 
 /**
- * <Component description goes here>
+ * <Component handles the view logic for nav item on the header component>
  *
  * @since 1.13.101
  * @status REVIEWING

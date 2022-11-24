@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import Layout from '@myntra/uikit-component-layout'
 
 import TopNavItem from './top-nav-item'
-import TopNavSidebarMenu from './top-nav-sidebar-menu'
+import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
 import QuickLink from './quick-link'
 import {
   NAVIGATION_ITEM_L1_INTERFACE,
@@ -65,17 +65,11 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
     if (L1_LEVEL_ID && firstLevelConfig.config) {
       return (
-        <div className={classnames('top-nav-page-content-sidebar')}>
-          {firstLevelConfig.config.map((item) => (
-            <TopNavSidebarMenu
-              selectedMenuId={L2_LEVEL_ID}
-              selectedSubMenuId={L3_LEVEL_ID}
-              menuItem={item}
-              handleDirectItemClick={this.setPath}
-              handleMenuItemClick={this.setPath}
-            />
-          ))}
-        </div>
+        <TopNavSidebarWrapper
+          config={firstLevelConfig.config}
+          l2LevelId={L2_LEVEL_ID}
+          l3LevelId={L3_LEVEL_ID}
+        />
       )
     }
     return null
