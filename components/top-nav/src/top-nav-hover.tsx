@@ -15,7 +15,7 @@ export interface TopNavHoverProps extends BaseProps {
 }
 
 /**
- * <Component description goes here>
+ * <Component handles the render of hover view for a nav item>
  *
  * @since 1.13.101
  * @status REVIEWING

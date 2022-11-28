@@ -31,6 +31,7 @@ export interface NAVIGATION_ITEM_L2_INTERFACE {
   type: string
   config: Array<NAVIGATION_ITEM_L3_INTERFACE>
   path: string
+  routingInfo?: ROUTING_INFO_INTERFACE
 }
 
 export interface NAVIGATION_ITEM_L3_INTERFACE {
