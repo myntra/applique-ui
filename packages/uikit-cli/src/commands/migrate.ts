@@ -30,7 +30,7 @@ function createPlugin(api: Service) {
       { recursive, apply, only, commit, themeName, nolint, packageName },
       target: string
     ) => {
-      const isFile = (await promised(fs).stat(target)).isFile()
+      const isFile = fs.statSync(target).isFile()
       const dir = isFile ? path.dirname(target) : target
       const files = isFile
         ? [path.resolve(target)]
@@ -65,9 +65,12 @@ function createPlugin(api: Service) {
         process.exit(1)
       }
 
+      const inputFiles = files.filter((it) => !/node_modules\//.test(it))
+      const isTsx = inputFiles.some((it) => /\.tsx?$/.test(it))
+
       const { error, ok } = await Runner.run(
         require.resolve('../utils/migrate/transform'),
-        files.filter((it) => !/node_modules\//.test(it)),
+        inputFiles,
         {
           only: Array.isArray(only)
             ? only.length
@@ -77,7 +80,7 @@ function createPlugin(api: Service) {
             ? only.split(',').map((part) => part.trim())
             : ['*'],
           transforms,
-          extensions: 'js,jsx',
+          extensions: ['js', 'jsx', ...(isTsx ? ['ts', 'tsx'] : [])].join(','),
           dry: !apply,
           runInBand: !apply || isDebug,
           print: isDebug,
@@ -85,6 +88,7 @@ function createPlugin(api: Service) {
           themeName,
           nolint,
           packageName,
+          ...(isTsx ? { parser: 'tsx' } : {}),
         }
       )
 
