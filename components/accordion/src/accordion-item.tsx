@@ -102,7 +102,6 @@ export default class AccordionItem extends Component<
                       ? itemProps.controlIcons.open
                       : itemProps.controlIcons.close
                   }
-                  color="primary"
                 />
               </Layout>
               <div className={classnames('item-content')} ref={this.contentRef}>

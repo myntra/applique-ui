@@ -48,5 +48,6 @@ export { default as Tabs, Tab } from "@myntra/uikit-component-tabs";
 export { default as Text } from "@myntra/uikit-component-text";
 export { default as Tooltip } from "@myntra/uikit-component-tooltip";
 export { default as TopBar } from "@myntra/uikit-component-top-bar";
+export { default as TopNav } from "@myntra/uikit-component-top-nav";
 export { default as VirtualGrid } from "@myntra/uikit-component-virtual-grid";
 export { default as VirtualList } from "@myntra/uikit-component-virtual-list";
