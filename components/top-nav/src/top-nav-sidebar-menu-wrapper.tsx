@@ -3,7 +3,12 @@ import React from 'react'
 import classnames from './top-nav.module.scss'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
 
-export default function TopNavSidebarWrapper({ config, l2LevelId, l3LevelId }) {
+export default function TopNavSidebarWrapper({
+  config,
+  l2LevelId,
+  l3LevelId,
+  setPath,
+}) {
   return (
     <div className={classnames('top-nav-page-content-sidebar')}>
       {config.map((item) => (
@@ -11,8 +16,8 @@ export default function TopNavSidebarWrapper({ config, l2LevelId, l3LevelId }) {
           selectedMenuId={l2LevelId}
           selectedSubMenuId={l3LevelId}
           menuItem={item}
-          handleDirectItemClick={this.setPath}
-          handleMenuItemClick={this.setPath}
+          handleDirectItemClick={setPath}
+          handleMenuItemClick={setPath}
         />
       ))}
     </div>
