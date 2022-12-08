@@ -69,6 +69,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           config={firstLevelConfig.config}
           l2LevelId={L2_LEVEL_ID}
           l3LevelId={L3_LEVEL_ID}
+          setPath={this.setPath}
         />
       )
     }
