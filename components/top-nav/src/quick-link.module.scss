@@ -22,6 +22,27 @@
       background-color: color('primary-base-light');
       border-bottom: 2px solid color('primary');
     }
+
+    &-secondary {
+      width: 44px;
+      height: 100%;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: color('primary');
+        background-color: color('primary-base-light');
+        border-bottom: 2px solid color('primary');
+      }
+
+      &-active {
+        color: color('primary');
+        background-color: color('primary-base-light');
+        border-bottom: 2px solid color('primary');
+      }
+    }
   }
 
   &-overlay {

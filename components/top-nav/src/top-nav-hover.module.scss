@@ -13,6 +13,8 @@
     min-width: 200px;
     margin-bottom: size('6x');
     text-align: left;
+    margin: 0 size('1x');
+    padding: 0 size('1x');
 
     &-title {
       margin: 0 0 size('2x') 0;
@@ -20,6 +22,7 @@
       font-weight: 300;
       line-height: size('6x');
       color: color('gray-dark-base-2');
+      padding: 0 size('1x');
     }
 
     &-hr {
@@ -41,8 +44,13 @@
 
       &:hover {
         background-color: color('primary-base-light');
+        @include border-radius('button');
       }
     }
+  }
+
+  &-menu + &-menu {
+    padding: size('4x') size('1x');
   }
 
   &-direct {
@@ -55,9 +63,39 @@
       text-align: left;
       background-color: transparent;
       border: 0;
-
+      
       &:hover {
         background-color: color('primary-base-light');
+        @include border-radius('button');
+      }
+    }
+
+    &-link + &-link {
+      margin-top: size('8x');
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .hover-item {
+    padding: size('8x') size('4x');
+    &-menu {
+      min-width: 170px;
+
+      &-title {
+        font-size: font-size('h6');
+      }
+
+      &-link {
+        font-size: size('3x');
+      }
+    }
+
+    &-direct {
+      min-width: 170px;
+
+      &-link {
+        font-size: size('3x');
       }
     }
   }
