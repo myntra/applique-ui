@@ -4,9 +4,9 @@ import VirtualList, {
   Props as VirtualListProps,
 } from '@myntra/uikit-component-virtual-list'
 import InputCheckbox from '@myntra/uikit-component-input-checkbox'
-import classnames from './list.module.scss'
-import { createRef, isNullOrUndefined } from '@myntra/uikit-utils'
 import InputRadio from '@myntra/uikit-component-input-radio'
+import { createRef, isNullOrUndefined } from '@myntra/uikit-utils'
+import classnames from './list.module.scss'
 
 export interface Props<T = any> extends BaseProps {
   /**
@@ -81,7 +81,7 @@ export default class List extends PureComponent<
     super(props)
 
     this.idPrefix = `list-${Date.now()}`
-    this.isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+    this.isMac = navigator?.platform?.toUpperCase?.()?.indexOf?.('MAC') >= 0
     this.containerRef = createRef()
     this.virtualListRef = createRef()
     this.scrollerRef = createRef()
@@ -436,7 +436,7 @@ export default class List extends PureComponent<
       const isSelected = selectedIDs.has(id)
       const isActive = index === activeIndex
       const isDisabled = isItemDisabled(item)
-      if (typeof item !== 'string') {
+      if (Array.isArray(item)) {
         const key = Object.keys(item)[0]
         const listValue = item[key]
         return (
@@ -508,22 +508,23 @@ export default class List extends PureComponent<
             })}
             onClick={() => !isDisabled && this.handleClick({ id, index })}
           >
-            {!multiple && this.props.onChange ? (
+            {!multiple ? (
               <InputRadio
                 className={classnames('radio')}
                 value={isSelected ? 'ok' : 'error'}
                 options={[{ value: 'ok', label: '' }]}
               />
-            ) : null}
-            <InputCheckbox
-              className={classnames('checkbox')}
-              value={isSelected}
-              htmlValue={id}
-              tabIndex={-1}
-              readOnly
-              hidden={!multiple}
-              disabled={isDisabled}
-            />
+            ) : (
+              <InputCheckbox
+                className={classnames('checkbox')}
+                value={isSelected}
+                htmlValue={id}
+                tabIndex={-1}
+                readOnly
+                hidden={!multiple}
+                disabled={isDisabled}
+              />
+            )}
             {children({ index, id, item })}
           </li>
         )
