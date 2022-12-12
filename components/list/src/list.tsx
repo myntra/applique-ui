@@ -436,7 +436,7 @@ export default class List extends PureComponent<
       const isSelected = selectedIDs.has(id)
       const isActive = index === activeIndex
       const isDisabled = isItemDisabled(item)
-      if (Array.isArray(item)) {
+      if (typeof item !== 'string') {
         const key = Object.keys(item)[0]
         const listValue = item[key]
         return (

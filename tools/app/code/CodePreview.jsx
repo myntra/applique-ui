@@ -14,7 +14,10 @@ export default function CodePreview({ className, source }) {
   }, [compilerError])
 
   return (
-    <div className={className} style={{ maxWidth: '100%' }}>
+    <div
+      className={className}
+      style={{ maxWidth: '100%', overflow: 'auto', maxHeight: '450px' }}
+    >
       {/* <button type='button' title='Refresh' onClick={() => setKey(key + 1)}>
         refresh
       </button> */}

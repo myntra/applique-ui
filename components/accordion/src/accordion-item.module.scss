@@ -2,8 +2,8 @@
 
 .item-container {
   overflow: hidden;
-  border: 1px solid color('gray');
   background-color: color('white');
+  border: 1px solid color('gray');
   border-radius: 4px;
   transition: height 300ms ease-in-out;
   &:not(:last-child) {
