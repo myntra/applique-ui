@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "1.13.101-alpha",
+  "version": "1.13.101-beta",
   "engines": {
     "node": ">=14.17.6"
   },
@@ -44,11 +44,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
-    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-jsx": "^7.18.6",
     "@babel/plugin-syntax-typescript": "^7.3.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@babel/preset-env": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
@@ -108,7 +108,7 @@
     "husky": "^1.3.1",
     "inquirer": "^8.2.0",
     "jest": "^24.5.0",
-    "jscodeshift": "^0.10.0",
+    "jscodeshift": "^0.14.0",
     "lazy-compile-webpack-plugin": "^0.1.5",
     "lint-staged": "^7.0.4",
     "loader-utils": "^1.2.3",
@@ -184,6 +184,5 @@
     "scripts": {
       "postbump": "npm run :update:versions && git add -A"
     }
-  },
-  "dependencies": {}
+  }
 }

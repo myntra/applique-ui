@@ -1,0 +1,59 @@
+@import '@accoutrement';
+
+.quick-link {
+  height: 100%;
+
+  &-icon-button {
+    width: 72px;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      color: color('primary');
+      background-color: color('primary-base-light');
+      border-bottom: 2px solid color('primary');
+    }
+
+    &-active {
+      color: color('primary');
+      background-color: color('primary-base-light');
+      border-bottom: 2px solid color('primary');
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+
+    &-section {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 101;
+      background-color: color('black');
+      opacity: 0.54;
+    }
+  }
+
+  &-hover-container {
+    position: fixed;
+    right: 0%;
+    z-index: 1000;
+    min-width: 200px;
+    background-color: color('white');
+
+    @include border-radius('checkbox');
+
+    box-shadow: shadow('topnav-hover');
+  }
+}

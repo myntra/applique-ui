@@ -204,7 +204,8 @@ function startWebpackDevServer(component, port) {
         mode: 'local',
         auto: true,
         exportGlobals: true,
-        localIdentName: '[name]_[local]_[hash:base64:5]',
+        // localIdentName: '[name]_[local]',
+        // localIdentName: '[name]_[local]_[hash:base64:5]',
         getLocalIdent(context, _, name) {
           const filename = context.resourcePath
           const component = filename
@@ -214,8 +215,8 @@ function startWebpackDevServer(component, port) {
 
           return `u-${component}-${name}`
         },
-        namedExport: true,
-        exportOnlyLocals: false,
+        // namedExport: true,
+        // exportOnlyLocals: false,
       },
     })
     .end()

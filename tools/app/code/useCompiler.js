@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { componentsList } from '../componentsList'
+
 /**
  * @param {string[]} identifiers
  */
@@ -74,22 +76,22 @@ async function compile(src) {
 
       code = `function ${name}(props) {\n  const { ${identifiers.join(
         ', '
-      )} } = props.context\n${body}`
+      )} } = components\n${body}`
     } else if (code.startsWith('class ')) {
       const [prefix, suffix] = code.split(/render\s*\([^)]*\)[^{}]*\{/, 2)
 
       code = `${prefix}\n  render() {\n    const { ${identifiers.join(
         ', '
-      )} } = this.props.context\n${suffix}`
+      )} } = this.components\n${suffix}`
     }
   } else {
     code = output.code
   }
 
   // eslint-disable-next-line no-new-func
-  const fn = new Function('React', `${code}\nreturn Example`)
+  const fn = new Function(['React', 'components'], `${code}\nreturn Example`)
 
-  return fn(React)
+  return fn(React, componentsList)
 }
 
 export default function useCompiler(
