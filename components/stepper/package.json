@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-stepper",
-  "version": "1.13.101-beta.1",
+  "version": "1.13.101-beta.2",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",

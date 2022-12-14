@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-icon",
-  "version": "1.13.101-beta.1",
+  "version": "1.13.101-beta.2",
   "main": "dist/icon.cjs.js",
   "module": "dist/icon.esm.js",
   "types": "dist/index.d.ts",
