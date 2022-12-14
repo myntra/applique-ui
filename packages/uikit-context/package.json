@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-context",
-  "version": "1.13.101",
+  "version": "1.13.101-beta.0",
   "main": "dist/uikit-context.cjs.js",
   "module": "dist/uikit-context.esm.js",
   "types": "dist/index.d.ts",

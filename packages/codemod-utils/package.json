@@ -1,6 +1,6 @@
 {
   "name": "@myntra/codemod-utils",
-  "version": "1.13.101",
+  "version": "1.13.101-beta.0",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
   "types": "dist/index.d.ts",
