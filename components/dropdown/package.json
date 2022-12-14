@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-dropdown",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",
   "types": "dist/index.d.ts",

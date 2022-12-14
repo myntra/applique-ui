@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-click-away",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/click-away.cjs.js",
   "module": "dist/click-away.esm.js",
   "types": "dist/index.d.ts",

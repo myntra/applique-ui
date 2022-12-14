@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-page",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/page.cjs.js",
   "module": "dist/page.esm.js",
   "types": "dist/index.d.ts",

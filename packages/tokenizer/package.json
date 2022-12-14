@@ -1,6 +1,6 @@
 {
   "name": "@applique/tokenizer",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
   "types": "dist/index.d.ts",

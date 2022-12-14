@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-job-tracker",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/job-tracker.cjs.js",
   "module": "dist/job-tracker.esm.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/uikit.cjs.js",
   "module": "dist/uikit.esm.js",
   "types": "dist/index.d.ts",

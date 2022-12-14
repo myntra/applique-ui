@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-theme-unity",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",
