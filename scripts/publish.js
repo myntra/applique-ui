@@ -3,6 +3,7 @@ const { resolve } = require('path')
 const { execSync } = require('child_process')
 const { targets, getPackageDir } = require('./utils')
 targets.forEach((target) => {
+  console.log(target)
   if (!target.includes('accordion')) return
   try {
     const packageDir = getPackageDir(target)
