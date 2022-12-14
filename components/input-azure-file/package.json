@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-input-azure-file",
-  "version": "1.13.101-beta.2",
+  "version": "1.13.102-beta.0",
   "main": "dist/input-azure-file.cjs.js",
   "module": "dist/input-azure-file.esm.js",
   "types": "dist/index.d.ts",

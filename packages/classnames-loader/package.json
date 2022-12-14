@@ -1,6 +1,6 @@
 {
   "name": "@myntra/classnames-loader",
-  "version": "1.13.101-beta.2",
+  "version": "1.13.102-beta.0",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",
   "types": "dist/index.d.ts",
