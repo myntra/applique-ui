@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-field",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/field.cjs.js",
   "module": "dist/field.esm.js",
   "types": "dist/index.d.ts",

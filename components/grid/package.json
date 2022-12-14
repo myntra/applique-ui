@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-grid",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/grid.cjs.js",
   "module": "dist/grid.esm.js",
   "types": "dist/index.d.ts",

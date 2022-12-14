@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-virtual-list",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/virtual-list.cjs.js",
   "module": "dist/virtual-list.esm.js",
   "types": "dist/index.d.ts",

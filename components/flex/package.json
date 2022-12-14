@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-flex",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/flex.cjs.js",
   "module": "dist/flex.esm.js",
   "types": "dist/index.d.ts",

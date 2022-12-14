@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-stepper",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",

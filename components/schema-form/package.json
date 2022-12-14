@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-schema-form",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/schema-form.cjs.js",
   "module": "dist/schema-form.esm.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-input-azure-file",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/input-azure-file.cjs.js",
   "module": "dist/input-azure-file.esm.js",
   "types": "dist/index.d.ts",

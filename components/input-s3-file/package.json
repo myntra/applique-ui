@@ -1,6 +1,6 @@
 {
   "name": "@applique/uikit-component-input-s3-file",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.4",
   "main": "dist/input-s3-file.cjs.js",
   "module": "dist/input-s3-file.esm.js",
   "types": "dist/index.d.ts",
