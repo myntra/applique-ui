@@ -1,1 +1,1 @@
-# @myntra/rollup-plugin-scss
+# @applique/rollup-plugin-scss

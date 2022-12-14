@@ -1,1 +1,1 @@
-# @myntra/uikit-component-nav-bar
+# @applique/uikit-component-nav-bar

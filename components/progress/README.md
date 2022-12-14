@@ -1,1 +1,1 @@
-# @myntra/uikit-component-progress
+# @applique/uikit-component-progress

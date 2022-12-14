@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-input-date",
+  "name": "@applique/uikit-component-input-date",
   "version": "0.0.2-beta.0",
   "main": "dist/input-date.cjs.js",
   "module": "dist/input-date.esm.js",

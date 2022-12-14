@@ -1,1 +1,1 @@
-# @myntra/uikit-component-flex
+# @applique/uikit-component-flex

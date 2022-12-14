@@ -1,1 +1,1 @@
-# @myntra/uikit-component-list
+# @applique/uikit-component-list

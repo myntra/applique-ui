@@ -1,1 +1,1 @@
-# @myntra/uikit-component-portal
+# @applique/uikit-component-portal

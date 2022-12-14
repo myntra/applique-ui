@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-avatar",
+  "name": "@applique/uikit-component-avatar",
   "version": "0.0.2-beta.0",
   "main": "dist/avatar.cjs.js",
   "module": "dist/avatar.esm.js",

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-measure
+# @applique/uikit-component-measure

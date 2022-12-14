@@ -1,1 +1,1 @@
-# @myntra/uikit-component-top-bar
+# @applique/uikit-component-top-bar

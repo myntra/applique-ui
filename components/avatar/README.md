@@ -1,1 +1,1 @@
-# @myntra/uikit-component-avatar
+# @applique/uikit-component-avatar

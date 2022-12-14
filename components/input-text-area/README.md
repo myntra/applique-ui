@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-text-area
+# @applique/uikit-component-input-text-area

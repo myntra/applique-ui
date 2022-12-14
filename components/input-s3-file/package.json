@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-input-s3-file",
+  "name": "@applique/uikit-component-input-s3-file",
   "version": "0.0.2-beta.0",
   "main": "dist/input-s3-file.cjs.js",
   "module": "dist/input-s3-file.esm.js",

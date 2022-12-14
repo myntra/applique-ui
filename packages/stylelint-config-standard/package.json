@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/stylelint-config-standard",
+  "name": "@applique/stylelint-config-standard",
   "version": "0.0.2-beta.0",
   "main": "src/index.js",
   "module": "dist/stylelint-config-standard.esm.js",

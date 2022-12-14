@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-input-select",
+  "name": "@applique/uikit-component-input-select",
   "version": "0.0.2-beta.0",
   "main": "dist/input-select.cjs.js",
   "module": "dist/input-select.esm.js",

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-radio
+# @applique/uikit-component-input-radio

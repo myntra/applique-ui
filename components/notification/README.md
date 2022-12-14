@@ -1,1 +1,1 @@
-# @myntra/uikit-component-notification
+# @applique/uikit-component-notification

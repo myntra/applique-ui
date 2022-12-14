@@ -1,1 +1,1 @@
-# @myntra/uikit-utils
+# @applique/uikit-utils

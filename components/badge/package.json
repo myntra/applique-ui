@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-badge",
+  "name": "@applique/uikit-component-badge",
   "version": "0.0.2-beta.0",
   "main": "dist/badge.cjs.js",
   "module": "dist/badge.esm.js",

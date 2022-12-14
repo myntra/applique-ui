@@ -1,1 +1,1 @@
-# @myntra/uikit-theme-nuclei
+# @applique/uikit-theme-nuclei

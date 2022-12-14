@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-fab",
+  "name": "@applique/uikit-component-fab",
   "version": "0.0.2-beta.0",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",

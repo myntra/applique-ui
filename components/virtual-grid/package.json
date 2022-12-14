@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-virtual-grid",
+  "name": "@applique/uikit-component-virtual-grid",
   "version": "0.0.2-beta.0",
   "main": "dist/virtual-grid.cjs.js",
   "module": "dist/virtual-grid.esm.js",

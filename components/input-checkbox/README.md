@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-checkbox
+# @applique/uikit-component-input-checkbox

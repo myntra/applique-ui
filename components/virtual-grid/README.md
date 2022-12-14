@@ -1,1 +1,1 @@
-# @myntra/uikit-component-virtual-grid
+# @applique/uikit-component-virtual-grid

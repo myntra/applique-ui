@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-s3-file
+# @applique/uikit-component-input-s3-file

@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-job-tracker",
+  "name": "@applique/uikit-component-job-tracker",
   "version": "0.0.2-beta.0",
   "main": "dist/job-tracker.cjs.js",
   "module": "dist/job-tracker.esm.js",

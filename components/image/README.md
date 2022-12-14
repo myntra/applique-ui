@@ -1,1 +1,1 @@
-# @myntra/uikit-component-image
+# @applique/uikit-component-image

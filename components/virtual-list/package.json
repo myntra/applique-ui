@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-virtual-list",
+  "name": "@applique/uikit-component-virtual-list",
   "version": "0.0.2-beta.0",
   "main": "dist/virtual-list.cjs.js",
   "module": "dist/virtual-list.esm.js",

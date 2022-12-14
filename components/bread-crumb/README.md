@@ -1,1 +1,1 @@
-# @myntra/uikit-component-bread-crumb
+# @applique/uikit-component-bread-crumb

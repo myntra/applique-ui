@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-nav-bar",
+  "name": "@applique/uikit-component-nav-bar",
   "version": "0.0.2-beta.0",
   "main": "dist/nav-bar.cjs.js",
   "module": "dist/nav-bar.esm.js",

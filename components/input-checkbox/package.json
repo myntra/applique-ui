@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-input-checkbox",
+  "name": "@applique/uikit-component-input-checkbox",
   "version": "0.0.2-beta.0",
   "main": "dist/input-checkbox.cjs.js",
   "module": "dist/input-checkbox.esm.js",

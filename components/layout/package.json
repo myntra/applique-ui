@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-layout",
+  "name": "@applique/uikit-component-layout",
   "version": "0.0.2-beta.0",
   "main": "dist/layout.cjs.js",
   "module": "dist/layout.esm.js",

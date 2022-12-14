@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-accordion",
+  "name": "@applique/uikit-component-accordion",
   "version": "0.0.2-beta.0",
   "main": "dist/accordion.cjs.js",
   "module": "dist/accordion.esm.js",

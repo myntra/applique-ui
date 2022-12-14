@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-table",
+  "name": "@applique/uikit-component-table",
   "version": "0.0.2-beta.0",
   "main": "dist/table.cjs.js",
   "module": "dist/table.esm.js",

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-tabs
+# @applique/uikit-component-tabs

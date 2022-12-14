@@ -1,1 +1,1 @@
-# @myntra/uikit-component-accordion
+# @applique/uikit-component-accordion

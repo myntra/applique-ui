@@ -1,1 +1,1 @@
-# @myntra/uikit-component-banner
+# @applique/uikit-component-banner

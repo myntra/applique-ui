@@ -1,1 +1,1 @@
-# @myntra/uikit-component-virtual-list
+# @applique/uikit-component-virtual-list

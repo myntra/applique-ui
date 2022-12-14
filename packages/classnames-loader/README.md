@@ -1,1 +1,1 @@
-# @myntra/classnames-loader
+# @applique/classnames-loader

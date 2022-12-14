@@ -13,7 +13,9 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@myntra/uikit-component-*": ["components/*/src/index.ts"],
-      "@myntra/*": ["packages/*/src/index.ts"]
+      "@applique/uikit-component-*": ["components/*/src/index.ts"],
+      "@myntra/*": ["packages/*/src/index.ts"],
+      "@applique/*": ["packages/*/src/index.ts"]
     }
   }
 }

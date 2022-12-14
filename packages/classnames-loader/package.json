@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/classnames-loader",
+  "name": "@applique/classnames-loader",
   "version": "0.0.2-beta.0",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",

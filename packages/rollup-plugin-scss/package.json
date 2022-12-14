@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/rollup-plugin-scss",
+  "name": "@applique/rollup-plugin-scss",
   "version": "0.0.2-beta.0",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-scss.esm.js",

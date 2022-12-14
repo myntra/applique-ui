@@ -1,1 +1,1 @@
-# @myntra/uikit-component-job-tracker
+# @applique/uikit-component-job-tracker

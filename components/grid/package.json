@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-grid",
+  "name": "@applique/uikit-component-grid",
   "version": "0.0.2-beta.0",
   "main": "dist/grid.cjs.js",
   "module": "dist/grid.esm.js",

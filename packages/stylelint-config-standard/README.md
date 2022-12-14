@@ -1,1 +1,1 @@
-# @myntra/stylelint-config-standard
+# @applique/stylelint-config-standard

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-button-group
+# @applique/uikit-component-button-group

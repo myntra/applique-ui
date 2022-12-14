@@ -1,1 +1,1 @@
-# @myntra/uikit-component-badge
+# @applique/uikit-component-badge

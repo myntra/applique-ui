@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-text",
+  "name": "@applique/uikit-component-text",
   "version": "0.0.2-beta.0",
   "main": "dist/text.cjs.js",
   "module": "dist/text.esm.js",

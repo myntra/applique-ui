@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-button",
+  "name": "@applique/uikit-component-button",
   "version": "0.0.2-beta.0",
   "main": "dist/button.cjs.js",
   "module": "dist/button.esm.js",

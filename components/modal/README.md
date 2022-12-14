@@ -1,1 +1,1 @@
-# @myntra/uikit-component-modal
+# @applique/uikit-component-modal

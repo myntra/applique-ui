@@ -1,1 +1,1 @@
-# @myntra/uikit-component-click-away
+# @applique/uikit-component-click-away

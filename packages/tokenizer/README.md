@@ -1,1 +1,1 @@
-# @myntra/tokenizer
+# @applique/tokenizer

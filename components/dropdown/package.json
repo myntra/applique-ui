@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-dropdown",
+  "name": "@applique/uikit-component-dropdown",
   "version": "0.0.2-beta.0",
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",

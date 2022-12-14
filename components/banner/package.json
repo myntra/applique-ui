@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-banner",
+  "name": "@applique/uikit-component-banner",
   "version": "0.0.2-beta.0",
   "main": "dist/banner.cjs.js",
   "module": "dist/banner.esm.js",

@@ -1,1 +1,1 @@
-# @myntra/codemod-utils
+# @applique/codemod-utils

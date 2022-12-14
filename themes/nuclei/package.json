@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-theme-nuclei",
+  "name": "@applique/uikit-theme-nuclei",
   "version": "0.0.2-beta.0",
   "main": "dist/nuclei.cjs.js",
   "module": "dist/nuclei.esm.js",

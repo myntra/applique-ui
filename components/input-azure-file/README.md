@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-azure-file
+# @applique/uikit-component-input-azure-file

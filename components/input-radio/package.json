@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-input-radio",
+  "name": "@applique/uikit-component-input-radio",
   "version": "0.0.2-beta.0",
   "main": "dist/input-radio.cjs.js",
   "module": "dist/input-radio.esm.js",

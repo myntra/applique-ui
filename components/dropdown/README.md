@@ -1,1 +1,1 @@
-# @myntra/uikit-component-dropdown
+# @applique/uikit-component-dropdown

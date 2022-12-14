@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-tabs",
+  "name": "@applique/uikit-component-tabs",
   "version": "0.0.2-beta.0",
   "main": "dist/tabs.cjs.js",
   "module": "dist/tabs.esm.js",

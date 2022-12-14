@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-portal",
+  "name": "@applique/uikit-component-portal",
   "version": "0.0.2-beta.0",
   "main": "dist/portal.cjs.js",
   "module": "dist/portal.esm.js",

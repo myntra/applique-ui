@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-flex",
+  "name": "@applique/uikit-component-flex",
   "version": "0.0.2-beta.0",
   "main": "dist/flex.cjs.js",
   "module": "dist/flex.esm.js",

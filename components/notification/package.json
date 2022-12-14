@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-notification",
+  "name": "@applique/uikit-component-notification",
   "version": "0.0.2-beta.0",
   "main": "dist/notification.cjs.js",
   "module": "dist/notification.esm.js",

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-number
+# @applique/uikit-component-input-number

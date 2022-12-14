@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/codemod-utils",
+  "name": "@applique/codemod-utils",
   "version": "0.0.2-beta.0",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",

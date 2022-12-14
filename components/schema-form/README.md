@@ -1,1 +1,1 @@
-# @myntra/uikit-component-schema-form
+# @applique/uikit-component-schema-form

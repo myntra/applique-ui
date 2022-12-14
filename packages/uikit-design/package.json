@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-design",
+  "name": "@applique/uikit-design",
   "version": "0.0.2-beta.0",
   "main": "design.scss",
   "module": "dist/uikit-design.esm.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/rollup-plugin-classnames",
+  "name": "@applique/rollup-plugin-classnames",
   "version": "0.0.2-beta.0",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-classnames.esm.js",

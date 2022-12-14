@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-stepper",
+  "name": "@applique/uikit-component-stepper",
   "version": "0.0.2-beta.0",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",

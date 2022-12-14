@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-utils",
+  "name": "@applique/uikit-utils",
   "version": "0.0.2-beta.0",
   "main": "dist/uikit-utils.cjs.js",
   "module": "dist/uikit-utils.esm.js",

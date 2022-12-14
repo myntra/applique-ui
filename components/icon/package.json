@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-icon",
+  "name": "@applique/uikit-component-icon",
   "version": "0.0.2-beta.0",
   "main": "dist/icon.cjs.js",
   "module": "dist/icon.esm.js",

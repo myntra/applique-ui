@@ -1,1 +1,1 @@
-# @myntra/eslint-config-standard
+# @applique/eslint-config-standard

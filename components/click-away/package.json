@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-click-away",
+  "name": "@applique/uikit-component-click-away",
   "version": "0.0.2-beta.0",
   "main": "dist/click-away.cjs.js",
   "module": "dist/click-away.esm.js",

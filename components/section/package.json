@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-section",
+  "name": "@applique/uikit-component-section",
   "version": "0.0.2-beta.0",
   "main": "dist/section.cjs.js",
   "module": "dist/section.esm.js",

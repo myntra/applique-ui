@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-component-pagination",
+  "name": "@applique/uikit-component-pagination",
   "version": "0.0.2-beta.0",
   "main": "dist/pagination.cjs.js",
   "module": "dist/pagination.esm.js",

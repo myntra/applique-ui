@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/uikit-cli",
+  "name": "@applique/uikit-cli",
   "version": "0.0.2-beta.0",
   "description": "A command line utility for @myntra/uikit",
   "main": "lib/index.js",
