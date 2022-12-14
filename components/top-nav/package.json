@@ -1,6 +1,6 @@
 {
   "name": "@myntra/uikit-component-top-nav",
-  "version": "1.13.101-beta.0",
+  "version": "1.13.101-beta.1",
   "main": "dist/top-nav.cjs.js",
   "module": "dist/top-nav.esm.js",
   "types": "dist/index.d.ts",
