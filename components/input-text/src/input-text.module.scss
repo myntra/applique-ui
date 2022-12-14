@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   &.bordered {
+    margin: margin('input');
     @include mixin-input-text-revamp(border, padding('input.text'));
   }
   &.standard {
@@ -21,14 +22,11 @@
       border-bottom,
       padding('input-text-standard')
     );
-    .input-adornment-end {
-      margin-right: 0;
-    }
   }
   input {
     flex-grow: 1;
     padding: 0;
-    margin-left: size('1x');
+    // margin-left: size('1x');
     background-color: transparent;
     border: 0;
     outline: none;
@@ -40,11 +38,11 @@
     max-height: 1.5em;
     color: text-color('input.text');
     white-space: nowrap;
-    &.start {
-      margin-left: size('1x');
-    }
-    &.end {
+    &-start {
       margin-right: size('1x');
+    }
+    &-end {
+      margin-left: size('1x');
     }
   }
 }

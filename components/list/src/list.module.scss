@@ -81,12 +81,16 @@
   pointer-events: none;
   cursor: pointer;
 }
-
-// for multiple selection list
 .is-selected {
   font-weight: 500;
   color: color('primary');
   background-color: transparent;
+}
+
+.is-active {
+  font-weight: 500;
+  color: color('primary');
+  background-color: color('primary-lightest');
 }
 
 .is-single-selectable {

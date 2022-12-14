@@ -62,9 +62,9 @@ Allows the user to select multiple items from a dropdown list of options.
 <Documenter component={props.components}>
 ```preview
 const items = [
-  'Foo',
-  'Bar',
-  'Baz',
+  { label: 'Foo', value: 'Foo'},
+  { label: 'Bar', value: 'Bar'},
+  { label: 'Baz', value: 'Baz'},
 ];
 
 const [value, setValue] = React.useState(null);
@@ -73,10 +73,11 @@ return (
     <List
         items={items}
         value={value}
-        onChange={value => setValue(value)}
+        onChange={id => setValue(id)}
+        idForItem={item => item.value}
         multiple>
         
-        {({ item }) => <span>{item}</span>}
+        {({ item }) => <span>{item.label}</span>}
     </List>
 )
 ```
@@ -115,8 +116,7 @@ It has list headings which allows the user to select multiple items from a dropd
 <Documenter component={props.components}>
 ```preview
 const items = [
-  {'List Heading L0': ['Item1', 'Item2', 'Item3']},
-  {'List Heading L1': ['Item4', 'Item5', 'Item6', 'Item7']},
+  {'List Heading L0': [{ value: 'Item1', label: 'Item 1'}, { value: 'Item2', label: 'Item 2'}, { value: 'Item3', label: 'Item 3'}]},
 ];
 
 const [value, setValue] = React.useState(null);

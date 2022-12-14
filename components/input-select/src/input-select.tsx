@@ -237,7 +237,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
             <InputSelectControl
               ref={this.controlRef}
               disabled={disabled}
-              icon={this.props.icon || SpinnerSolid}
+              icon={this.props.icon}
               value={this.props.value}
               onChange={this.handleChange}
               onSearch={this.handleSearch}

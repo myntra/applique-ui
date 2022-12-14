@@ -34,11 +34,11 @@ An Input comes with a label display only one line of text
 <Documenter component={props.components}>
 
 ```preview
-const [value, setValue] = useState();
+const [value, setValue] = React.useState();
 
 return (
     <Field title="Label">
-    <InputText value={value} onChange={setValue} placeholder='Type / Scan'/>
+        <InputText value={value} onChange={setValue} placeholder='Type / Scan'/>
     </Field>
 )
 ```
@@ -51,11 +51,11 @@ An Input comes with a label and grow to accommodate multiple lines of text
 <Documenter component={props.components}>
 
 ```preview
-const [value, setValue] = useState();
+const [value, setValue] = React.useState();
 
 return (
     <Field title="Label">
-    <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
+        <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
     </Field>
 )
 ```
@@ -68,11 +68,11 @@ An Input comes with a label and prefix information.
 <Documenter component={props.components}>
 
 ```preview
-const [value, setValue] = useState();
+const [value, setValue] = React.useState();
 
 return (
     <Field title="Label">
-    <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign}/>
+        <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} disabled/>
     </Field>
 )
 ```
@@ -85,14 +85,49 @@ An Input comes with a label and sufix information.
 <Documenter component={props.components}>
 
 ```preview
-const [value, setValue] = useState();
+const [value, setValue] = React.useState();
+const [cost, setCost] = React.useState();
+
 
 return (
-    <Field title="Label">
-    <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg"/>
-    </Field>
+    <>
+        <Field title="Label">
+            <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+        </Field>
+        <br/>
+        <Field title="Label">
+            <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+        </Field>
+    </>
 )
 ```
 </Documenter>
 
+### Messages
 
+An Input can have a label and descriptive information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+const [cost, setCost] = React.useState();
+
+
+return (
+    <>
+        <Field title="Label" description="Helper Text" required>
+            <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+        </Field>
+        <br/>
+        <Field title="Label" success="Success">
+            <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+        </Field>
+        <br/>
+        <Field title="Label" error="Error Message">
+            <InputText value={cost} onChange={setCost} placeholder='Type / Scan' error />
+        </Field>
+    </>
+)
+```
+</Documenter>

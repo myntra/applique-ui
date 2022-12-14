@@ -4,9 +4,9 @@ import VirtualList, {
   Props as VirtualListProps,
 } from '@myntra/uikit-component-virtual-list'
 import InputCheckbox from '@myntra/uikit-component-input-checkbox'
-import InputRadio from '@myntra/uikit-component-input-radio'
 import { createRef, isNullOrUndefined } from '@myntra/uikit-utils'
 import classnames from './list.module.scss'
+import ListItem from './list-item'
 
 export interface Props<T = any> extends BaseProps {
   /**
@@ -116,7 +116,7 @@ export default class List extends PureComponent<
       }
     } else {
       const { multiple, value, idForItem, items } = this.props
-      const selectedIDs = this.computeSelectedIds()
+      const selectedIDs = this.selectedIDs
 
       if (value || (multiple && value && value.length)) {
         this.setState({
@@ -127,14 +127,8 @@ export default class List extends PureComponent<
         })
       }
     }
-    const selectedIds = this.computeSelectedIds()
-    const totalItems = this.computeTotalItems()
-    const disabledItems = this.computeDisabled()
-    if (selectedIds.size === totalItems - disabledItems) {
-      this.setState({ areSelectedAll: true })
-    } else {
-      this.setState({ areSelectedAll: false })
-    }
+
+    this.areAllSelected()
   }
 
   get activeItemHTMLId() {
@@ -144,40 +138,47 @@ export default class List extends PureComponent<
     return null
   }
 
-  computeSelectedIds() {
+  get selectedIDs() {
     return this.props.value != null
       ? new Set(
           Array.isArray(this.props.value)
             ? this.props.value
-            : [this.props.value]
+            : this.props.value?.split?.(',') || this.props.value
         )
       : new Set()
   }
 
-  computeDisabled() {
+  get disabledItems() {
     if (!this.props.isItemDisabled) {
-      return 0
+      return []
     }
-    let numDisabled = 0
-    for (let i = 0; i < this.props.items.length; i++) {
-      if (this.props.isItemDisabled(this.props.items[i])) {
-        numDisabled++
-      }
-    }
-    return numDisabled
+    return this.props.items.filter((item) => this.props.isItemDisabled(item))
   }
 
-  computeTotalItems = () => {
-    // compute total items
-    var lenItems = 0
-    // grouped list
-    for (let index = 0; index < this.props.items.length; index++) {
-      const item = this.props.items[index]
-      const key = Object.keys(item)[0]
-      const listGroup = item[key]
-      lenItems = lenItems + listGroup.length
+  areAllSelected = () => {
+    // calculate if all are selected
+    const selectedIds = this.selectedIDs
+    const totalItems = this.props.items.length
+    const disabledItems = this.disabledItems.length
+    if (selectedIds.size === totalItems - disabledItems) {
+      this.setState({ areSelectedAll: true })
+    } else {
+      this.setState({ areSelectedAll: false })
     }
-    return lenItems
+  }
+
+  resetActiveIndex = () => {
+    this.setState({ activeIndex: -1 })
+  }
+
+  selectAll = (children) => {
+    if (this.state.areSelectedAll) {
+      this.updateValueByRange(0, children.length - 1, true)
+      this.setState({ areSelectedAll: false })
+    } else {
+      this.updateValueByRange(0, children.length - 1, false)
+      this.setState({ areSelectedAll: true })
+    }
   }
 
   updateValueById(id: any) {
@@ -188,29 +189,26 @@ export default class List extends PureComponent<
       return this.props.onChange(id)
     }
 
-    const ids = this.computeSelectedIds()
+    const ids = this.selectedIDs
 
-    let value = this.props.value ? (this.props.value as Array<any>).slice() : []
+    if (ids.has(id)) ids.delete(id)
+    else ids.add(id)
 
-    if (ids.has(id)) {
-      const index = value.indexOf(id)
-
-      value.splice(index, 1)
-    } else {
-      value.push(id)
-    }
-
-    return this.props.onChange(value)
+    return this.props.onChange([...ids])
   }
 
-  updateValueByRange(start: number, end: number, toggle: boolean = true) {
+  updateValueByIndex(index: number) {
+    return this.updateValueById(this.props.idForItem(this.props.items[index]))
+  }
+
+  updateValueByRange(start: number, end: number, toggle = true) {
     if (!this.props.multiple) return
     if (!this.props.onChange) return
 
     const { idForItem, items, isItemDisabled } = this.props
-    const ids = this.computeSelectedIds()
+    const ids = this.selectedIDs
 
-    let value = this.props.value ? (this.props.value as Array<any>).slice() : []
+    // let value = this.props.value ? (this.props.value as Array<any>).slice() : []
 
     for (let index = start; index <= end; ++index) {
       const id = idForItem(items[index])
@@ -220,40 +218,10 @@ export default class List extends PureComponent<
         continue
       }
 
-      if (typeof id === 'string') {
-        // single list
-        if (ids.has(id)) {
-          if (toggle) {
-            value.splice(value.indexOf(id), 1)
-          }
-        } else {
-          value.push(id)
-        }
-      } else {
-        // grouped list
-        const key = Object.keys(id)[0]
-        const listGroup = id[key]
-        for (let i = 0; i < listGroup.length; i++) {
-          if (ids.has(listGroup[i])) {
-            if (toggle) {
-              value.splice(value.indexOf(listGroup[i], 1))
-            }
-          } else {
-            value.push(listGroup[i])
-          }
-        }
-      }
+      if (toggle && ids.has(id)) ids.delete(id)
+      else ids.add(id)
     }
-    this.props.onChange(value)
-  }
-
-  updateValueByIndex(index: number) {
-    return this.updateValueById(this.props.idForItem(this.props.items[index]))
-  }
-
-  handleClick = ({ id, index }: { id: any; index: number }) => {
-    this.setState({ activeIndex: index })
-    this.updateValueById(id)
+    this.props.onChange([...ids])
   }
 
   handleKeyPress = (event: KeyboardEvent) => {
@@ -274,17 +242,13 @@ export default class List extends PureComponent<
         case 'ArrowUp':
           key = 'Home'
           break
+        case 'A':
+          this.updateValueByRange(0, N - 1, false)
+          break
       }
     }
 
     switch (key) {
-      case 'A':
-        if (isCMD && multiple) {
-          this.updateValueByRange(0, N - 1, false)
-        } else {
-          preventDefault = false
-        }
-        break
       case ' ':
       case 'Enter':
       case 'Space':
@@ -339,22 +303,14 @@ export default class List extends PureComponent<
     if (preventDefault) event.preventDefault()
   }
 
+  handleClick = ({ id, index }: { id: any; index: number }) => {
+    console.log(id, 'handleClick')
+    this.setState({ activeIndex: index })
+    this.updateValueById(id)
+  }
+
   handleBlur = () => {
     this.resetActiveIndex()
-  }
-
-  resetActiveIndex = () => {
-    this.setState({ activeIndex: -1 })
-  }
-
-  selectAll = (children) => {
-    if (this.state.areSelectedAll) {
-      this.updateValueByRange(0, children.length - 1, true)
-      this.setState({ areSelectedAll: false })
-    } else {
-      this.updateValueByRange(0, children.length - 1, false)
-      this.setState({ areSelectedAll: true })
-    }
   }
 
   render() {
@@ -371,22 +327,8 @@ export default class List extends PureComponent<
       ...props
     } = this.props
     const { activeIndex } = this.state
-    const selectedIDs = this.computeSelectedIds()
-    const renderScroller: VirtualListProps['renderScroller'] = ({
-      onScroll,
-      style,
-      className,
-      children,
-    }) => (
-      <div
-        style={style}
-        className={className}
-        onScroll={onScroll as any}
-        ref={this.scrollerRef}
-      >
-        {children}
-      </div>
-    )
+    const selectedIDs = this.selectedIDs
+
     const renderContainer: VirtualListProps['renderContainer'] = ({
       className,
       children,
@@ -436,102 +378,81 @@ export default class List extends PureComponent<
       const isSelected = selectedIDs.has(id)
       const isActive = index === activeIndex
       const isDisabled = isItemDisabled(item)
-      if (typeof item !== 'string') {
-        const key = Object.keys(item)[0]
-        const listValue = item[key]
-        return (
-          <div>
-            <div className={classnames('listheading')}>
-              {key}
-              <div className={classnames('hr1')}></div>
-            </div>
-            {listValue.map((currItem, currIndex) => {
-              var item = currItem
-              const id = idForItem(item)
-              const isSelected = selectedIDs.has(id)
-              const isActive = currIndex === activeIndex
-              const isDisabled = isItemDisabled(item)
-              return (
-                <li
-                  key={id}
-                  role="option"
-                  aria-selected={isSelected}
-                  id={`${this.idPrefix}-option-${currIndex}`}
-                  data-index={currIndex}
-                  data-id={id}
-                  style={style}
-                  className={classnames('item', {
-                    'is-selected': isSelected,
-                    'is-active': isActive,
-                    'is-disabled': isDisabled,
-                  })}
-                  onClick={() =>
-                    !isDisabled && this.handleClick({ id, index: currIndex })
-                  }
-                >
-                  {!multiple && this.props.onChange ? (
-                    <InputRadio
-                      className={classnames('radio')}
-                      value={isSelected ? 'ok' : 'error'}
-                      options={[{ value: 'ok', label: '' }]}
-                    />
-                  ) : null}
-                  <InputCheckbox
-                    className={classnames('checkbox')}
-                    value={isSelected}
-                    htmlValue={id}
-                    tabIndex={-1}
-                    readOnly
-                    hidden={!multiple}
-                    disabled={isDisabled}
-                  />
-                  {children({ index: currIndex, id, item })}
-                </li>
-              )
-            })}
-          </div>
-        )
-      } else {
-        return (
-          <li
-            key={id}
-            role="option"
-            aria-selected={isSelected}
-            id={`${this.idPrefix}-option-${index}`}
-            data-index={index}
-            data-id={id}
-            style={style}
-            className={classnames('item', {
-              'is-selected': isSelected,
-              'is-active': isActive,
-              'is-disabled': isDisabled,
-            })}
-            onClick={() => !isDisabled && this.handleClick({ id, index })}
-          >
-            {!multiple ? (
-              <InputRadio
-                className={classnames('radio')}
-                value={isSelected ? 'ok' : 'error'}
-                options={[{ value: 'ok', label: '' }]}
-              />
-            ) : (
-              <InputCheckbox
-                className={classnames('checkbox')}
-                value={isSelected}
-                htmlValue={id}
-                tabIndex={-1}
-                readOnly
-                hidden={!multiple}
-                disabled={isDisabled}
-              />
-            )}
-            {children({ index, id, item })}
-          </li>
-        )
-      }
+
+      return (
+        <ListItem
+          {...{
+            isSelected,
+            isActive,
+            isDisabled,
+            id: `${this.idPrefix}-option-${index}`,
+            index,
+            style,
+            interaction: !this.props.onChange
+              ? 'none'
+              : multiple
+              ? 'checkbox'
+              : 'radio',
+            handleClick: () => {
+              !isDisabled && this.handleClick({ id, index })
+            },
+          }}
+        >
+          {children({ index, id, item })}
+        </ListItem>
+      )
+
+      // if (Array.isArray(item)) {
+      //   const key = Object.keys(item)[0]
+      //   const listValue = item[key]
+      //   return (
+      //     <div>
+      //       <div className={classnames('listheading')}>
+      //         {key}
+      //         <br className={classnames('hr1')} />
+      //       </div>
+      //       {listValue.map((currItem, currIndex) => {
+      //         var item = currItem
+      //         const id = idForItem(item)
+      //         const isSelected = selectedIDs.has(id)
+      //         const isActive = currIndex === activeIndex
+      //         const isDisabled = isItemDisabled(item)
+      //         return (
+      //           <ListItem {...{
+      //             isSelected,
+      //             isActive,
+      //             isDisabled,
+      //             id: `${this.idPrefix}-option-${currIndex}`,
+      //             index: currIndex,
+      //             style,
+      //             interaction: !this.props.onChange ? 'none' : multiple ? 'checkbox' : 'radio',
+      //             handleClick: () => !isDisabled && this.handleClick({ id, index: currIndex })
+      //           }}>
+      //             {children({ index: currIndex, id, item })}
+      //           </ListItem>
+      //         )
+      //       })}
+      //      </div>
+      //   )
+      // }
     }
 
     if (virtualized) {
+      const renderScroller: VirtualListProps['renderScroller'] = ({
+        onScroll,
+        style,
+        className,
+        children,
+      }) => (
+        <div
+          style={style}
+          className={className}
+          onScroll={onScroll as any}
+          ref={this.scrollerRef}
+        >
+          {children}
+        </div>
+      )
       return (
         <VirtualList
           ref={this.virtualListRef}

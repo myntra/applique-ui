@@ -80,15 +80,23 @@ export default function Field({
         </span>
         {isValidElement(fieldInfo) && fieldInfo}
       </label>
-      {Children.map(children, (child, index) => {
-        if (isValidElement(child)) {
-          return React.cloneElement(child, {
-            disabled: disabled,
-            __fieldContext: { error, disabled },
-          } as any)
+      {Children.map(
+        children,
+        (
+          child: ReactNode & { props: { disabled: Boolean; error: Boolean } },
+          index
+        ) => {
+          if (isValidElement(child)) {
+            return React.cloneElement(child, {
+              __fieldContext: {
+                error: !!error || child.props.error,
+                disabled: disabled || child.props.disabled,
+              },
+            } as any)
+          }
+          return child
         }
-        return child
-      })}
+      )}
       {error || description || success ? (
         <div className={classnames('meta')}>
           {error ? (
