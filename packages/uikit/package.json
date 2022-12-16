@@ -37,7 +37,6 @@
     "@mapplique/uikit-component-field": "0.0.*",
     "@mapplique/uikit-component-form": "0.0.*",
     "@mapplique/uikit-component-grid": "0.0.*",
-    "@mapplique/uikit-component-group": "0.0.*",
     "@mapplique/uikit-component-icon": "0.0.*",
     "@mapplique/uikit-component-image": "0.0.*",
     "@mapplique/uikit-component-input-checkbox": "0.0.*",

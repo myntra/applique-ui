@@ -12,7 +12,6 @@ export { default as Fab } from "@mapplique/uikit-component-fab";
 export { default as Field } from "@mapplique/uikit-component-field";
 export { default as Form } from "@mapplique/uikit-component-form";
 export { default as Grid } from "@mapplique/uikit-component-grid";
-export { default as Group } from "@mapplique/uikit-component-group";
 export { default as Icon } from "@mapplique/uikit-component-icon";
 export { default as Image } from "@mapplique/uikit-component-image";
 export { default as InputAzureFile } from "@mapplique/uikit-component-input-azure-file";
