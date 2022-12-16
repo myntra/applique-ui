@@ -130,7 +130,7 @@ function fuzzyMatchTarget(query) {
  * @param {string} name - full component name
  */
 function isComponent(name) {
-  return /@applique-ui\//.test(getFullName(name))
+  return components.map(pkg => `@applique-ui/${pkg}`).includes(name)
 }
 
 /**

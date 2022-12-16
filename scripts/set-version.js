@@ -3,7 +3,9 @@ const { version } = require('../package.json')
 const { resolve } = require('path')
 const { readFileSync, writeFile } = require('fs-extra')
 const prettier = require('prettier')
-const depVersion = /-(alpha|beta)\./.test(version) ? version : version.replace(/\.[^.]+$/, '') + '.*'
+const depVersion = /-(alpha|beta)\./.test(version)
+  ? version
+  : version.replace(/\.[^.]+$/, '') + '.*'
 
 const config = JSON.parse(readFileSync(resolve(__dirname, '../.prettierrc')))
 /**
@@ -32,7 +34,12 @@ async function updateVersion(target) {
 
   pkg.version = version
 
-  const depFields = ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']
+  const depFields = [
+    'dependencies',
+    'devDependencies',
+    'peerDependencies',
+    'optionalDependencies',
+  ]
 
   depFields.forEach((field) => {
     if (field in pkg) {
@@ -43,8 +50,8 @@ async function updateVersion(target) {
       })
     }
   })
-
-  await writeFile(packageFile, format(JSON.stringify(pkg)))
+  const json = format(JSON.stringify(pkg))
+  await writeFile(packageFile, json)
 }
 
 Promise.all(targets.map(updateVersion))

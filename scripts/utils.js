@@ -121,7 +121,7 @@ function fuzzyMatchTarget(query) {
  * @param {string} name - full component name
  */
 function isComponent(name) {
-  return /@applique-ui\//.test(getFullName(name))
+  return components.map((pkg) => `@applique-ui/${pkg}`).includes(name)
 }
 
 /**
@@ -157,6 +157,7 @@ function getPackageDir(name) {
   const packageName = getFullName(name)
   const dir = getShortName(name)
 
+  console.log(isComponent(packageName), isTheme(packageName), packageName)
   return path.resolve(
     isComponent(packageName)
       ? componentsDir

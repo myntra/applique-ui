@@ -2,48 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="0.0.2-beta.4"></a>
-## [0.0.2-beta.4](https://bitbucket.org/myntra/uikit/compare/v0.0.2-beta.1...v0.0.2-beta.4) (2022-12-14)
-
-
-
-<a name="0.0.2-beta.3"></a>
-## [0.0.2-beta.3](https://bitbucket.org/myntra/uikit/compare/v0.0.2-beta.1...v0.0.2-beta.3) (2022-12-14)
-
-
-
-<a name="0.0.2-beta.2"></a>
-## [0.0.2-beta.2](https://bitbucket.org/myntra/uikit/compare/v0.0.2-beta.1...v0.0.2-beta.2) (2022-12-14)
-
-
-
-<a name="0.0.2-beta.1"></a>
-## [0.0.2-beta.1](https://bitbucket.org/myntra/uikit/compare/v0.0.2-beta.0...v0.0.2-beta.1) (2022-12-14)
-
-
-
-<a name="0.0.2-beta.0"></a>
-## [0.0.2-beta.0](https://bitbucket.org/myntra/uikit/compare/v1.13.102-beta.0...v0.0.2-beta.0) (2022-12-14)
-
-
-
-<a name="1.13.102-beta.0"></a>
-## [1.13.102-beta.0](https://bitbucket.org/myntra/uikit/compare/v1.13.101-beta.2...v1.13.102-beta.0) (2022-12-14)
-
-
-
-<a name="1.13.101-beta.2"></a>
-## [1.13.101-beta.2](https://bitbucket.org/myntra/uikit/compare/v1.13.101-beta.1...v1.13.101-beta.2) (2022-12-14)
-
-
-
-<a name="1.13.101-beta.1"></a>
-## [1.13.101-beta.1](https://bitbucket.org/myntra/uikit/compare/v1.13.101-beta.0...v1.13.101-beta.1) (2022-12-14)
-
-
-
-<a name="1.13.101-beta.0"></a>
-## [1.13.101-beta.0](https://bitbucket.org/myntra/uikit/compare/v1.13.101...v1.13.101-beta.0) (2022-12-14)
+<a name="0.0.3"></a>
+## [0.0.3](https://bitbucket.org/myntra/uikit/compare/v0.0.2-beta.4...v0.0.3) (2022-12-16)
 
 
 
