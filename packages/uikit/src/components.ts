@@ -10,7 +10,6 @@ export { default as Dropdown } from "@mapplique/uikit-component-dropdown";
 export { default as ErrorBoundary } from "@mapplique/uikit-component-error-boundary";
 export { default as Fab } from "@mapplique/uikit-component-fab";
 export { default as Field } from "@mapplique/uikit-component-field";
-export { default as Flex } from "@mapplique/uikit-component-flex";
 export { default as Form } from "@mapplique/uikit-component-form";
 export { default as Grid } from "@mapplique/uikit-component-grid";
 export { default as Group } from "@mapplique/uikit-component-group";
