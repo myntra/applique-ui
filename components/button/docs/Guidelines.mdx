@@ -2,7 +2,7 @@ import { Anatomy1, Anatomy2, Anatomy3, ButtonLayout1, ButtonLayout2, Do1, Do2, D
 
 ## Anatomy
 
-The Button component has a lot of variations we can use. It contains a label and optional icons before or after the label. 
+The Button component has a few variations: it contains a label along with optional icons that can be used before or after the label. 
 
 <ImagePreview background={true}>
     <Layout type="stack" distribution="spaceAround" alignment="top">
@@ -23,11 +23,11 @@ A. Text Label       B. Container      C. Icon ( optional )
     </Layout>
 </ImagePreview>
 
-Size and padding measurements 
+Size and padding measurements (in px)
 
 ## Dos and Dont’s
 
-1. Characters can not all be uppercase in a button.
+1. Text should not be in uppercase
 <ImagePreview>
     <Layout type="stack" distribution="spaceBetween" alignment="middle">
         <Do1 />
@@ -35,7 +35,7 @@ Size and padding measurements
     </Layout>
 </ImagePreview>
 
-2. Text can not wrap multiple lines. It must all be on one line for maximum legibility.
+2. Text should appear in one line for maximum legibility
 
 <ImagePreview>
     <Layout type="stack" distribution="spaceBetween" alignment="bottom">
@@ -44,7 +44,7 @@ Size and padding measurements
     </Layout>
 </ImagePreview>
 
-3. A Secondary button must be placed either before or after a set of Primary buttons.
+3. A Secondary button must be placed before or after a set of Primary buttons
 
 <ImagePreview>
     <Layout type="stack" distribution="spaceBetween" alignment="bottom">
@@ -53,7 +53,7 @@ Size and padding measurements
     </Layout>
 </ImagePreview>
 
-4. A Secondary button should not be used in isolation and should be used in conjunction with primary button.
+4. A Secondary button should not be used in isolation but in conjunction with a Primary button
 
 <ImagePreview>
     <Layout type="stack" distribution="spaceBetween" alignment="bottom">

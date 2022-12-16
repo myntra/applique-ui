@@ -1,8 +1,8 @@
 import { Accordion0, Accordion1, Accordion2, Accordion3 } from './images'
 
-The accordion component delivers large amounts of content in a small space through progressive disclosure. The header title give the user a high level overview of the content allowing the user to decide which sections to read.
-
-Accordions can make information processing and discovering more effective. However, it does hide content from users and it’s important to account for a user not noticing or reading all of the included content. If a user is likely to read all of the content then don’t use an accordion as it adds the burden of an extra click; instead use a full scrolling page with normal headers.
+This feature-rich, interactive component lets users intuitively explore content. 
+Unlike a traditional accordion, it's got a multi-level navigation that provides a linear path through the content. The header gives users a high-level overview of what to expect when they click on it. 
+The first content section can then be expanded to reveal more information.
 
 <Documenter component={props.components}>
 
@@ -22,14 +22,13 @@ return (
 ```
 
 </Documenter>
-
-Accordion can come up with icon or without icon and will have chevron icon to open and close it. 
-Width would be adjustable and height is fixed.
+Accordion components are available in two styles: with an icon and without. 
+Users can click the chevron to expand or collapse the component.
 
 ## States
-The accordion component has two main states: collapsed and expanded. The chevron icon at the end of the accordion indicates which state the accordion is in. The chevron points down to indicate collapsed and up to indicate expanded.
-Accordions begin by default in the collapsed state with all content panels closed. Starting in a collapsed state gives the user a high level overview of the available information.
-A user can then independently expand each section of the accordion allowing for multiple sections to be open at once.
+
+With the Accordion component, you can use a single section to organize content in two different ways. This is ideal for the web where there’s limited screen space and you want to show a lot of information without cluttering up the screen.
+This component will by default show in a collapsed state, and allow users to expand it to see more information.
 
 <ImagePreview background={true}>
     <Layout type="row">
@@ -42,13 +41,13 @@ A user can then independently expand each section of the accordion allowing for 
 
 <small>Default , Opened, Hover and Disabled</small>
 
-In addition to the collapsed and expanded states, accordions also have interactive states for hover, and disabled.
+In addition to the collapsed and expanded states, Accordion components also have interactive states for hover and disabled.
 
 ## Variants
 
 ### Default
 
-By default, the accordion will be in collapsed state. It would have an icon, label  and chevron icon
+By default, the Accordion will show in a collapsed state. It will have an icon, label  and chevron.
 
 <Documenter component={props.components}>
 
@@ -66,7 +65,7 @@ return (
 
 ### Default without icon
 
-This variant would have label and chevron icon. 
+This variant would have a label and chevron. 
 
 <Documenter component={props.components}>
 

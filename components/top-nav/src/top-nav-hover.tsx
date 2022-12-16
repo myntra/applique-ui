@@ -14,15 +14,6 @@ export interface TopNavHoverProps extends BaseProps {
   }
 }
 
-/**
- * <Component handles the render of hover view for a nav item>
- *
- * @since 1.13.101
- * @status REVIEWING
- * @category basic
- * @see http://uikit.myntra.com/components/top-nav
- */
-
 function getFilteredNavs(config) {
   return config.reduce(
     (aggregate, currentValue) => {
@@ -55,6 +46,14 @@ function getFilteredNavs(config) {
   )
 }
 
+/**
+ * Component handles the render of hover view for a nav item
+ *
+ * @since 1.13.101
+ * @status REVIEWING
+ * @category basic
+ * @see http://uikit.myntra.com/components/top-nav
+ */
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props

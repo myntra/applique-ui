@@ -12,12 +12,13 @@ This section contains components attributes, anatomy and variation of component 
 
 **Text Area:** When the expected user input is more than one sentence.
 
-The Input Fields component has a lot of variations we can use. It contains a label and optional icons before or after the label. 
+The Input Fields component has a lot of variations we can use. It contains an input field, textarea, password fields, checkboxes, radio buttons, and everything else you need.
 
 Fill, size, and width can all be mixed and matched to get the exact Input field needed.
 
 ## States
-Input Fields have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, active, inputted, etc).
+
+Input Fields have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, active, filled, etc).
 
 <ImagePreview background={true}>
     <Layout type="row">
@@ -105,7 +106,7 @@ return (
 
 ### Messages
 
-An Input can have a label and descriptive information.
+An Input should display descriptive validation information.
 
 <Documenter component={props.components}>
 

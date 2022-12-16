@@ -22,7 +22,7 @@ interface TopNavSideBarMenuState {
 }
 
 /**
- * <Component supports the render logic for showing the sidebar whenever a respective l0 is selected>
+ * <Component supports the render logic for showing the sidebar whenever a respective L0 is selected>
  *
  * @since 1.13.101
  * @status REVIEWING
