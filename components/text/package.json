@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-text",
+  "name": "@applique-ui/text",
   "version": "0.0.2",
   "main": "dist/text.cjs.js",
   "module": "dist/text.esm.js",
@@ -26,7 +26,7 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

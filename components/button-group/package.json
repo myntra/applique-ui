@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-button-group",
+  "name": "@applique-ui/button-group",
   "version": "0.0.2",
   "main": "dist/button-group.cjs.js",
   "module": "dist/button-group.esm.js",
@@ -26,10 +26,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-component-button": "0.0.*",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-list": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/list": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

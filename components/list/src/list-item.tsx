@@ -1,6 +1,6 @@
 import React from 'react'
-import InputCheckbox from '@mapplique/uikit-component-input-checkbox'
-import InputRadio from '@mapplique/uikit-component-input-radio'
+import InputCheckbox from '@applique-ui/input-checkbox'
+import InputRadio from '@applique-ui/input-radio'
 import classnames from './list.module.scss'
 
 export interface Props extends BaseProps {

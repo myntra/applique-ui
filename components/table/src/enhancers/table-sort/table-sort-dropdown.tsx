@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Dropdown from '@mapplique/uikit-component-dropdown'
-import Icon from '@mapplique/uikit-component-icon'
-import List from '@mapplique/uikit-component-list'
+import Dropdown from '@applique-ui/dropdown'
+import Icon from '@applique-ui/icon'
+import List from '@applique-ui/list'
 
 import classnames from './table-sort-dropdown.module.scss'
 

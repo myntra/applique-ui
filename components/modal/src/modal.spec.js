@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import Modal from './index'
-import Button from '@mapplique/uikit-component-button'
+import Button from '@applique-ui/button'
 import ModalLayout from './modal-layout'
 
 let wrapper

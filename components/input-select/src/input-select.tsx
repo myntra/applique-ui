@@ -1,10 +1,10 @@
 import React, { Component, RefObject } from 'react'
-import { createRef, memoize, toArray } from '@mapplique/uikit-utils'
+import { createRef, memoize, toArray } from '@applique-ui/uikit-utils'
 
 import classnames from './input-select.module.scss'
-import Dropdown from '@mapplique/uikit-component-dropdown'
-import List from '@mapplique/uikit-component-list'
-import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Dropdown from '@applique-ui/dropdown'
+import List from '@applique-ui/list'
+import Icon, { IconName } from '@applique-ui/icon'
 
 import InputSelectValue from './input-select-value'
 import InputSelectControl from './input-select-control'

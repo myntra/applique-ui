@@ -99,6 +99,7 @@ importers:
       remark-slug: ^5.1.1
       remark-squeeze-paragraphs: ^3.0.3
       remark-toc: ^5.1.1
+      replace-in-file: ^6.3.5
       rollup: ^1.7.0
       rollup-plugin-bundle-size: ^1.0.3
       rollup-plugin-copy: ^3.0.0
@@ -134,6 +135,8 @@ importers:
       webpack2: npm:webpack@5.74.0
       webpackbar: ^5.0.0-3
       webpackbar2: npm:webpackbar@5.0.2
+    dependencies:
+      replace-in-file: 6.3.5
     devDependencies:
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-class-properties': 7.18.6_@babel+core@7.20.5
@@ -264,20 +267,20 @@ importers:
 
   components/accordion:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/layout': link:../layout
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -286,15 +289,15 @@ importers:
 
   components/avatar:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       name-initials: ^0.1.3
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       name-initials: 0.1.3
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -304,14 +307,14 @@ importers:
 
   components/badge:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -320,22 +323,22 @@ importers:
 
   components/banner:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-component-text': link:../text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/layout': link:../layout
+      '@applique-ui/text': link:../text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -344,14 +347,14 @@ importers:
 
   components/bread-crumb:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -360,22 +363,22 @@ importers:
 
   components/button:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-loader': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/loader': 0.0.*
+      '@applique-ui/text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-loader': link:../loader
-      '@mapplique/uikit-component-text': link:../text
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/loader': link:../loader
+      '@applique-ui/text': link:../text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -384,18 +387,18 @@ importers:
 
   components/button-group:
     specifiers:
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/list': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-list': link:../list
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/list': link:../list
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -404,14 +407,14 @@ importers:
 
   components/click-away:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -420,23 +423,23 @@ importers:
 
   components/dropdown:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-click-away': 0.0.*
-      '@mapplique/uikit-component-measure': 0.0.*
-      '@mapplique/uikit-component-portal': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/click-away': 0.0.*
+      '@applique-ui/measure': 0.0.*
+      '@applique-ui/portal': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-click-away': link:../click-away
-      '@mapplique/uikit-component-measure': link:../measure
-      '@mapplique/uikit-component-portal': link:../portal
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/click-away': link:../click-away
+      '@applique-ui/measure': link:../measure
+      '@applique-ui/portal': link:../portal
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -446,15 +449,15 @@ importers:
 
   components/error-boundary:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -464,21 +467,21 @@ importers:
 
   components/fab:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -488,32 +491,18 @@ importers:
 
   components/field:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
-  components/flex:
-    specifiers:
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -522,48 +511,44 @@ importers:
 
   components/form:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-button-group': 0.0.*
-      '@mapplique/uikit-component-field': 0.0.*
-      '@mapplique/uikit-component-grid': 0.0.*
-      '@mapplique/uikit-component-input-azure-file': 0.0.*
-      '@mapplique/uikit-component-input-checkbox': 0.0.*
-      '@mapplique/uikit-component-input-date': 0.0.*
-      '@mapplique/uikit-component-input-file': 0.0.*
-      '@mapplique/uikit-component-input-masked': 0.0.*
-      '@mapplique/uikit-component-input-month': 0.0.*
-      '@mapplique/uikit-component-input-number': 0.0.*
-      '@mapplique/uikit-component-input-radio': 0.0.*
-      '@mapplique/uikit-component-input-s3-file': 0.0.*
-      '@mapplique/uikit-component-input-select': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-component-input-text-area': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/button-group': 0.0.*
+      '@applique-ui/field': 0.0.*
+      '@applique-ui/grid': 0.0.*
+      '@applique-ui/input-checkbox': 0.0.*
+      '@applique-ui/input-date': 0.0.*
+      '@applique-ui/input-file': 0.0.*
+      '@applique-ui/input-masked': 0.0.*
+      '@applique-ui/input-month': 0.0.*
+      '@applique-ui/input-number': 0.0.*
+      '@applique-ui/input-radio': 0.0.*
+      '@applique-ui/input-select': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input-text-area': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-button-group': link:../button-group
-      '@mapplique/uikit-component-field': link:../field
-      '@mapplique/uikit-component-grid': link:../grid
-      '@mapplique/uikit-component-input-azure-file': link:../input-azure-file
-      '@mapplique/uikit-component-input-checkbox': link:../input-checkbox
-      '@mapplique/uikit-component-input-date': link:../input-date
-      '@mapplique/uikit-component-input-file': link:../input-file
-      '@mapplique/uikit-component-input-masked': link:../input-masked
-      '@mapplique/uikit-component-input-month': link:../input-month
-      '@mapplique/uikit-component-input-number': link:../input-number
-      '@mapplique/uikit-component-input-radio': link:../input-radio
-      '@mapplique/uikit-component-input-s3-file': link:../input-s3-file
-      '@mapplique/uikit-component-input-select': link:../input-select
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-component-input-text-area': link:../input-text-area
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/button-group': link:../button-group
+      '@applique-ui/field': link:../field
+      '@applique-ui/grid': link:../grid
+      '@applique-ui/input-checkbox': link:../input-checkbox
+      '@applique-ui/input-date': link:../input-date
+      '@applique-ui/input-file': link:../input-file
+      '@applique-ui/input-masked': link:../input-masked
+      '@applique-ui/input-month': link:../input-month
+      '@applique-ui/input-number': link:../input-number
+      '@applique-ui/input-radio': link:../input-radio
+      '@applique-ui/input-select': link:../input-select
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input-text-area': link:../input-text-area
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -572,32 +557,16 @@ importers:
 
   components/grid:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
-  components/group:
-    specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -606,9 +575,9 @@ importers:
 
   components/icon:
     specifiers:
-      '@mapplique/svg': 0.0.*
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/svg': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       '@znck/promised': ^1.0.4
       glob: ^7.1.3
@@ -617,13 +586,13 @@ importers:
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
     devDependencies:
-      '@mapplique/svg': link:../../packages/svg
+      '@applique-ui/svg': link:../../packages/svg
       '@types/react': 17.0.2
       '@znck/promised': 1.0.4
       glob: 7.2.3
@@ -632,16 +601,16 @@ importers:
 
   components/image:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       intersection-observer-polyfill: ^0.1.0
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       intersection-observer-polyfill: 0.1.0
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
@@ -650,38 +619,18 @@ importers:
     devDependencies:
       '@types/react': 17.0.2
 
-  components/input-azure-file:
-    specifiers:
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-input-file': 0.0.*
-      '@mapplique/uikit-component-progress': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-input-file': link:../input-file
-      '@mapplique/uikit-component-progress': link:../progress
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
   components/input-checkbox:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -690,32 +639,32 @@ importers:
 
   components/input-date:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-button-group': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-input-masked': 0.0.*
-      '@mapplique/uikit-component-input-number': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/button-group': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/input-masked': 0.0.*
+      '@applique-ui/input-number': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       date-fns: ^2.0.0-alpha.27
       dayjs: ^1.8.14
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-button-group': link:../button-group
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-input-masked': link:../input-masked
-      '@mapplique/uikit-component-input-number': link:../input-number
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/button-group': link:../button-group
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/input-masked': link:../input-masked
+      '@applique-ui/input-number': link:../input-number
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/layout': link:../layout
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       date-fns: 2.29.3
       dayjs: 1.11.7
       uikit-icons: /@myntra/uikit-icons/1.0.37
@@ -726,16 +675,16 @@ importers:
 
   components/input-file:
     specifiers:
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -744,16 +693,16 @@ importers:
 
   components/input-masked:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -762,21 +711,21 @@ importers:
 
   components/input-month:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-input-date': 0.0.*
-      '@mapplique/uikit-component-input-masked': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/input-date': 0.0.*
+      '@applique-ui/input-masked': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       luxon: ^1.21.1
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-input-date': link:../input-date
-      '@mapplique/uikit-component-input-masked': link:../input-masked
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/input-date': link:../input-date
+      '@applique-ui/input-masked': link:../input-masked
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       luxon: 1.28.0
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -786,16 +735,16 @@ importers:
 
   components/input-number:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -804,36 +753,14 @@ importers:
 
   components/input-radio:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
-  components/input-s3-file:
-    specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-input-file': 0.0.*
-      '@mapplique/uikit-component-progress': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-input-file': link:../input-file
-      '@mapplique/uikit-component-progress': link:../progress
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -842,23 +769,23 @@ importers:
 
   components/input-select:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-component-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/list': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       sifter: ^0.5.3
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-component-list': link:../list
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/list': link:../list
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       sifter: 0.5.4
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -868,16 +795,16 @@ importers:
 
   components/input-text:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -886,48 +813,18 @@ importers:
 
   components/input-text-area:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
-  components/job-tracker:
-    specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-grid': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-component-loader': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      dayjs: ^1.8.14
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-grid': link:../grid
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-component-loader': link:../loader
-      '@mapplique/uikit-component-text': link:../text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
-      dayjs: 1.11.7
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -936,12 +833,12 @@ importers:
 
   components/layout:
     specifiers:
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -950,21 +847,21 @@ importers:
 
   components/list:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-input-checkbox': 0.0.*
-      '@mapplique/uikit-component-input-radio': 0.0.*
-      '@mapplique/uikit-component-virtual-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/input-checkbox': 0.0.*
+      '@applique-ui/input-radio': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
+      '@applique-ui/virtual-list': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       scroll-into-view-if-needed: ^2.2.20
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-input-checkbox': link:../input-checkbox
-      '@mapplique/uikit-component-input-radio': link:../input-radio
-      '@mapplique/uikit-component-virtual-list': link:../virtual-list
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/input-checkbox': link:../input-checkbox
+      '@applique-ui/input-radio': link:../input-radio
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/virtual-list': link:../virtual-list
       scroll-into-view-if-needed: 2.2.31
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -974,14 +871,14 @@ importers:
 
   components/loader:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -990,8 +887,8 @@ importers:
 
   components/measure:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
@@ -999,8 +896,8 @@ importers:
       resize-observer-polyfill: ^1.5.1
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       resize-observer-polyfill: 1.5.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
@@ -1012,18 +909,18 @@ importers:
 
   components/modal:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-portal': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/portal': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-portal': link:../portal
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/portal': link:../portal
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1032,42 +929,22 @@ importers:
 
   components/nav-bar:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-avatar': 0.0.*
-      '@mapplique/uikit-component-click-away': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/avatar': 0.0.*
+      '@applique-ui/click-away': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-avatar': link:../avatar
-      '@mapplique/uikit-component-click-away': link:../click-away
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    devDependencies:
-      '@types/react': 17.0.2
-
-  components/notification:
-    specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-section': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@latest
-    dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-section': link:../section
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/avatar': link:../avatar
+      '@applique-ui/click-away': link:../click-away
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1076,14 +953,14 @@ importers:
 
   components/page:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1092,16 +969,16 @@ importers:
 
   components/pagination:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1110,16 +987,16 @@ importers:
 
   components/portal:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       react-dom: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -1130,16 +1007,16 @@ importers:
 
   components/progress:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-text': link:../text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/text': link:../text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1148,22 +1025,22 @@ importers:
 
   components/schema-form:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-field': 0.0.*
-      '@mapplique/uikit-component-form': 0.0.*
-      '@mapplique/uikit-component-grid': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/field': 0.0.*
+      '@applique-ui/form': 0.0.*
+      '@applique-ui/grid': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-field': link:../field
-      '@mapplique/uikit-component-form': link:../form
-      '@mapplique/uikit-component-grid': link:../grid
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/field': link:../field
+      '@applique-ui/form': link:../form
+      '@applique-ui/grid': link:../grid
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1172,16 +1049,16 @@ importers:
 
   components/section:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1190,21 +1067,21 @@ importers:
 
   components/stepper:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/text': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-component-text': link:../text
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/layout': link:../layout
+      '@applique-ui/text': link:../text
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -1214,34 +1091,34 @@ importers:
 
   components/table:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-field': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-component-list': 0.0.*
-      '@mapplique/uikit-component-measure': 0.0.*
-      '@mapplique/uikit-component-virtual-grid': 0.0.*
-      '@mapplique/uikit-component-virtual-list': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/field': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/list': 0.0.*
+      '@applique-ui/measure': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
+      '@applique-ui/virtual-grid': 0.0.*
+      '@applique-ui/virtual-list': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-button': link:../button
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-field': link:../field
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-input-text': link:../input-text
-      '@mapplique/uikit-component-list': link:../list
-      '@mapplique/uikit-component-measure': link:../measure
-      '@mapplique/uikit-component-virtual-grid': link:../virtual-grid
-      '@mapplique/uikit-component-virtual-list': link:../virtual-list
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/button': link:../button
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/field': link:../field
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/list': link:../list
+      '@applique-ui/measure': link:../measure
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/virtual-grid': link:../virtual-grid
+      '@applique-ui/virtual-list': link:../virtual-list
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1250,14 +1127,14 @@ importers:
 
   components/tabs:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1266,12 +1143,12 @@ importers:
 
   components/text:
     specifiers:
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1280,16 +1157,16 @@ importers:
 
   components/tooltip:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1298,22 +1175,22 @@ importers:
 
   components/top-bar:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-bread-crumb': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/bread-crumb': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/list': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-bread-crumb': link:../bread-crumb
-      '@mapplique/uikit-component-dropdown': link:../dropdown
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-list': link:../list
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/bread-crumb': link:../bread-crumb
+      '@applique-ui/dropdown': link:../dropdown
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/list': link:../list
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1322,21 +1199,21 @@ importers:
 
   components/top-nav:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-context': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-context': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@^1.0.9
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-icon': link:../icon
-      '@mapplique/uikit-component-layout': link:../layout
-      '@mapplique/uikit-context': link:../../packages/uikit-context
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/icon': link:../icon
+      '@applique-ui/layout': link:../layout
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-context': link:../../packages/uikit-context
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
@@ -1346,16 +1223,16 @@ importers:
 
   components/virtual-grid:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-virtual-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
+      '@applique-ui/virtual-list': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-virtual-list': link:../virtual-list
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/virtual-list': link:../virtual-list
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1364,18 +1241,18 @@ importers:
 
   components/virtual-list:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
-      '@mapplique/uikit-component-measure': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/measure': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       '@types/react-dom': 17.0.2
       react: '>=15.4'
       react-dom: '>=16.0'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../../packages/uikit-can-i-use
-      '@mapplique/uikit-component-measure': link:../measure
-      '@mapplique/uikit-utils': link:../../packages/uikit-utils
+      '@applique-ui/measure': link:../measure
+      '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
+      '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.37
     optionalDependencies:
       react: 18.2.0
@@ -1394,15 +1271,15 @@ importers:
 
   packages/classnames-loader:
     specifiers:
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
       loader-utils: ^1.1.0
     dependencies:
-      '@mapplique/uikit-utils': link:../uikit-utils
+      '@applique-ui/uikit-utils': link:../uikit-utils
       loader-utils: 1.4.2
 
   packages/codemod-utils:
     specifiers:
-      '@mapplique/eslint-config-standard': 0.0.*
+      '@applique-ui/eslint-config-standard': 0.0.*
       debug: ^3.1.0
       eslint: ^4.19.1
       execa: ^0.10.0
@@ -1411,7 +1288,7 @@ importers:
       jsdoc-api: ^4.0.3
       prettier: ^1.13.4
     dependencies:
-      '@mapplique/eslint-config-standard': link:../eslint-config-standard
+      '@applique-ui/eslint-config-standard': link:../eslint-config-standard
       debug: 3.2.7
       eslint: 4.19.1
       execa: 0.10.0
@@ -1540,120 +1417,108 @@ importers:
 
   packages/uikit:
     specifiers:
-      '@mapplique/accoutrement': 0.0.*
-      '@mapplique/uikit-component-accordion': 0.0.*
-      '@mapplique/uikit-component-avatar': 0.0.*
-      '@mapplique/uikit-component-badge': 0.0.*
-      '@mapplique/uikit-component-banner': 0.0.*
-      '@mapplique/uikit-component-bread-crumb': 0.0.*
-      '@mapplique/uikit-component-button': 0.0.*
-      '@mapplique/uikit-component-button-group': 0.0.*
-      '@mapplique/uikit-component-click-away': 0.0.*
-      '@mapplique/uikit-component-dropdown': 0.0.*
-      '@mapplique/uikit-component-error-boundary': 0.0.*
-      '@mapplique/uikit-component-fab': 0.0.*
-      '@mapplique/uikit-component-field': 0.0.*
-      '@mapplique/uikit-component-flex': 0.0.*
-      '@mapplique/uikit-component-form': 0.0.*
-      '@mapplique/uikit-component-grid': 0.0.*
-      '@mapplique/uikit-component-group': 0.0.*
-      '@mapplique/uikit-component-icon': 0.0.*
-      '@mapplique/uikit-component-image': 0.0.*
-      '@mapplique/uikit-component-input-azure-file': 0.0.*
-      '@mapplique/uikit-component-input-checkbox': 0.0.*
-      '@mapplique/uikit-component-input-date': 0.0.*
-      '@mapplique/uikit-component-input-file': 0.0.*
-      '@mapplique/uikit-component-input-masked': 0.0.*
-      '@mapplique/uikit-component-input-month': 0.0.*
-      '@mapplique/uikit-component-input-number': 0.0.*
-      '@mapplique/uikit-component-input-radio': 0.0.*
-      '@mapplique/uikit-component-input-s3-file': 0.0.*
-      '@mapplique/uikit-component-input-select': 0.0.*
-      '@mapplique/uikit-component-input-text': 0.0.*
-      '@mapplique/uikit-component-input-text-area': 0.0.*
-      '@mapplique/uikit-component-job-tracker': 0.0.*
-      '@mapplique/uikit-component-layout': 0.0.*
-      '@mapplique/uikit-component-list': 0.0.*
-      '@mapplique/uikit-component-loader': 0.0.*
-      '@mapplique/uikit-component-measure': 0.0.*
-      '@mapplique/uikit-component-modal': 0.0.*
-      '@mapplique/uikit-component-nav-bar': 0.0.*
-      '@mapplique/uikit-component-notification': 0.0.*
-      '@mapplique/uikit-component-page': 0.0.*
-      '@mapplique/uikit-component-pagination': 0.0.*
-      '@mapplique/uikit-component-portal': 0.0.*
-      '@mapplique/uikit-component-progress': 0.0.*
-      '@mapplique/uikit-component-schema-form': 0.0.*
-      '@mapplique/uikit-component-section': 0.0.*
-      '@mapplique/uikit-component-stepper': 0.0.*
-      '@mapplique/uikit-component-table': 0.0.*
-      '@mapplique/uikit-component-tabs': 0.0.*
-      '@mapplique/uikit-component-text': 0.0.*
-      '@mapplique/uikit-component-tooltip': 0.0.*
-      '@mapplique/uikit-component-top-bar': 0.0.*
-      '@mapplique/uikit-component-top-nav': 0.0.*
-      '@mapplique/uikit-component-virtual-grid': 0.0.*
-      '@mapplique/uikit-component-virtual-list': 0.0.*
-      '@mapplique/uikit-utils': 0.0.*
+      '@applique-ui/accordion': 0.0.*
+      '@applique-ui/accoutrement': 0.0.*
+      '@applique-ui/avatar': 0.0.*
+      '@applique-ui/badge': 0.0.*
+      '@applique-ui/banner': 0.0.*
+      '@applique-ui/bread-crumb': 0.0.*
+      '@applique-ui/button': 0.0.*
+      '@applique-ui/button-group': 0.0.*
+      '@applique-ui/click-away': 0.0.*
+      '@applique-ui/dropdown': 0.0.*
+      '@applique-ui/error-boundary': 0.0.*
+      '@applique-ui/fab': 0.0.*
+      '@applique-ui/field': 0.0.*
+      '@applique-ui/form': 0.0.*
+      '@applique-ui/grid': 0.0.*
+      '@applique-ui/icon': 0.0.*
+      '@applique-ui/image': 0.0.*
+      '@applique-ui/input-checkbox': 0.0.*
+      '@applique-ui/input-date': 0.0.*
+      '@applique-ui/input-file': 0.0.*
+      '@applique-ui/input-masked': 0.0.*
+      '@applique-ui/input-month': 0.0.*
+      '@applique-ui/input-number': 0.0.*
+      '@applique-ui/input-radio': 0.0.*
+      '@applique-ui/input-select': 0.0.*
+      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input-text-area': 0.0.*
+      '@applique-ui/layout': 0.0.*
+      '@applique-ui/list': 0.0.*
+      '@applique-ui/loader': 0.0.*
+      '@applique-ui/measure': 0.0.*
+      '@applique-ui/modal': 0.0.*
+      '@applique-ui/nav-bar': 0.0.*
+      '@applique-ui/page': 0.0.*
+      '@applique-ui/pagination': 0.0.*
+      '@applique-ui/portal': 0.0.*
+      '@applique-ui/progress': 0.0.*
+      '@applique-ui/schema-form': 0.0.*
+      '@applique-ui/section': 0.0.*
+      '@applique-ui/stepper': 0.0.*
+      '@applique-ui/table': 0.0.*
+      '@applique-ui/tabs': 0.0.*
+      '@applique-ui/text': 0.0.*
+      '@applique-ui/tooltip': 0.0.*
+      '@applique-ui/top-bar': 0.0.*
+      '@applique-ui/top-nav': 0.0.*
+      '@applique-ui/uikit-utils': 0.0.*
+      '@applique-ui/virtual-grid': 0.0.*
+      '@applique-ui/virtual-list': 0.0.*
       normalize.css: ^8.0.1
       print-message: ^3.0.1
       sass: ^1.26.5
     dependencies:
-      '@mapplique/accoutrement': link:../accoutrement
-      '@mapplique/uikit-component-accordion': link:../../components/accordion
-      '@mapplique/uikit-component-avatar': link:../../components/avatar
-      '@mapplique/uikit-component-badge': link:../../components/badge
-      '@mapplique/uikit-component-banner': link:../../components/banner
-      '@mapplique/uikit-component-bread-crumb': link:../../components/bread-crumb
-      '@mapplique/uikit-component-button': link:../../components/button
-      '@mapplique/uikit-component-button-group': link:../../components/button-group
-      '@mapplique/uikit-component-click-away': link:../../components/click-away
-      '@mapplique/uikit-component-dropdown': link:../../components/dropdown
-      '@mapplique/uikit-component-error-boundary': link:../../components/error-boundary
-      '@mapplique/uikit-component-fab': link:../../components/fab
-      '@mapplique/uikit-component-field': link:../../components/field
-      '@mapplique/uikit-component-flex': link:../../components/flex
-      '@mapplique/uikit-component-form': link:../../components/form
-      '@mapplique/uikit-component-grid': link:../../components/grid
-      '@mapplique/uikit-component-group': link:../../components/group
-      '@mapplique/uikit-component-icon': link:../../components/icon
-      '@mapplique/uikit-component-image': link:../../components/image
-      '@mapplique/uikit-component-input-azure-file': link:../../components/input-azure-file
-      '@mapplique/uikit-component-input-checkbox': link:../../components/input-checkbox
-      '@mapplique/uikit-component-input-date': link:../../components/input-date
-      '@mapplique/uikit-component-input-file': link:../../components/input-file
-      '@mapplique/uikit-component-input-masked': link:../../components/input-masked
-      '@mapplique/uikit-component-input-month': link:../../components/input-month
-      '@mapplique/uikit-component-input-number': link:../../components/input-number
-      '@mapplique/uikit-component-input-radio': link:../../components/input-radio
-      '@mapplique/uikit-component-input-s3-file': link:../../components/input-s3-file
-      '@mapplique/uikit-component-input-select': link:../../components/input-select
-      '@mapplique/uikit-component-input-text': link:../../components/input-text
-      '@mapplique/uikit-component-input-text-area': link:../../components/input-text-area
-      '@mapplique/uikit-component-job-tracker': link:../../components/job-tracker
-      '@mapplique/uikit-component-layout': link:../../components/layout
-      '@mapplique/uikit-component-list': link:../../components/list
-      '@mapplique/uikit-component-loader': link:../../components/loader
-      '@mapplique/uikit-component-measure': link:../../components/measure
-      '@mapplique/uikit-component-modal': link:../../components/modal
-      '@mapplique/uikit-component-nav-bar': link:../../components/nav-bar
-      '@mapplique/uikit-component-notification': link:../../components/notification
-      '@mapplique/uikit-component-page': link:../../components/page
-      '@mapplique/uikit-component-pagination': link:../../components/pagination
-      '@mapplique/uikit-component-portal': link:../../components/portal
-      '@mapplique/uikit-component-progress': link:../../components/progress
-      '@mapplique/uikit-component-schema-form': link:../../components/schema-form
-      '@mapplique/uikit-component-section': link:../../components/section
-      '@mapplique/uikit-component-stepper': link:../../components/stepper
-      '@mapplique/uikit-component-table': link:../../components/table
-      '@mapplique/uikit-component-tabs': link:../../components/tabs
-      '@mapplique/uikit-component-text': link:../../components/text
-      '@mapplique/uikit-component-tooltip': link:../../components/tooltip
-      '@mapplique/uikit-component-top-bar': link:../../components/top-bar
-      '@mapplique/uikit-component-top-nav': link:../../components/top-nav
-      '@mapplique/uikit-component-virtual-grid': link:../../components/virtual-grid
-      '@mapplique/uikit-component-virtual-list': link:../../components/virtual-list
-      '@mapplique/uikit-utils': link:../uikit-utils
+      '@applique-ui/accordion': link:../../components/accordion
+      '@applique-ui/accoutrement': link:../accoutrement
+      '@applique-ui/avatar': link:../../components/avatar
+      '@applique-ui/badge': link:../../components/badge
+      '@applique-ui/banner': link:../../components/banner
+      '@applique-ui/bread-crumb': link:../../components/bread-crumb
+      '@applique-ui/button': link:../../components/button
+      '@applique-ui/button-group': link:../../components/button-group
+      '@applique-ui/click-away': link:../../components/click-away
+      '@applique-ui/dropdown': link:../../components/dropdown
+      '@applique-ui/error-boundary': link:../../components/error-boundary
+      '@applique-ui/fab': link:../../components/fab
+      '@applique-ui/field': link:../../components/field
+      '@applique-ui/form': link:../../components/form
+      '@applique-ui/grid': link:../../components/grid
+      '@applique-ui/icon': link:../../components/icon
+      '@applique-ui/image': link:../../components/image
+      '@applique-ui/input-checkbox': link:../../components/input-checkbox
+      '@applique-ui/input-date': link:../../components/input-date
+      '@applique-ui/input-file': link:../../components/input-file
+      '@applique-ui/input-masked': link:../../components/input-masked
+      '@applique-ui/input-month': link:../../components/input-month
+      '@applique-ui/input-number': link:../../components/input-number
+      '@applique-ui/input-radio': link:../../components/input-radio
+      '@applique-ui/input-select': link:../../components/input-select
+      '@applique-ui/input-text': link:../../components/input-text
+      '@applique-ui/input-text-area': link:../../components/input-text-area
+      '@applique-ui/layout': link:../../components/layout
+      '@applique-ui/list': link:../../components/list
+      '@applique-ui/loader': link:../../components/loader
+      '@applique-ui/measure': link:../../components/measure
+      '@applique-ui/modal': link:../../components/modal
+      '@applique-ui/nav-bar': link:../../components/nav-bar
+      '@applique-ui/page': link:../../components/page
+      '@applique-ui/pagination': link:../../components/pagination
+      '@applique-ui/portal': link:../../components/portal
+      '@applique-ui/progress': link:../../components/progress
+      '@applique-ui/schema-form': link:../../components/schema-form
+      '@applique-ui/section': link:../../components/section
+      '@applique-ui/stepper': link:../../components/stepper
+      '@applique-ui/table': link:../../components/table
+      '@applique-ui/tabs': link:../../components/tabs
+      '@applique-ui/text': link:../../components/text
+      '@applique-ui/tooltip': link:../../components/tooltip
+      '@applique-ui/top-bar': link:../../components/top-bar
+      '@applique-ui/top-nav': link:../../components/top-nav
+      '@applique-ui/uikit-utils': link:../uikit-utils
+      '@applique-ui/virtual-grid': link:../../components/virtual-grid
+      '@applique-ui/virtual-list': link:../../components/virtual-list
       normalize.css: 8.0.1
       print-message: 3.0.1
     devDependencies:
@@ -1747,11 +1612,11 @@ importers:
 
   packages/uikit-context:
     specifiers:
-      '@mapplique/uikit-can-i-use': 0.0.*
+      '@applique-ui/uikit-can-i-use': 0.0.*
       '@types/react': 17.0.2
       react: ^16.8.4
     dependencies:
-      '@mapplique/uikit-can-i-use': link:../uikit-can-i-use
+      '@applique-ui/uikit-can-i-use': link:../uikit-can-i-use
       react: 16.14.0
     devDependencies:
       '@types/react': 17.0.2
@@ -1770,29 +1635,25 @@ importers:
 
   themes/nuclei:
     specifiers:
-      '@mapplique/accoutrement': 0.0.*
-      '@mapplique/tokenizer': 0.0.*
-      '@mapplique/uikit-design': 0.0.*
+      '@applique-ui/accoutrement': 0.0.*
+      '@applique-ui/tokenizer': 0.0.*
       '@myntra/uikit': 1.13.*
     dependencies:
       '@myntra/uikit': 1.13.96
     devDependencies:
-      '@mapplique/accoutrement': link:../../packages/accoutrement
-      '@mapplique/tokenizer': link:../../packages/tokenizer
-      '@mapplique/uikit-design': link:../../packages/uikit-design
+      '@applique-ui/accoutrement': link:../../packages/accoutrement
+      '@applique-ui/tokenizer': link:../../packages/tokenizer
 
   themes/unity:
     specifiers:
-      '@mapplique/accoutrement': 0.0.*
-      '@mapplique/tokenizer': 0.0.*
-      '@mapplique/uikit-design': 0.0.*
+      '@applique-ui/accoutrement': 0.0.*
+      '@applique-ui/tokenizer': 0.0.*
       '@myntra/uikit': 1.13.*
     dependencies:
       '@myntra/uikit': 1.13.96
     devDependencies:
-      '@mapplique/accoutrement': link:../../packages/accoutrement
-      '@mapplique/tokenizer': link:../../packages/tokenizer
-      '@mapplique/uikit-design': link:../../packages/uikit-design
+      '@applique-ui/accoutrement': link:../../packages/accoutrement
+      '@applique-ui/tokenizer': link:../../packages/tokenizer
 
 packages:
 
@@ -7246,6 +7107,15 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+
+  /cliui/8.0.1:
+    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 7.0.0
+    dev: false
 
   /clone-deep/4.0.1:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
@@ -16242,6 +16112,16 @@ packages:
     resolution: {integrity: sha512-vuNYXC7gG7IeVNBC1xUllqCcZKRbJoSPOBhnTEcAIiKCsbuef6zO3F0Rve3isPMMoNoQRWjQwbAgAjHUHniyEA==}
     engines: {node: '>= 0.10'}
 
+  /replace-in-file/6.3.5:
+    resolution: {integrity: sha512-arB9d3ENdKva2fxRnSjwBEXfK1npgyci7ZZuwysgAp7ORjHSyxz6oqIjTEv8R0Ydl4Ll7uOAZXL4vbkhGIizCg==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      chalk: 4.1.2
+      glob: 7.2.3
+      yargs: 17.6.2
+    dev: false
+
   /request-promise-core/1.1.4_request@2.88.2:
     resolution: {integrity: sha512-TTbAfBBRdWD7aNNOoVOBH4pN/KigV6LyapYNNlAPA8JwbovRti1E88m3sYAwsLi5ryhPKsE9APwnjFTgdUjTpw==}
     engines: {node: '>=0.10.0'}
@@ -19511,6 +19391,11 @@ packages:
     resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
     engines: {node: '>=10'}
 
+  /yargs-parser/21.1.1:
+    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
+    engines: {node: '>=12'}
+    dev: false
+
   /yargs-parser/7.0.0:
     resolution: {integrity: sha512-WhzC+xgstid9MbVUktco/bf+KJG+Uu6vMX0LN1sLJvwmbCQVxb4D8LzogobonKycNasCZLdOzTAk1SK7+K7swg==}
     dependencies:
@@ -19543,6 +19428,19 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 20.2.9
+
+  /yargs/17.6.2:
+    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 8.0.1
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
+    dev: false
 
   /yargs/8.0.2:
     resolution: {integrity: sha512-3RiZrpLpjrzIAKgGdPktBcMP/eG5bDFlkI+PHle1qwzyVXyDQL+pD/eZaMoOOO0Y7LLBfjpucObuUm/icvbpKQ==}

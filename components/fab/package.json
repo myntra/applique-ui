@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-fab",
+  "name": "@applique-ui/fab",
   "version": "0.0.2",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",
@@ -26,12 +26,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "prop-types": "^15.7.2",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
-    "@mapplique/uikit-component-button": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/button": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

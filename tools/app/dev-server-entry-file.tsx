@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { MDXProvider } from '@mdx-js/react'
 
-import '@myntra/uikit/design.scss'
+import '@applique-ui/uikit/design.scss'
 
 import './css-reset.css'
 

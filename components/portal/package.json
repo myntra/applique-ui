@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-portal",
+  "name": "@applique-ui/portal",
   "version": "0.0.2",
   "main": "dist/portal.cjs.js",
   "module": "dist/portal.esm.js",
@@ -28,8 +28,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

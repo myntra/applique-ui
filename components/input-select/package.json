@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-input-select",
+  "name": "@applique-ui/input-select",
   "version": "0.0.2",
   "main": "dist/input-select.cjs.js",
   "module": "dist/input-select.esm.js",
@@ -27,12 +27,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
-    "@mapplique/uikit-component-input-text": "0.0.*",
-    "@mapplique/uikit-component-list": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/list": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "sifter": "^0.5.3",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

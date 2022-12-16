@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-utils",
+  "name": "@applique-ui/uikit-utils",
   "version": "0.0.2",
   "main": "dist/uikit-utils.cjs.js",
   "module": "dist/uikit-utils.esm.js",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@mapplique/uikit-utils",
+  "description": "@applique-ui/uikit-utils",
   "devDependencies": {
     "@types/react": "^16.8.24",
     "react": "^16.8.6"

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import UIKitContext from '@mapplique/uikit-context'
+import UIKitContext from '@applique-ui/uikit-context'
 
 export default function UIKitContextLink(props) {
   const { Link } = useContext(UIKitContext)

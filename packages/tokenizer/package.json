@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/tokenizer",
+  "name": "@applique-ui/tokenizer",
   "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@mapplique/tokenizer",
+  "description": "@applique-ui/tokenizer",
   "bin": {
     "tokenize": "bin/tokenize.js"
   },

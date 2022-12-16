@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-context",
+  "name": "@applique-ui/uikit-context",
   "version": "0.0.2",
   "main": "dist/uikit-context.cjs.js",
   "module": "dist/uikit-context.esm.js",
@@ -15,7 +15,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
     "react": "^16.8.4"
   },
   "devDependencies": {

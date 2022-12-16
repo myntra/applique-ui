@@ -2,8 +2,8 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import InputFile from './input-file'
-import InputText from '@mapplique/uikit-component-input-text'
-import Button from '@mapplique/uikit-component-button'
+import InputText from '@applique-ui/input-text'
+import Button from '@applique-ui/button'
 
 describe('input-file', () => {
   it('is a component', () => {

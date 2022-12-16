@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-modal",
+  "name": "@applique-ui/modal",
   "version": "0.0.2",
   "main": "dist/modal.cjs.js",
   "module": "dist/modal.esm.js",
@@ -27,10 +27,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-button": "0.0.*",
-    "@mapplique/uikit-component-portal": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/portal": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

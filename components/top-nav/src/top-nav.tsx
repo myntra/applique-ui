@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Layout from '@mapplique/uikit-component-layout'
+import Layout from '@applique-ui/layout'
 
 import TopNavItem from './top-nav-item'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'

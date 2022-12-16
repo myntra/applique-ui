@@ -1,5 +1,5 @@
 import React, { PureComponent, MouseEventHandler } from 'react'
-import Layout from '@mapplique/uikit-component-layout'
+import Layout from '@applique-ui/layout'
 
 import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'

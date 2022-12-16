@@ -5,9 +5,9 @@ import React, {
   isValidElement,
   cloneElement,
 } from 'react'
-import Text from '@mapplique/uikit-component-text'
-import Layout from '@mapplique/uikit-component-layout'
-import Icon from '@mapplique/uikit-component-icon'
+import Text from '@applique-ui/text'
+import Layout from '@applique-ui/layout'
+import Icon from '@applique-ui/icon'
 import classnames from './step.module.scss'
 import StepSeparator from './step-separator'
 

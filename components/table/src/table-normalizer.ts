@@ -5,7 +5,7 @@ import {
   isValidElement,
   JSXElementConstructor,
 } from 'react'
-import { isReactNodeType } from '@mapplique/uikit-utils'
+import { isReactNodeType } from '@applique-ui/uikit-utils'
 
 import Column, { Props as ColumnType } from './table-column'
 import Row, { Props as RowType } from './table-row'

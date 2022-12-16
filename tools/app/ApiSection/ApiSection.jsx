@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from '@myntra/uikit-component-table'
+import Table from '@applique-ui/table'
 import PropTypes from 'prop-types'
 import styles from '../styles.scss'
 

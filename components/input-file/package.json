@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-input-file",
+  "name": "@applique-ui/input-file",
   "version": "0.0.2",
   "main": "dist/input-file.cjs.js",
   "module": "dist/input-file.esm.js",
@@ -26,9 +26,9 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-component-button": "0.0.*",
-    "@mapplique/uikit-component-input-text": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

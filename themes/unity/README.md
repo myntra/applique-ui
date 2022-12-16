@@ -1,1 +1,1 @@
-# @mapplique/uikit-theme-unity
+# @applique-ui/theme-unity

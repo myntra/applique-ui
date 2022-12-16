@@ -1,4 +1,4 @@
-import { get } from '@mapplique/uikit-utils'
+import { get } from '@applique-ui/uikit-utils'
 
 function noop(value: any) {
   // do nothing

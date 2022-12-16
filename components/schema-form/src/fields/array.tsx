@@ -1,9 +1,9 @@
 import React, { Component, ComponentType } from 'react'
 
-import { looseEquals } from '@mapplique/uikit-utils'
-import Grid from '@mapplique/uikit-component-grid'
-import Field from '@mapplique/uikit-component-field'
-import Button from '@mapplique/uikit-component-button'
+import { looseEquals } from '@applique-ui/uikit-utils'
+import Grid from '@applique-ui/grid'
+import Field from '@applique-ui/field'
+import Button from '@applique-ui/button'
 
 import classnames from './array.module.scss'
 import { UI } from '../json-schema-renderer'

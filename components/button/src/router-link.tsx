@@ -1,5 +1,5 @@
 import React from 'react'
-import UIKitContext from '@mapplique/uikit-context'
+import UIKitContext from '@applique-ui/uikit-context'
 
 export default function UIKitContextRouterLink(props) {
   return (

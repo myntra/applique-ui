@@ -3,7 +3,7 @@ const { getPackageDir, componentsDir, isTheme } = require('./scripts/utils')
 const path = require('path')
 const ts = require('rollup-plugin-typescript2')
 const nodeResolve = require('rollup-plugin-node-resolve')
-const css = require('@myntra/rollup-plugin-scss')
+const css = require('@applique-ui/rollup-plugin-scss')
 const url = require('rollup-plugin-url')
 const del = require('rollup-plugin-delete')
 const replace = require('rollup-plugin-replace')
@@ -30,10 +30,11 @@ const config = {
   external(name) {
     if (isTheme(TARGET)) {
       if (
-        name === '@myntra/uikit' ||
+        name === '@applique-ui/uikit' ||
         name === '@accoutrement' ||
         name === '@design' ||
         name.startsWith('@myntra') ||
+        name.startsWith('@applique-ui') ||
         name.startsWith('/') ||
         name.startsWith('.')
       )
@@ -138,28 +139,31 @@ function aliases() {
           return path.resolve(dir, 'design.next.scss')
         }
 
-        if (/^@myntra\/accoutrement/.test(id)) {
+        if (/^@applique-ui\/accoutrement/.test(id)) {
           return id.replace(
-            '@myntra/accoutrement',
-            getPackageDir('@myntra/accoutrement')
+            '@applique-ui/accoutrement',
+            getPackageDir('@applique-ui/accoutrement')
           )
         }
 
-        if (/^@myntra\/uikit-design/.test(id)) {
+        if (/^@applique-ui\/uikit-design/.test(id)) {
           return id.replace(
-            '@myntra/uikit-design',
-            getPackageDir('@myntra/uikit-design')
+            '@applique-ui/uikit-design',
+            getPackageDir('@applique-ui/uikit-design')
           )
         }
 
-        if (/^@myntra\/uikit-component-input-text\//.test(id)) {
+        if (/^@applique-ui\/input-text\//.test(id)) {
           return id.replace(
-            '@myntra/uikit-component-input-text',
-            getPackageDir('@myntra/uikit-component-input-text')
+            '@applique-ui/input-text',
+            getPackageDir('@applique-ui/input-text')
           )
         }
 
         if (id.startsWith('@myntra/')) {
+          return path.resolve(getPackageDir(id), 'src/index.ts')
+        }
+        if (id.startsWith('@applique-ui/')) {
           return path.resolve(getPackageDir(id), 'src/index.ts')
         }
       }

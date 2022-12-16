@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { MeasureCache } from './helpers'
-import { createObserver, Observer } from '@mapplique/uikit-component-measure'
+import { createObserver, Observer } from '@applique-ui/measure'
 
 export interface Props extends BaseProps {
   cache: MeasureCache

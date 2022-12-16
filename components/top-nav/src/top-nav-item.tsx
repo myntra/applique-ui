@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Icon from '@mapplique/uikit-component-icon'
+import Icon from '@applique-ui/icon'
 
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'

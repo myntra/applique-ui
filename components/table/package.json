@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-table",
+  "name": "@applique-ui/table",
   "version": "0.0.2",
   "main": "dist/table.cjs.js",
   "module": "dist/table.esm.js",
@@ -27,18 +27,18 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-button": "0.0.*",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-field": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
-    "@mapplique/uikit-component-input-text": "0.0.*",
-    "@mapplique/uikit-component-list": "0.0.*",
-    "@mapplique/uikit-component-measure": "0.0.*",
-    "@mapplique/uikit-component-virtual-grid": "0.0.*",
-    "@mapplique/uikit-component-virtual-list": "0.0.*",
-    "@mapplique/uikit-context": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/field": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/list": "0.0.*",
+    "@applique-ui/measure": "0.0.*",
+    "@applique-ui/virtual-grid": "0.0.*",
+    "@applique-ui/virtual-list": "0.0.*",
+    "@applique-ui/uikit-context": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

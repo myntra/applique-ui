@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/rollup-plugin-classnames",
+  "name": "@applique-ui/rollup-plugin-classnames",
   "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-classnames.esm.js",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@mapplique/rollup-plugin-classnames",
+  "description": "@applique-ui/rollup-plugin-classnames",
   "dependencies": {
     "rollup-pluginutils": "^2.3.3"
   }

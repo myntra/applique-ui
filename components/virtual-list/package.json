@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-virtual-list",
+  "name": "@applique-ui/virtual-list",
   "version": "0.0.2",
   "main": "dist/virtual-list.cjs.js",
   "module": "dist/virtual-list.esm.js",
@@ -30,9 +30,9 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-measure": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/measure": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

@@ -92,11 +92,11 @@ function createComponentsFile(component) {
     [
       ...Array.from(localComponents).map(
         (name) =>
-          `export { default as ${name} } from '@myntra/uikit-component-${kebabCase(
+          `export { default as ${name} } from '@applique-ui/${kebabCase(
             name
           )}'${
             name === 'Text'
-              ? `\nexport { default as T } from '@myntra/uikit-component-text'`
+              ? `\nexport { default as T } from '@applique-ui/text'`
               : ''
           }`
       ),
@@ -134,7 +134,7 @@ function startWebpackDevServer(component, port) {
       Path.resolve(__dirname, '../packages/accoutrement/src/index.scss')
     )
     .set(
-      '@myntra/uikit/design.scss',
+      '@applique-ui/uikit/design.scss',
       Path.resolve(__dirname, '../packages/uikit/design.scss')
     )
     .set('@design', Path.resolve(__dirname, '../themes/nuclei/design.scss'))
@@ -145,18 +145,18 @@ function startWebpackDevServer(component, port) {
     .set('@uikit-icons', '../node_modules/@myntra/uikit-icons/dist/index')
 
   chain.resolve.alias.set(
-    `'@myntra/uikit-component-input-text/style.scss`,
+    `'@applique-ui/input-text/style.scss`,
     componentsDir + '/input-text/style.scss'
   )
   components.forEach((name) =>
     chain.resolve.alias.set(
-      `@myntra/uikit-component-${name}$`,
+      `@applique-ui/${name}$`,
       componentsDir + '/' + name + '/src/index.ts'
     )
   )
   ;['uikit-utils', 'uikit-context', 'uikit-can-i-use'].forEach((name) =>
     chain.resolve.alias.set(
-      `@myntra/${name}$`,
+      `@applique-ui/${name}$`,
       packagesDir + '/' + name + '/src/index.ts'
     )
   )

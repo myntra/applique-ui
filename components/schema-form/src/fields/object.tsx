@@ -1,6 +1,6 @@
 import React, { Component, ComponentType } from 'react'
-import { looseEquals } from '@mapplique/uikit-utils'
-import Grid from '@mapplique/uikit-component-grid'
+import { looseEquals } from '@applique-ui/uikit-utils'
+import Grid from '@applique-ui/grid'
 
 import { UI } from '../json-schema-renderer'
 

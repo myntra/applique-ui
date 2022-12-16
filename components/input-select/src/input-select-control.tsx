@@ -4,8 +4,8 @@ import {
   executeFilterSearch,
   moveSelectedOptionsToTop,
 } from './helpers'
-import { memoize, debounce, createRef } from '@mapplique/uikit-utils'
-import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import { memoize, debounce, createRef } from '@applique-ui/uikit-utils'
+import Icon, { IconName } from '@applique-ui/icon'
 import classnames from './input-select-control.module.scss'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 import { FieldContext } from './input-select'

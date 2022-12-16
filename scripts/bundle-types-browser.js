@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const docgen = require('@myntra/docgen')
+const docgen = require('@applique-ui/docgen')
 const prettier = require('prettier')
 const { componentsDir, components, pascalCase } = require('./utils')
 const apiDocGenerator = require('./docs/apiDocGenerator')
@@ -93,7 +93,7 @@ function writeUIKitAsyncImports(components) {
 
           return `export { default as  ${getComponentName(component)} ${
             pkg.exports ? ', ' + pkg.exports.join(', ') : ''
-          } } from '@myntra/uikit-component-${component}'`
+          } } from '@applique-ui/${component}'`
         })
         .join('\n'),
       {
@@ -139,7 +139,7 @@ function writeUIKitAsyncImports(components) {
             (component) =>
               `export const ${getComponentName(
                 component
-              )} = asyncComponent(() => import(/* webpackChunkName: 'components/${component}' */ '@myntra/uikit-component-${component}'))`
+              )} = asyncComponent(() => import(/* webpackChunkName: 'components/${component}' */ '@applique-ui/${component}'))`
           )
           .join('\n') +
         '\n' +
@@ -151,7 +151,7 @@ function writeUIKitAsyncImports(components) {
               .filter((name) => /^[A-Z]/.test(name))
               .map(
                 (name) =>
-                  `export const ${name} = asyncComponent(() => import('@myntra/uikit-component-${component}').then(m => ({ default: m.${name}, __esModule: true })))`
+                  `export const ${name} = asyncComponent(() => import('@applique-ui/${component}').then(m => ({ default: m.${name}, __esModule: true })))`
               )
               .join('\n')
           )

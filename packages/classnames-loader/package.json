@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/classnames-loader",
+  "name": "@applique-ui/classnames-loader",
   "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",
@@ -14,7 +14,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "loader-utils": "^1.1.0"
   }
 }

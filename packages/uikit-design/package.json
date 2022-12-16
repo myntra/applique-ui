@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-design",
+  "name": "@applique-ui/uikit-design",
   "version": "0.0.2",
   "main": "design.scss",
   "module": "dist/uikit-design.esm.js",

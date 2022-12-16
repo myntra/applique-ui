@@ -2,8 +2,8 @@ import React, { PureComponent, ReactNode, isValidElement } from 'react'
 import { TableMeta, FixedPosition, Column } from '../table-interface'
 import classnames from './simple.module.scss'
 import { Provider } from '../table-context'
-import Measure, { MeasureData } from '@mapplique/uikit-component-measure'
-import Button from '@mapplique/uikit-component-button'
+import Measure, { MeasureData } from '@applique-ui/measure'
+import Button from '@applique-ui/button'
 
 export interface Props extends BaseProps {
   config: TableMeta

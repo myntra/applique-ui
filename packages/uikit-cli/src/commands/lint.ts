@@ -22,7 +22,7 @@ function createPlugin(api: Service) {
       const isDebug = process.env.UIKIT_CLI_MODE === 'debug'
 
       const engine = new CLIEngine({
-        ...require('@mapplique/eslint-config-standard'),
+        ...require('@applique-ui/eslint-config-standard'),
         fix: true,
         useEslintrc: false,
       })

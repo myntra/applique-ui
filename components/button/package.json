@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-button",
+  "name": "@applique-ui/button",
   "version": "0.0.2",
   "main": "dist/button.cjs.js",
   "module": "dist/button.esm.js",
@@ -27,12 +27,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
-    "@mapplique/uikit-component-text": "0.0.*",
-    "@mapplique/uikit-component-loader": "0.0.*",
-    "@mapplique/uikit-context": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/text": "0.0.*",
+    "@applique-ui/loader": "0.0.*",
+    "@applique-ui/uikit-context": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

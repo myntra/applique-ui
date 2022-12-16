@@ -2,7 +2,6 @@ import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 // import { prism as style } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { oneLight as style } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // import { vs as style } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { classnames } from '@myntra/uikit-utils'
 import React from 'react'
 
 import styles from './styles.scss'

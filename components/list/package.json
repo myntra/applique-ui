@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-list",
+  "name": "@applique-ui/list",
   "version": "0.0.2",
   "main": "dist/list.cjs.js",
   "module": "dist/list.esm.js",
@@ -27,11 +27,11 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-virtual-list": "0.0.*",
-    "@mapplique/uikit-component-input-checkbox": "0.0.*",
-    "@mapplique/uikit-component-input-radio": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/virtual-list": "0.0.*",
+    "@applique-ui/input-checkbox": "0.0.*",
+    "@applique-ui/input-radio": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "react": "16.*",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"

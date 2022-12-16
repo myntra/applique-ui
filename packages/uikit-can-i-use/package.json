@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-can-i-use",
+  "name": "@applique-ui/uikit-can-i-use",
   "version": "0.0.2",
   "main": "dist/uikit-can-i-use.cjs.js",
   "module": "dist/uikit-can-i-use.esm.js",

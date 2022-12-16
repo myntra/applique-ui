@@ -1,21 +1,21 @@
 module.exports = {
-  extends: '@myntra/standard',
+  extends: '@applique-ui/standard',
   overrides: [
     {
       files: ['**/*.spec.js'],
       globals: {
         mount: 'readonly',
         mountShallow: 'readonly',
-        testCodeMod: 'readonly'
+        testCodeMod: 'readonly',
       },
       rules: {
         'node/no-extraneous-import': [
           'error',
           {
-            allowModules: ['enzyme']
-          }
-        ]
-      }
-    }
-  ]
+            allowModules: ['enzyme'],
+          },
+        ],
+      },
+    },
+  ],
 }

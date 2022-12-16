@@ -1,9 +1,9 @@
 import React, { Component, cloneElement, ReactElement, RefObject } from 'react'
 import AccordionContext from './accordion-context'
-import Layout from '@mapplique/uikit-component-layout'
-import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Layout from '@applique-ui/layout'
+import Icon, { IconName } from '@applique-ui/icon'
 import classnames from './accordion-item.module.scss'
-import { createRef } from '@mapplique/uikit-utils'
+import { createRef } from '@applique-ui/uikit-utils'
 
 export interface Props extends BaseProps {
   /**

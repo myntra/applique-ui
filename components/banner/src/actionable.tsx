@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
-import Icon, { IconName } from '@mapplique/uikit-component-icon'
-import Button from '@mapplique/uikit-component-button'
-import Layout from '@mapplique/uikit-component-layout'
-import Text from '@mapplique/uikit-component-text'
+import Icon, { IconName } from '@applique-ui/icon'
+import Button from '@applique-ui/button'
+import Layout from '@applique-ui/layout'
+import Text from '@applique-ui/text'
 import classnames from './actionable.module.scss'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 

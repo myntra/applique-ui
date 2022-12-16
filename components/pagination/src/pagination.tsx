@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import Icon from '@mapplique/uikit-component-icon'
-import { range } from '@mapplique/uikit-utils'
+import Icon from '@applique-ui/icon'
+import { range } from '@applique-ui/uikit-utils'
 
 import classnames from './pagination.module.scss'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'

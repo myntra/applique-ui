@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from './progress-bar.module.scss'
-import T from '@mapplique/uikit-component-text'
+import T from '@applique-ui/text'
 
 export interface Props extends BaseProps {
   /**

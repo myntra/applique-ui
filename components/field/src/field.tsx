@@ -7,7 +7,7 @@ import React, {
 
 import classnames from './field.module.scss'
 import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
-import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Icon, { IconName } from '@applique-ui/icon'
 
 export interface Props extends BaseProps {
   /**

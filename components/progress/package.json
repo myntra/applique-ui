@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-progress",
+  "name": "@applique-ui/progress",
   "version": "0.0.2",
   "main": "dist/progress.cjs.js",
   "module": "dist/progress.esm.js",
@@ -27,9 +27,9 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-text": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/text": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

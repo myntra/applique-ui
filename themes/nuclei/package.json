@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-theme-nuclei",
+  "name": "@applique-ui/theme-nuclei",
   "version": "0.0.2",
   "main": "dist/nuclei.cjs.js",
   "module": "dist/nuclei.esm.js",
@@ -18,11 +18,10 @@
     "build:tokens": "tokenize src/tokens.yml"
   },
   "dependencies": {
-    "@myntra/uikit": "1.13.*"
+    "@applique-ui/uikit": "0.0.*"
   },
   "devDependencies": {
-    "@mapplique/accoutrement": "0.0.*",
-    "@mapplique/uikit-design": "0.0.*",
-    "@mapplique/tokenizer": "0.0.*"
+    "@applique-ui/accoutrement": "0.0.*",
+    "@applique-ui/tokenizer": "0.0.*"
   }
 }

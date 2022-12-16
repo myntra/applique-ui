@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-schema-form",
+  "name": "@applique-ui/schema-form",
   "version": "0.0.2",
   "main": "dist/schema-form.cjs.js",
   "module": "dist/schema-form.esm.js",
@@ -27,12 +27,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-button": "0.0.*",
-    "@mapplique/uikit-component-field": "0.0.*",
-    "@mapplique/uikit-component-form": "0.0.*",
-    "@mapplique/uikit-component-grid": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/field": "0.0.*",
+    "@applique-ui/form": "0.0.*",
+    "@applique-ui/grid": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

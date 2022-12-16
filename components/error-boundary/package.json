@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-error-boundary",
+  "name": "@applique-ui/error-boundary",
   "version": "0.0.2",
   "main": "dist/error-boundary.cjs.js",
   "module": "dist/error-boundary.esm.js",
@@ -27,8 +27,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-avatar",
+  "name": "@applique-ui/avatar",
   "version": "0.0.2",
   "main": "dist/avatar.cjs.js",
   "module": "dist/avatar.esm.js",
@@ -27,8 +27,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "name-initials": "^0.1.3",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

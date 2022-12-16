@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/rollup-plugin-scss",
+  "name": "@applique-ui/rollup-plugin-scss",
   "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-scss.esm.js",

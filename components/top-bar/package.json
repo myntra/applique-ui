@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-top-bar",
+  "name": "@applique-ui/top-bar",
   "version": "0.0.2",
   "main": "dist/top-bar.cjs.js",
   "module": "dist/top-bar.esm.js",
@@ -27,12 +27,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-bread-crumb": "0.0.*",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
-    "@mapplique/uikit-component-list": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/bread-crumb": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/list": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

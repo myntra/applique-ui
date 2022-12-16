@@ -1,8 +1,8 @@
 import React, { PureComponent, Children } from 'react'
 import classnames from './button-group.module.scss'
-import Button, { KIND } from '@mapplique/uikit-component-button'
-import List from '@mapplique/uikit-component-list'
-import Dropdown from '@mapplique/uikit-component-dropdown'
+import Button, { KIND } from '@applique-ui/button'
+import List from '@applique-ui/list'
+import Dropdown from '@applique-ui/dropdown'
 import EllipsisVSolid from 'uikit-icons/svgs/EllipsisVSolid'
 
 export interface Props extends BaseProps {

@@ -5,44 +5,33 @@ import React, {
   Children,
   isValidElement,
 } from 'react'
-import Grid from '@mapplique/uikit-component-grid'
-import {
-  ColumnSize,
-  Props as GridColumnProps,
-} from '@mapplique/uikit-component-grid'
+import Grid from '@applique-ui/grid'
+import { ColumnSize, Props as GridColumnProps } from '@applique-ui/grid'
 
 import InputCheckbox, {
   Props as InputCheckboxProps,
-} from '@mapplique/uikit-component-input-checkbox'
-import InputDate, {
-  Props as InputDateProps,
-} from '@mapplique/uikit-component-input-date'
+} from '@applique-ui/input-checkbox'
+import InputDate, { Props as InputDateProps } from '@applique-ui/input-date'
 import InputMasked, {
   Props as InputMaskedProps,
-} from '@mapplique/uikit-component-input-masked'
+} from '@applique-ui/input-masked'
 import InputNumber, {
   Props as InputNumberProps,
-} from '@mapplique/uikit-component-input-number'
+} from '@applique-ui/input-number'
 import InputSelect, {
   Props as InputSelectProps,
-} from '@mapplique/uikit-component-input-select'
-import InputText, {
-  Props as InputTextProps,
-} from '@mapplique/uikit-component-input-text'
-import InputRadio, {
-  Props as InputRadioProps,
-} from '@mapplique/uikit-component-input-radio'
+} from '@applique-ui/input-select'
+import InputText, { Props as InputTextProps } from '@applique-ui/input-text'
+import InputRadio, { Props as InputRadioProps } from '@applique-ui/input-radio'
 import InputTextArea, {
   Props as InputTextAreaProps,
-} from '@mapplique/uikit-component-input-text-area'
-import InputFile, {
-  Props as InputFileProps,
-} from '@mapplique/uikit-component-input-file'
-import Button from '@mapplique/uikit-component-button'
-import ButtonGroup from '@mapplique/uikit-component-button-group'
-import Field, { Props as FieldProps } from '@mapplique/uikit-component-field'
-import { createContext } from '@mapplique/uikit-context'
-import { get, set, isReactNodeType, is } from '@mapplique/uikit-utils'
+} from '@applique-ui/input-text-area'
+import InputFile, { Props as InputFileProps } from '@applique-ui/input-file'
+import Button from '@applique-ui/button'
+import ButtonGroup from '@applique-ui/button-group'
+import Field, { Props as FieldProps } from '@applique-ui/field'
+import { createContext } from '@applique-ui/uikit-context'
+import { get, set, isReactNodeType, is } from '@applique-ui/uikit-utils'
 
 import classnames from './form.module.scss'
 

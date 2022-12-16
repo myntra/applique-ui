@@ -2,13 +2,13 @@ import debug from 'debug'
 import { CLIEngine } from 'eslint'
 
 const engine = new CLIEngine(
-  Object.assign(require('@mapplique/eslint-config-standard'), {
+  Object.assign(require('@applique-ui/eslint-config-standard'), {
     fix: true,
     useEslintrc: false,
   })
 )
 
-const d = debug('@mapplique/codemod-utils')
+const d = debug('@applique-ui/codemod-utils')
 
 export function createHelper(file, api) {
   const j = api.jscodeshift

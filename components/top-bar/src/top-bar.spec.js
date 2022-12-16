@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import TopBar from './index'
-import BreadCrumb from '@mapplique/uikit-component-bread-crumb'
+import BreadCrumb from '@applique-ui/bread-crumb'
 import UserSolid from 'uikit-icons/svgs/UserSolid'
 import SignOutAltSolid from 'uikit-icons/svgs/SignOutAltSolid'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-input-checkbox",
+  "name": "@applique-ui/input-checkbox",
   "version": "0.0.2",
   "main": "dist/input-checkbox.cjs.js",
   "module": "dist/input-checkbox.esm.js",
@@ -27,9 +27,9 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-input-text": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

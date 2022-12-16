@@ -1,7 +1,7 @@
 import React, { MouseEventHandler, PureComponent } from 'react'
 
-import Layout from '@mapplique/uikit-component-layout'
-import Icon from '@mapplique/uikit-component-icon'
+import Layout from '@applique-ui/layout'
+import Icon from '@applique-ui/icon'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
 import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 import Bell from 'uikit-icons/svgs/BoxSolid'

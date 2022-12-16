@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/codemod-utils",
+  "name": "@applique-ui/codemod-utils",
   "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
@@ -14,9 +14,9 @@
     "codemods/"
   ],
   "sideEffects": false,
-  "description": "@mapplique/codemod-utils",
+  "description": "@applique-ui/codemod-utils",
   "dependencies": {
-    "@mapplique/eslint-config-standard": "0.0.*",
+    "@applique-ui/eslint-config-standard": "0.0.*",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",

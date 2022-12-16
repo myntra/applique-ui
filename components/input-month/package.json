@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-input-month",
+  "name": "@applique-ui/input-month",
   "version": "0.0.2",
   "main": "dist/input-month.cjs.js",
   "module": "dist/input-month.esm.js",
@@ -27,11 +27,11 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-component-dropdown": "0.0.*",
-    "@mapplique/uikit-component-input-date": "0.0.*",
-    "@mapplique/uikit-component-input-masked": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/input-date": "0.0.*",
+    "@applique-ui/input-masked": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "luxon": "^1.21.1",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

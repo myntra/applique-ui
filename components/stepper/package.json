@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-stepper",
+  "name": "@applique-ui/stepper",
   "version": "0.0.2",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
@@ -26,11 +26,11 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
-    "@mapplique/uikit-component-text": "0.0.*",
-    "@mapplique/uikit-component-layout": "0.0.*",
-    "@mapplique/uikit-component-icon": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/text": "0.0.*",
+    "@applique-ui/layout": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

@@ -1,1 +1,1 @@
-# @mapplique/uikit-component-icon
+# @applique-ui/icon

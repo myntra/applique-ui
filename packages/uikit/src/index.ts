@@ -1,19 +1,19 @@
 export * from "./components";
 
-export { default as T } from "@mapplique/uikit-component-text";
+export { default as T } from "@applique-ui/text";
 
-export { default as Alert } from "@mapplique/uikit-component-banner";
+export { default as Alert } from "@applique-ui/banner";
 
 // TODO: create a codemod for renaming Tag to Badge
-export { default as Tag } from "@mapplique/uikit-component-badge";
+export { default as Tag } from "@applique-ui/badge";
 // TODO: create a codemod for renaming DropDown to Dropdown
-export { default as DropDown } from "@mapplique/uikit-component-dropdown";
+export { default as DropDown } from "@applique-ui/dropdown";
 // TODO: create a codemod for renaming InputCheckBox to InputCheckbox
-export { default as InputCheckBox } from "@mapplique/uikit-component-input-checkbox";
+export { default as InputCheckBox } from "@applique-ui/input-checkbox";
 // TODO: Implement or deprecate InputSwitch
-export { default as InputSwitch } from "@mapplique/uikit-component-input-checkbox";
+export { default as InputSwitch } from "@applique-ui/input-checkbox";
 
-import * as u from "@mapplique/uikit-utils";
+import * as u from "@applique-ui/uikit-utils";
 
 export { u };
 

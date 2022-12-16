@@ -1,5 +1,5 @@
 {
-  "name": "@mapplique/uikit-component-badge",
+  "name": "@applique-ui/badge",
   "version": "0.0.2",
   "main": "dist/badge.cjs.js",
   "module": "dist/badge.esm.js",
@@ -27,8 +27,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@mapplique/uikit-can-i-use": "0.0.*",
-    "@mapplique/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }
