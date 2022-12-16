@@ -1,11 +1,11 @@
 {
-  "title": "UIKit | Myntra",
-  "description": "UIKit for Myntra SCM and beyond",
+  "title": "Applique UIKit | Myntra",
+  "description": "Applique UIKit for Myntra SCM and beyond",
   "repository": "https://bitbucket.org/myntra/uikit",
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "0.0.2-beta.4",
+  "version": "0.0.2",
   "engines": {
     "node": ">=14.17.6"
   },
