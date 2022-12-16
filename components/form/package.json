@@ -38,12 +38,10 @@
     "@mapplique/uikit-component-input-month": "0.0.*",
     "@mapplique/uikit-component-input-number": "0.0.*",
     "@mapplique/uikit-component-input-radio": "0.0.*",
-    "@mapplique/uikit-component-input-s3-file": "0.0.*",
     "@mapplique/uikit-component-input-select": "0.0.*",
     "@mapplique/uikit-component-input-text": "0.0.*",
     "@mapplique/uikit-component-input-text-area": "0.0.*",
     "@mapplique/uikit-component-input-file": "0.0.*",
-    "@mapplique/uikit-component-input-azure-file": "0.0.*",
     "@mapplique/uikit-context": "0.0.*",
     "@mapplique/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"

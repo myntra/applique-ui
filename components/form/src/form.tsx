@@ -23,9 +23,6 @@ import InputMasked, {
 import InputNumber, {
   Props as InputNumberProps,
 } from '@mapplique/uikit-component-input-number'
-import InputS3File, {
-  Props as InputS3FileProps,
-} from '@mapplique/uikit-component-input-s3-file'
 import InputSelect, {
   Props as InputSelectProps,
 } from '@mapplique/uikit-component-input-select'
@@ -41,9 +38,6 @@ import InputTextArea, {
 import InputFile, {
   Props as InputFileProps,
 } from '@mapplique/uikit-component-input-file'
-import InputAzureFile, {
-  Props as InputAzureFileProps,
-} from '@mapplique/uikit-component-input-azure-file'
 import Button from '@mapplique/uikit-component-button'
 import ButtonGroup from '@mapplique/uikit-component-button-group'
 import Field, { Props as FieldProps } from '@mapplique/uikit-component-field'
@@ -144,7 +138,6 @@ export default class Form extends PureComponent<Props> {
     InputCheckbox
   ) // For backward compat.
   static Date = withField<InputDateProps & FormFieldProps>(InputDate)
-  static S3File = withField<InputS3FileProps & FormFieldProps>(InputS3File)
   static Masked = withField<InputMaskedProps & FormFieldProps>(InputMasked)
   static Number = withField<InputNumberProps & FormFieldProps>(InputNumber)
   static Radio = withField<InputRadioProps & FormFieldProps>(InputRadio)
@@ -152,9 +145,6 @@ export default class Form extends PureComponent<Props> {
     InputTextArea
   )
   static File = withField<InputFileProps & FormFieldProps>(InputFile)
-  static AzureFile = withField<InputAzureFileProps & FormFieldProps>(
-    InputAzureFile
-  )
 
   cache: Record<string, (value: unknown) => void> = {}
 

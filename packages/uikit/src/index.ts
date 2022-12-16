@@ -12,8 +12,6 @@ export { default as DropDown } from "@mapplique/uikit-component-dropdown";
 export { default as InputCheckBox } from "@mapplique/uikit-component-input-checkbox";
 // TODO: Implement or deprecate InputSwitch
 export { default as InputSwitch } from "@mapplique/uikit-component-input-checkbox";
-// TODO: create a codemod for renaming S3Upload to InputS3File
-export { default as S3Upload } from "@mapplique/uikit-component-input-s3-file";
 
 import * as u from "@mapplique/uikit-utils";
 
