@@ -1,4 +1,4 @@
-import { createContext, LinkProps } from '@myntra/uikit-context'
+import { createContext, LinkProps } from '@mapplique/uikit-context'
 
 export interface NavBarContext {
   isOpen: boolean

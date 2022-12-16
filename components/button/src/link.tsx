@@ -1,5 +1,5 @@
 import React from 'react'
-import UIKitContext from '@myntra/uikit-context'
+import UIKitContext from '@mapplique/uikit-context'
 
 export default function UIKitContextLink(props) {
   return (

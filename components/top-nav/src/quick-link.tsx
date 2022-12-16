@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Icon from '@myntra/uikit-component-icon'
+import Icon from '@mapplique/uikit-component-icon'
 
 import classnames from './quick-link.module.scss'
 

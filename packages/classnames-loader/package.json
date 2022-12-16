@@ -1,6 +1,6 @@
 {
-  "name": "@applique/classnames-loader",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/classnames-loader",
+  "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@myntra/uikit-utils": "1.13.*",
+    "@mapplique/uikit-utils": "0.0.*",
     "loader-utils": "^1.1.0"
   }
 }

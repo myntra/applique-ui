@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Mask as _Mask, MASKS } from './default-masks'
-import { findLastIndex, memoize } from '@myntra/uikit-utils'
+import { findLastIndex, memoize } from '@mapplique/uikit-utils'
 
 import classnames from './input-masked.module.scss'
 

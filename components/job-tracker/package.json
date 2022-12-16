@@ -1,6 +1,6 @@
 {
-  "name": "@applique/uikit-component-job-tracker",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/uikit-component-job-tracker",
+  "version": "0.0.2",
   "main": "dist/job-tracker.cjs.js",
   "module": "dist/job-tracker.esm.js",
   "types": "dist/index.d.ts",
@@ -27,14 +27,14 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-can-i-use": "1.13.*",
-    "@myntra/uikit-component-button": "1.13.*",
-    "@myntra/uikit-component-grid": "1.13.*",
-    "@myntra/uikit-component-icon": "1.13.*",
-    "@myntra/uikit-component-layout": "1.13.*",
-    "@myntra/uikit-component-loader": "1.13.*",
-    "@myntra/uikit-component-text": "1.13.*",
-    "@myntra/uikit-utils": "1.13.*",
+    "@mapplique/uikit-can-i-use": "0.0.*",
+    "@mapplique/uikit-component-button": "0.0.*",
+    "@mapplique/uikit-component-grid": "0.0.*",
+    "@mapplique/uikit-component-icon": "0.0.*",
+    "@mapplique/uikit-component-layout": "0.0.*",
+    "@mapplique/uikit-component-loader": "0.0.*",
+    "@mapplique/uikit-component-text": "0.0.*",
+    "@mapplique/uikit-utils": "0.0.*",
     "dayjs": "^1.8.14",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

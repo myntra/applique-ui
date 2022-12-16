@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import InputMonth from './index'
-import Dropdown from '@myntra/uikit-component-dropdown'
+import Dropdown from '@mapplique/uikit-component-dropdown'
 
 describe('input-month', () => {
   const originalConsoleError = global.console.error

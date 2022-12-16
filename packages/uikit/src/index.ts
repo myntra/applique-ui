@@ -1,21 +1,21 @@
 export * from "./components";
 
-export { default as T } from "@myntra/uikit-component-text";
+export { default as T } from "@mapplique/uikit-component-text";
 
-export { default as Alert } from "@myntra/uikit-component-banner";
+export { default as Alert } from "@mapplique/uikit-component-banner";
 
 // TODO: create a codemod for renaming Tag to Badge
-export { default as Tag } from "@myntra/uikit-component-badge";
+export { default as Tag } from "@mapplique/uikit-component-badge";
 // TODO: create a codemod for renaming DropDown to Dropdown
-export { default as DropDown } from "@myntra/uikit-component-dropdown";
+export { default as DropDown } from "@mapplique/uikit-component-dropdown";
 // TODO: create a codemod for renaming InputCheckBox to InputCheckbox
-export { default as InputCheckBox } from "@myntra/uikit-component-input-checkbox";
+export { default as InputCheckBox } from "@mapplique/uikit-component-input-checkbox";
 // TODO: Implement or deprecate InputSwitch
-export { default as InputSwitch } from "@myntra/uikit-component-input-checkbox";
+export { default as InputSwitch } from "@mapplique/uikit-component-input-checkbox";
 // TODO: create a codemod for renaming S3Upload to InputS3File
-export { default as S3Upload } from "@myntra/uikit-component-input-s3-file";
+export { default as S3Upload } from "@mapplique/uikit-component-input-s3-file";
 
-import * as u from "@myntra/uikit-utils";
+import * as u from "@mapplique/uikit-utils";
 
 export { u };
 

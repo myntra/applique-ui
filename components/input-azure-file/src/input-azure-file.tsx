@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
-import Button from '@myntra/uikit-component-button'
+import Button from '@mapplique/uikit-component-button'
 import classnames from './input-azure-file.module.scss'
-import InputFile from '@myntra/uikit-component-input-file'
-import Progress from '@myntra/uikit-component-progress'
+import InputFile from '@mapplique/uikit-component-input-file'
+import Progress from '@mapplique/uikit-component-progress'
 
-import type { InputFileValidationFunction } from '@myntra/uikit-component-input-file'
+import { InputFileValidationFunction } from '@mapplique/uikit-component-input-file'
 
 export interface Props extends BaseProps {
   /**

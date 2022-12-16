@@ -1,4 +1,4 @@
-import { get } from '@myntra/uikit-utils'
+import { get } from '@mapplique/uikit-utils'
 
 function noop(value: any) {
   // do nothing

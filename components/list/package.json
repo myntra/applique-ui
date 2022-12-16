@@ -1,6 +1,6 @@
 {
-  "name": "@applique/uikit-component-list",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/uikit-component-list",
+  "version": "0.0.2",
   "main": "dist/list.cjs.js",
   "module": "dist/list.esm.js",
   "types": "dist/index.d.ts",
@@ -27,11 +27,11 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-can-i-use": "1.13.*",
-    "@myntra/uikit-component-virtual-list": "1.13.*",
-    "@myntra/uikit-component-input-checkbox": "1.13.*",
-    "@myntra/uikit-component-input-radio": "1.13.*",
-    "@myntra/uikit-utils": "1.13.*",
+    "@mapplique/uikit-can-i-use": "0.0.*",
+    "@mapplique/uikit-component-virtual-list": "0.0.*",
+    "@mapplique/uikit-component-input-checkbox": "0.0.*",
+    "@mapplique/uikit-component-input-radio": "0.0.*",
+    "@mapplique/uikit-utils": "0.0.*",
     "react": "16.*",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"

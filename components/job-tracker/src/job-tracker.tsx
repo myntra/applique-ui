@@ -5,7 +5,7 @@ import JobTrackerItem, {
   Props as JobTrackerItemProps,
 } from './job-tracker-item'
 import classnames from './job-tracker.module.scss'
-import { isNullOrUndefined } from '@myntra/uikit-utils'
+import { isNullOrUndefined } from '@mapplique/uikit-utils'
 
 export type Job = Pick<
   JobTrackerItemProps,

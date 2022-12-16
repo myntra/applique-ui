@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import classnames from './input-file.module.scss'
-import Input from '@myntra/uikit-component-input-text'
-import Button from '@myntra/uikit-component-button'
-import { createRef } from '@myntra/uikit-utils'
+import Input from '@mapplique/uikit-component-input-text'
+import Button from '@mapplique/uikit-component-button'
+import { createRef } from '@mapplique/uikit-utils'
 
 export type InputFileValidationFunction = { (file: FileList): void }
 

@@ -1,5 +1,5 @@
 @import '@accoutrement';
-@import '@myntra/uikit-component-input-text/style.scss';
+@import '@mapplique/uikit-component-input-text/style.scss';
 
 .input {
   @include mixin-input-component();
@@ -17,8 +17,8 @@
 }
 
 .content:not(:empty) {
-  padding-inline-start: size('6x');
   display: inline-block;
+  padding-inline-start: size('6x');
 }
 
 .checkbox {

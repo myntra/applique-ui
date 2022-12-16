@@ -5,7 +5,7 @@ import React, {
   isValidElement,
 } from 'react'
 import classnames from './notification.module.scss'
-import Button from '@myntra/uikit-component-button'
+import Button from '@mapplique/uikit-component-button'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 
 export interface Props extends BaseProps {

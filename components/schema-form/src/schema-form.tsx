@@ -1,5 +1,5 @@
 import React, { Component, ComponentType } from 'react'
-import Form, { Props as FormProps } from '@myntra/uikit-component-form'
+import Form, { Props as FormProps } from '@mapplique/uikit-component-form'
 
 import fields from './fields'
 import { createRenderFactory, UI } from './json-schema-renderer'

@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import ButtonGroup from './button-group'
-import Button from '@myntra/uikit-component-button'
-import List from '@myntra/uikit-component-list'
-import Dropdown from '@myntra/uikit-component-dropdown'
+import Button from '@mapplique/uikit-component-button'
+import List from '@mapplique/uikit-component-list'
+import Dropdown from '@mapplique/uikit-component-dropdown'
 
 describe('ButtonGroup', () => {
   it('renders a ButtonGroup', () => {

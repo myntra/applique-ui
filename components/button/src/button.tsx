@@ -1,9 +1,9 @@
 import React, { PureComponent, ReactNode } from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
-import Text from '@myntra/uikit-component-text'
-import Loader from '@myntra/uikit-component-loader'
+import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Text from '@mapplique/uikit-component-text'
+import Loader from '@mapplique/uikit-component-loader'
 import classnames from './button.module.scss'
-import { CAN_USE_HOOKS } from '@myntra/uikit-can-i-use'
+import { CAN_USE_HOOKS } from '@mapplique/uikit-can-i-use'
 
 import Link from './link'
 import HookLink from './link-hook'

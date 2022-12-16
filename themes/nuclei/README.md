@@ -1,1 +1,1 @@
-# @applique/uikit-theme-nuclei
+# @mapplique/uikit-theme-nuclei

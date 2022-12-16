@@ -4,8 +4,8 @@ import React, {
   ReactNode,
   isValidElement,
 } from 'react'
-import Button from '@myntra/uikit-component-button'
-import Portal from '@myntra/uikit-component-portal'
+import Button from '@mapplique/uikit-component-button'
+import Portal from '@mapplique/uikit-component-portal'
 
 import classnames from './modal.module.scss'
 import ModalLayout, { Props as ModalLayoutProps } from './modal-layout'

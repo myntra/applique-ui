@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Dropdown from '@myntra/uikit-component-dropdown'
+import Dropdown from '@mapplique/uikit-component-dropdown'
 
 import classnames from './tooltip.module.scss'
 

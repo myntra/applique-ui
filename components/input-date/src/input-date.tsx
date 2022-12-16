@@ -1,6 +1,6 @@
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@mapplique/uikit-utils'
 import React, { PureComponent, RefObject } from 'react'
-import Dropdown from '@myntra/uikit-component-dropdown'
+import Dropdown from '@mapplique/uikit-component-dropdown'
 import classnames from './input-date.module.scss'
 import { format, parse, isDateEqual } from './input-date-utils'
 import { isDateRange, DateRange } from './input-date-helpers'

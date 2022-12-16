@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
-import Icon from '@myntra/uikit-component-icon'
+import Icon from '@mapplique/uikit-component-icon'
 import InputMasked, {
   Props as InputMaskedProps,
-} from '@myntra/uikit-component-input-masked'
+} from '@mapplique/uikit-component-input-masked'
 
 import classnames from './input-date-value.module.scss'
 import { parse, format } from './input-date-utils'

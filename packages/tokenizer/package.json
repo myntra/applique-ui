@@ -1,6 +1,6 @@
 {
-  "name": "@applique/tokenizer",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/tokenizer",
+  "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@myntra/tokenizer",
+  "description": "@mapplique/tokenizer",
   "bin": {
     "tokenize": "bin/tokenize.js"
   },

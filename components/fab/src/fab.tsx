@@ -1,7 +1,7 @@
 import React, { PureComponent, ReactNode, Children } from 'react'
-import Icons, { IconName } from '@myntra/uikit-component-icon'
-import Dropdown from '@myntra/uikit-component-dropdown'
-import Button, { KIND } from '@myntra/uikit-component-button'
+import Icons, { IconName } from '@mapplique/uikit-component-icon'
+import Dropdown from '@mapplique/uikit-component-dropdown'
+import Button, { KIND } from '@mapplique/uikit-component-button'
 import classnames from './fab.module.scss'
 import EllipsisVSolid from 'uikit-icons/svgs/EllipsisVSolid'
 

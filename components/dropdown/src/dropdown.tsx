@@ -1,12 +1,12 @@
 import React, { Component, RefObject } from 'react'
 
-import Button from '@myntra/uikit-component-button'
-import ClickAway from '@myntra/uikit-component-click-away'
-import Measure, { MeasureData } from '@myntra/uikit-component-measure'
-import Portal from '@myntra/uikit-component-portal'
+import Button from '@mapplique/uikit-component-button'
+import ClickAway from '@mapplique/uikit-component-click-away'
+import Measure, { MeasureData } from '@mapplique/uikit-component-measure'
+import Portal from '@mapplique/uikit-component-portal'
 
 import classnames from './dropdown.module.scss'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@mapplique/uikit-utils'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
 
 const scrollParents = new WeakMap<Element, Element[]>()

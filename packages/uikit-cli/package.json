@@ -1,6 +1,6 @@
 {
-  "name": "@applique/uikit-cli",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/uikit-cli",
+  "version": "0.0.2",
   "description": "A command line utility for @myntra/uikit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,7 +36,7 @@
     "cli-highlight": "^2.0.0",
     "commander": "^2.15.1",
     "diff": "^3.5.0",
-    "eslint": "^4.19.1",
+    "eslint": "4.19.1",
     "execa": "^4.0.0",
     "fs": "^0.0.1-security",
     "glob": "^7.1.2",

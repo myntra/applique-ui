@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import classnames from './input-s3-file.module.scss'
-import Button from '@myntra/uikit-component-button'
-import InputFile from '@myntra/uikit-component-input-file'
-import Progress from '@myntra/uikit-component-progress'
-import { createRef } from '@myntra/uikit-utils'
+import Button from '@mapplique/uikit-component-button'
+import InputFile from '@mapplique/uikit-component-input-file'
+import Progress from '@mapplique/uikit-component-progress'
+import { createRef } from '@mapplique/uikit-utils'
 
 export interface Props extends BaseProps {
   /**

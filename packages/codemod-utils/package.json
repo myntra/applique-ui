@@ -1,6 +1,6 @@
 {
-  "name": "@applique/codemod-utils",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/codemod-utils",
+  "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
   "types": "dist/index.d.ts",
@@ -14,9 +14,9 @@
     "codemods/"
   ],
   "sideEffects": false,
-  "description": "@myntra/codemod-utils",
+  "description": "@mapplique/codemod-utils",
   "dependencies": {
-    "@myntra/eslint-config-standard": "1.13.*",
+    "@mapplique/eslint-config-standard": "0.0.*",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",

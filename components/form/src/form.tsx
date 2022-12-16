@@ -5,50 +5,50 @@ import React, {
   Children,
   isValidElement,
 } from 'react'
-import Grid from '@myntra/uikit-component-grid'
+import Grid from '@mapplique/uikit-component-grid'
 import {
   ColumnSize,
   Props as GridColumnProps,
-} from '@myntra/uikit-component-grid'
+} from '@mapplique/uikit-component-grid'
 
 import InputCheckbox, {
   Props as InputCheckboxProps,
-} from '@myntra/uikit-component-input-checkbox'
+} from '@mapplique/uikit-component-input-checkbox'
 import InputDate, {
   Props as InputDateProps,
-} from '@myntra/uikit-component-input-date'
+} from '@mapplique/uikit-component-input-date'
 import InputMasked, {
   Props as InputMaskedProps,
-} from '@myntra/uikit-component-input-masked'
+} from '@mapplique/uikit-component-input-masked'
 import InputNumber, {
   Props as InputNumberProps,
-} from '@myntra/uikit-component-input-number'
+} from '@mapplique/uikit-component-input-number'
 import InputS3File, {
   Props as InputS3FileProps,
-} from '@myntra/uikit-component-input-s3-file'
+} from '@mapplique/uikit-component-input-s3-file'
 import InputSelect, {
   Props as InputSelectProps,
-} from '@myntra/uikit-component-input-select'
+} from '@mapplique/uikit-component-input-select'
 import InputText, {
   Props as InputTextProps,
-} from '@myntra/uikit-component-input-text'
+} from '@mapplique/uikit-component-input-text'
 import InputRadio, {
   Props as InputRadioProps,
-} from '@myntra/uikit-component-input-radio'
+} from '@mapplique/uikit-component-input-radio'
 import InputTextArea, {
   Props as InputTextAreaProps,
-} from '@myntra/uikit-component-input-text-area'
+} from '@mapplique/uikit-component-input-text-area'
 import InputFile, {
   Props as InputFileProps,
-} from '@myntra/uikit-component-input-file'
+} from '@mapplique/uikit-component-input-file'
 import InputAzureFile, {
   Props as InputAzureFileProps,
-} from '@myntra/uikit-component-input-azure-file'
-import Button from '@myntra/uikit-component-button'
-import ButtonGroup from '@myntra/uikit-component-button-group'
-import Field, { Props as FieldProps } from '@myntra/uikit-component-field'
-import { createContext } from '@myntra/uikit-context'
-import { get, set, isReactNodeType, is } from '@myntra/uikit-utils'
+} from '@mapplique/uikit-component-input-azure-file'
+import Button from '@mapplique/uikit-component-button'
+import ButtonGroup from '@mapplique/uikit-component-button-group'
+import Field, { Props as FieldProps } from '@mapplique/uikit-component-field'
+import { createContext } from '@mapplique/uikit-context'
+import { get, set, isReactNodeType, is } from '@mapplique/uikit-utils'
 
 import classnames from './form.module.scss'
 

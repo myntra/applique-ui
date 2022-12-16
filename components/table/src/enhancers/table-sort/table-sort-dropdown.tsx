@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Dropdown from '@myntra/uikit-component-dropdown'
-import Icon from '@myntra/uikit-component-icon'
-import List from '@myntra/uikit-component-list'
+import Dropdown from '@mapplique/uikit-component-dropdown'
+import Icon from '@mapplique/uikit-component-icon'
+import List from '@mapplique/uikit-component-list'
 
 import classnames from './table-sort-dropdown.module.scss'
 

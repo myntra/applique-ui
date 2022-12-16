@@ -1,6 +1,6 @@
 {
-  "name": "@applique/uikit-component-notification",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/uikit-component-notification",
+  "version": "0.0.2",
   "main": "dist/notification.cjs.js",
   "module": "dist/notification.esm.js",
   "types": "dist/index.d.ts",
@@ -26,10 +26,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-can-i-use": "1.13.*",
-    "@myntra/uikit-component-button": "1.13.*",
-    "@myntra/uikit-component-section": "1.13.*",
-    "@myntra/uikit-utils": "1.13.*",
+    "@mapplique/uikit-can-i-use": "0.0.*",
+    "@mapplique/uikit-component-button": "0.0.*",
+    "@mapplique/uikit-component-section": "0.0.*",
+    "@mapplique/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

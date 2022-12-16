@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
-import Button from '@myntra/uikit-component-button'
+import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Button from '@mapplique/uikit-component-button'
 import classnames from './banner.module.scss'
 import Actionable from './actionable'
 import { ICONS, RE_BACKWARD_COMPAT } from './constants'

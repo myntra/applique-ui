@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
+import Icon, { IconName } from '@mapplique/uikit-component-icon'
 import classnames from './nav-bar-item.module.scss'
 import Context, { NavBarContext } from './context'
 

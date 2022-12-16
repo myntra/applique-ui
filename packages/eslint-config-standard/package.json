@@ -1,6 +1,6 @@
 {
-  "name": "@applique/eslint-config-standard",
-  "version": "0.0.2-beta.4",
+  "name": "@mapplique/eslint-config-standard",
+  "version": "0.0.2",
   "main": "src/index.js",
   "module": "dist/eslint-config-standard.esm.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@myntra/eslint-config-standard",
+  "description": "@mapplique/eslint-config-standard",
   "dependencies": {
     "babel-eslint": "^8.2.2",
     "babel-plugin-syntax-jsx": "^6.18.0",

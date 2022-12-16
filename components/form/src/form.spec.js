@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import Button from '@myntra/uikit-component-button'
-import Field from '@myntra/uikit-component-field'
+import Button from '@mapplique/uikit-component-button'
+import Field from '@mapplique/uikit-component-field'
 
 import Form from './form'
 

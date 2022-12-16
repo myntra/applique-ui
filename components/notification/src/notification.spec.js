@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import Notification from './index'
-import Button from '@myntra/uikit-component-button'
+import Button from '@mapplique/uikit-component-button'
 
 let wrapper
 beforeEach(() => {

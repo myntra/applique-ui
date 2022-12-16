@@ -35,7 +35,7 @@ module.exports = function ScssPlugin(options = {}) {
   delete options.modules
 
   return {
-    name: '@myntra/scss',
+    name: '@mapplique/scss',
     resolveId(id, importer) {
       if (/\.s[ac]ss$/.test(importer)) {
         const ids = [
@@ -127,7 +127,7 @@ function styleInject(css) {
 
 styleInject(${JSON.stringify(result.css)})
 
-import { classnames as raw } from '@myntra/uikit-utils'
+import { classnames as raw } from '@mapplique/uikit-utils'
 
 const locals = ${JSON.stringify(names)}
 

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { toArray } from '@myntra/uikit-utils'
+import { toArray } from '@mapplique/uikit-utils'
 import classnames from './input-select-value.module.scss'
 
 export interface InputSelectValueProps<V = any, T = any> extends BaseProps {

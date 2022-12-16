@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import InputS3File from './input-s3-file'
-import InputText from '@myntra/uikit-component-input-text'
+import InputText from '@mapplique/uikit-component-input-text'
 
 describe('InputS3File', () => {
   it('is a component', () => {

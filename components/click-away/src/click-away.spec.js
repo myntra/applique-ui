@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@mapplique/uikit-utils'
 import ClickAway from './click-away'
 
 describe('ClickAway', () => {

@@ -1,4 +1,4 @@
-import { createContext } from '@myntra/uikit-context'
+import { createContext } from '@mapplique/uikit-context'
 import AccordionItem from './accordion-item'
 import { Props as ItemProps } from './accordion-item'
 

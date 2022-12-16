@@ -6,11 +6,11 @@ async function findTransformFiles() {
   const paths = [
     path.resolve(
       process.cwd(),
-      `node_modules/@myntra/codemod-utils/codemods/unity-uikit/`
+      `node_modules/@mapplique/codemod-utils/codemods/unity-uikit/`
     ),
     path.resolve(
       process.cwd(),
-      `node_modules/@myntra/codemod-utils/codemods/uikit/`
+      `node_modules/@mapplique/codemod-utils/codemods/uikit/`
     ),
   ]
 

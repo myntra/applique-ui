@@ -1,6 +1,6 @@
 import React, { Component, ComponentType } from 'react'
-import { looseEquals } from '@myntra/uikit-utils'
-import Grid from '@myntra/uikit-component-grid'
+import { looseEquals } from '@mapplique/uikit-utils'
+import Grid from '@mapplique/uikit-component-grid'
 
 import { UI } from '../json-schema-renderer'
 

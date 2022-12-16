@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
-import Button from '@myntra/uikit-component-button'
-import Layout from '@myntra/uikit-component-layout'
-import Text from '@myntra/uikit-component-text'
+import Icon, { IconName } from '@mapplique/uikit-component-icon'
+import Button from '@mapplique/uikit-component-button'
+import Layout from '@mapplique/uikit-component-layout'
+import Text from '@mapplique/uikit-component-text'
 import classnames from './actionable.module.scss'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 

@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import VirtualList, {
   Props as VirtualListProps,
-} from '@myntra/uikit-component-virtual-list'
-import InputCheckbox from '@myntra/uikit-component-input-checkbox'
-import { createRef, isNullOrUndefined } from '@myntra/uikit-utils'
+} from '@mapplique/uikit-component-virtual-list'
+import InputCheckbox from '@mapplique/uikit-component-input-checkbox'
+import { createRef, isNullOrUndefined } from '@mapplique/uikit-utils'
 import classnames from './list.module.scss'
 import ListItem from './list-item'
 

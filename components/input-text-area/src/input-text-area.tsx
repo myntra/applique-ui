@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from './input-text-area.module.scss'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
+import Icon, { IconName } from '@mapplique/uikit-component-icon'
 import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
 
 export interface Props extends BaseProps {
