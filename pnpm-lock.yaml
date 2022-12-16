@@ -8,6 +8,12 @@ importers:
 
   .:
     specifiers:
+      '@applique-ui/codemod-utils': link:packages/codemod-utils
+      '@applique-ui/docgen': link:packages/docgen
+      '@applique-ui/eslint-config-standard': link:packages/eslint-config-standard
+      '@applique-ui/rollup-plugin-classnames': link:packages/rollup-plugin-classnames
+      '@applique-ui/rollup-plugin-scss': link:packages/rollup-plugin-scss
+      '@applique-ui/stylelint-config-standard': link:packages/stylelint-config-standard
       '@babel/core': ^7.18.9
       '@babel/plugin-proposal-class-properties': ^7.16.0
       '@babel/plugin-syntax-dynamic-import': ^7.2.0
@@ -23,12 +29,6 @@ importers:
       '@mdx-js/react': 2.1.5
       '@mdx-js/rollup': ^2.1.2
       '@mdx-js/tag': 0.20.3
-      '@myntra/codemod-utils': link:packages/codemod-utils
-      '@myntra/docgen': link:packages/docgen
-      '@myntra/eslint-config-standard': link:packages/eslint-config-standard
-      '@myntra/rollup-plugin-classnames': link:packages/rollup-plugin-classnames
-      '@myntra/rollup-plugin-scss': link:packages/rollup-plugin-scss
-      '@myntra/stylelint-config-standard': link:packages/stylelint-config-standard
       '@myntra/uikit-icons': '>=1.0.*'
       '@rollup/plugin-babel': ^5.3.1
       '@rollup/plugin-commonjs': ^22.0.1
@@ -135,9 +135,13 @@ importers:
       webpack2: npm:webpack@5.74.0
       webpackbar: ^5.0.0-3
       webpackbar2: npm:webpackbar@5.0.2
-    dependencies:
-      replace-in-file: 6.3.5
     devDependencies:
+      '@applique-ui/codemod-utils': link:packages/codemod-utils
+      '@applique-ui/docgen': link:packages/docgen
+      '@applique-ui/eslint-config-standard': link:packages/eslint-config-standard
+      '@applique-ui/rollup-plugin-classnames': link:packages/rollup-plugin-classnames
+      '@applique-ui/rollup-plugin-scss': link:packages/rollup-plugin-scss
+      '@applique-ui/stylelint-config-standard': link:packages/stylelint-config-standard
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-class-properties': 7.18.6_@babel+core@7.20.5
       '@babel/plugin-syntax-dynamic-import': 7.8.3_@babel+core@7.20.5
@@ -153,12 +157,6 @@ importers:
       '@mdx-js/react': 2.1.5_react@16.14.0
       '@mdx-js/rollup': 2.1.5_rollup@1.32.1
       '@mdx-js/tag': 0.20.3_react@16.14.0
-      '@myntra/codemod-utils': link:packages/codemod-utils
-      '@myntra/docgen': link:packages/docgen
-      '@myntra/eslint-config-standard': link:packages/eslint-config-standard
-      '@myntra/rollup-plugin-classnames': link:packages/rollup-plugin-classnames
-      '@myntra/rollup-plugin-scss': link:packages/rollup-plugin-scss
-      '@myntra/stylelint-config-standard': link:packages/stylelint-config-standard
       '@myntra/uikit-icons': 1.0.37
       '@rollup/plugin-babel': 5.3.1_dvkj3cf3txrzleongencwe3ioi
       '@rollup/plugin-commonjs': 22.0.2_rollup@1.32.1
@@ -229,6 +227,7 @@ importers:
       remark-slug: 5.1.2
       remark-squeeze-paragraphs: 3.0.4
       remark-toc: 5.1.1
+      replace-in-file: 6.3.5
       rollup: 1.32.1
       rollup-plugin-bundle-size: 1.0.3
       rollup-plugin-copy: 3.4.0
@@ -1539,6 +1538,7 @@ importers:
 
   packages/uikit-cli:
     specifiers:
+      '@applique-ui/eslint-config-standard': 0.0.*
       '@babel/core': ^7.18.9
       '@babel/plugin-proposal-class-properties': ^7.16.0
       '@babel/plugin-proposal-export-default-from': ^7.18.10
@@ -1548,7 +1548,6 @@ importers:
       '@babel/preset-react': ^7.18.6
       '@babel/preset-typescript': ^7.18.6
       '@babel/register': ^7.18.9
-      '@myntra/eslint-config-standard': 1.13.*
       '@types/loader-utils': ^1.1.3
       '@types/node': ^12.12.29
       '@types/webpack-bundle-analyzer': ^2.13.3
@@ -1574,6 +1573,7 @@ importers:
       semver: ^7.1.3
       typescript: ^3.8.3
     dependencies:
+      '@applique-ui/eslint-config-standard': link:../eslint-config-standard
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-class-properties': 7.18.6_@babel+core@7.20.5
       '@babel/plugin-proposal-export-default-from': 7.18.10_@babel+core@7.20.5
@@ -1583,7 +1583,6 @@ importers:
       '@babel/preset-react': 7.18.6_@babel+core@7.20.5
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.5
       '@babel/register': 7.18.9_@babel+core@7.20.5
-      '@myntra/eslint-config-standard': 1.13.96
       '@znck/promised': 1.0.4
       babel-preset-es2015: 6.24.1
       babel-preset-stage-0: 6.24.1
@@ -1637,9 +1636,9 @@ importers:
     specifiers:
       '@applique-ui/accoutrement': 0.0.*
       '@applique-ui/tokenizer': 0.0.*
-      '@myntra/uikit': 1.13.*
+      '@applique-ui/uikit': 0.0.*
     dependencies:
-      '@myntra/uikit': 1.13.96
+      '@applique-ui/uikit': link:../../packages/uikit
     devDependencies:
       '@applique-ui/accoutrement': link:../../packages/accoutrement
       '@applique-ui/tokenizer': link:../../packages/tokenizer
@@ -1648,9 +1647,9 @@ importers:
     specifiers:
       '@applique-ui/accoutrement': 0.0.*
       '@applique-ui/tokenizer': 0.0.*
-      '@myntra/uikit': 1.13.*
+      '@applique-ui/uikit': 0.0.*
     dependencies:
-      '@myntra/uikit': 1.13.96
+      '@applique-ui/uikit': link:../../packages/uikit
     devDependencies:
       '@applique-ui/accoutrement': link:../../packages/accoutrement
       '@applique-ui/tokenizer': link:../../packages/tokenizer
@@ -3350,769 +3349,11 @@ packages:
       call-me-maybe: 1.0.2
       glob-to-regexp: 0.3.0
 
-  /@myntra/accoutrement/1.13.96:
-    resolution: {integrity: sha512-/XN3uYCzvzI3RJspHj9NWppMwmwsek3JvHqSZVPtFvoInxaLd3ceXGcpMVAICip65sVBG2WbiMaT5gqXOKpuuA==}
-    dependencies:
-      accoutrement: 2.2.0
-      normalize.css: 8.0.1
-    dev: false
-
-  /@myntra/eslint-config-standard/1.13.96:
-    resolution: {integrity: sha512-RphOYDU4QBUcHVDxbxCcUDoSw4zl9RlTOZOtO0oH7vi+9T7SfimU0DlmK2KdIeLxzxEw0E8LK7OfK22ytu0Akg==}
-    dependencies:
-      babel-eslint: 8.2.6
-      babel-plugin-syntax-jsx: 6.18.0
-      eslint-config-prettier: 2.10.0_eslint@8.29.0
-      eslint-config-standard: 11.0.0_5kyx7rm3czyunvgxamiish2vx4
-      eslint-plugin-babel: 5.3.1_eslint@8.29.0
-      eslint-plugin-import: 2.26.0_eslint@8.29.0
-      eslint-plugin-jest: 21.27.2_eslint@8.29.0
-      eslint-plugin-json: 1.4.0
-      eslint-plugin-jsx-a11y: 6.6.1_eslint@8.29.0
-      eslint-plugin-node: 6.0.1_eslint@8.29.0
-      eslint-plugin-prettier: 2.7.0_prettier@1.19.1
-      eslint-plugin-promise: 3.8.0
-      eslint-plugin-react: 7.31.11_eslint@8.29.0
-      eslint-plugin-standard: 3.1.0_eslint@8.29.0
-      prettier: 1.19.1
-    optionalDependencies:
-      eslint: 8.29.0
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: false
-
-  /@myntra/uikit-can-i-use/1.13.96:
-    resolution: {integrity: sha512-46q1tHG1oefgbmOT7WJZLQjpHtrSLKRaS12bMxK9eK0Au/6LCj2iuxWpSFUXo3HpPagIVOVCYXO+h6pm/Z2/5A==}
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /@myntra/uikit-component-accordion/1.13.96:
-    resolution: {integrity: sha512-9wGFEzDL0xXPkNMDyt6pCDOFeIAIGfk9rxKtM3tpo+squ9gFiuNGS69E/zb+F0o71cUsh/FGbRBjN1uacd5zmw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-context': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-avatar/1.13.96:
-    resolution: {integrity: sha512-R3N/9Kl98cB8kU55UVEkhwOVVqsRWIOMYYaYfKZFOovpqSTaClj6rxbN7O5w7L2hPMKNe/7/LUhE1taI3ThTKA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      name-initials: 0.1.3
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-badge/1.13.96:
-    resolution: {integrity: sha512-lbG6XR8J5nK2NbOF99c+oZ2z+4LmO3UEWogqCBIjgjGgYIU+1R6LkKrNSvVKlf7jJ8DUFsYmA3DgCAT0L73+9g==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-banner/1.13.96:
-    resolution: {integrity: sha512-Se76xL56oTgViUhdZD9ckK1ORbY8zI0STw/qI613/0bV7Pc+JvO+Bgju1bV8R6rVQDPf1UxdtqTSUztSGQLTcQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-layout': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-bread-crumb/1.13.96:
-    resolution: {integrity: sha512-tWP1Z+3M5ZUwfRKgBfsWVY5KHiGplMzuaAIrvbpDHV61KGlpcD2fop/11kWMl0kFlgE3GSwU39ey1MFCfj0pyQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-button-group/1.13.96:
-    resolution: {integrity: sha512-lErzgBFGU0aijrJSaEgKg3dpOBhnYB919ZOfQtzssGbphCBylb0AsJ+A6VFquRFja7PzEu2fn/VOvWzH9ix2xA==}
-    dependencies:
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-button/1.13.96:
-    resolution: {integrity: sha512-CDz9riSF6pHO8moZU6RcTDBGnoivduVTvZ5IenMoYgcss/n2bUcmZlEBtgTZKx8XoD9076ffIUXkwnd5BEKhow==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-loader': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-context': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-click-away/1.13.96:
-    resolution: {integrity: sha512-/j2UyWUy8iiYyneYQ1P/NWP4X9Asp0jusMZznRSk40ZRWxCBMNtim+x7rPaykT+fPCtnsdxO0hEedYYlskskjA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-dropdown/1.13.96:
-    resolution: {integrity: sha512-miOoJF6DDZQnz+OiHmW/Oms8vHQKaz5TIY5YlWGgKnUhRy1E4xaBrpG+HzTGDOZB6Mv5GPTUix73KZKWYaUJTA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-click-away': 1.13.96
-      '@myntra/uikit-component-measure': 1.13.96
-      '@myntra/uikit-component-portal': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-error-boundary/1.13.96:
-    resolution: {integrity: sha512-32RYIdLgV+dCdCx/KhKffLyB2FfLPl8SYWg5foU9LHVxVzJP1rjd86UcLAuWDqNyLvwFutLBDE0TSs7YRpZK/Q==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-fab/1.13.96:
-    resolution: {integrity: sha512-Oh+cEwELK5oYBfa26RTA44FgcGawhTVoJlhjiRBYJpELvTYP7QJO/6KMhNQ0gWazHBP1gci/9XoTDWKFC/wgNg==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-field/1.13.96:
-    resolution: {integrity: sha512-wgt5nOd2VFw8EFplyjtEr9fcgc5fPx9Sn1K9RU/TpZJ1S9gsVh/T5csM/m4E55e9+FxXY07b2Zrqy/hXYomPqw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-flex/1.13.96:
-    resolution: {integrity: sha512-E4qwqzXNzxeJ5nQNHHcVRxU/E5KlMjIn55aJQtTtSspZ2e0vfWHd8Zi6hS50oBzD+D+wT2syRcIug2ar7EkmYw==}
-    dependencies:
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-form/1.13.96:
-    resolution: {integrity: sha512-xYTTwKoRuhYDsSo+gUMDzhmp8wNydxUHBuexTU6VfQkiJrl2H5PqPDl05GNXIqnk9gsD3vd58GO6vMWm3SrS/g==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-button-group': 1.13.96
-      '@myntra/uikit-component-field': 1.13.96
-      '@myntra/uikit-component-grid': 1.13.96
-      '@myntra/uikit-component-input-azure-file': 1.13.65
-      '@myntra/uikit-component-input-checkbox': 1.13.96
-      '@myntra/uikit-component-input-date': 1.13.96
-      '@myntra/uikit-component-input-file': 1.13.96
-      '@myntra/uikit-component-input-masked': 1.13.96
-      '@myntra/uikit-component-input-month': 1.13.96
-      '@myntra/uikit-component-input-number': 1.13.96
-      '@myntra/uikit-component-input-radio': 1.13.96
-      '@myntra/uikit-component-input-s3-file': 1.13.96
-      '@myntra/uikit-component-input-select': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-component-input-text-area': 1.13.96
-      '@myntra/uikit-context': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-grid/1.13.96:
-    resolution: {integrity: sha512-TevXJepMDmTg5YzlPYEj462XUHaI8A0VlYer9BWGKCuYehB+XUN6maQ1xT5NDIujWvVUW4f6fl81scZd308oKQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-group/1.13.96:
-    resolution: {integrity: sha512-estOavG2YGgWfyQsyKtqsFbgXqF5tNk1OgBXkQU8/NKAEQKljd3NinHtFk2TMvjyQ7goSdkf3E1V10g/a3vIuQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-icon/1.13.96:
-    resolution: {integrity: sha512-7t7ySnzLEJM/GPd7Cwt/o1BPD9vPAyLLy0W5VwC902PLVUu7O05eVwdAyNvqE0RHvcZGXOy+EZV+o5fgP7QFrw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 16.14.0
-    dev: false
-
-  /@myntra/uikit-component-image/1.13.96:
-    resolution: {integrity: sha512-lcopNolnJiT7D6OwTzpzDTRHOZqVLy1oTVVIAfphmEQUXlLB8oGXytWar3Dx7Vvat2WOainDKVKWvpQTXqkZ6Q==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      intersection-observer-polyfill: 0.1.0
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-azure-file/1.13.65:
-    resolution: {integrity: sha512-5B7KXKJBwmryz+jnWk8IuwQbi9+Prjdf/NaP7sONtiTwBVdpxKkEGDRlQJoSg7HDCi48igUz51XFtbwVD4gUgQ==}
-    dependencies:
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-input-file': 1.13.96
-      '@myntra/uikit-component-progress': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-checkbox/1.13.96:
-    resolution: {integrity: sha512-/+cv9LZf84RWVpV8pyfInRA7ZYoiu7umKLrdI8rfpqr54oEwEPEzXXgTiiuCNSyZdWbCUtYJW8OZRV8pTsgiVw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-date/1.13.96:
-    resolution: {integrity: sha512-ENC6hDfCNdK9adaRxtViQWlz9x4vPEzfvaeoEgNcYIrGWy7Tl11E2pTjc+cFGuz05RJJODnVmHqI0TS39QCjKA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-button-group': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-input-masked': 1.13.96
-      '@myntra/uikit-component-input-number': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-component-layout': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      date-fns: 2.29.3
-      dayjs: 1.11.7
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-file/1.13.96:
-    resolution: {integrity: sha512-nPpmpW22Febbw4u0sqISvpheZAGK7QVe76u07qFFP8ggB+d02Qa2XGay0hzKhqKz1Gvi4E+PU2uraI2cU7gpvw==}
-    dependencies:
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-masked/1.13.96:
-    resolution: {integrity: sha512-gDfFu11c7MXNVF0I0aJL8uXjND4W4LitxUcWs+qAYSZ2A2GOrNQO48BOPPc2H3vvjS47iVqd1z8PrE9v/Q4kCw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-month/1.13.96:
-    resolution: {integrity: sha512-bFEmY85tdKz0spzaFLcmX54PjBu7uYmzte81ys2+0l1srGlHrP6yhEWQt65KDIQNaMU1FTevaqfCgRenD/NU+Q==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-input-date': 1.13.96
-      '@myntra/uikit-component-input-masked': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      luxon: 1.28.0
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-number/1.13.96:
-    resolution: {integrity: sha512-JxE9e3y3JlLroX8Pg4O4RrAAK9oAzWo10U3/viTmprzdQ9maaES1GrbNzxW15wlrHDxzC+i8olKeBCG+/O1LEg==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-radio/1.13.96:
-    resolution: {integrity: sha512-BpPd6cak/rVFjtvTehxdPDJ1aEERpaWjusf2Hs2fFlczF3W7WmoQagG+sfVCkuwdyn5JN+5Y9bCwkHSZkFz0zw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-s3-file/1.13.96:
-    resolution: {integrity: sha512-qQ7TAI4tLGbVCHEv7GHPjhkpjv3fTHHsQqsIhKuUZi8NJAJqVqmaqTYQX2xWJ3BioSzMlLuQnxiJnT0jB9G1cA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-input-file': 1.13.96
-      '@myntra/uikit-component-progress': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-select/1.13.96:
-    resolution: {integrity: sha512-MaPtiNxbAszvooAFjJSSbnMqFdbTncsyfg5gjfF/ARJqFscKWQOJ6Gd5xhDhAWntcLYQRXYwgto8925p+Y1EoA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-component-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      sifter: 0.5.4
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-text-area/1.13.96:
-    resolution: {integrity: sha512-zFUQhVMWAsQNu3RZUUEsXibWyc6dBta9zeBD2hbonh/KwYqRKzu5z5SrFYTQ9frfKrYC7VWIV9pxFo9gL/e8qw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-input-text/1.13.96:
-    resolution: {integrity: sha512-3l/GBi8Cg7sxMqW5GRM/XCPum8ADoRVfKW+HoFcWvFfJaY7SGaaMgYUsnvPEtM/UliGTT2GgjEIpk1h4NPFwgw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-job-tracker/1.13.96:
-    resolution: {integrity: sha512-Ausn7MS4wC6Ytpr9+M3l7QhfGg+7WYmDNgElExNQxQR8F3vZK/pUQnowe9IwMRQb6kxpzUfr52mEdB+7a4AD4Q==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-grid': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-layout': 1.13.96
-      '@myntra/uikit-component-loader': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      dayjs: 1.11.7
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-layout/1.13.96:
-    resolution: {integrity: sha512-+ji1iChRKdeT+iC2VEeG2RZVU7RsW4g7/+4LFkV9KGf1cZ8OIhNH7pR7XGmZL1h8xmdhnu0QiQWbHuNpAubnxA==}
-    dependencies:
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-list/1.13.96:
-    resolution: {integrity: sha512-FsO1XToZidbLKjb2S2rElhM++CklUjwVdEx4PtKLa6R6qI7YvwaALfz3UVcwDBIdtCNGld1QkFI+XfOPU2DN4Q==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-input-checkbox': 1.13.96
-      '@myntra/uikit-component-virtual-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      scroll-into-view-if-needed: 2.2.31
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 16.14.0
-    dev: false
-
-  /@myntra/uikit-component-loader/1.13.96:
-    resolution: {integrity: sha512-c9uM0U841gAcNcPApEFAH8N+8l/tE6g28cP/3iKXI7xBnbj3K8D9ggsMn7lv/lUBiqmtHyo7wKwm6guLQuxPeQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-measure/1.13.96:
-    resolution: {integrity: sha512-LFM442qoASAMF49zfPmmq4Ubv9Py6cxRtzrHUS5Z+2dTF5TnFREehXqCs9/YvwYioF1miuqdvn3EV5wjes3IJA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      resize-observer-polyfill: 1.5.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 16.14.0_react@18.2.0
-    dev: false
-
-  /@myntra/uikit-component-modal/1.13.96:
-    resolution: {integrity: sha512-G8CapFKwjNhHqi9q0uNFllNA+TcO0QLAHOTjIbWqkdgpTA31aO4dwtxgNg2CvSsLuAAOWu2mjj3xApqVrUmYzw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-portal': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-nav-bar/1.13.96:
-    resolution: {integrity: sha512-9z6xIbdrgMX9Zmw0Ll6WXMCjV+XCrioEFZSj9tMfLYzOs8w5MSRpaMKwmudQsB683WS3FBHlXe4bRkTC5SqahQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-avatar': 1.13.96
-      '@myntra/uikit-component-click-away': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-context': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-notification/1.13.96:
-    resolution: {integrity: sha512-DZgNv8TcE5ERRdAi/krNAggjbUu7Q9vA06bkKRLaubgNCW7KgA5RaPJx+lajcPBs5n8RC/33K8x62yBLabmG/A==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-section': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-page/1.13.96:
-    resolution: {integrity: sha512-iVPxqYK4ggYJyVXcxPDkIuYpnXgGLON7aZJTqqh87JEq8FemlyJEcfD9HN4H5VK5ZoZfsVQXZsnrtk/O6DX/yg==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-pagination/1.13.96:
-    resolution: {integrity: sha512-vBn1OMJTTnu8zbfkUnf+5qDSu5T8DuZ/po5sw82gk116lFtmY/s9VMzVGh22OaUR5604y6XYT9054OCvaPxpcA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-portal/1.13.96:
-    resolution: {integrity: sha512-G1OwJ3tDwRXGFtzjXy96+dJfyFjIPO1OOyKBprzE0PaznOVdFbJguOCF8j/0r6MfdDtlkjBIokd74d+6A3W8Sw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /@myntra/uikit-component-progress/1.13.96:
-    resolution: {integrity: sha512-K+Q1BsgRvhAL3iSLj2rvwpqGxgOqwtsOnOMtojML4RITHAdaWDATIDzBCWBh62VwouB0TpXmnV8vMRBJEtpwSQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-schema-form/1.13.96:
-    resolution: {integrity: sha512-9/HWdfnseCA9+U1HouQTUp0aIPyCV18XFGW9dWir1nUa+7ofezxqgHsc1Rji4ASI/1EOkZ9rEkHIpOG0BqdrwA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-field': 1.13.96
-      '@myntra/uikit-component-form': 1.13.96
-      '@myntra/uikit-component-grid': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-section/1.13.96:
-    resolution: {integrity: sha512-Jy1XPluorcIOanTr3d6hBvM3clZHvuC233pDzADIlDZSMdIJsRGsb+0l/QL0We60luc6jSML+p8fmSBCi5Bqvg==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-stepper/1.13.96:
-    resolution: {integrity: sha512-InIV1OFVPnyBTCZjZ2gbYg8bCmuo12Gv4F2CRpfmWdU4TtgpJFfA/h/W6D7+4U7SS5ZwYiVCYk1oxPDNwSKkMA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-layout': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-table/1.13.96:
-    resolution: {integrity: sha512-7GNMeeOieLwbLkq4CyMxWis/H0qkmWoRlxFEw2HWTKwcRVHWv24dNuvGPiOgZ689ELIsMeihHWxTPAVgGQNZOQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-field': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-component-list': 1.13.96
-      '@myntra/uikit-component-measure': 1.13.96
-      '@myntra/uikit-component-virtual-grid': 1.13.96
-      '@myntra/uikit-component-virtual-list': 1.13.96
-      '@myntra/uikit-context': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-tabs/1.13.96:
-    resolution: {integrity: sha512-1ssGbUhJie8tw3mMWxbezgugpUhK62rueuJi4STq/mGog8Iu8Cb2cBNGoL6jzdLrKTGNUMn86LyQlJubOUd2Bw==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-text/1.13.96:
-    resolution: {integrity: sha512-RrAQGFvPOknngZ5epuozFhNhcfPY4uUr0CC4QU0Ao8bz09NebTaEUppnb8VEG7PBHS8LMQ4JvrSevX9OruCGSg==}
-    dependencies:
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-tooltip/1.13.96:
-    resolution: {integrity: sha512-Hfplcaw2M1fIvJQvCKlkwzy92kf2lfLEaBdJuMklrsDZvxjWoj7YZt6vTG0bo3TUFpOlm5KBxp/DVVmcmPCBWQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-top-bar/1.13.96:
-    resolution: {integrity: sha512-tBUQPOmFFR0d5NJH/AQwKV+AhrMBSLI+xOFj7qo/AU394U9xMLo/V7b+E18YD2MXzlzmvGfFtFv2vjkrLDmKZQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-bread-crumb': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-virtual-grid/1.13.96:
-    resolution: {integrity: sha512-uQWS3+6+PfpNuGjc0eQjkJI9LGYsQkEyC5xmxGQ6jDaU+Yw6VL8ZGNNspWktIoo9PjJgF2SIY2CjtNfKDOAYew==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-virtual-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-    dev: false
-
-  /@myntra/uikit-component-virtual-list/1.13.96:
-    resolution: {integrity: sha512-x4/0Y1MBfhrdVEtAnJgwMPO/GpiPzg6O6hZz9dIW6Lu/fHxPse3oCXHqQvR9crrUWdnKFYqoVf3GE4r0UNGYqQ==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      '@myntra/uikit-component-measure': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      uikit-icons: /@myntra/uikit-icons/1.0.37
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /@myntra/uikit-context/1.13.96:
-    resolution: {integrity: sha512-yQ4IykzgX033sK/EFnDxX6xZ7R35VSzH5R7jviLk4WwsnlixJwxDP79ruOmBsTO0waHJiJllK8E4uMKSjs/eiA==}
-    dependencies:
-      '@myntra/uikit-can-i-use': 1.13.96
-      react: 16.14.0
-    dev: false
-
   /@myntra/uikit-icons/1.0.37:
     resolution: {integrity: sha512-NaPFATvEjABd5zHC54G7lKquAFSxYP22AnfbwWoz4Npzv5WN5QwAr1d5grbMDIKjA2Sdqxi2K8g2XZR3X93W1g==}
     engines: {node: '>=8.0'}
     optionalDependencies:
       react: 18.2.0
-
-  /@myntra/uikit-utils/1.13.96:
-    resolution: {integrity: sha512-Cg7S9FdpSKoVQvqF/f7bJfm0xTLn+SqCyg70oJsMxML0ASzEbEeM2En0MLPkb6CptvnGf6JiDnPao8b8oI6xTg==}
-    optionalDependencies:
-      react: 16.14.0
-    dev: false
-
-  /@myntra/uikit/1.13.96:
-    resolution: {integrity: sha512-69bwyM5ehWmUOnVpquxXAFib8kPAJE67XgsR09HhUelbYDMFeztNpUOOKkKgt4ZoRT9yJVGY8L2BMPQ4hWkOCA==}
-    requiresBuild: true
-    dependencies:
-      '@myntra/accoutrement': 1.13.96
-      '@myntra/uikit-component-accordion': 1.13.96
-      '@myntra/uikit-component-avatar': 1.13.96
-      '@myntra/uikit-component-badge': 1.13.96
-      '@myntra/uikit-component-banner': 1.13.96
-      '@myntra/uikit-component-bread-crumb': 1.13.96
-      '@myntra/uikit-component-button': 1.13.96
-      '@myntra/uikit-component-button-group': 1.13.96
-      '@myntra/uikit-component-click-away': 1.13.96
-      '@myntra/uikit-component-dropdown': 1.13.96
-      '@myntra/uikit-component-error-boundary': 1.13.96
-      '@myntra/uikit-component-fab': 1.13.96
-      '@myntra/uikit-component-field': 1.13.96
-      '@myntra/uikit-component-flex': 1.13.96
-      '@myntra/uikit-component-form': 1.13.96
-      '@myntra/uikit-component-grid': 1.13.96
-      '@myntra/uikit-component-group': 1.13.96
-      '@myntra/uikit-component-icon': 1.13.96
-      '@myntra/uikit-component-image': 1.13.96
-      '@myntra/uikit-component-input-azure-file': 1.13.65
-      '@myntra/uikit-component-input-checkbox': 1.13.96
-      '@myntra/uikit-component-input-date': 1.13.96
-      '@myntra/uikit-component-input-file': 1.13.96
-      '@myntra/uikit-component-input-masked': 1.13.96
-      '@myntra/uikit-component-input-month': 1.13.96
-      '@myntra/uikit-component-input-number': 1.13.96
-      '@myntra/uikit-component-input-radio': 1.13.96
-      '@myntra/uikit-component-input-s3-file': 1.13.96
-      '@myntra/uikit-component-input-select': 1.13.96
-      '@myntra/uikit-component-input-text': 1.13.96
-      '@myntra/uikit-component-input-text-area': 1.13.96
-      '@myntra/uikit-component-job-tracker': 1.13.96
-      '@myntra/uikit-component-layout': 1.13.96
-      '@myntra/uikit-component-list': 1.13.96
-      '@myntra/uikit-component-loader': 1.13.96
-      '@myntra/uikit-component-measure': 1.13.96
-      '@myntra/uikit-component-modal': 1.13.96
-      '@myntra/uikit-component-nav-bar': 1.13.96
-      '@myntra/uikit-component-notification': 1.13.96
-      '@myntra/uikit-component-page': 1.13.96
-      '@myntra/uikit-component-pagination': 1.13.96
-      '@myntra/uikit-component-portal': 1.13.96
-      '@myntra/uikit-component-progress': 1.13.96
-      '@myntra/uikit-component-schema-form': 1.13.96
-      '@myntra/uikit-component-section': 1.13.96
-      '@myntra/uikit-component-stepper': 1.13.96
-      '@myntra/uikit-component-table': 1.13.96
-      '@myntra/uikit-component-tabs': 1.13.96
-      '@myntra/uikit-component-text': 1.13.96
-      '@myntra/uikit-component-tooltip': 1.13.96
-      '@myntra/uikit-component-top-bar': 1.13.96
-      '@myntra/uikit-component-virtual-grid': 1.13.96
-      '@myntra/uikit-component-virtual-list': 1.13.96
-      '@myntra/uikit-utils': 1.13.96
-      normalize.css: 8.0.1
-      print-message: 3.0.1
-    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -7115,7 +6356,7 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-    dev: false
+    dev: true
 
   /clone-deep/4.0.1:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
@@ -16120,7 +15361,7 @@ packages:
       chalk: 4.1.2
       glob: 7.2.3
       yargs: 17.6.2
-    dev: false
+    dev: true
 
   /request-promise-core/1.1.4_request@2.88.2:
     resolution: {integrity: sha512-TTbAfBBRdWD7aNNOoVOBH4pN/KigV6LyapYNNlAPA8JwbovRti1E88m3sYAwsLi5ryhPKsE9APwnjFTgdUjTpw==}
@@ -19394,7 +18635,7 @@ packages:
   /yargs-parser/21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /yargs-parser/7.0.0:
     resolution: {integrity: sha512-WhzC+xgstid9MbVUktco/bf+KJG+Uu6vMX0LN1sLJvwmbCQVxb4D8LzogobonKycNasCZLdOzTAk1SK7+K7swg==}
@@ -19440,7 +18681,7 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
-    dev: false
+    dev: true
 
   /yargs/8.0.2:
     resolution: {integrity: sha512-3RiZrpLpjrzIAKgGdPktBcMP/eG5bDFlkI+PHle1qwzyVXyDQL+pD/eZaMoOOO0Y7LLBfjpucObuUm/icvbpKQ==}
