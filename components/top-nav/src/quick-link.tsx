@@ -5,7 +5,8 @@ import classnames from './quick-link.module.scss'
 
 export interface LinkInterface {
   icon: Node
-  renderFunction: Function
+  renderFunction: Function,
+  type: String
 }
 
 export interface QuickLinkProps extends BaseProps {
@@ -51,13 +52,25 @@ export default class QuickLink extends PureComponent<
             this.overlayButtonRef = ref
           }}
           onClick={this.enableQuickLinkHover}
-          className={classnames(
-            'quick-link-icon-button',
-            this.state.quickLinkHover ? 'quick-link-icon-button-active' : null
-          )}
+          className={
+            link.type === 'primary'
+              ? classnames(
+                  'quick-link-icon-button',
+                  this.state.quickLinkHover
+                    ? 'quick-link-icon-button-active'
+                    : null
+                )
+              : classnames(
+                  'quick-link-icon-button-secondary',
+                  this.state.quickLinkHover
+                    ? 'quick-link-icon-button-secondary-active'
+                    : null
+                )
+          }
         >
           <Icon name={link.icon} fontSize="small" />
         </button>
+
         {this.state.quickLinkHover && (
           <div
             className={classnames('quick-link-hover-container')}
@@ -74,18 +87,21 @@ export default class QuickLink extends PureComponent<
               })}
           </div>
         )}
+
         {this.state.quickLinkHover && (
-          <button
+          <span
             onClick={this.disableQuickLinkHover}
             className={classnames('quick-link-overlay')}
-          ></button>
+          ></span>
         )}
+        
         {this.state.quickLinkHover && (
           <span
             style={{
               top: `${this.overlayButtonRef.getBoundingClientRect().bottom}px`,
             }}
             className={classnames('quick-link-overlay-section')}
+            onClick={this.disableQuickLinkHover}
           />
         )}
       </div>
