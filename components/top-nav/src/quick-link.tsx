@@ -70,6 +70,7 @@ export default class QuickLink extends PureComponent<
         >
           <Icon name={link.icon} fontSize="small" />
         </button>
+
         {this.state.quickLinkHover && (
           <div
             className={classnames('quick-link-hover-container')}
@@ -86,12 +87,14 @@ export default class QuickLink extends PureComponent<
               })}
           </div>
         )}
+
         {this.state.quickLinkHover && (
           <span
             onClick={this.disableQuickLinkHover}
             className={classnames('quick-link-overlay')}
           ></span>
         )}
+        
         {this.state.quickLinkHover && (
           <span
             style={{
