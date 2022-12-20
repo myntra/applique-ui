@@ -8,6 +8,7 @@ import {
   NAVIGATION_ITEM_L1_INTERFACE,
   MENU_TYPES,
   HOVER_MENU_COLUMN_BUCKET,
+  QUICKLINK_BUTTON_TYPE
 } from './config'
 import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
@@ -45,6 +46,7 @@ interface TopNavState {
 class TopNav extends PureComponent<TopNavProps, TopNavState> {
   static MENU_TYPES = MENU_TYPES
   static HOVER_MENU_COLUMN_BUCKET = HOVER_MENU_COLUMN_BUCKET
+  static QUICKLINK_BUTTON_TYPE = QUICKLINK_BUTTON_TYPE
 
   constructor(props) {
     super(props)
