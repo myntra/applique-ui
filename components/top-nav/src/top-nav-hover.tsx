@@ -56,9 +56,12 @@ function getFilteredNavs(config) {
 }
 
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
+  hoverItemRef = null
+  
   state = {
     left: null,
   }
+
   componentDidMount(): void {
     this.setState({
       left:
@@ -68,7 +71,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
           : this.props.parentPositions.left,
     })
   }
-  hoverItemRef = null
+
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
