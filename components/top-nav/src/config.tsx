@@ -11,6 +11,11 @@ export const HOVER_MENU_COLUMN_BUCKET = {
   COLUMN_4: 3,
 }
 
+export const QUICKLINK_BUTTON_TYPE = {
+  PRIMARY: "primary",
+  SECONDARY: "secondary"
+}
+
 export interface ROUTING_INFO_INTERFACE {
   path: string
   meta: Object

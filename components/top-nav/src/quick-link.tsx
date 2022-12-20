@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Icon from '@myntra/uikit-component-icon'
 
 import classnames from './quick-link.module.scss'
+import { QUICKLINK_BUTTON_TYPE } from './config'
 
 export interface LinkInterface {
   icon: Node
@@ -53,7 +54,7 @@ export default class QuickLink extends PureComponent<
           }}
           onClick={this.enableQuickLinkHover}
           className={
-            link.type === 'primary'
+            link.type === QUICKLINK_BUTTON_TYPE.PRIMARY
               ? classnames(
                   'quick-link-icon-button',
                   this.state.quickLinkHover
