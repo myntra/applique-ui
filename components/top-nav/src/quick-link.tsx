@@ -6,7 +6,7 @@ import classnames from './quick-link.module.scss'
 export interface LinkInterface {
   icon: Node
   renderFunction: Function,
-  id: String
+  type: String
 }
 
 export interface QuickLinkProps extends BaseProps {
@@ -53,7 +53,7 @@ export default class QuickLink extends PureComponent<
           }}
           onClick={this.enableQuickLinkHover}
           className={
-            link.id === 'PROFILE'
+            link.type === 'primary'
               ? classnames(
                   'quick-link-icon-button',
                   this.state.quickLinkHover
@@ -85,6 +85,12 @@ export default class QuickLink extends PureComponent<
                 disableQuickLinkHover: this.disableQuickLinkHover,
               })}
           </div>
+        )}
+        {this.state.quickLinkHover && (
+          <span
+            onClick={this.disableQuickLinkHover}
+            className={classnames('quick-link-overlay')}
+          ></span>
         )}
         {this.state.quickLinkHover && (
           <span

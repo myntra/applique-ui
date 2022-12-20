@@ -10,7 +10,7 @@
   background-color: color('white');
   border: 0;
   border-bottom: 2px solid transparent;
-  margin: 2px;
+  margin: calc(size('1x')/2);
 
   &:hover {
     cursor: pointer;
