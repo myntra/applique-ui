@@ -1,1 +1,1 @@
-# @applique/uikit-component-avatar
+# @applique-ui/uikit-component-avatar

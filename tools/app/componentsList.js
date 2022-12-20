@@ -3,7 +3,7 @@ import ImagePreview from './ImagePreview'
 import ApiSection from './ApiSection'
 import Text from '@applique-ui/text'
 import * as components from '@uikit'
-import * as icons from '@applique-ui/uikit-icons'
+import * as icons from '@myntra/uikit-icons'
 
 const { /*UikitIcons,*/ ...uiComponents } = components
 

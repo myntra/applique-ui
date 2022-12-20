@@ -1,1 +1,1 @@
-# @applique/uikit-component-input-file
+# @applique-ui/uikit-component-input-file

@@ -1,1 +1,1 @@
-# @applique/codemod-utils
+# @applique-ui/codemod-utils

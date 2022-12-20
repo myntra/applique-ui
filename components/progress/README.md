@@ -1,1 +1,1 @@
-# @applique/uikit-component-progress
+# @applique-ui/uikit-component-progress

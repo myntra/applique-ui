@@ -1,1 +1,1 @@
-# @applique/uikit-component-text
+# @applique-ui/uikit-component-text

@@ -1,1 +1,1 @@
-# @applique/uikit-component-virtual-grid
+# @applique-ui/uikit-component-virtual-grid

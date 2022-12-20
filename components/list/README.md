@@ -1,1 +1,1 @@
-# @applique/uikit-component-list
+# @applique-ui/uikit-component-list

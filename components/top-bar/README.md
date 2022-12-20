@@ -1,1 +1,1 @@
-# @applique/uikit-component-top-bar
+# @applique-ui/uikit-component-top-bar

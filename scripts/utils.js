@@ -157,7 +157,6 @@ function getPackageDir(name) {
   const packageName = getFullName(name)
   const dir = getShortName(name)
 
-  console.log(isComponent(packageName), isTheme(packageName), packageName)
   return path.resolve(
     isComponent(packageName)
       ? componentsDir

@@ -1,1 +1,1 @@
-# @applique/uikit-component-page
+# @applique-ui/uikit-component-page

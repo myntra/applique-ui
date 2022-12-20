@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/virtual-grid",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/virtual-grid.cjs.js",
   "module": "dist/virtual-grid.esm.js",
   "types": "dist/index.d.ts",

@@ -1,1 +1,1 @@
-# @applique/tokenizer
+# @applique-ui/tokenizer

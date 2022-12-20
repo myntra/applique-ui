@@ -1,1 +1,1 @@
-# @applique/uikit-component-input-checkbox
+# @applique-ui/uikit-component-input-checkbox

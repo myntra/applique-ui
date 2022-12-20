@@ -30,19 +30,19 @@ We do offer a varity of components which includes simple one's like Text and But
 Run the following command using npm:
 
 ```bash
-npm install @applique/uikit --save
+npm install @applique-ui/uikit --save
 ```
 If you prefer Yarn, use the following command instead:
 
 ```bash
-yarn add @applique/uikit
+yarn add @applique-ui/uikit
 ```
 
 ### Usage
 1. Import any of the provided components directly in your project:
 
 ```js
-import { Button, Layout, Text } from "@applique/uikit"
+import { Button, Layout, Text } from "@applique-ui/uikit"
 ```
 
 2. Tell React to render the element in the DOM:
@@ -69,21 +69,21 @@ We offer some of the basic set of icons that you can use. Apart from that, you c
 Run the following command using npm:
 
 ```bash
-npm install @applique/uikit-icons --save
+npm install @myntra/uikit-icons --save
 ```
 If you prefer Yarn, use the following command instead:
 
 ```bash
-yarn add @applique/uikit-icons
+yarn add @myntra/uikit-icons
 ```
 
 ### Usage
 1. Import any of the provided icons directly in your project:
 
 ```js
-import BarsSolid from "@applique/uikit-icons/svgs/BarsSolid"
-import Bell from "@applique/uikit-icons/svgs/Bell"
-import BoxSolid from "@applique/uikit-icons/svgs/BoxSolid"
+import BarsSolid from "@myntra/uikit-icons/svgs/BarsSolid"
+import Bell from "@myntra/uikit-icons/svgs/Bell"
+import BoxSolid from "@myntra/uikit-icons/svgs/BoxSolid"
 ```
 
 2. Pass this icon element as a prop to the component:

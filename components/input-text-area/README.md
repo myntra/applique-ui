@@ -1,1 +1,1 @@
-# @applique/uikit-component-input-text-area
+# @applique-ui/uikit-component-input-text-area

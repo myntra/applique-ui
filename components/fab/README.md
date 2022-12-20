@@ -1,1 +1,1 @@
-# @applique/uikit-component-fab
+# @applique-ui/uikit-component-fab

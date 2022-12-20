@@ -1,1 +1,1 @@
-# @applique/uikit-component-tooltip
+# @applique-ui/uikit-component-tooltip

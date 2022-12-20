@@ -1,1 +1,1 @@
-# @applique/docgen
+# @applique-ui/docgen

@@ -1,1 +1,1 @@
-# @applique/uikit-component-field
+# @applique-ui/uikit-component-field

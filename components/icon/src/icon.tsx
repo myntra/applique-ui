@@ -5,7 +5,7 @@ import classnames from './icon.module.scss'
 export type IconName = string | ReactNode
 
 interface Props extends BaseProps {
-  /** icon component name from @applique-ui/uikit-icons */
+  /** icon component name from @myntra/uikit-icons */
   name: IconName
   /** Accessibility text for screen readers */
   title?: string

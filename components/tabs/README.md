@@ -1,1 +1,1 @@
-# @applique/uikit-component-tabs
+# @applique-ui/uikit-component-tabs

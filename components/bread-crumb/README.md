@@ -1,1 +1,1 @@
-# @applique/uikit-component-bread-crumb
+# @applique-ui/uikit-component-bread-crumb

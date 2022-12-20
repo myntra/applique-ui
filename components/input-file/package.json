@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-file",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/input-file.cjs.js",
   "module": "dist/input-file.esm.js",
   "types": "dist/index.d.ts",

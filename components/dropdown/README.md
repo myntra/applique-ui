@@ -1,1 +1,1 @@
-# @applique/uikit-component-dropdown
+# @applique-ui/uikit-component-dropdown

@@ -1,1 +1,1 @@
-# @applique/svg
+# @applique-ui/svg

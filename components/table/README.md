@@ -1,1 +1,1 @@
-# @applique/uikit-component-table
+# @applique-ui/uikit-component-table

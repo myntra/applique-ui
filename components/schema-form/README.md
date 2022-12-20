@@ -1,1 +1,1 @@
-# @applique/uikit-component-schema-form
+# @applique-ui/uikit-component-schema-form

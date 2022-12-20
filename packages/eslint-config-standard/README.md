@@ -1,1 +1,1 @@
-# @applique/eslint-config-standard
+# @applique-ui/eslint-config-standard

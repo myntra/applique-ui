@@ -1,1 +1,1 @@
-# @applique/uikit-component-click-away
+# @applique-ui/uikit-component-click-away

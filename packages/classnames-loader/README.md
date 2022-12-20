@@ -1,1 +1,1 @@
-# @applique/classnames-loader
+# @applique-ui/classnames-loader

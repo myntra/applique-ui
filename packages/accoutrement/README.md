@@ -1,1 +1,1 @@
-# @applique/accoutrement
+# @applique-ui/accoutrement

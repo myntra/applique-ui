@@ -1,1 +1,1 @@
-# @applique/rollup-plugin-scss
+# @applique-ui/rollup-plugin-scss

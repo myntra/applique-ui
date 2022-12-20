@@ -1,11 +1,11 @@
-# @applique/uikit-cli
+# @applique-ui/uikit-cli
 
 ## Installation
 
 
 ```
-npm install -g @applique/uikit-cli
-yarn add -g @applique/uikit-cli
+npm install -g @applique-ui/uikit-cli
+yarn add -g @applique-ui/uikit-cli
 ```
 
 ## Usage
@@ -31,17 +31,17 @@ Commands:
 UIKit cli can be used to perform below mentioned tasks
 
 1. List all available codemods to perform migration 
-2. Migrate from unity-uikit to @applique/uikit
+2. Migrate from unity-uikit to @applique-ui/uikit
 3. Lint the application
 
 ### Codemods
 Codemods are basically scripts written using [jscodeshift](https://github.com/facebook/jscodeshift) which will be used to migrate to @mytra/uikit from unity-uikit
-All the codemods resides in @applique/codemod-utils module. Command for installation:
+All the codemods resides in @applique-ui/codemod-utils module. Command for installation:
 
 
 ```
-npm install @applique/codemod-utils
-yarn add @applique/codemod-utils
+npm install @applique-ui/codemod-utils
+yarn add @applique-ui/codemod-utils
 ```
 
 UIKit cli can fetch all the codemods from this module and will list them down using command:
@@ -69,7 +69,7 @@ Options:
   -o, --only                    run only specified codemods (run `uikit codemods` to get list of options)
   -r, --recursive               run recursively
   -t, --theme-name              UIKit theme used for app
-  -p, --package-name            Mention the package you are using currently(It should any one of @applique/uikit, @applique/uikit-theme-unity, @applique/uikit-theme-nuclei)
+  -p, --package-name            Mention the package you are using currently(It should any one of @applique-ui/uikit, @applique-ui/uikit-theme-unity, @applique-ui/uikit-theme-nuclei)
   -l, --nolint                  Disable linting
   -h, --help                    output usage information
 ```
@@ -86,14 +86,14 @@ Sample command
 uikit migrate apps/Contracts/ --no-commit --recursive --theme-name='nuclei'
 ```
 
-This will migrate unity-uikit component to @applique/uikit in all the files under apps/Contracts/ directory
+This will migrate unity-uikit component to @applique-ui/uikit in all the files under apps/Contracts/ directory
 
 These npm packages will be required for migrate to successfully run:
 
 * eslint-plugin-standard
 * eslint-plugin-babel
 * eslint@4.19.1
-* @applique/codemod-utils
+* @applique-ui/codemod-utils
 
 Please install these packages before running the migrate command
 

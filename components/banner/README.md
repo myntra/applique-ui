@@ -1,1 +1,1 @@
-# @applique/uikit-component-banner
+# @applique-ui/uikit-component-banner

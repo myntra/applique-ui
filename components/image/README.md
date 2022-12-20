@@ -1,1 +1,1 @@
-# @applique/uikit-component-image
+# @applique-ui/uikit-component-image

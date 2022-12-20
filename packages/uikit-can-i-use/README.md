@@ -1,1 +1,1 @@
-# @applique/uikit-can-i-use
+# @applique-ui/uikit-can-i-use

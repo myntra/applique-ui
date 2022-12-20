@@ -1,1 +1,1 @@
-# @applique/uikit-component-virtual-list
+# @applique-ui/uikit-component-virtual-list

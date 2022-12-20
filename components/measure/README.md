@@ -1,1 +1,1 @@
-# @applique/uikit-component-measure
+# @applique-ui/uikit-component-measure

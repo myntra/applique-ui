@@ -1,1 +1,1 @@
-# @applique/uikit-component-input-number
+# @applique-ui/uikit-component-input-number

@@ -1,1 +1,1 @@
-# @applique/uikit-component-portal
+# @applique-ui/uikit-component-portal
