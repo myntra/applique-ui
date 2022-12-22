@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: size('1x') size('0');
 
   @include typography('caption-revamp');
 }

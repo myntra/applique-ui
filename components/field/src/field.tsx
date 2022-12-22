@@ -6,8 +6,6 @@ import React, {
 } from 'react'
 
 import classnames from './field.module.scss'
-import InfoCircleSolid from 'uikit-icons/svgs/InfoCircleSolid'
-import Icon, { IconName } from '@applique-ui/icon'
 
 export interface Props extends BaseProps {
   /**
@@ -58,7 +56,7 @@ export default function Field({
   children,
   className,
   disabled,
-  fieldInfo = <Icon className={classnames('icon')} name={InfoCircleSolid} />,
+  fieldInfo,
   success,
   ...props
 }: Props) {
