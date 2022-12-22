@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, ReactNode } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import VirtualList, {
   Props as VirtualListProps,
@@ -17,7 +17,11 @@ export interface Props<T = any> extends BaseProps {
   /**
    * Renders markup for displaying a list item.
    */
-  children(props: { index: number; id: string | number | T; item: T }): void
+  children(props: {
+    index: number
+    id: string | number | T
+    item: T
+  }): ReactNode[]
 
   /**
    * The selected value in the list.
