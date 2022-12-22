@@ -1,4 +1,4 @@
-import React, { PureComponent, ReactNode } from 'react'
+import React, { createElement, PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import VirtualList, {
   Props as VirtualListProps,
@@ -21,7 +21,7 @@ export interface Props<T = any> extends BaseProps {
     index: number
     id: string | number | T
     item: T
-  }): ReactNode[]
+  }): ReturnType<typeof createElement>
 
   /**
    * The selected value in the list.

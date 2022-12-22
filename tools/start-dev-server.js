@@ -2,11 +2,11 @@
 
 // Configuration file for dev server for running one component at a time.
 const Inquirer = require('inquirer')
-const webpack = require('webpack2')
-const WebpackHTMLPlugin = require('html-webpack-plugin2')
-const { DefinePlugin } = require('webpack2')
+const webpack = require('webpack')
+const WebpackHTMLPlugin = require('html-webpack-plugin')
+const { DefinePlugin } = require('webpack')
 const WebpackChain = require('webpack-chain')
-const WebpackDevServer = require('webpack-dev-server2')
+const WebpackDevServer = require('webpack-dev-server')
 const {
   components,
   getPackageDir,
@@ -194,10 +194,10 @@ function startWebpackDevServer(component, port) {
     .loader(require.resolve('../packages/classnames-loader'))
     .end()
     .use('style-loader')
-    .loader(require.resolve('style-loader2'))
+    .loader(require.resolve('style-loader'))
     .end()
     .use('css-loader')
-    .loader(require.resolve('css-loader2'))
+    .loader(require.resolve('css-loader'))
     .options({
       importLoaders: 2,
       modules: {
@@ -221,10 +221,10 @@ function startWebpackDevServer(component, port) {
     })
     .end()
     .use('postcss-loader')
-    .loader(require.resolve('postcss-loader2'))
+    .loader(require.resolve('postcss-loader'))
     .end()
     .use('sass-loader')
-    .loader(require.resolve('sass-loader2'))
+    .loader(require.resolve('sass-loader'))
     // .options({
     //   implementation: require('sass'),
     // })
@@ -234,16 +234,16 @@ function startWebpackDevServer(component, port) {
     .rule('css')
     .test(/\.css/)
     .use('style-loader')
-    .loader(require.resolve('style-loader2'))
+    .loader(require.resolve('style-loader'))
     .end()
     .use('css-loader')
-    .loader(require.resolve('css-loader2'))
+    .loader(require.resolve('css-loader'))
     .options({
       importLoaders: 1,
     })
     .end()
     .use('postcss-loader')
-    .loader(require.resolve('postcss-loader2'))
+    .loader(require.resolve('postcss-loader'))
     .end()
 
   chain.module
@@ -252,7 +252,7 @@ function startWebpackDevServer(component, port) {
     .exclude.add(/node_modules/)
     .end()
     .use('babel-loader')
-    .loader(require.resolve('babel-loader2'))
+    .loader(require.resolve('babel-loader'))
     .options({
       presets: [
         [
@@ -274,7 +274,7 @@ function startWebpackDevServer(component, port) {
     .exclude.add(/node_modules/)
     .end()
     .use('babel-loader')
-    .loader(require.resolve('babel-loader2'))
+    .loader(require.resolve('babel-loader'))
     .options({
       presets: [
         [
@@ -313,7 +313,7 @@ function startWebpackDevServer(component, port) {
     .rule('ts')
     .test(/\.tsx?$/)
     .use('ts-loader')
-    .loader(require.resolve('ts-loader2'))
+    .loader(require.resolve('ts-loader'))
     .options({ transpileOnly: true })
     .end()
 
