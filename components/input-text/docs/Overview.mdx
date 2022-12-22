@@ -114,6 +114,15 @@ An Input should display descriptive validation information.
 const [value, setValue] = React.useState();
 const [cost, setCost] = React.useState();
 
+const InfoIcon = ({ children, title }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ color: '#4F47C8', width: '15px', height: '15px' }}
+    >
+        <title>{title}</title>
+        {children}
+    </svg>
+)
 
 return (
     <>
@@ -127,6 +136,10 @@ return (
         <br/>
         <Field title="Label" error="Error Message">
             <InputText value={cost} onChange={setCost} placeholder='Type / Scan' error />
+        </Field>
+        <br/>
+        <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+            <InputText value={cost} onChange={setCost} placeholder='Type / Scan' />
         </Field>
     </>
 )

@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   &.bordered {
-    margin: margin('input');
     @include mixin-input-text-revamp(border, padding('input.text'));
   }
   &.standard {
