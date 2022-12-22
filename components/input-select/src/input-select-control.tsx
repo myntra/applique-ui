@@ -303,6 +303,7 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
           <div className={classnames('input-adornment')}>{adornment}</div>
         )}
         <div className={classnames('buttons')}>
+          {!disabled && children}
           {!disabled && resettable && (value || this.state.searchText) && (
             <div
               className={classnames('button')}
@@ -313,7 +314,6 @@ export default class InputSelectControl<V = any, T = any> extends PureComponent<
               <Icon name={TimesSolid} title="reset" />
             </div>
           )}
-          {!disabled && children}
         </div>
       </div>
     )
