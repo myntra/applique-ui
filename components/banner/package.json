@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/banner",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/banner.cjs.js",
   "module": "dist/banner.esm.js",
   "types": "dist/index.d.ts",
