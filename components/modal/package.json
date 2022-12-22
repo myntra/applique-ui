@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/modal",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/modal.cjs.js",
   "module": "dist/modal.esm.js",
   "types": "dist/index.d.ts",
