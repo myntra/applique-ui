@@ -21,6 +21,7 @@
         align-items: stretch;
         justify-content: space-between;
         width: 100%;
+        overflow-x: scroll;
       }
 
       &-tabs {
@@ -41,7 +42,7 @@
 
     &-sidebar {
       min-width: 275px;
-      max-width: 275px;
+      max-width: 275px !important;
       max-height: 100%;
       padding: size('2x');
       overflow-y: scroll;
