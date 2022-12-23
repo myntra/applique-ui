@@ -5,11 +5,15 @@
 
   &-icon-button {
     width: 72px;
-    height: 100%;
+    height: 93%;
     cursor: pointer;
     background-color: transparent;
     border: 0;
     border-bottom: 2px solid transparent;
+
+    svg {
+      height: 2rem;
+    }
 
     &:hover {
       color: color('primary');
@@ -25,11 +29,15 @@
 
     &-secondary {
       width: 44px;
-      height: 100%;
+      height: 93%;
       cursor: pointer;
       background-color: transparent;
       border: 0;
       border-bottom: 2px solid transparent;
+
+      svg {
+        height: 2rem;
+      }
 
       &:hover {
         color: color('primary');
