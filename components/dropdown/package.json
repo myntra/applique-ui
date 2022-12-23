@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/dropdown",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",
   "types": "dist/index.d.ts",

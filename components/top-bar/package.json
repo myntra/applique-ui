@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/top-bar",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/top-bar.cjs.js",
   "module": "dist/top-bar.esm.js",
   "types": "dist/index.d.ts",
