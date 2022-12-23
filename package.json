@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "node": ">=14.17.6"
   },
@@ -33,9 +33,9 @@
     "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
     "pre:publish": "CI=true npm run build",
     ":publish": "node ./scripts/publish.js",
-    "pre:release": "git checkout deploy && git pull origin deploy",
+    "pre:release": "",
     ":release": "standard-version -a -r patch",
-    "post:release": "npm run :publish && git push --follow-tags && npm run update:master",
+    "post:release": "npm run :publish",
     "release": "npm run :release",
     ":update:versions": "node ./scripts/set-version.js",
     ":beta": "standard-version -a -p beta -a",
