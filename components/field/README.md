@@ -1,1 +1,1 @@
-# @myntra/uikit-component-field
+# @applique-ui/uikit-component-field

@@ -1,8 +1,25 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { MDXProvider } from '@mdx-js/react'
 
-import '@myntra/uikit/design.scss'
+import '@applique-ui/uikit/design.scss'
+
+import './css-reset.css'
 
 import App from '@component'
 
-render(<App />, document.querySelector('#app'))
+import { componentsList } from './componentsList'
+
+import styles from './styles.scss'
+
+const Wrapper = () => {
+  return (
+    <div className={styles('mdx__container')}>
+      <MDXProvider components={componentsList}>
+        <App />
+      </MDXProvider>
+    </div>
+  )
+}
+
+render(<Wrapper />, document.querySelector('#app'))

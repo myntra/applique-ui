@@ -1,6 +1,6 @@
 import React, { PureComponent, ComponentType } from 'react'
-import { looseEquals } from '@myntra/uikit-utils'
-import Grid from '@myntra/uikit-component-grid'
+import { looseEquals } from '@applique-ui/uikit-utils'
+import Grid from '@applique-ui/grid'
 
 export interface Props extends BaseProps {
   type: 'field'

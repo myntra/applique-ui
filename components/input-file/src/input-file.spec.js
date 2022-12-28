@@ -2,8 +2,8 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import InputFile from './input-file'
-import InputText from '@myntra/uikit-component-input-text'
-import Button from '@myntra/uikit-component-button'
+import InputText from '@applique-ui/input-text'
+import Button from '@applique-ui/button'
 
 describe('input-file', () => {
   it('is a component', () => {
@@ -40,11 +40,13 @@ describe('input-file', () => {
       .at(0)
       .simulate('change', { target: { files: expectedFileList } })
 
-    expect(fileValidation).toBeCalledWith(expectedFileList)
+    expect(fileValidation).toHaveBeenCalledWith(expectedFileList)
   })
   it('should run all validations on fileList before change if the validations prop is an array', () => {
     const [fileValidation1, fileValidation2] = [jest.fn(), jest.fn()]
-    const wrapper = mount(<InputFile validations={[fileValidation1, fileValidation2]} />)
+    const wrapper = mount(
+      <InputFile validations={[fileValidation1, fileValidation2]} />
+    )
 
     const expectedFileList = Object.create(Array.prototype)
     expectedFileList.push('dummyValue.something')
@@ -57,8 +59,8 @@ describe('input-file', () => {
       .at(0)
       .simulate('change', { target: { files: expectedFileList } })
 
-    expect(fileValidation1).toBeCalledWith(expectedFileList)
-    expect(fileValidation2).toBeCalledWith(expectedFileList)
+    expect(fileValidation1).toHaveBeenCalledWith(expectedFileList)
+    expect(fileValidation2).toHaveBeenCalledWith(expectedFileList)
   })
   it('should not call onChange and should call onError when validation fails', () => {
     const fileValidationError = new Error('dummy.error')
@@ -67,7 +69,13 @@ describe('input-file', () => {
     })
     const onChangeHandler = jest.fn()
     const onErrorHandler = jest.fn()
-    const wrapper = mount(<InputFile validations={fileValidation} onChange={onChangeHandler} onError={onErrorHandler}/>)
+    const wrapper = mount(
+      <InputFile
+        validations={fileValidation}
+        onChange={onChangeHandler}
+        onError={onErrorHandler}
+      />
+    )
 
     const expectedFileList = Object.create(Array.prototype)
     expectedFileList.push('dummyValue.something')
@@ -80,9 +88,9 @@ describe('input-file', () => {
       .at(0)
       .simulate('change', { target: { files: expectedFileList } })
 
-    expect(fileValidation).toBeCalledWith(expectedFileList)
-    expect(fileValidation).toThrowError(fileValidationError)
-    expect(onChangeHandler).not.toBeCalled()
-    expect(onErrorHandler).toBeCalledWith(fileValidationError)
+    expect(fileValidation).toHaveBeenCalledWith(expectedFileList)
+    expect(fileValidation).toThrow(fileValidationError)
+    expect(onChangeHandler).not.toHaveBeenCalled()
+    expect(onErrorHandler).toHaveBeenCalledWith(fileValidationError)
   })
 })

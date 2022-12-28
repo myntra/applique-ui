@@ -1,18 +1,18 @@
 import React, { PureComponent, RefObject } from 'react'
-import UIKitContext, { LinkProps } from '@myntra/uikit-context'
-import Icon from '@myntra/uikit-component-icon'
-import ClickAway from '@myntra/uikit-component-click-away'
+import UIKitContext, { LinkProps } from '@applique-ui/uikit-context'
+import Icon from '@applique-ui/icon'
+import ClickAway from '@applique-ui/click-away'
 import NavBarContext from './context'
 import NavBarGroup from './nav-bar-group'
 import NavBarItem from './nav-bar-item'
-import { is } from '@myntra/uikit-utils'
+import { is } from '@applique-ui/uikit-utils'
 
 import MyntraLogo from 'uikit-icons/svgs/MyntraLogo'
 import MyntraLogoTextRightWhite from 'uikit-icons/svgs/MyntraLogoTextRightWhite'
 // TODO: Use click away to close NavBar (if mouse leave fails)
 
 import classnames from './nav-bar.module.scss'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@applique-ui/uikit-utils'
 
 import BarsSolid from 'uikit-icons/svgs/BarsSolid'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'

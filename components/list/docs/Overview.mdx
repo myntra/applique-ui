@@ -1,0 +1,84 @@
+import {List1, States} from './images'
+
+This section contains component attributes, anatomy and variation of component type.
+
+<ImagePreview background={true}>
+    <Layout type="row" distribution="spaceBetween" alignment="middle">
+        <List1 />
+    </Layout>
+</ImagePreview>
+
+**Single Select:** A user can select one option.
+
+**Multi-Select:** In this type of list, user can select several options.
+
+**Single Select with Heading:** In this list would have multiple sub headings. User can select one option at a time.
+
+**Multi-Select with Heading:** In this list would have multiple sub headings. User can select several options.
+
+## States
+List options have multiple states (default, hover, selected, disabled).
+
+<ImagePreview background={true}>
+    <Layout type="row" distribution="spaceBetween" alignment="middle">
+        <States />
+    </Layout>
+</ImagePreview>
+
+## Variants
+
+
+### Single Select
+
+Allows the user to select a single item from a dropdown list of options.
+
+<Documenter component={props.components}>
+```preview
+const items = [
+  'Foo',
+  'Bar',
+  'Baz',
+];
+
+const [value, setValue] = React.useState(null);
+
+return (
+    <List
+        items={items}
+        value={value}
+        onChange={value => setValue(value)}>
+
+        {({ item }) => <span>{item}</span>}
+    </List>
+)
+```
+</Documenter>
+
+
+### Multi-select
+
+Allows the user to select multiple items from a dropdown list of options.
+
+<Documenter component={props.components}>
+```preview
+const items = [
+  { label: 'Foo', value: 'Foo'},
+  { label: 'Bar', value: 'Bar'},
+  { label: 'Baz', value: 'Baz'},
+];
+
+const [value, setValue] = React.useState(null);
+
+return (
+    <List
+        items={items}
+        value={value}
+        onChange={id => setValue(id)}
+        idForItem={item => item.value}
+        multiple>
+        
+        {({ item }) => <span>{item.label}</span>}
+    </List>
+)
+```
+</Documenter>

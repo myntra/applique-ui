@@ -1,9 +1,9 @@
 import React, { Component, ComponentType } from 'react'
 
-import { looseEquals } from '@myntra/uikit-utils'
-import Grid from '@myntra/uikit-component-grid'
-import Field from '@myntra/uikit-component-field'
-import Button from '@myntra/uikit-component-button'
+import { looseEquals } from '@applique-ui/uikit-utils'
+import Grid from '@applique-ui/grid'
+import Field from '@applique-ui/field'
+import Button from '@applique-ui/button'
 
 import classnames from './array.module.scss'
 import { UI } from '../json-schema-renderer'

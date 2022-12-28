@@ -1,11 +1,11 @@
-@import '@design';
+@import '@accoutrement';
 
 .text {
-  font-family: ui-font-face('default');
+  font-family: font-family('body');
 }
 
 .alternate {
-  font-family: ui-font-face('alternate');
+  font-family: font-family('alternate');
 }
 
 .current {
@@ -15,39 +15,39 @@
 }
 
 .title {
-  @include use-text-style('title');
+  @include typography('title');
 }
 
 .paragraph {
-  @include use-text-style('p');
+  @include typography('paragraph');
 }
 
 .table {
-  @include use-text-style('table');
+  @include typography('small');
 }
 
 .small {
-  @include use-text-style('small');
+  @include typography('small');
 }
 
 .caption {
-  @include use-text-style('caption');
+  @include typography('caption');
 }
 
 .heading1 {
-  @include use-text-style('h1');
+  @include typography('h1');
 }
 
 .heading2 {
-  @include use-text-style('h2');
+  @include typography('h2');
 }
 
 .heading3 {
-  @include use-text-style('h3');
+  @include typography('h3');
 }
 
 .heading4 {
-  @include use-text-style('h4');
+  @include typography('h4');
 }
 
 .inherit {
@@ -55,103 +55,103 @@
 }
 
 .primary {
-  color: ui-text-color('primary');
+  color: color('primary');
 }
 
 .accent {
-  color: ui-text-color('primary');
+  color: color('primary');
 }
 
 .dark {
-  color: ui-text-color('dark');
+  color: color('gray-dark');
 }
 
 .dark.secondary {
-  color: ui-text-color('dark', 'mid-emphasis');
+  color: color('gray-base');
 }
 
 .dark.disabled {
-  color: ui-text-color('dark', 'disabled');
+  color: color('gray-text');
 }
 
 .light {
-  color: ui-text-color('light');
+  color: color('gray-light');
 }
 
 .light.secondary {
-  color: ui-text-color('light', 'mid-emphasis');
+  color: color('gray-light');
 }
 
 .light.disabled {
-  color: ui-text-color('light', 'disabled');
+  color: color('gray-lighter');
 }
 
 .info {
-  color: ui-text-color('primary');
+  color: color('primary');
 }
 
 .success {
-  color: ui-text-color('green');
+  color: color('green');
 }
 
 .warning {
-  color: ui-text-color('yellow');
+  color: color('yellow');
 }
 
 .error {
-  color: ui-text-color('red');
+  color: color('red');
 }
 
 .gray400 {
-  color: ui-color('gray', 'dark');
+  color: text-color('gray-text');
 }
 
 .gray300 {
-  color: ui-color('gray');
+  color: text-color('gray-base');
 }
 
 .gray200 {
-  color: ui-color('gray', 'light');
+  color: text-color('gray-light');
 }
 
 .gray100 {
-  color: ui-color('gray', 'lighter');
+  color: text-color('gray-lighter');
 }
 
 .gray50 {
-  color: ui-color('gray', 'lightest');
+  color: text-color('gray-lightest');
 }
 
 .text900 {
-  font-size: ui-font-size('3x');
+  font-size: size('3x');
 }
 
 .text800 {
-  font-size: ui-font-size('2x');
+  font-size: size('2x');
 }
 
 .text700 {
-  font-size: ui-font-size('xx-large');
+  font-size: size('xx-large');
 }
 
 .text600 {
-  font-size: ui-font-size('x-large');
+  font-size: size('x-large');
 }
 
 .text500 {
-  font-size: ui-font-size('large');
+  font-size: size('large');
 }
 
 .text400 {
-  font-size: ui-font-size('base');
+  font-size: size('base');
 }
 
 .text300 {
-  font-size: ui-font-size('small');
+  font-size: size('small');
 }
 
 .text200 {
-  font-size: ui-font-size('small');
+  font-size: size('small');
 }
 
 .italic {

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-masked
+# @applique-ui/uikit-component-input-masked

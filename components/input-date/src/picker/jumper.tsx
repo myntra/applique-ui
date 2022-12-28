@@ -4,7 +4,7 @@ import Month from './jumper/month'
 import Year from './jumper/year'
 import classnames from './jumper.module.scss'
 import { UTCDate } from '../input-date-utils'
-import Icon from '@myntra/uikit-component-icon'
+import Icon from '@applique-ui/icon'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 

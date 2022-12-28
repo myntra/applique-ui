@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/uikit-theme-unity",
-  "version": "1.13.101",
+  "name": "@applique-ui/theme-unity",
+  "version": "0.0.9",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",
@@ -18,11 +18,10 @@
     "build:tokens": "tokenize src/tokens.yml"
   },
   "dependencies": {
-    "@myntra/uikit": "1.13.*"
+    "@applique-ui/uikit": "0.0.*"
   },
   "devDependencies": {
-    "@myntra/accoutrement": "1.13.*",
-    "@myntra/uikit-design": "1.13.*",
-    "@myntra/tokenizer": "1.13.*"
+    "@applique-ui/accoutrement": "0.0.*",
+    "@applique-ui/tokenizer": "0.0.*"
   }
 }

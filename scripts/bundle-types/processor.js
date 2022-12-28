@@ -158,7 +158,7 @@ function resolveImports(ast, context, components) {
         })
       }
       // Imports from other components
-      else if (importId.startsWith('@myntra/uikit-component-')) {
+      else if (importId.startsWith('@applique-ui/')) {
         if (statement.importClause && statement.importClause.namedBindings) {
           const shortName = getShortName(importId)
           const componentName = pascalCase(shortName)
@@ -271,9 +271,9 @@ function findComponentNode(ast) {
     (statement) =>
       (TS.isFunctionDeclaration(statement) ||
         TS.isClassDeclaration(statement)) &&
-      (statement.modifiers.length === 2 &&
-        statement.modifiers[0].kind === TS.SyntaxKind.ExportKeyword &&
-        statement.modifiers[1].kind === TS.SyntaxKind.DefaultKeyword)
+      statement.modifiers.length === 2 &&
+      statement.modifiers[0].kind === TS.SyntaxKind.ExportKeyword &&
+      statement.modifiers[1].kind === TS.SyntaxKind.DefaultKeyword
   )
 }
 

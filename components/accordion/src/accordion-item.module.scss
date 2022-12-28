@@ -2,6 +2,7 @@
 
 .item-container {
   overflow: hidden;
+  background-color: color('white');
   border: 1px solid color('gray');
   border-radius: 4px;
   transition: height 300ms ease-in-out;

@@ -1,1 +1,1 @@
-# @myntra/uikit-component-stepper
+# @applique-ui/uikit-component-stepper

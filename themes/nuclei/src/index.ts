@@ -1,3 +1,3 @@
 import tokens from './tokens'
-export * from '@myntra/uikit'
+export * from '@applique-ui/uikit'
 export { tokens }

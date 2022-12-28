@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { MeasureCache } from './helpers'
-import { createObserver, Observer } from '@myntra/uikit-component-measure'
+import { createObserver, Observer } from '@applique-ui/measure'
 
 export interface Props extends BaseProps {
   cache: MeasureCache
@@ -54,8 +54,8 @@ export default class VirtualListCellMeasure extends Component<Props> {
 
     if (
       !currentValue ||
-      (currentValue.width !== newValue.width ||
-        currentValue.height !== newValue.height)
+      currentValue.width !== newValue.width ||
+      currentValue.height !== newValue.height
     ) {
       this.props.onMeasure(
         {

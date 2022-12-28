@@ -1,1 +1,1 @@
-# @myntra/uikit-component-icon
+# @applique-ui/icon

@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/uikit-component-input-text-area",
-  "version": "1.13.101",
+  "name": "@applique-ui/input-text-area",
+  "version": "0.0.9",
   "main": "dist/input-text-area.cjs.js",
   "module": "dist/input-text-area.esm.js",
   "types": "dist/index.d.ts",
@@ -27,9 +27,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-can-i-use": "1.13.*",
-    "@myntra/uikit-component-input-text": "1.13.*",
-    "@myntra/uikit-utils": "1.13.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

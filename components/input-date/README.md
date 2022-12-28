@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-date
+# @applique-ui/uikit-component-input-date

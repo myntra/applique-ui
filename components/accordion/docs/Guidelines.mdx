@@ -1,0 +1,50 @@
+import { Anatomy0, Anatomy1, Anatomy2, Specs0, Specs1, Do1, Dont1, Dont2 } from './images'
+
+## Anatomy
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Anatomy0 />
+        <Anatomy1 />
+        <Anatomy2 />
+    </Layout>
+</ImagePreview>
+
+A. **Header** : contains the section title and is control for revealing the panel. 
+
+B. **Optional icon (Chevron)** : indicates if the panel is open or closed. This icon can be replaced with any other icon.
+
+C. **Main icon** : indicates what accordion says.
+
+D. **Panel** : the section of content associated with an accordion header. 
+
+## Specs
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Specs0 />
+        <Specs1 />
+    </Layout>
+</ImagePreview>
+
+<small>Padding and size measurements (in px) with icon and without icon.</small>
+
+## Dos and Don’ts
+
+1. Leading icon should come first. Don’t place icon after header 
+<ImagePreview>
+    <Layout type="row" distribution="spaceBetween" alignment="middle">
+        <Do1 />
+        <Dont1 />
+    </Layout>
+</ImagePreview>
+
+
+2. Don’t increase the height. It should be 36px. 
+
+<ImagePreview>
+    <Layout type="row" distribution="spaceBetween" alignment="middle">
+        <Do1 />
+        <Dont2 />
+    </Layout>
+</ImagePreview>

@@ -1,9 +1,9 @@
 import React, { Component, cloneElement, ReactElement, RefObject } from 'react'
 import AccordionContext from './accordion-context'
-import Layout from '@myntra/uikit-component-layout'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
+import Layout from '@applique-ui/layout'
+import Icon, { IconName } from '@applique-ui/icon'
 import classnames from './accordion-item.module.scss'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@applique-ui/uikit-utils'
 
 export interface Props extends BaseProps {
   /**
@@ -102,7 +102,6 @@ export default class AccordionItem extends Component<
                       ? itemProps.controlIcons.open
                       : itemProps.controlIcons.close
                   }
-                  color="primary"
                 />
               </Layout>
               <div className={classnames('item-content')} ref={this.contentRef}>

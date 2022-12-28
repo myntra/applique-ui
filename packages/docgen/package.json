@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/docgen",
-  "version": "1.13.101",
+  "name": "@applique-ui/docgen",
+  "version": "0.0.9",
   "main": "src/index.js",
   "module": "dist/docgen.esm.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
     "loader.js"
   ],
   "sideEffects": false,
-  "description": "@myntra/docgen",
+  "description": "@applique-ui/docgen",
   "dependencies": {
     "de-indent": "^1.0.2",
     "doctrine": "^2.1.0",

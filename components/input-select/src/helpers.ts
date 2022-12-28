@@ -1,6 +1,6 @@
 import Sifter from 'sifter'
 import { Props } from './input-select'
-import { toArray } from '@myntra/uikit-utils'
+import { toArray } from '@applique-ui/uikit-utils'
 
 export function moveSelectedOptionsToTop<V, T>(
   options: T[],

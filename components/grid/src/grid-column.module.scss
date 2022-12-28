@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import './helper';
 
 $named-sizes: (
@@ -16,7 +18,7 @@ $named-sizes: (
 .column {
   box-sizing: border-box;
   display: block;
-  flex: 1 1 var(--column-width, #{percentage(1 / 12)});
+  flex: 1 1 var(--column-width, #{percentage(math.div(1, 12))});
   padding-right: var(--column-inset);
   padding-bottom: var(--column-gap);
   padding-left: var(--column-inset);
@@ -44,18 +46,18 @@ $named-sizes: (
 
   @for $i from 1 through 12 {
     &.is-#{$i} {
-      --column-width: #{percentage($i / 12)};
+      --column-width: #{percentage(math.div($i, 12))};
 
       flex: none;
       width: var(--column-width);
     }
 
     &.offset-#{$i} {
-      margin-left: percentage($i / 12);
+      margin-left: percentage(math.div($i, 12));
     }
 
     &.offset-right-#{$i} {
-      margin-right: percentage($i / 12);
+      margin-right: percentage(math.div($i, 12));
     }
   }
 }

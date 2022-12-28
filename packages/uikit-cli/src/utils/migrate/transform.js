@@ -1,16 +1,30 @@
-// Required to load code modes.
-require('babel-register')({
-  babelrc: false,
-  ignore(filename) {
-    return !/(codemod-utils\/src|\.codemod\.js)/.test(filename)
-  },
-  presets: [require('babel-preset-es2015'), require('babel-preset-stage-1')],
-})
-
 const chalk = require('chalk')
 const path = require('path')
 const diff = require('diff')
 const { highlight } = require('cli-highlight')
+const { DEFAULT_EXTENSIONS } = require('@babel/core')
+
+// Required to load code modes.
+require('@babel/register')({
+  babelrc: false,
+  ignore: [
+    function(filename) {
+      return !/(codemod-utils\/src|\.codemod\.js)/.test(filename)
+    },
+  ],
+  extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
+  presets: [
+    require('@babel/preset-typescript').default,
+    require('@babel/preset-react').default,
+  ],
+  plugins: [
+    require('@babel/plugin-proposal-class-properties').default,
+    require('@babel/plugin-proposal-nullish-coalescing-operator').default,
+    require('@babel/plugin-proposal-optional-chaining').default,
+    require('@babel/plugin-transform-modules-commonjs').default,
+    require('@babel/plugin-proposal-export-default-from').default,
+  ],
+})
 
 module.exports = function transformWrapper(
   file,

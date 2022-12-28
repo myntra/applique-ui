@@ -1,1 +1,1 @@
-# @myntra/uikit-component-error-boundary
+# @applique-ui/uikit-component-error-boundary

@@ -1,0 +1,82 @@
+import { Accordion0, Accordion1, Accordion2, Accordion3 } from './images'
+
+This feature-rich, interactive component lets users intuitively explore content. 
+Unlike a traditional accordion, it's got a multi-level navigation that provides a linear path through the content. The header gives users a high-level overview of what to expect when they click on it. 
+The first content section can then be expanded to reveal more information.
+
+<Documenter component={props.components}>
+
+```
+return (
+<Accordion>
+    <Accordion.Item title={<div><Icon name={MapPin} fontSize="small" /> Accordion Title</div>}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+        Etiam nec nunc nec nisl luctus tincidunt efficitur vitae elit. Vestibulum iaculis nibh commodo neque ultrices lobortis. Cras magna massa, pretium vitae mattis varius, pharetra nec massa. Aliquam ac ex enim. Quisque consequat dui libero, vel blandit lorem porttitor sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed lobortis nisl, quis eleifend metus.
+    </Accordion.Item>
+    <Accordion.Item title="Accordion Title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+        Etiam nec nunc nec nisl luctus tincidunt efficitur vitae elit. Vestibulum iaculis nibh commodo neque ultrices lobortis. Cras magna massa, pretium vitae mattis varius, pharetra nec massa. Aliquam ac ex enim. Quisque consequat dui libero, vel blandit lorem porttitor sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed lobortis nisl, quis eleifend metus.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>
+Accordion components are available in two styles: with an icon and without. 
+Users can click the chevron to expand or collapse the component.
+
+## States
+
+With the Accordion component, you can use a single section to organize content in two different ways. This is ideal for the web where there’s limited screen space and you want to show a lot of information without cluttering up the screen.
+This component will by default show in a collapsed state, and allow users to expand it to see more information.
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Accordion0 />
+        <Accordion1 />
+        <Accordion2 />
+        <Accordion3 />
+    </Layout>
+</ImagePreview>
+
+<small>Default , Opened, Hover and Disabled</small>
+
+In addition to the collapsed and expanded states, Accordion components also have interactive states for hover and disabled.
+
+## Variants
+
+### Default
+
+By default, the Accordion will show in a collapsed state. It will have an icon, label  and chevron.
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Accordion>
+    <Accordion.Item title={<div><Icon name={MapPin} fontSize="small" /> Accordion Title</div>}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>
+
+### Default without icon
+
+This variant would have a label and chevron. 
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Accordion>
+    <Accordion.Item title="Accordion Title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
+    </Accordion.Item>
+</Accordion>
+)
+```
+
+</Documenter>

@@ -1,0 +1,228 @@
+import { Button0, Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Button10, Button11, Button12, Button13, Button14, Button15, Button16, Button17, Button18, Button19 } from "./images"  
+
+
+<Documenter component={props.components}>
+
+```
+return (
+<>
+<Grid multiline={true} centered gap="large">
+    <Grid.Column size="one-quarter">
+      <Button type="primary" icon={CheckCircle}>Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="secondary" icon={CheckCircle}>Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="tertiary" icon={CheckCircle}>Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="warning" icon={CheckCircle}>Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="primary" icon={EllipsisVSolid}/>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="secondary" icon={EllipsisVSolid}/>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="tertiary" icon={EllipsisVSolid}/>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="warning" icon={EllipsisVSolid}/>
+    </Grid.Column>
+</Grid>
+</>
+)
+```
+
+</Documenter>
+
+The Button component has a lot of variations we can use. It contains a label and optional icons before or after the label. 
+
+## States
+
+States refers to the behavior that reflects the interaction(s) with button as a component. The visual representation below uses different colours to communicate status of the button and the interaction.
+
+<ImagePreview background={true}>
+  <Grid multiline={true} centered gap="large">
+    <Grid.Column size="one-fifth">
+      <div></div>
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      Primary
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      Secondary
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      Tertiary
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      Warning
+    </Grid.Column>
+
+    <Grid.Column size="one-fifth">
+      Default
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button0 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button1 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button2 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button3 />
+    </Grid.Column>
+
+    <Grid.Column size="one-fifth">
+      Hover
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button4 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button5 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button6 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button7 />
+    </Grid.Column>
+
+    <Grid.Column size="one-fifth">
+      Clicked
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button8 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button9 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button10 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button11 />
+    </Grid.Column>
+
+    <Grid.Column size="one-fifth">
+      Disabled
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button12 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button13 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button14 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button15 />
+    </Grid.Column>
+
+    <Grid.Column size="one-fifth">
+      Loading
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button16 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button17 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button18 />
+    </Grid.Column>
+    <Grid.Column size="one-fifth">
+      <Button19 />
+    </Grid.Column>
+  </Grid>
+</ImagePreview>
+
+# Variants
+## Primary Button
+
+Primary button calls attention to an action or highlights the most important call to action in a section. 
+
+**Example : Save, Confirm, Done**
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Button type="primary">Button Label</Button>
+)
+
+```
+
+</Documenter>
+
+## Secondary Button
+
+Secondary buttons are used to highlight secondary actions. Remember to maintain visual hierarchy by balancing weights and background colours. 
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Button type="secondary">Button Label</Button>
+)
+
+```
+
+</Documenter>
+
+## Tertiary Button
+
+Tertiary buttons will indicate the least significant actions on the page. Pair them with primary and secondary buttons when there are multiple calls to action. 
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Button type="tertiary">Button Label</Button>
+)
+
+```
+
+</Documenter>
+
+## Warning Button
+
+Warning buttons are used to get a final confirmation from a user in the context of a destructive or negative action. These are often used in confirmation modals. 
+
+**Example :  Delete, Remove, Decline**
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Button type="warning">Button Label</Button>
+)
+
+```
+
+</Documenter>
+
+
+## Icon only Button
+
+Icon Only buttons are used when pairing an Icon with an action to control the interaction. Use them with Tooltips to add clarity to the action. 
+
+**Example :  More**
+
+<Documenter component={props.components}>
+
+```preview
+return (
+  <Button icon={EllipsisVSolid} />
+)
+
+```
+
+</Documenter>

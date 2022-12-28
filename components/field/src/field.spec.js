@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import Field from './field'
-import InputText from '@myntra/uikit-component-input-text'
+import InputText from '@applique-ui/input-text'
 
 let wrapper
 beforeEach(() => {

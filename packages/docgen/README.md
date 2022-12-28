@@ -1,1 +1,1 @@
-# @myntra/docgen
+# @applique-ui/docgen

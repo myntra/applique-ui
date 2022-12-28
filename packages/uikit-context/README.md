@@ -1,1 +1,1 @@
-# @myntra/uikit-context
+# @applique-ui/uikit-context

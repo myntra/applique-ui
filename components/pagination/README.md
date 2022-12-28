@@ -1,1 +1,1 @@
-# @myntra/uikit-component-pagination
+# @applique-ui/uikit-component-pagination

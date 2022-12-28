@@ -18,7 +18,7 @@ module.exports =
 
         const output = {
           code:
-            `import { classnames as raw } from '@myntra/uikit-utils'\n` +
+            `import { classnames as raw } from '@applique-ui/uikit-utils'\n` +
             `${code.replace('export default', 'const locals =')}\n` +
             `export default function classnames() {\n` +
             `  return raw.apply(null, arguments).use(locals)\n` +

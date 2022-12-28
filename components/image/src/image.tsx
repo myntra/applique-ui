@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import classnames from './image.module.scss'
 import { ImageContainerObserver, createObserver } from './image-helpers'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@applique-ui/uikit-utils'
 
 export interface Props extends BaseProps {
   /** Image source file/link. */

@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/codemod-utils",
-  "version": "1.13.101",
+  "name": "@applique-ui/codemod-utils",
+  "version": "0.0.9",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
   "types": "dist/index.d.ts",
@@ -14,14 +14,14 @@
     "codemods/"
   ],
   "sideEffects": false,
-  "description": "@myntra/codemod-utils",
+  "description": "@applique-ui/codemod-utils",
   "dependencies": {
-    "@myntra/eslint-config-standard": "1.13.*",
+    "@applique-ui/eslint-config-standard": "0.0.*",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",
     "glob": "^7.1.2",
-    "jscodeshift": "^0.5.1",
+    "jscodeshift": "^0.14.0",
     "jsdoc-api": "^4.0.3",
     "prettier": "^1.13.4"
   }

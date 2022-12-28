@@ -5,50 +5,33 @@ import React, {
   Children,
   isValidElement,
 } from 'react'
-import Grid from '@myntra/uikit-component-grid'
-import {
-  ColumnSize,
-  Props as GridColumnProps,
-} from '@myntra/uikit-component-grid'
+import Grid from '@applique-ui/grid'
+import { ColumnSize, Props as GridColumnProps } from '@applique-ui/grid'
 
 import InputCheckbox, {
   Props as InputCheckboxProps,
-} from '@myntra/uikit-component-input-checkbox'
-import InputDate, {
-  Props as InputDateProps,
-} from '@myntra/uikit-component-input-date'
+} from '@applique-ui/input-checkbox'
+import InputDate, { Props as InputDateProps } from '@applique-ui/input-date'
 import InputMasked, {
   Props as InputMaskedProps,
-} from '@myntra/uikit-component-input-masked'
+} from '@applique-ui/input-masked'
 import InputNumber, {
   Props as InputNumberProps,
-} from '@myntra/uikit-component-input-number'
-import InputS3File, {
-  Props as InputS3FileProps,
-} from '@myntra/uikit-component-input-s3-file'
+} from '@applique-ui/input-number'
 import InputSelect, {
   Props as InputSelectProps,
-} from '@myntra/uikit-component-input-select'
-import InputText, {
-  Props as InputTextProps,
-} from '@myntra/uikit-component-input-text'
-import InputRadio, {
-  Props as InputRadioProps,
-} from '@myntra/uikit-component-input-radio'
+} from '@applique-ui/input-select'
+import InputText, { Props as InputTextProps } from '@applique-ui/input-text'
+import InputRadio, { Props as InputRadioProps } from '@applique-ui/input-radio'
 import InputTextArea, {
   Props as InputTextAreaProps,
-} from '@myntra/uikit-component-input-text-area'
-import InputFile, {
-  Props as InputFileProps,
-} from '@myntra/uikit-component-input-file'
-import InputAzureFile, {
-  Props as InputAzureFileProps,
-} from '@myntra/uikit-component-input-azure-file'
-import Button from '@myntra/uikit-component-button'
-import ButtonGroup from '@myntra/uikit-component-button-group'
-import Field, { Props as FieldProps } from '@myntra/uikit-component-field'
-import { createContext } from '@myntra/uikit-context'
-import { get, set, isReactNodeType, is } from '@myntra/uikit-utils'
+} from '@applique-ui/input-text-area'
+import InputFile, { Props as InputFileProps } from '@applique-ui/input-file'
+import Button from '@applique-ui/button'
+import ButtonGroup from '@applique-ui/button-group'
+import Field, { Props as FieldProps } from '@applique-ui/field'
+import { createContext } from '@applique-ui/uikit-context'
+import { get, set, isReactNodeType, is } from '@applique-ui/uikit-utils'
 
 import classnames from './form.module.scss'
 
@@ -144,7 +127,6 @@ export default class Form extends PureComponent<Props> {
     InputCheckbox
   ) // For backward compat.
   static Date = withField<InputDateProps & FormFieldProps>(InputDate)
-  static S3File = withField<InputS3FileProps & FormFieldProps>(InputS3File)
   static Masked = withField<InputMaskedProps & FormFieldProps>(InputMasked)
   static Number = withField<InputNumberProps & FormFieldProps>(InputNumber)
   static Radio = withField<InputRadioProps & FormFieldProps>(InputRadio)
@@ -152,9 +134,6 @@ export default class Form extends PureComponent<Props> {
     InputTextArea
   )
   static File = withField<InputFileProps & FormFieldProps>(InputFile)
-  static AzureFile = withField<InputAzureFileProps & FormFieldProps>(
-    InputAzureFile
-  )
 
   cache: Record<string, (value: unknown) => void> = {}
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
+import Icon, { IconName } from '@applique-ui/icon'
 import classnames from './top-bar-item.module.scss'
 
 export interface Props extends BaseProps {

@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/uikit-component-banner",
-  "version": "1.13.101",
+  "name": "@applique-ui/banner",
+  "version": "0.0.9",
   "main": "dist/banner.cjs.js",
   "module": "dist/banner.esm.js",
   "types": "dist/index.d.ts",
@@ -25,12 +25,12 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-can-i-use": "1.13.*",
-    "@myntra/uikit-component-button": "1.13.*",
-    "@myntra/uikit-component-text": "1.13.*",
-    "@myntra/uikit-component-layout": "1.13.*",
-    "@myntra/uikit-component-icon": "1.13.*",
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/text": "0.0.*",
+    "@applique-ui/layout": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest",
-    "@myntra/uikit-utils": "1.13.*"
+    "@applique-ui/uikit-utils": "0.0.*"
   }
 }

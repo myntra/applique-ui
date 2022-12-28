@@ -20,6 +20,10 @@ const portfinder = require('portfinder')
 const jscodeshift = require('jscodeshift/src/core')
 const component = process.argv[2]
 
+const entryFile = './docs/index.mdx'
+// const entryFile = './example.mdx'
+const localComponents = new Set()
+
 start(component).catch(console.error)
 
 async function start(
@@ -56,47 +60,52 @@ function findImport(root, startsWith = null) {
 }
 
 function createComponentsFile(component) {
-  const fileName = Path.resolve(getPackageDir(component), 'example.mdx')
-  const source = Fs.readFileSync(fileName, { encoding: 'utf8' })
-  const root = jscodeshift(source.toString().split('#')[0], {})
-  const RE = /<([A-Z](?:[a-zA-Z0-9]+))/gm
-
+  const files = Fs.readdirSync(
+    Path.resolve(getPackageDir(component), './docs')
+  ).filter((v) => v.endsWith('.mdx'))
   let match
 
-  const localComponents = new Set()
+  files.forEach((file) => {
+    const fileName = Path.resolve(getPackageDir(component), './docs', file)
+    const source = Fs.readFileSync(fileName, { encoding: 'utf8' })
+    // console.log(source)
+    // const root = jscodeshift(source.toString().split('#')[0], {})
+    const RE = /<([A-Z](?:[a-zA-Z0-9]+))/gm
 
-  while ((match = RE.exec(source))) {
-    const [, component] = match
+    while ((match = RE.exec(source))) {
+      const [, component] = match
 
-    if (components.includes(kebabCase(component)))
-      localComponents.add(component)
-  }
-  let iconImports = findImport(root, 'uikit-icons').paths()
-  iconImports = iconImports.length
-    ? iconImports[0].value.specifiers.map(
-        (specifier) => specifier.imported.name
-      )
-    : []
+      if (components.includes(kebabCase(component)))
+        localComponents.add(component)
+    }
+
+    // let iconImports = findImport(root, 'uikit-icons').paths()
+    // iconImports = iconImports.length
+    // ? iconImports[0].value.specifiers.map(
+    //     (specifier) => specifier.imported.name
+    //   )
+    // : []
+  })
 
   Fs.writeFileSync(
     Path.resolve(__dirname, `app/uikit.${component}.js`),
     [
       ...Array.from(localComponents).map(
         (name) =>
-          `export { default as ${name} } from '@myntra/uikit-component-${kebabCase(
+          `export { default as ${name} } from '@applique-ui/${kebabCase(
             name
           )}'${
             name === 'Text'
-              ? `\nexport { default as T } from '@myntra/uikit-component-text'`
+              ? `\nexport { default as T } from '@applique-ui/text'`
               : ''
           }`
       ),
-      ...iconImports.map(
-        (iconName) =>
-          `
-        export { default as ${iconName} } from '@myntra/uikit-icons/svgs/${iconName}'
-        `
-      ),
+      // ...iconImports.map(
+      //   (iconName) =>
+      //     `
+      //   export { default as ${iconName} } from '@myntra/uikit-icons/svgs/${iconName}'
+      //   `
+      // ),
     ].join('\n')
   )
 }
@@ -112,7 +121,6 @@ function startWebpackDevServer(component, port) {
   chain.mode('development')
 
   chain.resolve.alias
-    .set('@code', Path.resolve(__dirname, './app/code.tsx'))
     .set('@uikit', Path.resolve(__dirname, `./app/uikit.${component}.js`))
     .set(
       'accoutrement$',
@@ -126,42 +134,39 @@ function startWebpackDevServer(component, port) {
       Path.resolve(__dirname, '../packages/accoutrement/src/index.scss')
     )
     .set(
-      '@myntra/uikit/design.scss',
+      '@applique-ui/uikit/design.scss',
       Path.resolve(__dirname, '../packages/uikit/design.scss')
     )
     .set('@design', Path.resolve(__dirname, '../themes/nuclei/design.scss'))
-    .set('@documenter', Path.resolve(__dirname, './app/documenter.tsx'))
-    .set('@component', Path.resolve(getPackageDir(component), 'example.mdx'))
+    .set('@component', Path.resolve(getPackageDir(component), entryFile))
     .set('@mdx-js/tag$', require.resolve('@mdx-js/tag'))
     .set('react$', require.resolve('react'))
     .set('react-dom$', require.resolve('react-dom'))
     .set('@uikit-icons', '../node_modules/@myntra/uikit-icons/dist/index')
 
   chain.resolve.alias.set(
-    `'@myntra/uikit-component-input-text/style.scss`,
+    `'@applique-ui/input-text/style.scss`,
     componentsDir + '/input-text/style.scss'
   )
   components.forEach((name) =>
     chain.resolve.alias.set(
-      `@myntra/uikit-component-${name}$`,
+      `@applique-ui/${name}$`,
       componentsDir + '/' + name + '/src/index.ts'
     )
   )
   ;['uikit-utils', 'uikit-context', 'uikit-can-i-use'].forEach((name) =>
     chain.resolve.alias.set(
-      `@myntra/${name}$`,
+      `@applique-ui/${name}$`,
       packagesDir + '/' + name + '/src/index.ts'
     )
   )
 
-  chain.devServer
-    .contentBase(false)
-    .hot(true)
-    .open(true)
-    .noInfo(true)
+  chain.devServer.hot(true).open(true)
+
+  chain.set('infrastructureLogging', { level: 'warn' })
 
   chain.stats('errors-warnings')
-  chain.plugin('bar').use(require('webpackbar'))
+  // chain.plugin('bar').use(require('webpackbar'))
 
   chain.resolve.extensions
     .add('.ts')
@@ -196,7 +201,11 @@ function startWebpackDevServer(component, port) {
     .options({
       importLoaders: 2,
       modules: {
-        localIdentName: '[name]_[local]_[hash:base64:5]',
+        mode: 'local',
+        auto: true,
+        exportGlobals: true,
+        // localIdentName: '[name]_[local]',
+        // localIdentName: '[name]_[local]_[hash:base64:5]',
         getLocalIdent(context, _, name) {
           const filename = context.resourcePath
           const component = filename
@@ -206,6 +215,8 @@ function startWebpackDevServer(component, port) {
 
           return `u-${component}-${name}`
         },
+        // namedExport: true,
+        // exportOnlyLocals: false,
       },
     })
     .end()
@@ -214,9 +225,9 @@ function startWebpackDevServer(component, port) {
     .end()
     .use('sass-loader')
     .loader(require.resolve('sass-loader'))
-    .options({
-      implementation: require('sass'),
-    })
+    // .options({
+    //   implementation: require('sass'),
+    // })
     .end()
 
   chain.module
@@ -279,17 +290,24 @@ function startWebpackDevServer(component, port) {
       // plugins: ['@babel/plugin-proposal-object-rest-spread']
     })
     .end()
-    .use('post-mdx-loader')
-    .loader(require.resolve('./post-mdx-helper-loader'))
-    .end()
+    // .use('post-mdx-loader')
+    // .loader(require.resolve('./post-mdx-helper-loader'))
+    // .options({
+    //   components: Array.from(localComponents).reduce((acc, comp) => {
+    //     acc[comp] = `'${comp}'`
+    //     return acc
+    //   }, {})
+    // })
+    // .end()
     .use('mdx-loader')
     .loader(require.resolve('@mdx-js/loader'))
     .options({
-      mdPlugins: require('./markdown-plugins'),
+      providerImportSource: '@mdx-js/react',
+      remarkPlugins: require('./markdown-plugins'),
     })
     .end()
-    .use('mdx-polyfill-loader')
-    .loader(require.resolve('./polyfill-mdx-loader'))
+  // .use('mdx-polyfill-loader')
+  // .loader(require.resolve('./polyfill-mdx-loader'))
 
   chain.module
     .rule('ts')

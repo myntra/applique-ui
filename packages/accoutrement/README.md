@@ -1,1 +1,1 @@
-# @myntra/accoutrement
+# @applique-ui/accoutrement

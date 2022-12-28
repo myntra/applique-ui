@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/tokenizer",
-  "version": "1.13.101",
+  "name": "@applique-ui/tokenizer",
+  "version": "0.0.9",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "bin/"
   ],
   "sideEffects": false,
-  "description": "@myntra/tokenizer",
+  "description": "@applique-ui/tokenizer",
   "bin": {
     "tokenize": "bin/tokenize.js"
   },

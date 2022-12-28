@@ -1,0 +1,76 @@
+import { 
+    Anatomy1,
+    Anatomy2,
+    Do1,
+    Do3,
+    Dont1,
+    Dont2,
+    Dont3,
+    Specification2,
+    Specification3,
+    Specification1,
+} from './images'
+
+## Anatomy
+
+### Top Nav Bar
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="spaceAround" alignment="middle">
+        <Anatomy1 />
+    </Layout>
+</ImagePreview>
+
+**A. Portal Name**
+
+**B. Label**: Links in the header are supported as product navigation, if required. These links should not open a new tab or link to another domain. These links drop down to the side menu in narrow screen widths
+
+**C. Search**
+
+**D. Notification**
+
+**E. Profile**
+
+### Top Nav Bar Element
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="spaceAround" alignment="middle">
+        <Anatomy2 />
+    </Layout>
+</ImagePreview>
+
+**A. Label**: Indicates what sort of information the field requires and is left-aligned directly above the input area.
+
+**B. Icon (Optional)**: This is where people enter text.
+
+## Specifications
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="spaceAround" alignment="bottom">
+        <Specification1 />
+        <Specification2 />
+        <Specification3 />
+    </Layout>
+</ImagePreview>
+
+ <small>Size and padding measurements (in px) </small>
+
+## Dos and Don'ts
+
+1. Avoid stretching the components
+
+<ImagePreview>
+    <Layout type="stack" distribution="spaceAround" alignment="bottom">
+        <Do1 />
+        <Dont1 />
+    </Layout>
+</ImagePreview>
+
+2. Use Space Layout between Top nav Elements
+
+<ImagePreview>
+    <Layout type="stack" distribution="spaceAround" alignment="bottom">
+        <Do3 />
+        <Dont3 />
+    </Layout>
+</ImagePreview>

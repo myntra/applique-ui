@@ -5,6 +5,7 @@
   overflow: auto;
   list-style: none;
   border: 1px solid color('gray-light');
+  border-radius: radius('list');
   margin-block-start: 0;
   margin-block-end: 0;
 
@@ -15,10 +16,13 @@
 
 .item {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: size('2x') size('3x');
+  min-width: 240px;
+  height: 36px;
+  padding: padding('list.item');
   cursor: pointer;
-  border-bottom: 1px solid color('gray-light');
 
   @include typography('body');
 
@@ -31,30 +35,70 @@
     cursor: not-allowed;
   }
 
-  &.is-active,
   &:not(.is-disabled):hover {
-    background-color: color('primary-lighter');
+    background-color: color('primary-lightest');
+  }
+
+  &.selectall {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 37px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .radio {
+    display: flex;
+    align-items: center;
+    padding: 11px 11px 8px 2px;
+  }
+}
+
+.listheading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: size('2x') size('3x');
+  font-size: 12px;
+  font-weight: 600;
+  color: #bababc;
+  text-transform: uppercase;
+  white-space: nowrap;
+  .hr1 {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    margin-left: 8px;
+    color: #cfcfd1;
+    background-color: #cfcfd1;
+    border: none;
   }
 }
 
 .checkbox {
   margin: 0;
   margin-right: size('3x');
+  margin-left: 2px;
   pointer-events: none;
   cursor: pointer;
 }
+.is-selected {
+  font-weight: 500;
+  color: color('primary');
+  background-color: transparent;
+}
+
+.is-active {
+  font-weight: 500;
+  color: color('primary');
+  background-color: color('primary-lightest');
+}
 
 .is-single-selectable {
-  .is-selected::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: size('small');
-    content: ' ';
-    background-color: color('primary');
+  .is-selected {
+    font-weight: 500;
+    color: color('primary');
+    background-color: transparent;
   }
-
   .checkbox {
     display: none;
   }

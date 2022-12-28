@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import Section from './index'
-import Button from '@myntra/uikit-component-button'
+import Button from '@applique-ui/button'
 
 describe('section', () => {
   it('is a component', () => {

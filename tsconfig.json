@@ -12,8 +12,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@myntra/uikit-component-*": ["components/*/src/index.ts"],
-      "@myntra/*": ["packages/*/src/index.ts"]
+      "@applique-ui/*": ["packages/*/src/index.ts", "components/*/src/index.ts"]
     }
   }
 }

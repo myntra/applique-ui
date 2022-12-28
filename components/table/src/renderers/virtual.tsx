@@ -1,12 +1,12 @@
 import React, { PureComponent, ReactNode, isValidElement } from 'react'
 import { TableMeta, FixedPosition, Row, Column } from '../table-interface'
 import classnames from './virtual.module.scss'
-import Measure, { MeasureData } from '@myntra/uikit-component-measure'
-import VirtualList from '@myntra/uikit-component-virtual-list'
-import VirtualGrid from '@myntra/uikit-component-virtual-grid'
+import Measure, { MeasureData } from '@applique-ui/measure'
+import VirtualList from '@applique-ui/virtual-list'
+import VirtualGrid from '@applique-ui/virtual-grid'
 import ScrollObserver from '../scroll-observer'
 import { Provider } from '../table-context'
-import { createRef } from '@myntra/uikit-utils'
+import { createRef } from '@applique-ui/uikit-utils'
 
 export interface Props extends BaseProps {
   config: TableMeta

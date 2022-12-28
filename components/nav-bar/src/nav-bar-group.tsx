@@ -1,10 +1,10 @@
 import React from 'react'
-import { createContext } from '@myntra/uikit-context'
-import Icon from '@myntra/uikit-component-icon'
+import { createContext } from '@applique-ui/uikit-context'
+import Icon from '@applique-ui/icon'
 import NavBarContext from './context'
 import classnames from './nav-bar-group.module.scss'
 import NavBarItem, { Props as NavBarItemProps } from './nav-bar-item'
-import { isReactNodeType, Fragment } from '@myntra/uikit-utils'
+import { isReactNodeType, Fragment } from '@applique-ui/uikit-utils'
 
 import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'

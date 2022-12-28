@@ -1,0 +1,346 @@
+import { 
+    ComponentIcon,
+    ComponentLabel,
+    ComponentLabelIcon,
+    ComponentsPortalName,
+    StateIconSelected,
+    StateIconDefault,
+    StateIconHover,
+    StateItemDefault,
+    StateItemHover,
+    StateItemSelected 
+} from './images'
+
+Top Nav Bar contains atomic components 
+
+```jsx
+const BellIcon = () => <Bell />
+const ClockRegularIcon = () => <ClockRegular />
+const UserSolidIcon = () => <UserCircleSolid />
+const DUMMY_CONFIG = {
+  navigationConfig: {
+    HOME: {
+      label: 'Label 01',
+      icon: BellIcon,
+      noHover: true,
+      routingInfo: {
+        path: '/Dashboard',
+        type: 'Dashboard/HOME',
+        meta: {},
+      },
+    },
+    CATALOG: {
+      id: 'Job Tracker',
+      label: 'Label 02',
+      icon: ClockRegularIcon,
+      config: [
+        {
+          title: 'Catalog Management',
+          id: 'CATALOG_MANAGEMENT',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          config: [
+            {
+              id: 'DIY_DASHBOAR',
+              title: 'Catalog Dashboard',
+              routingInfo: {
+                path: '/DiyCataloguing/Home',
+                type: 'DiyCataloguing/Home',
+                meta: {},
+              },
+            },
+            {
+              id: 'DIY_DASHBO_MAS_FORM',
+              title: 'MAS Form',
+              routingInfo: {
+                path: '/DiyCataloguing/MASForm',
+                type: '',
+                meta: {
+                  url:
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdpU3uyUPkfaLZgrG_zgbMUVG7PBj9EilzK3Cg4vgq3eQhq-w/viewform',
+                },
+              },
+            },
+          ],
+        },
+        {
+          id: 'LISTINGS',
+          title: 'Listings',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          check: [
+            {
+              roles: [],
+              permissions: [
+                ['pp$ListingManagementBeta$rw'],
+                ['pp$ListingManagement$rw'],
+              ],
+              operation: 'or',
+            },
+          ],
+          config: [
+            {
+              id: 'Listings Management',
+              title: 'Listings Management',
+              routingInfo: {
+                path: '/DiyCataloguing/Ting',
+                type: 'Listing/ListingsManagement',
+                meta: {},
+              },
+            }
+          ],
+        },
+        {
+          id: 'TESTING',
+          title: 'Test 123',
+          type: 'MENU_DIRECT_LINK',
+          routingInfo: {
+            path: '/test',
+            type: 'Testing/Test',
+            meta: {},
+          },
+        },
+      ],
+    },
+  },
+  quickLinks: [
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>First Item 1</li>
+              <li>First Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Second Item 3</li>
+              <li>Second Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+  ],
+  logo: (
+    <div style={{ width: '100px' }}>
+      <MyntraLogo />
+    </div>
+  ),
+}
+
+return (
+    <TopNav navigationKey="path" dispatchFunction={ object => console.log('Dispatched', object) } config={DUMMY_CONFIG}>
+        <div> Content Will be here for the page</div>
+    </TopNav>
+)
+```
+Top Nav Bar contains atomic components 
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Portal Name</span>
+        <span style={{ margin: '12px 24px' }}><ComponentsPortalName /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">L0 with Icon and Name</span>
+        <span style={{ margin: '12px 24px' }}><ComponentLabelIcon /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">L0 without Icon</span>
+        <span style={{ margin: '12px 24px' }}><ComponentLabel /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Quick Links</span>
+        <span style={{ margin: '12px 24px' }}><ComponentIcon /></span>
+    </Layout>
+</ImagePreview>
+
+The Top Nav Element component has a lot of variations we can use. It contains a label and optional icons before the label and just Icon. 
+
+## States
+
+Top Nav Element have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, and Selected / Focused ).
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Default</span>
+        <span style={{ margin: '12px 24px' }}><StateItemDefault /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Hover</span>
+        <span style={{ margin: '12px 24px' }}><StateItemHover /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Selected/ Focused</span>
+        <span style={{ margin: '12px 24px' }}><StateItemSelected /></span>
+    </Layout>
+</ImagePreview>
+
+<br />
+
+<ImagePreview background={true}>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Default</span>
+        <span style={{ margin: '12px 24px' }}><StateIconDefault /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Hover</span>
+        <span style={{ margin: '12px 24px' }}><StateIconHover /></span>
+    </Layout>
+    <Layout type="stack" distribution="center" alignment="middle" space={['0 0 50%', '0 0 50%']}>
+        <span align="right">Selected/ Focused</span>
+        <span style={{ margin: '12px 24px' }}><StateIconSelected /></span>
+    </Layout>
+</ImagePreview>
+
+## Examples
+
+```preview
+const BellIcon = () => <Bell />
+const ClockRegularIcon = () => <ClockRegular />
+const UserSolidIcon = () => <UserCircleSolid />
+const DUMMY_CONFIG = {
+  navigationConfig: {
+    HOME: {
+      label: 'Label 01',
+      icon: BellIcon,
+      noHover: true,
+      routingInfo: {
+        path: '/Dashboard',
+        type: 'Dashboard/HOME',
+        meta: {},
+      },
+    },
+    CATALOG: {
+      id: 'Job Tracker',
+      label: 'Label 02',
+      icon: ClockRegularIcon,
+      config: [
+        {
+          title: 'Catalog Management',
+          id: 'CATALOG_MANAGEMENT',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          config: [
+            {
+              id: 'DIY_DASHBOAR',
+              title: 'Catalog Dashboard',
+              routingInfo: {
+                path: '/DiyCataloguing/Home',
+                type: 'DiyCataloguing/Home',
+                meta: {},
+              },
+            },
+            {
+              id: 'DIY_DASHBO_MAS_FORM',
+              title: 'MAS Form',
+              routingInfo: {
+                path: '/DiyCataloguing/MASForm',
+                type: '',
+                meta: {
+                  url:
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdpU3uyUPkfaLZgrG_zgbMUVG7PBj9EilzK3Cg4vgq3eQhq-w/viewform',
+                },
+              },
+            },
+          ],
+        },
+        {
+          id: 'LISTINGS',
+          title: 'Listings',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          check: [
+            {
+              roles: [],
+              permissions: [
+                ['pp$ListingManagementBeta$rw'],
+                ['pp$ListingManagement$rw'],
+              ],
+              operation: 'or',
+            },
+          ],
+          config: [
+            {
+              id: 'Listings Management',
+              title: 'Listings Management',
+              routingInfo: {
+                path: '/DiyCataloguing/Ting',
+                type: 'Listing/ListingsManagement',
+                meta: {},
+              },
+            }
+          ],
+        },
+        {
+          id: 'TESTING',
+          title: 'Test 123',
+          type: 'MENU_DIRECT_LINK',
+          routingInfo: {
+            path: '/test',
+            type: 'Testing/Test',
+            meta: {},
+          },
+        },
+      ],
+    },
+  },
+  quickLinks: [
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>First Item 1</li>
+              <li>First Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Second Item 3</li>
+              <li>Second Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+  ],
+  logo: (
+    <div style={{ width: '100px' }}>
+      <MyntraLogo />
+    </div>
+  ),
+}
+
+return (
+    <TopNav navigationKey="path" dispatchFunction={ object => console.log('Dispatched', object) } config={DUMMY_CONFIG}>
+        <div> Content Will be here for the page</div>
+    </TopNav>
+)
+```

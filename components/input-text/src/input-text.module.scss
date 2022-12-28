@@ -2,52 +2,46 @@
 @import 'input';
 
 .input {
-  @include mixin-input-component();
   &[type='search'] {
     padding-right: 0.125em;
   }
 
-  width: 100%;
-
-  &.with-icon {
-    padding: padding('input.with-icon');
-  }
+  padding: padding('input.text');
 }
 
 .container {
   position: relative;
   display: flex;
   align-items: center;
-  &.with-adornment {
-    &::before {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      content: ' ';
-      border-bottom: 1px solid color('gray-dark');
-    }
+  &.bordered {
+    @include mixin-input-text-revamp(border, padding('input.text'));
   }
-  .icon {
-    position: absolute;
-    top: 0.4em;
+  &.standard {
+    @include mixin-input-text-revamp(
+      border-bottom,
+      padding('input-text-standard')
+    );
   }
-
+  input {
+    flex-grow: 1;
+    padding: 0;
+    // margin-left: size('1x');
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
   .input-adornment {
     display: flex;
     align-items: center;
-    height: 0.01em;
-    max-height: 2em;
-    color: shade(color('gray-dark'), 40%);
+    height: 100%;
+    max-height: 1.5em;
+    color: text-color('input.text');
     white-space: nowrap;
-
-    &--start {
-      margin-right: size('2x');
+    &-start {
+      margin-right: size('1x');
     }
-
-    &--end {
-      margin-left: size('2x');
+    &-end {
+      margin-left: size('1x');
     }
   }
 }

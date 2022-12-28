@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/uikit-component-button-group",
-  "version": "1.13.101",
+  "name": "@applique-ui/button-group",
+  "version": "0.0.9",
   "main": "dist/button-group.cjs.js",
   "module": "dist/button-group.esm.js",
   "types": "dist/index.d.ts",
@@ -26,10 +26,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@myntra/uikit-component-button": "1.13.*",
-    "@myntra/uikit-component-dropdown": "1.13.*",
-    "@myntra/uikit-component-list": "1.13.*",
-    "@myntra/uikit-utils": "1.13.*",
+    "@applique-ui/button": "0.0.*",
+    "@applique-ui/dropdown": "0.0.*",
+    "@applique-ui/list": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

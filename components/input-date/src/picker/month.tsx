@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { memoize } from '@myntra/uikit-utils'
+import { memoize } from '@applique-ui/uikit-utils'
 
 import Day from './day'
 

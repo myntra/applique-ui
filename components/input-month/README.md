@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-month
+# @applique-ui/uikit-component-input-month

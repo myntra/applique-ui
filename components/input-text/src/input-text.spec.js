@@ -59,3 +59,69 @@ describe('disabled', () => {
     ).toBe(false)
   })
 })
+describe('Error', () => {
+  it('should have error class corrosponding to error prop ', () => {
+    const inputwrapper = mountShallow(<InputText error />)
+    expect(inputwrapper.hasClass('error')).toBe(true)
+
+    inputwrapper.setProps({ error: false })
+    inputwrapper.update()
+    expect(inputwrapper.hasClass('error')).toBe(false)
+  })
+})
+describe('Variants Check', () => {
+  it('should have bordered, standard classes corrosponding to variant passed', () => {
+    const inputwrapper = mountShallow(<InputText />)
+    expect(inputwrapper.hasClass('bordered')).toBe(true)
+
+    inputwrapper.setProps({ variant: 'standard' })
+    inputwrapper.update()
+    expect(inputwrapper.hasClass('standard')).toBe(true)
+  })
+})
+describe('Filled  Check', () => {
+  it('should have filled class when there is value present, only string values supported', () => {
+    const inputwrapper = mountShallow(<InputText value="test" />)
+    expect(inputwrapper.hasClass('filled')).toBe(true)
+    inputwrapper.setProps({ value: '' })
+    inputwrapper.update()
+
+    expect(inputwrapper.hasClass('filled')).toBe(false)
+
+    inputwrapper.setProps({ value: false })
+    inputwrapper.update()
+    expect(inputwrapper.hasClass('filled')).toBe(false)
+
+    inputwrapper.setProps({ value: 1 })
+    inputwrapper.update()
+    expect(inputwrapper.hasClass('filled')).toBe(false)
+  })
+})
+describe('Adornments support', () => {
+  it('Should render Adornment Text', () => {
+    const inputwrapper = mountShallow(<InputText adornment="/kg" />)
+    const adornmentWrapper = inputwrapper.find('.input-adornment')
+    expect(adornmentWrapper.text()).toBe('/kg')
+  })
+  it('Should render Adornment Component', () => {
+    const inputwrapper = mountShallow(
+      <InputText adornment={<button>Click Me</button>} />
+    )
+    const adornmentComp = inputwrapper.find('.input-adornment')
+    expect(adornmentComp.find('button').length).toBe(1)
+  })
+  it('Should Support start and end position of adornment', () => {
+    const inputwrapper = mountShallow(
+      <InputText
+        adornment={<button>Click Me</button>}
+        adornmentPosition="start"
+      />
+    )
+    let adornmentWrapper = inputwrapper.find('.input-adornment')
+    expect(adornmentWrapper.hasClass('input-adornment-start')).toBe(true)
+    inputwrapper.setProps({ adornmentPosition: 'end', adornment: '/kg' })
+    inputwrapper.update()
+    adornmentWrapper = inputwrapper.find('.input-adornment')
+    expect(adornmentWrapper.hasClass('input-adornment-end')).toBe(true)
+  })
+})

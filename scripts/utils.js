@@ -25,14 +25,14 @@ const packages = findPackages(packagesDir)
 const components = findPackages(componentsDir)
 const themes = findPackages(themesDir)
 const targets = sortedPackages([
-  ...packages.map((pkg) => `@myntra/${pkg}`),
-  ...components.map((component) => `@myntra/uikit-component-${component}`),
-  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
+  ...packages.map((pkg) => `@applique-ui/${pkg}`),
+  ...components.map((component) => `@applique-ui/${component}`),
+  ...themes.map((theme) => `@applique-ui/theme-${theme}`),
 ])
 const targetsMap = sortedPackagesMap([
-  ...packages.map((pkg) => `@myntra/${pkg}`),
-  ...components.map((component) => `@myntra/uikit-component-${component}`),
-  ...themes.map((theme) => `@myntra/uikit-theme-${theme}`),
+  ...packages.map((pkg) => `@applique-ui/${pkg}`),
+  ...components.map((component) => `@applique-ui/${component}`),
+  ...themes.map((theme) => `@applique-ui/theme-${theme}`),
 ])
 
 function readPackage(name) {
@@ -57,7 +57,7 @@ function sortedPackagesMap(targets) {
     const pkg = readPackage(target)
 
     Object.keys(pkg.dependencies || {})
-      .filter((name) => name.startsWith('@myntra/'))
+      .filter((name) => name.startsWith('@applique-ui/'))
       .forEach((name) => op.addEdge(name, target))
   })
 
@@ -121,14 +121,14 @@ function fuzzyMatchTarget(query) {
  * @param {string} name - full component name
  */
 function isComponent(name) {
-  return /@myntra\/uikit-component-/.test(getFullName(name))
+  return components.map((pkg) => `@applique-ui/${pkg}`).includes(name)
 }
 
 /**
  * @param {string} name - full component name
  */
 function isTheme(name) {
-  return /@myntra\/uikit-theme-/.test(getFullName(name))
+  return /@applique-ui\/theme-/.test(getFullName(name))
 }
 
 /**
@@ -136,9 +136,9 @@ function isTheme(name) {
  */
 function getFullName(name) {
   name = getShortName(name)
-  if (packages.includes(name)) return `@myntra/${name}`
-  if (components.includes(name)) return `@myntra/uikit-component-${name}`
-  if (themes.includes(name)) return `@myntra/uikit-theme-${name}`
+  if (packages.includes(name)) return `@applique-ui/${name}`
+  if (components.includes(name)) return `@applique-ui/${name}`
+  if (themes.includes(name)) return `@applique-ui/theme-${name}`
 
   throw new Error(`Unknown package '${name}'`)
 }
@@ -147,7 +147,7 @@ function getFullName(name) {
  * @param {string} name
  */
 function getShortName(name) {
-  return name.replace(/^@myntra\/(uikit-component-|uikit-theme-)?/, '')
+  return name.replace(/^@applique-ui\/(theme-)?/, '')
 }
 
 /**

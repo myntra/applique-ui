@@ -1,4 +1,4 @@
-import { IconName } from '@myntra/uikit-component-icon'
+import { IconName } from '@applique-ui/icon'
 import ExclamationTriangleSolid from 'uikit-icons/svgs/ExclamationTriangleSolid'
 import ExclamationCircleSolid from 'uikit-icons/svgs/ExclamationCircleSolid'
 import CheckCircleSolid from 'uikit-icons/svgs/CheckCircleSolid'

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import AccordionItem from './accordion-item'
 import AccordionContext from './accordion-context'
-import { IconName } from '@myntra/uikit-component-icon'
+import { IconName } from '@applique-ui/icon'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
 import ChevronUpSolid from 'uikit-icons/svgs/ChevronUpSolid'
 

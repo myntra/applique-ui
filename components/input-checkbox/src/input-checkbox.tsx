@@ -41,6 +41,11 @@ export interface Props extends BaseProps {
    * A label element for the checkbox.
    */
   title?: ReactNode
+
+  /**
+   * Select type between a checkbox and a dashbox
+   */
+  boxtype?: string
 }
 
 /**
@@ -77,7 +82,11 @@ export default function InputCheckbox({
             readOnly ? null : (event) => onChange(Boolean(event.target.checked))
           }
         />
-        <span className={classnames('checkbox')} aria-hidden="true" />
+        {props.boxtype === 'dashbox' ? (
+          <span className={classnames('dashbox')} aria-hidden="true" />
+        ) : (
+          <span className={classnames('checkbox')} aria-hidden="true" />
+        )}
       </div>
       <div className={classnames('content', { disabled: disabled })}>
         {title}

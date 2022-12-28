@@ -1,1 +1,1 @@
-# @myntra/svg
+# @applique-ui/svg

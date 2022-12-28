@@ -1,0 +1,31 @@
+@import '@accoutrement';
+
+.top-nav-button {
+  padding: size('4x');
+  font-size: font-size('h4');
+  font-weight: 600;
+  line-height: size('5x');
+  color: color('gray-dark-base');
+  white-space: nowrap;
+  background-color: color('white');
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin: size('1x');
+
+  &:hover {
+    cursor: pointer;
+    background-color: color('primary-base-light');
+    border-bottom: 2px solid color('primary');
+  }
+
+  &-active {
+    color: color('primary');
+    border-bottom: 2px solid color('primary');
+  }
+
+  &-icon {
+    align-self: center;
+    width: size('5x');
+    padding-right: size('2x');
+  }
+}

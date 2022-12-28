@@ -1,0 +1,34 @@
+@import '@accoutrement';
+
+.sidebar-menu {
+  width: 100%;
+  padding: size('3x') size('4x');
+  margin-bottom: size('2x');
+  font-size: font-size('h4');
+  font-weight: 500;
+  line-height: size('5x');
+  color: color('gray-dark-base');
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &-active {
+    font-weight: 600;
+    color: color('primary');
+  }
+
+  &-dropdown-icon {
+    align-self: center;
+  }
+
+  &:hover {
+    background: color('primary-base-light');
+
+    @include border-radius('button');
+  }
+
+  &-sub-item {
+    padding: size('3x') size('4x') size('3x') size('12x');
+    text-align: left;
+  }
+}

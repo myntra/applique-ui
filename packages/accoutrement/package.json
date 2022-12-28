@@ -1,6 +1,6 @@
 {
-  "name": "@myntra/accoutrement",
-  "version": "1.13.101",
+  "name": "@applique-ui/accoutrement",
+  "version": "0.0.9",
   "style": "src/index.scss",
   "author": "Myntra",
   "license": "MIT",

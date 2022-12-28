@@ -1,1 +1,1 @@
-# @myntra/uikit-component-form
+# @applique-ui/uikit-component-form

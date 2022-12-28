@@ -105,7 +105,7 @@ export interface Props extends BaseProps {
     children: Array<any>
   }): JSX.Element
 
-  getCellKey?(index: number): 'string' | 'number'
+  getCellKey?(index: number): string
 }
 
 /**

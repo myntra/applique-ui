@@ -1,5 +1,5 @@
 import React, { Children, isValidElement, ReactElement } from 'react'
-import Button from '@myntra/uikit-component-button'
+import Button from '@applique-ui/button'
 
 import classnames from './section.module.scss'
 

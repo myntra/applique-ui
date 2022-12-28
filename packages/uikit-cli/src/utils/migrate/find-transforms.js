@@ -1,12 +1,3 @@
-// Required to load code modes.
-require('babel-register')({
-  babelrc: false,
-  ignore(filename) {
-    return !/(codemod-utils\/src|\.codemod\.js)/.test(filename)
-  },
-  presets: [require('babel-preset-es2015'), require('babel-preset-stage-1')],
-})
-
 const promised = require('@znck/promised')
 const glob = require('glob')
 const path = require('path')
@@ -15,7 +6,11 @@ async function findTransformFiles() {
   const paths = [
     path.resolve(
       process.cwd(),
-      `node_modules/@myntra/codemod-utils/codemods/unity-uikit/`
+      `node_modules/@applique-ui/codemod-utils/codemods/unity-uikit/`
+    ),
+    path.resolve(
+      process.cwd(),
+      `node_modules/@applique-ui/codemod-utils/codemods/uikit/`
     ),
   ]
 

@@ -37,8 +37,10 @@ $text-sizes: (
   'body': 14,
   'content': 12,
   'caption': 10,
-  'interface': 12,
-  'button': '#interface',
+  'small': 12,
+  'interface': '#small',
+  'table': '#small',
+  'button': '#small',
 );
 
 $-tokens-font-sizes: () !default;
@@ -87,20 +89,35 @@ $-default-typography: (
     'family': 'body',
     'weight': 400,
   ),
+  'small': (
+    'size': 'small',
+    'family': 'body',
+    'weight': 400,
+  ),
   'caption': (
     'size': 'caption',
     'family': 'body',
     'weight': 400,
   ),
+  'caption-revamp': (
+    'size': 'content',
+    'family': 'body',
+    'weight': 500,
+  ),
+  'caption-revamp-light': (
+    'size': 'content',
+    'family': 'body',
+    'weight': 400,
+  ),
   'button': (
-    'size': 'interface',
+    'size': 'small',
     'family': 'body',
     'weight': 500,
     'text-transform': uppercase,
     'letter-spacing': 0,
   ),
   'anchor': (
-    'size': 'interface',
+    'size': 'small',
     'family': 'body',
     'weight': 500,
   ),

@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import classnames from './small-step.module.scss'
 import { Props as StepProps } from './step'
-import Text from '@myntra/uikit-component-text'
-import Layout from '@myntra/uikit-component-layout'
+import Text from '@applique-ui/text'
+import Layout from '@applique-ui/layout'
 import StepSeparator from './step-separator'
 
 export interface Props extends BaseProps, StepProps {

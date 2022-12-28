@@ -1,9 +1,9 @@
 import React, { PureComponent, ReactNode } from 'react'
-import Icon, { IconName } from '@myntra/uikit-component-icon'
-import Text from '@myntra/uikit-component-text'
-import Loader from '@myntra/uikit-component-loader'
+import Icon, { IconName } from '@applique-ui/icon'
+import Text from '@applique-ui/text'
+import Loader from '@applique-ui/loader'
 import classnames from './button.module.scss'
-import { CAN_USE_HOOKS } from '@myntra/uikit-can-i-use'
+import { CAN_USE_HOOKS } from '@applique-ui/uikit-can-i-use'
 
 import Link from './link'
 import HookLink from './link-hook'
@@ -14,7 +14,7 @@ import Bell from 'uikit-icons/svgs/Bell'
 
 export interface Props extends BaseProps {
   /** The visual style to convey purpose of the button. */
-  type?: 'primary' | 'secondary' | 'link' | 'text'
+  type?: 'primary' | 'secondary' | 'tertiary' | 'warning' | 'link' | 'text'
   /** Will show the button as a notification button with the number of notifications. (provided)*/
   notifications?: number
   /** The label text of the button. */

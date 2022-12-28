@@ -1,7 +1,7 @@
 import React, { PureComponent, ReactNode } from 'react'
-import Layout from '@myntra/uikit-component-layout'
-import ButtonGroup from '@myntra/uikit-component-button-group'
-import Button from '@myntra/uikit-component-button'
+import Layout from '@applique-ui/layout'
+import ButtonGroup from '@applique-ui/button-group'
+import Button from '@applique-ui/button'
 
 import MonthGroup from './picker/month-group'
 import Month from './picker/month'

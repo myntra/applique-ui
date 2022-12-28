@@ -1,0 +1,42 @@
+$base-spacing: 16px;
+
+$base-font: 14px;
+
+.codeEditor {
+  font-family: inherit;
+  border: 1px solid #e9e9eb;
+  border-radius: 4px;
+
+  &__input {
+    position: relative;
+    max-width: 100%;
+    padding: $base-spacing * 2;
+    overflow: auto;
+    font-weight: 500;
+  }
+
+  &__output {
+    max-width: 100%;
+    padding: $base-spacing * 2;
+    overflow: auto;
+  }
+
+  &__background {
+    background: #f4f4f5;
+    border-radius: 4px;
+  }
+
+  &__action {
+    &-container {
+      position: absolute;
+      top: $base-spacing * 1.25;
+      right: 0;
+      padding-right: $base-spacing * 2;
+      background: #f4f4f5;
+    }
+  }
+
+  > * {
+    font-size: $base-font !important;
+  }
+}

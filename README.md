@@ -30,19 +30,19 @@ We do offer a varity of components which includes simple one's like Text and But
 Run the following command using npm:
 
 ```bash
-npm install @myntra/uikit --save
+npm install @applique-ui/uikit --save
 ```
 If you prefer Yarn, use the following command instead:
 
 ```bash
-yarn add @myntra/uikit
+yarn add @applique-ui/uikit
 ```
 
 ### Usage
 1. Import any of the provided components directly in your project:
 
 ```js
-import { Button, Layout, Text } from "@myntra/uikit"
+import { Button, Layout, Text } from "@applique-ui/uikit"
 ```
 
 2. Tell React to render the element in the DOM:

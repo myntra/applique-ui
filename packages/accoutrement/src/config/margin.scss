@@ -21,6 +21,7 @@ $margins: (
   'field': '#3x',
   'input-file.progress': '#5x',
   'list.checkbox': '#margin-field',
+  'input': '#small' '#margin-none',
 );
 
 $-tokens-margins: () !default;

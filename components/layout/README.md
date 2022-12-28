@@ -1,1 +1,1 @@
-# @myntra/uikit-component-layout
+# @applique-ui/uikit-component-layout

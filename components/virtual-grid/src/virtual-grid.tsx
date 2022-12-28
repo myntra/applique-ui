@@ -6,7 +6,7 @@ import {
   CellMeasure,
   MeasureCache,
   PositionManager,
-} from '@myntra/uikit-component-virtual-list'
+} from '@applique-ui/virtual-list'
 
 export interface ScrollPosition {
   scrollTop: number

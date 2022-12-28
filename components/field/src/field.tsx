@@ -18,7 +18,7 @@ export interface Props extends BaseProps {
   /**
    * Display an error message instead of deccription
    */
-  error?: ReactNode
+  error?: ReactNode | boolean
   /**
    * Visually conveys that the field is required.
    */
@@ -31,6 +31,14 @@ export interface Props extends BaseProps {
    * Block to show info about the field. Should be a react component.
    */
   fieldInfo?: ReactNode
+  /*
+   * Display a success message instead of description
+   */
+  success?: ReactNode
+  /**
+   * Display Info Icon
+   */
+  info?: Boolean
 }
 
 /**
@@ -41,7 +49,7 @@ export interface Props extends BaseProps {
  */
 export default function Field({
   title,
-  error,
+  error = false,
   description,
   required,
   htmlFor,
@@ -49,6 +57,7 @@ export default function Field({
   className,
   disabled,
   fieldInfo,
+  success,
   ...props
 }: Props) {
   return (
@@ -60,7 +69,7 @@ export default function Field({
     >
       <label
         id={htmlFor ? htmlFor + '__label' : null}
-        className={classnames('title')}
+        className={classnames('title', { error: !!error })}
         htmlFor={htmlFor}
       >
         <span>
@@ -69,19 +78,39 @@ export default function Field({
         </span>
         {isValidElement(fieldInfo) && fieldInfo}
       </label>
-      {Children.map(children, (child, index) => {
-        if (isValidElement(child)) {
-          return React.cloneElement(child, {
-            disabled: disabled,
-          } as any)
+      {Children.map(
+        children,
+        (
+          child: ReactNode & { props: { disabled: Boolean; error: Boolean } },
+          index
+        ) => {
+          if (isValidElement(child)) {
+            return React.cloneElement(child, {
+              __fieldContext: {
+                error: !!error || child.props.error,
+                disabled: disabled || child.props.disabled,
+              },
+            } as any)
+          }
+          return child
         }
-        return child
-      })}
-      {error || description ? (
+      )}
+      {error || description || success ? (
         <div className={classnames('meta')}>
           {error ? (
-            <div id={htmlFor ? htmlFor + '__error' : null} role="alert">
+            <div
+              id={htmlFor ? htmlFor + '__error' : null}
+              role="alert"
+              className={classnames({ error: !!error })}
+            >
               {Array.isArray(error) ? error.join(' ') : error}
+            </div>
+          ) : success ? (
+            <div
+              id={htmlFor ? htmlFor + '__success' : null}
+              className={classnames('success')}
+            >
+              {success}
             </div>
           ) : (
             description && (

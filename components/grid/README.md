@@ -1,1 +1,1 @@
-# @myntra/uikit-component-grid
+# @applique-ui/uikit-component-grid

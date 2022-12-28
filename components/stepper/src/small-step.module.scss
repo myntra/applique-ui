@@ -72,7 +72,7 @@
     flex-direction: column;
     #{ $self }__label {
       bottom: 50%;
-      left: size('3x') - (size('small') / 2);
+      left: size('3x') - (size('small') * 0.5);
       display: flex;
       margin-bottom: 0;
       background: transparent;

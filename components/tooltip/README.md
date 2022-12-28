@@ -1,1 +1,1 @@
-# @myntra/uikit-component-tooltip
+# @applique-ui/uikit-component-tooltip

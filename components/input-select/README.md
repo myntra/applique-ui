@@ -1,1 +1,1 @@
-# @myntra/uikit-component-input-select
+# @applique-ui/uikit-component-input-select

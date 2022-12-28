@@ -1,1 +1,1 @@
-# @myntra/rollup-plugin-classnames
+# @applique-ui/rollup-plugin-classnames

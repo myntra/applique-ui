@@ -1,5 +1,5 @@
 import { Context } from 'react'
-import { createContext } from '@myntra/uikit-context'
+import { createContext } from '@applique-ui/uikit-context'
 
 export interface TableContext {
   TD(props: BaseProps): any

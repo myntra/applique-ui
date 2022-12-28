@@ -21,7 +21,7 @@ targets.forEach((name) => {
   console.log(`Bootstrapping module: ${name}`)
   const pkgFile = path.join(rootDir, `package.json`)
   const pkg = {
-    name: `@myntra/uikit-component-${name}`,
+    name: `@applique-ui/${name}`,
     version,
     main: `dist/${shortName}.cjs.js`,
     module: `dist/${shortName}.esm.js`,
@@ -49,8 +49,8 @@ targets.forEach((name) => {
     }
     pkg.peerDependencies = {}
     pkg.dependencies = {
-      '@myntra/uikit-can-i-use': '1.13.*',
-      '@myntra/uikit-utils': '1.13.*',
+      '@applique-ui/uikit-can-i-use': '0.0.*',
+      '@applique-ui/uikit-utils': '0.0.*',
       'prop-types': '^15.7.2',
       'uikit-icons': 'npm:@myntra/uikit-icons@^1.0.9',
     }
@@ -64,24 +64,23 @@ targets.forEach((name) => {
 
   console.log(`Package file created at ${pkgFile}`)
   if (isComponent(name)) {
-    const readmeFile = path.join(rootDir, `example.mdx`)
+    const docDir = path.join(rootDir, 'docs')
+
+    if (!fs.existsSync(docDir)) fs.mkdirSync(docDir)
+
+    const readmeFile = path.join(docDir, `index.mdx`)
 
     if (!fs.existsSync(readmeFile)) {
-      const component = pascalCase(shortName)
       fs.writeFileSync(
         readmeFile,
         `
-import ${component} from './src/${shortName}'
+import Api from './Api.mdx'
 
-# ${component}
+# ${pascalCase(shortName)}
 
-<Documenter component={${component}}>
-
-\`\`\`jsx preview
-// TODO: Add example.
-\`\`\`
-
-</Documenter>
+<Tabs>
+    <Tabs.Tab title="APIs" ><Api components={props.components} /></Tabs.Tab>
+</Tabs>
 `.trimLeft()
       )
     }

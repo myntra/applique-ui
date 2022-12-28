@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import classnames from './input-file.module.scss'
-import Input from '@myntra/uikit-component-input-text'
-import Button from '@myntra/uikit-component-button'
-import { createRef } from '@myntra/uikit-utils'
+import Input from '@applique-ui/input-text'
+import Button from '@applique-ui/button'
+import { createRef } from '@applique-ui/uikit-utils'
 
-export type InputFileValidationFunction = {(file: FileList): void}
+export type InputFileValidationFunction = { (file: FileList): void }
 
 export interface Props extends BaseProps {
   placeholder?: string
@@ -42,11 +42,11 @@ export default class InputFile extends PureComponent<Props> {
   }
 
   runValidations = (files: FileList) => {
-    if(!this.props.validations) return
+    if (!this.props.validations) return
 
-    if(Array.isArray(this.props.validations)) {
-      for(const validation of this.props.validations) {
-        validation(files);
+    if (Array.isArray(this.props.validations)) {
+      for (const validation of this.props.validations) {
+        validation(files)
       }
 
       return
@@ -60,8 +60,8 @@ export default class InputFile extends PureComponent<Props> {
     try {
       this.runValidations(files)
       this.props.onChange && this.props.onChange(files)
-    } catch(e) {
-      this.props.onError && this.props.onError(e);
+    } catch (e) {
+      this.props.onError && this.props.onError(e)
     }
   }
 
@@ -90,6 +90,7 @@ export default class InputFile extends PureComponent<Props> {
           onClick={this.handleBrowseClick}
           value={this.filenames}
           title={this.filenames}
+          variant="standard"
         />
         <input
           {...props}
