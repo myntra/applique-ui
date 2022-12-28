@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-select",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/input-select.cjs.js",
   "module": "dist/input-select.esm.js",
   "types": "dist/index.d.ts",
