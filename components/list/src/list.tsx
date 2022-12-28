@@ -147,7 +147,7 @@ export default class List extends PureComponent<
       ? new Set(
           Array.isArray(this.props.value)
             ? this.props.value
-            : this.props.value?.split?.(',') || this.props.value
+            : this.props.value?.split?.(',') || [this.props.value]
         )
       : new Set()
   }
@@ -211,8 +211,6 @@ export default class List extends PureComponent<
 
     const { idForItem, items, isItemDisabled } = this.props
     const ids = this.selectedIDs
-
-    // let value = this.props.value ? (this.props.value as Array<any>).slice() : []
 
     for (let index = start; index <= end; ++index) {
       const id = idForItem(items[index])
@@ -308,7 +306,6 @@ export default class List extends PureComponent<
   }
 
   handleClick = ({ id, index }: { id: any; index: number }) => {
-    console.log(id, 'handleClick')
     this.setState({ activeIndex: index })
     this.updateValueById(id)
   }
@@ -354,7 +351,12 @@ export default class List extends PureComponent<
         onBlur={this.handleBlur}
         onKeyDown={this.handleKeyPress as any}
       >
-        {multiple ? (
+        {/**
+         * How should the select-all feature work if the list is virtualized?
+         * 1. Do you select only the items visible to the user?
+         * 2. Do you select every possible option irrespective of it being visible?
+         */}
+        {multiple && !virtualized ? (
           <li
             role="option"
             className={classnames('item', 'selectall', {
@@ -405,40 +407,6 @@ export default class List extends PureComponent<
           {children({ index, id, item })}
         </ListItem>
       )
-
-      // if (Array.isArray(item)) {
-      //   const key = Object.keys(item)[0]
-      //   const listValue = item[key]
-      //   return (
-      //     <div>
-      //       <div className={classnames('listheading')}>
-      //         {key}
-      //         <br className={classnames('hr1')} />
-      //       </div>
-      //       {listValue.map((currItem, currIndex) => {
-      //         var item = currItem
-      //         const id = idForItem(item)
-      //         const isSelected = selectedIDs.has(id)
-      //         const isActive = currIndex === activeIndex
-      //         const isDisabled = isItemDisabled(item)
-      //         return (
-      //           <ListItem {...{
-      //             isSelected,
-      //             isActive,
-      //             isDisabled,
-      //             id: `${this.idPrefix}-option-${currIndex}`,
-      //             index: currIndex,
-      //             style,
-      //             interaction: !this.props.onChange ? 'none' : multiple ? 'checkbox' : 'radio',
-      //             handleClick: () => !isDisabled && this.handleClick({ id, index: currIndex })
-      //           }}>
-      //             {children({ index: currIndex, id, item })}
-      //           </ListItem>
-      //         )
-      //       })}
-      //      </div>
-      //   )
-      // }
     }
 
     if (virtualized) {
