@@ -82,3 +82,33 @@ return (
 ```
 
 </Documenter>
+
+### Virtualized Options
+
+If the number of options is greater than 50 then the options list is virtualized.
+
+<Documenter>
+
+```preview
+const [value, setValue] = React.useState();
+const [options] = React.useState(
+  window.Array(60)
+    .fill(0)
+    .map((_, idx) => ({ label: idx + 1, value: idx }))
+);
+
+return (
+<>
+  {'Label'}
+  <InputSelect
+    multiple
+    options={options}
+    value={value} onChange={setValue}
+  />
+</>
+)
+```
+
+</Documenter>
+
+
