@@ -72,3 +72,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 1080px) {
+  .top-nav-header-content-quick-links {
+    box-shadow: 1.5rem 0 3.5rem 1.5rem #aaa;
+  }
+}

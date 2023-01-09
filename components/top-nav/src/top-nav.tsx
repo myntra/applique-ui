@@ -8,7 +8,7 @@ import {
   NAVIGATION_ITEM_L1_INTERFACE,
   MENU_TYPES,
   HOVER_MENU_COLUMN_BUCKET,
-  QUICKLINK_BUTTON_TYPE
+  QUICKLINK_BUTTON_TYPE,
 } from './config'
 import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
@@ -112,7 +112,11 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
                 )
               )}
             </Layout>
-            <Layout type="stack" gutter="none">
+            <Layout
+              type="stack"
+              gutter="none"
+              className={classnames('top-nav-header-content-quick-links')}
+            >
               {quickLinks.map((link) => (
                 <QuickLink link={link} />
               ))}
