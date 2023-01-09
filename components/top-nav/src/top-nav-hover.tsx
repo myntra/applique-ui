@@ -56,7 +56,7 @@ function getFilteredNavs(config) {
  */
 export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   hoverItemRef = null
-  
+
   state = {
     left: null,
   }
@@ -65,8 +65,9 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
     this.setState({
       left:
         this.props.parentPositions.left + this.hoverItemRef?.offsetWidth >
-        screen.width
-          ? screen.width - this.hoverItemRef?.offsetWidth
+        document.documentElement.clientWidth
+          ? document.documentElement.clientWidth -
+            this.hoverItemRef?.offsetWidth
           : this.props.parentPositions.left,
     })
   }
