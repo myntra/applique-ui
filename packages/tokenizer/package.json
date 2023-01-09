@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/tokenizer",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
   "types": "dist/index.d.ts",

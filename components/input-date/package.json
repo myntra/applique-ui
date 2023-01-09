@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-date",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "dist/input-date.cjs.js",
   "module": "dist/input-date.esm.js",
   "types": "dist/index.d.ts",
