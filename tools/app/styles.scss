@@ -14,27 +14,27 @@ $table-type-column-color: #4f47c8;
 
 .mdx__container {
   > div > div > pre > div > div > div {
-    > :global(.u-layout-row.u-accordion-item-container.u-layout-none) {
+    > :global(.aui-layout-row.aui-accordion-item-container.aui-layout-none) {
       background-color: $text-color-white;
 
-      > div > :global(.u-icon-primary.u-icon-svg) {
+      > div > :global(.aui-icon-primary.aui-icon-svg) {
         margin-right: 14px;
       }
     }
 
-    > div > :global(.u-grid-column.u-grid-is-one-quarter) > button {
+    > div > :global(.aui-grid-column.aui-grid-is-one-quarter) > button {
       text-transform: capitalize !important;
     }
   }
 
-  > div > :global(.u-tabs-pane.u-tabs-primary) {
-    > :global(.u-tabs-tab.u-tabs-primary) {
+  > div > :global(.aui-tabs-pane.aui-tabs-primary) {
+    > :global(.aui-tabs-tab.aui-tabs-primary) {
       color: $text-color-gray4;
     }
-    > :global(.u-tabs-tab.u-tabs-primary.u-tabs-active) {
+    > :global(.aui-tabs-tab.aui-tabs-primary.aui-tabs-active) {
       color: $text-color-gray3;
     }
-    > :global(.u-tabs-tab.u-tabs-primary.u-tabs-active::after) {
+    > :global(.aui-tabs-tab.aui-tabs-primary.aui-tabs-active::after) {
       background-color: $text-color-primary-pink;
     }
   }

@@ -26,7 +26,7 @@
   position: fixed;
 }
 
-:global(.u-modal-is-open) .content {
+:global(.aui-modal-is-open) .content {
   @include z-index('modal.dropdown');
 }
 

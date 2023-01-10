@@ -71,7 +71,7 @@ const config = {
             .split('/')
             .shift()
 
-          return `u-${component}-${name}`
+          return `aui-${component}-${name}`
         },
       },
     }),

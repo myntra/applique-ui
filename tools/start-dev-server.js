@@ -213,7 +213,7 @@ function startWebpackDevServer(component, port) {
             .split('/')
             .shift()
 
-          return `u-${component}-${name}`
+          return `aui-${component}-${name}`
         },
         // namedExport: true,
         // exportOnlyLocals: false,

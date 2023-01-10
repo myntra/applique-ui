@@ -27,8 +27,8 @@
 
   @include typography('body');
 
-  :global(.u-table-simple),
-  :global(.u-table-virtual) {
+  :global(.aui-table-simple),
+  :global(.aui-table-virtual) {
     // margin-right: negative(padding-right('container'));
     margin-right: negative(size('6x'));
     // margin-left: negative(padding-left('container'));

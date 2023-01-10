@@ -81,8 +81,8 @@ export default class Modal extends PureComponent<Props> {
     this.removeBodyClass()
   }
 
-  addBodyClass = () => document.body.classList.add('u-modal-is-open')
-  removeBodyClass = () => document.body.classList.remove('u-modal-is-open')
+  addBodyClass = () => document.body.classList.add('aui-modal-is-open')
+  removeBodyClass = () => document.body.classList.remove('aui-modal-is-open')
 
   handleOpen = () => {
     this.setState({ isOpen: true }, this.addBodyClass)
