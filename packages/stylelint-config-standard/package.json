@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/stylelint-config-standard",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "main": "src/index.js",
   "module": "dist/stylelint-config-standard.esm.js",
   "types": "dist/index.d.ts",
