@@ -35,4 +35,14 @@ function getPathToInfoMapping(navigationConfig, navigationKey) {
   return pathMap
 }
 
-export { getPathToInfoMapping }
+function checkIfEmpty(config) {
+  const directLink = config.filter(
+    (nav) => nav.type === MENU_TYPES.MENU_DIRECT_LINK
+  )
+  const noEmptyMenu = config
+    .filter((nav) => nav.type === MENU_TYPES.MENU)
+    .filter((item) => item.config.length)
+  return !(directLink.length || noEmptyMenu.length)
+}
+
+export { getPathToInfoMapping, checkIfEmpty }

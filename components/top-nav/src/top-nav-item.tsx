@@ -4,6 +4,7 @@ import Icon from '@applique-ui/icon'
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
 import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import { checkIfEmpty } from './utils'
 
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -54,8 +55,9 @@ export default class TopNavItem extends PureComponent<
     const { itemData, isActive } = this.props
     const isDirectLink = itemData.routingInfo && itemData.noHover
     const isMenu = Array.isArray(itemData.config) && itemData.config.length
+    const isNonEmptyMenu = isMenu && !checkIfEmpty(itemData.config)
 
-    if (isDirectLink || isMenu) {
+    if (isDirectLink || isNonEmptyMenu) {
       return (
         <button
           ref={(ref) => {
@@ -80,7 +82,7 @@ export default class TopNavItem extends PureComponent<
             />
           )}
           {itemData.label}
-          {this.state.isHovering && isMenu && (
+          {this.state.isHovering && isNonEmptyMenu && (
             <TopNavHover
               navTabConfig={itemData.config}
               disableHover={this.disableHover}
