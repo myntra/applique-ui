@@ -11,18 +11,18 @@
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    padding: 0 size('1x');
+    margin: 0 size('1x');
     margin-bottom: size('6x');
     text-align: left;
-    margin: 0 size('1x');
-    padding: 0 size('1x');
 
     &-title {
+      padding: 0 size('1x');
       margin: 0 0 size('2x') 0;
       font-size: size('4x');
       font-weight: 300;
       line-height: size('6x');
       color: color('gray-dark-base-2');
-      padding: 0 size('1x');
     }
 
     &-hr {
@@ -36,6 +36,7 @@
       padding: size('1x') size('2x');
       margin: size('1x') 0;
       font-size: font-size('h6');
+      font-weight: 400;
       color: color('gray-dark-base');
       text-align: left;
       cursor: pointer;
@@ -44,6 +45,7 @@
 
       &:hover {
         background-color: color('primary-base-light');
+
         @include border-radius('button');
       }
     }
@@ -66,10 +68,10 @@
 
       &:hover {
         background-color: color('primary-base-light');
+
         @include border-radius('button');
       }
     }
-
   }
 }
 

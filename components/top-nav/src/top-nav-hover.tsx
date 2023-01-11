@@ -121,7 +121,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
           {directs && directs.length ? (
             <Layout
               type="row"
-              gutter="xxl"
+              gutter="xl"
               className={classnames('hover-item-direct')}
             >
               {directs.map((directLink) => {
