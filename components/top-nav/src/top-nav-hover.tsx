@@ -5,45 +5,16 @@ import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'
 
 export interface TopNavHoverProps extends BaseProps {
-  navTabConfig: Array<NAVIGATION_ITEM_L2_INTERFACE>
+  navTabConfig: {
+    menus: Array<Array<NAVIGATION_ITEM_L2_INTERFACE>>,
+    directs: Array<NAVIGATION_ITEM_L2_INTERFACE>
+  }
   handleSubNavItemClick?: Function
   disableHover: MouseEventHandler
   parentPositions: {
     left: number
     bottom: number
   }
-}
-
-function getFilteredNavs(config) {
-  return config.reduce(
-    (aggregate, currentValue) => {
-      switch (currentValue.type) {
-        case MENU_TYPES.MENU:
-          if (
-            currentValue.config.length &&
-            currentValue.hoverMenuColumnBucket >= 0 &&
-            currentValue.hoverMenuColumnBucket < 4
-          ) {
-            const menus = aggregate.menus
-            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
-            return { ...aggregate, menus }
-          } else {
-            return aggregate
-          }
-        case MENU_TYPES.MENU_DIRECT_LINK:
-          return {
-            ...aggregate,
-            directs: [...aggregate.directs, currentValue],
-          }
-        default:
-          return aggregate
-      }
-    },
-    {
-      menus: new Array([], [], [], []),
-      directs: [],
-    }
-  )
 }
 
 /**
@@ -75,7 +46,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   render() {
     const { navTabConfig, disableHover, parentPositions } = this.props
 
-    const { menus, directs } = getFilteredNavs(navTabConfig)
+    const { menus, directs } = navTabConfig
 
     return (
       <div
