@@ -3,7 +3,7 @@
 .hover-item {
   position: fixed;
   z-index: 6;
-  padding: size('8x') size('6x');
+  padding: size('8x') size('4x') 0px size('4x');
   background-color: color('white');
   box-shadow: shadow('topnav-hover');
 
