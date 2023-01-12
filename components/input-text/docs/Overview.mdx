@@ -38,9 +38,13 @@ An Input comes with a label display only one line of text
 const [value, setValue] = React.useState();
 
 return (
-    <Field title="Label">
-        <InputText value={value} onChange={setValue} placeholder='Type / Scan'/>
-    </Field>
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputText value={value} onChange={setValue} placeholder='Type / Scan'/>
+            </Field>
+        </Grid.Column>
+    </Grid>
 )
 ```
 </Documenter>
@@ -55,9 +59,13 @@ An Input comes with a label and grow to accommodate multiple lines of text
 const [value, setValue] = React.useState();
 
 return (
-    <Field title="Label">
-        <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
-    </Field>
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
+            </Field>
+        </Grid.Column>
+    </Grid>
 )
 ```
 </Documenter>
@@ -72,9 +80,18 @@ An Input comes with a label and prefix information.
 const [value, setValue] = React.useState();
 
 return (
-    <Field title="Label">
-        <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} disabled/>
-    </Field>
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} disabled/>
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputText value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} readOnly/>
+            </Field>
+        </Grid.Column>
+    </Grid>
 )
 ```
 </Documenter>
@@ -91,15 +108,18 @@ const [cost, setCost] = React.useState();
 
 
 return (
-    <>
-        <Field title="Label">
-            <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
-        </Field>
-        <br/>
-        <Field title="Label">
-            <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
-        </Field>
-    </>
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+            </Field>
+        </Grid.Column>
+    </Grid>
 )
 ```
 </Documenter>
@@ -125,23 +145,28 @@ const InfoIcon = ({ children, title }) => (
 )
 
 return (
-    <>
-        <Field title="Label" description="Helper Text" required>
-            <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
-        </Field>
-        <br/>
-        <Field title="Label" success="Success">
-            <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
-        </Field>
-        <br/>
-        <Field title="Label" error="Error Message">
-            <InputText value={cost} onChange={setCost} placeholder='Type / Scan' error />
-        </Field>
-        <br/>
-        <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
-            <InputText value={cost} onChange={setCost} placeholder='Type / Scan' />
-        </Field>
-    </>
+    <Grid gapless multiline>
+        <Grid.Column size="one-third">
+            <Field title="Label" description="Helper Text" required>
+                <InputText value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" success="Success">
+                <InputText value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" error="Error Message">
+                <InputText value={cost} onChange={setCost} placeholder='Type / Scan' error />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+                <InputText value={cost} onChange={setCost} placeholder='Type / Scan' />
+            </Field>
+        </Grid.Column>
+    </Grid>
 )
 ```
 </Documenter>
