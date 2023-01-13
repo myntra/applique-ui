@@ -28,6 +28,7 @@ export interface NAVIGATION_ITEM_L1_INTERFACE {
   noHover: boolean
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
   dispatchFunctionObject?: Function
+  footerMessage?: string
 }
 
 export interface NAVIGATION_ITEM_L2_INTERFACE {

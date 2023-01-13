@@ -22,6 +22,7 @@ export interface TopNavProps extends BaseProps {
   dispatchFunction: Function
   navigationKey: String
   currentNavigationValue: String
+  additionalHeader?: Node
 }
 
 interface TopNavState {
@@ -86,6 +87,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
     const configurations = this.props.config
     const { quickLinks, logo } = configurations
+    const { additionalHeader } = this.props;
 
     return (
       <div className={classnames('top-nav')}>
@@ -123,6 +125,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
             </Layout>
           </div>
         </Layout>
+        {additionalHeader}
         <Layout
           type="stack"
           gutter="large"
