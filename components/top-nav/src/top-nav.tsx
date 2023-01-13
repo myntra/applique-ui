@@ -90,7 +90,11 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     const { additionalHeader } = this.props;
 
     return (
-      <div className={classnames('top-nav')}>
+      <Layout 
+        type="row" 
+        gutter="none" 
+        className={classnames('top-nav')}
+      >
         <Layout
           gutter="xxxl"
           type="stack"
@@ -136,7 +140,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
             {this.props.children}
           </div>
         </Layout>
-      </div>
+      </Layout>
     )
   }
 }
