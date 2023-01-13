@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/table",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "main": "dist/table.cjs.js",
   "module": "dist/table.esm.js",
   "types": "dist/index.d.ts",
