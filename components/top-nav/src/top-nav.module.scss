@@ -42,7 +42,6 @@
 
   &-page-content {
     height: calc(100% - 54px);
-    padding: size('3x') size('4x');
     background: #f3f5f7;
 
     &-sidebar {
@@ -54,6 +53,7 @@
       background-color: color('white');
       -ms-overflow-style: none;
       scrollbar-width: none;
+      margin: 10px size('4x');
 
       &::-webkit-scrollbar {
         display: none;
@@ -73,7 +73,7 @@
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1400px) {
   .top-nav-header-content-quick-links {
     box-shadow: 1.5rem 0 3.5rem 1.5rem #aaa;
   }

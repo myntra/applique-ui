@@ -123,6 +123,7 @@ export default class TopNavItem extends PureComponent<
                 bottom: this.tabItemRef.getBoundingClientRect().bottom,
                 left: this.tabItemRef.getBoundingClientRect().left,
               }}
+              footerMessage={itemData?.footerMessage}
             />
           )}
         </button>

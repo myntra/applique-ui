@@ -1,11 +1,14 @@
 @import '@accoutrement';
 
-.hover-item {
-  position: fixed;
+.hover-container {
+  position: absolute;
+  box-shadow: shadow('topnav-hover');
   z-index: 6;
+}
+
+.hover-item {
   padding: size('8x') size('4x') 0px size('4x');
   background-color: color('white');
-  box-shadow: shadow('topnav-hover');
 
   &-menu {
     display: flex;
@@ -49,6 +52,15 @@
         @include border-radius('button');
       }
     }
+  }
+
+  &-footer {
+    padding: size('2x') size('4x') size('2x') size('4x');
+    background-color: #E7E7E8;
+    font-size: 12px;
+    text-align: left;
+    height: 30px;
+    line-height: 14px;
   }
 
   &-menu + &-menu {
