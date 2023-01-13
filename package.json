@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "0.0.16",
+  "version": "0.0.17",
   "engines": {
     "node": ">=14.17.6"
   },
