@@ -12,8 +12,8 @@ export const HOVER_MENU_COLUMN_BUCKET = {
 }
 
 export const QUICKLINK_BUTTON_TYPE = {
-  PRIMARY: "primary",
-  SECONDARY: "secondary"
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
 }
 
 export interface ROUTING_INFO_INTERFACE {

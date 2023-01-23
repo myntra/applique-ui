@@ -258,7 +258,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context': link:../../packages/uikit-context
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -276,7 +276,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       name-initials: 0.1.3
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -292,7 +292,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -316,7 +316,7 @@ importers:
       '@applique-ui/text': link:../text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -332,7 +332,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -356,7 +356,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context': link:../../packages/uikit-context
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -376,7 +376,7 @@ importers:
       '@applique-ui/dropdown': link:../dropdown
       '@applique-ui/list': link:../list
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -392,7 +392,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -418,7 +418,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -436,7 +436,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -460,7 +460,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -478,7 +478,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -524,7 +524,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context': link:../../packages/uikit-context
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -542,7 +542,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -563,7 +563,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -588,7 +588,7 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       intersection-observer-polyfill: 0.1.0
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -606,7 +606,7 @@ importers:
       '@applique-ui/input-text': link:../input-text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -642,7 +642,7 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       date-fns: 2.29.3
       dayjs: 1.11.7
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -660,7 +660,7 @@ importers:
       '@applique-ui/button': link:../button
       '@applique-ui/input-text': link:../input-text
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -678,7 +678,7 @@ importers:
       '@applique-ui/input-text': link:../input-text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -702,7 +702,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       luxon: 1.28.0
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -720,7 +720,7 @@ importers:
       '@applique-ui/input-text': link:../input-text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -736,7 +736,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -762,7 +762,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       sifter: 0.5.4
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -780,7 +780,7 @@ importers:
       '@applique-ui/icon': link:../icon
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -800,7 +800,7 @@ importers:
       '@applique-ui/input-text': link:../input-text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -814,7 +814,7 @@ importers:
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -838,7 +838,7 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       '@applique-ui/virtual-list': link:../virtual-list
       scroll-into-view-if-needed: 2.2.31
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -854,7 +854,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -875,7 +875,7 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
       resize-observer-polyfill: 1.5.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
       react-dom: 16.14.0_react@18.2.0
@@ -896,7 +896,7 @@ importers:
       '@applique-ui/portal': link:../portal
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -920,7 +920,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context': link:../../packages/uikit-context
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -936,7 +936,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -954,7 +954,7 @@ importers:
       '@applique-ui/icon': link:../icon
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -973,7 +973,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -992,7 +992,7 @@ importers:
       '@applique-ui/text': link:../text
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1016,7 +1016,7 @@ importers:
       '@applique-ui/grid': link:../grid
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1034,7 +1034,7 @@ importers:
       '@applique-ui/button': link:../button
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1058,7 +1058,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1094,7 +1094,7 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       '@applique-ui/virtual-grid': link:../virtual-grid
       '@applique-ui/virtual-list': link:../virtual-list
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1110,7 +1110,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1124,7 +1124,7 @@ importers:
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1142,7 +1142,7 @@ importers:
       '@applique-ui/dropdown': link:../dropdown
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1166,7 +1166,7 @@ importers:
       '@applique-ui/list': link:../list
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1182,7 +1182,7 @@ importers:
       '@types/react': 17.0.2
       prop-types: ^15.7.2
       react: '>=15.4'
-      uikit-icons: npm:@myntra/uikit-icons@^1.0.9
+      uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
       '@applique-ui/layout': link:../layout
@@ -1190,7 +1190,7 @@ importers:
       '@applique-ui/uikit-context': link:../../packages/uikit-context
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       prop-types: 15.8.1
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1208,7 +1208,7 @@ importers:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       '@applique-ui/virtual-list': link:../virtual-list
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
     devDependencies:
@@ -1228,7 +1228,7 @@ importers:
       '@applique-ui/measure': link:../measure
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
-      uikit-icons: /@myntra/uikit-icons/1.0.37
+      uikit-icons: /@myntra/uikit-icons/1.0.42
     optionalDependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -3330,6 +3330,14 @@ packages:
     engines: {node: '>=8.0'}
     optionalDependencies:
       react: 18.2.0
+    dev: true
+
+  /@myntra/uikit-icons/1.0.42:
+    resolution: {integrity: sha512-r8nCV/T4lumdEVy/maV0st2tcctybSjcOmlxiEmbxEowoI96dYiyn0bXinCSDdmsaIXzuEmKedk5d9HRSKpBHA==}
+    engines: {node: '>=8.0'}
+    optionalDependencies:
+      react: 18.2.0
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
