@@ -87,14 +87,10 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
     const configurations = this.props.config
     const { quickLinks, logo } = configurations
-    const { additionalHeader } = this.props;
+    const { additionalHeader } = this.props
 
     return (
-      <Layout 
-        type="row" 
-        gutter="none" 
-        className={classnames('top-nav')}
-      >
+      <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
           gutter="xxxl"
           type="stack"
@@ -105,7 +101,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           <div className={classnames('top-nav-header-content-container')}>
             <Layout
               type="stack"
-              gutter="none"
+              gutter="small"
               className={classnames('top-nav-header-content-tabs')}
             >
               {Object.entries(configurations.navigationConfig).map(
