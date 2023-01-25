@@ -90,7 +90,7 @@ export default class InputFile extends PureComponent<Props> {
           onClick={this.handleBrowseClick}
           value={this.filenames}
           title={this.filenames}
-          variant="standard"
+          variant="bordered"
         />
         <input
           {...props}
