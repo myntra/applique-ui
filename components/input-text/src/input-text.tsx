@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from './input-text.module.scss'
 import Icon, { IconName } from '@applique-ui/icon'
-import SpinnerSolid from 'uikit-icons/svgs/SpinnerSolid'
 
 export interface Props extends BaseProps {
   /** Sets the text format for the field. */
