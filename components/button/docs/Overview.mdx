@@ -226,3 +226,22 @@ return (
 ```
 
 </Documenter>
+
+## Interactions
+The <i>loading</i> prop can be used to show loading status.
+
+```preview
+function Example() {
+  const [isLoading, setLoading] = React.useState(false)
+
+  React.useEffect(() => {
+    if (isLoading) setTimeout(setLoading, 3000, false)
+  }, [isLoading])
+
+  return (
+    <Button onClick={() => setLoading(true)} loading={isLoading}>
+      {'Start Now'}
+    </Button>
+  )
+}
+```
