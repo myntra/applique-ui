@@ -1,0 +1,221 @@
+
+<br />
+
+<Documenter >
+
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+</Documenter>
+
+## Examples
+
+# Step
+<Documenter>
+
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+  </Stepper>
+)
+```
+
+</Documenter>
+
+# Small Step
+
+<Documenter>
+
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM'>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' showLabel/>
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' />
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' /> 
+  </Stepper>
+)
+```
+
+</Documenter>
+
+# Examples
+
+## Without Small Steps
+
+### First step
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### Second step completed
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' completed/>
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### All steps completed
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' completed/>
+    <Stepper.Step label="Step3" completed/>
+    <Stepper.Step label="Step4" completed/>
+  </Stepper>
+)
+```
+
+### Error step 
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed />
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' completed/>
+    <Stepper.Step label="Step3" error/>
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+## With Small Steps
+
+### First step
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM'>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' />
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' />
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### First small step completed
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' completed />
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' />
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### All small steps completed
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' completed />
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' completed/>
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM'/>
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### Small step with error
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' completed />
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' error/>
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM'/>
+    <Stepper.Step label="Step3" />
+    <Stepper.Step label="Step4" />
+  </Stepper>
+)
+```
+
+### All steps completed
+```preview
+return (
+  <Stepper>
+    <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed>
+      <Stepper.SmallStep label="Step1.1" description='12 May; 12:00 PM' completed />
+      <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' completed/>
+    </Stepper.Step>
+    <Stepper.Step label="Step2" description='12 May; 12:00 PM' completed/>
+    <Stepper.Step label="Step3" completed/>
+    <Stepper.Step label="Step4" completed/>
+  </Stepper>
+)
+```
+
+## Vertical Stepper
+
+## Without Small Steps - Vertical
+
+```preview
+return (
+  <div style={{
+    height: '500px'
+  }}>
+    <Stepper orientation="vertical">
+      <Stepper.Step label="Step1" description='12 May; 12:00 PM' />
+      <Stepper.Step label="Step2" description='12 May; 12:00 PM' />
+      <Stepper.Step label="Step3" />
+      <Stepper.Step label="Step4" />
+    </Stepper>
+  </div>
+)
+
+```
+
+## With small steps - Vertical
+
+```preview
+return (
+  <div style={{
+    height: '500px'
+  }}>
+    <Stepper orientation="vertical">
+      <Stepper.Step label="Step1" description='12 May; 12:00 PM' completed />
+      <Stepper.Step label="Step2" description='12 May; 12:00 PM'>
+        <Stepper.SmallStep label="Step1.1" completed />
+        <Stepper.SmallStep label="Step1.2" description='12 May; 12:00 PM' completed />
+      </Stepper.Step>
+      <Stepper.Step label="Step3" />
+      <Stepper.Step label="Step4" />
+    </Stepper>
+  </div>
+)
+
+```

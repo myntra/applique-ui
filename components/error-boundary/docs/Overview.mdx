@@ -1,0 +1,23 @@
+<br />
+
+<Documenter>
+
+```preview
+function Example() {
+  return (
+    <ErrorBoundary renderFallback={Fallback} >
+      <ErroroneousComponent />
+    </ErrorBoundary>
+  )
+}
+
+function Fallback() {
+  return <p>{'Oops!!! Fallback component'}</p>
+}
+
+function ErroroneousComponent({ foo }) {
+  return <div>{foo.length}</div>
+}
+```
+
+</Documenter>

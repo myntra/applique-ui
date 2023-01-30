@@ -1,0 +1,58 @@
+<br />
+
+<Documenter>
+
+```preview
+return (
+  <Icon name={Bell}/>
+)
+```
+
+</Documenter>
+
+## Icon size
+
+```preview
+return (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'column',
+    height: '200px'
+  }}>
+    <Icon name={BoxSolid} fontSize="small" />
+    <Icon name={BoxSolid} fontSize="medium"/>
+    <Icon name={BoxSolid} fontSize="large"/>
+  </div>
+)
+```
+
+## Icon color
+
+```preview
+return (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'space-around'
+  }}>
+    <Icon name={BoxSolid}/>
+    <Icon name={BoxSolid} fontSize="light"/>
+    <Icon name={BoxSolid} color="primary"/>
+    <Icon name={BoxSolid} fontSize="success"/>
+    <Icon name={BoxSolid} fontSize="warning"/>
+    <Icon name={BoxSolid} fontSize="error"/>
+    <Icon name={BoxSolid} fontSize="disabled"/>
+  </div>
+)
+```
+
+## Spinning Icons
+
+A icon can be set to spin indefinitely. This can be used to create inline loaders.
+
+```preview
+return (
+  <Icon name="sync" spin />
+)
+```

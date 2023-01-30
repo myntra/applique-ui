@@ -1,0 +1,157 @@
+
+<br />
+
+<Documenter>
+
+```preview
+return (
+  <Layout type="stack">
+    <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+  </Layout>
+)
+```
+
+</Documenter>
+
+## [Stack Layout](#stack)
+
+### You can assign relative spaces to elements.
+
+```preview
+return (
+  <Layout type="stack" space={[1,2,1]}>
+    <div style={{ padding: '16px', border: '1px solid' }}>25%</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>50%</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>25%</div>
+  </Layout>
+)
+```
+
+### Skip value in space to use auto width.
+
+```preview
+return (
+  <Layout type="stack" space={[,1,]}>
+    <div style={{ padding: '16px', border: '1px solid' }}>Auto</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Fill</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Auto</div>
+  </Layout>
+)
+```
+
+### Move items to right.
+
+```preview
+return (
+  <Layout type="stack" space={[1]}>
+    <div />
+    <div style={{ padding: '16px', border: '1px solid' }}>A column on right.</div>
+  </Layout>
+)
+```
+
+### Choose distribution to get the required layout.
+
+```preview
+return (
+  <>
+    <Layout type="stack" distribution="spaceBetween">
+      <div style={{ padding: '16px', border: '1px solid' }}>Optimize</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Space</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Between</div>
+    </Layout>
+    <Layout type="stack" distribution="spaceAround">
+      <div style={{ padding: '16px', border: '1px solid' }}>Space</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Around</div>
+    </Layout>
+  </>
+)
+```
+
+### Wrap elements into multiple lines.
+
+```preview
+return (
+  <Layout type="stack" wrap>
+    <div style={{ padding: '16px', border: '1px solid', width: '40%' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid', width: '40%' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid', width: '40%' }}>Three</div>
+  </Layout>
+)
+```
+
+## [Row Layout](#row)
+
+```preview
+return (
+  <>
+    <Layout type="row" space={[1,2,1]}>
+      <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+      <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+    </Layout>
+  </>
+)
+```
+
+## Gutter width
+
+```preview
+return (
+  <Layout type="row" space={[1,2,1]} gutter="large">
+    <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+  </Layout>
+)
+```
+
+```preview
+return (
+  <Layout type="stack" gutter="none">
+    <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+  </Layout>
+)
+```
+
+## Stack
+
+<Documenter>
+
+```preview
+return (
+  <Layout type="stack">
+    <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+  </Layout>
+)
+```
+
+</Documenter>
+
+## Row
+
+<Documenter>
+
+```preview
+return (
+  <Layout type="row">
+    <div style={{ padding: '16px', border: '1px solid' }}>One</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Two</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Three</div>
+    <div style={{ padding: '16px', border: '1px solid' }}>Four</div>
+  </Layout>
+)
+```
+
+</Documenter>

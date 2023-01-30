@@ -1,0 +1,166 @@
+<br />
+
+<Documenter>
+
+```preview
+const [name, setName] = React.useState();
+const [gender, setGender] = React.useState();
+const [dob, setDOB] = React.useState();
+const [genderOptions] = React.useState([
+  { value: 1, label: 'Female' },
+  { value: 2, label: 'Male' },
+  { value: 3, label: 'Other' },
+]);
+const handleSubmit = React.useCallback(() => {
+  console.log({ name, gender, email, dob })
+});
+const handleReset = React.useCallback(() => {
+  setName(null)
+  setGender(null)
+  setDOB(null)
+}, [setName, setGender, setDOB]);
+
+return (
+  <Form title="Signup to UIKit" onSubmit={handleSubmit}>
+    <Form.Text
+      label="Name"
+      value={name}
+      onChange={setName}
+      description="Your full name"
+    />
+
+    <Form.Select
+      label="Gender"
+      options={genderOptions}
+      value={gender}
+      onChange={setGender}
+      description="Gender"
+    />
+
+    <Form.Date
+      label="Date of Birth"
+      value={dob}
+      onChange={setDOB}
+      description="Your date of birth"
+    />
+
+    <Form.Action onClick={handleReset}>Reset</Form.Action>
+    <Form.Action type="primary" htmlType="submit">Signup</Form.Action>
+  </Form>
+)
+```
+
+</Documenter>
+
+## Available Form Fields
+
+- [Form.CheckBox](./input-checkbox)
+- [Form.Date](./input-date)
+- [Form.Masked](./input-masked)
+- [Form.Number](./input-number)
+- [Form.Select](./input-select)
+- [Form.Radio](./input-radio)
+- [Form.Text](./input-text)
+- [Form.TextArea](./input-text-area)
+- [Form.File](./input-file)
+
+## Examples
+
+### Form with single onChange for all fields
+
+```preview
+const [value, setValue] = React.useState({brand: ''})
+const onSubmit = React.useCallback(value => console.log(value))
+
+return (
+  <>
+    <Form title="Search Handover" onSubmit={onSubmit} value={value} onChange={setValue} defaultFieldSize={3}>
+      <Form.Select multiple options={[{ value: 'NIKE', label: 'Nike' }, { value: 'PUMA', label: 'Puma' }]} label="Brand" value={value.brand}/>
+      <Form.Text label="Article Type" />
+      <Form.Radio options={[{ value: 'MEN', title: 'Men'}, { value: 'WOMEN', title: 'Women'}]} label="Gender"  />
+      <Form.Text name="VAN.value" label="VAN" />
+
+      <Button type="text">Reset All</Button>
+      <Button type="primary" htmlType="submit">Search Handover</Button>
+    </Form>
+    <pre>{window.JSON.stringify(value, null, 2)}</pre>
+  </>
+)
+```
+
+```preview
+const [value, setValue] = React.useState(null)
+const [file, setFile] = React.useState({})
+const onSubmit = React.useCallback(value => console.log(value))
+
+return (
+  <>
+    <Form title="Search Handover" onSubmit={onSubmit} value={value} onChange={setValue} defaultFieldSize={4}>
+      <Form.Text label="Article Type" />
+      <Form.Select options={[
+          { value: 'male', label: 'Male' },
+          { value: 'female', label: 'Female' }
+        ]} 
+        label="Gender"
+      />
+      <Form.File
+        label="File"
+        onSuccess={setFile}
+        description="Choose file to upload"
+      />
+      <Button type="primary" htmlType="submit">Search</Button>
+    </Form>
+    <pre>{window.JSON.stringify(value, null, 2)}</pre>
+  </>
+)
+```
+
+### Different positions for action buttons
+
+### Left
+```preview
+const [value, setValue] = React.useState({brand: ''})
+
+return (
+  <>
+    <Form title="Search Handover" value={value} onChange={setValue} defaultFieldSize={'half'} actions="left">
+      <Form.Select multiple options={[{ value: 'NIKE', label: 'Nike' }, { value: 'PUMA', label: 'Puma' }]} label="Brand" value={value.brand}/>
+      <Form.Text label="Article Type" />
+      <Button type="text">Reset All</Button>
+      <Button type="primary" htmlType="submit">Search Handover</Button>
+    </Form>
+  </>
+)
+```
+
+### Centered
+```preview
+const [value, setValue] = React.useState({brand: ''})
+
+return (
+  <>
+    <Form title="Search Handover" value={value} onChange={setValue} defaultFieldSize={'half'} actions="centered">
+      <Form.Select multiple options={[{ value: 'NIKE', label: 'Nike' }, { value: 'PUMA', label: 'Puma' }]} label="Brand" value={value.brand}/>
+      <Form.Text label="Article Type" />
+      <Button type="text">Reset All</Button>
+      <Button type="primary" htmlType="submit">Search Handover</Button>
+    </Form>
+  </>
+)
+```
+
+### Right
+```preview
+const [value, setValue] = React.useState({brand: ''})
+
+return (
+  <>
+    <Form title="Search Handover" value={value} onChange={setValue} defaultFieldSize={'half'} actions="right">
+      <Form.Select multiple options={[{ value: 'NIKE', label: 'Nike' }, { value: 'PUMA', label: 'Puma' }]} label="Brand" value={value.brand}/>
+      <Form.Text label="Article Type" />
+      <Button type="text">Reset All</Button>
+      <Button type="primary" htmlType="submit">Search Handover</Button>
+    </Form>
+  </>
+)
+```
