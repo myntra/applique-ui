@@ -13,6 +13,7 @@ export interface Props extends BaseProps {
   value?: FileList
   onError?(error: Error): void
   validations?: Array<InputFileValidationFunction> | InputFileValidationFunction
+  variant?: 'bordered' | 'standard'
 }
 
 /**
@@ -31,6 +32,7 @@ export default class InputFile extends PureComponent<Props> {
         Browse
       </Button>
     ),
+    variant: 'bordered'
   }
 
   refInputFile: React.RefObject<HTMLInputElement>
@@ -80,7 +82,7 @@ export default class InputFile extends PureComponent<Props> {
   }
 
   render() {
-    const { placeholder, actions, value, onError, ...props } = this.props
+    const { placeholder, actions, variant, value, onError, ...props } = this.props
 
     return (
       <div className={classnames('input-file')}>
@@ -90,7 +92,7 @@ export default class InputFile extends PureComponent<Props> {
           onClick={this.handleBrowseClick}
           value={this.filenames}
           title={this.filenames}
-          variant="standard"
+          variant={variant}
         />
         <input
           {...props}
