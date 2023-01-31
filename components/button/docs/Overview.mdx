@@ -1,7 +1,7 @@
 import { Button0, Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Button10, Button11, Button12, Button13, Button14, Button15, Button16, Button17, Button18, Button19 } from "./images"  
 
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```
 return (
@@ -151,7 +151,7 @@ Primary button calls attention to an action or highlights the most important cal
 
 **Example : Save, Confirm, Done**
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```preview
 return (
@@ -166,7 +166,7 @@ return (
 
 Secondary buttons are used to highlight secondary actions. Remember to maintain visual hierarchy by balancing weights and background colours. 
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```preview
 return (
@@ -181,7 +181,7 @@ return (
 
 Tertiary buttons will indicate the least significant actions on the page. Pair them with primary and secondary buttons when there are multiple calls to action. 
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```preview
 return (
@@ -198,7 +198,7 @@ Warning buttons are used to get a final confirmation from a user in the context 
 
 **Example :  Delete, Remove, Decline**
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```preview
 return (
@@ -216,7 +216,7 @@ Icon Only buttons are used when pairing an Icon with an action to control the in
 
 **Example :  More**
 
-<Documenter component={props.components}>
+<Documenter >
 
 ```preview
 return (
@@ -226,3 +226,22 @@ return (
 ```
 
 </Documenter>
+
+## Interactions
+The <i>loading</i> prop can be used to show loading status.
+
+```preview
+function Example() {
+  const [isLoading, setLoading] = React.useState(false)
+
+  React.useEffect(() => {
+    if (isLoading) setTimeout(setLoading, 3000, false)
+  }, [isLoading])
+
+  return (
+    <Button onClick={() => setLoading(true)} loading={isLoading}>
+      {'Start Now'}
+    </Button>
+  )
+}
+```

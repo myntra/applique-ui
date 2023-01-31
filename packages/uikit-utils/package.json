@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit-utils",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "main": "dist/uikit-utils.cjs.js",
   "module": "dist/uikit-utils.esm.js",
   "types": "dist/index.d.ts",

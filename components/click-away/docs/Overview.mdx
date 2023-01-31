@@ -1,0 +1,30 @@
+<Documenter >
+
+<br />
+
+```preview
+function Example() {
+  const ref = React.useRef();
+  const [message, setMessage] = React.useState('Initial State.');
+  const handleInside = React.useCallback(() => setMessage('Clicked Inside.'), [setMessage]);
+  const handleOutside = React.useCallback(() => setMessage('Clicked Outside.'), [setMessage]);
+
+  return (
+    <div>
+      <p>Status: {message}</p>
+
+      <div
+        ref={ref}
+        onClick={handleInside}
+        style={{ padding: '20px', background: '#eee', width: 250 }}
+      >
+        Click Here!
+      </div>
+
+      <ClickAway onClickAway={handleOutside} target={ref} />
+    </div>
+  )
+}
+```
+
+</Documenter>

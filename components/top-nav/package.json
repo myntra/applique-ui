@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/top-nav",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "main": "dist/top-nav.cjs.js",
   "module": "dist/top-nav.esm.js",
   "types": "dist/index.d.ts",
@@ -35,6 +35,6 @@
     "@applique-ui/layout": "0.0.*",
     "@applique-ui/uikit-utils": "0.0.*",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@^1.0.9"
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
 }

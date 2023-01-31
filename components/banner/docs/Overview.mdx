@@ -1,0 +1,154 @@
+<br />
+
+<Documenter >
+
+```preview
+return (
+  <Banner>
+    {'An alert message.'}
+  </Banner>
+)
+```
+
+</Documenter>
+
+## Types
+
+### Solid
+
+```preview
+return (
+  <>
+    <Banner type="error">An example of error alert.</Banner>
+    <br />
+    <Banner type="warning">An example of warning alert.</Banner>
+    <br />
+    <Banner type="success">An example of success alert.</Banner>
+  </>
+)
+```
+
+### Outlined
+```preview
+return (
+  <>
+    <Banner type="error" noFill>An example of error alert.</Banner>
+    <br />
+    <Banner type="warning" noFill>An example of warning alert.</Banner>
+    <br />
+    <Banner type="success" noFill>An example of success alert.</Banner>
+  </>
+)
+``` 
+
+## Banner with Title
+
+```preview
+return (
+  <Banner title="SUCCESS!">The file has been uploaded.</Banner>
+)
+```
+
+## Customising Icon
+
+```preview
+return (
+  <Banner title="CRITICAL ERROR" icon={SpinnerSolid}>We cannot reach to the backend service, your changes could not be persisted.</Banner>
+)
+```
+<br />
+
+```preview
+return (
+  <Banner icon={null}>Your email address is required to send the report.</Banner>
+)
+```
+
+## Dismissable Banner
+
+```preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(true);
+
+  return isVisible &&
+    <Banner type="warning" title={'CAUTION!'} onClose={() => setVisible(false)}>
+      The image you are trying to upload has invalid format. It might not render well.
+    </Banner>
+}
+```
+
+## Sub-components
+
+### Banner.Actionable
+
+<Documenter  sub>
+
+```preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>WARNING</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Already Scanned!',
+        type: 'warning',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Masterbag ID',
+        entityId: '100309334556',
+        actionToTake: <>Move to <b>Container No: #2233983 </b></>
+      }}/>;
+  return component;
+}
+```
+<br />
+
+```preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>SUCCESS</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Completed!',
+        type: 'success',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Item ID',
+        entityId: '100309334556',
+        actionToTake: 'Put it in completed Bin'
+      }}/>;
+  return component;
+}
+```
+<br />
+
+```preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>ERROR</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Wrong Carton!',
+        type: 'error',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Carton ID',
+        entityId: '100309334556',
+        actionToTake: 'Keep This Carton Aside'
+      }}/>;
+  return component;
+}
+```
+
+</Documenter>

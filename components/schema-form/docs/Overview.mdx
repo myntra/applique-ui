@@ -1,0 +1,199 @@
+
+<br />
+
+<Documenter >
+
+```preview
+const [schema] = React.useState({
+  title: 'Purchase Order Term',
+  description: 'This document defines json schema for PO terms.',
+  type: 'object',
+  properties: {
+    brand: { title: 'Brand', type: 'string', format: 'brandPO' },
+    agreementType: {
+      title: 'Agreement Type',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'agreementType',
+    },
+    masterCategory: {
+      title: 'Master Category',
+      format: 'masterCategory',
+      type: 'string',
+    },
+    articleType: {
+      title: 'Article Type',
+      format: 'articleType',
+      type: 'string',
+    },
+    gender: {
+      title: 'Gender',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'gender',
+    },
+    additionalClassification: {
+      title: 'Additional Classification',
+      type: 'string',
+      default: 'NOT_APPLICABLE',
+      format: 'taxonomy',
+      taxonomyType: 'additionalClassification',
+    },
+    additionalClassificationRemarks: {
+      title: 'Additional Classification Remarks',
+      type: 'string',
+    },
+    brandType: {
+      title: 'Brand Type',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'brandType',
+    },
+    billTo: {
+      title: 'Bill To',
+      description: 'NOTE: BillTo is not used anymore. It will be removed soon.',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'billTo',
+    },
+    margin: {
+      title: 'Margin',
+      type: 'number',
+      minimum: 0,
+      maximum: 100,
+    },
+    marginBasis: {
+      title: 'Margin Basis',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'marginBasis',
+    },
+    minMargin: { title: 'Minimum Margin', type: 'number' },
+    creditPeriodInDays: {
+      title: 'Credit Period Days',
+      type: 'integer',
+      minimum: 0,
+    },
+    salesCycleSOR: {
+      title: 'SOR Sales Cycle',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'salesCycleSOR',
+    },
+    creditBasisAsOn: {
+      title: 'Credit Basis',
+      taxonomyType: 'creditBasis',
+      type: 'string',
+      format: 'taxonomy',
+    },
+    paymentMethod: {
+      title: 'Payment Method',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'paymentMethod',
+    },
+    discountSharingPercentage: {
+      title: 'Discount Sharing Percentage',
+      type: 'number',
+      minimum: 0,
+      maximum: 100,
+    },
+    discountSharingRemarks: {
+      title: 'Discount Sharing Remarks',
+      type: 'string',
+    },
+    discountSharingExclusionList: {
+      title: 'Discount Sharing Exclusion List',
+      type: 'array',
+      items: {
+        taxonomyType: 'discountSharingType',
+        type: 'string',
+        format: 'taxonomy',
+      },
+    },
+    stockCorrectionPercentage: {
+      title: 'Stock Correction Percentage',
+      type: 'number',
+      minimum: 0,
+      maximum: 100,
+    },
+    stockCorrectionFrequency: {
+      title: 'Stock Correction Frequency',
+      type: 'number',
+    },
+    stockCorrectionBasis: {
+      title: 'Stock Correction Basis',
+      type: 'string',
+      format: 'taxonomy',
+      taxonomyType: 'stockCorrectionBasis',
+    },
+    stockCorrectionExclusionList: {
+      title: 'Stock Correction Exclusion List',
+      type: 'array',
+      items: {
+        taxonomyType: 'stockCorrectionType',
+        type: 'string',
+        format: 'taxonomy',
+      },
+    },
+    stockCorrectionRemarks: {
+      title: 'Stock Correction Remarks',
+      type: 'string',
+    },
+    allowedDeliveryDays: {
+      title: 'Allowed Delivery Days',
+      type: 'integer',
+      minimum: 0,
+    },
+    delayedDeliveryPenalty: {
+      title: 'Delayed Delivery Penalty',
+      type: 'number',
+      minimum: 0,
+    },
+    attachment: {
+      title: 'Attachment',
+      type: 'string',
+      format: 'url',
+      component: 'Form.AzureFile',
+    },
+    hasDocuments: { title: 'Doc', type: 'boolean' },
+    autoRenewalEnabled: { title: 'Auto Renewal', type: 'boolean' },
+    autoRenewalCycle: {
+      title: 'Auto Renewal Cycle',
+      taxonomyType: 'frequency',
+      type: 'string',
+      format: 'taxonomy',
+    },
+    exclusive: { title: 'Exclusive', type: 'boolean' },
+    accountsPayable: { title: 'Accounts Payable Flag', type: 'boolean' },
+    minimumGuarantee: { title: 'Minimum Guarantee', type: 'string' },
+    penalInterest: {
+      title: 'Penal Interest on Delayed Payments',
+      type: 'string',
+    },
+    oplId: { title: 'OPL Reference ID', type: 'string' },
+    userRemarks: {
+      title: 'Remarks',
+      type: 'string',
+      layout: { size: 12 },
+      component: 'Form.TextArea',
+    },
+  },
+  dependencies: {},
+  definitions: {
+    percentage: { type: 'number', minimum: 0, maximum: 100 },
+    id: { type: 'string' },
+    taxonomy: { type: 'string', format: 'taxonomy' },
+  },
+  required: ['agreementType'],
+});
+const [value, setValue] = React.useState();
+
+return (
+  <SchemaForm schema={schema} value={value} onChange={setValue} defaultFieldSize={3}>
+    <Button type="primary">Save</Button>
+  </SchemaForm>
+)
+```
+
+</Documenter>

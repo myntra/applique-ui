@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/rollup-plugin-scss",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-scss.esm.js",
   "types": "dist/index.d.ts",

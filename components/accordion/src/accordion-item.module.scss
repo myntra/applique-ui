@@ -9,14 +9,21 @@
   &:not(:last-child) {
     margin-bottom: size('2x');
   }
-  .item-content {
-    @include transition('all');
-  }
-  .item-title {
-    cursor: pointer;
-  }
+
   .item-title,
   .item-content {
     padding: size('2x');
+  }
+
+  .item-content {
+    @include transition('all');
+  }
+
+  .item-title {
+    cursor: pointer;
+
+    &:hover {
+      background-color: color('primary-base-light');
+    }
   }
 }

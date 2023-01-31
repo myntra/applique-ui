@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/avatar",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "main": "dist/avatar.cjs.js",
   "module": "dist/avatar.esm.js",
   "types": "dist/index.d.ts",

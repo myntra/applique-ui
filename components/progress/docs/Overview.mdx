@@ -1,0 +1,57 @@
+
+<br />
+
+<Documenter>
+
+```preview
+return (
+    <Progress type="bar" appearance="info" value={25}/>
+)
+```
+
+</Documenter>
+
+## Bar
+
+```preview
+return (
+    <Progress type="bar" value={50}/>
+)
+```
+
+### Display value
+
+```preview
+return (
+    <Progress type="bar" value={75} showValue/>
+)
+```
+
+## Circle
+
+```preview
+return (
+    <Progress type="circle" value={30} style={{ width: '50px' }} />
+)
+```
+
+### Display value
+
+```preview
+return (
+    <Progress type="circle" value={25} style={{ width: '50px' }} showValue/>
+)
+```
+
+## Progress State
+
+```preview
+return (
+    <>
+    <Progress type="bar" appearance="success" value={20} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" appearance="info" value={30} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" appearance="warning" value={40} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" appearance="danger" value={50} />
+    </>
+)
+```

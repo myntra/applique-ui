@@ -1,0 +1,350 @@
+<br />
+
+<Documenter>
+
+```preview
+return (
+  <Field title="Name">
+    <InputText value="" onChange={() => null} />
+  </Field>
+)
+```
+
+</Documenter>
+
+## Examples
+
+### Field Description
+
+The **Field** component can display description for the input.
+
+```preview
+const [value, setValue] = React.useState('');
+const [v2, sv2] = React.useState('');
+
+return (
+  <div style={{display:"flex", flexWrap:"wrap"}}>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Name"
+      description="Focused state with placeholder"
+    >
+      <InputText value={value} placeholder="Enter your name" onChange={(value) => setValue(value)} />
+    </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+    <Field
+      title="Name"
+      description="Enter your full name."
+      error="Invalid Name"
+    >
+      <InputText value={value} onChange={(v) => setValue(v)} />
+    </Field>
+    </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+        <Field
+          title="Name"
+          description="Enter your full name."
+          success="Success message with hovered input text"
+        >
+          <InputText value={v2} onChange={(v) => sv2(v)} />
+        </Field>
+      </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+        <Field
+          title="Name"
+          description="Enter your full name."
+        >
+          <InputText value="Filled Text Box" onChange={() => null} />
+        </Field>
+      </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+        <Field
+          title="Weight"
+          description="Enter the Weight"
+        >
+          <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
+        </Field>
+      </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+        <Field
+          title="Weight"
+          description="Enter the Weight"
+          error="weight must be less than 100"
+        >
+          <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
+        </Field>
+      </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+        <Field
+          title="Weight"
+          description="Enter the Weight"
+          disabled
+        >
+          <InputText value="230" adornment={<p><b>/kg</b></p>} onChange={() => null} />
+        </Field>
+      </div>
+  </div>
+)
+```
+
+## Input Select
+
+```preview
+const [value, setValue] = React.useState();
+const [options] = React.useState([
+  { value: 'Red', label: 'Red' },
+  { value: 'Green', label: 'Green' },
+  { value: 'Blue', label: 'Blue' },
+]);
+const [weight, setweight] = React.useState('1');
+const [optionsW] = React.useState([
+  { value: '1', label: '1' },
+  { value: '5', label: '5' },
+  { value: '10', label: '10' },
+]);
+
+return (
+  <>
+  <div style={{display:"flex", flexWrap:"wrap"}} >
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Filled State"
+      >
+        <InputSelect
+          options={options}
+          value={value} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Choose your color"
+        error="Wrong Color selected"
+      >
+        <InputSelect
+          options={options}
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Choose your color"
+        success="Everything is fine"
+      >
+        <InputSelect
+          options={options}
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="A Disabled Input select"
+        disabled
+      >
+        <InputSelect
+          options={options}
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Empty selection "
+      >
+        <InputSelect
+          options={options}
+          value={null} onChange={setValue}
+        />
+      </Field>
+    </div>
+      <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Weight"
+        description="Adornment Text with focused"
+      >
+        <InputSelect
+          options={optionsW}
+          adornment={<p><b>/kg</b></p>}
+          value={weight} onChange={setweight}
+        />
+      </Field>
+    </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Weight"
+        description="Adornment Text with Hovered "
+      >
+        <InputSelect
+          options={optionsW}
+          adornment={<p><b>/kg</b></p>}
+          adornmentPosition="start"
+          value={weight} onChange={setweight}
+        />
+      </Field>
+    </div>
+  </div>
+  </>
+)
+```
+
+## Input Text Area
+
+```preview
+const [value, setValue] = React.useState();
+
+return (
+  <>
+  <div style={{display:"flex", flexWrap:"wrap"}} >
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="With placeholder text"
+      >
+        <InputTextArea
+          value={value} placeholder={"Enter Description"} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Choose your color"
+        error="Wrong Color selected"
+      >
+      <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Choose your color"
+        success="Everything is fine"
+      >
+        <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="A Disabled Input Text Area"
+        disabled
+      >
+        <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Hovered State"
+      >
+        <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+
+    <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Focused State"
+      >
+        <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+
+      <div style={{width:"400px", marginLeft:"16px"}}>
+      <Field
+        title="Color"
+        description="Focused State"
+      >
+        <InputTextArea
+          value={'Green'} onChange={setValue}
+        />
+      </Field>
+    </div>
+
+  </div>
+  </>
+)
+```
+
+### Required Field
+
+The **Field** component displays a visual indication for required fields.
+
+```preview
+return (
+  <Field
+    title="Name"
+    required
+  >
+    <InputText  value="" onChange={() => null} />
+  </Field>
+)
+```
+
+### Error Message
+
+The **Field** component can display error message in place of description.
+
+```preview
+return (
+  <Field
+    title="Email"
+    error="Invalid email address!"
+  >
+    <InputText  value="" onChange={() => null} />
+  </Field>
+)
+```
+
+We can run custom validations and provide error problematically. If *error* is present,
+it will display the error, else it will display description.
+
+```preview
+const [email, setEmail] = React.useState('');
+
+return (
+  <Field
+    title="Email"
+    description="Enter your email address."
+    error={
+      !email // if empty email field
+      || /^[^@]+@myntra\.com$/.test(email) // or valid email value
+        ? null // then no error
+        : 'Invalid email address!'
+    }
+  >
+    <InputText
+       type="email"
+      value={email}
+      onChange={setEmail}
+    />
+  </Field>
+)
+```

@@ -1,0 +1,209 @@
+<br />
+
+<Documenter>
+
+```preview
+const [value, setValue] = React.useState(null);
+const onSubmit = React.useCallback((value) => console.log(value));
+const [showBanner, setBanner] = React.useState(true)
+const [data] = React.useState([
+  { id: 1, name: 'Jane Doe', createdAt: 1557208976092 },
+  { id: 2, name: 'John Doe', createdAt: 1557208976092 },
+  { id: 3, name: 'Daksh Bahuguna', createdAt: 1557208976092 },
+  { id: 4, name: 'Rahul Das', createdAt: 1557208976092 },
+  { id: 5, name: 'Suraj Badkar', createdAt: 1557208976092 },
+]);
+
+const BellIcon = () => <Bell />
+const ClockRegularIcon = () => <ClockRegular />
+const UserSolidIcon = () => <UserCircleSolid />
+const DUMMY_CONFIG = {
+  navigationConfig: {
+    HOME: {
+      label: 'Label 01',
+      icon: BellIcon,
+      noHover: true,
+      routingInfo: {
+        path: '/Dashboard',
+        type: 'Dashboard/HOME',
+        meta: {},
+      },
+    },
+    CATALOG: {
+      id: 'Job Tracker',
+      label: 'Label 02',
+      icon: ClockRegularIcon,
+      config: [
+        {
+          title: 'Catalog Management',
+          id: 'CATALOG_MANAGEMENT',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          config: [
+            {
+              id: 'DIY_DASHBOAR',
+              title: 'Catalog Dashboard',
+              routingInfo: {
+                path: '/DiyCataloguing/Home',
+                type: 'DiyCataloguing/Home',
+                meta: {},
+              },
+            },
+            {
+              id: 'DIY_DASHBO_MAS_FORM',
+              title: 'MAS Form',
+              routingInfo: {
+                path: '/DiyCataloguing/MASForm',
+                type: '',
+                meta: {
+                  url:
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdpU3uyUPkfaLZgrG_zgbMUVG7PBj9EilzK3Cg4vgq3eQhq-w/viewform',
+                },
+              },
+            },
+          ],
+        },
+        {
+          id: 'LISTINGS',
+          title: 'Listings',
+          type: 'MENU',
+          hoverMenuColumnBucket: 0,
+          check: [
+            {
+              roles: [],
+              permissions: [
+                ['pp$ListingManagementBeta$rw'],
+                ['pp$ListingManagement$rw'],
+              ],
+              operation: 'or',
+            },
+          ],
+          config: [
+            {
+              id: 'Listings Management',
+              title: 'Listings Management',
+              routingInfo: {
+                path: '/DiyCataloguing/Ting',
+                type: 'Listing/ListingsManagement',
+                meta: {},
+              },
+            }
+          ],
+        },
+        {
+          id: 'TESTING',
+          title: 'Test 123',
+          type: 'MENU_DIRECT_LINK',
+          routingInfo: {
+            path: '/test',
+            type: 'Testing/Test',
+            meta: {},
+          },
+        },
+      ],
+    },
+  },
+  quickLinks: [
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>First Item 1</li>
+              <li>First Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+    {
+      icon: UserSolidIcon,
+      renderFunction: () => {
+        return (
+          <div>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Second Item 3</li>
+              <li>Second Item 4</li>
+            </ul>
+          </div>
+        )
+      },
+    },
+  ],
+  logo: (
+    <div style={{ width: '80px' }}>
+      <MyntraLogo />
+    </div>
+  ),
+}
+
+return (
+  <Page
+    renderTopBar={() => (
+      <TopNav navigationKey="path" dispatchFunction={ object => console.log('Dispatched', object) } config={DUMMY_CONFIG}>
+        <BreadCrumb>
+          <BreadCrumb.Item>Home</BreadCrumb.Item>
+          <BreadCrumb.Item>Dices</BreadCrumb.Item>
+          <BreadCrumb.Item>Dices 5</BreadCrumb.Item>
+        </BreadCrumb>
+      </TopNav>
+    )}
+  >
+    {showBanner ? (
+      <Banner title="SUCCESS" type="success" onClose={() => setBanner(false)}>
+        The page loaded successfully.
+      </Banner>
+    ) : null}
+
+    <Layout type="row">
+      <Text.Title>Page Title</Text.Title>
+
+      <Section title="Section 1">
+        <Form
+          onSubmit={onSubmit}
+          value={value}
+          onChange={setValue}
+          defaultFieldSize={4}
+        >
+          <Form.Text label="Field 1" />
+          <Form.Select options={[]} label="Field 2" />
+
+          <ButtonGroup structure="primary-group">
+            <Button type="primary">Search</Button>
+            <Button type="text">Action 1</Button>
+            <Button type="text">Action 2</Button>
+          </ButtonGroup>
+        </Form>
+      </Section>
+
+      <Section>
+        <Layout type="row">
+          <Text>{data.length} items found.</Text>
+
+          <Table data={data}>
+            <Table.Column key="id" label="ID" />
+            <Table.Column key="full-name" label="Name" accessor="name" />
+            <Table.Column
+              key="created-at"
+              label="Created At"
+              accessor={(item) => new window.Date(item.createdAt).toLocaleString()}
+            />
+          </Table>
+
+          <Layout type="stack" space={[1]}>
+            <div />
+            <Pagination />
+          </Layout>
+        </Layout>
+      </Section>
+    </Layout>
+  </Page>
+)
+```
+
+</Documenter>

@@ -5,7 +5,7 @@ export interface Props extends BaseProps {
   /**
    * Renders a nav using [NavBar](../components/nav-bar).
    */
-  renderNavBar(): JSX.Element
+  // renderNavBar(): JSX.Element
   /**
    * Renders a header using [TopBar](../components/top-bar).
    */
@@ -17,7 +17,7 @@ export interface Props extends BaseProps {
   /**
    * Flag to make the side navbar always open or open on hover
    */
-  alwaysOpen: boolean
+  // alwaysOpen: boolean
 }
 
 /**
@@ -29,24 +29,26 @@ export interface Props extends BaseProps {
  * @see http://uikit.myntra.com/components/page
  */
 export default function Page({
-  renderNavBar,
+  renderNavBar = null,
   renderTopBar,
   children,
   className,
   style,
-  alwaysOpen,
+  alwaysOpen = false,
   ...props
 }: Props) {
   return (
     <div className={classnames('container', className)} style={style}>
-      <div
-        className={classnames('left', {
-          'always-open': alwaysOpen,
-        })}
-        key="nav"
-      >
-        {renderNavBar()}
-      </div>
+      {renderNavBar ? (
+        <div
+          className={classnames('left', {
+            'always-open': alwaysOpen,
+          })}
+          key="nav"
+        >
+          {renderNavBar()}
+        </div>
+      ) : null}
       <div className={classnames('right')}>
         <div className={classnames('top')} key="header">
           {renderTopBar()}
