@@ -1,0 +1,64 @@
+@mixin mixin-input-component() {
+  padding: padding('input');
+  font-size: inherit;
+  color: text-color('dark');
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid color('gray-dark');
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: color('text-dark-medium-emphasis');
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: color('text-dark-disabled');
+    border-bottom: 1px solid color('input.disabled');
+  }
+}
+
+@mixin mixin-input-revamp($border-type, $padding) {
+  padding: $padding;
+  font-size: inherit;
+  color: text-color('input.text');
+  background-color: transparent;
+  #{$border-type}: 1px solid color('input.border');
+
+  @if not($border-type == 'border-bottom') {
+    border-radius: 4px;
+  }
+  input:not([disabled])::placeholder {
+    color: color('input.placeholder');
+  }
+  textarea:not([disabled])::placeholder {
+    color: color('input.placeholder');
+  }
+  &.filled {
+    #{$border-type}: 1px solid color('input.filled');
+  }
+  &:hover {
+    #{$border-type}: 1px solid color('input.hover');
+  }
+  &:focus-within {
+    #{$border-type}: 1px solid color('input.focused');
+  }
+  &.disable {
+    #{$border-type}: 1px solid color('input.disabled');
+  }
+  &.disable * {
+    color: color('input.disabled');
+  }
+  &.error {
+    border-color: color('input.error');
+  }
+}
+
+@mixin mixin-input-label-component {
+  &.disabled {
+    color: color('text-dark-disabled');
+  }
+}

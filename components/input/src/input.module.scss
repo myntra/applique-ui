@@ -1,0 +1,58 @@
+@import '@accoutrement';
+@import 'input';
+
+.input {
+  &[type='search'] {
+    padding-right: 0.125em;
+  }
+
+  padding: padding('input.text');
+}
+
+.input:not(:focus) {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+/* Hide number spinner box on Chrome & Safari. */
+.input::-webkit-inner-spin-button:not(:focus),
+.input::-webkit-outer-spin-button:not(:focus) {
+  visibility: hidden;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &.bordered {
+    @include mixin-input-revamp(border, padding('input.text'));
+  }
+  &.standard {
+    @include mixin-input-revamp(
+      border-bottom,
+      padding('input-standard')
+    );
+  }
+  input {
+    flex-grow: 1;
+    padding: 0;
+    // margin-left: size('1x');
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+  .input-adornment {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-height: 1.5em;
+    color: text-color('input.text');
+    white-space: nowrap;
+    &-start {
+      margin-right: size('1x');
+    }
+    &-end {
+      margin-left: size('1x');
+    }
+  }
+}

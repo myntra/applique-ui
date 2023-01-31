@@ -1,0 +1,172 @@
+import { Overview1, Overview2 } from './images'
+
+This section contains components attributes, anatomy and variation of component type.
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview1 />
+    </Layout>
+</ImagePreview>
+
+**Text input:** When the expected user input is a single line of text, as opposed to a paragraph.
+
+**Text Area:** When the expected user input is more than one sentence.
+
+The Input Fields component has a lot of variations we can use. It contains an input field, textarea, password fields, checkboxes, radio buttons, and everything else you need.
+
+Fill, size, and width can all be mixed and matched to get the exact Input field needed.
+
+## States
+
+Input Fields have multiple bits and pieces, some of which are only visible depending on what state it is in (default, hover, active, filled, etc).
+
+<ImagePreview background={true}>
+    <Layout type="row">
+        <Overview2 />
+    </Layout>
+</ImagePreview>
+
+## Variants
+
+### Single line text fields
+
+An Input comes with a label display only one line of text
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+
+return (
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <Input value={value} onChange={setValue} placeholder='Type / Scan'/>
+            </Field>
+        </Grid.Column>
+    </Grid>
+)
+```
+</Documenter>
+
+### Multi-line Text area
+
+An Input comes with a label and grow to accommodate multiple lines of text
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+
+return (
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <InputTextArea value={value} placeholder='Type / Scan / Select' onChange={setValue} />
+            </Field>
+        </Grid.Column>
+    </Grid>
+)
+```
+</Documenter>
+
+### Prefix
+
+An Input comes with a label and prefix information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+
+return (
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <Input value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} disabled/>
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <Input value={value} onChange={setValue} placeholder=' Type / Scan' icon={RupeeSign} readOnly/>
+            </Field>
+        </Grid.Column>
+    </Grid>
+)
+```
+</Documenter>
+
+### Sufix
+
+An Input comes with a label and sufix information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+const [cost, setCost] = React.useState();
+
+
+return (
+    <Grid gapless>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <Input value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label">
+                <Input value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+            </Field>
+        </Grid.Column>
+    </Grid>
+)
+```
+</Documenter>
+
+### Messages
+
+An Input should display descriptive validation information.
+
+<Documenter component={props.components}>
+
+```preview
+const [value, setValue] = React.useState();
+const [cost, setCost] = React.useState();
+
+const InfoIcon = ({ children, title }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ color: '#4F47C8', width: '15px', height: '15px' }}
+    >
+        <title>{title}</title>
+        {children}
+    </svg>
+)
+
+return (
+    <Grid gapless multiline>
+        <Grid.Column size="one-third">
+            <Field title="Label" description="Helper Text" required>
+                <Input value={value} onChange={setValue} placeholder='Type / Scan' adornment="/Kg" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" success="Success">
+                <Input value={cost} onChange={setCost} placeholder='Cost' adornment="₹" adornmentPosition="start" />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" error="Error Message">
+                <Input value={cost} onChange={setCost} placeholder='Type / Scan' error />
+            </Field>
+        </Grid.Column>
+        <Grid.Column size="one-third">
+            <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+                <Input value={cost} onChange={setCost} placeholder='Type / Scan' />
+            </Field>
+        </Grid.Column>
+    </Grid>
+)
+```
+</Documenter>

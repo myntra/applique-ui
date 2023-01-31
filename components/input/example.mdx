@@ -1,0 +1,134 @@
+import Input from './src/input'
+import UserSolid from 'uikit-icons/svgs/UserSolid'
+
+# Input
+
+export const _styles = (function () {
+  // Add some styles for showing grid column examples.
+  const style =  document.createElement('style')
+  style.id = 'input-example-override'
+  style.textContent = `.u-input-container .adornment {
+    background-color: transparent;
+    border-color: transparent;
+    bottom: 2px;
+    position: relative;
+  }`
+  document.head.appendChild(style)
+})();
+
+<Documenter component={Input}>
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+  <p>Bordered Variant</p>
+  <Input value={value} onChange={setValue} variant="bordered" />
+  <p>Standard Variant</p>
+  <Input value={value} onChange={setValue} variant="standard" />
+</div>
+```
+
+</Documenter>
+
+## Examples
+
+
+## Disabled
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+  <p>Bordered Variant</p>
+  <Input  disabled placeholder="Your name" variant="bordered"/>
+  <p>Standard Variant</p>
+  <Input disabled placeholder="Your Name" variant="standard" />
+</div>
+
+```
+## Inputs with error
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+  <p>Bordered </p>
+    <Input error value={value} onChange={setValue} variant="bordered" placeholder="Your name" />
+  <p>Standard </p>
+  <Input error value={value} onChange={setValue} variant="standard" placeholder="Your name" />
+
+</div>
+
+```
+
+## With placeholder text
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+ <p>Bordered </p>
+  <Input value={value} onChange={setValue} placeholder="Your name" />
+<p>Standard</p>
+  <Input value={value} onChange={setValue} placeholder="Your name" variant="standard" />
+</div>
+```
+
+## With label text
+
+```jsx preview
+const [value, setValue] = useState();
+
+<Field title="Name" description="Your name">
+  <Input value={value} onChange={setValue} />
+</Field>
+``` 
+
+## With icon
+
+```jsx preview
+const [value, setValue] = useState();
+<div>
+ <p>Bordered </p>
+ <Input value={value} onChange={setValue} placeholder="Your name" icon={UserSolid}/>
+<p>Standard</p>
+  <Input value={value} onChange={setValue} placeholder="Your name" variant="standard" />
+</div>
+```
+
+## With prefix/suffix text or element
+
+```jsx preview
+const [value, setValue] = useState();
+
+<div>
+<p> Prefix Text </p>
+  <Input value={value} onChange={setValue} adornment="/Kg" adornmentPosition='start'/>
+<p> Suffix Text </p>
+  <Input value={value} onChange={setValue} adornment="/Kg" adornmentPosition='end'/>
+</div>
+```
+
+```jsx preview
+const [value, setValue] = useState();
+const onClick = useCallback(() => console.log("clicked icon"))
+<div>
+  <p>Prefix Element</p>
+  <p>Bordered</p>
+  <Input value={value}  icon={UserSolid} onChange={setValue} adornmentPosition='start' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+  <p>Standard</p>
+  <Input value={value}  icon={UserSolid} variant="standard" onChange={setValue} adornmentPosition='start' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+</div>  
+```
+```jsx preview
+const [value, setValue] = useState();
+const onClick = useCallback(() => console.log("clicked icon"))
+<div>
+  <p>Suffix Element</p>
+  <p>Bordered</p>
+  <Input value={value}  icon={UserSolid} onChange={setValue} adornmentPosition='end' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+  <p>Standard</p>
+  <Input value={value}  icon={UserSolid} variant="standard" onChange={setValue} adornmentPosition='end' adornment={<Button className="adornment" onClick={onClick} icon={UserSolid} />}/>
+</div>
+```

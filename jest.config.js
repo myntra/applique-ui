@@ -65,5 +65,5 @@ module.exports = {
       tsConfig: '<rootDir>/tsconfig.test.json',
       packageJson: '<rootDir>/package.json',
     },
-  },
+  },  
 }

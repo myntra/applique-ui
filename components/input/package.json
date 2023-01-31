@@ -1,0 +1,36 @@
+{
+  "name": "@applique-ui/input",
+  "version": "0.0.19",
+  "main": "dist/input.cjs.js",
+  "module": "dist/input.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Myntra",
+  "license": "MIT",
+  "repository": "https://github.com/myntra/uikit/tree/release/components/input",
+  "keywords": [
+    "uikit",
+    "component"
+  ],
+  "homepage": "https://uikit.myntra.com/components/input",
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js",
+    "*.scss"
+  ],
+  "sideEffects": false,
+  "optionalDependencies": {
+    "react": ">=15.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/uikit-utils": "0.0.*",
+    "uikit-icons": "npm:@myntra/uikit-icons@latest"
+  }
+}
