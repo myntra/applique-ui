@@ -19,7 +19,7 @@ function asyncComponent(factory) {
       }
 
       return target[name]
-    },
+    }
   })
 }
 export const Accordion = asyncComponent(() =>
@@ -116,338 +116,338 @@ export const VirtualList = asyncComponent(() =>
 export const META = [
   {
     name: 'Accordion',
-    path: '/components/accordion',
+    path: '/components/accordion'
   },
   {
     name: 'Accordion',
-    path: '/components/accordion',
+    path: '/components/accordion'
   },
   {
     name: 'Avatar',
-    path: '/components/avatar',
+    path: '/components/avatar'
   },
   {
     name: 'Badge',
-    path: '/components/badge',
+    path: '/components/badge'
   },
   {
     name: 'Banner',
-    path: '/components/banner',
+    path: '/components/banner'
   },
   {
     name: 'Banner',
-    path: '/components/banner',
+    path: '/components/banner'
   },
   {
     name: 'BreadCrumb',
-    path: '/components/bread-crumb',
+    path: '/components/bread-crumb'
   },
   {
     name: 'BreadCrumb',
-    path: '/components/bread-crumb',
+    path: '/components/bread-crumb'
   },
   {
     name: 'Button',
-    path: '/components/button',
+    path: '/components/button'
   },
   {
     name: 'Button',
-    path: '/components/button',
+    path: '/components/button'
   },
   {
     name: 'Button',
-    path: '/components/button',
+    path: '/components/button'
   },
   {
     name: 'Button',
-    path: '/components/button',
+    path: '/components/button'
   },
   {
     name: 'Button',
-    path: '/components/button',
+    path: '/components/button'
   },
   {
     name: 'ButtonGroup',
-    path: '/components/button-group',
+    path: '/components/button-group'
   },
   {
     name: 'ClickAway',
-    path: '/components/click-away',
+    path: '/components/click-away'
   },
   {
     name: 'Dropdown',
-    path: '/components/dropdown',
+    path: '/components/dropdown'
   },
   {
     name: 'ErrorBoundary',
-    path: '/components/error-boundary',
+    path: '/components/error-boundary'
   },
   {
     name: 'Fab',
-    path: '/components/fab',
+    path: '/components/fab'
   },
   {
     name: 'Field',
-    path: '/components/field',
+    path: '/components/field'
   },
   {
     name: 'Form',
-    path: '/components/form',
+    path: '/components/form'
   },
   {
     name: 'Grid',
-    path: '/components/grid',
+    path: '/components/grid'
   },
   {
     name: 'Grid',
-    path: '/components/grid',
+    path: '/components/grid'
   },
   {
     name: 'Icon',
-    path: '/components/icon',
+    path: '/components/icon'
   },
   {
     name: 'Image',
-    path: '/components/image',
+    path: '/components/image'
   },
   {
     name: 'Input',
-    path: '/components/input',
+    path: '/components/input'
   },
   {
     name: 'InputCheckbox',
-    path: '/components/input-checkbox',
+    path: '/components/input-checkbox'
   },
   {
     name: 'InputDate',
-    path: '/components/input-date',
+    path: '/components/input-date'
   },
   {
     name: 'InputDate',
-    path: '/components/input-date',
+    path: '/components/input-date'
   },
   {
     name: 'InputDate',
-    path: '/components/input-date',
+    path: '/components/input-date'
   },
   {
     name: 'InputFile',
-    path: '/components/input-file',
+    path: '/components/input-file'
   },
   {
     name: 'InputMasked',
-    path: '/components/input-masked',
+    path: '/components/input-masked'
   },
   {
     name: 'InputMonth',
-    path: '/components/input-month',
+    path: '/components/input-month'
   },
   {
     name: 'InputMonth',
-    path: '/components/input-month',
+    path: '/components/input-month'
   },
   {
     name: 'InputNumber',
-    path: '/components/input-number',
+    path: '/components/input-number'
   },
   {
     name: 'InputRadio',
-    path: '/components/input-radio',
+    path: '/components/input-radio'
   },
   {
     name: 'InputSelect',
-    path: '/components/input-select',
+    path: '/components/input-select'
   },
   {
     name: 'InputSelect',
-    path: '/components/input-select',
+    path: '/components/input-select'
   },
   {
     name: 'InputSelect',
-    path: '/components/input-select',
+    path: '/components/input-select'
   },
   {
     name: 'InputText',
-    path: '/components/input-text',
+    path: '/components/input-text'
   },
   {
     name: 'InputTextArea',
-    path: '/components/input-text-area',
+    path: '/components/input-text-area'
   },
   {
     name: 'Layout',
-    path: '/components/layout',
+    path: '/components/layout'
   },
   {
     name: 'Layout',
-    path: '/components/layout',
+    path: '/components/layout'
   },
   {
     name: 'Layout',
-    path: '/components/layout',
+    path: '/components/layout'
   },
   {
     name: 'List',
-    path: '/components/list',
+    path: '/components/list'
   },
   {
     name: 'List',
-    path: '/components/list',
+    path: '/components/list'
   },
   {
     name: 'Loader',
-    path: '/components/loader',
+    path: '/components/loader'
   },
   {
     name: 'Measure',
-    path: '/components/measure',
+    path: '/components/measure'
   },
   {
     name: 'Modal',
-    path: '/components/modal',
+    path: '/components/modal'
   },
   {
     name: 'Modal',
-    path: '/components/modal',
+    path: '/components/modal'
   },
   {
     name: 'NavBar',
-    path: '/components/nav-bar',
+    path: '/components/nav-bar'
   },
   {
     name: 'NavBar',
-    path: '/components/nav-bar',
+    path: '/components/nav-bar'
   },
   {
     name: 'NavBar',
-    path: '/components/nav-bar',
+    path: '/components/nav-bar'
   },
   {
     name: 'Page',
-    path: '/components/page',
+    path: '/components/page'
   },
   {
     name: 'Pagination',
-    path: '/components/pagination',
+    path: '/components/pagination'
   },
   {
     name: 'Portal',
-    path: '/components/portal',
+    path: '/components/portal'
   },
   {
     name: 'Progress',
-    path: '/components/progress',
+    path: '/components/progress'
   },
   {
     name: 'Progress',
-    path: '/components/progress',
+    path: '/components/progress'
   },
   {
     name: 'Progress',
-    path: '/components/progress',
+    path: '/components/progress'
   },
   {
     name: 'SchemaForm',
-    path: '/components/schema-form',
+    path: '/components/schema-form'
   },
   {
     name: 'Section',
-    path: '/components/section',
+    path: '/components/section'
   },
   {
     name: 'Stepper',
-    path: '/components/stepper',
+    path: '/components/stepper'
   },
   {
     name: 'Stepper',
-    path: '/components/stepper',
+    path: '/components/stepper'
   },
   {
     name: 'Stepper',
-    path: '/components/stepper',
+    path: '/components/stepper'
   },
   {
     name: 'Stepper',
-    path: '/components/stepper',
+    path: '/components/stepper'
   },
   {
     name: 'Table',
-    path: '/components/table',
+    path: '/components/table'
   },
   {
     name: 'Table',
-    path: '/components/table',
+    path: '/components/table'
   },
   {
     name: 'Table',
-    path: '/components/table',
+    path: '/components/table'
   },
   {
     name: 'Table',
-    path: '/components/table',
+    path: '/components/table'
   },
   {
     name: 'Tabs',
-    path: '/components/tabs',
+    path: '/components/tabs'
   },
   {
     name: 'Tabs',
-    path: '/components/tabs',
+    path: '/components/tabs'
   },
   {
     name: 'Text',
-    path: '/components/text',
+    path: '/components/text'
   },
   {
     name: 'Text',
-    path: '/components/text',
+    path: '/components/text'
   },
   {
     name: 'Tooltip',
-    path: '/components/tooltip',
+    path: '/components/tooltip'
   },
   {
     name: 'TopBar',
-    path: '/components/top-bar',
+    path: '/components/top-bar'
   },
   {
     name: 'TopBar',
-    path: '/components/top-bar',
+    path: '/components/top-bar'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'TopNav',
-    path: '/components/top-nav',
+    path: '/components/top-nav'
   },
   {
     name: 'VirtualGrid',
-    path: '/components/virtual-grid',
+    path: '/components/virtual-grid'
   },
   {
     name: 'VirtualList',
-    path: '/components/virtual-list',
+    path: '/components/virtual-list'
   },
   {
     name: 'VirtualList',
-    path: '/components/virtual-list',
-  },
+    path: '/components/virtual-list'
+  }
 ]

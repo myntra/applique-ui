@@ -104,19 +104,12 @@ describe('Adornments support', () => {
     expect(adornmentWrapper.text()).toBe('/kg')
   })
   it('Should render Adornment Component', () => {
-    const inputwrapper = mountShallow(
-      <Input adornment={<button>Click Me</button>} />
-    )
+    const inputwrapper = mountShallow(<Input adornment={<button>Click Me</button>} />)
     const adornmentComp = inputwrapper.find('.input-adornment')
     expect(adornmentComp.find('button').length).toBe(1)
   })
   it('Should Support start and end position of adornment', () => {
-    const inputwrapper = mountShallow(
-      <Input
-        adornment={<button>Click Me</button>}
-        adornmentPosition="start"
-      />
-    )
+    const inputwrapper = mountShallow(<Input adornment={<button>Click Me</button>} adornmentPosition="start" />)
     let adornmentWrapper = inputwrapper.find('.input-adornment')
     expect(adornmentWrapper.hasClass('input-adornment-start')).toBe(true)
     inputwrapper.setProps({ adornmentPosition: 'end', adornment: '/kg' })

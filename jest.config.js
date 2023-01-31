@@ -1,24 +1,16 @@
-const {
-  targets,
-  isComponent,
-  isTheme,
-  getShortName,
-  getPackageDir,
-} = require('./scripts/utils')
+const { targets, isComponent, isTheme, getShortName, getPackageDir } = require('./scripts/utils')
 
 const aliases = {
   '\\.css$': '<rootDir>/test/unit/style.js',
   '\\.scss$': '<rootDir>/test/unit/style.js',
   '\\.png$': '<rootDir>/test/unit/image.js',
-  '\\.sprite\\.svg$': '<rootDir>/test/unit/svg.js',
+  '\\.sprite\\.svg$': '<rootDir>/test/unit/svg.js'
 }
 
 let newTargets = targets
 // console.log(process.env.IGNORE.split(','))
 if (process.env.IGNORE) {
-  newTargets = targets.filter(
-    (target) => !process.env.IGNORE.split(',').includes(target)
-  )
+  newTargets = targets.filter((target) => !process.env.IGNORE.split(',').includes(target))
 }
 
 newTargets.forEach((target) => {
@@ -31,13 +23,10 @@ newTargets.forEach((target) => {
 module.exports = {
   moduleNameMapper: aliases,
   setupFilesAfterEnv: ['<rootDir>/test/unit/setup-jest.js'],
-  setupFiles: [
-    '<rootDir>/test/unit/setup-enzyme.js',
-    '<rootDir>/test/unit/setup-window.js',
-  ],
+  setupFiles: ['<rootDir>/test/unit/setup-enzyme.js', '<rootDir>/test/unit/setup-window.js'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.jsx?$': 'babel-jest'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testPathIgnorePatterns: ['/node_modules/', '/old-packages/'],
@@ -46,7 +35,7 @@ module.exports = {
     'components/*/src/**/*.{ts,tsx}',
     'packages/*/src/**/*.{ts,tsx}',
     '!components/group/src/**/*.{ts,tsx}',
-    '!components/flex/src/**/*.{ts,tsx}',
+    '!components/flex/src/**/*.{ts,tsx}'
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   coverageDirectory: 'coverage',
@@ -56,14 +45,14 @@ module.exports = {
           branches: 50,
           functions: 80,
           lines: 50,
-          statements: -20,
-        },
+          statements: -20
+        }
       }
     : {},
   globals: {
     'ts-jest': {
       tsConfig: '<rootDir>/tsconfig.test.json',
-      packageJson: '<rootDir>/package.json',
-    },
-  },  
+      packageJson: '<rootDir>/package.json'
+    }
+  }
 }

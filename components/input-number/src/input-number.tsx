@@ -1,5 +1,4 @@
 import React from 'react'
-import classnames from './input-number.module.scss'
 import Input from '@applique-ui/input'
 
 export interface Props extends BaseProps {
