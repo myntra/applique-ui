@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" src="https://myntrascmuistatic.myntassets.com/partner-assets/unity/img/myntra-icon.png">
+  <img width="300px" src="https://myntrascmuistatic.myntassets.com/partner-assets/applique/images/homepage/myntraStichLogo.png">
 </p>
 
 <h1 align="center">Myntra UIKit</h1>
