@@ -1,17 +1,14 @@
 import React from 'react'
-import classnames from './input-number.module.scss'
+import Input from '@applique-ui/input'
 
 export interface Props extends BaseProps {
-  /** @private */
-  className?: string
-  /** Displays a disabled number field */
-  disabled?: boolean
-  /** Current value of the number input field. */
-  value?: number | string
+  /** Sets the text format for the field. */
+  type?: 'number'
+  /** Current value of the text input field. */
+  value?: string
   /** The handler to call when the value changes. */
   onChange?(value: number): void
 }
-
 /**
  * An input component to read numbers. It is like `<input type="number">` but
  * value is a JavaScript number.
@@ -29,16 +26,11 @@ export default function InputNumber({
 }: Props): JSX.Element {
   const newVal: number = parseFloat(value as string)
   return (
-    <div className={classnames('container', className)}>
-      <input
-        {...props}
-        type="number"
-        value={isNaN(newVal) ? '' : value}
-        className={classnames('input')}
-        onChange={(event) =>
-          onChange && onChange(parseFloat(event.target.value))
-        }
-      />
-    </div>
+    <Input
+      {...props}
+      type="number"
+      value={isNaN(newVal) ? '' : value}
+      onChange={(event) => onChange && onChange(parseFloat(event.target.value))}
+    />
   )
 }
