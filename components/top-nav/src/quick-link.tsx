@@ -4,9 +4,23 @@ import Icon from '@applique-ui/icon'
 import classnames from './quick-link.module.scss'
 import { QUICKLINK_BUTTON_TYPE } from './config'
 
+interface QuickLinkHoverProps extends BaseProps {
+  link: LinkInterface
+  parentPositions: {
+    bottom: number
+    right: number
+  }
+  enableQuickLinkHover: Function
+  disableQuickLinkHover: Function
+}
+
+interface QuickLinkHoverState {
+  left: number
+}
+
 export interface LinkInterface {
   icon: Node
-  renderFunction: Function,
+  renderFunction: Function
   type: String
 }
 
@@ -26,6 +40,55 @@ interface QuickLinkState {
  * @category basic
  * @see http://uikit.myntra.com/components/top-nav
  */
+
+class QuickLinkHover extends PureComponent<
+  QuickLinkHoverProps,
+  QuickLinkHoverState
+> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      left: 0,
+    }
+  }
+
+  componentDidMount(): void {
+    this.setState({
+      left:
+        this.props.parentPositions.right -
+        this.quickLinkHoverItemRef.offsetWidth,
+    })
+  }
+
+  quickLinkHoverItemRef = null
+
+  render() {
+    const {
+      link,
+      parentPositions,
+      enableQuickLinkHover,
+      disableQuickLinkHover,
+    } = this.props
+    return (
+      <div
+        ref={(ref) => {
+          this.quickLinkHoverItemRef = ref
+        }}
+        className={classnames('quick-link-hover-container')}
+        style={{
+          top: `${parentPositions.bottom}px`,
+          left: `${this.state.left}px`,
+        }}
+      >
+        {link.renderFunction &&
+          link.renderFunction({
+            enableQuickLinkHover: enableQuickLinkHover,
+            disableQuickLinkHover: disableQuickLinkHover,
+          })}
+      </div>
+    )
+  }
+}
 
 export default class QuickLink extends PureComponent<
   QuickLinkProps,
@@ -73,20 +136,19 @@ export default class QuickLink extends PureComponent<
         </button>
 
         {this.state.quickLinkHover && (
-          <div
-            className={classnames('quick-link-hover-container')}
-            style={{
-              top: `${this.overlayButtonRef.getBoundingClientRect().bottom}px`,
-              right: `${window.innerWidth -
-                this.overlayButtonRef.getBoundingClientRect().right}px`,
+          <QuickLinkHover
+            link={link}
+            parentPositions={{
+              bottom:
+                this.overlayButtonRef.offsetTop +
+                this.overlayButtonRef.offsetHeight,
+              right:
+                this.overlayButtonRef.offsetLeft +
+                this.overlayButtonRef.offsetWidth,
             }}
-          >
-            {link.renderFunction &&
-              link.renderFunction({
-                enableQuickLinkHover: this.enableQuickLinkHover,
-                disableQuickLinkHover: this.disableQuickLinkHover,
-              })}
-          </div>
+            enableQuickLinkHover={this.enableQuickLinkHover}
+            disableQuickLinkHover={this.disableQuickLinkHover}
+          />
         )}
 
         {this.state.quickLinkHover && (
@@ -95,11 +157,12 @@ export default class QuickLink extends PureComponent<
             className={classnames('quick-link-overlay')}
           ></span>
         )}
-        
+
         {this.state.quickLinkHover && (
           <span
             style={{
-              top: `${this.overlayButtonRef.getBoundingClientRect().bottom}px`,
+              top: `${this.overlayButtonRef.offsetTop +
+                this.overlayButtonRef.offsetHeight}px`,
             }}
             className={classnames('quick-link-overlay-section')}
             onClick={this.disableQuickLinkHover}

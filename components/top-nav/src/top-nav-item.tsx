@@ -86,8 +86,10 @@ export default class TopNavItem extends PureComponent<
     const { itemData, isActive } = this.props
     const isDirectLink = itemData.routingInfo && itemData.noHover
     const isMenu = Array.isArray(itemData.config) && itemData.config.length
-    const { menus = [[], [], [], []], directs = [] } = isMenu && getFilteredNavs(itemData.config)
-    const isNonEmptyMenu = isMenu && (menus.filter(nav => nav.length).length || directs.length)
+    const { menus = [[], [], [], []], directs = [] } =
+      isMenu && getFilteredNavs(itemData.config)
+    const isNonEmptyMenu =
+      isMenu && (menus.filter((nav) => nav.length).length || directs.length)
 
     if (isDirectLink || isNonEmptyMenu) {
       return (
@@ -116,12 +118,13 @@ export default class TopNavItem extends PureComponent<
           {itemData.label}
           {this.state.isHovering && isNonEmptyMenu && (
             <TopNavHover
-              navTabConfig={{menus, directs}}
+              navTabConfig={{ menus, directs }}
               disableHover={this.disableHover}
               handleSubNavItemClick={this.handleSubNavItemClick}
               parentPositions={{
-                bottom: this.tabItemRef.getBoundingClientRect().bottom,
-                left: this.tabItemRef.getBoundingClientRect().left,
+                bottom:
+                  this.tabItemRef.offsetTop + this.tabItemRef.offsetHeight,
+                left: this.tabItemRef.offsetLeft,
               }}
               footerMessage={itemData?.footerMessage}
             />
