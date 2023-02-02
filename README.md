@@ -2,11 +2,11 @@
   <img width="300px" src="https://myntrascmuistatic.myntassets.com/partner-assets/applique/images/homepage/myntraStichLogo.png">
 </p>
 
-<h1 align="center">Myntra UIKit</h1>
+<h1 align="center">Applique Design System</h1>
 
-<p align="center">A React implementation of Myntra's Design System</p>
+<p align="center">A React implementation of Myntra's UI framework for enterprise design system</p>
 
-The Myntra's UIKit is a design system that aims to establish a common vocabulary between everyone in an organization. 
+Aims to establish a common vocabulary between everyone in an organization. 
 It captures repeating design structures, conventions, and, decisions across dozens of applications and builds as a re-usable pattern library.
 
 UIKit is a continuous effort of finding new patterns and decommissioning older irrelevant patterns, so we adopt a component status convention.
