@@ -12,8 +12,20 @@ $types: (
     &.#{$name} {
       background-color: color('#{$color}');
       border-color: color('#{$color}');
+
+      @if $name == 'warning' {
+        color: text-color('warning-text');
+      } @else {
+        color: text-color('light');
+      }
       &.no-fill {
-        color: color('#{$color}');
+        @if $name == 'warning' {
+          color: color('warning-no-fill');
+          border-color: color('warning-no-fill');
+        } @else {
+          color: color('#{$color}');
+        }
+
         background-color: transparent;
       }
     }
@@ -29,7 +41,6 @@ $types: (
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  color: text-color('light');
 
   .content {
     flex: 1;

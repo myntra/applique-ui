@@ -1,12 +1,13 @@
 // - Solid Colors
 // https://zpl.io/a8w1k0d
 $-tokens-colors-primary: hsl(244, 54%, 53%) !default;
-$-tokens-colors-success: hsl(138, 53%, 53%) !default;
-$-tokens-colors-warning: hsl(40, 87%, 53%) !default;
+$-tokens-colors-success: hsl(145, 64%, 38%) !default;
+$-tokens-colors-warning: hsla(40, 90%, 88%, 1) !default;
 $-tokens-colors-danger: hsl(0, 54%, 53%) !default;
 $-tokens-colors-gray: hsl(0, 0%, 90%) !default;
 $-tokens-colors-brown: hsl(26, 40%, 54%) !default;
 $-tokens-colors-pink: hsl(346, 100%, 62%) !default;
+$-tokens-colors-warning-no-fill: hsla(40, 59%, 48%, 1) !default;
 
 // Revamp colors
 
@@ -18,6 +19,7 @@ $brand-colors: (
   'gray': $-tokens-colors-gray,
   'brown': $-tokens-colors-brown,
   'pink': $-tokens-colors-pink,
+  'warning-no-fill': $-tokens-colors-warning-no-fill,
 );
 
 $base-colors: (
@@ -78,11 +80,13 @@ $-tokens-colors: () !default;
 $-tokens-text-colors-dark: #000 !default;
 $-tokens-text-colors-light: #fff !default;
 $-tokens-text-colors-dark-new: #0e0f17 !default;
+$token-text-colors-warning-new: #624a19 !default;
 
 $text-colors: (
   'dark': $-tokens-text-colors-dark,
   'light': $-tokens-text-colors-light,
   'input.text': $-tokens-text-colors-dark-new,
+  'warning-text': $token-text-colors-warning-new,
 );
 
 @include add-colors(uikit-text-variants-of($text-colors));
