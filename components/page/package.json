@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/page",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "dist/page.cjs.js",
   "module": "dist/page.esm.js",
   "types": "dist/index.d.ts",
