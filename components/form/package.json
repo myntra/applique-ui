@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/form",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "main": "dist/form.cjs.js",
   "module": "dist/form.esm.js",
   "types": "dist/index.d.ts",
