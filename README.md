@@ -6,25 +6,13 @@
 
 <p align="center">A React implementation of Myntra's UI framework for enterprise design system</p>
 
-Aims to establish a common vocabulary between everyone in an organization. 
-It captures repeating design structures, conventions, and, decisions across dozens of applications and builds as a re-usable pattern library.
+Myntra's UI framework for enterprise design system is a comprehensive solution for front-end development. With a focus on user experience (UX) and intuitive user interface (UI), our framework integrates the latest design practices to create a seamless experience for users. 
 
-UIKit is a continuous effort of finding new patterns and decommissioning older irrelevant patterns, so we adopt a component status convention.
-
-<br />
-
-| Icon | Status       | Description                                                                                                                                                                                                          |
-| :--: | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  💔  | DEPRECATED   | **DO NOT USE.** If you're using DEPRECATED component, it's time to migrate as it would removed in next major release.                                                                                                |
-|  ❤️  | EXPERIMENTAL | **USE WITH CAUTION.** These components are most likely to graduate to **REVIEWING** state but they can be ocassionally **DEPRECATED** too. If you're using EXPERIMENTAL component, keep your application up to date. |
-|  💛  | REVIEWING    | These components are as good as READY component. They would graduate to **READY** after a fixed time (approx. 3 months or 3 minor releases or next major release).                                                   |
-|  💚  | READY        | These components are well tested, stable and proven. |
-
-<br />
+The framework is built using React and TypeScript, providing robust and scalable components for fast-paced development. 
 
 ## Using the React components
 
-We do offer a varity of components which includes simple one's like Text and Button and complex components Virtual List, Schema Form etc.
+Our framework offers a diverse range of components, including both basic elements such as Text and Button, as well as more complex components like Virtual List and Schema Form.
 
 ### Installation
 Run the following command using npm:
@@ -61,9 +49,9 @@ ReactDOM.render(
 
 ## Using the icon library
 
-We offer integration of icons with some of our components like Button, NavBar, etc. All these icons are passed as a react element to the desired
-component.
-We offer some of the basic set of icons that you can use. Apart from that, you can use your own icons as well.
+Our framework includes seamless integration of icons with select components like Button and NavBar, passed as React elements to the relevant component. 
+
+We provide a basic set of icons for immediate use, as well as the option to utilize custom icons for a personalized touch.
 
 ### Installation
 Run the following command using npm:
@@ -94,15 +82,4 @@ import BoxSolid from "@myntra/uikit-icons/svgs/BoxSolid"
 ```
 
 ## Contributing
-Pull requests are welcome. See the [contribution guidelines](https://uikit.myntra.com/contributing) for more information.
-
-## Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/sunil-jhamnani"><img src="https://avatars.githubusercontent.com/u/54964764?v=4" width="100px;" alt=""/><br /><sub><b>Sunil Jhamnani</b></sub></a></td>
-    </tr>
-  <table>
+Contributions through pull requests are encouraged. For further information, refer to the [contribution guidelines](https://uikit.myntra.com/contributing).
