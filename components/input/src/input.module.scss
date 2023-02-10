@@ -9,6 +9,17 @@
   padding: padding('input.text');
 }
 
+.input:not(:focus) {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+/* Hide number spinner box on Chrome & Safari. */
+.input::-webkit-inner-spin-button:not(:focus),
+.input::-webkit-outer-spin-button:not(:focus) {
+  visibility: hidden;
+}
+
 .container {
   position: relative;
   display: flex;
