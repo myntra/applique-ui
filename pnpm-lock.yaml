@@ -614,14 +614,14 @@ importers:
 
   components/input-checkbox:
     specifiers:
-      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input': link:../input
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
@@ -686,14 +686,14 @@ importers:
 
   components/input-masked:
     specifiers:
-      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input': link:../input
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
@@ -728,14 +728,14 @@ importers:
 
   components/input-number:
     specifiers:
-      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
       react: '>=15.4'
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
-      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input': link:../input
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
@@ -764,7 +764,7 @@ importers:
     specifiers:
       '@applique-ui/dropdown': 0.0.*
       '@applique-ui/icon': 0.0.*
-      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
@@ -775,7 +775,7 @@ importers:
     dependencies:
       '@applique-ui/dropdown': link:../dropdown
       '@applique-ui/icon': link:../icon
-      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input': link:../input
       '@applique-ui/list': link:../list
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
@@ -789,6 +789,7 @@ importers:
   components/input-text:
     specifiers:
       '@applique-ui/icon': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
@@ -796,6 +797,7 @@ importers:
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
+      '@applique-ui/input': link:../input
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
@@ -807,7 +809,7 @@ importers:
   components/input-text-area:
     specifiers:
       '@applique-ui/icon': 0.0.*
-      '@applique-ui/input-text': 0.0.*
+      '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@types/react': 17.0.2
@@ -815,7 +817,7 @@ importers:
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
-      '@applique-ui/input-text': link:../input-text
+      '@applique-ui/input': link:../input
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43

@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-masked",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "main": "dist/input-masked.cjs.js",
   "module": "dist/input-masked.esm.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,7 @@
   "peerDependencies": {},
   "dependencies": {
     "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/input-text": "0.0.*",
+    "@applique-ui/input": "0.0.*",
     "@applique-ui/uikit-utils": "0.0.*",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }
