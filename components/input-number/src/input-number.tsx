@@ -30,7 +30,7 @@ export default function InputNumber({
       {...props}
       type="number"
       value={isNaN(newVal) ? '' : value}
-      onChange={(event) => onChange && onChange(parseFloat(event.target.value))}
+      onChange={(event) => onChange?.(parseFloat(event.target.value))}
     />
   )
 }

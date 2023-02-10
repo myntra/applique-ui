@@ -28,7 +28,7 @@ export default function InputText({
     <Input
       {...props}
       value={typeof value !== 'string' ? '' : value}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={(event) => onChange?.(event.target.value)}
     />
   )
 }
