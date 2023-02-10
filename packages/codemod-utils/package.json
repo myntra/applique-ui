@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/codemod-utils",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
   "types": "dist/index.d.ts",

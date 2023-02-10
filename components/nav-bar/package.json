@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/nav-bar",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "dist/nav-bar.cjs.js",
   "module": "dist/nav-bar.esm.js",
   "types": "dist/index.d.ts",

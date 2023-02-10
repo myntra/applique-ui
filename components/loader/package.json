@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/loader",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "dist/loader.cjs.js",
   "module": "dist/loader.esm.js",
   "types": "dist/index.d.ts",
