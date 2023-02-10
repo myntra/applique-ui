@@ -5,7 +5,7 @@ export interface Props extends BaseProps {
   /** Sets the text format for the field. */
   type?: 'number'
   /** Current value of the text input field. */
-  value?: string
+  value?: string | number
   /** The handler to call when the value changes. */
   onChange?(value: number): void
 }
