@@ -19,7 +19,6 @@ $brand-colors: (
   'gray': $-tokens-colors-gray,
   'brown': $-tokens-colors-brown,
   'pink': $-tokens-colors-pink,
-  'warning-no-fill': $-tokens-colors-warning-no-fill,
 );
 
 $base-colors: (
@@ -66,6 +65,7 @@ $colors: (
   'input.filled': '#gray-base-new-1',
   'input.text': '#gray-base-new-5',
   'input.placeholder': '#gray-base-new-2',
+  'warning-no-fill': $-tokens-colors-warning-no-fill,
 );
 $-tokens-colors: () !default;
 
