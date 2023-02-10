@@ -1,5 +1,5 @@
 @import '@accoutrement';
-@import '@applique-ui/input-text/style.scss';
+@import '@applique-ui/input/style.scss';
 
 .input {
   &.with-icon {
@@ -73,9 +73,9 @@
     flex-grow: 1;
     input {
       padding: 0;
+      background-color: transparent;
       border: 0;
       outline: none;
-      background-color: transparent;
     }
   }
   .buttons {

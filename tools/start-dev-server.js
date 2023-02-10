@@ -145,8 +145,8 @@ function startWebpackDevServer(component, port) {
     .set('@uikit-icons', '../node_modules/@myntra/uikit-icons/dist/index')
 
   chain.resolve.alias.set(
-    `'@applique-ui/input-text/style.scss`,
-    componentsDir + '/input-text/style.scss'
+    `@applique-ui/input/style.scss`,
+    componentsDir + '/input/style.scss'
   )
   components.forEach((name) =>
     chain.resolve.alias.set(

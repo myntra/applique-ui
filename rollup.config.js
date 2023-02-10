@@ -153,10 +153,10 @@ function aliases() {
           )
         }
 
-        if (/^@applique-ui\/input-text\//.test(id)) {
+        if (/^@applique-ui\/input\//.test(id)) {
           return id.replace(
-            '@applique-ui/input-text',
-            getPackageDir('@applique-ui/input-text')
+            '@applique-ui/input',
+            getPackageDir('@applique-ui/input')
           )
         }
 
