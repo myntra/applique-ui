@@ -40,7 +40,7 @@ $text-sizes: (
   'small': 12,
   'interface': '#small',
   'table': '#small',
-  'button': '#small',
+  'button': '#body',
 );
 
 $-tokens-font-sizes: () !default;
@@ -110,10 +110,10 @@ $-default-typography: (
     'weight': 400,
   ),
   'button': (
-    'size': 'small',
+    'size': 'body',
     'family': 'body',
     'weight': 500,
-    'text-transform': uppercase,
+    'text-transform': none,
     'letter-spacing': 0,
   ),
   'anchor': (

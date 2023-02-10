@@ -75,7 +75,7 @@ export default class Button extends PureComponent<Props> {
     disabled: false,
     inheritTextColor: false,
     loading: false,
-    transform: 'uppercase',
+    transform: 'none',
     size: 'regular',
   }
 
