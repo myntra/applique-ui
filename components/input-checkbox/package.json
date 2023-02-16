@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-checkbox",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "main": "dist/input-checkbox.cjs.js",
   "module": "dist/input-checkbox.esm.js",
   "types": "dist/index.d.ts",
