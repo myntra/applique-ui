@@ -7,7 +7,8 @@ $shadows: (
   'raised': '#small',
   'job-tracker': 0 2px 4px 0 rgba(0, 0, 0, 0.21),
   'stepper': 0 1px 4px 0 rgba(0, 0, 0, 0.25),
-  'topnav-hover': 0 8px 12px rgba(0, 0, 0, 0.25),
+  'topnav-hover': 0 12px 24px rgba(0, 0, 0, 0.15),
+  'topnav': 0 2px 8px rgba(0, 0, 0, 0.15),
 );
 
 $-tokens-shadows: () !default;

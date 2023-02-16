@@ -6,9 +6,11 @@
   height: 100%;
 
   &-header {
+    z-index: 3;
     height: 54px;
     padding: 0 0 0 size('6x');
     background-color: color('white');
+    box-shadow: shadow('topnav');
 
     &-logo {
       margin-right: size('6x');

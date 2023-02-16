@@ -12,6 +12,7 @@
   border-bottom: 2px solid transparent;
 
   &:hover {
+    color: color('gray-base-new-5');
     cursor: pointer;
     background-color: color('primary-base-light');
     border-bottom: 2px solid color('primary');
