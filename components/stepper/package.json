@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/stepper",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",

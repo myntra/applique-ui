@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/tabs",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "main": "dist/tabs.cjs.js",
   "module": "dist/tabs.esm.js",
   "types": "dist/index.d.ts",
