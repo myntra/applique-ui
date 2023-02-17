@@ -58,9 +58,9 @@
     padding: size('2x') size('4x') size('2x') size('4x');
     font-size: 12px;
     line-height: 14px;
-    color: #3e3f45;
+    color: color('gray-base-new-3');
     text-align: left;
-    background-color: #e7e7e8;
+    background-color: color('primary-base-light-2');
   }
 
   &-menu + &-menu {
