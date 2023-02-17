@@ -2,8 +2,8 @@
 
 .hover-container {
   position: absolute;
+  z-index: 100;
   box-shadow: shadow('topnav-hover');
-  z-index: 6;
 }
 
 .hover-item {
@@ -54,12 +54,13 @@
   }
 
   &-footer {
-    padding: size('2x') size('4x') size('2x') size('4x');
-    background-color: #E7E7E8;
-    font-size: 12px;
-    text-align: left;
     height: 30px;
+    padding: size('2x') size('4x') size('2x') size('4x');
+    font-size: 12px;
     line-height: 14px;
+    color: color('gray-base-new-3');
+    text-align: left;
+    background-color: color('primary-base-light-2');
   }
 
   &-menu + &-menu {
@@ -76,7 +77,7 @@
       text-align: left;
       background-color: transparent;
       border: 0;
-      
+
       &:hover {
         background-color: color('primary-base-light');
 
