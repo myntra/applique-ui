@@ -6,7 +6,7 @@ import classnames from './top-nav-hover.module.scss'
 
 export interface TopNavHoverProps extends BaseProps {
   navTabConfig: {
-    menus: Array<Array<NAVIGATION_ITEM_L2_INTERFACE>>,
+    menus: Array<Array<NAVIGATION_ITEM_L2_INTERFACE>>
     directs: Array<NAVIGATION_ITEM_L2_INTERFACE>
   }
   handleSubNavItemClick?: Function
@@ -45,24 +45,29 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
   }
 
   render() {
-    const { navTabConfig, disableHover, parentPositions, footerMessage } = this.props
+    const {
+      navTabConfig,
+      disableHover,
+      parentPositions,
+      footerMessage,
+    } = this.props
 
     const { menus, directs } = navTabConfig
 
     return (
-      <div 
-      className={classnames('hover-container')}
-      style={{
-        top: `${parentPositions.bottom}px`,
-        left: `${this.state.left}px`,
-      }}
+      <div
+        className={classnames('hover-container')}
+        style={{
+          top: `${parentPositions.bottom}px`,
+          left: `${this.state.left}px`,
+        }}
+        onMouseLeave={disableHover}
       >
         <div
           className={classnames('hover-item')}
           ref={(el) => {
             this.hoverItemRef = el
           }}
-          onMouseLeave={disableHover}
         >
           <Layout type="stack" gutter="xl">
             {menus.map((menusBucket) =>
@@ -102,7 +107,9 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                 {directs.map((directLink) => {
                   return (
                     <button
-                      onClick={() => this.props.handleSubNavItemClick(directLink)}
+                      onClick={() =>
+                        this.props.handleSubNavItemClick(directLink)
+                      }
                       key={directLink.title}
                       className={classnames('hover-item-direct-link')}
                     >
@@ -114,7 +121,12 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
             ) : null}
           </Layout>
         </div>
-        {footerMessage ? <div className={classnames('hover-item-footer')} dangerouslySetInnerHTML={{__html: footerMessage}}></div> : null}
+        {footerMessage ? (
+          <div
+            className={classnames('hover-item-footer')}
+            dangerouslySetInnerHTML={{ __html: footerMessage }}
+          ></div>
+        ) : null}
       </div>
     )
   }

@@ -79,9 +79,7 @@
     z-index: 1000;
     min-width: 200px;
     background-color: color('white');
-
-    @include border-radius('checkbox');
-
+    border-radius: 4px;
     box-shadow: shadow('topnav-hover');
   }
 }
