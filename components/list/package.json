@@ -20,10 +20,12 @@
   ],
   "sideEffects": false,
   "optionalDependencies": {
-    "react": ">=15.4"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@types/react": "^16.8"
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
@@ -32,7 +34,7 @@
     "@applique-ui/input-checkbox": "0.0.*",
     "@applique-ui/input-radio": "0.0.*",
     "@applique-ui/uikit-utils": "0.0.*",
-    "react": "16.*",
+    "react": "^16.9.0",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@myntra/uikit-icons@latest"
   }

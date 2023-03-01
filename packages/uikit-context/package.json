@@ -16,9 +16,13 @@
   "sideEffects": false,
   "dependencies": {
     "@applique-ui/uikit-can-i-use": "0.0.*",
-    "react": "^16.8.4"
+    "react": "^16.9.0"
+  },
+  "optionalDependencies": {
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@types/react": "^16.8.10"
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0"
   }
 }

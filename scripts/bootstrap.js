@@ -42,10 +42,12 @@ targets.forEach((name) => {
 
   if (isComponent(name)) {
     pkg.optionalDependencies = {
-      react: '>=15.4',
+      react: '^16.9.0',
+      'react-dom': '^16.9.0',
     }
     pkg.devDependencies = {
-      '@types/react': 'latest',
+      '@types/react': '^16.9.0',
+      '@types/react-dom': '^16.9.0',
     }
     pkg.peerDependencies = {}
     pkg.dependencies = {

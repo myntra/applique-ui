@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 overrides:
-  '@types/react': 17.0.2
-  '@types/react-dom': 17.0.2
+  '@types/react': 16.9.0
+  '@types/react-dom': 16.9.0
 
 importers:
 
@@ -249,8 +249,10 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -260,17 +262,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/avatar:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       name-initials: ^0.1.3
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -278,25 +284,31 @@ importers:
       name-initials: 0.1.3
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/badge:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/banner:
     specifiers:
@@ -306,8 +318,10 @@ importers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -318,25 +332,31 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/bread-crumb:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/button:
     specifiers:
@@ -346,8 +366,10 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -358,9 +380,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/button-group:
     specifiers:
@@ -368,8 +392,10 @@ importers:
       '@applique-ui/dropdown': 0.0.*
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -378,25 +404,31 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/click-away:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/dropdown:
     specifiers:
@@ -406,9 +438,11 @@ importers:
       '@applique-ui/portal': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -420,17 +454,21 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/error-boundary:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -438,9 +476,11 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/fab:
     specifiers:
@@ -449,9 +489,11 @@ importers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -462,17 +504,21 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/field:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -480,9 +526,11 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/form:
     specifiers:
@@ -503,8 +551,10 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -526,17 +576,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/grid:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -544,31 +598,37 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/icon:
     specifiers:
       '@applique-ui/svg': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       '@znck/promised': ^1.0.4
       glob: ^7.1.3
       lodash.camelcase: ^4.3.0
       prettier: ^1.16.4
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
       '@applique-ui/svg': link:../../packages/svg
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       '@znck/promised': 1.0.4
       glob: 7.2.3
       lodash.camelcase: 4.3.0
@@ -578,10 +638,12 @@ importers:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       intersection-observer-polyfill: ^0.1.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -590,17 +652,21 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input:
     specifiers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -608,17 +674,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-checkbox:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/input': link:../input
@@ -626,9 +696,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-date:
     specifiers:
@@ -642,10 +714,12 @@ importers:
       '@applique-ui/layout': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       date-fns: ^2.0.0-alpha.27
       dayjs: ^1.8.14
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -662,17 +736,21 @@ importers:
       dayjs: 1.11.7
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-file:
     specifiers:
       '@applique-ui/button': 0.0.*
       '@applique-ui/input-text': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -680,17 +758,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-masked:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/input': link:../input
@@ -698,9 +780,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-month:
     specifiers:
@@ -709,9 +793,11 @@ importers:
       '@applique-ui/input-masked': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       luxon: ^1.21.1
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/dropdown': link:../dropdown
@@ -722,17 +808,21 @@ importers:
       luxon: 1.28.0
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-number:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/input': link:../input
@@ -740,25 +830,31 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-radio:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-select:
     specifiers:
@@ -768,8 +864,10 @@ importers:
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       sifter: ^0.5.3
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
@@ -782,9 +880,11 @@ importers:
       sifter: 0.5.4
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-text:
     specifiers:
@@ -792,8 +892,10 @@ importers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -802,9 +904,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/input-text-area:
     specifiers:
@@ -812,8 +916,10 @@ importers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -822,23 +928,29 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/layout:
     specifiers:
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/list:
     specifiers:
@@ -847,8 +959,10 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       scroll-into-view-if-needed: ^2.2.20
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
@@ -860,34 +974,41 @@ importers:
       scroll-into-view-if-needed: 2.2.31
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/loader:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/measure:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
-      react-dom: ^16.8.6
+      react: ^16.9.0
+      react-dom: ^16.9.0
       resize-observer-polyfill: ^1.5.1
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
@@ -897,10 +1018,11 @@ importers:
       resize-observer-polyfill: 1.5.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
-      react-dom: 16.14.0_react@18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/modal:
     specifiers:
@@ -908,8 +1030,10 @@ importers:
       '@applique-ui/portal': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -918,9 +1042,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/nav-bar:
     specifiers:
@@ -930,8 +1056,10 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/avatar': link:../avatar
@@ -942,33 +1070,41 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/page:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/pagination:
     specifiers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -976,18 +1112,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/portal:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
-      react-dom: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -995,18 +1134,21 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/progress:
     specifiers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/text': link:../text
@@ -1014,9 +1156,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/schema-form:
     specifiers:
@@ -1026,8 +1170,10 @@ importers:
       '@applique-ui/grid': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -1038,17 +1184,21 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/section:
     specifiers:
       '@applique-ui/button': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -1056,9 +1206,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/stepper:
     specifiers:
@@ -1067,9 +1219,11 @@ importers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -1080,9 +1234,11 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/table:
     specifiers:
@@ -1098,8 +1254,10 @@ importers:
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-grid': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/button': link:../button
@@ -1116,47 +1274,59 @@ importers:
       '@applique-ui/virtual-list': link:../virtual-list
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/tabs:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/text:
     specifiers:
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/tooltip:
     specifiers:
       '@applique-ui/dropdown': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/dropdown': link:../dropdown
@@ -1164,9 +1334,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/top-bar:
     specifiers:
@@ -1176,8 +1348,10 @@ importers:
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/bread-crumb': link:../bread-crumb
@@ -1188,9 +1362,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/top-nav:
     specifiers:
@@ -1199,9 +1375,11 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
       prop-types: ^15.7.2
-      react: '>=15.4'
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/icon': link:../icon
@@ -1212,17 +1390,21 @@ importers:
       prop-types: 15.8.1
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/virtual-grid:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 17.0.2
-      react: '>=15.4'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../../packages/uikit-can-i-use
@@ -1230,19 +1412,21 @@ importers:
       '@applique-ui/virtual-list': link:../virtual-list
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   components/virtual-list:
     specifiers:
       '@applique-ui/measure': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 17.0.2
-      '@types/react-dom': 17.0.2
-      react: '>=15.4'
-      react-dom: '>=16.0'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
     dependencies:
       '@applique-ui/measure': link:../measure
@@ -1250,11 +1434,11 @@ importers:
       '@applique-ui/uikit-utils': link:../../packages/uikit-utils
       uikit-icons: /@myntra/uikit-icons/1.0.43
     optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
-      '@types/react-dom': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   packages/accoutrement:
     specifiers:
@@ -1521,16 +1705,16 @@ importers:
 
   packages/uikit-can-i-use:
     specifiers:
-      '@types/react': 17.0.2
-      '@types/react-dom': 17.0.2
-      react: '*'
-      react-dom: '*'
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
     optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
-      '@types/react-dom': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   packages/uikit-cli:
     specifiers:
@@ -1608,25 +1792,34 @@ importers:
   packages/uikit-context:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
-      '@types/react': 17.0.2
-      react: ^16.8.4
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
     dependencies:
       '@applique-ui/uikit-can-i-use': link:../uikit-can-i-use
       react: 16.14.0
+    optionalDependencies:
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   packages/uikit-design:
     specifiers: {}
 
   packages/uikit-utils:
     specifiers:
-      '@types/react': 17.0.2
-      react: ^16.0.0
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
+      react: ^16.9.0
+      react-dom: ^16.9.0
     optionalDependencies:
       react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
+      '@types/react-dom': 16.9.0
 
   themes/nuclei:
     specifiers:
@@ -3312,7 +3505,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.3
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
       react: 16.14.0
     dev: true
 
@@ -3529,7 +3722,7 @@ packages:
     resolution: {integrity: sha512-xryQlOEIe1TduDWAOphR0ihfebKFSWOXpIsk+70JskCfRfW+xALdnJ0r1ZOTo85F9Qsjk6vtlU7edTYHbls9tA==}
     dependencies:
       '@types/cheerio': 0.22.31
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
     dev: true
 
   /@types/eslint-scope/3.7.4:
@@ -3693,17 +3886,17 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom/17.0.2:
-    resolution: {integrity: sha512-Icd9KEgdnFfJs39KyRyr0jQ7EKhq8U6CcHRMGAS45fp5qgUvxL3ujUCfWFttUK2UErqZNj97t9gsVPNAqcwoCg==}
+  /@types/react-dom/16.9.0:
+    resolution: {integrity: sha512-OL2lk7LYGjxn4b0efW3Pvf2KBVP0y1v3wip1Bp7nA79NkOpElH98q3WdCEdDj93b2b0zaeBG9DvriuKjIK5xDA==}
     dependencies:
-      '@types/react': 17.0.2
+      '@types/react': 16.9.0
     dev: true
 
-  /@types/react/17.0.2:
-    resolution: {integrity: sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==}
+  /@types/react/16.9.0:
+    resolution: {integrity: sha512-eOct1hyZI9YZf/eqNlYu7jxA9qyTw1EGXruAJhHhBDBpc00W0C1vwlnh+hkOf7UFZkNK+UxnFBpwAZe3d7XJhQ==}
     dependencies:
       '@types/prop-types': 15.7.5
-      csstype: 3.1.1
+      csstype: 2.6.21
     dev: true
 
   /@types/resolve/0.0.8:
@@ -6598,8 +6791,8 @@ packages:
       cssom: 0.3.8
     dev: true
 
-  /csstype/3.1.1:
-    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
+  /csstype/2.6.21:
+    resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
     dev: true
 
   /csv-parse/4.16.3:
@@ -13545,31 +13738,6 @@ packages:
       prop-types: 15.8.1
       react: 16.14.0
       scheduler: 0.19.1
-    dev: true
-
-  /react-dom/16.14.0_react@18.2.0:
-    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
-    peerDependencies:
-      react: ^16.14.0
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.8.1
-      react: 18.2.0
-      scheduler: 0.19.1
-    optional: true
-
-  /react-dom/18.2.0_react@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
-    requiresBuild: true
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
-    dev: false
-    optional: true
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -14567,13 +14735,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-
-  /scheduler/0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
-    optional: true
 
   /schema-utils/1.0.0:
     resolution: {integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==}

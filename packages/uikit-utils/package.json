@@ -14,11 +14,12 @@
   ],
   "sideEffects": false,
   "description": "@applique-ui/uikit-utils",
-  "devDependencies": {
-    "@types/react": "^16.8.24",
-    "react": "^16.8.6"
-  },
   "optionalDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0"
   }
 }

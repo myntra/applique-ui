@@ -7,7 +7,7 @@
   "private": true,
   "version": "0.0.30",
   "engines": {
-    "node": ">=14.17.6"
+    "node": ">=16.14.1"
   },
   "scripts": {
     "start": "node tools/start-dev-server",
@@ -161,8 +161,8 @@
     "webpack": "5.74.0"
   },
   "resolutions": {
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.2"
+    "@types/react": "16.9.0",
+    "@types/react-dom": "16.9.0"
   },
   "husky": {
     "hooks": {
