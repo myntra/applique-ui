@@ -32,9 +32,7 @@
     "prettier": "^1.11.1"
   },
   "optionalDependencies": {
-    "eslint": ">=4.19.1"
-  },
-  "devDependencies": {
     "eslint": "^4.19.1"
-  }
+  },
+  "devDependencies": {}
 }

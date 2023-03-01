@@ -1,8 +1,11 @@
 lockfileVersion: 5.4
 
 overrides:
-  '@types/react': 16.9.0
-  '@types/react-dom': 16.9.0
+  '@types/eslint': ^4.16.3
+  '@types/react': 17.0.2
+  '@types/react-dom': 17.0.2
+  eslint: ^4.19.1
+  webpack: 5.74.0
 
 importers:
 
@@ -249,8 +252,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -265,15 +268,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/avatar:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       name-initials: ^0.1.3
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -287,15 +290,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/badge:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -307,8 +310,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/banner:
     specifiers:
@@ -318,8 +321,8 @@ importers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -335,15 +338,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/bread-crumb:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -355,8 +358,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/button:
     specifiers:
@@ -366,8 +369,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -383,8 +386,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/button-group:
     specifiers:
@@ -392,8 +395,8 @@ importers:
       '@applique-ui/dropdown': 0.0.*
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -407,15 +410,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/click-away:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -427,8 +430,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/dropdown:
     specifiers:
@@ -438,8 +441,8 @@ importers:
       '@applique-ui/portal': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -457,15 +460,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/error-boundary:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -479,8 +482,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/fab:
     specifiers:
@@ -489,8 +492,8 @@ importers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -507,15 +510,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/field:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -529,8 +532,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/form:
     specifiers:
@@ -551,8 +554,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -579,15 +582,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/grid:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -601,16 +604,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/icon:
     specifiers:
       '@applique-ui/svg': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       '@znck/promised': ^1.0.4
       glob: ^7.1.3
       lodash.camelcase: ^4.3.0
@@ -627,8 +630,8 @@ importers:
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
       '@applique-ui/svg': link:../../packages/svg
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       '@znck/promised': 1.0.4
       glob: 7.2.3
       lodash.camelcase: 4.3.0
@@ -638,8 +641,8 @@ importers:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       intersection-observer-polyfill: ^0.1.0
       prop-types: ^15.7.2
       react: ^16.9.0
@@ -655,16 +658,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input:
     specifiers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -677,16 +680,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-checkbox:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -699,8 +702,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-date:
     specifiers:
@@ -714,8 +717,8 @@ importers:
       '@applique-ui/layout': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       date-fns: ^2.0.0-alpha.27
       dayjs: ^1.8.14
       react: ^16.9.0
@@ -739,16 +742,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-file:
     specifiers:
       '@applique-ui/button': 0.0.*
       '@applique-ui/input-text': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -761,16 +764,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-masked:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -783,8 +786,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-month:
     specifiers:
@@ -793,8 +796,8 @@ importers:
       '@applique-ui/input-masked': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       luxon: ^1.21.1
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -811,16 +814,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-number:
     specifiers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -833,15 +836,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-radio:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -853,8 +856,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-select:
     specifiers:
@@ -864,8 +867,8 @@ importers:
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       sifter: ^0.5.3
@@ -883,8 +886,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-text:
     specifiers:
@@ -892,8 +895,8 @@ importers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -907,8 +910,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/input-text-area:
     specifiers:
@@ -916,8 +919,8 @@ importers:
       '@applique-ui/input': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -931,14 +934,14 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/layout:
     specifiers:
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -949,8 +952,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/list:
     specifiers:
@@ -959,8 +962,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       scroll-into-view-if-needed: ^2.2.20
@@ -977,15 +980,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/loader:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -997,15 +1000,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/measure:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -1021,8 +1024,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/modal:
     specifiers:
@@ -1030,8 +1033,8 @@ importers:
       '@applique-ui/portal': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1045,8 +1048,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/nav-bar:
     specifiers:
@@ -1056,8 +1059,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1073,15 +1076,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/page:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1093,16 +1096,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/pagination:
     specifiers:
       '@applique-ui/icon': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1115,15 +1118,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/portal:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -1137,16 +1140,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/progress:
     specifiers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1159,8 +1162,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/schema-form:
     specifiers:
@@ -1170,8 +1173,8 @@ importers:
       '@applique-ui/grid': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1187,16 +1190,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/section:
     specifiers:
       '@applique-ui/button': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1209,8 +1212,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/stepper:
     specifiers:
@@ -1219,8 +1222,8 @@ importers:
       '@applique-ui/text': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -1237,8 +1240,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/table:
     specifiers:
@@ -1254,8 +1257,8 @@ importers:
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-grid': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1277,15 +1280,15 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/tabs:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1297,14 +1300,14 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/text:
     specifiers:
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1315,16 +1318,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/tooltip:
     specifiers:
       '@applique-ui/dropdown': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1337,8 +1340,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/top-bar:
     specifiers:
@@ -1348,8 +1351,8 @@ importers:
       '@applique-ui/list': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1365,8 +1368,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/top-nav:
     specifiers:
@@ -1375,8 +1378,8 @@ importers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-context': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       prop-types: ^15.7.2
       react: ^16.9.0
       react-dom: ^16.9.0
@@ -1393,16 +1396,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/virtual-grid:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
       '@applique-ui/virtual-list': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1415,16 +1418,16 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   components/virtual-list:
     specifiers:
       '@applique-ui/measure': 0.0.*
       '@applique-ui/uikit-can-i-use': 0.0.*
       '@applique-ui/uikit-utils': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
       uikit-icons: npm:@myntra/uikit-icons@latest
@@ -1437,8 +1440,8 @@ importers:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   packages/accoutrement:
     specifiers:
@@ -1498,7 +1501,7 @@ importers:
     specifiers:
       babel-eslint: ^8.2.2
       babel-plugin-syntax-jsx: ^6.18.0
-      eslint: '>=4.19.1'
+      eslint: ^4.19.1
       eslint-config-prettier: ^2.9.0
       eslint-config-standard: ^11.0.0
       eslint-plugin-babel: ^5.0.0
@@ -1515,21 +1518,21 @@ importers:
     dependencies:
       babel-eslint: 8.2.6
       babel-plugin-syntax-jsx: 6.18.0
-      eslint-config-prettier: 2.10.0_eslint@8.29.0
-      eslint-config-standard: 11.0.0_5kyx7rm3czyunvgxamiish2vx4
-      eslint-plugin-babel: 5.3.1_eslint@8.29.0
-      eslint-plugin-import: 2.26.0_eslint@8.29.0
-      eslint-plugin-jest: 21.27.2_eslint@8.29.0
+      eslint-config-prettier: 2.10.0_eslint@4.19.1
+      eslint-config-standard: 11.0.0_4x25pzmtnnnuafsvnuv4eoyyeu
+      eslint-plugin-babel: 5.3.1_eslint@4.19.1
+      eslint-plugin-import: 2.26.0_eslint@4.19.1
+      eslint-plugin-jest: 21.27.2_eslint@4.19.1
       eslint-plugin-json: 1.4.0
-      eslint-plugin-jsx-a11y: 6.6.1_eslint@8.29.0
-      eslint-plugin-node: 6.0.1_eslint@8.29.0
+      eslint-plugin-jsx-a11y: 6.6.1_eslint@4.19.1
+      eslint-plugin-node: 6.0.1_eslint@4.19.1
       eslint-plugin-prettier: 2.7.0_prettier@1.19.1
       eslint-plugin-promise: 3.8.0
-      eslint-plugin-react: 7.31.11_eslint@8.29.0
-      eslint-plugin-standard: 3.1.0_eslint@8.29.0
+      eslint-plugin-react: 7.31.11_eslint@4.19.1
+      eslint-plugin-standard: 3.1.0_eslint@4.19.1
       prettier: 1.19.1
     optionalDependencies:
-      eslint: 8.29.0
+      eslint: 4.19.1
 
   packages/rollup-plugin-classnames:
     specifiers:
@@ -1705,16 +1708,16 @@ importers:
 
   packages/uikit-can-i-use:
     specifiers:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
     optionalDependencies:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   packages/uikit-cli:
     specifiers:
@@ -1741,7 +1744,7 @@ importers:
       commander: ^2.15.1
       copyfiles: ^2.2.0
       diff: ^3.5.0
-      eslint: 4.19.1
+      eslint: ^4.19.1
       execa: ^4.0.0
       fs: ^0.0.1-security
       glob: ^7.1.2
@@ -1792,8 +1795,8 @@ importers:
   packages/uikit-context:
     specifiers:
       '@applique-ui/uikit-can-i-use': 0.0.*
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
     dependencies:
@@ -1802,24 +1805,24 @@ importers:
     optionalDependencies:
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   packages/uikit-design:
     specifiers: {}
 
   packages/uikit-utils:
     specifiers:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
       react: ^16.9.0
       react-dom: ^16.9.0
     optionalDependencies:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     devDependencies:
-      '@types/react': 16.9.0
-      '@types/react-dom': 16.9.0
+      '@types/react': 17.0.2
+      '@types/react-dom': 17.0.2
 
   themes/nuclei:
     specifiers:
@@ -3217,43 +3220,6 @@ packages:
       minimist: 1.2.7
     dev: true
 
-  /@eslint/eslintrc/1.3.3:
-    resolution: {integrity: sha512-uj3pT6Mg+3t39fvLrj8iuCIJ38zKO9FpGtJ4BBJebJhEwjoT+KLVNCcHT5QC9NGRIEi7fZ0ZR8YRb884auB4Lg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      ajv: 6.12.6
-      debug: 4.3.4
-      espree: 9.4.1
-      globals: 13.18.0
-      ignore: 5.2.1
-      import-fresh: 3.3.0
-      js-yaml: 4.1.0
-      minimatch: 3.1.2
-      strip-json-comments: 3.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@humanwhocodes/config-array/0.11.7:
-    resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
-    engines: {node: '>=10.10.0'}
-    dependencies:
-      '@humanwhocodes/object-schema': 1.2.1
-      debug: 4.3.4
-      minimatch: 3.1.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@humanwhocodes/module-importer/1.0.1:
-    resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
-    engines: {node: '>=12.22'}
-    dev: false
-
-  /@humanwhocodes/object-schema/1.2.1:
-    resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
-    dev: false
-
   /@jest/console/24.9.0:
     resolution: {integrity: sha512-Zuj6b8TnKXi3q4ymac8EQfc3ea/uhLeCGThFqXeC8H9/raaH8ARPUTdId+XyGd03Z4In0/VjD2OYFcBF09fNLQ==}
     engines: {node: '>= 6'}
@@ -3505,7 +3471,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.3
-      '@types/react': 16.9.0
+      '@types/react': 17.0.2
       react: 16.14.0
     dev: true
 
@@ -3558,6 +3524,7 @@ packages:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
       run-parallel: 1.2.0
+    dev: true
 
   /@nodelib/fs.stat/1.1.3:
     resolution: {integrity: sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==}
@@ -3566,6 +3533,7 @@ packages:
   /@nodelib/fs.stat/2.0.5:
     resolution: {integrity: sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==}
     engines: {node: '>= 8'}
+    dev: true
 
   /@nodelib/fs.walk/1.2.8:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
@@ -3573,6 +3541,7 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.14.0
+    dev: true
 
   /@rollup/plugin-babel/5.3.1_dvkj3cf3txrzleongencwe3ioi:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -3722,18 +3691,18 @@ packages:
     resolution: {integrity: sha512-xryQlOEIe1TduDWAOphR0ihfebKFSWOXpIsk+70JskCfRfW+xALdnJ0r1ZOTo85F9Qsjk6vtlU7edTYHbls9tA==}
     dependencies:
       '@types/cheerio': 0.22.31
-      '@types/react': 16.9.0
+      '@types/react': 17.0.2
     dev: true
 
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
-      '@types/eslint': 8.4.10
+      '@types/eslint': 4.16.8
       '@types/estree': 1.0.0
     dev: true
 
-  /@types/eslint/8.4.10:
-    resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
+  /@types/eslint/4.16.8:
+    resolution: {integrity: sha512-n0ZvaIpPeBxproRvV+tZoCHRxIoNAk+k+XMvQefKgx3qM3IundoogQBAwiNEnqW0GDP1j1ATe5lFy9xxutFAHg==}
     dependencies:
       '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
@@ -3886,17 +3855,17 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom/16.9.0:
-    resolution: {integrity: sha512-OL2lk7LYGjxn4b0efW3Pvf2KBVP0y1v3wip1Bp7nA79NkOpElH98q3WdCEdDj93b2b0zaeBG9DvriuKjIK5xDA==}
+  /@types/react-dom/17.0.2:
+    resolution: {integrity: sha512-Icd9KEgdnFfJs39KyRyr0jQ7EKhq8U6CcHRMGAS45fp5qgUvxL3ujUCfWFttUK2UErqZNj97t9gsVPNAqcwoCg==}
     dependencies:
-      '@types/react': 16.9.0
+      '@types/react': 17.0.2
     dev: true
 
-  /@types/react/16.9.0:
-    resolution: {integrity: sha512-eOct1hyZI9YZf/eqNlYu7jxA9qyTw1EGXruAJhHhBDBpc00W0C1vwlnh+hkOf7UFZkNK+UxnFBpwAZe3d7XJhQ==}
+  /@types/react/17.0.2:
+    resolution: {integrity: sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==}
     dependencies:
       '@types/prop-types': 15.7.5
-      csstype: 2.6.21
+      csstype: 3.1.1
     dev: true
 
   /@types/resolve/0.0.8:
@@ -3997,7 +3966,7 @@ packages:
     dependencies:
       '@types/node': 12.20.55
       tapable: 2.2.1
-      webpack: 5.75.0
+      webpack: 5.74.0
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
@@ -4212,6 +4181,7 @@ packages:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       acorn: 8.8.1
+    dev: true
 
   /acorn-walk/6.2.0:
     resolution: {integrity: sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==}
@@ -4244,6 +4214,7 @@ packages:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: true
 
   /address/1.2.1:
     resolution: {integrity: sha512-B+6bi5D34+fDYENiH5qOlA0cV2rAGKuWZ9LeyUUehbXy8e0VS9e498yO0Jeeh+iM+6KbfudHTFjXw2MmJD4QRA==}
@@ -4458,10 +4429,6 @@ packages:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
     dependencies:
       sprintf-js: 1.0.3
-
-  /argparse/2.0.1:
-    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-    dev: false
 
   /aria-query/4.2.2:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==}
@@ -5818,6 +5785,7 @@ packages:
   /callsites/3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
+    dev: true
 
   /camel-case/4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
@@ -6791,8 +6759,8 @@ packages:
       cssom: 0.3.8
     dev: true
 
-  /csstype/2.6.21:
-    resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: true
 
   /csv-parse/4.16.3:
@@ -7086,13 +7054,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       esutils: 2.0.3
-
-  /doctrine/3.0.0:
-    resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      esutils: 2.0.3
-    dev: false
 
   /dom-converter/0.2.0:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
@@ -7431,11 +7392,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /escape-string-regexp/4.0.0:
-    resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
-    engines: {node: '>=10'}
-    dev: false
-
   /escodegen/1.14.3:
     resolution: {integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==}
     engines: {node: '>=4.0'}
@@ -7449,13 +7405,13 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-prettier/2.10.0_eslint@8.29.0:
+  /eslint-config-prettier/2.10.0_eslint@4.19.1:
     resolution: {integrity: sha512-Mhl90VLucfBuhmcWBgbUNtgBiK955iCDK1+aHAz7QfDQF6wuzWZ6JjihZ3ejJoGlJWIuko7xLqNm8BA5uenKhA==}
     hasBin: true
     peerDependencies:
       eslint: '>=3.14.1'
     dependencies:
-      eslint: 8.29.0
+      eslint: 4.19.1
       get-stdin: 5.0.1
     dev: false
 
@@ -7469,7 +7425,7 @@ packages:
       get-stdin: 6.0.0
     dev: true
 
-  /eslint-config-standard/11.0.0_5kyx7rm3czyunvgxamiish2vx4:
+  /eslint-config-standard/11.0.0_4x25pzmtnnnuafsvnuv4eoyyeu:
     resolution: {integrity: sha512-oDdENzpViEe5fwuRCWla7AXQd++/oyIp8zP+iP9jiUPG6NBj3SHgdgtl/kTn00AjeN+1HNvavTKmYbMo+xMOlw==}
     peerDependencies:
       eslint: '>=4.18.0'
@@ -7478,11 +7434,11 @@ packages:
       eslint-plugin-promise: '>=3.6.0'
       eslint-plugin-standard: '>=3.0.1'
     dependencies:
-      eslint: 8.29.0
-      eslint-plugin-import: 2.26.0_eslint@8.29.0
-      eslint-plugin-node: 6.0.1_eslint@8.29.0
+      eslint: 4.19.1
+      eslint-plugin-import: 2.26.0_eslint@4.19.1
+      eslint-plugin-node: 6.0.1_eslint@4.19.1
       eslint-plugin-promise: 3.8.0
-      eslint-plugin-standard: 3.1.0_eslint@8.29.0
+      eslint-plugin-standard: 3.1.0_eslint@4.19.1
     dev: false
 
   /eslint-config-standard/12.0.0_tvmpg57spn5alnhh2stysjawky:
@@ -7535,35 +7491,6 @@ packages:
       eslint-import-resolver-node: 0.3.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /eslint-module-utils/2.7.4_uplb3bqnui63takc5j27khdnpm:
-    resolution: {integrity: sha512-j4GT+rqzCoRKHwURX7pddtIPGySnX9Si/cgMI5ztrcqOPtk5dDEeZ34CQVPphnqkJytlc97Vuk05Um2mJ3gEQA==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      debug: 3.2.7
-      eslint: 8.29.0
-      eslint-import-resolver-node: 0.3.6
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /eslint-plugin-babel/5.3.1_eslint@4.19.1:
     resolution: {integrity: sha512-VsQEr6NH3dj664+EyxJwO4FCYm/00JhYb3Sk3ft8o+fpKuIfQ9TaW6uVUfvwMXHcf/lsnRIoyFPsLMyiWCSL/g==}
@@ -7573,17 +7500,6 @@ packages:
     dependencies:
       eslint: 4.19.1
       eslint-rule-composer: 0.3.0
-    dev: true
-
-  /eslint-plugin-babel/5.3.1_eslint@8.29.0:
-    resolution: {integrity: sha512-VsQEr6NH3dj664+EyxJwO4FCYm/00JhYb3Sk3ft8o+fpKuIfQ9TaW6uVUfvwMXHcf/lsnRIoyFPsLMyiWCSL/g==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      eslint: '>=4.0.0'
-    dependencies:
-      eslint: 8.29.0
-      eslint-rule-composer: 0.3.0
-    dev: false
 
   /eslint-plugin-es/1.4.1_eslint@4.19.1:
     resolution: {integrity: sha512-5fa/gR2yR3NxQf+UXkeLeP8FBBl6tSgdrAz1+cF84v1FMM4twGwQoqTnn+QxFLcPOrF4pdKEJKDB/q9GoyJrCA==}
@@ -7624,45 +7540,14 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
-    dev: true
 
-  /eslint-plugin-import/2.26.0_eslint@8.29.0:
-    resolution: {integrity: sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-    dependencies:
-      array-includes: 3.1.6
-      array.prototype.flat: 1.3.1
-      debug: 2.6.9
-      doctrine: 2.1.0
-      eslint: 8.29.0
-      eslint-import-resolver-node: 0.3.6
-      eslint-module-utils: 2.7.4_uplb3bqnui63takc5j27khdnpm
-      has: 1.0.3
-      is-core-module: 2.11.0
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.values: 1.1.6
-      resolve: 1.22.1
-      tsconfig-paths: 3.14.1
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: false
-
-  /eslint-plugin-jest/21.27.2_eslint@8.29.0:
+  /eslint-plugin-jest/21.27.2_eslint@4.19.1:
     resolution: {integrity: sha512-0E4OIgBJVlAmf1KfYFtZ3gYxgUzC5Eb3Jzmrc9ikI1OY+/cM8Kh72Ti7KfpeHNeD3HJNf9SmEfmvQLIz44Hrhw==}
     engines: {node: '>= 4'}
     peerDependencies:
       eslint: '>=3.6'
     dependencies:
-      eslint: 8.29.0
+      eslint: 4.19.1
     dev: false
 
   /eslint-plugin-jest/22.21.0_eslint@4.19.1:
@@ -7681,7 +7566,7 @@ packages:
     dependencies:
       vscode-json-languageservice: 3.11.0
 
-  /eslint-plugin-jsx-a11y/6.6.1_eslint@8.29.0:
+  /eslint-plugin-jsx-a11y/6.6.1_eslint@4.19.1:
     resolution: {integrity: sha512-sXgFVNHiWffBq23uiS/JaP6eVR622DqwB4yTzKvGZGcPq6/yZ3WmOZfuBks/vHWo9GaFOqC2ZK4i6+C35knx7Q==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -7695,7 +7580,7 @@ packages:
       axobject-query: 2.2.0
       damerau-levenshtein: 1.0.8
       emoji-regex: 9.2.2
-      eslint: 8.29.0
+      eslint: 4.19.1
       has: 1.0.3
       jsx-ast-utils: 3.3.3
       language-tags: 1.0.6
@@ -7711,13 +7596,13 @@ packages:
       svg-tags: 1.0.0
     dev: true
 
-  /eslint-plugin-node/6.0.1_eslint@8.29.0:
+  /eslint-plugin-node/6.0.1_eslint@4.19.1:
     resolution: {integrity: sha512-Q/Cc2sW1OAISDS+Ji6lZS2KV4b7ueA/WydVWd1BECTQwVvfQy5JAi3glhINoKzoMnfnuRgNP+ZWKrGAbp3QDxw==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: '>=3.1.0'
     dependencies:
-      eslint: 8.29.0
+      eslint: 4.19.1
       ignore: 3.3.10
       minimatch: 3.1.2
       resolve: 1.22.1
@@ -7803,38 +7688,13 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
-    dev: true
 
-  /eslint-plugin-react/7.31.11_eslint@8.29.0:
-    resolution: {integrity: sha512-TTvq5JsT5v56wPa9OYHzsrOlHzKZKjV+aLgS+55NJP/cuzdiQPC7PfYoUjMoxlffKtvijpk7vA/jmuqRb9nohw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-    dependencies:
-      array-includes: 3.1.6
-      array.prototype.flatmap: 1.3.1
-      array.prototype.tosorted: 1.1.1
-      doctrine: 2.1.0
-      eslint: 8.29.0
-      estraverse: 5.3.0
-      jsx-ast-utils: 3.3.3
-      minimatch: 3.1.2
-      object.entries: 1.1.6
-      object.fromentries: 2.0.6
-      object.hasown: 1.1.2
-      object.values: 1.1.6
-      prop-types: 15.8.1
-      resolve: 2.0.0-next.4
-      semver: 6.3.0
-      string.prototype.matchall: 4.0.8
-    dev: false
-
-  /eslint-plugin-standard/3.1.0_eslint@8.29.0:
+  /eslint-plugin-standard/3.1.0_eslint@4.19.1:
     resolution: {integrity: sha512-fVcdyuKRr0EZ4fjWl3c+gp1BANFJD1+RaWa2UPYfMZ6jCtp5RG00kSaXnK/dE5sYzt4kaWJ9qdxqUfc0d9kX0w==}
     peerDependencies:
       eslint: '>=3.19.0'
     dependencies:
-      eslint: 8.29.0
+      eslint: 4.19.1
     dev: false
 
   /eslint-plugin-standard/4.1.0_eslint@4.19.1:
@@ -7880,14 +7740,6 @@ packages:
       estraverse: 4.3.0
     dev: true
 
-  /eslint-scope/7.1.1:
-    resolution: {integrity: sha512-QKQM/UXpIiHcLqJ5AOyIW7XZmzjkzQXYE54n1++wb0u9V/abW3l9uQnxX8Z5Xd18xyKIMTUAyQ0k1e8pz6LUrw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      esrecurse: 4.3.0
-      estraverse: 5.3.0
-    dev: false
-
   /eslint-utils/1.4.3:
     resolution: {integrity: sha512-fbBN5W2xdY45KulGXmLHZ3c3FHfVYmKg0IrAKGOkT/464PQsx2UeIzfz1RmEci+KLm1bBaAzZAh8+/E+XAeZ8Q==}
     engines: {node: '>=6'}
@@ -7895,29 +7747,9 @@ packages:
       eslint-visitor-keys: 1.3.0
     dev: true
 
-  /eslint-utils/3.0.0_eslint@8.29.0:
-    resolution: {integrity: sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==}
-    engines: {node: ^10.0.0 || ^12.0.0 || >= 14.0.0}
-    peerDependencies:
-      eslint: '>=5'
-    dependencies:
-      eslint: 8.29.0
-      eslint-visitor-keys: 2.1.0
-    dev: false
-
   /eslint-visitor-keys/1.3.0:
     resolution: {integrity: sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==}
     engines: {node: '>=4'}
-
-  /eslint-visitor-keys/2.1.0:
-    resolution: {integrity: sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==}
-    engines: {node: '>=10'}
-    dev: false
-
-  /eslint-visitor-keys/3.3.0:
-    resolution: {integrity: sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: false
 
   /eslint/4.19.1:
     resolution: {integrity: sha512-bT3/1x1EbZB7phzYu7vCr1v3ONuzDtX8WjuM9c0iYxe+cq+pwcKEoQjl7zd3RpC6YOLgnSy3cTN58M2jcoPDIQ==}
@@ -7965,70 +7797,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /eslint/8.29.0:
-    resolution: {integrity: sha512-isQ4EEiyUjZFbEKvEGJKKGBwXtvXX+zJbkVKCgTuB9t/+jUBcy8avhkEwWJecI15BkRkOYmvIM5ynbhRjEkoeg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      '@eslint/eslintrc': 1.3.3
-      '@humanwhocodes/config-array': 0.11.7
-      '@humanwhocodes/module-importer': 1.0.1
-      '@nodelib/fs.walk': 1.2.8
-      ajv: 6.12.6
-      chalk: 4.1.2
-      cross-spawn: 7.0.3
-      debug: 4.3.4
-      doctrine: 3.0.0
-      escape-string-regexp: 4.0.0
-      eslint-scope: 7.1.1
-      eslint-utils: 3.0.0_eslint@8.29.0
-      eslint-visitor-keys: 3.3.0
-      espree: 9.4.1
-      esquery: 1.4.0
-      esutils: 2.0.3
-      fast-deep-equal: 3.1.3
-      file-entry-cache: 6.0.1
-      find-up: 5.0.0
-      glob-parent: 6.0.2
-      globals: 13.18.0
-      grapheme-splitter: 1.0.4
-      ignore: 5.2.1
-      import-fresh: 3.3.0
-      imurmurhash: 0.1.4
-      is-glob: 4.0.3
-      is-path-inside: 3.0.3
-      js-sdsl: 4.2.0
-      js-yaml: 4.1.0
-      json-stable-stringify-without-jsonify: 1.0.1
-      levn: 0.4.1
-      lodash.merge: 4.6.2
-      minimatch: 3.1.2
-      natural-compare: 1.4.0
-      optionator: 0.9.1
-      regexpp: 3.2.0
-      strip-ansi: 6.0.1
-      strip-json-comments: 3.1.1
-      text-table: 0.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /espree/3.5.4:
     resolution: {integrity: sha512-yAcIQxtmMiB/jL32dzEp2enBeidsB7xWPLNiw3IIkpVds1P+h7qF9YwJq1yUNzp2OKXgAprs4F61ih66UsoD1A==}
     engines: {node: '>=0.10.0'}
     dependencies:
       acorn: 5.7.4
       acorn-jsx: 3.0.1
-
-  /espree/9.4.1:
-    resolution: {integrity: sha512-XwctdmTO6SIvCzd9810yyNzIrOrqNYV9Koizx4C/mRhf9uq0o4yHoCEU/670pOxOL/MSraektvSAji79kX90Vg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      acorn: 8.8.1
-      acorn-jsx: 5.3.2_acorn@8.8.1
-      eslint-visitor-keys: 3.3.0
-    dev: false
 
   /esprima/3.0.0:
     resolution: {integrity: sha512-xoBq/MIShSydNZOkjkoCEjqod963yHNXTLC40ypBhop6yPqflPz/vTinmCfSrGcywVLnSftRf6a0kJLdFdzemw==}
@@ -8442,6 +8216,7 @@ packages:
     resolution: {integrity: sha512-eR2D+V9/ExcbF9ls441yIuN6TI2ED1Y2ZcA5BmMtJsOkWOFRJQ0Jt0g1UwqXJJVAb+V+umH5Dfr8oh4EVP7VVg==}
     dependencies:
       reusify: 1.0.4
+    dev: true
 
   /fault/1.0.4:
     resolution: {integrity: sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==}
@@ -8502,13 +8277,6 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       flat-cache: 2.0.1
-    dev: false
-
-  /file-entry-cache/6.0.1:
-    resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    dependencies:
-      flat-cache: 3.0.4
     dev: false
 
   /file-set/2.0.1:
@@ -8617,14 +8385,6 @@ packages:
       path-exists: 4.0.0
     dev: true
 
-  /find-up/5.0.0:
-    resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
-    engines: {node: '>=10'}
-    dependencies:
-      locate-path: 6.0.0
-      path-exists: 4.0.0
-    dev: false
-
   /flat-cache/1.3.4:
     resolution: {integrity: sha512-VwyB3Lkgacfik2vhqR4uv2rvebqmDvFu4jlN/C1RzWoJEo8I7z4Q404oiqYCkq41mni8EzQnm95emU9seckwtg==}
     engines: {node: '>=0.10.0'}
@@ -8642,20 +8402,8 @@ packages:
       rimraf: 2.6.3
       write: 1.0.3
 
-  /flat-cache/3.0.4:
-    resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    dependencies:
-      flatted: 3.2.7
-      rimraf: 3.0.2
-    dev: false
-
   /flatted/2.0.2:
     resolution: {integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==}
-
-  /flatted/3.2.7:
-    resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
-    dev: false
 
   /flow-parser/0.194.0:
     resolution: {integrity: sha512-3dipGWKnXmE4LEE5yCPHJrSlMYOPAYU7wMBecfKiWPQSZp1CvkpJ59dfuuUIeM2TSttKGSatep77vGG9cjkeqg==}
@@ -8969,13 +8717,6 @@ packages:
     dependencies:
       is-glob: 4.0.3
 
-  /glob-parent/6.0.2:
-    resolution: {integrity: sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==}
-    engines: {node: '>=10.13.0'}
-    dependencies:
-      is-glob: 4.0.3
-    dev: false
-
   /glob-to-regexp/0.3.0:
     resolution: {integrity: sha512-Iozmtbqv0noj0uDDqoL0zNq0VBEfK2YFoMAZoxJe4cwphvLR+JskfF30QhXHOR4m3KrE6NLRYw+U9MRXvifyig==}
 
@@ -9010,13 +8751,6 @@ packages:
   /globals/11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
-
-  /globals/13.18.0:
-    resolution: {integrity: sha512-/mR4KI8Ps2spmoc0Ulu9L7agOF0du1CZNQ3dke8yItYlyKNmGrkONemBbd6V8UTc1Wgcqn21t3WYB7dbRmh6/A==}
-    engines: {node: '>=8'}
-    dependencies:
-      type-fest: 0.20.2
-    dev: false
 
   /globals/9.18.0:
     resolution: {integrity: sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==}
@@ -9094,10 +8828,6 @@ packages:
 
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
-
-  /grapheme-splitter/1.0.4:
-    resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
-    dev: false
 
   /growly/1.3.0:
     resolution: {integrity: sha512-+xGQY0YyAWCnqy7Cd++hc2JqMYzlm0dG30Jd0beaA64sROr8C4nt8Yc9V5Ro3avlSUDTN0ulqP/VBKi1/lLygw==}
@@ -9549,6 +9279,7 @@ packages:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
+    dev: true
 
   /import-from/2.1.0:
     resolution: {integrity: sha512-0vdnLL2wSGnhlRmzHJAg5JHjt1l2vYhzJ7tNLGbeVg0fse56tpGaH0uzH+r9Slej+BSXXEHvBKDEnVSLLE9/+w==}
@@ -10002,11 +9733,6 @@ packages:
     dependencies:
       path-is-inside: 1.0.2
     dev: true
-
-  /is-path-inside/3.0.3:
-    resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
-    engines: {node: '>=8'}
-    dev: false
 
   /is-plain-obj/1.1.0:
     resolution: {integrity: sha512-yvkRyxmFKEOQ4pNXCmJG5AEQNlXJS5LaONXo5/cLdTZdWvsZ1ioJEonLGAosKlMWE8lwUy/bJzMjcw8az73+Fg==}
@@ -10678,10 +10404,6 @@ packages:
       - utf-8-validate
     dev: true
 
-  /js-sdsl/4.2.0:
-    resolution: {integrity: sha512-dyBIzQBDkCqCu+0upx25Y2jGdbTGxE9fshMsCdK0ViOongpV+n5tXRcZY9v7CaVQ79AGS9KA1KHtojxiM7aXSQ==}
-    dev: false
-
   /js-tokens/3.0.2:
     resolution: {integrity: sha512-RjTcuD4xjtthQkaWH7dFlH85L+QaVtSoOyGdZ3g6HFhS9dFNDfLyqgm2NFe2X6cQpeFmt0452FJjFG5UameExg==}
 
@@ -10694,13 +10416,6 @@ packages:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
-
-  /js-yaml/4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
-    hasBin: true
-    dependencies:
-      argparse: 2.0.1
-    dev: false
 
   /js2xmlparser/3.0.0:
     resolution: {integrity: sha512-CSOkdn0/GhRFwxnipmhXfqJ+FG6+wkWBi46kKSsPx6+j65176ZiQcrCYpg6K8x3iLbO4k3zScBnZ7I/L80dAtw==}
@@ -11026,14 +10741,6 @@ packages:
       prelude-ls: 1.1.2
       type-check: 0.3.2
 
-  /levn/0.4.1:
-    resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      prelude-ls: 1.2.1
-      type-check: 0.4.0
-    dev: false
-
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
@@ -11203,13 +10910,6 @@ packages:
       p-locate: 4.1.0
     dev: true
 
-  /locate-path/6.0.0:
-    resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
-    engines: {node: '>=10'}
-    dependencies:
-      p-locate: 5.0.0
-    dev: false
-
   /lodash._reinterpolate/3.0.0:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
     dev: true
@@ -11239,10 +10939,6 @@ packages:
 
   /lodash.memoize/4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
-
-  /lodash.merge/4.6.2:
-    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: false
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
@@ -12495,18 +12191,6 @@ packages:
       type-check: 0.3.2
       word-wrap: 1.2.3
 
-  /optionator/0.9.1:
-    resolution: {integrity: sha512-74RlY5FCnhq4jRxVUPKDaRwrVNXMqsGsiW6AJw4XK8hmtm10wC0ypZBLw5IIp85NZMr91+qd1RvvENwg7jjRFw==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      deep-is: 0.1.4
-      fast-levenshtein: 2.0.6
-      levn: 0.4.1
-      prelude-ls: 1.2.1
-      type-check: 0.4.0
-      word-wrap: 1.2.3
-    dev: false
-
   /ora/5.4.1:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
     engines: {node: '>=10'}
@@ -12563,13 +12247,6 @@ packages:
     dependencies:
       p-try: 2.2.0
 
-  /p-limit/3.1.0:
-    resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      yocto-queue: 0.1.0
-    dev: false
-
   /p-locate/2.0.0:
     resolution: {integrity: sha512-nQja7m7gSKuewoVRen45CtVfODR3crN3goVQ0DDZ9N3yHxgpkuBhZqsaiotSQRrADUrne346peY7kT3TSACykg==}
     engines: {node: '>=4'}
@@ -12588,13 +12265,6 @@ packages:
     dependencies:
       p-limit: 2.3.0
     dev: true
-
-  /p-locate/5.0.0:
-    resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
-    engines: {node: '>=10'}
-    dependencies:
-      p-limit: 3.1.0
-    dev: false
 
   /p-map/1.2.0:
     resolution: {integrity: sha512-r6zKACMNhjPJMTl8KcFH4li//gkrXWfbD6feV8l6doRHlzljFWGJ2AP6iKaCJXyZmAUMOPtvbW7EXkbWO/pLEA==}
@@ -12654,6 +12324,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       callsites: 3.1.0
+    dev: true
 
   /parse-entities/1.2.2:
     resolution: {integrity: sha512-NzfpbxW/NPrzZ/yYSoQxyqUZMZXIdCfE0OIN4ESsnptHJECoUk3FZktxNuzQf4tjt5UEopnxpYJbvYuxIFDdsg==}
@@ -12791,6 +12462,7 @@ packages:
   /path-exists/4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
+    dev: true
 
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -13456,11 +13128,6 @@ packages:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
     engines: {node: '>= 0.8.0'}
 
-  /prelude-ls/1.2.1:
-    resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
-    engines: {node: '>= 0.8.0'}
-    dev: false
-
   /preserve/0.2.0:
     resolution: {integrity: sha512-s/46sYeylUfHNjI+sA/78FAHlmIuKqI9wNnzEOGehAlUUYeObv5C2mOinXBjyUyWmJ2SfcS2/ydApH4hTF4WXQ==}
     engines: {node: '>=0.10.0'}
@@ -13628,6 +13295,7 @@ packages:
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+    dev: true
 
   /quick-lru/1.1.0:
     resolution: {integrity: sha512-tRS7sTgyxMXtLum8L65daJnHUhfDUgboRdcWW2bR9vBfrj2+O5HSMbQOJfJJjIVSPFqbBCF37FpwWXGitDc5tA==}
@@ -14022,11 +13690,6 @@ packages:
     engines: {node: '>=6.5.0'}
     dev: true
 
-  /regexpp/3.2.0:
-    resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
-    engines: {node: '>=8'}
-    dev: false
-
   /regexpu-core/2.0.0:
     resolution: {integrity: sha512-tJ9+S4oKjxY8IZ9jmjnp/mtytu1u3iyIQAfmI51IKWH6bFf7XR1ybtaO6j7INhZKXOTYADk7V5qxaqLkmNxiZQ==}
     dependencies:
@@ -14360,6 +14023,7 @@ packages:
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
+    dev: true
 
   /resolve-from/5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
@@ -14422,6 +14086,7 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: true
 
   /rgb-regex/1.0.1:
     resolution: {integrity: sha512-gDK5mkALDFER2YLqH6imYvK6g02gpNGM4ILDZ472EwWfXZnC2ZEpoB2ECXTyOVUKuk/bPJZMzwQPBYICzP+D3w==}
@@ -14447,6 +14112,7 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
 
   /rollup-plugin-bundle-size/1.0.3:
     resolution: {integrity: sha512-aWj0Pvzq90fqbI5vN1IvUrlf4utOqy+AERYxwWjegH1G8PzheMnrRIgQ5tkwKVtQMDP0bHZEACW/zLDF+XgfXQ==}
@@ -14620,6 +14286,7 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
 
   /rx-lite-aggregates/4.0.8:
     resolution: {integrity: sha512-3xPNZGW93oCjiO7PtKxRK6iOVYBWBvtf9QHDfU23Oc+dLIQmAV//UnyXV/yihv81VS/UqoQPk4NegS8EFi55Hg==}
@@ -15452,11 +15119,6 @@ packages:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
 
-  /strip-json-comments/3.1.1:
-    resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
-    engines: {node: '>=8'}
-    dev: false
-
   /style-inject/0.3.0:
     resolution: {integrity: sha512-IezA2qp+vcdlhJaVm5SOdPPTUu0FCEqfNSli2vRuSIBbu5Nq5UvygTk/VzeCqfLz2Atj3dVII5QBKGZRZ0edzw==}
     dev: true
@@ -15820,30 +15482,6 @@ packages:
       webpack: 5.74.0
     dev: true
 
-  /terser-webpack-plugin/5.3.6_webpack@5.75.0:
-    resolution: {integrity: sha512-kfLFk+PoLUQIbLmB1+PZDMRSZS99Mp+/MHqDNmMA6tOItzRt+Npe3E+fsMs5mfcM0wCtrrdU387UnV+vnSffXQ==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      '@swc/core': '*'
-      esbuild: '*'
-      uglify-js: '*'
-      webpack: ^5.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      esbuild:
-        optional: true
-      uglify-js:
-        optional: true
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.17
-      jest-worker: 27.5.1
-      schema-utils: 3.1.1
-      serialize-javascript: 6.0.0
-      terser: 5.16.1
-      webpack: 5.75.0
-    dev: true
-
   /terser/4.8.1:
     resolution: {integrity: sha512-4GnLC0x667eJG0ewJTa6z/yXrbLGv80D9Ru6HIpCQmO+Q4PfEtBFi0ObSckqwL6VyQv/7ENJieXHo2ANmdQwgw==}
     engines: {node: '>=6.0.0'}
@@ -16111,18 +15749,6 @@ packages:
     engines: {node: '>= 0.8.0'}
     dependencies:
       prelude-ls: 1.1.2
-
-  /type-check/0.4.0:
-    resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      prelude-ls: 1.2.1
-    dev: false
-
-  /type-fest/0.20.2:
-    resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
-    engines: {node: '>=10'}
-    dev: false
 
   /type-fest/0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
@@ -16727,46 +16353,6 @@ packages:
       - uglify-js
     dev: true
 
-  /webpack/5.75.0:
-    resolution: {integrity: sha512-piaIaoVJlqMsPtX/+3KTTO6jfvrSYgauFVdt8cr9LTHKmcq/AMd4mhzsiP7ZF/PGRNPGA8336jldh9l2Kt2ogQ==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    peerDependencies:
-      webpack-cli: '*'
-    peerDependenciesMeta:
-      webpack-cli:
-        optional: true
-    dependencies:
-      '@types/eslint-scope': 3.7.4
-      '@types/estree': 0.0.51
-      '@webassemblyjs/ast': 1.11.1
-      '@webassemblyjs/wasm-edit': 1.11.1
-      '@webassemblyjs/wasm-parser': 1.11.1
-      acorn: 8.8.1
-      acorn-import-assertions: 1.8.0_acorn@8.8.1
-      browserslist: 4.21.4
-      chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.12.0
-      es-module-lexer: 0.9.3
-      eslint-scope: 5.1.1
-      events: 3.3.0
-      glob-to-regexp: 0.4.1
-      graceful-fs: 4.2.10
-      json-parse-even-better-errors: 2.3.1
-      loader-runner: 4.3.0
-      mime-types: 2.1.35
-      neo-async: 2.6.2
-      schema-utils: 3.1.1
-      tapable: 2.2.1
-      terser-webpack-plugin: 5.3.6_webpack@5.75.0
-      watchpack: 2.4.0
-      webpack-sources: 3.2.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
-    dev: true
-
   /websocket-driver/0.7.4:
     resolution: {integrity: sha512-b17KeDIQVjvb0ssuSDF2cYXSg2iztliJ4B9WdsuB6J952qCPKmnVq4DyW5motImXHDC1cBT/1UezrJVsKw5zjg==}
     engines: {node: '>=0.8.0'}
@@ -17065,11 +16651,6 @@ packages:
       y18n: 3.2.2
       yargs-parser: 7.0.0
     dev: true
-
-  /yocto-queue/0.1.0:
-    resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
-    engines: {node: '>=10'}
-    dev: false
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
