@@ -24,6 +24,7 @@
 @mixin mixin-input-text-revamp($border-type, $padding) {
   padding: $padding;
   font-size: inherit;
+  line-height: inherit;
   color: text-color('input.text');
   background-color: transparent;
   #{$border-type}: 1px solid color('input.border');
