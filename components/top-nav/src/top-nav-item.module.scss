@@ -29,3 +29,9 @@
     padding-right: size('2x');
   }
 }
+
+@media (max-width: 576px) {
+  .top-nav-button {
+    display: none;
+  }
+}

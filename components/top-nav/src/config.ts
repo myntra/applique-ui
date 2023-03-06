@@ -29,6 +29,8 @@ export interface NAVIGATION_ITEM_L1_INTERFACE {
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
   dispatchFunctionObject?: Function
   footerMessage?: string
+  hamburger?: Node
+  close?: Node
 }
 
 export interface NAVIGATION_ITEM_L2_INTERFACE {
