@@ -15,6 +15,8 @@ import classnames from './top-nav.module.scss'
 import { getPathToInfoMapping } from './utils'
 import MainSideNavItem from './main-side-nav-item'
 
+const isSideNav = window.matchMedia('(min-width: 576px)').matches ? false : true
+
 export interface TopNavProps extends BaseProps {
   config: {
     quickLinks: any
@@ -121,31 +123,31 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     return (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
-          gutter={
-            window.matchMedia('(min-width: 576px)').matches ? 'xxxl' : 'large'
-          }
+          gutter={isSideNav ? 'large' : 'xxxl'}
           type="stack"
           alignment="middle"
           className={classnames('top-nav-header')}
         >
-          {this.iconView()}
+          {isSideNav && this.iconView()}
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
-            <Layout
-              type="stack"
-              gutter="small"
-              className={classnames('top-nav-header-content-tabs')}
-            >
-              {Object.entries(configurations.navigationConfig).map(
-                ([levelId, navigationItem]) => (
-                  <TopNavItem
-                    itemData={navigationItem}
-                    isActive={L1_LEVEL_ID === levelId}
-                    dispatchFunction={this.setPath}
-                  />
-                )
-              )}
-            </Layout>
+            {
+              <Layout
+                type="stack"
+                gutter="small"
+                className={classnames('top-nav-header-content-tabs')}
+              >
+                {Object.entries(configurations.navigationConfig).map(
+                  ([levelId, navigationItem]) => (
+                    <TopNavItem
+                      itemData={navigationItem}
+                      isActive={L1_LEVEL_ID === levelId}
+                      dispatchFunction={this.setPath}
+                    />
+                  )
+                )}
+              </Layout>
+            }
             <Layout
               type="stack"
               gutter="none"
@@ -163,7 +165,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          {this.state.isOpen && (
+          {isSideNav && this.state.isOpen && (
             <div className={classnames('top-nav-page-content-sidebar')}>
               {Object.entries(configurations.navigationConfig).map(
                 ([levelId, navigationItem]) => (
@@ -178,7 +180,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
               )}
             </div>
           )}
-          {window.matchMedia('(min-width: 576px)').matches &&
+          {!isSideNav &&
             this.getSidebarView({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID })}
           <div className={classnames('top-nav-page-content-view')}>
             {this.props.children}

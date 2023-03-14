@@ -1,17 +1,15 @@
 import React, { PureComponent } from 'react'
 import Icon from '@applique-ui/icon'
 import Layout from '@applique-ui/layout'
-import Bell from 'uikit-icons/svgs/Bell'
 import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
-import TopNavHover from './top-nav-hover'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
 
 export interface MainSideNavItemProps extends BaseProps {
-  itemData: any
+  itemData: NAVIGATION_ITEM_L1_INTERFACE
   isActive?: boolean
   dispatchFunction: Function
 }
@@ -101,6 +99,7 @@ export default class MainSideNavItem extends PureComponent<
           <button
             className={classnames(
               'sidebar-menu',
+              !this.state.isOpen ? 'main-sidebar-menu' : null,
               isActive && itemData.routingInfo ? 'sidebar-menu-active' : null
             )}
             onClick={
@@ -115,6 +114,11 @@ export default class MainSideNavItem extends PureComponent<
                   <Icon
                     className={classnames('sidebar-menu-dropdown-icon')}
                     name={ChevronLeftSolid}
+                  />
+                ) : itemData.icon ? (
+                  <Icon
+                    className={classnames('sidebar-menu-dropdown-icon')}
+                    name={itemData.icon}
                   />
                 ) : null}
                 <span>{itemData.label}</span>
