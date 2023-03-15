@@ -103,6 +103,12 @@
     box-shadow: 0 8px 12px -6px rgb(0 0 0 / 25%);
   }
 
+  .main-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .top-nav-header-content-container {
     height: 100%;
   }

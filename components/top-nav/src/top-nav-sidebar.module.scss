@@ -57,3 +57,9 @@
     display: none;
   }
 }
+
+@media (max-width: 576px) {
+  .sidebar-menu {
+    margin-bottom: 0;
+  }
+}

@@ -18,6 +18,7 @@ export const QUICKLINK_BUTTON_TYPE = {
 
 export interface ROUTING_INFO_INTERFACE {
   path: string
+  handleClick?: Function
   meta: Object
 }
 

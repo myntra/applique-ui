@@ -99,7 +99,7 @@ export default class MainSideNavItem extends PureComponent<
           <button
             className={classnames(
               'sidebar-menu',
-              !this.state.isOpen ? 'main-sidebar-menu' : null,
+              !this.state.isOpen && !itemData.icon ? 'main-sidebar-menu' : null,
               isActive && itemData.routingInfo ? 'sidebar-menu-active' : null
             )}
             onClick={

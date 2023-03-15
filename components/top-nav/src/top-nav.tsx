@@ -23,6 +23,7 @@ export interface TopNavProps extends BaseProps {
     logo: Node
     navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
     userSettings: any
+    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
   }
   dispatchFunction: Function
   navigationKey: String
@@ -60,10 +61,16 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
 
   constructor(props) {
     super(props)
-    const navigationKeyToLevelsMapping = getPathToInfoMapping(
+    let navigationKeyToLevelsMapping = getPathToInfoMapping(
       props.config && props.config.navigationConfig,
       props.navigationKey
     )
+    const x = getPathToInfoMapping(
+      props.config && props.config.quickLinksSideNav,
+      props.navigationKey
+    )
+    navigationKeyToLevelsMapping = { ...navigationKeyToLevelsMapping, ...x }
+
     this.state = {
       navigationKeyToLevelsMapping: navigationKeyToLevelsMapping,
       isOpen: false,
@@ -166,18 +173,38 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           className={classnames('top-nav-page-content')}
         >
           {isSideNav && this.state.isOpen && (
-            <div className={classnames('top-nav-page-content-sidebar')}>
-              {Object.entries(configurations.navigationConfig).map(
-                ([levelId, navigationItem]) => (
-                  <MainSideNavItem
-                    isActive={L1_LEVEL_ID === levelId}
-                    dispatchFunction={this.setPath}
-                    itemData={navigationItem}
-                    l2LevelId={L2_LEVEL_ID}
-                    l3LevelId={L3_LEVEL_ID}
-                  />
-                )
+            <div
+              className={classnames(
+                'top-nav-page-content-sidebar',
+                'main-sidebar'
               )}
+            >
+              <div>
+                {Object.entries(configurations.navigationConfig).map(
+                  ([levelId, navigationItem]) => (
+                    <MainSideNavItem
+                      isActive={L1_LEVEL_ID === levelId}
+                      dispatchFunction={this.setPath}
+                      itemData={navigationItem}
+                      l2LevelId={L2_LEVEL_ID}
+                      l3LevelId={L3_LEVEL_ID}
+                    />
+                  )
+                )}
+              </div>
+              <div>
+                {Object.entries(configurations.quickLinksSideNav).map(
+                  ([levelId, quickLinkItem]) => (
+                    <MainSideNavItem
+                      isActive={L1_LEVEL_ID === levelId}
+                      dispatchFunction={this.setPath}
+                      itemData={quickLinkItem}
+                      l2LevelId={L2_LEVEL_ID}
+                      l3LevelId={L3_LEVEL_ID}
+                    />
+                  )
+                )}
+              </div>
             </div>
           )}
           {!isSideNav &&
