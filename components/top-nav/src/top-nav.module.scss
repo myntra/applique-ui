@@ -5,10 +5,6 @@
   width: 100%;
   height: 100%;
 
-  &-icon {
-    padding: 3px;
-  }
-
   &-header {
     z-index: 3;
     height: 54px;
@@ -20,7 +16,7 @@
     }
 
     &-hamburger {
-      padding: 2px;
+      padding: size('1x');
       color: color('gray-dark-base');
       background-color: color('white');
       border: none;
@@ -110,11 +106,8 @@
   }
 
   .top-nav-header-content-container {
+    justify-content: end;
     height: 100%;
-  }
-
-  .top-nav-icon {
-    padding: 2px;
   }
 }
 

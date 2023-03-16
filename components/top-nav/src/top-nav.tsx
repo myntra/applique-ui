@@ -24,14 +24,14 @@ export interface TopNavProps extends BaseProps {
     navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
     userSettings: any
     quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
+    hamburger?: Node
+    close?: Node
   }
   dispatchFunction: Function
   navigationKey: String
   currentNavigationValue: String
   additionalHeader?: Node
   isOpen?: Boolean
-  hamburger?: Node
-  close?: Node
 }
 
 interface TopNavState {
@@ -91,11 +91,9 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
         className={classnames('top-nav-header-hamburger')}
         onClick={this.handleOpenClick}
       >
-        <Icon
-          className={classnames('top-nav-icon')}
-          name={this.state.isOpen ? this.props.close : this.props.hamburger}
-          fontSize="medium"
-        />
+        {this.state.isOpen
+          ? this.props.config.close
+          : this.props.config.hamburger}
       </button>
     )
   }
@@ -117,6 +115,42 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     return null
   }
 
+  getMobileSidebarView = ({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID }) => {
+    const configurations = this.props.config
+    return (
+      <div
+        className={classnames('top-nav-page-content-sidebar', 'main-sidebar')}
+      >
+        <div>
+          {Object.entries(configurations.navigationConfig).map(
+            ([levelId, navigationItem]) => (
+              <MainSideNavItem
+                isActive={L1_LEVEL_ID === levelId}
+                dispatchFunction={this.setPath}
+                itemData={navigationItem}
+                l2LevelId={L2_LEVEL_ID}
+                l3LevelId={L3_LEVEL_ID}
+              />
+            )
+          )}
+        </div>
+        <div>
+          {Object.entries(configurations.quickLinksSideNav).map(
+            ([levelId, quickLinkItem]) => (
+              <MainSideNavItem
+                isActive={L1_LEVEL_ID === levelId}
+                dispatchFunction={this.setPath}
+                itemData={quickLinkItem}
+                l2LevelId={L2_LEVEL_ID}
+                l3LevelId={L3_LEVEL_ID}
+              />
+            )
+          )}
+        </div>
+      </div>
+    )
+  }
+
   render() {
     const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
       this.state.navigationKeyToLevelsMapping[
@@ -127,15 +161,14 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     const { quickLinks, logo } = configurations
     const { additionalHeader } = this.props
 
-    return (
+    return !isSideNav ? (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
-          gutter={isSideNav ? 'large' : 'xxxl'}
+          gutter={'xxxl'}
           type="stack"
           alignment="middle"
           className={classnames('top-nav-header')}
         >
-          {isSideNav && this.iconView()}
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
             {
@@ -172,43 +205,46 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          {isSideNav && this.state.isOpen && (
-            <div
-              className={classnames(
-                'top-nav-page-content-sidebar',
-                'main-sidebar'
-              )}
+          {this.getSidebarView({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID })}
+          <div className={classnames('top-nav-page-content-view')}>
+            {this.props.children}
+          </div>
+        </Layout>
+      </Layout>
+    ) : (
+      <Layout type="row" gutter="none" className={classnames('top-nav')}>
+        <Layout
+          gutter={'large'}
+          type="stack"
+          alignment="middle"
+          className={classnames('top-nav-header')}
+        >
+          {this.iconView()}
+          <div className={classnames('top-nav-header-logo')}>{logo}</div>
+          <div className={classnames('top-nav-header-content-container')}>
+            <Layout
+              type="stack"
+              gutter="none"
+              className={classnames('top-nav-header-content-quick-links')}
             >
-              <div>
-                {Object.entries(configurations.navigationConfig).map(
-                  ([levelId, navigationItem]) => (
-                    <MainSideNavItem
-                      isActive={L1_LEVEL_ID === levelId}
-                      dispatchFunction={this.setPath}
-                      itemData={navigationItem}
-                      l2LevelId={L2_LEVEL_ID}
-                      l3LevelId={L3_LEVEL_ID}
-                    />
-                  )
-                )}
-              </div>
-              <div>
-                {Object.entries(configurations.quickLinksSideNav).map(
-                  ([levelId, quickLinkItem]) => (
-                    <MainSideNavItem
-                      isActive={L1_LEVEL_ID === levelId}
-                      dispatchFunction={this.setPath}
-                      itemData={quickLinkItem}
-                      l2LevelId={L2_LEVEL_ID}
-                      l3LevelId={L3_LEVEL_ID}
-                    />
-                  )
-                )}
-              </div>
-            </div>
-          )}
-          {!isSideNav &&
-            this.getSidebarView({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID })}
+              {quickLinks.map((link) => (
+                <QuickLink link={link} />
+              ))}
+            </Layout>
+          </div>
+        </Layout>
+        {additionalHeader}
+        <Layout
+          type="stack"
+          gutter="large"
+          className={classnames('top-nav-page-content')}
+        >
+          {this.state.isOpen &&
+            this.getMobileSidebarView({
+              L1_LEVEL_ID,
+              L2_LEVEL_ID,
+              L3_LEVEL_ID,
+            })}
           <div className={classnames('top-nav-page-content-view')}>
             {this.props.children}
           </div>

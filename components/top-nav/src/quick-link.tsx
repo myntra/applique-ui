@@ -4,6 +4,8 @@ import Icon from '@applique-ui/icon'
 import classnames from './quick-link.module.scss'
 import { QUICKLINK_BUTTON_TYPE } from './config'
 
+const isSideNav = window.matchMedia('(min-width: 576px)').matches ? false : true
+
 interface QuickLinkHoverProps extends BaseProps {
   link: LinkInterface
   parentPositions: {
@@ -53,11 +55,13 @@ class QuickLinkHover extends PureComponent<
   }
 
   componentDidMount(): void {
-    this.setState({
-      left:
-        this.props.parentPositions.right -
-        this.quickLinkHoverItemRef.offsetWidth,
-    })
+    isSideNav
+      ? this.setState({ left: 0 })
+      : this.setState({
+          left:
+            this.props.parentPositions.right -
+            this.quickLinkHoverItemRef.offsetWidth,
+        })
   }
 
   quickLinkHoverItemRef = null

@@ -35,4 +35,36 @@ function getPathToInfoMapping(navigationConfig, navigationKey) {
   return pathMap
 }
 
-export { getPathToInfoMapping }
+function getFilteredNavs(config) {
+  return config.reduce(
+    (aggregate, currentValue) => {
+      switch (currentValue.type) {
+        case MENU_TYPES.MENU:
+          if (
+            currentValue.config.length &&
+            currentValue.hoverMenuColumnBucket >= 0 &&
+            currentValue.hoverMenuColumnBucket < 4
+          ) {
+            const menus = aggregate.menus
+            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
+            return { ...aggregate, menus }
+          } else {
+            return aggregate
+          }
+        case MENU_TYPES.MENU_DIRECT_LINK:
+          return {
+            ...aggregate,
+            directs: [...aggregate.directs, currentValue],
+          }
+        default:
+          return aggregate
+      }
+    },
+    {
+      menus: new Array([], [], [], []),
+      directs: [],
+    }
+  )
+}
+
+export { getPathToInfoMapping, getFilteredNavs }

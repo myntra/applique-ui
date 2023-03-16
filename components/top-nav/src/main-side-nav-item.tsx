@@ -7,6 +7,7 @@ import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 import classnames from './top-nav-sidebar.module.scss'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
+import { getFilteredNavs } from './utils'
 
 export interface MainSideNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -16,38 +17,6 @@ export interface MainSideNavItemProps extends BaseProps {
 
 interface MainSideNavItemState {
   isOpen: boolean
-}
-
-function getFilteredNavs(config) {
-  return config.reduce(
-    (aggregate, currentValue) => {
-      switch (currentValue.type) {
-        case MENU_TYPES.MENU:
-          if (
-            currentValue.config.length &&
-            currentValue.hoverMenuColumnBucket >= 0 &&
-            currentValue.hoverMenuColumnBucket < 4
-          ) {
-            const menus = aggregate.menus
-            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
-            return { ...aggregate, menus }
-          } else {
-            return aggregate
-          }
-        case MENU_TYPES.MENU_DIRECT_LINK:
-          return {
-            ...aggregate,
-            directs: [...aggregate.directs, currentValue],
-          }
-        default:
-          return aggregate
-      }
-    },
-    {
-      menus: new Array([], [], [], []),
-      directs: [],
-    }
-  )
 }
 
 /**

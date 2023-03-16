@@ -4,6 +4,7 @@ import Icon from '@applique-ui/icon'
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
+import { getFilteredNavs } from './utils'
 
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -13,38 +14,6 @@ export interface TopNavItemProps extends BaseProps {
 
 interface TopNavItemState {
   isHovering: boolean
-}
-
-function getFilteredNavs(config) {
-  return config.reduce(
-    (aggregate, currentValue) => {
-      switch (currentValue.type) {
-        case MENU_TYPES.MENU:
-          if (
-            currentValue.config.length &&
-            currentValue.hoverMenuColumnBucket >= 0 &&
-            currentValue.hoverMenuColumnBucket < 4
-          ) {
-            const menus = aggregate.menus
-            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
-            return { ...aggregate, menus }
-          } else {
-            return aggregate
-          }
-        case MENU_TYPES.MENU_DIRECT_LINK:
-          return {
-            ...aggregate,
-            directs: [...aggregate.directs, currentValue],
-          }
-        default:
-          return aggregate
-      }
-    },
-    {
-      menus: new Array([], [], [], []),
-      directs: [],
-    }
-  )
 }
 
 /**
