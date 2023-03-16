@@ -55,9 +55,41 @@ export default class Tabs extends PureComponent<
     activeIndex: 0,
   }
 
+  ref = React.createRef()
+
+  componentDidMount(): void {
+    this.calcSliderPos(this.ref.current)
+  }
+
+  componentDidUpdate(
+    prevProps: Readonly<Props>,
+    prevState: Readonly<{ activeIndex: number }>
+  ): void {
+    if (
+      this.props.activeIndex !== prevProps.activeIndex ||
+      this.state.activeIndex !== prevState.activeIndex
+    ) {
+      this.calcSliderPos(this.ref.current)
+    }
+  }
+
+  calcSliderPos = (target) => {
+    if (this.props.type !== 'primary') return
+    const activeIndex =
+      typeof this.props.activeIndex === 'number'
+        ? this.props.activeIndex
+        : this.state.activeIndex
+
+    const selectedTab = target.childNodes[activeIndex]
+    target.lastChild.style.left = selectedTab.offsetLeft + 'px'
+    target.lastChild.style.width =
+      selectedTab.getBoundingClientRect().width + 'px'
+  }
+
   handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const activeIndex = Number(event.currentTarget.dataset.index)
 
+    if (this.props.children[activeIndex].props.disabled) return
     if (!Number.isInteger(activeIndex)) return
 
     if (this.props.onChange) this.props.onChange(activeIndex)
@@ -89,7 +121,7 @@ export default class Tabs extends PureComponent<
 
     return (
       <div className={classnames('group', className)} {...props}>
-        <div className={classnames('pane', type)}>
+        <div className={classnames('pane', type)} ref={this.ref}>
           {Children.map(children, (child: any, index) =>
             cloneElement(child, {
               'data-index': index,
@@ -99,6 +131,7 @@ export default class Tabs extends PureComponent<
               type,
             })
           )}
+          {type === 'primary' && <div className={classnames('slider')}></div>}
         </div>
         {content}
       </div>
