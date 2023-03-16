@@ -55,7 +55,7 @@ export default class Tabs extends PureComponent<
     activeIndex: 0,
   }
 
-  ref = React.createRef()
+  ref = React.createRef<HTMLDivElement>()
 
   componentDidMount(): void {
     this.calcSliderPos(this.ref.current)
