@@ -74,13 +74,13 @@ export default class Tabs extends PureComponent<
   }
 
   calcSliderPos = (target) => {
-    if (this.props.type !== 'primary') return
+    if (this.props.type !== 'primary' || !target) return
     const activeIndex =
       typeof this.props.activeIndex === 'number'
         ? this.props.activeIndex
         : this.state.activeIndex
 
-    const selectedTab = target.childNodes?.[activeIndex]
+    const selectedTab = target.childNodes[activeIndex]
     target.lastChild.style.left = selectedTab.offsetLeft + 'px'
     target.lastChild.style.width =
       selectedTab.getBoundingClientRect().width + 'px'
