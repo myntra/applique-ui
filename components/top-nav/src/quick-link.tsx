@@ -78,7 +78,10 @@ class QuickLinkHover extends PureComponent<
         ref={(ref) => {
           this.quickLinkHoverItemRef = ref
         }}
-        className={classnames('quick-link-hover-container')}
+        className={classnames(
+          'quick-link-hover-container',
+          isSideNav ? 'quick-link-hover-container-mobile' : null
+        )}
         style={{
           top: `${parentPositions.bottom}px`,
           left: `${this.state.left}px`,

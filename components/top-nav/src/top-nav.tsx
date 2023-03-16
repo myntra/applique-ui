@@ -227,9 +227,11 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
               gutter="none"
               className={classnames('top-nav-header-content-quick-links')}
             >
-              {quickLinks.map((link) => (
-                <QuickLink link={link} />
-              ))}
+              {quickLinks
+                .filter((quickLink) => quickLink.mobile)
+                .map((link) => (
+                  <QuickLink link={link} />
+                ))}
             </Layout>
           </div>
         </Layout>
