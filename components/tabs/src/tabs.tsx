@@ -80,7 +80,7 @@ export default class Tabs extends PureComponent<
         ? this.props.activeIndex
         : this.state.activeIndex
 
-    const selectedTab = target.childNodes[activeIndex]
+    const selectedTab = target.childNodes?.[activeIndex]
     target.lastChild.style.left = selectedTab.offsetLeft + 'px'
     target.lastChild.style.width =
       selectedTab.getBoundingClientRect().width + 'px'
