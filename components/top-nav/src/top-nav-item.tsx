@@ -4,7 +4,11 @@ import Icon from '@applique-ui/icon'
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
-import { getFilteredNavs } from './utils'
+import {
+  checkIfDirectLink,
+  checkIfNonEmptyMenu,
+  getFilteredNavs,
+} from './utils'
 
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -53,13 +57,11 @@ export default class TopNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
-    const isDirectLink = itemData.routingInfo && itemData.noHover
+    const isDirectLink = checkIfDirectLink(itemData)
+    const isNonEmptyMenu = checkIfNonEmptyMenu(itemData)
     const isMenu = Array.isArray(itemData.config) && itemData.config.length
     const { menus = [[], [], [], []], directs = [] } =
       isMenu && getFilteredNavs(itemData.config)
-    const isNonEmptyMenu =
-      isMenu && (menus.filter((nav) => nav.length).length || directs.length)
-
     if (isDirectLink || isNonEmptyMenu) {
       return (
         <button

@@ -7,7 +7,7 @@ import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 import classnames from './top-nav-sidebar.module.scss'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
-import { getFilteredNavs } from './utils'
+import { checkIfDirectLink, checkIfNonEmptyMenu } from './utils'
 
 export interface MainSideNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -55,12 +55,8 @@ export default class MainSideNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
-    const isDirectLink = itemData.routingInfo && itemData.noHover
-    const isMenu = Array.isArray(itemData.config) && itemData.config.length
-    const { menus = [[], [], [], []], directs = [] } =
-      isMenu && getFilteredNavs(itemData.config)
-    const isNonEmptyMenu =
-      isMenu && (menus.filter((nav) => nav.length).length || directs.length)
+    const isDirectLink = checkIfDirectLink(itemData)
+    const isNonEmptyMenu = checkIfNonEmptyMenu(itemData)
 
     if (isDirectLink || isNonEmptyMenu) {
       return (

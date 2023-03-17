@@ -53,7 +53,6 @@
 
   &-page-content {
     flex: 1 1 100%;
-    padding: size('2x') size('4x');
     overflow: hidden;
     background: #f3f5f7;
 
@@ -122,5 +121,8 @@
 @media (min-width: 576px) {
   .top-nav-header {
     box-shadow: shadow('topnav');
+  }
+  .top-nav-page-content {
+    padding: size('2x') size('4x');
   }
 }

@@ -71,4 +71,23 @@ const isMobileView = window.matchMedia('(min-width: 576px)').matches
   ? false
   : true
 
-export { getPathToInfoMapping, getFilteredNavs, isMobileView }
+function checkIfNonEmptyMenu(itemData) {
+  const isMenu = Array.isArray(itemData.config) && itemData.config.length
+  const { menus = [[], [], [], []], directs = [] } =
+    isMenu && getFilteredNavs(itemData.config)
+  const isNonEmptyMenu =
+    isMenu && (menus.filter((nav) => nav.length).length || directs.length)
+  return isNonEmptyMenu
+}
+
+function checkIfDirectLink(itemData) {
+  return itemData.routingInfo && itemData.noHover
+}
+
+export {
+  getPathToInfoMapping,
+  getFilteredNavs,
+  isMobileView,
+  checkIfDirectLink,
+  checkIfNonEmptyMenu,
+}
