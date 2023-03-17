@@ -67,8 +67,8 @@ function getFilteredNavs(config) {
   )
 }
 
-const mobileView = window.matchMedia('(min-width: 576px)').matches
+const isMobileView = window.matchMedia('(min-width: 576px)').matches
   ? false
   : true
 
-export { getPathToInfoMapping, getFilteredNavs, mobileView }
+export { getPathToInfoMapping, getFilteredNavs, isMobileView }

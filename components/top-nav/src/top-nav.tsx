@@ -12,7 +12,7 @@ import {
   QUICKLINK_BUTTON_TYPE,
 } from './config'
 import classnames from './top-nav.module.scss'
-import { getPathToInfoMapping, mobileView } from './utils'
+import { getPathToInfoMapping, isMobileView } from './utils'
 import MainSideNavItem from './main-side-nav-item'
 
 export interface TopNavProps extends BaseProps {
@@ -153,28 +153,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     )
   }
 
-  topNav = ({ L1_LEVEL_ID }) => {
-    const configurations = this.props.config
-    return (
-      <Layout
-        type="stack"
-        gutter="small"
-        className={classnames('top-nav-header-content-tabs')}
-      >
-        {Object.entries(configurations.navigationConfig).map(
-          ([levelId, navigationItem]) => (
-            <TopNavItem
-              itemData={navigationItem}
-              isActive={L1_LEVEL_ID === levelId}
-              dispatchFunction={this.setPath}
-            />
-          )
-        )}
-      </Layout>
-    )
-  }
-
-  render() {
+  getDesktopTopNavView() {
     const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
       this.state.navigationKeyToLevelsMapping[
         `${this.props.currentNavigationValue}`
@@ -183,8 +162,7 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
     const configurations = this.props.config
     const { quickLinks, logo } = configurations
     const { additionalHeader } = this.props
-
-    return !mobileView ? (
+    return (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
           gutter="xxxl"
@@ -194,7 +172,21 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
         >
           <div className={classnames('top-nav-header-logo')}>{logo}</div>
           <div className={classnames('top-nav-header-content-container')}>
-            {this.topNav({ L1_LEVEL_ID })}
+            <Layout
+              type="stack"
+              gutter="small"
+              className={classnames('top-nav-header-content-tabs')}
+            >
+              {Object.entries(configurations.navigationConfig).map(
+                ([levelId, navigationItem]) => (
+                  <TopNavItem
+                    itemData={navigationItem}
+                    isActive={L1_LEVEL_ID === levelId}
+                    dispatchFunction={this.setPath}
+                  />
+                )
+              )}
+            </Layout>
             <Layout
               type="stack"
               gutter="none"
@@ -218,7 +210,19 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
           </div>
         </Layout>
       </Layout>
-    ) : (
+    )
+  }
+
+  getMobileTopNavView() {
+    const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
+      this.state.navigationKeyToLevelsMapping[
+        `${this.props.currentNavigationValue}`
+      ] || {}
+
+    const configurations = this.props.config
+    const { quickLinks, logo } = configurations
+    const { additionalHeader } = this.props
+    return (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
           gutter="medium"
@@ -260,6 +264,12 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
         </Layout>
       </Layout>
     )
+  }
+
+  render() {
+    return isMobileView
+      ? this.getMobileTopNavView()
+      : this.getDesktopTopNavView()
   }
 }
 
