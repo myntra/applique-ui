@@ -15,6 +15,10 @@
       margin-right: size('6x');
     }
 
+    &-icon {
+      padding: size('2x');
+    }
+
     &-hamburger {
       padding: size('1x');
       color: color('gray-dark-base');
@@ -108,6 +112,10 @@
   .top-nav-header-content-container {
     justify-content: end;
     height: 100%;
+  }
+
+  .top-nav-header {
+    padding: 0 0 0 size('2x');
   }
 }
 
