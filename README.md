@@ -82,4 +82,4 @@ import BoxSolid from "@myntra/uikit-icons/svgs/BoxSolid"
 ```
 
 ## Contributing
-Contributions through pull requests are encouraged. For further information, refer to the [contribution guidelines](https://uikit.myntra.com/contributing).
+Contributions through pull requests are encouraged. For further information, refer to the [contribution guidelines](https://applique.myntra.com/for-developers/how-to-contribute).
