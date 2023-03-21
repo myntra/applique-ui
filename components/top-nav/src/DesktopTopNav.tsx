@@ -4,21 +4,8 @@ import Layout from '@applique-ui/layout'
 import TopNavItem from './top-nav-item'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
 import QuickLink from './quick-link'
-import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import { DesktopProps } from './config'
 import classnames from './top-nav.module.scss'
-
-export interface DesktopTopNavProps extends BaseProps {
-  navigationKeyToLevelsMapping: any
-  currentNavigationValue: String
-  configurations: {
-    quickLinks: any
-    logo: Node
-    navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
-    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
-  }
-  dispatchFunction: Function
-  additionalHeader?: Node
-}
 
 /**
  * <Top Navigation that handled the Single Page Application navigation>
@@ -29,21 +16,21 @@ export interface DesktopTopNavProps extends BaseProps {
  * @see http://uikit.myntra.com/components/top-nav
  */
 
-class DesktopTopNav extends PureComponent<DesktopTopNavProps> {
+class DesktopTopNav extends PureComponent<DesktopProps> {
   setPath = ({ routingInfo }) => {
     this.props.dispatchFunction(routingInfo)
   }
 
-  getSidebarView = ({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID }) => {
-    const configurations = this.props.configurations
-    const firstLevelConfig = configurations.navigationConfig[L1_LEVEL_ID]
+  getSidebarView = ({ levelOneId, levelTwoId, levelThreeId }) => {
+    const configurations = this.props.config
+    const firstLevelConfig = configurations.navigationConfig[levelOneId]
 
-    if (L1_LEVEL_ID && firstLevelConfig.config) {
+    if (levelOneId && firstLevelConfig.config) {
       return (
         <TopNavSidebarWrapper
           config={firstLevelConfig.config}
-          l2LevelId={L2_LEVEL_ID}
-          l3LevelId={L3_LEVEL_ID}
+          l2LevelId={levelTwoId}
+          l3LevelId={levelThreeId}
           setPath={this.setPath}
         />
       )
@@ -52,14 +39,14 @@ class DesktopTopNav extends PureComponent<DesktopTopNavProps> {
   }
 
   render() {
-    const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
-      this.props.navigationKeyToLevelsMapping[
-        `${this.props.currentNavigationValue}`
-      ] || {}
-
-    const configurations = this.props.configurations
-    const { quickLinks, logo } = configurations
-    const { additionalHeader } = this.props
+    const {
+      config,
+      additionalHeader,
+      levelOneId,
+      levelTwoId,
+      levelThreeId,
+    } = this.props
+    const { quickLinks, logo } = config
     return (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
@@ -75,11 +62,11 @@ class DesktopTopNav extends PureComponent<DesktopTopNavProps> {
               gutter="small"
               className={classnames('top-nav-header-content-tabs')}
             >
-              {Object.entries(configurations.navigationConfig).map(
+              {Object.entries(config.navigationConfig).map(
                 ([levelId, navigationItem]) => (
                   <TopNavItem
                     itemData={navigationItem}
-                    isActive={L1_LEVEL_ID === levelId}
+                    isActive={levelOneId === levelId}
                     dispatchFunction={this.setPath}
                   />
                 )
@@ -102,7 +89,7 @@ class DesktopTopNav extends PureComponent<DesktopTopNavProps> {
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          {this.getSidebarView({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID })}
+          {this.getSidebarView({ levelOneId, levelTwoId, levelThreeId })}
           <div className={classnames('top-nav-page-content-view')}>
             {this.props.children}
           </div>

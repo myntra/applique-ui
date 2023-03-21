@@ -2,24 +2,9 @@ import React, { PureComponent } from 'react'
 import Layout from '@applique-ui/layout'
 import Icon from '@applique-ui/icon'
 import QuickLink from './quick-link'
-import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import { MobileProps } from './config'
 import classnames from './top-nav.module.scss'
 import MainSideNavItem from './main-side-nav-item'
-
-export interface MobileSideNavProps extends BaseProps {
-  navigationKeyToLevelsMapping: any
-  currentNavigationValue: String
-  configurations: {
-    quickLinks: any
-    logo: Node
-    navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
-    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
-  }
-  dispatchFunction: Function
-  additionalHeader?: Node
-  hamburger?: Node
-  close?: Node
-}
 
 interface MobileSideNavState {
   isOpen: boolean
@@ -34,16 +19,11 @@ interface MobileSideNavState {
  * @see http://uikit.myntra.com/components/top-nav
  */
 
-class MobileSideNav extends PureComponent<
-  MobileSideNavProps,
-  MobileSideNavState
-> {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isOpen: false,
-    }
+class MobileSideNav extends PureComponent<MobileProps, MobileSideNavState> {
+  state = {
+    isOpen: false,
   }
+
   setPath = ({ routingInfo }) => {
     this.props.dispatchFunction(routingInfo)
   }
@@ -67,21 +47,25 @@ class MobileSideNav extends PureComponent<
     )
   }
 
-  getMobileSidebarView = ({ L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID }) => {
-    const configurations = this.props.configurations
+  getMobileSidebarView = ({ levelOneId, levelTwoId, levelThreeId }) => {
+    const configurations = this.props.config
     return (
-      <div
-        className={classnames('top-nav-page-content-sidebar', 'main-sidebar')}
+      <Layout
+        type="row"
+        className={classnames('top-nav-page-content-sidebar', {
+          ['top-nav-page-content-sidebar-open']: this.state.isOpen,
+          ['top-nav-page-content-sidebar-closed']: !this.state.isOpen,
+        })}
       >
         <Layout type="row" gutter="none">
           {Object.entries(configurations.navigationConfig).map(
             ([levelId, navigationItem]) => (
               <MainSideNavItem
-                isActive={L1_LEVEL_ID === levelId}
+                isActive={levelOneId === levelId}
                 dispatchFunction={this.setPath}
                 itemData={navigationItem}
-                l2LevelId={L2_LEVEL_ID}
-                l3LevelId={L3_LEVEL_ID}
+                l2LevelId={levelTwoId}
+                l3LevelId={levelThreeId}
               />
             )
           )}
@@ -90,27 +74,26 @@ class MobileSideNav extends PureComponent<
           {Object.entries(configurations.quickLinksSideNav).map(
             ([levelId, quickLinkItem]) => (
               <MainSideNavItem
-                isActive={L1_LEVEL_ID === levelId}
+                isActive={levelOneId === levelId}
                 dispatchFunction={this.setPath}
                 itemData={quickLinkItem}
-                l2LevelId={L2_LEVEL_ID}
-                l3LevelId={L3_LEVEL_ID}
+                l2LevelId={levelTwoId}
+                l3LevelId={levelThreeId}
               />
             )
           )}
         </Layout>
-      </div>
+      </Layout>
     )
   }
   render() {
-    const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
-      this.props.navigationKeyToLevelsMapping[
-        `${this.props.currentNavigationValue}`
-      ] || {}
-
-    const configurations = this.props.configurations
-    const { quickLinks, logo } = configurations
-    const { additionalHeader } = this.props
+    const {
+      config: { quickLinks, logo },
+      additionalHeader,
+      levelOneId,
+      levelTwoId,
+      levelThreeId,
+    } = this.props
     return (
       <Layout type="row" gutter="none" className={classnames('top-nav')}>
         <Layout
@@ -136,17 +119,22 @@ class MobileSideNav extends PureComponent<
           </div>
         </Layout>
         {additionalHeader}
+        {this.state.isOpen && (
+          <div
+            className={classnames('top-nav-page-content-backdrop')}
+            onClick={() => this.handleOpenClick()}
+          ></div>
+        )}
         <Layout
           type="stack"
           gutter="large"
           className={classnames('top-nav-page-content')}
         >
-          {this.state.isOpen &&
-            this.getMobileSidebarView({
-              L1_LEVEL_ID,
-              L2_LEVEL_ID,
-              L3_LEVEL_ID,
-            })}
+          {this.getMobileSidebarView({
+            levelOneId,
+            levelTwoId,
+            levelThreeId,
+          })}
           <div className={classnames('top-nav-page-content-view')}>
             {this.props.children}
           </div>

@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@include media-breakpoint-down('sm') {
   .sidebar-menu {
     margin-bottom: 0;
   }

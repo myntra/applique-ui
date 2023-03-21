@@ -5,7 +5,7 @@ import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
 import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
 import {
-  checkIfDirectLink,
+  checkIfDirectLinkOrMenu,
   checkIfNonEmptyMenu,
   getFilteredNavs,
 } from './utils'
@@ -57,12 +57,10 @@ export default class TopNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
-    const isDirectLink = checkIfDirectLink(itemData)
-    const isNonEmptyMenu = checkIfNonEmptyMenu(itemData)
     const isMenu = Array.isArray(itemData.config) && itemData.config.length
     const { menus = [[], [], [], []], directs = [] } =
       isMenu && getFilteredNavs(itemData.config)
-    if (isDirectLink || isNonEmptyMenu) {
+    if (checkIfDirectLinkOrMenu(itemData)) {
       return (
         <button
           ref={(ref) => {
@@ -87,7 +85,7 @@ export default class TopNavItem extends PureComponent<
             />
           )}
           {itemData.label}
-          {this.state.isHovering && isNonEmptyMenu && (
+          {this.state.isHovering && checkIfNonEmptyMenu(itemData) && (
             <TopNavHover
               navTabConfig={{ menus, directs }}
               disableHover={this.disableHover}

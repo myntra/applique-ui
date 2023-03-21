@@ -5,9 +5,9 @@ import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 
 import classnames from './top-nav-sidebar.module.scss'
-import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
+import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
 import TopNavSidebarWrapper from './top-nav-sidebar-menu-wrapper'
-import { checkIfDirectLink, checkIfNonEmptyMenu } from './utils'
+import { checkIfDirectLinkOrMenu, checkIfNonEmptyMenu } from './utils'
 
 export interface MainSideNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -32,14 +32,9 @@ export default class MainSideNavItem extends PureComponent<
   MainSideNavItemProps,
   MainSideNavItemState
 > {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isOpen: false,
-    }
+  state = {
+    isOpen: false,
   }
-
-  tabItemRef = null
 
   handleNavItemClick = () => {
     this.props.dispatchFunction(this.props.itemData)
@@ -55,10 +50,8 @@ export default class MainSideNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
-    const isDirectLink = checkIfDirectLink(itemData)
-    const isNonEmptyMenu = checkIfNonEmptyMenu(itemData)
 
-    if (isDirectLink || isNonEmptyMenu) {
+    if (checkIfDirectLinkOrMenu(itemData)) {
       return (
         <div className={this.state.isOpen ? classnames('sub-nav-menu') : null}>
           <button
@@ -88,7 +81,7 @@ export default class MainSideNavItem extends PureComponent<
                 ) : null}
                 <span>{itemData.label}</span>
               </Layout>
-              {isNonEmptyMenu && !this.state.isOpen && (
+              {checkIfNonEmptyMenu(itemData) && !this.state.isOpen && (
                 <Icon
                   className={classnames('sidebar-menu-dropdown-icon')}
                   name={

@@ -1,28 +1,14 @@
 import React, { PureComponent } from 'react'
 import {
-  NAVIGATION_ITEM_L1_INTERFACE,
   MENU_TYPES,
   HOVER_MENU_COLUMN_BUCKET,
   QUICKLINK_BUTTON_TYPE,
+  TopNavProps,
 } from './config'
-import { getPathToInfoMapping, isMobileView } from './utils'
+import { getPathToInfoMapping } from './utils'
+import { is } from '@applique-ui/uikit-utils'
 import DesktopTopNav from './DesktopTopNav'
 import MobileSideNav from './MobileSideNav'
-
-export interface TopNavProps extends BaseProps {
-  config: {
-    quickLinks: any
-    logo: Node
-    navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
-    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
-  }
-  dispatchFunction: Function
-  navigationKey: String
-  currentNavigationValue: String
-  additionalHeader?: Node
-  hamburger?: Node
-  close?: Node
-}
 
 interface TopNavState {
   navigationKeyToLevelsMapping: {
@@ -69,25 +55,40 @@ class TopNav extends PureComponent<TopNavProps, TopNavState> {
   }
 
   render() {
-    return isMobileView ? (
+    const {
+      currentNavigationValue,
+      config,
+      dispatchFunction,
+      additionalHeader,
+      hamburger,
+      close,
+      children,
+    } = this.props
+
+    const { L1_LEVEL_ID, L2_LEVEL_ID, L3_LEVEL_ID } =
+      this.state.navigationKeyToLevelsMapping[`${currentNavigationValue}`] || {}
+
+    return is.mobile() ? (
       <MobileSideNav
-        navigationKeyToLevelsMapping={this.state.navigationKeyToLevelsMapping}
-        currentNavigationValue={this.props.currentNavigationValue}
-        configurations={this.props.config}
-        dispatchFunction={this.props.dispatchFunction}
-        additionalHeader={this.props.additionalHeader}
-        hamburger={this.props.hamburger}
-        close={this.props.close}
-        children={this.props.children}
+        config={config}
+        dispatchFunction={dispatchFunction}
+        additionalHeader={additionalHeader}
+        children={children}
+        hamburger={hamburger}
+        close={close}
+        levelOneId={L1_LEVEL_ID}
+        levelTwoId={L2_LEVEL_ID}
+        levelThreeId={L3_LEVEL_ID}
       />
     ) : (
       <DesktopTopNav
-        navigationKeyToLevelsMapping={this.state.navigationKeyToLevelsMapping}
-        currentNavigationValue={this.props.currentNavigationValue}
-        configurations={this.props.config}
-        dispatchFunction={this.props.dispatchFunction}
-        additionalHeader={this.props.additionalHeader}
-        children={this.props.children}
+        config={config}
+        dispatchFunction={dispatchFunction}
+        additionalHeader={additionalHeader}
+        children={children}
+        levelOneId={L1_LEVEL_ID}
+        levelTwoId={L2_LEVEL_ID}
+        levelThreeId={L3_LEVEL_ID}
       />
     )
   }

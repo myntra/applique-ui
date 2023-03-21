@@ -3,7 +3,7 @@ import Icon from '@applique-ui/icon'
 
 import classnames from './quick-link.module.scss'
 import { QUICKLINK_BUTTON_TYPE } from './config'
-import { isMobileView } from './utils'
+import { is } from '@applique-ui/uikit-utils'
 
 interface QuickLinkHoverProps extends BaseProps {
   link: LinkInterface
@@ -54,13 +54,12 @@ class QuickLinkHover extends PureComponent<
   }
 
   componentDidMount(): void {
-    isMobileView
-      ? this.setState({ left: 0 })
-      : this.setState({
-          left:
-            this.props.parentPositions.right -
-            this.quickLinkHoverItemRef.offsetWidth,
-        })
+    this.setState({
+      left: is.mobile()
+        ? 0
+        : this.props.parentPositions.right -
+          this.quickLinkHoverItemRef.offsetWidth,
+    })
   }
 
   quickLinkHoverItemRef = null
@@ -77,10 +76,9 @@ class QuickLinkHover extends PureComponent<
         ref={(ref) => {
           this.quickLinkHoverItemRef = ref
         }}
-        className={classnames(
-          'quick-link-hover-container',
-          isMobileView ? 'quick-link-hover-container-mobile' : null
-        )}
+        className={classnames('quick-link-hover-container', {
+          ['quick-link-hover-container-mobile']: is.mobile(),
+        })}
         style={{
           top: `${parentPositions.bottom}px`,
           left: `${this.state.left}px`,
