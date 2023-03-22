@@ -35,4 +35,59 @@ function getPathToInfoMapping(navigationConfig, navigationKey) {
   return pathMap
 }
 
-export { getPathToInfoMapping }
+function getFilteredNavs(config) {
+  return config.reduce(
+    (aggregate, currentValue) => {
+      switch (currentValue.type) {
+        case MENU_TYPES.MENU:
+          if (
+            currentValue.config.length &&
+            currentValue.hoverMenuColumnBucket >= 0 &&
+            currentValue.hoverMenuColumnBucket < 4
+          ) {
+            const menus = aggregate.menus
+            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
+            return { ...aggregate, menus }
+          } else {
+            return aggregate
+          }
+        case MENU_TYPES.MENU_DIRECT_LINK:
+          return {
+            ...aggregate,
+            directs: [...aggregate.directs, currentValue],
+          }
+        default:
+          return aggregate
+      }
+    },
+    {
+      menus: new Array([], [], [], []),
+      directs: [],
+    }
+  )
+}
+
+function checkIfNonEmptyMenu(itemData) {
+  const isMenu = Array.isArray(itemData.config) && itemData.config.length
+  const { menus = [[], [], [], []], directs = [] } =
+    isMenu && getFilteredNavs(itemData.config)
+  const isNonEmptyMenu =
+    isMenu && (menus.filter((nav) => nav.length).length || directs.length)
+  return isNonEmptyMenu
+}
+
+function checkIfDirectLink(itemData) {
+  return itemData.routingInfo && itemData.noHover
+}
+
+function checkIfDirectLinkOrMenu(itemData) {
+  return checkIfDirectLink(itemData) || checkIfNonEmptyMenu(itemData)
+}
+
+export {
+  getPathToInfoMapping,
+  getFilteredNavs,
+  checkIfDirectLink,
+  checkIfNonEmptyMenu,
+  checkIfDirectLinkOrMenu,
+}

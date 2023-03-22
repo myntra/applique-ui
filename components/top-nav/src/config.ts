@@ -18,6 +18,7 @@ export const QUICKLINK_BUTTON_TYPE = {
 
 export interface ROUTING_INFO_INTERFACE {
   path: string
+  handleClick?: Function
   meta: Object
 }
 
@@ -44,4 +45,33 @@ export interface NAVIGATION_ITEM_L3_INTERFACE {
   id: string
   title: string
   routingInfo?: ROUTING_INFO_INTERFACE
+}
+
+export interface TopNavBaseProps extends BaseProps {
+  config: {
+    quickLinks: any
+    logo: Node
+    navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
+    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
+  }
+  dispatchFunction: Function
+  additionalHeader?: Node
+}
+
+export interface TopNavProps extends TopNavBaseProps {
+  hamburger?: Node
+  close?: Node
+  navigationKey: String
+  currentNavigationValue: String
+}
+
+export interface DesktopProps extends TopNavBaseProps {
+  children: any
+  levelOneId: string
+  levelTwoId: string
+  levelThreeId: string
+}
+export interface MobileProps extends DesktopProps {
+  hamburger?: Node
+  close?: Node
 }
