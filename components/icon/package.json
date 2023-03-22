@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/icon",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "main": "dist/icon.cjs.js",
   "module": "dist/icon.esm.js",
   "types": "dist/index.d.ts",
