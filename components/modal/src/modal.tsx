@@ -106,6 +106,7 @@ export default class Modal extends PureComponent<Props> {
       hideClose,
       closeOnClickAway,
       onOpen,
+      type,
       ...props
     } = this.props
 
@@ -115,9 +116,19 @@ export default class Modal extends PureComponent<Props> {
           className={classnames('backdrop')}
           onClick={closeOnClickAway == false ? null : this.handleClose}
         />
-        <div className={classnames('body')}>
+        <div
+          className={classnames('body', {
+            ['drawer-body']: type === 'drawer',
+          })}
+        >
           <div className={classnames('content')}>
-            {render({ title, actions, children, onClose: this.handleClose })}
+            {render({
+              title,
+              actions,
+              children,
+              onClose: this.handleClose,
+              type,
+            })}
           </div>
 
           {hideClose ? null : (

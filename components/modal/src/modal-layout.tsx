@@ -19,6 +19,8 @@ export interface Props extends BaseProps {
    * The callback function called on modal is closed.
    */
   onClose?(): void
+
+  type?: string
 }
 
 /**
@@ -34,15 +36,24 @@ export default function ModalLayout({
   actions,
   children,
   onClose,
+  type,
 }: Props) {
   return (
-    <div className={classnames('wrapper')}>
+    <div
+      className={classnames('wrapper', {
+        ['drawer-wrapper']: type === 'drawer',
+      })}
+    >
       {title && <h1 className={classnames('title')}>{title}</h1>}
 
       {children}
 
       {actions && (
-        <div className={classnames('actions')}>
+        <div
+          className={classnames('actions', {
+            ['drawer-actions']: type === 'drawer',
+          })}
+        >
           {typeof actions === 'function' ? actions(onClose) : actions}
         </div>
       )}

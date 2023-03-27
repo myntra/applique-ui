@@ -45,3 +45,12 @@
     height: 24px;
   }
 }
+
+@include media-breakpoint-down('sm') {
+  .drawer-body {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
