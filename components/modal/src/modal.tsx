@@ -118,7 +118,7 @@ export default class Modal extends PureComponent<Props> {
         />
         <div
           className={classnames('body', {
-            ['drawer-body']: type === 'drawer',
+            ['drawer-body']: type === 'mobile-drawer',
           })}
         >
           <div className={classnames('content')}>

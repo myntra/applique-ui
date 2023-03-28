@@ -41,7 +41,7 @@ export default function ModalLayout({
   return (
     <div
       className={classnames('wrapper', {
-        ['drawer-wrapper']: type === 'drawer',
+        ['drawer-wrapper']: type === 'mobile-drawer',
       })}
     >
       {title && <h1 className={classnames('title')}>{title}</h1>}
@@ -51,7 +51,7 @@ export default function ModalLayout({
       {actions && (
         <div
           className={classnames('actions', {
-            ['drawer-actions']: type === 'drawer',
+            ['drawer-actions']: type === 'mobile-drawer',
           })}
         >
           {typeof actions === 'function' ? actions(onClose) : actions}
