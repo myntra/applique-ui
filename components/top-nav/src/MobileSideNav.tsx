@@ -71,10 +71,8 @@ class MobileSideNav extends PureComponent<MobileProps, MobileSideNavState> {
           )}
         </Layout>
         <Layout type="row" gutter="none">
-          {configurations.quickLinksSideNav &&
-            Object.entries(
-              configurations.quickLinksSideNav
-            ).map(([levelId, quickLinkItem]) => (
+          {Object.entries(configurations.quickLinksSideNav || {}).map(
+            ([levelId, quickLinkItem]) => (
               <MainSideNavItem
                 isActive={levelOneId === levelId}
                 dispatchFunction={this.setPath}
@@ -82,7 +80,8 @@ class MobileSideNav extends PureComponent<MobileProps, MobileSideNavState> {
                 l2LevelId={levelTwoId}
                 l3LevelId={levelThreeId}
               />
-            ))}
+            )
+          )}
         </Layout>
       </Layout>
     )
