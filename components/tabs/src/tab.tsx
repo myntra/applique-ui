@@ -2,8 +2,11 @@ import React, { ReactNode } from 'react'
 import classnames from './tab.module.scss'
 
 export interface Props extends BaseProps {
+  isActive: boolean
   title: ReactNode
-  disabled?: boolean
+  className?: string
+  disabled: boolean
+  type: string
 }
 
 /**
@@ -15,7 +18,7 @@ export default function Tab({
   className,
   children,
   type,
-  disabled,
+  disabled = false,
   ...props
 }: Props) {
   return (
