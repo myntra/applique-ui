@@ -20,4 +20,7 @@
       transition: left 0.3s, width 0.3s;
     }
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

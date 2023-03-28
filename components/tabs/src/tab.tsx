@@ -3,6 +3,7 @@ import classnames from './tab.module.scss'
 
 export interface Props extends BaseProps {
   title: ReactNode
+  disabled?: boolean
 }
 
 /**

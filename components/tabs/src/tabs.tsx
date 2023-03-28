@@ -3,7 +3,6 @@ import React, {
   Children,
   isValidElement,
   cloneElement,
-  createElement,
 } from 'react'
 import Tab from './tab'
 
@@ -59,7 +58,7 @@ export default class Tabs extends PureComponent<
   ref = React.createRef<HTMLDivElement>()
 
   componentDidMount(): void {
-    this.calcSliderPos(this.ref.current)
+    this.calcSliderPos()
   }
 
   componentDidUpdate(
@@ -70,20 +69,22 @@ export default class Tabs extends PureComponent<
       this.props.activeIndex !== prevProps.activeIndex ||
       this.state.activeIndex !== prevState.activeIndex
     ) {
-      this.calcSliderPos(this.ref.current)
+      this.calcSliderPos()
     }
   }
 
-  calcSliderPos = (target) => {
+  calcSliderPos = () => {
+    const target = this.ref.current
     if (this.props.type !== 'primary' || !target) return
     const activeIndex =
       typeof this.props.activeIndex === 'number'
         ? this.props.activeIndex
         : this.state.activeIndex
 
-    const selectedTab = target.childNodes[activeIndex]
-    target.lastChild.style.left = selectedTab.offsetLeft + 'px'
-    target.lastChild.style.width =
+    const selectedTab = target.childNodes[activeIndex] as HTMLElement
+    ;(target.lastChild as HTMLElement).style.left =
+      selectedTab.offsetLeft + 'px'
+    ;(target.lastChild as HTMLElement).style.width =
       selectedTab.getBoundingClientRect().width + 'px'
   }
 

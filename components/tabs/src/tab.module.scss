@@ -4,6 +4,7 @@
   &.primary {
     @include padding('tab.item.primary');
     @include typography('tabs-title');
+    flex-shrink: 0;
 
     line-height: size('6x');
     border-bottom: size('1x') solid color('gray-base-new-6');
