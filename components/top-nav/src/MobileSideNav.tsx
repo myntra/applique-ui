@@ -71,7 +71,7 @@ class MobileSideNav extends PureComponent<MobileProps, MobileSideNavState> {
           )}
         </Layout>
         <Layout type="row" gutter="none">
-          {Object.entries(configurations.quickLinksSideNav).map(
+          {Object.entries(configurations.quickLinksSideNav || {}).map(
             ([levelId, quickLinkItem]) => (
               <MainSideNavItem
                 isActive={levelOneId === levelId}

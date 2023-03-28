@@ -52,7 +52,7 @@ export interface TopNavBaseProps extends BaseProps {
     quickLinks: any
     logo: Node
     navigationConfig: Array<NAVIGATION_ITEM_L1_INTERFACE>
-    quickLinksSideNav: Array<NAVIGATION_ITEM_L1_INTERFACE>
+    quickLinksSideNav?: Array<NAVIGATION_ITEM_L1_INTERFACE>
   }
   dispatchFunction: Function
   additionalHeader?: Node
