@@ -27,8 +27,16 @@
     padding: size('4x');
   }
   .drawer-actions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding-top: size('2x');
+    padding-bottom: inherit;
     margin-top: size('2x');
+    background-color: color('white');
     border-top: none;
+  }
+  .drawer-content {
+    padding-bottom: inherit;
   }
 }

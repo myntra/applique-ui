@@ -132,7 +132,11 @@ export default class Modal extends PureComponent<Props> {
           </div>
 
           {hideClose ? null : (
-            <div className={classnames('close')}>
+            <div
+              className={classnames('close', {
+                ['drawer-close']: type === 'mobile-drawer',
+              })}
+            >
               <Button
                 inheritTextColor
                 type="link"

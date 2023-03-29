@@ -46,7 +46,13 @@ export default function ModalLayout({
     >
       {title && <h1 className={classnames('title')}>{title}</h1>}
 
-      {children}
+      <div
+        className={classnames({
+          ['drawer-content']: type === 'mobile-drawer',
+        })}
+      >
+        {children}
+      </div>
 
       {actions && (
         <div

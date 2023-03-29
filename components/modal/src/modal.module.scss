@@ -53,4 +53,14 @@
     bottom: 0;
     left: 0;
   }
+  .drawer-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: color('gray-dark-base');
+
+    svg {
+      width: 12px;
+    }
+  }
 }
