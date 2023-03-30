@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from 'enzyme'
 
 import Tabs from './index'
 
@@ -8,16 +8,15 @@ describe('tabs', () => {
     expect(Tabs).toBeComponent()
   })
   it('should render the  component', () => {
-    const wrapper = shallow(
+    const wrapper = render(
       <Tabs>
-        <Tabs.Tab title="Home">{'This is the home page.'}</Tabs.Tab>
+        <Tabs.Tab className="home" title="Home">
+          {'This is the home page.'}
+        </Tabs.Tab>
 
         <Tabs.Tab title="About">{'This is the about page.'}</Tabs.Tab>
       </Tabs>
     )
-    const render = jest.spyOn(wrapper.instance(), 'render')
-    wrapper.update()
-    wrapper.instance().forceUpdate()
-    expect(render).toHaveBeenCalled()
+    expect(wrapper.find('.home').text()).toBe('Home')
   })
 })
