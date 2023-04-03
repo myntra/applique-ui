@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-masked",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "main": "dist/input-masked.cjs.js",
   "module": "dist/input-masked.esm.js",
   "types": "dist/index.d.ts",
