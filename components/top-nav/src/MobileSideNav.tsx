@@ -25,6 +25,7 @@ class MobileSideNav extends PureComponent<MobileProps, MobileSideNavState> {
   }
 
   setPath = ({ routingInfo }) => {
+    this.handleOpenClick()
     this.props.dispatchFunction(routingInfo)
   }
 
