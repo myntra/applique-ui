@@ -25,7 +25,7 @@ class DesktopTopNav extends PureComponent<DesktopProps> {
     const configurations = this.props.config
     const firstLevelConfig = configurations.navigationConfig[levelOneId]
 
-    if (levelOneId && firstLevelConfig.config) {
+    if (levelOneId && firstLevelConfig && firstLevelConfig.config) {
       return (
         <TopNavSidebarWrapper
           config={firstLevelConfig.config}
