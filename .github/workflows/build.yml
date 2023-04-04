@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 16.14.1
       - name: Install pnpm
-        run: npm i pnpm -g
+        run: npm i pnpm@7.11.0 -g
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Test and coverage
