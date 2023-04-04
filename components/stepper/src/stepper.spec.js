@@ -1,4 +1,4 @@
-import Stepper from './Stepper'
+import Stepper from './stepper'
 
 describe('Floating action button', () => {
   it('renders a Stepper', () => {
