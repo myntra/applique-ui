@@ -29,14 +29,14 @@
   .drawer-actions {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
-    padding-top: size('2x');
-    padding-bottom: inherit;
+    padding: inherit;
     margin-top: size('2x');
     background-color: color('white');
     border-top: none;
   }
   .drawer-content {
-    padding-bottom: inherit;
+    padding-bottom: size('10x');
   }
 }
