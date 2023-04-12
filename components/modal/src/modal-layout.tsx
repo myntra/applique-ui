@@ -37,9 +37,8 @@ export default function ModalLayout({
   actions,
   children,
   onClose,
-  type,
+  type = 'DESKTOP',
 }: Props) {
-  console.log('PPPP', type)
   return (
     <div
       className={classnames('wrapper', {
