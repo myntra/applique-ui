@@ -11,6 +11,7 @@ import classnames from './modal.module.scss'
 import ModalLayout, { Props as ModalLayoutProps } from './modal-layout'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
+import { MODAL_TYPE } from './constants'
 
 export interface Props extends BaseProps, ModalLayoutProps {
   /** An element which opens the modal. */
@@ -106,6 +107,7 @@ export default class Modal extends PureComponent<Props> {
       hideClose,
       closeOnClickAway,
       onOpen,
+      type = 'DESKTOP',
       ...props
     } = this.props
 
@@ -115,13 +117,27 @@ export default class Modal extends PureComponent<Props> {
           className={classnames('backdrop')}
           onClick={closeOnClickAway == false ? null : this.handleClose}
         />
-        <div className={classnames('body')}>
+        <div
+          className={classnames('body', {
+            ['drawer-body']: type === MODAL_TYPE.MOBILE_DRAWER,
+          })}
+        >
           <div className={classnames('content')}>
-            {render({ title, actions, children, onClose: this.handleClose })}
+            {render({
+              title,
+              actions,
+              children,
+              onClose: this.handleClose,
+              type,
+            })}
           </div>
 
           {hideClose ? null : (
-            <div className={classnames('close')}>
+            <div
+              className={classnames('close', {
+                ['drawer-close']: type === MODAL_TYPE.MOBILE_DRAWER,
+              })}
+            >
               <Button
                 inheritTextColor
                 type="link"
