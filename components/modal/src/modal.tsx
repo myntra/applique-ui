@@ -11,6 +11,7 @@ import classnames from './modal.module.scss'
 import ModalLayout, { Props as ModalLayoutProps } from './modal-layout'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 import ChevronDownSolid from 'uikit-icons/svgs/ChevronDownSolid'
+import { MODAL_TYPE } from './constants'
 
 export interface Props extends BaseProps, ModalLayoutProps {
   /** An element which opens the modal. */
@@ -118,7 +119,7 @@ export default class Modal extends PureComponent<Props> {
         />
         <div
           className={classnames('body', {
-            ['drawer-body']: type === 'MOBILE',
+            ['drawer-body']: type === MODAL_TYPE.MOBILE_DRAWER,
           })}
         >
           <div className={classnames('content')}>
@@ -134,7 +135,7 @@ export default class Modal extends PureComponent<Props> {
           {hideClose ? null : (
             <div
               className={classnames('close', {
-                ['drawer-close']: type === 'MOBILE',
+                ['drawer-close']: type === MODAL_TYPE.MOBILE_DRAWER,
               })}
             >
               <Button

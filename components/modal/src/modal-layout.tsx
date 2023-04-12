@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import { MODAL_TYPE } from './constants'
 
 import classnames from './modal-layout.module.scss'
 
@@ -20,7 +21,7 @@ export interface Props extends BaseProps {
    */
   onClose?(): void
 
-  type?: 'MOBILE' | 'DESKTOP'
+  type?: 'MOBILE_DRAWER' | 'MOBILE' | 'DESKTOP'
 }
 
 /**
@@ -38,10 +39,11 @@ export default function ModalLayout({
   onClose,
   type,
 }: Props) {
+  console.log('PPPP', type)
   return (
     <div
       className={classnames('wrapper', {
-        ['drawer-wrapper']: type === 'MOBILE',
+        ['drawer-wrapper']: type === MODAL_TYPE.MOBILE_DRAWER,
       })}
     >
       {title && <h1 className={classnames('title')}>{title}</h1>}
@@ -51,7 +53,7 @@ export default function ModalLayout({
       {actions && (
         <div
           className={classnames('actions', {
-            ['drawer-actions']: type === 'MOBILE',
+            ['drawer-actions']: type === MODAL_TYPE.MOBILE_DRAWER,
           })}
         >
           {typeof actions === 'function' ? actions(onClose) : actions}
