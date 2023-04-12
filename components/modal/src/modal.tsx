@@ -118,7 +118,7 @@ export default class Modal extends PureComponent<Props> {
         />
         <div
           className={classnames('body', {
-            ['drawer-body']: type === 'mobile-drawer',
+            ['drawer-body']: type === 'MOBILE',
           })}
         >
           <div className={classnames('content')}>
@@ -134,7 +134,7 @@ export default class Modal extends PureComponent<Props> {
           {hideClose ? null : (
             <div
               className={classnames('close', {
-                ['drawer-close']: type === 'mobile-drawer',
+                ['drawer-close']: type === 'MOBILE',
               })}
             >
               <Button

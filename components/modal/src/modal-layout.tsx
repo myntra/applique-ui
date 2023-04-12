@@ -20,7 +20,7 @@ export interface Props extends BaseProps {
    */
   onClose?(): void
 
-  type?: string
+  type?: 'MOBILE' | 'DESKTOP'
 }
 
 /**
@@ -41,7 +41,7 @@ export default function ModalLayout({
   return (
     <div
       className={classnames('wrapper', {
-        ['drawer-wrapper']: type === 'mobile-drawer',
+        ['drawer-wrapper']: type === 'MOBILE',
       })}
     >
       {title && <h1 className={classnames('title')}>{title}</h1>}
@@ -51,7 +51,7 @@ export default function ModalLayout({
       {actions && (
         <div
           className={classnames('actions', {
-            ['drawer-actions']: type === 'mobile-drawer',
+            ['drawer-actions']: type === 'MOBILE',
           })}
         >
           {typeof actions === 'function' ? actions(onClose) : actions}
