@@ -1,5 +1,5 @@
 @function shadow($shadow, $source: $shadows) {
-  @return get-token($source, $shadow);
+  @return get($source, $shadow);
 }
 
 @function var-shadow($shadow, $source: $shadows) {
@@ -7,7 +7,7 @@
 }
 
 @mixin shadow($shadow, $source: $shadows) {
-  box-shadow: get-token($source, $shadow);
+  box-shadow: get($source, $shadow);
 }
 
 @mixin shadow--($shadow, $value, $fallback: true, $source: $shadows) {

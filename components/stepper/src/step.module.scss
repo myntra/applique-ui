@@ -36,11 +36,11 @@
       background: color('gray-dark');
       border: 1px solid color('gray-dark');
       border-radius: 50%;
-      transform: scale(0.5);
+      transform: #{scale }(0.5);
       transform-origin: center center;
     }
     &:hover {
-      transform: scale(1.2);
+      transform: #{scale }(1.2);
     }
   }
   &__label {
