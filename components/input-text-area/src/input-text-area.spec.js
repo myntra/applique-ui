@@ -69,39 +69,39 @@ describe('On Change handler', () => {
 })
 describe('Error', () => {
   it('should have error class corrosponding to error prop ', () => {
-    const inputwrapper = mountShallow(<InputTextArea error />)
-    expect(inputwrapper.hasClass('error')).toBe(true)
+    const wrapper = mount(<InputTextArea error="error" />)
+    expect(wrapper.find('.error')).toHaveLength(1)
 
-    inputwrapper.setProps({ error: false })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('error')).toBe(false)
+    wrapper.setProps({ error: false })
+    wrapper.update()
+    expect(wrapper.find('.error')).toHaveLength(0)
   })
 })
 describe('Variants Check', () => {
   it('should have bordered, standard classes corrosponding to variant passed', () => {
-    const inputwrapper = mountShallow(<InputTextArea />)
-    expect(inputwrapper.hasClass('bordered')).toBe(true)
+    const wrapper = mount(<InputTextArea />)
+    expect(wrapper.find('.bordered')).toHaveLength(1)
 
-    inputwrapper.setProps({ variant: 'standard' })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('standard')).toBe(true)
+    wrapper.setProps({ variant: 'standard' })
+    wrapper.update()
+    expect(wrapper.find('.standard')).toHaveLength(1)
   })
 })
 describe('Filled  Check', () => {
   it('should have filled class when there is value present, only string values supported', () => {
-    const inputwrapper = mountShallow(<InputTextArea value="test" />)
-    expect(inputwrapper.hasClass('filled')).toBe(true)
-    inputwrapper.setProps({ value: '' })
-    inputwrapper.update()
+    const wrapper = mount(<InputTextArea value="test" />)
+    expect(wrapper.find('.filled')).toHaveLength(1)
+    wrapper.setProps({ value: '' })
+    wrapper.update()
 
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    expect(wrapper.find('.filled')).toHaveLength(0)
 
-    inputwrapper.setProps({ value: false })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    wrapper.setProps({ value: false })
+    wrapper.update()
+    expect(wrapper.find('.filled')).toHaveLength(0)
 
-    inputwrapper.setProps({ value: 1 })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    wrapper.setProps({ value: 1 })
+    wrapper.update()
+    expect(wrapper.find('.filled')).toHaveLength(0)
   })
 })
