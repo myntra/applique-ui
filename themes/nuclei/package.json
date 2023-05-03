@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/theme-nuclei",
-  "version": "0.0.37",
+  "version": "0.0.40",
   "main": "dist/nuclei.cjs.js",
   "module": "dist/nuclei.esm.js",
   "author": "Myntra",

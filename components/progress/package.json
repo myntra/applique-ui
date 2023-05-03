@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/progress",
-  "version": "0.0.37",
+  "version": "0.0.40",
   "main": "dist/progress.cjs.js",
   "module": "dist/progress.esm.js",
   "types": "dist/index.d.ts",
