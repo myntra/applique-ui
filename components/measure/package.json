@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/measure",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "main": "dist/measure.cjs.js",
   "module": "dist/measure.esm.js",
   "types": "dist/index.d.ts",
