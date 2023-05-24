@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/button-group",
-  "version": "0.0.37",
+  "version": "0.0.42",
   "main": "dist/button-group.cjs.js",
   "module": "dist/button-group.esm.js",
   "types": "dist/index.d.ts",
