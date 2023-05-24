@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/bread-crumb",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "main": "dist/bread-crumb.cjs.js",
   "module": "dist/bread-crumb.esm.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/svg",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "main": "src/index.js",
   "module": "dist/svg.esm.js",
   "types": "dist/index.d.ts",
