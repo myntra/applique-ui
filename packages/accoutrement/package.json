@@ -11,7 +11,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "accoutrement": "^2.1.2",
+    "accoutrement": "^4.0.4",
     "normalize.css": "^8.0.1"
   }
 }

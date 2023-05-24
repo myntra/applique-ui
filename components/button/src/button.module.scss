@@ -198,7 +198,7 @@
     width: 1em;
     height: 1em;
     svg {
-      transform: scale(1.25);
+      transform: #{scale }(1.25);
       transform-origin: center center;
     }
   }

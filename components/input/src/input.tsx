@@ -23,6 +23,8 @@ export interface Props extends BaseProps {
   error?: boolean
   /*** Represent the variant of input box */
   variant?: 'bordered' | 'standard'
+  /*** Placeholder for input box */
+  placeholder?: string
 }
 type FieldContext = {
   error?: boolean
@@ -48,13 +50,16 @@ export default function Input({
   adornmentPosition,
   __fieldContext = {},
   variant,
+  placeholder = ' ',
+  error: propError,
+  disabled: propDisabled,
   ...props
 }: Props) {
   const { error, disabled } = {
-    error: __fieldContext.error || props.error,
-    disabled: __fieldContext.disabled || props.disabled,
+    error: __fieldContext.error || propError,
+    disabled: __fieldContext.disabled || propDisabled,
   }
-  const { placeholder = ' ' } = props
+
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
 

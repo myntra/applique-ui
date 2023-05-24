@@ -6,7 +6,6 @@ declare global {
 
   const mount: typeof Mount
   const shallow: typeof Shallow
-  const mountShallow: typeof ShadowRoot
 
   interface BaseProps extends AbstractBaseProps {}
 }

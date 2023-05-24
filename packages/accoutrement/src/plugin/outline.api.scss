@@ -1,5 +1,5 @@
 @function outline($outline, $source: $outlines) {
-  @return get-token($source, $outline);
+  @return get($source, $outline);
 }
 
 @function var-outline($outline, $source: $outlines) {
@@ -7,7 +7,7 @@
 }
 
 @mixin outline($outline, $source: $outlines) {
-  outline: get-token($source, $outline);
+  outline: get($source, $outline);
 }
 
 @mixin outline--($outline, $value, $fallback: true, $source: $outlines) {

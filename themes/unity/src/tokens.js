@@ -41,7 +41,7 @@ export default {
     navBarBorder: 'hsl(270, 21%, 15%)',
     'navBarItemBackground:active': 'hsl(185, 64%, 51%)',
     navBarText: 'hsl(0, 0%, 100%)',
-    'navBarItemText:active': 'hsl(0, 0%, 100)',
+    'navBarItemText:active': 'hsl(0, 0%, 100%)',
     topBarBackground: 'hsl(0, 0%, 100%)',
     topBarBorder: 'hsl(0, 0%, 100%)',
   },
