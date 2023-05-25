@@ -1423,6 +1423,9 @@ importers:
       '@applique-ui/portal':
         specifier: 0.0.*
         version: link:../portal
+      '@applique-ui/text':
+        specifier: 0.0.*
+        version: link:../text
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
         version: link:../../packages/uikit-can-i-use
