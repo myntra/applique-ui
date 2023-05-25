@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/error-boundary",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "main": "dist/error-boundary.cjs.js",
   "module": "dist/error-boundary.esm.js",
   "types": "dist/index.d.ts",
