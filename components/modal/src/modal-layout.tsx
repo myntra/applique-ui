@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { MODAL_TYPE } from './constants'
-
+import Text from '@applique-ui/text'
 import classnames from './modal-layout.module.scss'
 
 export interface Props extends BaseProps {
@@ -21,7 +21,7 @@ export interface Props extends BaseProps {
    */
   onClose?(): void
 
-  type?: 'MOBILE_DRAWER' | 'MOBILE' | 'DESKTOP'
+  type?: 'MOBILE_DRAWER' | 'DESKTOP'
 }
 
 /**
@@ -45,9 +45,9 @@ export default function ModalLayout({
         ['drawer-wrapper']: type === MODAL_TYPE.MOBILE_DRAWER,
       })}
     >
-      {title && <h1 className={classnames('title')}>{title}</h1>}
+      {title && <Text.H2 className={classnames('title')}>{title}</Text.H2>}
 
-      <div>{children}</div>
+      <div className={classnames('content')}>{children}</div>
 
       {actions && (
         <div
