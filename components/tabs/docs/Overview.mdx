@@ -5,12 +5,30 @@
 <Documenter >
 ```preview
 return (
-  <Tabs>
-    <Tabs.Tab title="Tab 1">
+  <Tabs defaultIndex={2}>
+    <Tabs.Tab title="Tab 1" disabled={true}>
       {'Tab 1.'}
     </Tabs.Tab>
 
-    <Tabs.Tab title="Tab 2" disabled={true}>
+    <Tabs.Tab title="Tab 2">
+      {'Tab 2.'}
+    </Tabs.Tab>
+
+    <Tabs.Tab title="Tab 3">
+      {'Tab 3.'}
+    </Tabs.Tab>
+  </Tabs>
+)
+```
+
+```preview
+return (
+  <Tabs defaultIndex={2} activeIndex={2} onClose={(index) => null}>
+    <Tabs.Tab title="Tab 1" disabled={true}>
+      {'Tab 1.'}
+    </Tabs.Tab>
+
+    <Tabs.Tab title="Tab 2">
       {'Tab 2.'}
     </Tabs.Tab>
 

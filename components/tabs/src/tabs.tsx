@@ -12,6 +12,10 @@ import classnames from './tabs.module.scss'
 
 export interface Props extends BaseProps {
   /**
+   * Default active tab.
+   */
+  defaultIndex?: number
+  /**
    * Current active tab.
    */
   activeIndex?: number
@@ -35,8 +39,40 @@ export { Tab }
  * @see http://uikit.myntra.com/components/tabs
  */
 function Tabs({ ...props }: Props) {
-  const [state, setState] = useState({ activeIndex: 0 })
+  const {
+    className,
+    onChange,
+    type,
+    defaultIndex = 0,
+    ...remainingProps
+  } = props
+  const [state, setState] = useState({ activeIndex: defaultIndex })
   const ref = useRef(null)
+  const children: any = Children.toArray(props.children).filter((child) =>
+    isValidElement(child)
+  )
+  if (!children.length) return null
+
+  const getActiveIndex = () => {
+    let activeIndex =
+      typeof props.activeIndex === 'number'
+        ? props.activeIndex
+        : state.activeIndex
+
+    if (
+      activeIndex < 0 ||
+      activeIndex >= children.length ||
+      children[activeIndex]?.props?.disabled
+    ) {
+      for (let i = 0; i < children.length - 1; i++) {
+        if (!children[i]?.props?.disabled) {
+          activeIndex = i
+          break
+        }
+      }
+    }
+    return activeIndex
+  }
 
   useEffect(() => {
     calcSliderPos()
@@ -45,12 +81,7 @@ function Tabs({ ...props }: Props) {
   const calcSliderPos = () => {
     const target = ref.current
     if (props.type !== 'primary' || !target) return
-    const activeIndex =
-      typeof props.activeIndex === 'number'
-        ? props.activeIndex
-        : state.activeIndex
-
-    const selectedTab = target.childNodes[activeIndex] as HTMLElement
+    const selectedTab = target.childNodes[getActiveIndex()] as HTMLElement
     ;(target.lastChild as HTMLElement).style.left =
       selectedTab.offsetLeft + 'px'
     ;(target.lastChild as HTMLElement).style.width =
@@ -64,38 +95,17 @@ function Tabs({ ...props }: Props) {
     if (!Number.isInteger(activeIndex)) return
 
     if (props.onChange) props.onChange(activeIndex)
-    else setState({ activeIndex })
+    setState({ activeIndex })
   }
 
-  let activeIndex =
-    typeof props.activeIndex === 'number'
-      ? props.activeIndex
-      : state.activeIndex
-  const children: any = Children.toArray(props.children).filter((child) =>
-    isValidElement(child)
-  )
-
-  if (!children.length) return null
-  if (activeIndex < 0 || children.length <= activeIndex) activeIndex = 0
-
-  const {
-    className,
-    onChange,
-    children: _,
-    activeIndex: __,
-    type,
-    ...remainingProps
-  } = props
-
-  const content = children[activeIndex].props.children
-
+  const content = children[getActiveIndex()]?.props?.children
   return (
     <div className={classnames('group', className)} {...remainingProps}>
       <div className={classnames('pane', type)} ref={ref}>
         {Children.map(children, (child: any, index) =>
           cloneElement(child, {
             'data-index': index,
-            isActive: index === activeIndex,
+            isActive: index === getActiveIndex(),
             onClick: handleClick,
             children: null,
             type,
@@ -113,8 +123,10 @@ Tabs.Tab = Tab
 Tabs.propTypes = {
   /** @private  */
   _validate(props) {
-    if ('active' in props && !('onChange' in props)) {
-      throw new Error('`onChange` prop is required when using `active` props')
+    if ('activeIndex' in props && !('onChange' in props)) {
+      throw new Error(
+        '`onChange` prop is required when using `activeIndex` props'
+      )
     }
   },
 }
