@@ -21,10 +21,13 @@ return (
 )
 ```
 
+### Contollable Primary Tab
 ```preview
+const [index, setIndex] = React.useState(0)
+
 return (
-  <Tabs defaultIndex={2} activeIndex={2} onClose={(index) => null}>
-    <Tabs.Tab title="Tab 1" disabled={true}>
+  <Tabs defaultIndex={index} activeIndex={index} onChange={(index) => setIndex(index)}>
+    <Tabs.Tab title="Tab 1">
       {'Tab 1.'}
     </Tabs.Tab>
 
@@ -38,7 +41,6 @@ return (
   </Tabs>
 )
 ```
-
 </Documenter>
 
 ### Secondary Tab

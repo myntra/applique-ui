@@ -19,4 +19,5 @@ describe('tabs', () => {
     )
     expect(wrapper.find('.home').text()).toBe('Home')
   })
+  it('controllable tabs: user clicks on tab 1 but setting up the value of active index to tab 2 by onChange', () => {})
 })
