@@ -19,5 +19,31 @@ describe('tabs', () => {
     )
     expect(wrapper.find('.home').text()).toBe('Home')
   })
-  it('controllable tabs: user clicks on tab 1 but setting up the value of active index to tab 2 by onChange', () => {})
+  it('without passing any props to Tabs', () => {
+    // first non-disabled tab should be selected and tabs click would be working properly
+  })
+
+  it('passing defaultIndex props to Tabs', () => {
+    // defaultIndex should be selected and tabs click would be working properly
+  })
+
+  it('passing defaultIndex props to Tabs and make that tab disable', () => {
+    // first non-disabled tab should be selected and tabs click would be working properly
+  })
+
+  it('passing activeIndex props to Tabs', () => {
+    // a warning should be visible stating that onChange props is required if you are using activeIndex
+  })
+
+  it('passing onChange props to Tabs', () => {
+    // onChange would get back the clicked tab's index
+  })
+
+  it('passing activeIndex and onChange props to Tabs', () => {
+    // tabs selection would be handled from the activeIndex
+  })
+
+  it('passing activeIndex and defaultIndex values as different in the props', () => {
+    // tabs selection would be handled from the activeIndex
+  })
 })
