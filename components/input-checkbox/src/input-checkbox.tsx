@@ -76,6 +76,7 @@ export default function InputCheckbox({
           type="checkbox"
           checked={!!value}
           value={htmlValue}
+          disabled={disabled}
           className={classnames('target')}
           readOnly={readOnly}
           onChange={
