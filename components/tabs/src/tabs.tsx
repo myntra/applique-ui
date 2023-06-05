@@ -14,11 +14,11 @@ export interface Props extends BaseProps {
   /**
    * Default active tab.
    */
-  defaultIndex?: number
+  defaultTab?: number
   /**
    * Current active tab.
    */
-  activeIndex?: number
+  activeTab?: number
   /**
    * The callback function called when active tab changes.
    *
@@ -38,15 +38,16 @@ export { Tab }
  * @category layout
  * @see http://uikit.myntra.com/components/tabs
  */
-function Tabs({ ...props }: Props) {
+function Tabs(props: Props) {
   const {
     className,
     onChange,
     type,
-    defaultIndex = 0,
+    defaultTab = 0,
+    activeTab,
     ...remainingProps
   } = props
-  const [state, setState] = useState({ activeIndex: defaultIndex })
+  const [state, setState] = useState({ activeIndex: defaultTab })
   const ref = useRef(null)
   const children: any = Children.toArray(props.children).filter((child) =>
     isValidElement(child)
@@ -55,9 +56,7 @@ function Tabs({ ...props }: Props) {
 
   const getActiveIndex = () => {
     let activeIndex =
-      typeof props.activeIndex === 'number'
-        ? props.activeIndex
-        : state.activeIndex
+      typeof activeTab === 'number' ? activeTab : state.activeIndex
 
     if (
       activeIndex < 0 ||
@@ -76,7 +75,7 @@ function Tabs({ ...props }: Props) {
 
   useEffect(() => {
     calcSliderPos()
-  }, [state, props.activeIndex])
+  }, [state, activeTab])
 
   const calcSliderPos = () => {
     const target = ref.current
@@ -123,9 +122,9 @@ Tabs.Tab = Tab
 Tabs.propTypes = {
   /** @private  */
   _validate(props) {
-    if ('activeIndex' in props && !('onChange' in props)) {
+    if ('activeTab' in props && !('onChange' in props)) {
       throw new Error(
-        '`onChange` prop is required when using `activeIndex` props'
+        '`onChange` prop is required when using `activeTab` props'
       )
     }
   },
