@@ -78,9 +78,9 @@ describe('tabs', () => {
     ).toBe(true)
   })
 
-  it('passing defaultTab props to Tabs', () => {
+  it('passing defaultIndex props to Tabs', () => {
     const wrapper = mount(
-      <Tabs defaultTab={1}>
+      <Tabs defaultIndex={1}>
         <Tabs.Tab title="Home">{'This is the home page.'}</Tabs.Tab>
 
         <Tabs.Tab title="About">{'This is the about page.'}</Tabs.Tab>
@@ -104,9 +104,9 @@ describe('tabs', () => {
     ).toBe(true)
   })
 
-  it('passing defaultTab props to Tabs and make that tab disable', () => {
+  it('passing defaultIndex props to Tabs and make that tab disable', () => {
     const wrapper = mount(
-      <Tabs defaultTab={0}>
+      <Tabs defaultIndex={0}>
         <Tabs.Tab title="Home" disabled={true}>
           {'This is the home page.'}
         </Tabs.Tab>
@@ -143,10 +143,10 @@ describe('tabs', () => {
     ).toBe(true)
   })
 
-  it('passing activeTab props to Tabs', () => {
+  it('passing activeIndex props to Tabs', () => {
     const logSpy = jest.spyOn(global.console, 'error')
     render(
-      <Tabs activeTab={0}>
+      <Tabs activeIndex={0}>
         <Tabs.Tab title="Home" disabled={true}>
           {'This is the home page.'}
         </Tabs.Tab>
@@ -159,7 +159,7 @@ describe('tabs', () => {
     expect(logSpy).toHaveBeenCalled()
     expect(logSpy).toHaveBeenCalledWith(
       expect.stringContaining(
-        '`onChange` prop is required when using `activeTab` props'
+        '`onChange` prop is required when using `activeIndex` props'
       )
     )
   })
@@ -194,10 +194,10 @@ describe('tabs', () => {
     expect(handleOnChange.mock.results[0].value).toBe(1)
   })
 
-  it('passing activeTab and onChange props to Tabs', () => {
+  it('passing activeIndex and onChange props to Tabs', () => {
     const handleOnChange = jest.fn((index) => index)
     const wrapper = mount(
-      <Tabs activeTab={1} onChange={handleOnChange}>
+      <Tabs activeIndex={1} onChange={handleOnChange}>
         <Tabs.Tab title="Home">{'This is the home page.'}</Tabs.Tab>
 
         <Tabs.Tab title="About">{'This is the about page.'}</Tabs.Tab>
@@ -222,10 +222,10 @@ describe('tabs', () => {
     expect(handleOnChange.mock.results[0].value).toBe(0)
   })
 
-  it('passing activeTab and defaultTab values as different in the props', () => {
+  it('passing activeIndex and defaultIndex values as different in the props', () => {
     const handleOnChange = jest.fn((index) => index)
     const wrapper = mount(
-      <Tabs activeTab={1} defaultTab={0} onChange={handleOnChange}>
+      <Tabs activeIndex={1} defaultIndex={0} onChange={handleOnChange}>
         <Tabs.Tab title="Home">{'This is the home page.'}</Tabs.Tab>
 
         <Tabs.Tab title="About">{'This is the about page.'}</Tabs.Tab>

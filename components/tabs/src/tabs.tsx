@@ -14,11 +14,11 @@ export interface Props extends BaseProps {
   /**
    * Default active tab.
    */
-  defaultTab?: number
+  defaultIndex?: number
   /**
    * Current active tab.
    */
-  activeTab?: number
+  activeIndex?: number
   /**
    * The callback function called when active tab changes.
    *
@@ -43,11 +43,11 @@ function Tabs(props: Props) {
     className,
     onChange,
     type,
-    defaultTab = 0,
-    activeTab,
+    defaultIndex = 0,
+    activeIndex,
     ...remainingProps
   } = props
-  const [state, setState] = useState({ activeIndex: defaultTab })
+  const [state, setState] = useState({ activeIndex: defaultIndex })
   const ref = useRef(null)
   const children: any = Children.toArray(props.children).filter((child) =>
     isValidElement(child)
@@ -55,27 +55,27 @@ function Tabs(props: Props) {
   if (!children.length) return null
 
   const getActiveIndex = () => {
-    let activeIndex =
-      typeof activeTab === 'number' ? activeTab : state.activeIndex
+    let activeTab =
+      typeof activeIndex === 'number' ? activeIndex : state.activeIndex
 
     if (
-      activeIndex < 0 ||
-      activeIndex >= children.length ||
-      children[activeIndex]?.props?.disabled
+      activeTab < 0 ||
+      activeTab >= children.length ||
+      children[activeTab]?.props?.disabled
     ) {
       for (let i = 0; i < children.length - 1; i++) {
         if (!children[i]?.props?.disabled) {
-          activeIndex = i
+          activeTab = i
           break
         }
       }
     }
-    return activeIndex
+    return activeTab
   }
 
   useEffect(() => {
     calcSliderPos()
-  }, [state, activeTab])
+  }, [state, activeIndex])
 
   const calcSliderPos = () => {
     const target = ref.current
@@ -88,13 +88,13 @@ function Tabs(props: Props) {
   }
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const activeIndex = Number(event.currentTarget.dataset.index)
+    const activeTab = Number(event.currentTarget.dataset.index)
 
-    if (props.children[activeIndex].props.disabled) return
-    if (!Number.isInteger(activeIndex)) return
+    if (props.children[activeTab].props.disabled) return
+    if (!Number.isInteger(activeTab)) return
 
-    if (props.onChange) props.onChange(activeIndex)
-    setState({ activeIndex })
+    if (props.onChange) props.onChange(activeTab)
+    setState({ activeIndex: activeTab })
   }
 
   const content = children[getActiveIndex()]?.props?.children
@@ -122,9 +122,9 @@ Tabs.Tab = Tab
 Tabs.propTypes = {
   /** @private  */
   _validate(props) {
-    if ('activeTab' in props && !('onChange' in props)) {
+    if ('activeIndex' in props && !('onChange' in props)) {
       throw new Error(
-        '`onChange` prop is required when using `activeTab` props'
+        '`onChange` prop is required when using `activeIndex` props'
       )
     }
   },
