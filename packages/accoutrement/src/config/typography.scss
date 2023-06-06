@@ -121,6 +121,11 @@ $-default-typography: (
     'family': 'body',
     'weight': 500,
   ),
+  'tabs-title': (
+    'size': 'h4',
+    'family': 'heading',
+    'weight': 400,
+  ),
 );
 $-tokens-typography: () !default;
 $typography: map-merge($-default-typography, $-tokens-typography);
