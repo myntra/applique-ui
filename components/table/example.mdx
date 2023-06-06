@@ -90,7 +90,7 @@ const handleEdit = (value,rowIndex,key) => {
 
 ### Fixed Column Table
 
-A table can have any number of fixed columns on left.
+A table can have any number of fixed columns on left and fixed column on the end.
 
 ```jsx preview
 const [data] = useState(Array(20).fill({ id: 1, name: 'Jane Doe', }));
@@ -102,7 +102,7 @@ const [data] = useState(Array(20).fill({ id: 1, name: 'Jane Doe', }));
   </Table.Column>
 
   {
-    Array(14) // create empty array of length 14
+    Array(40) // create empty array of length 14
       .fill(null) // fill it with null so we map over it
       .map(
         (_, index) => (

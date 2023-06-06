@@ -57,6 +57,10 @@
     position: sticky;
     left: var(--sticky-left-offset, 0);
     z-index: 1;
+    &.end {
+      right: 0;
+      left: auto;
+    }
   }
 
   th.fixed {
