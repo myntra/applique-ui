@@ -2,34 +2,43 @@
 
 .badge {
   display: inline-block;
-  padding: size('small') size('2x');
-  text-transform: uppercase;
+  padding: 2px size('2x');
+  text-transform: inherit;
   border: solid 1px;
-  border-radius: size('5x');
+  border-radius: size('1x');
 
   @include typography('paragraph');
 
   $types: (
-    'primary': 'primary',
-    'success': 'success',
-    'error': 'danger',
-    'warning': 'warning',
-    'gray': 'gray-dark-3',
+    'info': 'info-base-light',
+    'success': 'success-base-light',
+    'error': 'danger-base-light',
+    'warning': 'warning-base-light',
+    'gray': 'primary-base-light-2',
     'brown': 'brown',
+  );
+
+  $fontColor: (
+    'info': 'info',
+    'success': 'success',
+    'error': 'danger-new',
+    'warning': 'warning-no-fill',
+    'gray': 'gray-dark-new',
+    'brown': 'white',
   );
 
   @each $name, $color in $types {
     &.#{$name} {
       &.solid {
-        color: color('white');
+        color: color(map-get($fontColor, $name));
         background-color: color('#{$color}');
         border-color: color('#{$color}');
       }
 
       &.outlined {
-        color: color('#{$color}');
-        background-color: color('white');
-        border-color: color('#{$color}');
+        color: color(map-get($fontColor, $name));
+        background-color: color('#{$color}');
+        border-color: color(map-get($fontColor, $name));
       }
     }
   }
@@ -41,6 +50,22 @@
   &.large {
     font-size: size('4x');
   }
+}
+
+.icon {
+  margin-right: size('2x');
+}
+
+.close {
+  svg {
+    width: size('3x');
+    height: size('3x');
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
 }
 
 @include media-breakpoint-down('sm') {

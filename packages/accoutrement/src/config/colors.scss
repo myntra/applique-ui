@@ -1,7 +1,7 @@
 // - Solid Colors
 // https://zpl.io/a8w1k0d
 $-tokens-colors-primary: hsl(244, 54%, 53%) !default;
-$-tokens-colors-success: hsl(145, 64%, 38%) !default;
+$-tokens-colors-success: hsl(145, 64%, 30%) !default;
 $-tokens-colors-warning: hsla(40, 90%, 88%, 1) !default;
 $-tokens-colors-danger: hsl(0, 54%, 53%) !default;
 $-tokens-colors-gray: hsl(0, 0%, 90%) !default;
@@ -39,6 +39,13 @@ $token-colors-revamp: (
   'gray-dark-base-2': #3e3f45,
   'primary-base-light': #ededf9,
   'primary-base-light-2': #e7e7e8,
+  'success-base-light': #e9f5ee,
+  'info-base-light': #e2edff,
+  'info': #0951bd,
+  'warning-base-light': #fef8ec,
+  'danger-base-light': #f9ecec,
+  'danger-new': #a03838,
+  'gray-dark-new': #8f8f92,
 );
 
 $colors: (
