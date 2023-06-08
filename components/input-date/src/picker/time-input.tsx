@@ -24,6 +24,7 @@ export default function TimeInput({
   onChange,
   onBlur,
   onDown,
+  disabled,
   ...props
 }: Props) {
   return (
@@ -32,6 +33,7 @@ export default function TimeInput({
         <Icon name={ChevronUpSolid} />
       </div>
       <InputNumber
+        disabled={disabled}
         value={value}
         onChange={onChange}
         onBlur={onBlur}

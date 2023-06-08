@@ -11,6 +11,12 @@
 
 .wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 8px;
+  border: 1px solid color('primary-lighter');
+  border-radius: 4px;
 }
 
 .wrapper > .icon {
@@ -20,6 +26,10 @@
   cursor: pointer;
 }
 
+.wrapper > .pre-icon {
+  margin-right: 8px;
+}
+
 .date-value-active input {
   border-bottom: 1px solid color('primary');
 }
@@ -27,4 +37,12 @@
 .active,
 .active input {
   color: color('primary');
+}
+
+.custom-input {
+  display: flex;
+}
+
+.custom-input input {
+  border: none;
 }

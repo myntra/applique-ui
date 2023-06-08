@@ -6,6 +6,8 @@ import Day from './day'
 import classnames from './month.module.scss'
 import { UTCDate } from '../input-date-utils'
 import dayJS from 'dayjs'
+import { MonthPicker } from './month-picker'
+import { YearPicker } from './year-picker'
 
 const DAYS_OF_WEEK = 'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'.split(
   ','
@@ -92,7 +94,7 @@ export default class Month extends PureComponent<Props> {
   }
 
   render() {
-    const { month, year, focused } = this.props
+    const { month, year, focused, offset, onJump } = this.props
     const isDayDisabled = this.dayDisabledValidator(this.props.disabled)
     const dateOnFirstOfMonth = UTCDate(year, month, 1)
     const dateOnLastOfMonth = dayJS(dateOnFirstOfMonth)
@@ -156,14 +158,33 @@ export default class Month extends PureComponent<Props> {
     return (
       <div className={classnames(this.props.className, CLASS.month)}>
         {this.props.children}
-        <div className={CLASS.header}>
-          {DAYS_OF_WEEK.map((day) => (
-            <div className={CLASS.day} title={day} key={day}>
-              {day.charAt(0)}
+
+        {this.props.monthSelector ? (
+          <MonthPicker
+            month={month}
+            year={year}
+            offset={offset}
+            onJump={onJump}
+          />
+        ) : this.props.yearSelector ? (
+          <YearPicker
+            month={month}
+            year={year}
+            offset={offset}
+            onJump={onJump}
+          />
+        ) : (
+          <div>
+            <div className={CLASS.header}>
+              {DAYS_OF_WEEK.map((day) => (
+                <div className={CLASS.day} title={day} key={day}>
+                  {day.charAt(0)}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className={CLASS.days}>{days}</div>
+            <div className={CLASS.days}>{days}</div>
+          </div>
+        )}
       </div>
     )
   }

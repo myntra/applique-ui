@@ -12,6 +12,7 @@ import {
   isStringDateRange,
 } from './input-date-helpers'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import ClockSolid from 'uikit-icons/svgs/ClockSolid'
 
 const MASKS: InputMaskedProps['masks'] = {
   Y: {
@@ -151,6 +152,7 @@ export default class InputDateValue extends PureComponent<
                 active: this.props.active === 'from',
               })}
             >
+              <Icon name={ClockSolid} className={classnames('pre-icon')} />
               <InputMasked
                 includeMaskChars
                 id="from"
@@ -163,6 +165,7 @@ export default class InputDateValue extends PureComponent<
                 onBlur={this.handleBlur}
                 onChange={this.handleFromChange}
                 disabled={disabled}
+                className={classnames('custom-input')}
               />
               {this.props.value && (this.props.value as DateRange).from && (
                 <Icon
@@ -179,6 +182,7 @@ export default class InputDateValue extends PureComponent<
                 active: this.props.active === 'to',
               })}
             >
+              <Icon name={ClockSolid} className={classnames('pre-icon')} />
               <InputMasked
                 includeMaskChars
                 id="to"
@@ -191,6 +195,7 @@ export default class InputDateValue extends PureComponent<
                 onBlur={this.handleBlur}
                 onChange={this.handleToChange}
                 disabled={disabled}
+                className={classnames('custom-input')}
               />
               {this.props.value && (this.props.value as DateRange).to && (
                 <Icon
@@ -204,6 +209,7 @@ export default class InputDateValue extends PureComponent<
           ]
         ) : (
           <div key="both" className={classnames('wrapper')}>
+            <Icon name={ClockSolid} className={classnames('pre-icon')} />
             <InputMasked
               includeMaskChars
               autoComplete="off"
@@ -213,6 +219,7 @@ export default class InputDateValue extends PureComponent<
               onChange={this.handleChange}
               onBlur={this.handleBlur}
               disabled={disabled}
+              className={classnames('custom-input')}
             />
             {this.props.value && (
               <Icon

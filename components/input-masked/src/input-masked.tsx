@@ -3,6 +3,7 @@ import { Mask as _Mask, MASKS } from './default-masks'
 import { findLastIndex, memoize } from '@applique-ui/uikit-utils'
 
 import classnames from './input-masked.module.scss'
+import Input from '@applique-ui/input'
 
 export type Mask = _Mask
 
@@ -164,6 +165,7 @@ export default class InputMasked extends PureComponent<Props> {
   }
 
   handleKeyDown = (event) => {
+    // console.log(`handle key down invoked`, event)
     switch (event.key || event.keyCode) {
       case 'Backspace':
       case 8:
@@ -179,6 +181,7 @@ export default class InputMasked extends PureComponent<Props> {
   }
 
   handleKeyPress = (event) => {
+    // console.log(`handle key press invoked`, event)
     const value = event.target.value
     const selectionStart = event.target.selectionStart
     const inputChar = this.transformInput(event.key, selectionStart)
@@ -326,35 +329,58 @@ export default class InputMasked extends PureComponent<Props> {
     return props
   }
 
+  handleInputChange = (event) => {
+    // console.log(event.target.value)
+    this.props.onChange && this.props.onChange(event.target.value)
+  }
+
   render() {
     const value = this.getDisplayValue(
       typeof this.props.value === 'string' ? this.props.value : ''
     )
+    // console.log(value)
     const placeholder = this.getUpdatedPlaceholder(value)
     const isEditable = !(this.props.readOnly || this.props.disabled)
     const autoComplete = this.props.autoComplete || 'on'
 
+    // return (
+    //   <div className={classnames(this.props.className, 'container')}>
+    //     <input
+    //       {...this.attrs}
+    //       className={classnames('input', 'masked-input')}
+    //       value={value}
+    //       onKeyPress={isEditable ? this.handleKeyPress : null}
+    //       onKeyDown={isEditable ? this.handleKeyDown : null}
+    //       onChange={() => {}}
+    //       maxLength={this.maskMetadata.length}
+    //       autoComplete={autoComplete}
+    //     />
+    //     <input
+    //       className={classnames('mask', 'input', {
+    //         disabled: !isEditable,
+    //       })}
+    //       value={placeholder}
+    //       readOnly
+    //       tabIndex={-1}
+    //     />
+    //   </div>
+    // )
     return (
-      <div className={classnames(this.props.className, 'container')}>
-        <input
+      <>
+        <Input
           {...this.attrs}
-          className={classnames('input', 'masked-input')}
+          className={classnames('container')}
+          type="text"
           value={value}
-          onKeyPress={isEditable ? this.handleKeyPress : null}
-          onKeyDown={isEditable ? this.handleKeyDown : null}
+          // onKeyPress={isEditable ? this.handleKeyPress : null}
+          // onKeyDown={isEditable ? this.handleKeyDown : null}
           onChange={() => {}}
+          onInput={(event) => this.handleInputChange(event)}
           maxLength={this.maskMetadata.length}
           autoComplete={autoComplete}
+          placeholder={placeholder}
         />
-        <input
-          className={classnames('mask', 'input', {
-            disabled: !isEditable,
-          })}
-          value={placeholder}
-          readOnly
-          tabIndex={-1}
-        />
-      </div>
+      </>
     )
   }
 }
