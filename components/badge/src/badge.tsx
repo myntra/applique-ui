@@ -39,13 +39,18 @@ export default function Badge({
   onClose,
   ...props
 }: Props): JSX.Element {
+  const badgeSmallWithIcon = (icon || onClose) && size === 'small'
   return (
     <div
       {...props}
-      className={classnames('badge', size, type, variant, className)}
+      className={classnames('badge', size, type, variant, className, {
+        'icon-small': badgeSmallWithIcon,
+      })}
     >
       <div className={classnames('container')}>
-        {icon && <Icon className={classnames('icon')} name={icon} />}
+        {icon && (
+          <Icon className={classnames('icon')} name={icon} fontSize="small" />
+        )}
         {typeof children === 'string' ? (
           <span className={classnames('content')}>{children}</span>
         ) : (
@@ -55,6 +60,7 @@ export default function Badge({
           <Button
             className={classnames('close')}
             type="link"
+            size="xs"
             icon={TimesSolid}
             inheritTextColor
             onClick={onClose}

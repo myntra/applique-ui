@@ -4,19 +4,20 @@
   display: inline-block;
   width: 1em;
   height: 1em;
+  padding: size('1x');
   vertical-align: text-top;
   fill: var(--current-color, currentColor);
 
   &.small {
-    font-size: size('4x');
+    font-size: size('5x');
   }
 
   &.medium {
-    font-size: size('6x');
+    font-size: size('7x');
   }
 
   &.large {
-    font-size: size('8x');
+    font-size: size('10x');
   }
 
   $-text-colors: (

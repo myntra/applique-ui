@@ -14,7 +14,15 @@ import Bell from 'uikit-icons/svgs/Bell'
 
 export interface Props extends BaseProps {
   /** The visual style to convey purpose of the button. */
-  type?: 'primary' | 'secondary' | 'tertiary' | 'warning' | 'link' | 'text'
+  type?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'warning'
+    | 'link'
+    | 'text'
+    | 'success'
+    | 'warning-tertiary'
   /** Will show the button as a notification button with the number of notifications. (provided)*/
   notifications?: number
   /** The label text of the button. */
@@ -42,7 +50,7 @@ export interface Props extends BaseProps {
   /**
    * Size of the button
    */
-  size?: 'small' | 'regular' | 'large'
+  size?: 'xs' | 'small' | 'regular' | 'large'
   /**
    * Backgroud color for button
    */
@@ -146,7 +154,7 @@ export default class Button extends PureComponent<Props> {
           [typeName]: size !== 'large' || !color,
           loading,
           inherit: inheritTextColor,
-          icon: isIconButton,
+          [`icon-${size}`]: isIconButton,
           'notification-button': isNotificationButton,
           [color]: !!color,
         })}
@@ -164,7 +172,6 @@ export default class Button extends PureComponent<Props> {
           <span
             className={classnames(
               'icon',
-              { 'icon-button': isIconButton },
               { leading: !isIconButton },
               { 'notification-icon': notificationsActive }
             )}
@@ -178,7 +185,7 @@ export default class Button extends PureComponent<Props> {
                 {notifications > 99 ? '99+' : notifications}
               </span>
             )}
-            <Icon name={icon || Bell} aria-hidden="true" />
+            <Icon name={icon || Bell} fontSize="small" aria-hidden="true" />
           </span>
         )}
         {isIconButton ? null : children || label}
@@ -187,11 +194,7 @@ export default class Button extends PureComponent<Props> {
             className={classnames('icon', 'trailing')}
             data-test-id="secondary-icon"
           >
-            <Icon
-              name={secondaryIcon}
-              aria-hidden="true"
-              className={classnames('button-icon')}
-            />
+            <Icon fontSize="small" name={secondaryIcon} aria-hidden="true" />
           </span>
         )}
 

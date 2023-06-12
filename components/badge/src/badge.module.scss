@@ -2,7 +2,8 @@
 
 .badge {
   display: inline-block;
-  padding: 2px size('2x');
+  padding: size('1x') * 0.25 size('2x');
+  line-height: 1.8;
   text-transform: inherit;
   border: solid 1px;
   border-radius: size('1x');
@@ -50,17 +51,18 @@
   &.large {
     font-size: size('4x');
   }
+  &.icon-small {
+    padding: 0 size('2x');
+  }
 }
 
 .icon {
-  margin-right: size('2x');
+  margin-right: size('1x') * 0.5;
+  margin-left: size('1x') * -1;
 }
 
 .close {
-  svg {
-    width: size('3x');
-    height: size('3x');
-  }
+  margin-right: size('1x') * -1;
 }
 
 .container {
