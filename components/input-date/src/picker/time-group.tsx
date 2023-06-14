@@ -130,7 +130,7 @@ export default class TimeGroup extends PureComponent<Props> {
 
   render() {
     const date = this.referenceDate
-    const { value, range: isRange, ...props } = this.props
+    const { value, range: isRange, disabledTime, ...props } = this.props
 
     return (
       <div className={classnames(this.props.className, 'group')}>
@@ -141,6 +141,7 @@ export default class TimeGroup extends PureComponent<Props> {
               {...props}
               key={key}
               onTimeSelect={this.handleTimeSelect}
+              disabledTime={disabledTime}
             ></Time>
           ))}
       </div>

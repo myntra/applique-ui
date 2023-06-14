@@ -195,6 +195,7 @@ export default class InputDate extends PureComponent<
       children,
       wrapperClassName,
       disabled,
+      disabledTime,
       includeTime,
       ...props
     } = this.props
@@ -235,6 +236,7 @@ export default class InputDate extends PureComponent<
               onChange={this.handleChange}
               active={activeRangeEnd}
               includeTime={includeTime}
+              disabledTime={disabledTime}
               closePicker={this.close}
             />
           </div>

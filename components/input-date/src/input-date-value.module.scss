@@ -15,8 +15,17 @@
   align-items: center;
   height: 36px;
   padding: 8px;
-  border: 1px solid color('primary-lighter');
+  border: 1px solid rgba(207, 207, 209, 1);
   border-radius: 4px;
+  input {
+    border: none !important;
+  }
+}
+.wrapper:hover {
+  border-color: color('primary-lighter');
+}
+.wrapper.active {
+  border-color: color('primary');
 }
 
 .wrapper > .icon {
@@ -41,8 +50,5 @@
 
 .custom-input {
   display: flex;
-}
-
-.custom-input input {
-  border: none;
+  border: none !important;
 }
