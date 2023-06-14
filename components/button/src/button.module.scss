@@ -204,6 +204,106 @@
     }
   }
 
+  &.xs-warning {
+    color: color('danger-base-new');
+    background-color: color('danger-base-light');
+    border-color: color('danger-base-light');
+
+    &:disabled {
+      color: color('gray-dark-new');
+      background-color: color('gray-base-new');
+      border-color: color('gray-base-new');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: color('danger-base-dark');
+        border-color: color('danger-base-dark');
+      }
+
+      &:active,
+      &:active:hover {
+        color: color('danger-dark-2');
+        background-color: color('danger-base-dark');
+        border-color: color('danger-base-dark');
+      }
+    }
+  }
+
+  &.xs-success {
+    color: color('success-base-new');
+    background-color: color('success-base-light');
+    border-color: color('success-base-light');
+
+    &:disabled {
+      color: color('gray-dark-new');
+      background-color: color('gray-base-new');
+      border-color: color('gray-base-new');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: color('success-base-dark');
+        border-color: color('success-base-dark');
+      }
+
+      &:active,
+      &:active:hover {
+        color: color('success');
+        background-color: color('success-base-dark');
+        border-color: color('success-base-dark');
+      }
+    }
+  }
+
+  &.xs-tertiary {
+    color: color('primary-base-new');
+    background-color: color('white');
+    border-color: color('white');
+
+    &:disabled {
+      color: color('gray-dark-new');
+      background-color: color('gray-base-new');
+      border-color: color('gray-base-new');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        color: color('primary-base-new');
+        background-color: color('primary-light-new');
+        border-color: color('primary-light-new');
+      }
+
+      &:active,
+      &:active:hover {
+        color: color('primary-dark-2');
+        background-color: color('primary-light-new');
+        border-color: color('primary-light-new');
+      }
+    }
+  }
+  &.xs-text {
+    padding: 0;
+    color: color('primary-base-new');
+    background-color: transparent;
+    border-color: transparent;
+
+    &:disabled {
+      color: color('gray-dark-new');
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        color: color('primary-base-new');
+      }
+
+      &:active,
+      &:active:hover {
+        color: color('primary-dark-2');
+      }
+    }
+  }
+
   &.inherit {
     color: var(--current-color, currentColor);
 
@@ -271,7 +371,7 @@
   > .icon {
     &.leading {
       padding-right: size('1x');
-      margin-left: size('1x') * -1;
+      margin-left: negative('1x');
       line-height: 0;
     }
 
