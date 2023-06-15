@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/docgen",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "main": "src/index.js",
   "module": "dist/docgen.esm.js",
   "types": "dist/index.d.ts",

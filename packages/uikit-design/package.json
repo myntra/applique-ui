@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit-design",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "main": "design.scss",
   "module": "dist/uikit-design.esm.js",
   "types": "dist/index.d.ts",
