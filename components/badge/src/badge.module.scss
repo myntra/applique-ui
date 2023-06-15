@@ -2,8 +2,8 @@
 
 .badge {
   display: inline-block;
-  padding: size('1x') * 0.25 size('2x');
-  line-height: 1.8;
+  padding: size('1x') * 0.5 size('2x');
+  line-height: 1;
   text-transform: inherit;
   border: solid 1px;
   border-radius: size('1x');
@@ -16,7 +16,6 @@
     'error': 'danger-base-light',
     'warning': 'warning-base-light',
     'gray': 'primary-base-light-2',
-    'brown': 'brown',
   );
 
   $fontColor: (
@@ -25,7 +24,6 @@
     'error': 'danger-new',
     'warning': 'warning-no-fill',
     'gray': 'gray-dark-new',
-    'brown': 'white',
   );
 
   @each $name, $color in $types {
@@ -43,26 +41,21 @@
       }
     }
   }
-
-  &.small {
-    font-size: size('5x') * 0.5;
-  }
-
-  &.large {
-    font-size: size('4x');
-  }
-  &.icon-small {
-    padding: 0 size('2x');
-  }
 }
 
 .icon {
-  margin-right: size('1x') * 0.5;
-  margin-left: size('1x') * -1;
+  padding: size('0.5x') * 0.5;
+  margin-right: size('0.5x');
+  margin-left: negative('1x');
+  font-size: size('3x');
 }
 
 .close {
-  margin-right: size('1x') * -1;
+  padding: size('0.5x');
+  margin-right: negative('1x');
+  margin-left: size('0.5x');
+  font-size: size('2x');
+  border: none;
 }
 
 .container {

@@ -31,8 +31,7 @@
   @include transition('button');
 
   position: relative;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   line-height: 1.4;
   text-decoration: none;
   cursor: pointer;
@@ -54,331 +53,17 @@
     cursor: not-allowed;
   }
 
-  &.primary {
-    color: contrast-text-color('primary-dark-1');
-    background-color: color('primary');
-    border-color: color('primary');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: color('primary-dark-2');
-        border-color: color('primary-dark-2');
-      }
-
-      &:active,
-      &:active:hover {
-        background-color: color('primary-dark-3');
-        border-color: color('primary-dark-3');
-      }
-    }
-  }
-
-  &.secondary {
-    color: text-color('primary');
-    background-color: color('white');
-    border-color: color('primary');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: color('primary-dark-2');
-        background-color: color('primary-base-light');
-        border-color: color('primary-dark-2');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('primary-dark-3');
-        background-color: color('primary-light-new');
-        border-color: color('primary-dark-3');
-      }
-    }
-  }
-
-  &.text {
-    padding: 0;
-    color: text-color('primary');
-    background-color: transparent;
-    border-color: transparent;
-
-    &:disabled {
-      color: text-color('primary', 'disabled');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: text-color('primary', 'medium');
-      }
-
-      &:active,
-      &:active:hover {
-        color: text-color('primary');
-      }
-    }
-  }
-
-  &.tertiary {
-    color: text-color('primary');
-    background-color: color('white');
-    border-color: color('white');
-
-    &:disabled {
-      color: color('gray-dark-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: color('primary-dark-2');
-        background-color: color('primary-base-light');
-        border-color: color('primary-base-light');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('primary-dark-3');
-        background-color: color('primary-light-new');
-        border-color: color('primary-light-new');
-      }
-    }
-  }
-
-  &.warning {
-    color: contrast-text-color('danger');
-    background-color: color('danger');
-    border-color: color('danger');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: color('danger-new');
-        border-color: color('danger-new');
-      }
-
-      &:active,
-      &:active:hover {
-        background-color: color('danger-dark-2');
-        border-color: color('danger-dark-2');
-      }
-    }
-  }
-
-  &.warning-tertiary {
-    color: color('danger-base-new');
-    background-color: color('white');
-    border-color: color('white');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: color('danger-new');
-        background-color: color('danger-base-light');
-        border-color: color('danger-base-light');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('danger-dark-2');
-        background-color: color('danger-base-dark');
-        border-color: color('danger-base-dark');
-      }
-    }
-  }
-
-  &.xs-warning {
-    color: color('danger-base-new');
-    background-color: color('danger-base-light');
-    border-color: color('danger-base-light');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: color('danger-base-dark');
-        border-color: color('danger-base-dark');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('danger-dark-2');
-        background-color: color('danger-base-dark');
-        border-color: color('danger-base-dark');
-      }
-    }
-  }
-
-  &.xs-success {
-    color: color('success-base-new');
-    background-color: color('success-base-light');
-    border-color: color('success-base-light');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: color('success-base-dark');
-        border-color: color('success-base-dark');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('success');
-        background-color: color('success-base-dark');
-        border-color: color('success-base-dark');
-      }
-    }
-  }
-
-  &.xs-tertiary {
-    color: color('primary-base-new');
-    background-color: color('white');
-    border-color: color('white');
-
-    &:disabled {
-      color: color('gray-dark-new');
-      background-color: color('gray-base-new');
-      border-color: color('gray-base-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: color('primary-base-new');
-        background-color: color('primary-light-new');
-        border-color: color('primary-light-new');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('primary-dark-2');
-        background-color: color('primary-light-new');
-        border-color: color('primary-light-new');
-      }
-    }
-  }
-  &.xs-text {
-    padding: 0;
-    color: color('primary-base-new');
-    background-color: transparent;
-    border-color: transparent;
-
-    &:disabled {
-      color: color('gray-dark-new');
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: color('primary-base-new');
-      }
-
-      &:active,
-      &:active:hover {
-        color: color('primary-dark-2');
-      }
-    }
-  }
-
-  &.inherit {
-    color: var(--current-color, currentColor);
-
-    @include transition('all');
-
-    &:disabled {
-      color: var(--current-color, currentColor);
-    }
-
-    &:not(:disabled) {
-      &:hover {
-        color: var(--current-color, currentColor);
-      }
-
-      &:active,
-      &:active:hover {
-        color: var(--current-color, currentColor);
-        transform: translateY(2px);
-      }
-    }
-  }
-
-  &.notification-button {
-    z-index: z-index('notification');
-    width: 2em;
-    height: 2em;
-    background-color: #4f46c8;
-    border-color: #4f46c8;
-    box-shadow: shadow('raised');
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: #2f2a78;
-        border-color: #2f2a78;
-      }
-
-      &:active,
-      &:active:hover {
-        background-color: #201c50;
-        border-color: #201c50;
-      }
-    }
-
-    .notification-icon {
-      z-index: z-index('notification');
-      svg {
-        width: 1.4em;
-        height: 1.4em;
-        margin-left: negative(size('3x'));
-      }
-      .count {
-        position: absolute;
-        top: negative(size('2x'));
-        min-width: size('4x');
-        height: size('4x');
-        font-size: 10px;
-        color: #4f46c8;
-        background: color('white');
-        border: 1px solid color('white');
-        border-radius: size('3x');
-      }
-    }
-  }
-
   > .icon {
+    // TODO: Remove this hack for aligning icon with text.
+    display: inline-block;
+    transform: translateY(1px);
+
     &.leading {
-      padding-right: size('1x');
-      margin-left: negative('1x');
-      line-height: 0;
+      padding-inline-end: 1ch;
     }
 
     &.trailing {
-      padding-left: size('1x');
-      margin-right: size('1x') * -1;
-      line-height: 0;
+      padding-inline-start: 1ch;
     }
 
     &.loading {
@@ -407,12 +92,7 @@
   }
 
   &.small {
-    padding: size('1x') size('3x');
-  }
-
-  &.icon-xs {
-    padding: 0;
-    line-height: 0;
+    padding: size('1x') size('4x');
   }
 
   &.large {
@@ -438,13 +118,6 @@
       margin-bottom: size('2x');
     }
   }
-  &.icon-small {
-    @include padding('icon-button');
-  }
-
-  &.icon-regular {
-    padding: size('2x');
-  }
 
   @include add-colors(
     (
@@ -458,7 +131,207 @@
     )
   );
 
+  .icon-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+
   + .container {
     margin-left: size('4x');
+  }
+}
+
+.primary {
+  color: contrast-text-color('primary-dark-1');
+  background-color: color('primary');
+  border-color: color('primary');
+
+  &:disabled {
+    color: contrast-text-color('button.disabled', 'disabled');
+    background-color: color('button.disabled');
+    border-color: color('button.disabled');
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: color('primary-dark-2');
+      border-color: color('primary-dark-2');
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: color('primary-dark-3');
+      border-color: color('primary-dark-3');
+    }
+  }
+}
+
+.secondary {
+  color: text-color('primary');
+  background-color: color('white');
+  border-color: color('primary');
+
+  &:disabled {
+    color: contrast-text-color('gray-light-3', 'disabled');
+    background-color: color('gray-light-3');
+    border-color: color('button.disabled');
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: color('primary-light-3');
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: color('primary-light-2');
+    }
+  }
+}
+
+.text {
+  padding: 0;
+  color: text-color('primary');
+  background-color: transparent;
+  border-color: transparent;
+
+  &:disabled {
+    color: text-color('primary', 'disabled');
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      color: text-color('primary', 'medium');
+    }
+
+    &:active,
+    &:active:hover {
+      color: text-color('primary');
+    }
+  }
+}
+
+.tertiary {
+  color: text-color('primary');
+  background-color: color('white');
+  border-color: color('white');
+
+  &:disabled {
+    color: contrast-text-color('gray-light-3', 'disabled');
+    background-color: color('gray-light-3');
+    border-color: color('white');
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      color: color('primary-dark-1');
+    }
+
+    &:active,
+    &:active:hover {
+      color: color('primary-dark-2');
+    }
+  }
+}
+
+.warning {
+  color: contrast-text-color('danger');
+  background-color: color('danger');
+  border-color: color('danger');
+
+  &:disabled {
+    color: contrast-text-color('button.disabled', 'disabled');
+    background-color: color('button.disabled');
+    border-color: color('button.disabled');
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: color('danger-dark-1');
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: color('danger-dark-2');
+    }
+  }
+}
+
+.inherit {
+  color: var(--current-color, currentColor);
+
+  @include transition('all');
+
+  &:disabled {
+    color: var(--current-color, currentColor);
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      color: var(--current-color, currentColor);
+    }
+
+    &:active,
+    &:active:hover {
+      color: var(--current-color, currentColor);
+      transform: translateY(2px);
+    }
+  }
+}
+
+.icon {
+  @include padding('icon-button');
+
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  svg {
+    transform: #{scale }(1.25);
+    transform-origin: center center;
+  }
+}
+
+.notification-button {
+  z-index: z-index('notification');
+  width: 2em;
+  height: 2em;
+  background-color: #4f46c8;
+  border-color: #4f46c8;
+  box-shadow: shadow('raised');
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: #2f2a78;
+      border-color: #2f2a78;
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: #201c50;
+      border-color: #201c50;
+    }
+  }
+
+  .notification-icon {
+    z-index: z-index('notification');
+    svg {
+      width: 1.4em;
+      height: 1.4em;
+      margin-left: negative(size('3x'));
+    }
+    .count {
+      position: absolute;
+      top: negative(size('2x'));
+      min-width: size('4x');
+      height: size('4x');
+      font-size: 10px;
+      color: #4f46c8;
+      background: color('white');
+      border: 1px solid color('white');
+      border-radius: size('3x');
+    }
   }
 }

@@ -14,15 +14,7 @@ import Bell from 'uikit-icons/svgs/Bell'
 
 export interface Props extends BaseProps {
   /** The visual style to convey purpose of the button. */
-  type?:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'warning'
-    | 'link'
-    | 'text'
-    | 'success'
-    | 'warning-tertiary'
+  type?: 'primary' | 'secondary' | 'tertiary' | 'warning' | 'link' | 'text'
   /** Will show the button as a notification button with the number of notifications. (provided)*/
   notifications?: number
   /** The label text of the button. */
@@ -50,14 +42,13 @@ export interface Props extends BaseProps {
   /**
    * Size of the button
    */
-  size?: 'xs' | 'small' | 'regular' | 'large'
+  size?: 'small' | 'regular' | 'large'
   /**
    * Backgroud color for button
    */
   color?: string
   /** This will be used for large buttons */
   caption?: string
-  iconSize?: 'small' | 'medium' | 'large'
 }
 
 /**
@@ -73,22 +64,9 @@ export default class Button extends PureComponent<Props> {
   static Link = CAN_USE_HOOKS ? HookLink : Link
 
   static propTypes = {
-    __$validation({ to, href, size, icon, children, label }) {
-      if (to && href) {
+    __$validation({ to, href }) {
+      if (to && href)
         throw new Error(`The props 'to' and 'href' cannot coexist.`)
-      }
-
-      if (size === 'xs') {
-        if (!icon) {
-          throw new Error(
-            `The prop 'icon' is required when size is set to 'xs'.`
-          )
-        } else if (children || label) {
-          throw new Error(
-            `The props 'children' and 'label' cannot be used when size is set to 'xs'.`
-          )
-        }
-      }
     },
   }
 
@@ -99,7 +77,6 @@ export default class Button extends PureComponent<Props> {
     loading: false,
     transform: 'none',
     size: 'regular',
-    iconSize: 'small',
   }
 
   state = {
@@ -149,7 +126,6 @@ export default class Button extends PureComponent<Props> {
       size,
       color,
       caption,
-      iconSize,
       ...props
     } = this.props
     const Tag = (to ? Button.RouterLink : href ? Button.Link : 'button') as any
@@ -168,10 +144,9 @@ export default class Button extends PureComponent<Props> {
         type={type !== 'text' ? htmlType : ''}
         className={classnames('container', className, state, size, {
           [typeName]: size !== 'large' || !color,
-          [`xs-${type}`]: size === 'xs',
           loading,
           inherit: inheritTextColor,
-          [`icon-${size}`]: isIconButton,
+          icon: isIconButton,
           'notification-button': isNotificationButton,
           [color]: !!color,
         })}
@@ -189,6 +164,7 @@ export default class Button extends PureComponent<Props> {
           <span
             className={classnames(
               'icon',
+              { 'icon-button': isIconButton },
               { leading: !isIconButton },
               { 'notification-icon': notificationsActive }
             )}
@@ -202,11 +178,7 @@ export default class Button extends PureComponent<Props> {
                 {notifications > 99 ? '99+' : notifications}
               </span>
             )}
-            <Icon
-              name={icon || Bell}
-              fontSize={size === 'xs' ? 'small' : iconSize}
-              aria-hidden="true"
-            />
+            <Icon name={icon || Bell} aria-hidden="true" />
           </span>
         )}
         {isIconButton ? null : children || label}
@@ -215,7 +187,11 @@ export default class Button extends PureComponent<Props> {
             className={classnames('icon', 'trailing')}
             data-test-id="secondary-icon"
           >
-            <Icon fontSize={iconSize} name={secondaryIcon} aria-hidden="true" />
+            <Icon
+              name={secondaryIcon}
+              aria-hidden="true"
+              className={classnames('button-icon')}
+            />
           </span>
         )}
 
