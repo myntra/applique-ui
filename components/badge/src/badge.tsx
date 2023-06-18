@@ -10,6 +10,8 @@ interface Props extends BaseProps {
   type?: 'info' | 'success' | 'warning' | 'error'
   /** The label text of the badge. */
   children: string
+
+  size?: 'small' | 'regular'
   /**
    * Variant  of the badge
    */
@@ -35,7 +37,6 @@ export default function Badge({
   onClose,
   ...props
 }: Props): JSX.Element {
-  const badgeSmallWithIcon = (icon || onClose) && size === 'small'
   return (
     <div
       {...props}
@@ -51,7 +52,7 @@ export default function Badge({
         {onClose && (
           <Button
             className={classnames('close')}
-            type="link"
+            type="text"
             icon={TimesSolid}
             inheritTextColor
             onClick={onClose}

@@ -15,7 +15,7 @@
     'success': 'success-base-light',
     'error': 'danger-base-light',
     'warning': 'warning-base-light',
-    'gray': 'primary-base-light-2',
+    'incomplete': 'primary-base-light-2',
   );
 
   $fontColor: (
@@ -23,7 +23,7 @@
     'success': 'success',
     'error': 'danger-new',
     'warning': 'warning-no-fill',
-    'gray': 'gray-dark-new',
+    'incomplete': 'gray-dark-new',
   );
 
   @each $name, $color in $types {
@@ -61,6 +61,10 @@
 .container {
   display: flex;
   align-items: center;
+}
+
+.regular {
+  line-height: 2;
 }
 
 @include media-breakpoint-down('sm') {

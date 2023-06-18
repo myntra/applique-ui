@@ -43,13 +43,7 @@ export default function Icon({
   return (
     <svg
       {...props}
-      className={classnames(
-        className,
-        `svg-${fontSize}`,
-        color,
-        { spin },
-        'svg'
-      )}
+      className={classnames(className, fontSize, color, { spin }, 'svg')}
       aria-hidden={title ? null : true}
       xmlns="http://www.w3.org/2000/svg"
     >

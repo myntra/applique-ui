@@ -14,7 +14,7 @@ import Bell from 'uikit-icons/svgs/Bell'
 
 export interface Props extends BaseProps {
   /** The visual style to convey purpose of the button. */
-  type?: 'primary' | 'secondary' | 'tertiary' | 'warning' | 'link' | 'text'
+  type?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'text'
   /** Will show the button as a notification button with the number of notifications. (provided)*/
   notifications?: number
   /** The label text of the button. */
@@ -42,7 +42,7 @@ export interface Props extends BaseProps {
   /**
    * Size of the button
    */
-  size?: 'small' | 'regular' | 'large'
+  size?: 'xs' | 'small' | 'regular' | 'large'
   /**
    * Backgroud color for button
    */
@@ -64,9 +64,22 @@ export default class Button extends PureComponent<Props> {
   static Link = CAN_USE_HOOKS ? HookLink : Link
 
   static propTypes = {
-    __$validation({ to, href }) {
-      if (to && href)
+    __$validation({ to, href, size, icon, children, label }) {
+      if (to && href) {
         throw new Error(`The props 'to' and 'href' cannot coexist.`)
+      }
+
+      if (size === 'xs') {
+        if (!icon) {
+          throw new Error(
+            `The prop 'icon' is required when size is set to 'xs'.`
+          )
+        } else if (children || label) {
+          throw new Error(
+            `The props 'children' and 'label' cannot be used when size is set to 'xs'.`
+          )
+        }
+      }
     },
   }
 
@@ -77,6 +90,7 @@ export default class Button extends PureComponent<Props> {
     loading: false,
     transform: 'none',
     size: 'regular',
+    color: 'blue',
   }
 
   state = {
@@ -143,12 +157,12 @@ export default class Button extends PureComponent<Props> {
         {...props}
         type={type !== 'text' ? htmlType : ''}
         className={classnames('container', className, state, size, {
-          [typeName]: size !== 'large' || !color,
+          [`${typeName}-${color}`]: size !== 'large',
           loading,
           inherit: inheritTextColor,
-          icon: isIconButton,
+          [`icon-${size}`]: isIconButton,
           'notification-button': isNotificationButton,
-          [color]: !!color,
+          [`${type}-${color}`]: !!color,
         })}
         to={to}
         href={href}

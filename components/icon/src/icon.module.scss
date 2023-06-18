@@ -8,15 +8,15 @@
   fill: var(--current-color, currentColor);
 }
 
-.svg-small {
+.small {
   font-size: size('4x');
 }
 
-.svg-medium {
+.medium {
   font-size: size('6x');
 }
 
-.svg-large {
+.large {
   font-size: size('8x');
 }
 
@@ -31,7 +31,7 @@ $-text-colors: (
 );
 
 @each $key, $value in $-text-colors {
-  .svg-#{$key} {
+  .#{$key} {
     color: text-color($value);
   }
 }

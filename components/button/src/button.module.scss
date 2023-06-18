@@ -3,20 +3,110 @@
 /* stylelint-disable no-descending-specificity */
 @mixin add-colors($map) {
   @each $class, $value in $map {
-    &.#{$class} {
-      color: contrast-text-color($value, 'high', 'AAA');
-      background-color: $value;
-      border-color: $value;
+    &.inherit {
+      color: inherit;
+
+      @include transition('all');
+
+      &:disabled {
+        color: inherit;
+      }
+
       &:not(:disabled) {
         &:hover {
-          background-color: shade($value, 40%);
-          border-color: shade($value, 40%);
+          color: inherit;
         }
 
         &:active,
         &:active:hover {
-          background-color: shade($value, 60%);
-          border-color: shade($value, 60%);
+          color: inherit;
+          transform: translateY(2px);
+        }
+      }
+    }
+    &.primary-#{$class} {
+      color: color('white');
+      background-color: color($value);
+      border-color: color($value);
+      &:disabled {
+        color: color('gray-dark-new');
+        background-color: color('button.disabled');
+        border-color: color('button.disabled');
+      }
+      &:not(:disabled) {
+        &:hover {
+          background-color: color('#{$value}-dark-1');
+          border-color: color('#{$value}-dark-1');
+        }
+
+        &:active,
+        &:active:hover {
+          background-color: color('#{$value}-dark-2');
+          border-color: color('#{$value}-dark-2');
+        }
+      }
+    }
+    &.secondary-#{$class} {
+      color: color($value);
+      background-color: color('white');
+      border-color: color($value);
+      &:disabled {
+        color: color('gray-dark-new');
+        border-color: color('gray-dark-new');
+      }
+      &:not(:disabled) {
+        &:hover {
+          color: color('#{$value}-dark-1');
+          background-color: color('#{$value}-light-4');
+          border-color: color('#{$value}-dark-1');
+        }
+
+        &:active,
+        &:active:hover {
+          color: color('#{$value}-dark-2');
+          background-color: color('#{$value}-light-3');
+          border-color: color('#{$value}-dark-2');
+        }
+      }
+    }
+    &.tertiary-#{$class} {
+      color: color($value);
+      background-color: color('white');
+      border-color: color('white');
+      &:disabled {
+        color: color('gray-dark-new');
+      }
+      &:not(:disabled) {
+        &:hover {
+          color: color('#{$value}-dark-1');
+          background-color: color('#{$value}-light-4');
+          border-color: color('#{$value}-light-4');
+        }
+
+        &:active,
+        &:active:hover {
+          color: color('#{$value}-dark-2');
+          background-color: color('#{$value}-light-3');
+          border-color: color('#{$value}-light-3');
+        }
+      }
+    }
+    &.text-#{$class} {
+      padding: 0;
+      color: color($value);
+      background-color: transparent;
+      border-color: transparent;
+      &:disabled {
+        color: color('gray-dark-new');
+      }
+      &:not(:disabled) {
+        &:hover {
+          color: color('#{$value}-dark-1');
+        }
+
+        &:active,
+        &:active:hover {
+          color: color('#{$value}-dark-2');
         }
       }
     }
@@ -32,7 +122,7 @@
 
   position: relative;
   display: inline-block;
-  line-height: 1.4;
+  line-height: 1.3;
   text-decoration: none;
   cursor: pointer;
   appearance: none;
@@ -56,14 +146,17 @@
   > .icon {
     // TODO: Remove this hack for aligning icon with text.
     display: inline-block;
+    padding: 0;
     transform: translateY(1px);
 
     &.leading {
       padding-inline-end: 1ch;
+      margin-left: negative('1x');
     }
 
     &.trailing {
       padding-inline-start: 1ch;
+      margin-right: negative('1x');
     }
 
     &.loading {
@@ -91,43 +184,14 @@
     transform: translate(-50%, -50%);
   }
 
-  &.small {
-    padding: size('1x') size('4x');
-  }
-
-  &.large {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: size('24x');
-    font-size: font-size('body');
-    border-radius: size('1x');
-    box-shadow: shadow('raised');
-
-    .caption {
-      margin-top: size('1x');
-      font-style: italic;
-      color: inherit;
-      text-transform: none;
-    }
-    svg {
-      width: size('7x');
-      height: size('7x');
-      margin-bottom: size('2x');
-    }
-  }
-
   @include add-colors(
     (
-      'blue': color('primary'),
-      'red': color('danger'),
-      'yellow': color('warning'),
-      'green': color('success'),
-      'gray': color('gray-dark'),
-      'black': color('black'),
-      'pink': color('pink'),
+      'blue': 'primary',
+      'red': 'danger',
+      'yellow': 'warning',
+      'green': 'success',
+      'pink': 'pink',
+      'gray': 'gray',
     )
   );
 
@@ -144,154 +208,57 @@
   }
 }
 
-.primary {
-  color: contrast-text-color('primary-dark-1');
-  background-color: color('primary');
-  border-color: color('primary');
+.small {
+  padding: size('1x') size('3x');
+}
 
-  &:disabled {
-    color: contrast-text-color('button.disabled', 'disabled');
-    background-color: color('button.disabled');
-    border-color: color('button.disabled');
+.large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: size('24x');
+  font-size: font-size('body');
+  border-radius: size('1x');
+  box-shadow: shadow('raised');
+
+  .caption {
+    margin-top: size('1x');
+    font-style: italic;
+    color: inherit;
+    text-transform: none;
   }
-
-  &:not(:disabled) {
-    &:hover {
-      background-color: color('primary-dark-2');
-      border-color: color('primary-dark-2');
-    }
-
-    &:active,
-    &:active:hover {
-      background-color: color('primary-dark-3');
-      border-color: color('primary-dark-3');
-    }
+  svg {
+    width: size('7x');
+    height: size('7x');
+    margin-bottom: size('2x');
   }
 }
 
-.secondary {
-  color: text-color('primary');
-  background-color: color('white');
-  border-color: color('primary');
-
-  &:disabled {
-    color: contrast-text-color('gray-light-3', 'disabled');
-    background-color: color('gray-light-3');
-    border-color: color('button.disabled');
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      background-color: color('primary-light-3');
-    }
-
-    &:active,
-    &:active:hover {
-      background-color: color('primary-light-2');
-    }
-  }
-}
-
-.text {
-  padding: 0;
-  color: text-color('primary');
-  background-color: transparent;
-  border-color: transparent;
-
-  &:disabled {
-    color: text-color('primary', 'disabled');
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      color: text-color('primary', 'medium');
-    }
-
-    &:active,
-    &:active:hover {
-      color: text-color('primary');
-    }
-  }
-}
-
-.tertiary {
-  color: text-color('primary');
-  background-color: color('white');
-  border-color: color('white');
-
-  &:disabled {
-    color: contrast-text-color('gray-light-3', 'disabled');
-    background-color: color('gray-light-3');
-    border-color: color('white');
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      color: color('primary-dark-1');
-    }
-
-    &:active,
-    &:active:hover {
-      color: color('primary-dark-2');
-    }
-  }
-}
-
-.warning {
-  color: contrast-text-color('danger');
-  background-color: color('danger');
-  border-color: color('danger');
-
-  &:disabled {
-    color: contrast-text-color('button.disabled', 'disabled');
-    background-color: color('button.disabled');
-    border-color: color('button.disabled');
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      background-color: color('danger-dark-1');
-    }
-
-    &:active,
-    &:active:hover {
-      background-color: color('danger-dark-2');
-    }
-  }
-}
-
-.inherit {
-  color: var(--current-color, currentColor);
-
-  @include transition('all');
-
-  &:disabled {
-    color: var(--current-color, currentColor);
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      color: var(--current-color, currentColor);
-    }
-
-    &:active,
-    &:active:hover {
-      color: var(--current-color, currentColor);
-      transform: translateY(2px);
-    }
-  }
-}
-
-.icon {
+.icon-regular {
   @include padding('icon-button');
-
   box-sizing: content-box;
   width: 1em;
   height: 1em;
-  svg {
-    transform: #{scale }(1.25);
-    transform-origin: center center;
-  }
+
+  font-size: 10px;
+}
+
+.icon-small {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: size('2x');
+  font-size: 10px;
+}
+
+.icon-xs {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: size('1x');
+  font-size: 10px;
 }
 
 .notification-button {

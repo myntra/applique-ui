@@ -15,7 +15,7 @@ export default function Button() {
         width="127"
         height="35"
         rx="3.5"
-        fill="white"
+        fill="#CAC8EE"
         fillOpacity="0.9"
       />
       <path
