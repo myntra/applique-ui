@@ -11,6 +11,10 @@
     $theme: map-merge(
       $theme,
       (
+        '#{$name}-light-4':
+          '##{$name}-0'(
+            tint: 90%,
+          ),
         '#{$name}-light-3':
           '##{$name}-0'(
             tint: 80%,

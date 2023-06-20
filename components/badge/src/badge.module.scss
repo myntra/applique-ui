@@ -2,45 +2,69 @@
 
 .badge {
   display: inline-block;
-  padding: size('small') size('2x');
-  text-transform: uppercase;
+  padding: size('1x') * 0.5 size('2x');
+  line-height: 1;
+  text-transform: inherit;
   border: solid 1px;
-  border-radius: size('5x');
+  border-radius: size('1x');
 
   @include typography('paragraph');
 
   $types: (
-    'primary': 'primary',
+    'info': 'info-base-light',
+    'success': 'success-base-light',
+    'error': 'danger-base-light',
+    'warning': 'warning-base-light',
+    'incomplete': 'primary-base-light-2',
+  );
+
+  $fontColor: (
+    'info': 'info',
     'success': 'success',
-    'error': 'danger',
-    'warning': 'warning',
-    'gray': 'gray-dark-3',
-    'brown': 'brown',
+    'error': 'danger-new',
+    'warning': 'warning-no-fill',
+    'incomplete': 'gray-dark-new',
   );
 
   @each $name, $color in $types {
     &.#{$name} {
       &.solid {
-        color: color('white');
+        color: color(map-get($fontColor, $name));
         background-color: color('#{$color}');
         border-color: color('#{$color}');
       }
 
       &.outlined {
-        color: color('#{$color}');
-        background-color: color('white');
-        border-color: color('#{$color}');
+        color: color(map-get($fontColor, $name));
+        background-color: color('#{$color}');
+        border-color: color(map-get($fontColor, $name));
       }
     }
   }
+}
 
-  &.small {
-    font-size: size('5x') * 0.5;
-  }
+.icon {
+  padding: size('0.5x') * 0.5;
+  margin-right: size('0.5x');
+  margin-left: negative('1x');
+  font-size: size('3x');
+}
 
-  &.large {
-    font-size: size('4x');
-  }
+.close {
+  padding: size('0.5x');
+  margin-right: negative('1x');
+  margin-left: size('0.5x');
+  font-size: size('2x');
+  border: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.regular {
+  line-height: 2;
 }
 
 @include media-breakpoint-down('sm') {
