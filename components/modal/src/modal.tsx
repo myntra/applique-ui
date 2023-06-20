@@ -122,15 +122,13 @@ export default class Modal extends PureComponent<Props> {
             ['drawer-body']: type === MODAL_TYPE.MOBILE_DRAWER,
           })}
         >
-          <div className={classnames('content')}>
-            {render({
-              title,
-              actions,
-              children,
-              onClose: this.handleClose,
-              type,
-            })}
-          </div>
+          {render({
+            title,
+            actions,
+            children,
+            onClose: this.handleClose,
+            type,
+          })}
 
           {hideClose ? null : (
             <div

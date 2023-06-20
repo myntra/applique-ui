@@ -1,10 +1,10 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import InputNumber from './input-number'
 
 it('renders a placeholder <input> by default', () => {
   expect(
-    shallow(<InputNumber placeholder="Type" />)
+    mount(<InputNumber placeholder="Type" />)
       .find('input')
       .at(0)
       .prop('placeholder')
@@ -13,7 +13,7 @@ it('renders a placeholder <input> by default', () => {
 
 it('should call onChange handler on number enter', () => {
   const handler = jest.fn()
-  const wrapper = shallow(<InputNumber onChange={handler} />)
+  const wrapper = mount(<InputNumber onChange={handler} />)
 
   wrapper
     .find('input')
@@ -25,11 +25,8 @@ it('should call onChange handler on number enter', () => {
 describe('classes', () => {
   it('should render with custom class name', () => {
     expect(
-      shallow(<InputNumber className="c-name" />)
-        .find('.c-name')
-        .at(0)
-        .props().className
-    ).toBe('container c-name')
+      mount(<InputNumber className="c-name" />).find('.c-name')
+    ).toHaveLength(1)
   })
 })
 
@@ -46,14 +43,14 @@ it('focuses the element on mount', () => {
 describe('disabled', () => {
   it('Check input element ', () => {
     expect(
-      shallow(<InputNumber disabled />)
+      mount(<InputNumber disabled />)
         .find('input')
         .at(0)
         .props().disabled
     ).toBe(true)
 
     expect(
-      shallow(<InputNumber disabled={false} />)
+      mount(<InputNumber disabled={false} />)
         .find('input')
         .at(0)
         .props().disabled
@@ -64,18 +61,18 @@ describe('disabled', () => {
 describe('Test input HTML5 properties', () => {
   it('Value should be 5 ', () => {
     expect(
-      shallow(<InputNumber value={5} />)
+      mount(<InputNumber value={5} />)
         .find('input')
         .at(0)
-        .props().value
+        .prop('value')
     ).toBe(5)
   })
   it('Should not exceed max value', () => {
     expect(
-      shallow(<InputNumber value={5} min={1} max={10} />)
+      mount(<InputNumber value={5} min={1} max={10} />)
         .find('input')
         .at(0)
-        .props().value
+        .prop('value')
     ).toBe(5)
   })
 })

@@ -1,6 +1,9 @@
 $times: (
   'fast': 150ms,
-  'comfortable': 300ms,
+  'comfortable': '#fast'
+    (
+      'times': 2,
+    ),
 );
 
 $easing: (

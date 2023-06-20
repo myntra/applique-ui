@@ -125,6 +125,10 @@
   &[disabled] + .checkbox {
     background-color: color('gray');
     border-color: color('gray-dark');
+    &::after,
+    &::before {
+      border-color: color('gray-dark');
+    }
   }
 
   &:checked + .dashbox {
@@ -145,5 +149,9 @@
   &[disabled] + .dashbox {
     background-color: color('gray');
     border-color: color('gray-dark');
+    &::after,
+    &::before {
+      border-color: color('gray-dark');
+    }
   }
 }

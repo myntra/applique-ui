@@ -23,7 +23,7 @@
     display: block !important;
     &:hover {
       #{ $self }__indicator {
-        transform: translate(-50%, -50%) scale(0.7);
+        transform: translate(-50%, -50%) #{scale }(0.7);
       }
       #{ $self }__label {
         display: flex;
@@ -43,7 +43,7 @@
     background: color('gray-dark');
     border-radius: 50%;
     box-shadow: shadow('stepper');
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) #{scale }(0.5);
     transform-origin: center center;
   }
   &__label {

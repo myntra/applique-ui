@@ -1,6 +1,6 @@
 import Foo from 'foo'
 
-import { interopPropTransformer } from '@applique-ui/uikit'
+import { interopPropTransformer } from '@myntra/uikit'
 
 const interopPropTransformerFoo$0 = interopPropTransformer(
   {},

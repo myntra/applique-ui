@@ -15,9 +15,9 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.14.1
+          node-version: 16.17.1
       - name: Install pnpm
-        run: npm i pnpm@7.11.0 -g
+        run: npm i pnpm@8.5.1 -g
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Test and coverage

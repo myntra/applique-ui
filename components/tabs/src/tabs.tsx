@@ -1,14 +1,20 @@
 import React, {
-  PureComponent,
   Children,
   isValidElement,
   cloneElement,
+  useState,
+  useRef,
+  useEffect,
 } from 'react'
 import Tab from './tab'
 
 import classnames from './tabs.module.scss'
 
 export interface Props extends BaseProps {
+  /**
+   * Default active tab.
+   */
+  defaultIndex?: number
   /**
    * Current active tab.
    */
@@ -32,76 +38,100 @@ export { Tab }
  * @category layout
  * @see http://uikit.myntra.com/components/tabs
  */
-export default class Tabs extends PureComponent<
-  Props,
-  { activeIndex: number }
-> {
-  static Tab = Tab
+function Tabs(props: Props) {
+  const {
+    className,
+    onChange,
+    type,
+    defaultIndex = 0,
+    activeIndex,
+    ...remainingProps
+  } = props
+  const [state, setState] = useState({ activeIndex: defaultIndex })
+  const ref = useRef(null)
+  const children: any = Children.toArray(props.children).filter((child) =>
+    isValidElement(child)
+  )
+  if (!children.length) return null
 
-  static propTypes = {
-    /** @private  */
-    _validate(props) {
-      if ('active' in props && !('onChange' in props)) {
-        throw new Error('`onChange` prop is required when using `active` props')
+  const getActiveIndex = () => {
+    let activeTab =
+      typeof activeIndex === 'number' ? activeIndex : state.activeIndex
+
+    if (
+      activeTab < 0 ||
+      activeTab >= children.length ||
+      children[activeTab]?.props?.disabled
+    ) {
+      for (let i = 0; i < children.length - 1; i++) {
+        if (!children[i]?.props?.disabled) {
+          activeTab = i
+          break
+        }
       }
-    },
+    }
+    return activeTab
   }
 
-  static defaultProps = {
-    type: 'primary',
+  useEffect(() => {
+    calcSliderPos()
+  }, [state, activeIndex])
+
+  const calcSliderPos = () => {
+    const target = ref.current
+    if (props.type !== 'primary' || !target) return
+    const selectedTab = target.childNodes[getActiveIndex()] as HTMLElement
+    ;(target.lastChild as HTMLElement).style.left =
+      selectedTab.offsetLeft + 'px'
+    ;(target.lastChild as HTMLElement).style.width =
+      selectedTab.getBoundingClientRect().width + 'px'
   }
 
-  state = {
-    activeIndex: 0,
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const activeTab = Number(event.currentTarget.dataset.index)
+
+    if (props.children[activeTab].props.disabled) return
+    if (!Number.isInteger(activeTab)) return
+
+    if (props.onChange) props.onChange(activeTab)
+    setState({ activeIndex: activeTab })
   }
 
-  handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const activeIndex = Number(event.currentTarget.dataset.index)
-
-    if (!Number.isInteger(activeIndex)) return
-
-    if (this.props.onChange) this.props.onChange(activeIndex)
-    else this.setState({ activeIndex })
-  }
-
-  render() {
-    let activeIndex =
-      typeof this.props.activeIndex === 'number'
-        ? this.props.activeIndex
-        : this.state.activeIndex
-    const children: any = Children.toArray(
-      this.props.children
-    ).filter((child) => isValidElement(child))
-
-    if (!children.length) return null
-    if (activeIndex < 0 || children.length <= activeIndex) activeIndex = 0
-
-    const {
-      className,
-      onChange,
-      children: _,
-      activeIndex: __,
-      type,
-      ...props
-    } = this.props
-
-    const content = children[activeIndex].props.children
-
-    return (
-      <div className={classnames('group', className)} {...props}>
-        <div className={classnames('pane', type)}>
-          {Children.map(children, (child: any, index) =>
-            cloneElement(child, {
-              'data-index': index,
-              isActive: index === activeIndex,
-              onClick: this.handleClick,
-              children: null,
-              type,
-            })
-          )}
-        </div>
-        {content}
+  const content = children[getActiveIndex()]?.props?.children
+  return (
+    <div className={classnames('group', className)} {...remainingProps}>
+      <div className={classnames('pane', type)} ref={ref}>
+        {Children.map(children, (child: any, index) =>
+          cloneElement(child, {
+            'data-index': index,
+            isActive: index === getActiveIndex(),
+            onClick: handleClick,
+            children: null,
+            type,
+          })
+        )}
+        {type === 'primary' && <div className={classnames('slider')}></div>}
       </div>
-    )
-  }
+      {content}
+    </div>
+  )
 }
+
+Tabs.Tab = Tab
+
+Tabs.propTypes = {
+  /** @private  */
+  _validate(props) {
+    if ('activeIndex' in props && !('onChange' in props)) {
+      throw new Error(
+        '`onChange` prop is required when using `activeIndex` props'
+      )
+    }
+  },
+}
+
+Tabs.defaultProps = {
+  type: 'primary',
+}
+
+export default Tabs

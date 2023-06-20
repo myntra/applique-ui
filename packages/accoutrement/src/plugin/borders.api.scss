@@ -1,5 +1,5 @@
 @function border($token, $source: $borders) {
-  @return get-token($borders, $token);
+  @return get($borders, $token);
 }
 
 @function var-border($token, $source: $borders) {
@@ -15,7 +15,7 @@
 }
 
 @function border-bottom($token, $source: $borders) {
-  @return get-token($borders, $token);
+  @return get($borders, $token);
 }
 
 @mixin border-bottom($token) {
@@ -23,7 +23,7 @@
 }
 
 @function border-right($token, $source: $borders) {
-  @return get-token($borders, $token);
+  @return get($borders, $token);
 }
 
 @mixin border-right($token) {
@@ -31,7 +31,7 @@
 }
 
 @function border-left($token, $source: $borders) {
-  @return get-token($borders, $token);
+  @return get($borders, $token);
 }
 
 @mixin border-left($token) {

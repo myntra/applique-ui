@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import { rollup } from 'rollup2'
+import { rollup } from 'rollup'
 import config from '../mdx_rollup.config.mjs'
 import utils from './utils.mjs'
 
