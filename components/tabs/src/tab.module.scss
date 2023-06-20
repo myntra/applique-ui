@@ -2,45 +2,55 @@
 
 .tab {
   &.primary {
-    @include padding('tab.item');
-    @include typography('h2');
+    @include padding('tab.item.primary');
+    @include typography('tabs-title');
+    flex-shrink: 0;
 
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: -1px;
-      left: 0;
-      display: block;
-      height: 4px;
-      content: ' ';
-      border-radius: 3px;
-      transition: all 350ms;
+    line-height: size('6x');
+    border-bottom: size('1x') solid color('gray-base-new-6');
+    &:hover {
+      background-color: color('primary-base-light');
+      border-color: color('primary-base-light');
     }
     &.active {
-      &::after {
-        background-color: color('primary');
-      }
+      font-weight: 500;
+      color: color('primary-base-new');
     }
   }
   &.secondary {
-    @include padding('tab.item');
-    @include typography('body');
+    @include padding('tab.item.secondary');
+    @include typography('tabs-title');
 
     min-width: size('3x') * 10;
-    margin-right: size('4x');
+    margin-right: size('2x');
+    line-height: size('6x');
     text-align: center;
-    border: 1px solid color('gray-light');
-    transition: all 350ms;
+    border-color: color('white');
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    &:hover {
+      background-color: color('primary-base-light');
+      border-color: color('primary-base-light');
+    }
     &.active {
-      background-color: color('primary-light-3');
-      border-color: color('primary');
+      font-weight: 500;
+      color: color('primary-base-new');
+      border-color: color('primary-base-new');
     }
   }
 
   position: relative;
   display: inline-block;
-  color: text-color('dark', 'medium');
+  color: color('gray-base-new-3');
   cursor: pointer;
+  background-color: color('white');
+
+  &.disabled {
+    color: color('gray-base-new-4');
+    pointer-events: none;
+    background-color: color('gray-base-new');
+    border-color: color('gray-base-new');
+  }
 
   &.active {
     color: text-color('dark');

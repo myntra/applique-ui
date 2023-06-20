@@ -28,11 +28,6 @@
   position: relative;
 }
 
-.content {
-  max-height: 80vh;
-  overflow: auto;
-}
-
 .close {
   position: absolute;
   top: negative(size('3x'));

@@ -32,7 +32,7 @@ export default class InputFile extends PureComponent<Props> {
         Browse
       </Button>
     ),
-    variant: 'bordered'
+    variant: 'bordered',
   }
 
   refInputFile: React.RefObject<HTMLInputElement>
@@ -82,7 +82,15 @@ export default class InputFile extends PureComponent<Props> {
   }
 
   render() {
-    const { placeholder, actions, variant, value, onError, ...props } = this.props
+    const {
+      placeholder,
+      actions,
+      variant,
+      value,
+      onError,
+      validations,
+      ...props
+    } = this.props
 
     return (
       <div className={classnames('input-file')}>
