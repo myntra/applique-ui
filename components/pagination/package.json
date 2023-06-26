@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/pagination",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "main": "dist/pagination.cjs.js",
   "module": "dist/pagination.esm.js",
   "types": "dist/index.d.ts",

@@ -432,6 +432,12 @@ importers:
 
   components/badge:
     dependencies:
+      '@applique-ui/button':
+        specifier: 0.0.*
+        version: link:../button
+      '@applique-ui/icon':
+        specifier: 0.0.*
+        version: link:../icon
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
         version: link:../../packages/uikit-can-i-use
