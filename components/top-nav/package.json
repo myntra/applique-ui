@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/top-nav",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "main": "dist/top-nav.cjs.js",
   "module": "dist/top-nav.esm.js",
   "types": "dist/index.d.ts",

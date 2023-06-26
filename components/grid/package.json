@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/grid",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "main": "dist/grid.cjs.js",
   "module": "dist/grid.esm.js",
   "types": "dist/index.d.ts",
