@@ -197,6 +197,8 @@ export default class InputDate extends PureComponent<
       disabled,
       disabledTime,
       includeTime,
+      label,
+      range,
       ...props
     } = this.props
     const { isOpen, activeRangeEnd } = this.state
@@ -211,7 +213,7 @@ export default class InputDate extends PureComponent<
         renderTrigger={(events) => (
           <InputDateValue
             {...events}
-            range={props.range}
+            range={range}
             value={displayValue}
             format={displayFormat}
             active={displayActiveRangeEnd}
@@ -219,6 +221,7 @@ export default class InputDate extends PureComponent<
             onChange={this.handleDisplayValueChange}
             onRangeFocus={this.handleRangeFocus}
             includeTime={includeTime}
+            label={label}
           />
         )}
         onOpen={disabled ? null : this.handleDropdownOpen}

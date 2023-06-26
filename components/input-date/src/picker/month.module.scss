@@ -13,8 +13,8 @@
 .days {
   display: flex;
   flex-flow: wrap;
-  width: 17.5rem; /* 7 * width of day */
-  height: 20rem; /* 8 * height of day (including margin) */
+  width: 17.5rem;
+  height: 16rem;
   cursor: pointer;
 }
 

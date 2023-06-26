@@ -360,7 +360,9 @@ export default class MonthGroup extends Component<
                 offset={offset}
                 hasPrev={offset === 0}
                 hasNext={
-                  offset + 1 === this.props.monthsToDisplay || monthSelector
+                  offset + 1 === this.props.monthsToDisplay ||
+                  monthSelector ||
+                  yearSelector
                 }
                 monthSelector={monthSelector}
                 yearSelector={this.state.yearSelector}

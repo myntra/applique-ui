@@ -7,10 +7,18 @@
 
 const [val, setVal] = React.useState()
 const [val2, setVal2] = React.useState()
+
+const label = {
+  from: 'Start Date 1',
+  to: 'End Date 1'
+}
+
+const label2 = "Enter Date Here"
+
 return (
   <>
-    <InputDate range={true} value={val} onChange={setVal} />
-    <InputDate value={val2} onChange={setVal2} />
+    <InputDate range value={val} onChange={setVal} label={label} />
+    <InputDate label={label2} value={val2} onChange={setVal2} includeTime disabledTime/>
   </>
 )
 ```

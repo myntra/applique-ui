@@ -15,12 +15,22 @@
   align-items: center;
   height: 36px;
   padding: 8px;
+  margin-top: 4px;
   border: 1px solid rgba(207, 207, 209, 1);
   border-radius: 4px;
   input {
     border: none !important;
   }
 }
+
+.date-label-container.from {
+  margin-right: 8px;
+}
+
+.date-label-container.to {
+  margin-left: 8px;
+}
+
 .wrapper:hover {
   border-color: color('primary-lighter');
 }
@@ -51,4 +61,10 @@
 .custom-input {
   display: flex;
   border: none !important;
+}
+
+.date-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
 }
