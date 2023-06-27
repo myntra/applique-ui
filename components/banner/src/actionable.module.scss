@@ -45,8 +45,8 @@
 
   .close {
     position: absolute;
-    top: size('1x');
-    right: size('3x');
+    top: size('3x');
+    right: size('4x');
     svg {
       width: size('5x');
       height: size('5x');
@@ -70,6 +70,6 @@
     width: size('7x');
     height: size('7x');
     margin-top: size('2x');
-    transform: scale(1.5);
+    transform: #{scale }(1.5);
   }
 }

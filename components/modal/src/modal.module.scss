@@ -28,15 +28,10 @@
   position: relative;
 }
 
-.content {
-  max-height: 80vh;
-  overflow: auto;
-}
-
 .close {
   position: absolute;
-  top: negative(size('3x'));
-  right: negative(size('8x'));
+  top: negative(size('2x'));
+  right: negative(size('4x'));
   padding-right: 0;
   color: text-color('light');
 
@@ -55,8 +50,8 @@
   }
   .drawer-close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: size('1x');
+    right: size('3x');
     color: color('gray-dark-base');
 
     svg {

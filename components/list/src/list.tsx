@@ -358,6 +358,7 @@ export default class List extends PureComponent<
          */}
         {multiple && !virtualized ? (
           <li
+            key="applique-select-all"
             role="option"
             className={classnames('item', 'selectall', {
               'is-selected': this.state.areSelectedAll,

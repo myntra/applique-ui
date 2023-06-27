@@ -15,6 +15,6 @@ List Specification.
 describe('List', () => {
   const items = ['Foo', 'Bar', 'Baz']
   it('should render list of items', () => {
-    mountShallow(<List items={items}>{(item) => item}</List>)
+    mount(<List items={items}>{({ item }) => <span>{item}</span>}</List>)
   })
 })

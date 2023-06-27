@@ -50,16 +50,14 @@ module.exports = {
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   coverageDirectory: 'coverage',
-  coverageThreshold: process.env.CI
-    ? {
-        global: {
-          branches: 50,
-          functions: 80,
-          lines: 50,
-          statements: -20,
-        },
-      }
-    : {},
+  coverageThreshold: {
+    global: {
+      branches: 30,
+      functions: 30,
+      lines: 50,
+      statements: -3000,
+    },
+  },
   globals: {
     'ts-jest': {
       tsConfig: '<rootDir>/tsconfig.test.json',

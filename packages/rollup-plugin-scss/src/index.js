@@ -81,9 +81,9 @@ module.exports = function ScssPlugin(options = {}) {
 
                 const fn = async () => {
                   try {
-                    const result = await this.resolveId(id, importer)
+                    const result = await this.resolve(id, importer)
 
-                    done({ file: result })
+                    done({ file: result.id })
                   } catch (error) {
                     done(error)
                   }

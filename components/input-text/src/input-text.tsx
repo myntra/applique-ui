@@ -18,12 +18,7 @@ export interface Props extends BaseProps {
  * @category input
  * @see http://uikit.myntra.com/components/input-text
  */
-export default function InputText({
-  className,
-  onChange,
-  value,
-  ...props
-}: Props) {
+export default function InputText({ onChange, value, ...props }: Props) {
   return (
     <Input
       {...props}

@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/accordion",
-  "version": "0.0.41",
+  "version": "0.0.47",
   "main": "dist/accordion.cjs.js",
   "module": "dist/accordion.esm.js",
   "types": "dist/index.d.ts",

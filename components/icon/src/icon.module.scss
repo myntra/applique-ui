@@ -6,33 +6,33 @@
   height: 1em;
   vertical-align: text-top;
   fill: var(--current-color, currentColor);
+}
 
-  &.small {
-    font-size: size('4x');
-  }
+.small {
+  font-size: size('4x');
+}
 
-  &.medium {
-    font-size: size('6x');
-  }
+.medium {
+  font-size: size('6x');
+}
 
-  &.large {
-    font-size: size('8x');
-  }
+.large {
+  font-size: size('8x');
+}
 
-  $-text-colors: (
-    'primary': 'primary',
-    'success': 'success',
-    'warning': 'warning',
-    'disabled': 'gray',
-    'error': 'danger',
-    'dark': 'dark',
-    'light': 'light',
-  );
+$-text-colors: (
+  'primary': 'primary',
+  'success': 'success',
+  'warning': 'warning',
+  'disabled': 'gray',
+  'error': 'danger',
+  'dark': 'dark',
+  'light': 'light',
+);
 
-  @each $key, $value in $-text-colors {
-    &.#{$key} {
-      color: text-color($value);
-    }
+@each $key, $value in $-text-colors {
+  .#{$key} {
+    color: text-color($value);
   }
 }
 

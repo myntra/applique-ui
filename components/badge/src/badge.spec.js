@@ -13,4 +13,17 @@ describe('Badge', () => {
 
     expect(wrapper.text()).toBe('Foo')
   })
+
+  describe('behaviour', () => {
+    it('calls `onClose` prop if close button is clicked', () => {
+      const handleClose = jest.fn()
+      const wrapper = shallow(
+        <Badge onClose={handleClose}>Dismissable badge</Badge>
+      )
+
+      wrapper.find('[data-test-id="close"]').simulate('click')
+
+      expect(handleClose).toHaveBeenCalled()
+    })
+  })
 })

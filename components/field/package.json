@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/field",
-  "version": "0.0.41",
+  "version": "0.0.47",
   "main": "dist/field.cjs.js",
   "module": "dist/field.esm.js",
   "types": "dist/index.d.ts",

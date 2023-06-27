@@ -123,13 +123,6 @@ function startWebpackDevServer(component, port) {
   chain.resolve.alias
     .set('@uikit', Path.resolve(__dirname, `./app/uikit.${component}.js`))
     .set(
-      'accoutrement$',
-      Path.resolve(
-        __dirname,
-        '../packages/accoutrement/node_modules/accoutrement/sass/index.scss'
-      )
-    )
-    .set(
       '@accoutrement',
       Path.resolve(__dirname, '../packages/accoutrement/src/index.scss')
     )
@@ -165,8 +158,10 @@ function startWebpackDevServer(component, port) {
 
   chain.set('infrastructureLogging', { level: 'warn' })
 
-  chain.stats('errors-warnings')
-  // chain.plugin('bar').use(require('webpackbar'))
+  // chain.stats('errors-warnings')
+  chain.stats({
+    loggingDebug: ['sass-loader'],
+  })
 
   chain.resolve.extensions
     .add('.ts')
@@ -174,12 +169,6 @@ function startWebpackDevServer(component, port) {
     .add('.js')
     .add('.jsx')
     .add('.mdx')
-
-  //   chain.module
-  //     .rule('sprite')
-  //     .test(/\.sprite\.svg$/)
-  //     .use('svg-sprite-loader')
-  //     .loader(require.resolve('./svg-sprite-loader'))
 
   chain.module
     .rule('img')
@@ -204,8 +193,6 @@ function startWebpackDevServer(component, port) {
         mode: 'local',
         auto: true,
         exportGlobals: true,
-        // localIdentName: '[name]_[local]',
-        // localIdentName: '[name]_[local]_[hash:base64:5]',
         getLocalIdent(context, _, name) {
           const filename = context.resourcePath
           const component = filename
@@ -215,8 +202,6 @@ function startWebpackDevServer(component, port) {
 
           return `aui-${component}-${name}`
         },
-        // namedExport: true,
-        // exportOnlyLocals: false,
       },
     })
     .end()
@@ -225,9 +210,9 @@ function startWebpackDevServer(component, port) {
     .end()
     .use('sass-loader')
     .loader(require.resolve('sass-loader'))
-    // .options({
-    //   implementation: require('sass'),
-    // })
+    .options({
+      implementation: require.resolve('sass'),
+    })
     .end()
 
   chain.module
@@ -287,18 +272,8 @@ function startWebpackDevServer(component, port) {
         ],
         '@babel/preset-react',
       ],
-      // plugins: ['@babel/plugin-proposal-object-rest-spread']
     })
     .end()
-    // .use('post-mdx-loader')
-    // .loader(require.resolve('./post-mdx-helper-loader'))
-    // .options({
-    //   components: Array.from(localComponents).reduce((acc, comp) => {
-    //     acc[comp] = `'${comp}'`
-    //     return acc
-    //   }, {})
-    // })
-    // .end()
     .use('mdx-loader')
     .loader(require.resolve('@mdx-js/loader'))
     .options({
@@ -306,8 +281,6 @@ function startWebpackDevServer(component, port) {
       remarkPlugins: require('./markdown-plugins'),
     })
     .end()
-  // .use('mdx-polyfill-loader')
-  // .loader(require.resolve('./polyfill-mdx-loader'))
 
   chain.module
     .rule('ts')

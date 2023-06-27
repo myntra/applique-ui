@@ -9,9 +9,15 @@
 
 .wrapper {
   min-width: 320px;
+  max-width: 95vw;
   min-height: 320px;
   padding: size('6x');
   background: color('white');
+}
+
+.content {
+  max-height: 60vh;
+  overflow: auto;
 }
 
 .actions {
@@ -22,15 +28,22 @@
 }
 
 @include media-breakpoint-down('sm') {
+  .wrapper {
+    max-width: 85vw;
+  }
+
   .drawer-wrapper {
     display: flex;
     flex-direction: column;
+    max-width: unset;
     min-height: 22vh;
-    max-height: 50vh;
+    max-height: 75vh;
+    border-radius: 8px 8px 0 0;
   }
+
   .drawer-actions {
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: size('2x');
+    margin-top: size('2x');
     border-top: none;
   }
 }

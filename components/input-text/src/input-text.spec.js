@@ -3,7 +3,7 @@ import InputText from './input-text'
 
 it('renders a placeholder <input> by default', () => {
   expect(
-    mountShallow(<InputText placeholder="Type" />)
+    mount(<InputText placeholder="Type" />)
       .find('input')
       .at(0)
       .prop('placeholder')
@@ -12,7 +12,7 @@ it('renders a placeholder <input> by default', () => {
 
 it('should call onChange handler on text enter', () => {
   const handler = jest.fn()
-  const wrapper = mountShallow(<InputText onChange={handler} />)
+  const wrapper = mount(<InputText onChange={handler} />)
 
   wrapper
     .find('input')
@@ -24,7 +24,7 @@ it('should call onChange handler on text enter', () => {
 describe('classes', () => {
   it('should render with custom class name', () => {
     expect(
-      mountShallow(<InputText className="c-name" />)
+      mount(<InputText className="c-name" />)
         .find('div')
         .at(0)
         .props().className
@@ -45,73 +45,78 @@ it('focuses the element on mount', () => {
 describe('disabled', () => {
   it('Check input element ', () => {
     expect(
-      mountShallow(<InputText disabled />)
+      mount(<InputText disabled />)
         .find('input')
         .at(0)
         .props().disabled
     ).toBe(true)
 
     expect(
-      mountShallow(<InputText disabled={false} />)
+      mount(<InputText disabled={false} />)
         .find('input')
         .at(0)
         .props().disabled
     ).toBe(false)
   })
 })
+
 describe('Error', () => {
   it('should have error class corrosponding to error prop ', () => {
-    const inputwrapper = mountShallow(<InputText error />)
-    expect(inputwrapper.hasClass('error')).toBe(true)
+    const wrapper = mount(<InputText error="error" />)
+    console.log(wrapper.html())
+    expect(wrapper.find('.error')).toHaveLength(1)
 
-    inputwrapper.setProps({ error: false })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('error')).toBe(false)
+    wrapper.setProps({ error: false })
+    wrapper.update()
+    expect(wrapper.find('.error')).toHaveLength(0)
   })
 })
+
 describe('Variants Check', () => {
   it('should have bordered, standard classes corrosponding to variant passed', () => {
-    const inputwrapper = mountShallow(<InputText />)
-    expect(inputwrapper.hasClass('bordered')).toBe(true)
+    const wrapper = mount(<InputText />)
+    expect(wrapper.find('.bordered')).toHaveLength(1)
 
-    inputwrapper.setProps({ variant: 'standard' })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('standard')).toBe(true)
+    wrapper.setProps({ variant: 'standard' })
+    wrapper.update()
+    expect(wrapper.find('.standard')).toHaveLength(1)
   })
 })
+
 describe('Filled  Check', () => {
   it('should have filled class when there is value present, only string values supported', () => {
-    const inputwrapper = mountShallow(<InputText value="test" />)
-    expect(inputwrapper.hasClass('filled')).toBe(true)
-    inputwrapper.setProps({ value: '' })
-    inputwrapper.update()
+    const wrapper = mount(<InputText value="test" />)
+    expect(wrapper.find('.filled')).toHaveLength(1)
+    wrapper.setProps({ value: '' })
+    wrapper.update()
 
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    expect(wrapper.find('.filled')).toHaveLength(0)
 
-    inputwrapper.setProps({ value: false })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    wrapper.setProps({ value: false })
+    wrapper.update()
+    expect(wrapper.find('.filled')).toHaveLength(0)
 
-    inputwrapper.setProps({ value: 1 })
-    inputwrapper.update()
-    expect(inputwrapper.hasClass('filled')).toBe(false)
+    wrapper.setProps({ value: 1 })
+    wrapper.update()
+    expect(wrapper.find('.filled')).toHaveLength(0)
   })
 })
+
 describe('Adornments support', () => {
   it('Should render Adornment Text', () => {
-    const inputwrapper = mountShallow(<InputText adornment="/kg" />)
+    const inputwrapper = mount(<InputText adornment="/kg" />)
     const adornmentWrapper = inputwrapper.find('.input-adornment')
     expect(adornmentWrapper.text()).toBe('/kg')
   })
   it('Should render Adornment Component', () => {
-    const inputwrapper = mountShallow(
+    const inputwrapper = mount(
       <InputText adornment={<button>Click Me</button>} />
     )
     const adornmentComp = inputwrapper.find('.input-adornment')
     expect(adornmentComp.find('button').length).toBe(1)
   })
   it('Should Support start and end position of adornment', () => {
-    const inputwrapper = mountShallow(
+    const inputwrapper = mount(
       <InputText
         adornment={<button>Click Me</button>}
         adornmentPosition="start"

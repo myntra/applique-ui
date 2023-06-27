@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/image",
-  "version": "0.0.41",
+  "version": "0.0.47",
   "main": "dist/image.cjs.js",
   "module": "dist/image.esm.js",
   "types": "dist/index.d.ts",
