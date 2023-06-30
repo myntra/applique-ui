@@ -9,6 +9,7 @@
   width: var(--day-size);
   height: var(--day-size);
   margin: 1px 0;
+  font-size: 14px;
   user-select: none;
   border-radius: 4px;
   transition: all 250ms;
@@ -19,7 +20,7 @@
 
   &.selected {
     color: color('primary');
-    background-color: color('primary-lighter');
+    background-color: color('primary-light-new');
     border-radius: 0;
   }
 

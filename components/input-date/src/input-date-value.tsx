@@ -160,7 +160,11 @@ export default class InputDateValue extends PureComponent<
                   active: this.props.active === 'from',
                 })}
               >
-                <Icon name={ClockSolid} className={classnames('pre-icon')} />
+                <Icon
+                  name={ClockSolid}
+                  className={classnames('pre-icon')}
+                  color={disabled ? 'disabled' : 'dark'}
+                />
                 <InputMasked
                   includeMaskChars
                   id="from"
@@ -195,7 +199,11 @@ export default class InputDateValue extends PureComponent<
                   active: this.props.active === 'to',
                 })}
               >
-                <Icon name={ClockSolid} className={classnames('pre-icon')} />
+                <Icon
+                  name={ClockSolid}
+                  className={classnames('pre-icon')}
+                  color={disabled ? 'disabled' : 'dark'}
+                />
                 <InputMasked
                   includeMaskChars
                   id="to"
@@ -227,7 +235,11 @@ export default class InputDateValue extends PureComponent<
               {labelCompatibility}
             </label>
             <div key="both" className={classnames('wrapper')}>
-              <Icon name={ClockSolid} className={classnames('pre-icon')} />
+              <Icon
+                name={ClockSolid}
+                className={classnames('pre-icon')}
+                color={disabled ? 'disabled' : 'dark'}
+              />
               <InputMasked
                 includeMaskChars
                 autoComplete="off"

@@ -63,7 +63,7 @@ export default class InputDate extends PureComponent<
     return (
       this.props.displayFormat ||
       this.props.format ||
-      (this.props.includeTime ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd')
+      (this.props.includeTime ? 'dd/MM/yyyy HH:mm' : 'dd/MM/yyyy')
     )
   }
 
@@ -198,7 +198,6 @@ export default class InputDate extends PureComponent<
       disabledTime,
       includeTime,
       label,
-      range,
       ...props
     } = this.props
     const { isOpen, activeRangeEnd } = this.state
@@ -213,7 +212,7 @@ export default class InputDate extends PureComponent<
         renderTrigger={(events) => (
           <InputDateValue
             {...events}
-            range={range}
+            range={props.range}
             value={displayValue}
             format={displayFormat}
             active={displayActiveRangeEnd}
