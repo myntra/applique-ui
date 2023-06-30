@@ -63,7 +63,7 @@ export default class InputDate extends PureComponent<
     return (
       this.props.displayFormat ||
       this.props.format ||
-      (this.props.includeTime ? 'dd/MM/yyyy HH:mm' : 'dd/MM/yyyy')
+      (this.props.includeTime ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd')
     )
   }
 
