@@ -12,7 +12,7 @@ import {
   isStringDateRange,
 } from './input-date-helpers'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
-import ClockSolid from 'uikit-icons/svgs/ClockSolid' //Need to change to calender
+import CalendarDay from 'uikit-icons/svgs/CalendarDay'
 
 const MASKS: InputMaskedProps['masks'] = {
   Y: {
@@ -161,7 +161,7 @@ export default class InputDateValue extends PureComponent<
                 })}
               >
                 <Icon
-                  name={ClockSolid}
+                  name={CalendarDay}
                   className={classnames('pre-icon')}
                   color={disabled ? 'disabled' : 'dark'}
                 />
@@ -200,7 +200,7 @@ export default class InputDateValue extends PureComponent<
                 })}
               >
                 <Icon
-                  name={ClockSolid}
+                  name={CalendarDay}
                   className={classnames('pre-icon')}
                   color={disabled ? 'disabled' : 'dark'}
                 />
@@ -236,7 +236,7 @@ export default class InputDateValue extends PureComponent<
             </label>
             <div key="both" className={classnames('wrapper')}>
               <Icon
-                name={ClockSolid}
+                name={CalendarDay}
                 className={classnames('pre-icon')}
                 color={disabled ? 'disabled' : 'dark'}
               />

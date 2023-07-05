@@ -135,7 +135,7 @@ function startWebpackDevServer(component, port) {
     .set('@mdx-js/tag$', require.resolve('@mdx-js/tag'))
     .set('react$', require.resolve('react'))
     .set('react-dom$', require.resolve('react-dom'))
-    .set('@uikit-icons', '../node_modules/@myntra/uikit-icons/dist/index')
+    .set('@uikit-icons', '../node_modules/@applique-ui/uikit-icons/dist/index')
 
   chain.resolve.alias.set(
     `@applique-ui/input/style.scss`,
