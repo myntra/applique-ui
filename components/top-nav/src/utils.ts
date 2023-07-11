@@ -8,7 +8,7 @@ function getPathToInfoMapping(navigationConfig, navigationKey) {
   const pathMap = {}
   if (!navigationConfig) return pathMap
   Object.entries(navigationConfig).forEach((navConfig) => {
-    const L1_LEVEL_ID: String = navConfig[0]
+    const L1_LEVEL_ID: string = navConfig[0]
     const l1Config: NAVIGATION_ITEM_L1_INTERFACE = navConfig[1] as NAVIGATION_ITEM_L1_INTERFACE
     if (l1Config.config) {
       l1Config.config.forEach((l2Config: NAVIGATION_ITEM_L2_INTERFACE) => {
