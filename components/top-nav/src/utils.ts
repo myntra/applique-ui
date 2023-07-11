@@ -85,10 +85,15 @@ function checkIfDirectLinkOrMenu(itemData) {
   return checkIfDirectLink(itemData) || checkIfNonEmptyMenu(itemData)
 }
 
+function replaceSpacesWithUnderscore(str) {
+  return str.replace(/ /g, '_')
+}
+
 export {
   getPathToInfoMapping,
   getFilteredNavs,
   checkIfDirectLink,
   checkIfNonEmptyMenu,
   checkIfDirectLinkOrMenu,
+  replaceSpacesWithUnderscore,
 }

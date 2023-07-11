@@ -8,6 +8,7 @@ import {
   checkIfDirectLinkOrMenu,
   checkIfNonEmptyMenu,
   getFilteredNavs,
+  replaceSpacesWithUnderscore,
 } from './utils'
 
 export interface TopNavItemProps extends BaseProps {
@@ -63,6 +64,7 @@ export default class TopNavItem extends PureComponent<
     if (checkIfDirectLinkOrMenu(itemData)) {
       return (
         <button
+          id={replaceSpacesWithUnderscore(itemData.label)}
           ref={(ref) => {
             this.tabItemRef = ref
           }}

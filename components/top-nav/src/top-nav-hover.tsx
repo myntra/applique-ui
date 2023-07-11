@@ -3,6 +3,7 @@ import Layout from '@applique-ui/layout'
 
 import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'
+import { replaceSpacesWithUnderscore } from './utils'
 
 export interface TopNavHoverProps extends BaseProps {
   navTabConfig: {
@@ -76,6 +77,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                   {menusBucket.map((menu) => (
                     <div
                       key={menu.title}
+                      id={replaceSpacesWithUnderscore(menu.title)}
                       className={classnames('hover-item-menu')}
                     >
                       <label className={classnames('hover-item-menu-title')}>
@@ -87,6 +89,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                           <button
                             onClick={() => this.props.handleSubNavItemClick(it)}
                             key={it.title}
+                            id={replaceSpacesWithUnderscore(it.title)}
                             className={classnames('hover-item-menu-link')}
                           >
                             {it.title}
