@@ -54,7 +54,6 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
     } = this.props
 
     const { menus, directs } = navTabConfig
-
     return (
       <div
         className={classnames('hover-container')}
@@ -73,7 +72,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
           <Layout type="stack" gutter="xl">
             {menus.map((menusBucket, index) =>
               menusBucket.length ? (
-                <div key={index}>
+                <div key={`menu_bucket_id${index}`}>
                   {menusBucket.map((menu) => (
                     <div
                       key={menu.title}
