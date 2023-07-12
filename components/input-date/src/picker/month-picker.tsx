@@ -24,25 +24,24 @@ export const MonthPicker = ({
   }
 
   const today = new Date()
-  const monthPicker = []
-  MONTHS_OF_YEAR.forEach((m, index) => {
-    monthPicker.push(
-      <div
-        onClick={() => handleMonthChange(index)}
-        key={index}
-        className={classnames(
-          'picker-text',
-          today.getMonth() == index && today.getFullYear() == year
-            ? 'current'
-            : '',
-          month == index ? 'active' : ''
-        )}
-      >
-        {m}
-      </div>
-    )
-  })
+
   return (
-    <div className={classnames('month-picker-container')}>{monthPicker}</div>
+    <div className={classnames('month-picker-container')}>
+      {MONTHS_OF_YEAR.map((m, index) => (
+        <div
+          onClick={() => handleMonthChange(index)}
+          key={index}
+          className={classnames(
+            'picker-text',
+            today.getMonth() === index && today.getFullYear() === year
+              ? 'current'
+              : '',
+            month === index ? 'active' : ''
+          )}
+        >
+          {m}
+        </div>
+      ))}
+    </div>
   )
 }
