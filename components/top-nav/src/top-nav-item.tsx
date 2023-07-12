@@ -3,11 +3,12 @@ import Icon from '@applique-ui/icon'
 
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
-import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
+import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
 import {
   checkIfDirectLinkOrMenu,
   checkIfNonEmptyMenu,
   getFilteredNavs,
+  replaceSpacesWithUnderscore,
 } from './utils'
 
 export interface TopNavItemProps extends BaseProps {
@@ -63,6 +64,7 @@ export default class TopNavItem extends PureComponent<
     if (checkIfDirectLinkOrMenu(itemData)) {
       return (
         <button
+          id={replaceSpacesWithUnderscore(itemData.label)}
           ref={(ref) => {
             this.tabItemRef = ref
           }}
