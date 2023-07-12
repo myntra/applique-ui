@@ -13,22 +13,22 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 36px;
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid rgba(207, 207, 209, 1);
-  border-radius: 4px;
+  height: size('9x');
+  padding: size('2x');
+  margin-top: size('1x');
+  border: 1px solid color('border-color-gray2');
+  border-radius: size('1x');
   input {
-    border: none !important;
+    border: none;
   }
 }
 
 .date-label-container.from {
-  margin-right: 8px;
+  margin-right: size('2x');
 }
 
 .date-label-container.to {
-  margin-left: 8px;
+  margin-left: size('2x');
 }
 
 .wrapper:hover {
@@ -46,7 +46,7 @@
 }
 
 .wrapper > .pre-icon {
-  margin-right: 8px;
+  margin-right: size('2x');
 }
 
 .date-value-active input {
@@ -64,7 +64,7 @@
 }
 
 .date-label {
-  font-size: 12px;
+  font-size: size('3x');
   font-weight: 500;
-  line-height: 16px;
+  line-height: size('4x');
 }

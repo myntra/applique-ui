@@ -1,6 +1,7 @@
+import React from 'react'
+
 import { UTCDate } from '../input-date-utils'
 import classnames from './month.module.scss'
-import React from 'react'
 import { MONTHS_OF_YEAR } from '../constants'
 
 type MonthPickerProps = {

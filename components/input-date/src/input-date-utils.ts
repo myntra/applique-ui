@@ -81,3 +81,10 @@ export function isDateEqual(a: any, b: any) {
     a.getUTCDate() === b.getUTCDate()
   )
 }
+
+export function calculateDate(month: number, year: number, offset: number) {
+  const date = UTCDate(year, month, 1)
+  date.setMonth(date.getUTCMonth() - offset)
+  date.setFullYear(date.getFullYear() - offset)
+  return date
+}

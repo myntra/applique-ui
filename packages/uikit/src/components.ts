@@ -39,7 +39,7 @@ export { default as SchemaForm } from "@applique-ui/schema-form";
 export { default as Section } from "@applique-ui/section";
 export { default as Stepper } from "@applique-ui/stepper";
 export { default as Table } from "@applique-ui/table";
-export { default as Tabs } from "@applique-ui/tabs";
+export { default as Tabs, Tab } from "@applique-ui/tabs";
 export { default as Text } from "@applique-ui/text";
 export { default as Tooltip } from "@applique-ui/tooltip";
 export { default as TopBar } from "@applique-ui/top-bar";

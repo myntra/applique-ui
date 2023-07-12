@@ -1,7 +1,6 @@
-import { UTCDate } from '../input-date-utils'
+import { calculateDate } from '../input-date-utils'
 import classnames from './month.module.scss'
 import React from 'react'
-import { MONTHS_OF_YEAR } from '../constants'
 
 type YearPickerProps = {
   month: number
@@ -17,9 +16,7 @@ export const YearPicker = ({
   onJump,
 }: YearPickerProps) => {
   function handleYearChange(year) {
-    const date = UTCDate(year, month, 1)
-    date.setMonth(date.getUTCMonth() - offset)
-    date.setFullYear(date.getFullYear() - offset)
+    const date = calculateDate(month, year, offset)
     onJump(date)
   }
 
