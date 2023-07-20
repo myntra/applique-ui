@@ -44,11 +44,11 @@
 
 .picker-text {
   flex-basis: 33.3333%;
-  padding: 8px 0;
-  margin: 4px 0;
+  padding: size('2x') 0;
+  margin: size('1x') 0;
   text-align: center;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: size('1x');
 }
 
 .picker-text:hover {
