@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/fab",
-  "version": "0.0.48",
+  "version": "0.0.49",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",
   "types": "dist/index.d.ts",
