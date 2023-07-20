@@ -195,7 +195,9 @@ export default class InputDate extends PureComponent<
       children,
       wrapperClassName,
       disabled,
+      disabledTime,
       includeTime,
+      label,
       ...props
     } = this.props
     const { isOpen, activeRangeEnd } = this.state
@@ -218,6 +220,7 @@ export default class InputDate extends PureComponent<
             onChange={this.handleDisplayValueChange}
             onRangeFocus={this.handleRangeFocus}
             includeTime={includeTime}
+            label={label}
           />
         )}
         onOpen={disabled ? null : this.handleDropdownOpen}
@@ -235,6 +238,7 @@ export default class InputDate extends PureComponent<
               onChange={this.handleChange}
               active={activeRangeEnd}
               includeTime={includeTime}
+              disabledTime={disabledTime}
               closePicker={this.close}
             />
           </div>

@@ -50,4 +50,9 @@
   .next {
     margin-left: auto;
   }
+
+  .jumper-text {
+    margin: size('4x') size('1x');
+    cursor: pointer;
+  }
 }

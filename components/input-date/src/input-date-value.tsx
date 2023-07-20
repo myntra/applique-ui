@@ -12,6 +12,7 @@ import {
   isStringDateRange,
 } from './input-date-helpers'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import CalendarDay from 'uikit-icons/svgs/CalendarDay'
 
 const MASKS: InputMaskedProps['masks'] = {
   Y: {
@@ -133,9 +134,13 @@ export default class InputDateValue extends PureComponent<
       value: _,
       disabled,
       includeTime,
+      label,
       ...props
     } = this.props
 
+    const labelCompatibility =
+      label ||
+      (range ? { from: 'Start Date', to: 'End Date' } : 'Enter Date Here')
     return (
       <div
         className={classnames('date-value', className, {
@@ -145,83 +150,116 @@ export default class InputDateValue extends PureComponent<
       >
         {isStringDateRange(value, range) ? (
           [
-            <div
-              key="from"
-              className={classnames('wrapper', {
-                active: this.props.active === 'from',
-              })}
-            >
-              <InputMasked
-                includeMaskChars
-                id="from"
-                autoComplete="off"
-                value={value.from}
-                masks={MASKS}
-                pattern={pattern}
-                onClick={this.handleFromFocus}
-                onFocus={this.handleFromFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleFromChange}
-                disabled={disabled}
-              />
-              {this.props.value && (this.props.value as DateRange).from && (
+            <div className={classnames('date-label-container', 'from')}>
+              <label className={classnames('date-label')}>
+                {labelCompatibility.from}
+              </label>
+              <div
+                key="from"
+                className={classnames('wrapper', {
+                  active: this.props.active === 'from',
+                })}
+              >
                 <Icon
-                  className={classnames('icon')}
-                  name={TimesSolid}
-                  title="Clear date"
-                  onClick={this.handleFromClear}
+                  name={CalendarDay}
+                  className={classnames('pre-icon')}
+                  color={disabled ? 'disabled' : 'dark'}
                 />
-              )}
+                <InputMasked
+                  includeMaskChars
+                  id="from"
+                  autoComplete="off"
+                  value={value.from}
+                  masks={MASKS}
+                  pattern={pattern}
+                  onClick={this.handleFromFocus}
+                  onFocus={this.handleFromFocus}
+                  onBlur={this.handleBlur}
+                  onChange={this.handleFromChange}
+                  disabled={disabled}
+                  className={classnames('custom-input')}
+                />
+                {this.props.value && (this.props.value as DateRange).from && (
+                  <Icon
+                    className={classnames('icon')}
+                    name={TimesSolid}
+                    title="Clear date"
+                    onClick={this.handleFromClear}
+                  />
+                )}
+              </div>
             </div>,
-            <div
-              key="to"
-              className={classnames('wrapper', {
-                active: this.props.active === 'to',
-              })}
-            >
-              <InputMasked
-                includeMaskChars
-                id="to"
-                autoComplete="off"
-                value={value.to}
-                masks={MASKS}
-                pattern={pattern}
-                onClick={this.handleToFocus}
-                onFocus={this.handleToFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleToChange}
-                disabled={disabled}
-              />
-              {this.props.value && (this.props.value as DateRange).to && (
+            <div className={classnames('date-label-container', 'to')}>
+              <label className={classnames('date-label')}>
+                {labelCompatibility.to}
+              </label>
+              <div
+                key="to"
+                className={classnames('wrapper', {
+                  active: this.props.active === 'to',
+                })}
+              >
                 <Icon
-                  className={classnames('icon')}
-                  name={TimesSolid}
-                  title="Clear date"
-                  onClick={this.handleToClear}
+                  name={CalendarDay}
+                  className={classnames('pre-icon')}
+                  color={disabled ? 'disabled' : 'dark'}
                 />
-              )}
+                <InputMasked
+                  includeMaskChars
+                  id="to"
+                  autoComplete="off"
+                  value={value.to}
+                  masks={MASKS}
+                  pattern={pattern}
+                  onClick={this.handleToFocus}
+                  onFocus={this.handleToFocus}
+                  onBlur={this.handleBlur}
+                  onChange={this.handleToChange}
+                  disabled={disabled}
+                  className={classnames('custom-input')}
+                />
+                {this.props.value && (this.props.value as DateRange).to && (
+                  <Icon
+                    className={classnames('icon')}
+                    name={TimesSolid}
+                    title="Clear date"
+                    onClick={this.handleToClear}
+                  />
+                )}
+              </div>
             </div>,
           ]
         ) : (
-          <div key="both" className={classnames('wrapper')}>
-            <InputMasked
-              includeMaskChars
-              autoComplete="off"
-              value={value}
-              masks={MASKS}
-              pattern={pattern}
-              onChange={this.handleChange}
-              onBlur={this.handleBlur}
-              disabled={disabled}
-            />
-            {this.props.value && (
+          <div className={classnames('date-label-container')}>
+            <label className={classnames('date-label')}>
+              {labelCompatibility}
+            </label>
+            <div key="both" className={classnames('wrapper')}>
               <Icon
-                className={classnames('icon')}
-                name={TimesSolid}
-                title="Clear date"
-                onClick={this.handleClear}
+                name={CalendarDay}
+                className={classnames('pre-icon')}
+                color={disabled ? 'disabled' : 'dark'}
               />
-            )}
+              <InputMasked
+                includeMaskChars
+                autoComplete="off"
+                value={value}
+                masks={MASKS}
+                pattern={pattern}
+                onChange={this.handleChange}
+                onBlur={this.handleBlur}
+                disabled={disabled}
+                className={classnames('custom-input')}
+              />
+              {this.props.value && (
+                <Icon
+                  className={classnames('icon')}
+                  name={TimesSolid}
+                  title="Clear date"
+                  onClick={this.handleClear}
+                />
+              )}
+            </div>
           </div>
         )}
       </div>

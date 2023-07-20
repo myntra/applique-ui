@@ -2,7 +2,7 @@
 
 .month {
   display: inline-block;
-  padding: size('small') size('4x');
+  padding: size('3x') size('4x');
   background-color: color('white');
 }
 
@@ -13,8 +13,8 @@
 .days {
   display: flex;
   flex-flow: wrap;
-  width: 17.5rem; /* 7 * width of day */
-  height: 15rem; /* 6 * height of day (including margin) */
+  width: 17.5rem;
+  height: 16rem;
   cursor: pointer;
 }
 
@@ -40,4 +40,35 @@
   font-size: font-size('caption');
   color: color('text-dark-medium-emphasis');
   user-select: none;
+}
+
+.picker-text {
+  flex-basis: 33.3333%;
+  padding: size('2x') 0;
+  margin: size('1x') 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: size('1x');
+}
+
+.picker-text:hover {
+  background-color: hsla(240, 50%, 95%, 1);
+}
+
+.picker-text.current {
+  font-weight: 700;
+  color: color('primary');
+  border: 1px solid color('primary');
+}
+
+.picker-text.active {
+  color: hsla(0, 0%, 98%, 0.9);
+  background-color: color('primary');
+}
+
+.month-picker-container,
+.year-picker-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 192px;
 }

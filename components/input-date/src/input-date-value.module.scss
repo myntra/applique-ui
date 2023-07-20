@@ -11,6 +11,31 @@
 
 .wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: size('9x');
+  padding: size('2x');
+  margin-top: size('1x');
+  border: 1px solid color('border-color-gray2');
+  border-radius: size('1x');
+  input {
+    border: none;
+  }
+}
+
+.date-label-container.from {
+  margin-right: size('2x');
+}
+
+.date-label-container.to {
+  margin-left: size('2x');
+}
+
+.wrapper:hover {
+  border-color: color('primary-lighter');
+}
+.wrapper.active {
+  border-color: color('primary');
 }
 
 .wrapper > .icon {
@@ -20,6 +45,10 @@
   cursor: pointer;
 }
 
+.wrapper > .pre-icon {
+  margin-right: size('2x');
+}
+
 .date-value-active input {
   border-bottom: 1px solid color('primary');
 }
@@ -27,4 +56,15 @@
 .active,
 .active input {
   color: color('primary');
+}
+
+.custom-input {
+  display: flex;
+  border: none !important;
+}
+
+.date-label {
+  font-size: size('3x');
+  font-weight: 500;
+  line-height: size('4x');
 }

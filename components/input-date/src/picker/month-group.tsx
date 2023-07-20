@@ -40,7 +40,12 @@ export interface Props extends BaseProps {
  */
 export default class MonthGroup extends Component<
   Props,
-  { focused: null | Date; openToDate: null | Date }
+  {
+    focused: null | Date
+    openToDate: null | Date
+    monthSelector: boolean
+    yearSelector: boolean
+  }
 > {
   static Jumper = Jumper
   static Month = Month
@@ -68,12 +73,28 @@ export default class MonthGroup extends Component<
   state = {
     focused: null,
     openToDate: null,
+    monthSelector: false,
+    yearSelector: false,
   }
 
-  handleJump = (openToDate: Date) => {
-    this.setState({ openToDate })
+  handleJump = (
+    openToDate: Date,
+    closeMonthSelector = true,
+    closeYearSelector = true
+  ) => {
+    this.setState({
+      openToDate,
+      monthSelector: !closeMonthSelector,
+      yearSelector: !closeYearSelector,
+    })
 
     if (this.props.onOpenToDateChange) this.props.onOpenToDateChange(openToDate)
+  }
+  openMonthPicker = () => {
+    this.setState({ monthSelector: true, yearSelector: false })
+  }
+  openYearPicker = () => {
+    this.setState({ yearSelector: true, monthSelector: false })
   }
 
   handleDateFocus = (_: number, focused: Date) => {
@@ -313,14 +334,21 @@ export default class MonthGroup extends Component<
 
   render() {
     const date = this.referenceDate
+    const { monthSelector, yearSelector } = this.state
+    const monthsToDisplay =
+      monthSelector || yearSelector ? 1 : this.props.monthsToDisplay
 
     return (
       <div className={classnames(this.props.className, 'group')}>
-        {range(this.props.monthsToDisplay)
+        {range(monthsToDisplay)
           .map((index) => this.createMonthData(date, index))
           .map(({ key, ...props }, offset) => (
             <Month
               {...props}
+              offset={offset}
+              onJump={this.handleJump}
+              monthSelector={monthSelector}
+              yearSelector={yearSelector}
               key={key}
               onDateFocus={this.handleDateFocus}
               onDateSelect={this.handleDateSelect}
@@ -331,8 +359,16 @@ export default class MonthGroup extends Component<
                 month={props.month}
                 offset={offset}
                 hasPrev={offset === 0}
-                hasNext={offset + 1 === this.props.monthsToDisplay}
+                hasNext={
+                  offset + 1 === this.props.monthsToDisplay ||
+                  monthSelector ||
+                  yearSelector
+                }
+                monthSelector={monthSelector}
+                yearSelector={this.state.yearSelector}
                 onJump={this.handleJump}
+                openMonthPicker={this.openMonthPicker}
+                openYearPicker={this.openYearPicker}
               />
             </Month>
           ))}
