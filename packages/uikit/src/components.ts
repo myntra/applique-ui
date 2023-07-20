@@ -14,7 +14,6 @@ export { default as Form } from "@applique-ui/form";
 export { default as Grid } from "@applique-ui/grid";
 export { default as Icon } from "@applique-ui/icon";
 export { default as Image } from "@applique-ui/image";
-export { default as Input } from "@applique-ui/input";
 export { default as InputCheckbox } from "@applique-ui/input-checkbox";
 export { default as InputDate } from "@applique-ui/input-date";
 export { default as InputFile } from "@applique-ui/input-file";
