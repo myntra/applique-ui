@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/tooltip",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "main": "dist/tooltip.cjs.js",
   "module": "dist/tooltip.esm.js",
   "types": "dist/index.d.ts",
