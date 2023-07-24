@@ -1,8 +1,11 @@
 @import '@accoutrement';
 
+$cell-height: 36px;
+$cell-width: 36px;
+
 .month {
   display: inline-block;
-  padding: size('3x') size('4x');
+  padding: size('2x');
   background-color: color('white');
 }
 
@@ -13,31 +16,21 @@
 .days {
   display: flex;
   flex-flow: wrap;
-  width: 17.5rem;
-  height: 16rem;
+  width: 7 * $cell-width;
   cursor: pointer;
 }
 
 .days > * {
-  flex: 0 0 2.5rem;
-}
-
-/* If month has 4 effective weeks. (Month of Feb starting on Sunday with 28 days.) */
-.days > :nth-of-type(28):last-child {
-  margin-bottom: 5.5rem;
-}
-
-/* If month has 5 effective weeks. (Any month with 30/31 days starting in first half of week.) */
-.days > :nth-of-type(35):last-child {
-  margin-bottom: 2.75rem;
+  flex: 0 0 $cell-width;
 }
 
 .day-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  font-size: font-size('caption');
+  width: $cell-width;
+  height: $cell-height;
+  font-size: font-size('small');
   color: color('text-dark-medium-emphasis');
   user-select: none;
 }

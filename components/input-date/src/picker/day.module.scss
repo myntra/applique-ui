@@ -1,15 +1,17 @@
 @import '@accoutrement';
 
+$cell-size: 36px;
+
 .day {
-  --day-size: 2.5rem;
+  --day-size: #{$cell-size};
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: var(--day-size);
   height: var(--day-size);
-  margin: 1px 0;
-  font-size: 14px;
+  margin: size('1x') size('0.5x');
+  font-size: font-size('body');
   user-select: none;
   border-radius: 4px;
   transition: all 250ms;
@@ -30,10 +32,6 @@
     border: 1px solid;
     border-color: color('primary');
     border-radius: 4px;
-  }
-
-  &.selected.today {
-    color: #fff;
   }
 
   &.selected.start {

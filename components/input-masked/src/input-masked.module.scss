@@ -2,9 +2,11 @@
 @import '@applique-ui/input/style.scss';
 
 .input {
-  width: 100%;
+  @include mixin-input-text-revamp(border, padding('input.text'));
 
-  @include mixin-input-component();
+  input {
+    font-size: inherit;
+  }
 }
 
 .container {
@@ -14,7 +16,7 @@
 .mask {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 18px;
   color: color('text-dark-medium-emphasis');
   pointer-events: none;
   border-color: transparent;

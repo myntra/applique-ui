@@ -1,5 +1,90 @@
 
 <br />
+## 
+
+<Documenter>
+
+```preview
+
+const [val, setVal] = React.useState()
+const [val1, setVal1] = React.useState()
+
+const InfoIcon = ({ children, title }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ color: '#4F47C8', width: '15px', height: '15px' }}
+    >
+        <title>{title}</title>
+        {children}
+    </svg>
+)
+
+return (
+  <>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+      <InputDate range value={val} onChange={setVal} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+      <InputDate value={val1} onChange={setVal1} />
+    </Field>
+  </>
+)
+```
+
+</Documenter>
+
+## States 
+
+<Documenter>
+
+```preview
+
+const [val, setVal] = React.useState(new window.Date())
+const [val1, setVal1] = React.useState(new window.Date())
+
+const InfoIcon = ({ children, title }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ color: '#4F47C8', width: '15px', height: '15px' }}
+    >
+        <title>{title}</title>
+        {children}
+    </svg>
+)
+
+return (
+  <>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+      <InputDate range value={val} onChange={setVal} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} disabled>
+      <InputDate range value={val} onChange={setVal} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} error="Invalid Date">
+      <InputDate range value={val} onChange={setVal} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} success="Success Message">
+      <InputDate range value={val} onChange={setVal} />
+    </Field>
+
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>}>
+      <InputDate value={val1} onChange={setVal1} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} disabled>
+      <InputDate value={val1} onChange={setVal1} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} error="Invalid Date">
+      <InputDate value={val1} onChange={setVal1} />
+    </Field>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} success="Success Message">
+      <InputDate value={val1} onChange={setVal1} />
+    </Field>
+  </>
+)
+```
+
+</Documenter>
+
 
 <Documenter>
 
@@ -8,17 +93,24 @@
 const [val, setVal] = React.useState()
 const [val2, setVal2] = React.useState()
 
-const label = {
-  from: 'Start Date 1',
-  to: 'End Date 1'
-}
+const InfoIcon = ({ children, title }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ color: '#4F47C8', width: '15px', height: '15px' }}
+    >
+        <title>{title}</title>
+        {children}
+    </svg>
+)
 
 const label2 = "Enter Date Here"
 
 return (
   <>
-    <InputDate range value={val} onChange={setVal} label={label} />
-    <InputDate label={label2} value={val2} onChange={setVal2} includeTime disabledTime/>
+    <Field title="Label" fieldInfo={<InfoIcon title="Useful extra information"><InfoCircleSolid/></InfoIcon>} error="Date Range invalid">
+      <InputDate range value={val} onChange={setVal} includeTime />
+    </Field>
+    <InputDate label={label2} value={val2} onChange={setVal2} disabledTime />
   </>
 )
 ```
