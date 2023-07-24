@@ -8,10 +8,8 @@ import { UTCDate } from '../input-date-utils'
 import dayJS from 'dayjs'
 import { MonthPicker } from './month-picker'
 import { YearPicker } from './year-picker'
+import { DAYS_OF_WEEK } from '../constants'
 
-const DAYS_OF_WEEK = 'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'.split(
-  ','
-)
 const CLASS = {
   month: classnames('month'),
   header: classnames('header'),
@@ -139,22 +137,6 @@ export default class Month extends PureComponent<Props> {
         </Day>
       )
 
-    for (let i = dateOnLastOfMonth.getDay() + 1; i < 7; i += 1)
-      days.push(
-        <Day
-          day={0}
-          month={0}
-          year={0}
-          key={'post' + i}
-          selected={isDaySelected(
-            dateOnLastOfMonth.getUTCDate() +
-              1 /* selection ends in next month */
-          )}
-          disabled={isDayDisabled(dateOnLastOfMonth.getUTCDate() + 1)}
-          onFocus={this.handleDateFocus}
-        />
-      )
-
     return (
       <div className={classnames(this.props.className, CLASS.month)}>
         {this.props.children}
@@ -178,7 +160,7 @@ export default class Month extends PureComponent<Props> {
             <div className={CLASS.header}>
               {DAYS_OF_WEEK.map((day) => (
                 <div className={CLASS.day} title={day} key={day}>
-                  {day.charAt(0)}
+                  {day}
                 </div>
               ))}
             </div>

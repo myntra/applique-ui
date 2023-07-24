@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Mask as _Mask, MASKS } from './default-masks'
 import { findLastIndex, memoize } from '@applique-ui/uikit-utils'
+import Input from '@applique-ui/input'
 
 import classnames from './input-masked.module.scss'
 
@@ -336,15 +337,16 @@ export default class InputMasked extends PureComponent<Props> {
 
     return (
       <div className={classnames(this.props.className, 'container')}>
-        <input
+        <Input
           {...this.attrs}
-          className={classnames('input', 'masked-input')}
+          className={classnames('input')}
           value={value}
           onKeyPress={isEditable ? this.handleKeyPress : null}
           onKeyDown={isEditable ? this.handleKeyDown : null}
           onChange={() => {}}
           maxLength={this.maskMetadata.length}
           autoComplete={autoComplete}
+          data-test={'masked-input'}
         />
         <input
           className={classnames('mask', 'input', {
@@ -353,6 +355,7 @@ export default class InputMasked extends PureComponent<Props> {
           value={placeholder}
           readOnly
           tabIndex={-1}
+          data-test={'mask'}
         />
       </div>
     )

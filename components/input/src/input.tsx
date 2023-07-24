@@ -21,6 +21,8 @@ export interface Props extends BaseProps {
   __fieldContext?: FieldContext
   /*** Visually Representing error state of component */
   error?: boolean
+  /*** Visually Representing active state of component */
+  active?: boolean
   /*** Represent the variant of input box */
   variant?: 'bordered' | 'standard'
   /*** Placeholder for input box */
@@ -53,6 +55,7 @@ export default function Input({
   placeholder = ' ',
   error: propError,
   disabled: propDisabled,
+  active,
   ...props
 }: Props) {
   const { error, disabled } = {
@@ -67,15 +70,20 @@ export default function Input({
     <div
       className={classnames(
         'container',
-        { disable: !!disabled },
-        { standard: standard },
-        { bordered: bordered },
-        { filled: !isEmptyValue(props.value) },
-        { error: !!error },
+        {
+          disable: !!disabled,
+          standard: standard,
+          bordered: bordered,
+          filled: !isEmptyValue(props.value),
+          error: !!error,
+          active: !!active,
+        },
         className
       )}
     >
-      {icon && <Icon className={classnames('icon')} name={icon} />}
+      {icon && (
+        <Icon className={classnames('input-adornment-start')} name={icon} />
+      )}
       {adornment && adornmentPosition === 'start' && (
         <div className={classnames('input-adornment', `input-adornment-start`)}>
           {adornment}

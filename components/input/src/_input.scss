@@ -56,6 +56,10 @@
   &.error {
     border-color: color('input.error');
   }
+  &.active,
+  &:active {
+    #{$border-type}: 1px solid color('input.active');
+  }
 }
 
 @mixin mixin-input-label-component {
