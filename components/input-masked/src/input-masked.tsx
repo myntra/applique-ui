@@ -351,6 +351,7 @@ export default class InputMasked extends PureComponent<Props> {
         <input
           className={classnames('mask', 'input', {
             disabled: !isEditable,
+            'with-icon': !!this.props.icon,
           })}
           value={placeholder}
           readOnly

@@ -16,11 +16,15 @@
 .mask {
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 0;
   color: color('text-dark-medium-emphasis');
   pointer-events: none;
   border-color: transparent;
   &.disabled {
     color: color('text-dark-disabled');
+  }
+
+  &.with-icon {
+    margin-left: calc(1em + size('1x'));
   }
 }
