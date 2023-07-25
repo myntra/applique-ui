@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/button",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "main": "dist/button.cjs.js",
   "module": "dist/button.esm.js",
   "types": "dist/index.d.ts",

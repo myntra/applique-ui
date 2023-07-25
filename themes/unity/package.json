@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/theme-unity",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "main": "dist/unity.cjs.js",
   "module": "dist/unity.esm.js",
   "author": "Myntra",

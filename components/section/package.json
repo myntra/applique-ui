@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/section",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "main": "dist/section.cjs.js",
   "module": "dist/section.esm.js",
   "types": "dist/index.d.ts",
