@@ -1,5 +1,4 @@
 import React from 'react'
-
 import classnames from './top-nav.module.scss'
 import TopNavSidebarMenu from './top-nav-sidebar-menu'
 

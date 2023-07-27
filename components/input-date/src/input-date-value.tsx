@@ -12,6 +12,7 @@ import {
   isStringDateRange,
 } from './input-date-helpers'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import CalendarDay from 'uikit-icons/svgs/CalendarDay'
 
 const MASKS: InputMaskedProps['masks'] = {
   Y: {
@@ -133,6 +134,7 @@ export default class InputDateValue extends PureComponent<
       value: _,
       disabled,
       includeTime,
+      __fieldContext,
       ...props
     } = this.props
 
@@ -144,13 +146,8 @@ export default class InputDateValue extends PureComponent<
         {...props}
       >
         {isStringDateRange(value, range) ? (
-          [
-            <div
-              key="from"
-              className={classnames('wrapper', {
-                active: this.props.active === 'from',
-              })}
-            >
+          <>
+            <div className={classnames('wrapper', 'from')}>
               <InputMasked
                 includeMaskChars
                 id="from"
@@ -163,6 +160,9 @@ export default class InputDateValue extends PureComponent<
                 onBlur={this.handleBlur}
                 onChange={this.handleFromChange}
                 disabled={disabled}
+                icon={CalendarDay}
+                __fieldContext={__fieldContext}
+                active={active === 'from'}
               />
               {this.props.value && (this.props.value as DateRange).from && (
                 <Icon
@@ -172,13 +172,8 @@ export default class InputDateValue extends PureComponent<
                   onClick={this.handleFromClear}
                 />
               )}
-            </div>,
-            <div
-              key="to"
-              className={classnames('wrapper', {
-                active: this.props.active === 'to',
-              })}
-            >
+            </div>
+            <div className={classnames('wrapper', 'to')}>
               <InputMasked
                 includeMaskChars
                 id="to"
@@ -191,6 +186,9 @@ export default class InputDateValue extends PureComponent<
                 onBlur={this.handleBlur}
                 onChange={this.handleToChange}
                 disabled={disabled}
+                icon={CalendarDay}
+                __fieldContext={__fieldContext}
+                active={active === 'to'}
               />
               {this.props.value && (this.props.value as DateRange).to && (
                 <Icon
@@ -200,10 +198,10 @@ export default class InputDateValue extends PureComponent<
                   onClick={this.handleToClear}
                 />
               )}
-            </div>,
-          ]
+            </div>
+          </>
         ) : (
-          <div key="both" className={classnames('wrapper')}>
+          <div className={classnames('wrapper')}>
             <InputMasked
               includeMaskChars
               autoComplete="off"
@@ -213,6 +211,9 @@ export default class InputDateValue extends PureComponent<
               onChange={this.handleChange}
               onBlur={this.handleBlur}
               disabled={disabled}
+              icon={CalendarDay}
+              __fieldContext={__fieldContext}
+              active={!!active}
             />
             {this.props.value && (
               <Icon

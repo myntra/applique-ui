@@ -9,22 +9,21 @@
   flex: 1;
 }
 
+.from {
+  margin-right: size('2x');
+}
+
+.to {
+  margin-left: size('2x');
+}
+
 .wrapper {
   position: relative;
 }
 
 .wrapper > .icon {
   position: absolute;
-  right: size('small');
-  bottom: size('2x');
+  top: 10px;
+  right: 4px;
   cursor: pointer;
-}
-
-.date-value-active input {
-  border-bottom: 1px solid color('primary');
-}
-
-.active,
-.active input {
-  color: color('primary');
 }

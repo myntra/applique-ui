@@ -42,6 +42,7 @@ export default class InputDate extends PureComponent<
   static defaultProps = {
     disabled: false,
     range: false,
+    __fieldContext: {},
   }
 
   wrapperRef: RefObject<HTMLDivElement>
@@ -82,6 +83,10 @@ export default class InputDate extends PureComponent<
     if (value && isDateRange(value, range) && value.from && value.to)
       return 'to'
     return 'from'
+  }
+
+  get disabled() {
+    return this.props.disabled || this.props.__fieldContext.disabled
   }
 
   get openToDate() {
@@ -181,8 +186,10 @@ export default class InputDate extends PureComponent<
     }
   }
 
-  handleDropdownOpen = () =>
-    this.setState({ isOpen: true, openToDate: this.openToDate || new Date() })
+  handleDropdownOpen = () => {
+    if (!this.disabled)
+      this.setState({ isOpen: true, openToDate: this.openToDate || new Date() })
+  }
   handleDropdownClose = () => this.close()
 
   close = () =>
@@ -195,7 +202,9 @@ export default class InputDate extends PureComponent<
       children,
       wrapperClassName,
       disabled,
+      disabledTime,
       includeTime,
+      __fieldContext,
       ...props
     } = this.props
     const { isOpen, activeRangeEnd } = this.state
@@ -218,6 +227,7 @@ export default class InputDate extends PureComponent<
             onChange={this.handleDisplayValueChange}
             onRangeFocus={this.handleRangeFocus}
             includeTime={includeTime}
+            __fieldContext={__fieldContext}
           />
         )}
         onOpen={disabled ? null : this.handleDropdownOpen}
@@ -235,6 +245,7 @@ export default class InputDate extends PureComponent<
               onChange={this.handleChange}
               active={activeRangeEnd}
               includeTime={includeTime}
+              disabledTime={disabledTime}
               closePicker={this.close}
             />
           </div>

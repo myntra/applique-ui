@@ -1,8 +1,9 @@
 import React, { PureComponent, MouseEventHandler } from 'react'
 import Layout from '@applique-ui/layout'
 
-import { MENU_TYPES, NAVIGATION_ITEM_L2_INTERFACE } from './config'
+import { NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'
+import { replaceSpacesWithUnderscore } from './utils'
 
 export interface TopNavHoverProps extends BaseProps {
   navTabConfig: {
@@ -53,7 +54,6 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
     } = this.props
 
     const { menus, directs } = navTabConfig
-
     return (
       <div
         className={classnames('hover-container')}
@@ -70,12 +70,13 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
           }}
         >
           <Layout type="stack" gutter="xl">
-            {menus.map((menusBucket) =>
+            {menus.map((menusBucket, index) =>
               menusBucket.length ? (
-                <div>
+                <div key={`menu_bucket_id${index}`}>
                   {menusBucket.map((menu) => (
                     <div
                       key={menu.title}
+                      id={replaceSpacesWithUnderscore(menu.title)}
                       className={classnames('hover-item-menu')}
                     >
                       <label className={classnames('hover-item-menu-title')}>
@@ -87,6 +88,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                           <button
                             onClick={() => this.props.handleSubNavItemClick(it)}
                             key={it.title}
+                            id={replaceSpacesWithUnderscore(it.title)}
                             className={classnames('hover-item-menu-link')}
                           >
                             {it.title}
@@ -98,7 +100,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                 </div>
               ) : null
             )}
-            {directs && directs.length ? (
+            {directs?.length ? (
               <Layout
                 type="row"
                 gutter="xl"

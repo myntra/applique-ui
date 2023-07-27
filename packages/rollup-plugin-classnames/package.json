@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/rollup-plugin-classnames",
-  "version": "0.0.32",
+  "version": "0.0.51",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-classnames.esm.js",
   "types": "dist/index.d.ts",

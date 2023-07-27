@@ -5,7 +5,6 @@ module.exports = {
       files: ['**/*.spec.js'],
       globals: {
         mount: 'readonly',
-        mountShallow: 'readonly',
         testCodeMod: 'readonly',
       },
       rules: {

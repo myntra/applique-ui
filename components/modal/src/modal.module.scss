@@ -28,20 +28,34 @@
   position: relative;
 }
 
-.content {
-  max-height: 80vh;
-  overflow: auto;
-}
-
 .close {
   position: absolute;
-  top: negative(size('3x'));
-  right: negative(size('8x'));
+  top: negative(size('2x'));
+  right: negative(size('4x'));
   padding-right: 0;
   color: text-color('light');
 
   svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+@include media-breakpoint-down('sm') {
+  .drawer-body {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .drawer-close {
+    position: absolute;
+    top: size('1x');
+    right: size('3x');
+    color: color('gray-dark-base');
+
+    svg {
+      width: 12px;
+    }
   }
 }

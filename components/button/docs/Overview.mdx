@@ -17,7 +17,7 @@ return (
       <Button type="tertiary" icon={CheckCircle}>Button Label</Button>
     </Grid.Column>
     <Grid.Column size="one-quarter">
-      <Button type="warning" icon={CheckCircle}>Button Label</Button>
+      <Button type="text" icon={CheckCircle}>Button Label</Button>
     </Grid.Column>
     <Grid.Column size="one-quarter">
       <Button type="primary" icon={EllipsisVSolid}/>
@@ -29,7 +29,7 @@ return (
       <Button type="tertiary" icon={EllipsisVSolid}/>
     </Grid.Column>
     <Grid.Column size="one-quarter">
-      <Button type="warning" icon={EllipsisVSolid}/>
+      <Button type="text" icon={EllipsisVSolid}/>
     </Grid.Column>
 </Grid>
 </>
@@ -59,7 +59,7 @@ States refers to the behavior that reflects the interaction(s) with button as a 
       Tertiary
     </Grid.Column>
     <Grid.Column size="one-fifth">
-      Warning
+      Text/Link
     </Grid.Column>
 
     <Grid.Column size="one-fifth">
@@ -192,17 +192,40 @@ return (
 
 </Documenter>
 
-## Warning Button
+## Text/Link Button
 
-Warning buttons are used to get a final confirmation from a user in the context of a destructive or negative action. These are often used in confirmation modals. 
-
-**Example :  Delete, Remove, Decline**
 
 <Documenter >
 
 ```preview
 return (
-  <Button type="warning">Button Label</Button>
+  <Button type="text">Button Label</Button>
+)
+
+```
+
+</Documenter>
+
+## Coloured Buttons
+
+
+<Documenter >
+
+```preview
+return (
+<>
+<Grid multiline={true} centered gap="large">
+    <Grid.Column size="one-quarter">
+      <Button type="primary" color="green">Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="primary" color="red">Button Label</Button>
+    </Grid.Column>
+    <Grid.Column size="one-quarter">
+      <Button type="primary" color="yellow">Button Label</Button>
+    </Grid.Column>
+</Grid>
+</>
 )
 
 ```
@@ -221,6 +244,21 @@ Icon Only buttons are used when pairing an Icon with an action to control the in
 ```preview
 return (
   <Button icon={EllipsisVSolid} />
+)
+
+```
+
+</Documenter>
+
+## Icon only xs-Button
+
+**Example :  More**
+
+<Documenter >
+
+```preview
+return (
+  <Button size="xs" icon={TimesSolid} />
 )
 
 ```

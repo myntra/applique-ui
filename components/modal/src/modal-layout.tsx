@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
-
+import { MODAL_TYPE } from './constants'
+import Text from '@applique-ui/text'
 import classnames from './modal-layout.module.scss'
 
 export interface Props extends BaseProps {
@@ -19,6 +20,8 @@ export interface Props extends BaseProps {
    * The callback function called on modal is closed.
    */
   onClose?(): void
+
+  type?: 'MOBILE_DRAWER' | 'DESKTOP'
 }
 
 /**
@@ -34,15 +37,24 @@ export default function ModalLayout({
   actions,
   children,
   onClose,
+  type = 'DESKTOP',
 }: Props) {
   return (
-    <div className={classnames('wrapper')}>
-      {title && <h1 className={classnames('title')}>{title}</h1>}
+    <div
+      className={classnames('wrapper', {
+        ['drawer-wrapper']: type === MODAL_TYPE.MOBILE_DRAWER,
+      })}
+    >
+      {title && <Text.H2 className={classnames('title')}>{title}</Text.H2>}
 
-      {children}
+      <div className={classnames('content')}>{children}</div>
 
       {actions && (
-        <div className={classnames('actions')}>
+        <div
+          className={classnames('actions', {
+            ['drawer-actions']: type === MODAL_TYPE.MOBILE_DRAWER,
+          })}
+        >
           {typeof actions === 'function' ? actions(onClose) : actions}
         </div>
       )}

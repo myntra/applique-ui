@@ -21,8 +21,12 @@ export interface Props extends BaseProps {
   __fieldContext?: FieldContext
   /*** Visually Representing error state of component */
   error?: boolean
+  /*** Visually Representing active state of component */
+  active?: boolean
   /*** Represent the variant of input box */
   variant?: 'bordered' | 'standard'
+  /*** Placeholder for input box */
+  placeholder?: string
 }
 type FieldContext = {
   error?: boolean
@@ -48,13 +52,17 @@ export default function Input({
   adornmentPosition,
   __fieldContext = {},
   variant,
+  placeholder = ' ',
+  error: propError,
+  disabled: propDisabled,
+  active,
   ...props
 }: Props) {
   const { error, disabled } = {
-    error: __fieldContext.error || props.error,
-    disabled: __fieldContext.disabled || props.disabled,
+    error: __fieldContext.error || propError,
+    disabled: __fieldContext.disabled || propDisabled,
   }
-  const { placeholder = ' ' } = props
+
   const bordered = variant === 'bordered'
   const standard = variant === 'standard'
 
@@ -62,15 +70,20 @@ export default function Input({
     <div
       className={classnames(
         'container',
-        { disable: !!disabled },
-        { standard: standard },
-        { bordered: bordered },
-        { filled: !isEmptyValue(props.value) },
-        { error: !!error },
+        {
+          disable: !!disabled,
+          standard: standard,
+          bordered: bordered,
+          filled: !isEmptyValue(props.value),
+          error: !!error,
+          active: !!active,
+        },
         className
       )}
     >
-      {icon && <Icon className={classnames('icon')} name={icon} />}
+      {icon && (
+        <Icon className={classnames('input-adornment-start')} name={icon} />
+      )}
       {adornment && adornmentPosition === 'start' && (
         <div className={classnames('input-adornment', `input-adornment-start`)}>
           {adornment}

@@ -7,8 +7,20 @@
 }
 
 .pane {
+  position: relative;
+  display: flex;
+  overflow: auto;
   &.primary {
-    border-bottom: border('tab.pane');
-    border-bottom-color: color('tab.border');
+    .slider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      border-bottom: size('1x') solid color('primary-base-new');
+      transition: left 0.3s, width 0.3s;
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

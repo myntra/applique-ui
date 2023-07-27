@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-
 import InputMasked from './input-masked'
 
 /**
@@ -16,19 +15,9 @@ describe('Masked Input', () => {
     const wrapper = shallow(<InputMasked />)
     expect(wrapper.find('div').children()).toHaveLength(2)
 
-    expect(
-      wrapper
-        .find('div')
-        .childAt(0)
-        .is('.masked-input')
-    ).toBe(true)
+    expect(wrapper.exists('[data-test="masked-input"]')).toBe(true)
 
-    expect(
-      wrapper
-        .find('div')
-        .childAt(1)
-        .is('.mask')
-    ).toBe(true)
+    expect(wrapper.exists('[data-test="mask"]')).toBe(true)
   })
 })
 
@@ -55,7 +44,10 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 0,
       },
     }
-    wrapper.find('.masked-input').simulate('keydown', event)
+    wrapper
+      .find('[data-test="masked-input"]')
+      .first()
+      .simulate('keydown', event)
     expect(handleChange).not.toHaveBeenCalledWith('')
   })
 
@@ -67,7 +59,10 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 0,
       },
     }
-    wrapper.find('.masked-input').simulate('keypress', event)
+    wrapper
+      .find('[data-test="masked-input"]')
+      .first()
+      .simulate('keypress', event)
     expect(handleChange).not.toHaveBeenCalled()
   })
 
@@ -79,7 +74,7 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 0,
       },
     }
-    wrapper.find('.masked-input').simulate('keypress', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keypress', event)
     expect(handleChange).toHaveBeenCalledWith('1')
   })
 
@@ -91,11 +86,11 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 0,
       },
     }
-    wrapper.find('.masked-input').simulate('keypress', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keypress', event)
     event.key = 'Z'
     event.target.value = '2'
     event.target.selectionStart = 1
-    wrapper.find('.masked-input').simulate('keypress', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keypress', event)
     expect(handleChange).toHaveBeenCalledWith('2ZABC')
   })
 
@@ -107,7 +102,7 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 5,
       },
     }
-    wrapper.find('.masked-input').simulate('keydown', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keydown', event)
     expect(handleChange).toHaveBeenCalledWith('2')
   })
 
@@ -119,7 +114,7 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 1,
       },
     }
-    wrapper.find('.masked-input').simulate('keydown', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keydown', event)
     expect(handleChange).toHaveBeenCalledWith('')
   })
 
@@ -131,7 +126,7 @@ describe('Masked Input with mask pattern', () => {
         selectionStart: 0,
       },
     }
-    wrapper.find('.masked-input').simulate('keydown', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keydown', event)
     expect(handleChange).toHaveBeenCalledWith('')
   })
 })
@@ -149,8 +144,12 @@ describe('Masked Input that excludes mask character', () => {
   )
 
   it('should add mask characters to input', () => {
-    expect(wrapper.find('.masked-input').props().value).toEqual('_z2ABCd')
-    expect(wrapper.find('.mask').props().value).toEqual('_z2ABCdx$')
+    expect(
+      wrapper.find('input[data-test="masked-input"]').props().value
+    ).toEqual('_z2ABCd')
+    expect(wrapper.find('input[data-test="mask"]').props().value).toEqual(
+      '_z2ABCdx$'
+    )
   })
 
   it('should call onchange if valid character is entered, without mask', () => {
@@ -161,7 +160,7 @@ describe('Masked Input that excludes mask character', () => {
         selectionStart: 7,
       },
     }
-    wrapper.find('.masked-input').simulate('keypress', event)
+    wrapper.find('input[data-test="masked-input"]').simulate('keypress', event)
     expect(handleChange).toHaveBeenCalledWith('_z2dX')
   })
 
@@ -180,7 +179,7 @@ describe('Masked Input that excludes mask character', () => {
         onChange={handleChange}
       />
     )
-      .find('.masked-input')
+      .find('input[data-test="masked-input"]')
       .simulate('keydown', event)
     expect(handleChange).toHaveBeenCalledWith('')
   })

@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-date",
-  "version": "0.0.32",
+  "version": "0.0.51",
   "main": "dist/input-date.cjs.js",
   "module": "dist/input-date.esm.js",
   "types": "dist/index.d.ts",
@@ -41,6 +41,6 @@
     "@applique-ui/uikit-utils": "0.0.*",
     "date-fns": "^2.0.0-alpha.27",
     "dayjs": "^1.8.14",
-    "uikit-icons": "npm:@myntra/uikit-icons@latest"
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

@@ -81,5 +81,9 @@
     background-color: color('white');
     border-radius: 4px;
     box-shadow: shadow('topnav-hover');
+
+    &-mobile {
+      right: 0;
+    }
   }
 }

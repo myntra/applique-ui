@@ -91,6 +91,7 @@ export default class Time extends PureComponent<
 
   render() {
     const { hour, minute } = this.state
+    const { disabledTime } = this.props
     return (
       <div className={classnames('time__container')}>
         <TimeInput
@@ -99,6 +100,7 @@ export default class Time extends PureComponent<
           onChange={this.handleChange('hour')}
           onBlur={this.handleBlur}
           value={hour}
+          disabled={disabledTime}
         />
         <div className={classnames('time__seperator')}>:</div>
         <TimeInput
@@ -107,6 +109,7 @@ export default class Time extends PureComponent<
           onChange={this.handleChange('minute')}
           onBlur={this.handleBlur}
           value={minute}
+          disabled={disabledTime}
         />
       </div>
     )

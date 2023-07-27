@@ -1,0 +1,4 @@
+export const MODAL_TYPE = {
+  MOBILE_DRAWER: 'MOBILE_DRAWER',
+  DESKTOP: 'DESKTOP',
+}

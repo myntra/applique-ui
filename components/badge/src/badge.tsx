@@ -1,20 +1,23 @@
 import React from 'react'
 
+import Icon, { IconName } from '@applique-ui/icon'
+import Button from '@applique-ui/button'
+import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 import classnames from './badge.module.scss'
 
 interface Props extends BaseProps {
   /** The visual style to convey purpose of the badge. */
-  type?: 'primary' | 'success' | 'warning' | 'error' | 'incomplete'
+  type?: 'info' | 'success' | 'warning' | 'error'
   /** The label text of the badge. */
   children: string
-  /**
-   * Size of the badge
-   */
-  size?: 'small' | 'regular' | 'large'
+
+  size?: 'small' | 'regular'
   /**
    * Variant  of the badge
    */
   variant: 'solid' | 'outlined'
+  icon?: IconName
+  onClose?: () => void
 }
 
 /**
@@ -30,6 +33,8 @@ export default function Badge({
   className,
   size,
   variant,
+  icon,
+  onClose,
   ...props
 }: Props): JSX.Element {
   return (
@@ -37,17 +42,30 @@ export default function Badge({
       {...props}
       className={classnames('badge', size, type, variant, className)}
     >
-      {typeof children === 'string' ? (
-        <span className={classnames('content')}>{children}</span>
-      ) : (
-        children
-      )}
+      <div className={classnames('container')}>
+        {icon && <Icon className={classnames('icon')} name={icon} />}
+        {typeof children === 'string' ? (
+          <span className={classnames('content')}>{children}</span>
+        ) : (
+          children
+        )}
+        {onClose && (
+          <Button
+            className={classnames('close')}
+            type="text"
+            icon={TimesSolid}
+            inheritTextColor
+            onClick={onClose}
+            data-test-id="close"
+          />
+        )}
+      </div>
     </div>
   )
 }
 
 Badge.defaultProps = {
-  type: 'primary',
+  type: 'info',
   size: 'regular',
   variant: 'solid',
 }

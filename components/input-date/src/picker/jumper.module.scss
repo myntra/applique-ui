@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: size('1x');
 
   .select {
     display: inline-block;
@@ -35,7 +36,7 @@
 
   .next,
   .prev {
-    padding: size('2x');
+    padding: size('1x');
     cursor: pointer;
   }
 
@@ -49,5 +50,10 @@
 
   .next {
     margin-left: auto;
+  }
+
+  .jumper-text {
+    margin: size('0x') size('1x');
+    cursor: pointer;
   }
 }

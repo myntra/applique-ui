@@ -24,22 +24,28 @@ export default function TimeInput({
   onChange,
   onBlur,
   onDown,
+  disabled,
   ...props
 }: Props) {
   return (
     <div className={classnames('time-input')}>
-      <div className={classnames('time-input__up')} onClick={onUp}>
-        <Icon name={ChevronUpSolid} />
-      </div>
+      {!disabled && (
+        <div className={classnames('time-input__up')} onClick={onUp}>
+          <Icon name={ChevronUpSolid} />
+        </div>
+      )}
       <InputNumber
+        disabled={disabled}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
         className={classnames('time-input__text')}
       />
-      <div className={classnames('time-input__down')} onClick={onDown}>
-        <Icon name={ChevronDownSolid} />
-      </div>
+      {!disabled && (
+        <div className={classnames('time-input__down')} onClick={onDown}>
+          <Icon name={ChevronDownSolid} />
+        </div>
+      )}
     </div>
   )
 }

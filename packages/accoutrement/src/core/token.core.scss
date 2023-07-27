@@ -1,5 +1,5 @@
 @function token($map, $key, $default: null) {
-  $value: get-token($map, $key);
+  $value: get($map, $key);
 
   @if ($value == $key) {
     @return $default;

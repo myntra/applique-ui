@@ -50,7 +50,7 @@ $types: (
     width: size('3x');
     height: size('3x');
     margin-right: padding-left('banner');
-    transform: scale(1.5);
+    transform: #{scale }(1.5);
     transform-origin: 0 -2px;
   }
 
@@ -65,7 +65,7 @@ $types: (
   }
 
   .close {
-    margin-top: negative(size('3x'));
+    margin-top: size('1x');
     svg {
       width: size('5x');
       height: size('5x');

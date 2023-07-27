@@ -5,6 +5,7 @@ export interface Props extends BaseProps {
    * Render fallback content in case of error.
    */
   renderFallback?(props: { hasError: boolean; error: Error; info: string })
+  onErrorCatch?(props: { error: Error })
 }
 
 /**
@@ -30,6 +31,7 @@ export default class ErrorBoundary extends Component<
 
   componentDidCatch(error, info) {
     this.setState({ hasError: true, error, info })
+    this.props.onErrorCatch && this.props.onErrorCatch(error)
   }
 
   render() {

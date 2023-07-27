@@ -3,7 +3,13 @@ import Icon from '@applique-ui/icon'
 
 import classnames from './top-nav-item.module.scss'
 import TopNavHover from './top-nav-hover'
-import { NAVIGATION_ITEM_L1_INTERFACE, MENU_TYPES } from './config'
+import { NAVIGATION_ITEM_L1_INTERFACE } from './config'
+import {
+  checkIfDirectLinkOrMenu,
+  checkIfNonEmptyMenu,
+  getFilteredNavs,
+  replaceSpacesWithUnderscore,
+} from './utils'
 
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -13,38 +19,6 @@ export interface TopNavItemProps extends BaseProps {
 
 interface TopNavItemState {
   isHovering: boolean
-}
-
-function getFilteredNavs(config) {
-  return config.reduce(
-    (aggregate, currentValue) => {
-      switch (currentValue.type) {
-        case MENU_TYPES.MENU:
-          if (
-            currentValue.config.length &&
-            currentValue.hoverMenuColumnBucket >= 0 &&
-            currentValue.hoverMenuColumnBucket < 4
-          ) {
-            const menus = aggregate.menus
-            menus[currentValue.hoverMenuColumnBucket].push(currentValue)
-            return { ...aggregate, menus }
-          } else {
-            return aggregate
-          }
-        case MENU_TYPES.MENU_DIRECT_LINK:
-          return {
-            ...aggregate,
-            directs: [...aggregate.directs, currentValue],
-          }
-        default:
-          return aggregate
-      }
-    },
-    {
-      menus: new Array([], [], [], []),
-      directs: [],
-    }
-  )
 }
 
 /**
@@ -84,16 +58,13 @@ export default class TopNavItem extends PureComponent<
 
   render() {
     const { itemData, isActive } = this.props
-    const isDirectLink = itemData.routingInfo && itemData.noHover
     const isMenu = Array.isArray(itemData.config) && itemData.config.length
     const { menus = [[], [], [], []], directs = [] } =
       isMenu && getFilteredNavs(itemData.config)
-    const isNonEmptyMenu =
-      isMenu && (menus.filter((nav) => nav.length).length || directs.length)
-
-    if (isDirectLink || isNonEmptyMenu) {
+    if (checkIfDirectLinkOrMenu(itemData)) {
       return (
         <button
+          id={replaceSpacesWithUnderscore(itemData.label)}
           ref={(ref) => {
             this.tabItemRef = ref
           }}
@@ -116,7 +87,7 @@ export default class TopNavItem extends PureComponent<
             />
           )}
           {itemData.label}
-          {this.state.isHovering && isNonEmptyMenu && (
+          {this.state.isHovering && checkIfNonEmptyMenu(itemData) && (
             <TopNavHover
               navTabConfig={{ menus, directs }}
               disableHover={this.disableHover}
