@@ -24,6 +24,11 @@ export interface Props<T = any> extends BaseProps {
    * __NOTE:__ Make sure to render `children` and use `Table.TR` as root element.
    */
   children(props: RowRendererProps): JSX.Element
+
+  /**
+   * Show row as seleted.
+   */
+  isSelected?: boolean
 }
 
 /**

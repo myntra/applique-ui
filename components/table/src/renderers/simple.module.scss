@@ -21,11 +21,22 @@
 
     th {
       @include padding('table.th');
+      @include typography('th');
 
       position: sticky;
       top: var(--sticky-top-offset, 0);
+      line-height: 1.15;
       text-align: left;
+      text-transform: capitalize;
       background-color: color('table.head');
+
+      &:hover {
+        background-color: color('table.hover');
+      }
+
+      &:active {
+        background-color: color('table.active');
+      }
 
       &.has-sub-columns {
         text-align: center;
@@ -41,9 +52,17 @@
     td {
       @include padding('table.td');
       @include border-bottom('table.tr');
+      @include typography('body');
 
+      line-height: 1.15;
       background-color: color('table.body');
       border-color: color('table.border');
+    }
+
+    tr {
+      .selected {
+        background-color: color('table.active');
+      }
     }
 
     tr:hover {

@@ -38,6 +38,7 @@ export default class SimpleTable extends PureComponent<
     render({ rowId, rowIndex, item, ...props }) {
       return <tr key={rowId} {...props} />
     },
+    isSelected: false,
   }
 
   warpIfNeeded(
@@ -104,6 +105,7 @@ export default class SimpleTable extends PureComponent<
       isEditing,
       ...props
     } = this.props
+
     const maxDepth = config.columnsByLevel.length
     const { editing } = this.state
 
@@ -177,43 +179,47 @@ export default class SimpleTable extends PureComponent<
               <tbody>
                 {data.map((item, rowId) =>
                   React.cloneElement(
-                    this.getRowRenderer(rowId).render({
-                      rowIndex: rowId,
-                      rowId,
-                      item,
-                      children: config.cells.map((column, columnIndex) => {
-                        const cellProps = {
-                          className: classnames({
-                            fixed: typeof column.fixed !== 'undefined',
-                            end: column.fixed === FixedPosition.END,
-                          }),
-                          style: {
-                            '--sticky-left-offset':
-                              typeof column.fixed !== 'undefined'
-                                ? this.state.offsets[columnIndex] + 'px'
-                                : 'unset',
-                            width: column.width,
-                            // @ts-ignore
-                            textAlign: `${column.align}`,
-                          },
-                        }
+                    (() => {
+                      const { render, isSelected } = this.getRowRenderer(rowId)
+                      return render({
+                        rowIndex: rowId,
+                        rowId,
+                        item,
+                        children: config.cells.map((column, columnIndex) => {
+                          const cellProps = {
+                            className: classnames({
+                              selected: isSelected || false,
+                              fixed: typeof column.fixed !== 'undefined',
+                              end: column.fixed === FixedPosition.END,
+                            }),
+                            style: {
+                              '--sticky-left-offset':
+                                typeof column.fixed !== 'undefined'
+                                  ? this.state.offsets[columnIndex] + 'px'
+                                  : 'unset',
+                              width: column.width,
+                              // @ts-ignore
+                              textAlign: `${column.align}`,
+                            },
+                          }
 
-                        return this.warpIfNeeded(
-                          column.renderCell({
-                            ...cellProps,
-                            index: rowId,
-                            rowId,
-                            columnId: column.id,
-                            item,
-                            data: item,
-                            value: column.accessor(item, rowId),
-                          }),
-                          cellProps,
-                          column,
-                          rowId
-                        )
-                      }),
-                    }) as any,
+                          return this.warpIfNeeded(
+                            column.renderCell({
+                              ...cellProps,
+                              index: rowId,
+                              rowId,
+                              columnId: column.id,
+                              item,
+                              data: item,
+                              value: column.accessor(item, rowId),
+                            }),
+                            cellProps,
+                            column,
+                            rowId
+                          )
+                        }),
+                      })
+                    })() as any,
                     { key: rowId }
                   )
                 )}

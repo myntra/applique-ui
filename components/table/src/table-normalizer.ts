@@ -215,7 +215,7 @@ function processColumn(
 
 function processRow(node: ReactElement<RowType>): I.Row {
   const { props } = node
-  const { selector, children, renderBody, editing } = props
+  const { selector, children, renderBody, editing, isSelected } = props
 
   return {
     editing,
@@ -225,6 +225,7 @@ function processRow(node: ReactElement<RowType>): I.Row {
         : selector || (() => true),
     render: children,
     renderBody,
+    isSelected,
   }
 }
 

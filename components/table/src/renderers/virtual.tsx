@@ -422,7 +422,11 @@ export default class VirtualTable extends PureComponent<Props, State> {
                             start.length ? (
                               <div
                                 key="start"
-                                className={classnames('fixed', 'show')}
+                                className={classnames({
+                                  fixed: true,
+                                  show: true,
+                                  selected: row.isSelected,
+                                })}
                                 style={{ left: scrollLeft }}
                               >
                                 {start}
@@ -460,7 +464,10 @@ export default class VirtualTable extends PureComponent<Props, State> {
 
                         return (
                           <div
-                            className={classnames('td')}
+                            className={classnames({
+                              td: true,
+                              selected: row.isSelected,
+                            })}
                             key={cell.id}
                             data-row-index={rowIndex}
                             data-column-index={columnIndex}
