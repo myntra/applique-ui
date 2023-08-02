@@ -7,6 +7,10 @@ export const ICONS: Record<string, IconName> = {
   error: ExclamationTriangleSolid,
   warning: ExclamationCircleSolid,
   success: CheckCircleSolid,
+  info: ExclamationCircleSolid,
 }
-
+export interface Link {
+  href: string
+  displayText: string
+}
 export const RE_BACKWARD_COMPAT = /^(primary|info)$/

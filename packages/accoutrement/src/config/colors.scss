@@ -1,9 +1,10 @@
 // - Solid Colors
 // https://zpl.io/a8w1k0d
-$-tokens-colors-primary: hsl(244, 54%, 53%) !default;
-$-tokens-colors-success: hsl(145, 64%, 38%) !default;
-$-tokens-colors-warning: hsla(40, 90%, 60%) !default;
-$-tokens-colors-danger: hsl(0, 54%, 53%) !default;
+$-tokens-colors-primary: hsla(252, 63%, 51%, 1) !default;
+$-tokens-colors-info: hsla(216, 100%, 43%, 1) !default;
+$-tokens-colors-success: hsla(155, 65%, 38%, 1) !default;
+$-tokens-colors-warning: hsla(30, 93%, 44%, 1) !default;
+$-tokens-colors-danger: hsla(7, 76%, 55%, 1) !default;
 $-tokens-colors-gray: hsl(0, 0%, 90%) !default;
 $-tokens-colors-brown: hsl(26, 40%, 54%) !default;
 $-tokens-colors-pink: hsl(346, 100%, 62%) !default;
@@ -13,6 +14,7 @@ $-tokens-colors-warning-no-fill: hsla(40, 59%, 48%, 1) !default;
 
 $brand-colors: (
   'primary': $-tokens-colors-primary,
+  'info': $-tokens-colors-info,
   'success': $-tokens-colors-success,
   'warning': $-tokens-colors-warning,
   'danger': $-tokens-colors-danger,

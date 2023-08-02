@@ -3,14 +3,15 @@ import Icon, { IconName } from '@applique-ui/icon'
 import Button from '@applique-ui/button'
 import classnames from './banner.module.scss'
 import Actionable from './actionable'
-import { ICONS, RE_BACKWARD_COMPAT } from './constants'
+import { ICONS, Link, RE_BACKWARD_COMPAT } from './constants'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 
 export interface Props extends BaseProps {
   /**
    * The visual style to convey purpose of the alert.
    */
-  type?: 'error' | 'warning' | 'success'
+  color?: 'error' | 'warning' | 'success' | 'info'
   /**
    *
    * _TIP:_ Set `icon` to `null` to remove icon.
@@ -31,9 +32,10 @@ export interface Props extends BaseProps {
    */
   children: string | JSX.Element
   /**
-   * Only border based Alert
+   * If you need to add link to the banner
    */
-  noFill: boolean
+
+  link?: Link
 }
 
 // Design: https://zpl.io/bA7ZRWp
@@ -54,44 +56,58 @@ export default class Banner extends PureComponent<Props> {
   static Actionable = Actionable
 
   static defaultProps = {
-    type: 'error',
+    color: 'info',
   }
 
   render() {
     const {
       className,
-      type,
       icon,
       title,
       solid,
       onClose,
       noFill,
       children,
+      link,
+      color,
       ...props
     } = this.props
 
-    const typeName = RE_BACKWARD_COMPAT.test(type) ? 'success' : type
+    const typeName = color
     const heading = title || children
     const body = title ? children : null
-    const iconName = icon === undefined ? ICONS[type] : icon
+    const iconName = icon === undefined ? ICONS[color] : icon
 
     return (
       <div
         {...props}
-        className={classnames('container', typeName, className, {
-          'no-fill': noFill,
-        })}
+        className={classnames('container', typeName, className)}
         role="alert"
       >
         {iconName ? (
           <Icon
-            className={classnames('icon', { top: !!body })}
+            className={classnames(`icon-${typeName}`, { top: !!body })}
             name={iconName}
           />
         ) : null}
         <div className={classnames('content')}>
           <div className={classnames('title')}>{heading}</div>
-          {body ? <div className={classnames('body')}>{body}</div> : null}
+          <div className={classnames('fullBody')}>
+            {body ? <div className={classnames('body')}>{body}</div> : null}
+            {link?.href && (
+              <a
+                href={link.href}
+                target="_blank"
+                className={classnames('text-link')}
+              >
+                {link.displayText}{' '}
+                <Icon
+                  className={classnames('icon-link')}
+                  name={ChevronRightSolid}
+                />
+              </a>
+            )}
+          </div>
         </div>
 
         {onClose && (

@@ -1,7 +1,7 @@
 @import '@accoutrement';
 
 $types: (
-  'primary': 'primary',
+  'info': 'info',
   'success': 'success',
   'error': 'danger',
   'warning': 'warning',
@@ -10,24 +10,17 @@ $types: (
 @mixin mixin-banner {
   @each $name, $color in $types {
     &.#{$name} {
-      background-color: color('#{$color}');
-      border-color: color('#{$color}');
-
-      @if $name == 'warning' {
-        color: text-color('warning-text');
-      } @else {
-        color: text-color('light');
-      }
-      &.no-fill {
-        @if $name == 'warning' {
-          color: color('warning-no-fill');
-          border-color: color('warning-no-fill');
-        } @else {
-          color: color('#{$color}');
-        }
-
-        background-color: transparent;
-      }
+      color: var(--bannerTextColor, #000);
+      background-color: var(--bannerColor, color('#{$color}-light-4'));
+      border-color: var(--bannerColor, color('#{$color}-light-4'));
+    }
+    .icon-#{$name} {
+      width: size('3x');
+      height: size('3x');
+      margin-right: padding-left('banner');
+      color: var(--bannerIconColor, color('#{$color}-dark-1'));
+      transform: #{scale }(1.5);
+      transform-origin: 0 -2px;
     }
   }
 }
@@ -46,14 +39,6 @@ $types: (
     flex: 1;
   }
 
-  .icon {
-    width: size('3x');
-    height: size('3x');
-    margin-right: padding-left('banner');
-    transform: #{scale }(1.5);
-    transform-origin: 0 -2px;
-  }
-
   .title {
     @include typography('h3');
   }
@@ -62,6 +47,21 @@ $types: (
     @include typography('body');
 
     margin-top: margin-top('banner.body');
+  }
+
+  .fullBody {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .text-link {
+    text-decoration: none;
+  }
+
+  .icon-link {
+    margin-top: size('0.5x');
+    font-size: 14px;
   }
 
   .close {
