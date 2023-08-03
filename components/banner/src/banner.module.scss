@@ -11,14 +11,14 @@ $types: (
   @each $name, $color in $types {
     &.#{$name} {
       color: var(--bannerTextColor, #000);
-      background-color: var(--bannerColor, color('#{$color}-light-4'));
-      border-color: var(--bannerColor, color('#{$color}-light-4'));
+      background-color: var(--bannerColor, color('#{$color}-10'));
+      border-color: var(--bannerColor, color('#{$color}-10'));
     }
     .icon-#{$name} {
       width: size('3x');
       height: size('3x');
       margin-right: padding-left('banner');
-      color: var(--bannerIconColor, color('#{$color}-dark-1'));
+      color: var(--bannerIconColor, color('#{$color}-140'));
       transform: #{scale }(1.5);
       transform-origin: 0 -2px;
     }

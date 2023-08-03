@@ -5,6 +5,8 @@ $-tokens-colors-info: hsla(216, 100%, 43%, 1) !default;
 $-tokens-colors-success: hsla(155, 65%, 38%, 1) !default;
 $-tokens-colors-warning: hsla(30, 93%, 44%, 1) !default;
 $-tokens-colors-danger: hsla(7, 76%, 55%, 1) !default;
+$-tokens-colors-tiering: hsla(38, 48%, 51%, 1) !default;
+$-tokens-colors-background: hsla(229, 21%, 19%, 1) !default;
 $-tokens-colors-gray: hsl(0, 0%, 90%) !default;
 $-tokens-colors-brown: hsl(26, 40%, 54%) !default;
 $-tokens-colors-pink: hsl(346, 100%, 62%) !default;
@@ -21,6 +23,8 @@ $brand-colors: (
   'gray': $-tokens-colors-gray,
   'brown': $-tokens-colors-brown,
   'pink': $-tokens-colors-pink,
+  'tiering': $-tokens-colors-tiering,
+  'background': $-tokens-colors-background,
 );
 
 $base-colors: (
@@ -28,6 +32,62 @@ $base-colors: (
   'white': #fff,
 );
 $token-colors-revamp: (
+  'success-10': #dffcf0,
+  'success-20': #baf3db,
+  'success-40': #7ee2b8,
+  'success-60': #4bce97,
+  'success-80': #2abb7f,
+  'success-140': #1f845a,
+  'success-180': #216e4e,
+  'success-200': #164b35,
+  'danger-10': #fcedeb,
+  'danger-20': #f9dbd7,
+  'danger-40': #f4b6ae,
+  'danger-60': #ee9286,
+  'danger-80': #e96d5d,
+  'danger-140': #b63a2a,
+  'danger-180': #882c20,
+  'danger-200': #5b1d15,
+  'warning-10': #fff4e5,
+  'warning-20': #ffe2bd,
+  'warning-40': #fec57b,
+  'warning-60': #faa53d,
+  'warning-80': #f18d13,
+  'warning-140': #b65c02,
+  'warning-180': #974f0c,
+  'warning-200': #5f3811,
+  'primary-10': #f0ecff,
+  'primary-20': #e0d9ff,
+  'primary-40': #c1b2ff,
+  'primary-60': #a28cff,
+  'primary-80': #8465ff,
+  'primary-140': #4228a6,
+  'primary-180': #311e7d,
+  'primary-200': #211453,
+  'info-10': #e5eefb,
+  'info-20': #ccddf7,
+  'info-40': #99bcf0,
+  'info-60': #669ae8,
+  'info-80': #3379e1,
+  'info-140': #0046ae,
+  'info-180': #003482,
+  'info-200': #002357,
+  'tiering-10': #f8f4ec,
+  'tiering-20': #ebdec7,
+  'tiering-40': #dec9a3,
+  'tiering-60': #d1b37e,
+  'tiering-80': #c49d59,
+  'tiering-140': #af8846,
+  'tiering-180': #917444,
+  'tiering-200': #735f43,
+  'background-10': #f4f4f5,
+  'background-20': #e9e9eb,
+  'background-30': #d4d5d8,
+  'background-40': #bebfc5,
+  'background-50': #93959e,
+  'background-60': #686b77,
+  'background-70': #3d4152,
+  'background-90': #171a27,
   'primary-light-new': #cac8ee,
   'gray-base-new': #cfcfd1,
   'gray-base-new-1': #86878b,
