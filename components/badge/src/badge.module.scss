@@ -11,32 +11,32 @@
   @include typography('paragraph');
 
   $types: (
-    'info': 'info-base-light',
-    'success': 'success-base-light',
-    'error': 'danger-base-light',
-    'warning': 'warning-base-light',
-    'incomplete': 'primary-base-light-2',
+    'info': 'info',
+    'success': 'success',
+    'error': 'danger',
+    'warning': 'warning',
+    'incomplete': 'background',
   );
 
   $fontColor: (
-    'info': 'info',
-    'success': 'success',
-    'error': 'danger-new',
-    'warning': 'warning-no-fill',
-    'incomplete': 'gray-dark-new',
+    'info': 'info-140',
+    'success': 'success-140',
+    'error': 'danger-140',
+    'warning': 'warning-140',
+    'incomplete': 'background-70',
   );
 
   @each $name, $color in $types {
     &.#{$name} {
       &.solid {
         color: color(map-get($fontColor, $name));
-        background-color: color('#{$color}');
-        border-color: color('#{$color}');
+        background-color: color('#{$color}-10');
+        border-color: color('#{$color}-10');
       }
 
       &.outlined {
         color: color(map-get($fontColor, $name));
-        background-color: color('#{$color}');
+        background-color: color('#{$color}-10');
         border-color: color(map-get($fontColor, $name));
       }
     }

@@ -10,15 +10,15 @@ $types: (
 @mixin mixin-banner {
   @each $name, $color in $types {
     &.#{$name} {
-      color: var(--bannerTextColor, #000);
-      background-color: var(--bannerColor, color('#{$color}-10'));
-      border-color: var(--bannerColor, color('#{$color}-10'));
+      color: #000;
+      background-color: color('#{$color}-10');
+      border-color: color('#{$color}-10');
     }
     .icon-#{$name} {
       width: size('3x');
       height: size('3x');
       margin-right: padding-left('banner');
-      color: var(--bannerIconColor, color('#{$color}-140'));
+      color: color('#{$color}-140');
       transform: #{scale }(1.5);
       transform-origin: 0 -2px;
     }
@@ -45,18 +45,13 @@ $types: (
 
   .body {
     @include typography('body');
+    display: inline;
 
     margin-top: margin-top('banner.body');
   }
 
-  .fullBody {
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
-  }
-
-  .text-link {
-    text-decoration: none;
+  .link {
+    padding-left: 4px;
   }
 
   .icon-link {

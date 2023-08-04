@@ -92,22 +92,18 @@ export default class Banner extends PureComponent<Props> {
         ) : null}
         <div className={classnames('content')}>
           <div className={classnames('title')}>{heading}</div>
-          <div className={classnames('fullBody')}>
-            {body ? <div className={classnames('body')}>{body}</div> : null}
-            {link?.href && (
-              <a
-                href={link.href}
-                target="_blank"
-                className={classnames('text-link')}
-              >
-                {link.displayText}{' '}
-                <Icon
-                  className={classnames('icon-link')}
-                  name={ChevronRightSolid}
-                />
-              </a>
-            )}
-          </div>
+          {body ? <div className={classnames('body')}>{body}</div> : null}
+          {link?.href && (
+            <Button
+              type="link"
+              target="_blank"
+              href={link.href}
+              secondaryIcon={ChevronRightSolid}
+              className={classnames('link')}
+            >
+              {link.displayText}
+            </Button>
+          )}
         </div>
 
         {onClose && (
