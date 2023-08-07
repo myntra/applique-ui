@@ -352,6 +352,8 @@ export default class VirtualList extends PureComponent<
       renderChild(index)
     }
 
+    const containerHeight = Math.min(this.manager.size, itemCount * this.sizes.rowHeight())
+
     return renderScroller({
       ...props,
       className,
@@ -381,7 +383,7 @@ export default class VirtualList extends PureComponent<
           : {
               overflow: 'hidden',
               position: 'relative',
-              height: this.manager.size + 'px',
+              height: containerHeight + 'px',
             },
         children,
       }),

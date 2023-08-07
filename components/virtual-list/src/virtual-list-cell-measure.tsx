@@ -47,9 +47,9 @@ export default class VirtualListCellMeasure extends Component<Props> {
     const currentValue = cache.get(row, column)
     const newValue = {
       height:
-        (entry.target as HTMLElement).offsetHeight || entry.contentRect.height,
+        (entry.target as HTMLElement).offsetHeight || cache.rowHeight(),
       width:
-        (entry.target as HTMLElement).offsetWidth || entry.contentRect.width,
+        (entry.target as HTMLElement).offsetWidth || cache.columnWidth(),
     }
 
     if (
@@ -65,8 +65,9 @@ export default class VirtualListCellMeasure extends Component<Props> {
         },
         (entry.target as HTMLElement).dataset
       )
+      cache.configure(newValue.height, newValue.width);
     }
-
+    
     cache.set(row, column, newValue)
   }
 

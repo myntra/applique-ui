@@ -274,8 +274,8 @@ export interface MeasureCache {
   configure(height: number, width: number): void
 
   hasMax(row: number, column?: number): boolean
-  rowHeight(row: number): number
-  columnWidth(column: number): number
+  rowHeight(row?: number): number
+  columnWidth(column?: number): number
 }
 
 export function createMeasureCache(
@@ -286,6 +286,8 @@ export function createMeasureCache(
   let store = {}
   let rowHeights = {}
   let columnWidths = {}
+  let itemHeight = estimatedHeight
+  let itemWidth = estimatedWidth
   const cache: MeasureCache = {
     reset() {
       store = {}
@@ -293,8 +295,8 @@ export function createMeasureCache(
       columnWidths = {}
     },
     configure(height, width) {
-      estimatedHeight = height
-      estimatedWidth = width
+      itemHeight = height
+      itemWidth = width
     },
     has(row, column = 0) {
       return key(row, column) in store
@@ -343,6 +345,8 @@ export function createMeasureCache(
       }
     },
     rowHeight(row) {
+      if(!row) return itemHeight
+
       if (row in rowHeights) {
         return rowHeights[row].value
       }
@@ -350,6 +354,8 @@ export function createMeasureCache(
       return estimatedHeight
     },
     columnWidth(column) {
+      if(!column) return itemWidth
+
       if (column in columnWidths) {
         return columnWidths[column].value
       }
