@@ -11,6 +11,11 @@ export interface Props extends BaseProps {
   /**
    * The visual style to convey purpose of the alert.
    */
+  /**
+   * @deprecated
+   */
+  type?: 'error' | 'warning' | 'success' | 'info'
+
   color?: 'error' | 'warning' | 'success' | 'info'
   /**
    *
@@ -55,10 +60,6 @@ export interface Props extends BaseProps {
 export default class Banner extends PureComponent<Props> {
   static Actionable = Actionable
 
-  static defaultProps = {
-    color: 'info',
-  }
-
   render() {
     const {
       className,
@@ -70,13 +71,14 @@ export default class Banner extends PureComponent<Props> {
       children,
       link,
       color,
+      type,
       ...props
     } = this.props
 
-    const typeName = color
+    const typeName = color || type || 'info'
     const heading = title || children
     const body = title ? children : null
-    const iconName = icon === undefined ? ICONS[color] : icon
+    const iconName = icon === undefined ? ICONS[typeName] : icon
 
     return (
       <div

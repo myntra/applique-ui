@@ -10,6 +10,10 @@ import { ICONS, RE_BACKWARD_COMPAT } from './constants'
 
 export interface Props extends BaseProps {
   data?: {
+    /**
+     * @deprecated
+     */
+    type?: 'error' | 'warning' | 'success' | 'info'
     color?: 'error' | 'warning' | 'success' | 'info'
     icon?: IconName
     header?: string
@@ -52,6 +56,7 @@ export default class Actionable extends PureComponent<Props> {
 
     const {
       color,
+      type,
       icon,
       header,
       subHeader,
@@ -63,7 +68,7 @@ export default class Actionable extends PureComponent<Props> {
       onClose,
       onActionClick,
     } = data
-    const typeName = color || 'error'
+    const typeName = color || type || 'error'
     const iconName = icon === undefined ? ICONS[typeName] : icon
 
     return (
