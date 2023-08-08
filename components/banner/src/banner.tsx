@@ -60,6 +60,17 @@ export interface Props extends BaseProps {
 export default class Banner extends PureComponent<Props> {
   static Actionable = Actionable
 
+  static propTypes = {
+    __$validation({ link }) {
+      if (link?.href && !link?.displayText) {
+        throw new Error(`link should also have a 'displayText'`)
+      }
+      if (!link?.href && link?.displayText) {
+        throw new Error(`link should also have a 'href'`)
+      }
+    },
+  }
+
   render() {
     const {
       className,
@@ -75,7 +86,10 @@ export default class Banner extends PureComponent<Props> {
       ...props
     } = this.props
 
-    const typeName = color || type || 'info'
+    const typeName =
+      RE_BACKWARD_COMPAT.test(color) || RE_BACKWARD_COMPAT.test(type)
+        ? 'info'
+        : color || type || 'info'
     const heading = title || children
     const body = title ? children : null
     const iconName = icon === undefined ? ICONS[typeName] : icon
@@ -88,7 +102,7 @@ export default class Banner extends PureComponent<Props> {
       >
         {iconName ? (
           <Icon
-            className={classnames(`icon-${typeName}`, { top: !!body })}
+            className={classnames(`icon-${typeName}`, 'icon', { top: !!body })}
             name={iconName}
           />
         ) : null}
@@ -102,6 +116,7 @@ export default class Banner extends PureComponent<Props> {
               href={link.href}
               secondaryIcon={ChevronRightSolid}
               className={classnames('link')}
+              data-test-id="link"
             >
               {link.displayText}
             </Button>

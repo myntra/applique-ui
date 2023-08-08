@@ -41,9 +41,9 @@ export default class Actionable extends PureComponent<Props> {
     _validate({ data }) {
       if (!data) {
         throw new Error(`Data prop not found.`)
-      } else if (!data.type) {
+      } else if (!data.color) {
         throw new Error(
-          `Type not found in data, default will be taken as error.`
+          `Color not found in data, default will be taken as info.`
         )
       }
     },
@@ -68,7 +68,11 @@ export default class Actionable extends PureComponent<Props> {
       onClose,
       onActionClick,
     } = data
-    const typeName = color || type || 'error'
+    const typeName = RE_BACKWARD_COMPAT.test(color)
+      ? 'info'
+      : color || RE_BACKWARD_COMPAT.test(type)
+      ? 'info'
+      : type || 'info'
     const iconName = icon === undefined ? ICONS[typeName] : icon
 
     return (

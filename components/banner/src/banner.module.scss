@@ -15,12 +15,7 @@ $types: (
       border-color: color('#{$color}-10');
     }
     .icon-#{$name} {
-      width: size('3x');
-      height: size('3x');
-      margin-right: padding-left('banner');
       color: color('#{$color}-140');
-      transform: #{scale }(1.5);
-      transform-origin: 0 -2px;
     }
   }
 }
@@ -43,10 +38,18 @@ $types: (
     @include typography('h3');
   }
 
+  .icon {
+    width: size('3x');
+    height: size('3x');
+    margin-right: padding-left('banner');
+    transform: #{scale }(1.5);
+    transform-origin: 0 -2px;
+  }
+
   .body {
     @include typography('body');
-    display: inline;
 
+    display: inline;
     margin-top: margin-top('banner.body');
   }
 
