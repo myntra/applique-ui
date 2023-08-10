@@ -4,6 +4,7 @@ import classnames from './simple.module.scss'
 import { Provider } from '../table-context'
 import Measure, { MeasureData } from '@applique-ui/measure'
 import Button from '@applique-ui/button'
+import RowRender from './rowRender'
 
 export interface Props extends BaseProps {
   config: TableMeta
@@ -45,10 +46,12 @@ export default class SimpleTable extends PureComponent<
     node: ReactNode,
     props: Record<string, any>,
     column: Object | any,
-    rowIndex: number
+    rowIndex: number,
+    state: Object | any,
+    defaultProps: Object | any
   ) {
     const key = column.id
-    const { editing } = this.state
+    const { editing } = state
     if (isValidElement(node)) {
       if (node.type === 'td') {
         return React.cloneElement(node, { key })
@@ -60,7 +63,7 @@ export default class SimpleTable extends PureComponent<
           ? React.cloneElement(column.editorComponent, {
               value: node,
               onChange: (value) =>
-                this.props.onEdit(value, rowIndex, column.id),
+                defaultProps.onEdit(value, rowIndex, column.id),
             })
           : node}
       </td>
@@ -177,52 +180,17 @@ export default class SimpleTable extends PureComponent<
               </thead>
 
               <tbody>
-                {data.map((item, rowId) =>
-                  React.cloneElement(
-                    (() => {
-                      const { render, isSelected } = this.getRowRenderer(rowId)
-                      return render({
-                        rowIndex: rowId,
-                        rowId,
-                        item,
-                        children: config.cells.map((column, columnIndex) => {
-                          const cellProps = {
-                            className: classnames({
-                              selected: isSelected || false,
-                              fixed: typeof column.fixed !== 'undefined',
-                              end: column.fixed === FixedPosition.END,
-                            }),
-                            style: {
-                              '--sticky-left-offset':
-                                typeof column.fixed !== 'undefined'
-                                  ? this.state.offsets[columnIndex] + 'px'
-                                  : 'unset',
-                              width: column.width,
-                              // @ts-ignore
-                              textAlign: `${column.align}`,
-                            },
-                          }
-
-                          return this.warpIfNeeded(
-                            column.renderCell({
-                              ...cellProps,
-                              index: rowId,
-                              rowId,
-                              columnId: column.id,
-                              item,
-                              data: item,
-                              value: column.accessor(item, rowId),
-                            }),
-                            cellProps,
-                            column,
-                            rowId
-                          )
-                        }),
-                      })
-                    })() as any,
-                    { key: rowId }
-                  )
-                )}
+                {data.map((item, rowId) => (
+                  <RowRender
+                    rowId={rowId}
+                    item={item}
+                    config={config}
+                    state={this.state}
+                    warpIfNeeded={this.warpIfNeeded}
+                    rowRender={this.getRowRenderer(rowId)}
+                    defaultProps={this.props}
+                  />
+                ))}
               </tbody>
             </table>
           </div>

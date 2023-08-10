@@ -21,19 +21,30 @@ export default class TableSortDropdown extends Component<
     sortOrder: null,
   }
 
-  getCurrentState = (): { newState: Sort; icon: any } => {
+  getIcon = (): any => {
     switch (this.state.sortOrder) {
       case 'asc':
-        return { newState: null, icon: SortUpSolid }
+        return SortUpSolid
       case 'desc':
-        return { newState: 'asc', icon: SortDownSolid }
+        return SortDownSolid
       default:
-        return { newState: 'desc', icon: SortSolid }
+        return SortSolid
+    }
+  }
+
+  getNewState = (): Sort => {
+    switch (this.state.sortOrder) {
+      case 'asc':
+        return null
+      case 'desc':
+        return 'asc'
+      default:
+        return 'desc'
     }
   }
 
   handleChange = () => {
-    const newState = this.getCurrentState().newState
+    const newState = this.getNewState()
     this.props.onChange({ columnId: this.props.columnId, order: newState })
     this.setState({ sortOrder: newState })
   }
@@ -44,7 +55,7 @@ export default class TableSortDropdown extends Component<
 
     return (
       <div className={classnames('sort-trigger')} onClick={this.handleChange}>
-        <Icon name={isActive ? this.getCurrentState().icon : SortSolid} />
+        <Icon name={isActive ? this.getIcon() : SortSolid} />
       </div>
     )
   }
