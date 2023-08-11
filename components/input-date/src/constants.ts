@@ -12,4 +12,4 @@ export const MONTHS_OF_YEAR = [
   'Nov',
   'Dec',
 ]
-export const DAYS_OF_WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+export const DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
