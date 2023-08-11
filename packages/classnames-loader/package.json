@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/classnames-loader",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",
   "types": "dist/index.d.ts",

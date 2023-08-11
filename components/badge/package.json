@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/badge",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "main": "dist/badge.cjs.js",
   "module": "dist/badge.esm.js",
   "types": "dist/index.d.ts",
