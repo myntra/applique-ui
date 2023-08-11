@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit-context",
-  "version": "0.0.52",
+  "version": "0.0.53",
   "main": "dist/uikit-context.cjs.js",
   "module": "dist/uikit-context.esm.js",
   "types": "dist/index.d.ts",

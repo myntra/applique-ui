@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/virtual-list",
-  "version": "0.0.52",
+  "version": "0.0.53",
   "main": "dist/virtual-list.cjs.js",
   "module": "dist/virtual-list.esm.js",
   "types": "dist/index.d.ts",
