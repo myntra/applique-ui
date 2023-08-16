@@ -345,22 +345,18 @@ export function createMeasureCache(
       }
     },
     rowHeight(row) {
-      if(!row) return itemHeight
-
       if (row in rowHeights) {
         return rowHeights[row].value
       }
 
-      return estimatedHeight
+      return itemHeight
     },
     columnWidth(column) {
-      if(!column) return itemWidth
-
       if (column in columnWidths) {
         return columnWidths[column].value
       }
 
-      return estimatedWidth
+      return itemWidth
     },
     remove(row, column = 0) {
       delete store[key(row, column)]

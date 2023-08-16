@@ -35,6 +35,18 @@ export default class VirtualListCellMeasure extends Component<Props> {
     }
   }
 
+  componentDidUpdate(
+    prevProps: Readonly<Props>,
+    prevState: Readonly<{}>,
+    snapshot?: any
+  ): void {
+    const node = ReactDOM.findDOMNode(this)
+
+    if (node) {
+      this.connection.observe(node as any)
+    }
+  }
+
   componentWillUnmount() {
     this.connection.disconnect()
   }
@@ -47,9 +59,9 @@ export default class VirtualListCellMeasure extends Component<Props> {
     const currentValue = cache.get(row, column)
     const newValue = {
       height:
-        (entry.target as HTMLElement).offsetHeight || cache.rowHeight(),
+        (entry.target as HTMLElement).offsetHeight || entry.contentRect.height,
       width:
-        (entry.target as HTMLElement).offsetWidth || cache.columnWidth(),
+        (entry.target as HTMLElement).offsetWidth || entry.contentRect.width,
     }
 
     if (
@@ -65,9 +77,8 @@ export default class VirtualListCellMeasure extends Component<Props> {
         },
         (entry.target as HTMLElement).dataset
       )
-      cache.configure(newValue.height, newValue.width);
     }
-    
+
     cache.set(row, column, newValue)
   }
 
