@@ -70,10 +70,10 @@
 
       z-index: -1;
       display: flex;
-      border-color: color('table.border');
 
       // This keeps fixed columns stuck to edges when scrolling.
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      border-color: color('table.border');
     }
 
     .tbody {
@@ -81,16 +81,30 @@
     }
 
     .th {
+      @include typography('th');
+
       position: absolute;
       height: 100%;
       font-weight: bold; /* TODO: Use table typography. */
+      line-height: 1.15;
+      text-transform: capitalize;
       background-color: color('table.head');
+
+      &:hover {
+        background-color: color('table.hover');
+      }
+
+      &:active {
+        background-color: color('table.active');
+      }
     }
 
     .td {
       @include padding('table.td');
+      @include typography('body');
 
       position: absolute;
+      line-height: 1.15;
     }
 
     .tr {
@@ -110,6 +124,10 @@
         .td {
           background-color: color('table.hover');
         }
+      }
+
+      .selected {
+        background-color: color('table.active');
       }
     }
 

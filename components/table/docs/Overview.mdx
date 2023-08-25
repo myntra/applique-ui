@@ -31,13 +31,6 @@ return (
 
 ## Examples
 
-- [Basic Table](#basic-table)
-- [Editable Table](#editable-table)
-- [Fixed Column Table](#fixed-column-table)
-- [Sortable Column Table](#sortable-column-table)
-- [Filterable Column Table](#filterable-column-table)
-- [Very Large Table](#very-large-table)
-
 ### Basic Table
 
 Table is composed of columns defined with [Table.Column](#TableColumn) component. A column should have
@@ -351,6 +344,40 @@ return (
     <Table.Row selector={index => index % 2 === 1}>
       {({ children, style }) => (
         <Table.TR style={{ ...style, color: 'blue' }}>{children}</Table.TR>
+      )}
+    </Table.Row>
+
+    <Table.Row>
+      {({ children, style }) => (
+        <Table.TR style={{ ...style, color: 'green' }}>{children}</Table.TR>
+      )}
+    </Table.Row>
+  </Table>
+)
+```
+
+</Documenter>
+
+## Selected Row
+
+<Documenter>
+
+```preview
+const [data] = React.useState([
+  { name: 'Alice' },
+  { name: 'Bob' },
+  { name: 'Charlie' },
+  { name: 'Dave' },
+  { name: 'Eve' },
+]);
+
+return (
+  <Table data={data}>
+    <Table.Column label="Name" key="name" />
+
+    <Table.Row selector={4} isSelected={true}>
+      {({ children, style }) => (
+        <Table.TR style={{ ...style, color: 'white' }}>{children}</Table.TR>
       )}
     </Table.Row>
 

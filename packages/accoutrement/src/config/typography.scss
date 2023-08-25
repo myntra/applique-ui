@@ -126,6 +126,10 @@ $-default-typography: (
     'family': 'heading',
     'weight': 400,
   ),
+  'th': (
+    'size': 'body',
+    'weight': 500,
+  ),
 );
 $-tokens-typography: () !default;
 $typography: map-merge($-default-typography, $-tokens-typography);

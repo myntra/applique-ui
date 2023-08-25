@@ -9,8 +9,8 @@ $-tokens-colors: (
   'primary-base': hsl(244, 54%, 53%),
   'primary-text': hsla(244, 54%, 53%, 0.87),
   'primary-light': hsl(244, 54%, 73%),
-  'primary-lighter': hsl(244, 53%, 85%),
-  'primary-lightest': hsl(250, 50%, 95%),
+  'primary-lighter': hsl(251, 100%, 93%),
+  'primary-lightest': hsl(253, 100%, 96%),
   'success-darker': hsl(138, 54%, 22%),
   'success-dark': hsl(138, 54%, 36%),
   'success-base': hsl(138, 53%, 53%),
@@ -37,7 +37,7 @@ $-tokens-colors: (
   'gray-base': hsl(0, 0%, 93%),
   'gray-text': hsla(0, 0%, 93%, 0.87),
   'gray-light': hsl(210, 22%, 96%),
-  'gray-lighter': hsl(0, 0%, 98%),
+  'gray-lighter': hsl(0, 0%, 95%),
   'gray-lightest': undefined,
 );
 $-tokens-text-colors: (

@@ -172,6 +172,7 @@ export default class Table extends PureComponent<Props, State> {
         editing: undefined,
         selector: () => true,
         render: renderRow,
+        isSelected: false,
       })
     }
 

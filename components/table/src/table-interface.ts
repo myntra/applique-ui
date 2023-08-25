@@ -82,4 +82,5 @@ export interface Row<T = any> {
   selector(rowId: number): boolean
   render(props: RowRendererProps): ReactNode
   renderBody?(props: RowRendererProps): ReactNode
+  isSelected?: boolean
 }

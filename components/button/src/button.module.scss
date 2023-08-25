@@ -238,10 +238,10 @@
 
 .icon-regular {
   @include padding('icon-button');
+
   box-sizing: content-box;
   width: 1em;
   height: 1em;
-
   font-size: 10px;
 }
 
