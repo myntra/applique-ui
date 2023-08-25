@@ -182,6 +182,7 @@ export default class SimpleTable extends PureComponent<
               <tbody>
                 {data.map((item, rowId) => (
                   <RowRender
+                    key={rowId}
                     rowId={rowId}
                     item={item}
                     config={config}
