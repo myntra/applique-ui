@@ -35,6 +35,18 @@ export default class VirtualListCellMeasure extends Component<Props> {
     }
   }
 
+  componentDidUpdate(
+    prevProps: Readonly<Props>,
+    prevState: Readonly<{}>,
+    snapshot?: any
+  ): void {
+    const node = ReactDOM.findDOMNode(this)
+
+    if (node) {
+      this.connection.observe(node as any)
+    }
+  }
+
   componentWillUnmount() {
     this.connection.disconnect()
   }
