@@ -17,30 +17,19 @@ import Banner from './src/banner'
 * Be concise and scannable—users shouldn’t need to spend a lot of time figuring out what they need to know and do.
 * Use the default icon for success, info, warning and critical statuses.
 
-## Types
-
-### Solid
+## Types according to color
 
 ```jsx preview
 <>
-  <Banner type="error">An example of error alert.</Banner>
+  <Banner color="error">An example of error alert.</Banner>
   <br />
-  <Banner type="warning">An example of warning alert.</Banner>
+  <Banner color="warning">An example of warning alert.</Banner>
   <br />
-  <Banner type="success">An example of success alert.</Banner>
+  <Banner color="success">An example of success alert.</Banner>
+  <br />
+  <Banner color="info">An example of info alert.</Banner>
 </>
 ```
-
-### Outlined
-```jsx preview
-<>
-  <Banner type="error" noFill>An example of error alert.</Banner>
-  <br />
-  <Banner type="warning" noFill>An example of warning alert.</Banner>
-  <br />
-  <Banner type="success" noFill>An example of success alert.</Banner>
-</>
-``` 
 
 ## Banner with Title
 
@@ -71,6 +60,23 @@ function Example() {
 }
 ```
 
+## Banner with link
+
+```jsx preview
+return (
+  <Banner title="CRITICAL ERROR" icon={SpinnerSolid} link={{href:"https://www.myntra.com", displayText: "See More"}}>We cannot reach to the backend service, your changes could not be persisted.</Banner>
+)
+```
+<br />
+
+## Banner with customizable icon color and Banner color
+
+```jsx preview
+return (
+  <Banner style={{'--bannerColor': 'red', '--bannerTextColor': '#fff', '--bannerIconColor':'#fff'}} title="CRITICAL ERROR" icon={SpinnerSolid} >We cannot reach to the backend service, your changes could not be persisted.</Banner>
+)
+```
+
 ## Sub-components
 
 ### Banner.Actionable
@@ -78,6 +84,29 @@ function Example() {
 * This type of banner is designed for mobile, click on view and switch to mobile view in browser to have a better visual experience.
 
 <Documenter component={Banner.Actionable} sub>
+
+```jsx preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(false);
+  let component;
+  !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>INFO</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Already Scanned!',
+        color: 'info',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Masterbag ID',
+        entityId: '100309334556',
+        actionToTake: <>Move to <b>Container No: #2233983 </b></>
+      }}/>;
+  return component;
+}
+```
+<br />
 
 ```jsx preview
 function Example() {
@@ -111,7 +140,7 @@ function Example() {
       <Banner.Actionable data={{
         onClose : () => setVisible(false),
         feedback: 'Completed!',
-        type: 'success',
+        color: 'success',
         header: 'Adding MasterBags',
         subHeader: 'Deepak Kumar - New Whitefield',
         actionButtonText: 'OKAY',
@@ -133,7 +162,7 @@ function Example() {
       <Banner.Actionable data={{
         onClose : () => setVisible(false),
         feedback: 'Wrong Carton!',
-        type: 'error',
+        color: 'error',
         header: 'Adding MasterBags',
         subHeader: 'Deepak Kumar - New Whitefield',
         actionButtonText: 'OKAY',

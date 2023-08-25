@@ -12,34 +12,23 @@ return (
 
 </Documenter>
 
-## Types
+## Types according to color
 
-### Solid
+
 
 ```preview
 return (
   <>
-    <Banner type="error">An example of error alert.</Banner>
+    <Banner color="error">An example of error alert.</Banner>
     <br />
-    <Banner type="warning">An example of warning alert.</Banner>
+    <Banner color="warning">An example of warning alert.</Banner>
     <br />
-    <Banner type="success">An example of success alert.</Banner>
+    <Banner color="success">An example of success alert.</Banner>
+    <br />
+    <Banner color="info">An example of info alert.</Banner>
   </>
 )
 ```
-
-### Outlined
-```preview
-return (
-  <>
-    <Banner type="error" noFill>An example of error alert.</Banner>
-    <br />
-    <Banner type="warning" noFill>An example of warning alert.</Banner>
-    <br />
-    <Banner type="success" noFill>An example of success alert.</Banner>
-  </>
-)
-``` 
 
 ## Banner with Title
 
@@ -77,6 +66,15 @@ function Example() {
 }
 ```
 
+## Banner with link
+
+```preview
+return (
+  <Banner title="CRITICAL ERROR" icon={SpinnerSolid} link={{href:"https://www.myntra.com", displayText: "See More"}}>We cannot reach to the backend service, your changes could not be persisted.</Banner>
+)
+```
+<br />
+
 ## Sub-components
 
 ### Banner.Actionable
@@ -88,12 +86,35 @@ function Example() {
   const [isVisible, setVisible] = React.useState(false);
   let component;
   !isVisible ?
+    component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>INFO</a> :
+    component = 
+      <Banner.Actionable data={{
+        onClose : () => setVisible(false),
+        feedback: 'Already Scanned!',
+        color: 'info',
+        header: 'Adding MasterBags',
+        subHeader: 'Deepak Kumar - New Whitefield',
+        actionButtonText: 'OKAY',
+        entityName: 'Masterbag ID',
+        entityId: '100309334556',
+        actionToTake: <>Move to <b>Container No: #2233983 </b></>
+      }}/>;
+  return component;
+}
+```
+<br />
+
+```preview
+function Example() {
+  const [isVisible, setVisible] = React.useState(false);
+  let component;
+  !isVisible ?
     component = <a style={{color:"blue"}} onClick={() => setVisible(true)}>WARNING</a> :
     component = 
       <Banner.Actionable data={{
         onClose : () => setVisible(false),
         feedback: 'Already Scanned!',
-        type: 'warning',
+        color: 'warning',
         header: 'Adding MasterBags',
         subHeader: 'Deepak Kumar - New Whitefield',
         actionButtonText: 'OKAY',
@@ -116,7 +137,7 @@ function Example() {
       <Banner.Actionable data={{
         onClose : () => setVisible(false),
         feedback: 'Completed!',
-        type: 'success',
+        color: 'success',
         header: 'Adding MasterBags',
         subHeader: 'Deepak Kumar - New Whitefield',
         actionButtonText: 'OKAY',
@@ -139,7 +160,7 @@ function Example() {
       <Banner.Actionable data={{
         onClose : () => setVisible(false),
         feedback: 'Wrong Carton!',
-        type: 'error',
+        color: 'error',
         header: 'Adding MasterBags',
         subHeader: 'Deepak Kumar - New Whitefield',
         actionButtonText: 'OKAY',

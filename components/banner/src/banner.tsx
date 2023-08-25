@@ -3,14 +3,20 @@ import Icon, { IconName } from '@applique-ui/icon'
 import Button from '@applique-ui/button'
 import classnames from './banner.module.scss'
 import Actionable from './actionable'
-import { ICONS, RE_BACKWARD_COMPAT } from './constants'
+import { ICONS, Link, RE_BACKWARD_COMPAT } from './constants'
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
+import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 
 export interface Props extends BaseProps {
   /**
    * The visual style to convey purpose of the alert.
    */
-  type?: 'error' | 'warning' | 'success'
+  /**
+   * @deprecated
+   */
+  type?: 'error' | 'warning' | 'success' | 'info'
+
+  color?: 'error' | 'warning' | 'success' | 'info'
   /**
    *
    * _TIP:_ Set `icon` to `null` to remove icon.
@@ -31,9 +37,10 @@ export interface Props extends BaseProps {
    */
   children: string | JSX.Element
   /**
-   * Only border based Alert
+   * If you need to add link to the banner
    */
-  noFill: boolean
+
+  link?: Link
 }
 
 // Design: https://zpl.io/bA7ZRWp
@@ -53,45 +60,67 @@ export interface Props extends BaseProps {
 export default class Banner extends PureComponent<Props> {
   static Actionable = Actionable
 
-  static defaultProps = {
-    type: 'error',
+  static propTypes = {
+    __$validation({ link }) {
+      if (link?.href && !link?.displayText) {
+        throw new Error(`link should also have a 'displayText'`)
+      }
+      if (!link?.href && link?.displayText) {
+        throw new Error(`link should also have a 'href'`)
+      }
+    },
   }
 
   render() {
     const {
       className,
-      type,
       icon,
       title,
       solid,
       onClose,
       noFill,
       children,
+      link,
+      color,
+      type,
       ...props
     } = this.props
 
-    const typeName = RE_BACKWARD_COMPAT.test(type) ? 'success' : type
+    const typeName =
+      RE_BACKWARD_COMPAT.test(color) || RE_BACKWARD_COMPAT.test(type)
+        ? 'info'
+        : color || type || 'info'
     const heading = title || children
     const body = title ? children : null
-    const iconName = icon === undefined ? ICONS[type] : icon
+    const iconName = icon === undefined ? ICONS[typeName] : icon
 
     return (
       <div
         {...props}
-        className={classnames('container', typeName, className, {
-          'no-fill': noFill,
-        })}
+        className={classnames('container', typeName, className)}
         role="alert"
       >
         {iconName ? (
           <Icon
-            className={classnames('icon', { top: !!body })}
+            className={classnames(`icon-${typeName}`, 'icon', { top: !!body })}
             name={iconName}
           />
         ) : null}
         <div className={classnames('content')}>
           <div className={classnames('title')}>{heading}</div>
           {body ? <div className={classnames('body')}>{body}</div> : null}
+          {link?.href && (
+            <Button
+              type="link"
+              target="_blank"
+              href={link.href}
+              secondaryIcon={ChevronRightSolid}
+              className={classnames('link')}
+              data-test-id="link"
+            >
+              {link.displayText}
+            </Button>
+          )}
         </div>
 
         {onClose && (

@@ -10,7 +10,11 @@ import { ICONS, RE_BACKWARD_COMPAT } from './constants'
 
 export interface Props extends BaseProps {
   data?: {
-    type?: 'error' | 'warning' | 'success'
+    /**
+     * @deprecated
+     */
+    type?: 'error' | 'warning' | 'success' | 'info'
+    color?: 'error' | 'warning' | 'success' | 'info'
     icon?: IconName
     header?: string
     subHeader?: string
@@ -37,9 +41,9 @@ export default class Actionable extends PureComponent<Props> {
     _validate({ data }) {
       if (!data) {
         throw new Error(`Data prop not found.`)
-      } else if (!data.type) {
+      } else if (!data.color) {
         throw new Error(
-          `Type not found in data, default will be taken as error.`
+          `Color not found in data, default will be taken as info.`
         )
       }
     },
@@ -51,6 +55,7 @@ export default class Actionable extends PureComponent<Props> {
     if (!data) return null
 
     const {
+      color,
       type,
       icon,
       header,
@@ -63,18 +68,18 @@ export default class Actionable extends PureComponent<Props> {
       onClose,
       onActionClick,
     } = data
-
-    const bannerType = type || 'error'
-    const typeName = RE_BACKWARD_COMPAT.test(bannerType)
-      ? 'success'
-      : bannerType
-    const iconName = icon === undefined ? ICONS[bannerType] : icon
+    const typeName = RE_BACKWARD_COMPAT.test(color)
+      ? 'info'
+      : color || RE_BACKWARD_COMPAT.test(type)
+      ? 'info'
+      : type || 'info'
+    const iconName = icon === undefined ? ICONS[typeName] : icon
 
     return (
       <div {...props} className={classnames('actionable', typeName)}>
         <div className={classnames('header')}>
-          <Text.h3 color="light">{header}</Text.h3>
-          <Text.p color="light">{subHeader}</Text.p>
+          <Text.h3>{header}</Text.h3>
+          <Text.p>{subHeader}</Text.p>
         </div>
         {onClose && (
           <Button
@@ -90,14 +95,10 @@ export default class Actionable extends PureComponent<Props> {
           <Layout type="stack" className={classnames('contents')}>
             <Icon className={classnames('icon')} name={iconName} />
             <Layout type="row" className={classnames('feedback-contain')}>
-              <Text.h1 color="light">{feedback}</Text.h1>
-              <Text.body color="light" emphasis="medium">
-                {entityName}
-              </Text.body>
-              <Text.h2 className={classnames('entity-id')} color="light">
-                {entityId}
-              </Text.h2>
-              <Text.h3 className={classnames('action-name')} color="light">
+              <Text.h1>{feedback}</Text.h1>
+              <Text.body emphasis="medium">{entityName}</Text.body>
+              <Text.h2 className={classnames('entity-id')}>{entityId}</Text.h2>
+              <Text.h3 className={classnames('action-name')}>
                 {actionToTake}
               </Text.h3>
               {actionButtonText && (
