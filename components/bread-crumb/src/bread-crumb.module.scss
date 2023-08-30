@@ -9,7 +9,21 @@
 
   li {
     display: inline-block;
-    line-height: 1em;
+    padding: 2px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 2px;
+
+    &:hover {
+      color: color('primary-140');
+      background-color: color('primary-10');
+    }
+
+    &:focus {
+      color: color('primary-180');
+      background-color: color('primary-20');
+    }
   }
 }
 
@@ -24,16 +38,14 @@
 .page,
 .page a {
   color: color('primary');
-
-  @include typography('paragraph');
-
   text-decoration: none;
 }
 
 .page:last-child,
 .page:last-child a {
-  color: color('text-dark');
+  color: color('background-50');
   pointer-events: none;
+  background: none;
 }
 
 .page + .page::before {
@@ -47,5 +59,5 @@
   border-style: solid;
   border-width: 0 1px 1px 0;
   opacity: 0.6;
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-125%) rotate(-45deg);
 }
