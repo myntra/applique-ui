@@ -27,14 +27,14 @@ $directions: (
     $length: length($value);
 
     @if $length == 1 {
-      @return index($value, 1);
+      @return nth($value, 1);
     }
 
-    @if $length <= $direction {
-      @return index($value, $direction);
+    @if $length < $direction {
+      @return nth($value, $direction - 2);
     }
 
-    @return index($value, $direction - 2);
+    @return nth($value, $direction);
   }
 
   @return $value;
