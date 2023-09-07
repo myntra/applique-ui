@@ -32,6 +32,54 @@
     @include border-radius('button');
   }
 
+  .stripes-back {
+    position: relative;
+    width: var(--custom-width);
+    height: 100%;
+    background-color: var(--u-progress-color);
+
+    @include border-radius('button');
+  }
+
+  .stripes-fore {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      45deg,
+      var(--u-stripes-color) 25%,
+      transparent 25%,
+      transparent 50%,
+      var(--u-stripes-color) 50%,
+      var(--u-stripes-color) 75%,
+      transparent 75%
+    );
+    background-size: 40px 40px;
+
+    @include border-radius('button');
+  }
+
+  .movement {
+    animation: moveColoredRegion 6s linear infinite;
+  }
+
+  @keyframes moveColoredRegion {
+    0% {
+      left: 0;
+      animation-direction: normal;
+    }
+    50% {
+      left: var(--movement-width);
+      animation-direction: reverse;
+    }
+    100% {
+      left: 0;
+      animation-direction: normal;
+    }
+  }
+
   .foreground {
     height: 100%;
     background-color: var(--u-progress-color);
@@ -46,16 +94,20 @@
 
 .info {
   --u-progress-color: #{color('primary')};
+  --u-stripes-color: #a28cff;
 }
 
 .success {
   --u-progress-color: #{color('success')};
+  --u-stripes-color: #79c6a6;
 }
 
 .warning {
   --u-progress-color: #{color('warning')};
+  --u-stripes-color: #ed9285;
 }
 
 .danger {
   --u-progress-color: #{color('danger')};
+  --u-stripes-color: #ed9285;
 }
