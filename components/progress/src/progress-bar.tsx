@@ -50,7 +50,7 @@ export default function ProgressBar({
   movement,
   ...props
 }: Props) {
-  const customStyles = {
+  const customStyles: React.CSSProperties = {
     '--custom-width': `${Math.min(100, value)}%`,
     '--movement-width': `${Math.abs(100 - value)}%`,
   }
