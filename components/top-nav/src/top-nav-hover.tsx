@@ -4,6 +4,7 @@ import Layout from '@applique-ui/layout'
 import { NAVIGATION_ITEM_L2_INTERFACE } from './config'
 import classnames from './top-nav-hover.module.scss'
 import { replaceSpacesWithUnderscore } from './utils'
+import AlertTag from './alert-tag'
 
 export interface TopNavHoverProps extends BaseProps {
   navTabConfig: {
@@ -80,7 +81,17 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                       className={classnames('hover-item-menu')}
                     >
                       <label className={classnames('hover-item-menu-title')}>
-                        {menu.title}
+                        <Layout type="stack">
+                          {menu.title}
+                          {menu.tagLabel ? (
+                            <AlertTag
+                              tagType={menu.tagType}
+                              tagLabel={menu.tagLabel}
+                            />
+                          ) : (
+                            <></>
+                          )}
+                        </Layout>
                       </label>
                       <hr className={classnames('hover-item-menu-hr')} />
                       {menu.config.map((it) => {
@@ -91,7 +102,17 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                             id={replaceSpacesWithUnderscore(it.title)}
                             className={classnames('hover-item-menu-link')}
                           >
-                            {it.title}
+                            <Layout type="stack">
+                              {it.title}
+                              {it.tagLabel ? (
+                                <AlertTag
+                                  tagType={it.tagType}
+                                  tagLabel={it.tagLabel}
+                                />
+                              ) : (
+                                <></>
+                              )}
+                            </Layout>
                           </button>
                         )
                       })}
@@ -116,6 +137,14 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                       className={classnames('hover-item-direct-link')}
                     >
                       {directLink.title}
+                      {directLink.tagLabel ? (
+                        <AlertTag
+                          tagType={directLink.tagType}
+                          tagLabel={directLink.tagLabel}
+                        />
+                      ) : (
+                        <></>
+                      )}
                     </button>
                   )
                 })}

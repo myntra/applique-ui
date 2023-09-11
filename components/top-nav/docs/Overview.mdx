@@ -10,7 +10,7 @@ import {
     StateItemHover,
     StateItemSelected 
 } from './images'
-
+ 
 Top Nav Bar contains atomic components 
 
 ```jsx
@@ -46,8 +46,10 @@ const DUMMY_CONFIG = {
               routingInfo: {
                 path: '/DiyCataloguing/Home',
                 type: 'DiyCataloguing/Home',
-                meta: {},
+                meta: {}
               },
+                tagLabel: 'Test value',
+                tagType: 'new'
             },
             {
               id: 'DIY_DASHBO_MAS_FORM',
@@ -58,8 +60,10 @@ const DUMMY_CONFIG = {
                 meta: {
                   url:
                     'https://docs.google.com/forms/d/e/1FAIpQLSdpU3uyUPkfaLZgrG_zgbMUVG7PBj9EilzK3Cg4vgq3eQhq-w/viewform',
-                },
+                }
               },
+                tagLabel: 'Test value',
+                tagType: 'beta'
             },
           ],
         },

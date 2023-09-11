@@ -30,6 +30,8 @@ export interface NAVIGATION_ITEM_L1_INTERFACE {
   config?: Array<NAVIGATION_ITEM_L2_INTERFACE>
   dispatchFunctionObject?: Function
   footerMessage?: string
+  tagLabel?: string
+  tagType?: string
 }
 
 export interface NAVIGATION_ITEM_L2_INTERFACE {
@@ -39,12 +41,16 @@ export interface NAVIGATION_ITEM_L2_INTERFACE {
   config: Array<NAVIGATION_ITEM_L3_INTERFACE>
   path: string
   routingInfo?: ROUTING_INFO_INTERFACE
+  tagLabel?: string
+  tagType?: string
 }
 
 export interface NAVIGATION_ITEM_L3_INTERFACE {
   id: string
   title: string
   routingInfo?: ROUTING_INFO_INTERFACE
+  tagLabel?: string
+  tagType?: string
 }
 
 export interface TopNavBaseProps extends BaseProps {
