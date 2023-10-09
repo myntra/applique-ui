@@ -27,6 +27,7 @@
   line-height: inherit;
   color: text-color('input.text');
   background-color: transparent;
+  caret-color: color('input.active');
   #{$border-type}: 1px solid color('input.border');
 
   @if not($border-type == 'border-bottom') {
@@ -38,6 +39,13 @@
   textarea:not([disabled])::placeholder {
     color: color('input.placeholder');
   }
+  input:is([disabled])::placeholder {
+    color: color('input.placeholder') !important;
+  }
+  textarea:is([disabled])::placeholder {
+    color: color('input.placeholder') !important;
+  }
+
   &.filled {
     #{$border-type}: 1px solid color('input.filled');
   }
@@ -59,6 +67,12 @@
   &.active,
   &:active {
     #{$border-type}: 1px solid color('input.active');
+  }
+  &.readOnly {
+    background-color: color('input.readOnly');
+  }
+  &.readOnly textarea{
+    background-color: color('input.readOnly');
   }
 }
 

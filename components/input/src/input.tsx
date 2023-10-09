@@ -77,6 +77,7 @@ export default function Input({
           filled: !isEmptyValue(props.value),
           error: !!error,
           active: !!active,
+          readOnly: !!readOnly
         },
         className
       )}
@@ -93,7 +94,7 @@ export default function Input({
         {...props}
         readOnly={readOnly || !props.onChange}
         className={classnames('input')}
-        disabled={!!disabled}
+        disabled={!!disabled || !!readOnly}
         placeholder={placeholder}
       />
       {adornment && adornmentPosition === 'end' && (

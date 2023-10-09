@@ -92,13 +92,17 @@ $token-colors-revamp: (
   'gray-base-new': #cfcfd1,
   'gray-base-new-1': #86878b,
   'danger-base-new': #c84646,
+  'danger-base-new-1': #E34935,
   'success-base-new': #239d56,
+  'success-base-new-1': #22A06B,
   'primary-base-new': #4f47c8,
+  'primary-base-active': #5232d0,
   'gray-base-new-2': #bababc,
   'gray-base-new-3': #3e3f45,
   'gray-base-new-4': #8f8f92,
   'gray-base-new-5': #0e0f17,
   'gray-base-new-6': #f3f3f3,
+  'gray-base-new-7': #262939,
   'gray-dark-base': #56575d,
   'gray-dark-base-2': #3e3f45,
   'primary-base-light': #ededf9,
@@ -135,15 +139,17 @@ $colors: (
   'top-bar.border': '#nav-bar.border',
   'page.background': '#gray-light',
   'tab.border': '#gray-light',
-  'input.hover': '#primary-light-new',
+  'input.hover': '#primary-40',
   'input.focused': '#primary-base-new',
-  'input.active': '#primary-base-new',
-  'input.disabled': '#gray-base-new',
-  'input.error': '#danger-base-new',
+  'input.active': '#primary-base-active',
+  'input.disabled': '#background-30',
+  'input.error': '#danger-base-new-1',
   'input.border': '#gray-base-new',
-  'input.filled': '#gray-base-new-1',
-  'input.text': '#gray-base-new-5',
-  'input.placeholder': '#gray-base-new-2',
+  'input.filled': '#background-30',
+  'input.text': '#gray-base-new-7',
+  'input.placeholder': '#background-50',
+  'input.placeholder.disabled': '#gray-base-new',
+  'input.readOnly': '#background-10',
   'warning-no-fill': $-tokens-colors-warning-no-fill,
 );
 $-tokens-colors: () !default;
@@ -159,12 +165,13 @@ $-tokens-colors: () !default;
 $-tokens-text-colors-dark: #000 !default;
 $-tokens-text-colors-light: #fff !default;
 $-tokens-text-colors-dark-new: #0e0f17 !default;
+$-tokens-input-text-color-new: #262939 !default;
 $token-text-colors-warning-new: #624a19 !default;
 
 $text-colors: (
   'dark': $-tokens-text-colors-dark,
   'light': $-tokens-text-colors-light,
-  'input.text': $-tokens-text-colors-dark-new,
+  'input.text': $-tokens-input-text-color-new,
   'warning-text': $token-text-colors-warning-new,
 );
 

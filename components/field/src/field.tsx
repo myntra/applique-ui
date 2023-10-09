@@ -4,6 +4,9 @@ import React, {
   Children,
   isValidElement,
 } from 'react'
+import Icon from '@applique-ui/icon'
+import TimesSolid from "uikit-icons/svgs/TimesSolid"
+import CheckSolid from "uikit-icons/svgs/CheckSolid"
 
 import classnames from './field.module.scss'
 
@@ -103,6 +106,7 @@ export default function Field({
               role="alert"
               className={classnames({ error: !!error })}
             >
+              <Icon name={TimesSolid} className={classnames('meta-icon')}/>
               {Array.isArray(error) ? error.join(' ') : error}
             </div>
           ) : success ? (
@@ -110,6 +114,7 @@ export default function Field({
               id={htmlFor ? htmlFor + '__success' : null}
               className={classnames('success')}
             >
+              <Icon name={CheckSolid} className={classnames('meta-icon')}/>
               {success}
             </div>
           ) : (

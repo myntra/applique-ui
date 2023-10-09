@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: size('1x') size('0');
+  margin: size('0') size('1x');
 
   @include typography('caption-revamp');
+  color: #3D4152;
 }
 
 .required {
@@ -20,6 +21,11 @@
   margin-top: margin-top('small');
   margin-bottom: negative(margin-bottom('field') - 1);
   overflow: hidden;
+
+  &-icon {
+    padding-right: 4px;
+    margin-top: 1px;
+  }
 }
 
 .meta:hover {
@@ -31,6 +37,7 @@
   color: color('text-dark-medium-emphasis'); // TODO: Change to mid-emphasis.
 
   @include typography('caption-revamp-light');
+  font-weight: 200;
 }
 
 .meta > [role='alert'] {
@@ -53,7 +60,7 @@
   color: color('input.error');
 }
 .success {
-  color: color('success-base-new');
+  color: color('success-base-new-1');
 }
 .icon {
   color: color('primary-base-new');

@@ -55,6 +55,7 @@ export default function InputTextArea({
   __fieldContext = {},
   adornmentPosition = 'start',
   icon,
+  readOnly,
   ...props
 }: Props) {
   error = !!(error || __fieldContext.error)
@@ -69,7 +70,8 @@ export default function InputTextArea({
         { standard: variant === 'standard' },
         { bordered: variant === 'bordered' },
         { filled: !isEmptyValue(value) },
-        { noResize }
+        { noResize },
+        { readOnly }
       )}
     >
       {icon && <Icon className={classnames('icon')} name={icon} />}
@@ -77,7 +79,7 @@ export default function InputTextArea({
       <textarea
         {...props}
         value={value || ''}
-        disabled={disabled}
+        disabled={disabled || readOnly}
         className={classnames('input')}
         onChange={(event) => onChange && onChange(event.target.value)}
       />

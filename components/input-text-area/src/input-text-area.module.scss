@@ -18,6 +18,7 @@
   textarea {
     color: text-color('input.text');
     resize: none;
+    font-family: Roboto, Helvetica, sans-serif;
   }
   &.disable {
     resize: none;
@@ -26,6 +27,9 @@
     background-color: transparent;
   }
   &.noResize {
+    resize: none;
+  }
+  &.readOnly {
     resize: none;
   }
 }
