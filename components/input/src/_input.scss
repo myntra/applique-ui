@@ -40,10 +40,10 @@
     color: color('input.placeholder');
   }
   input:is([disabled])::placeholder {
-    color: color('input.placeholder') !important;
+    color: color('input.placeholder.disabled');
   }
   textarea:is([disabled])::placeholder {
-    color: color('input.placeholder') !important;
+    color: color('input.placeholder.disabled');
   }
 
   &.filled {

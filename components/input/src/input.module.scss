@@ -7,6 +7,18 @@
   }
 
   padding: padding('input.text');
+
+  &-textarea {
+    width: 100%;
+    vertical-align: baseline;
+    border: none;
+    outline: none;
+
+    &:disabled,
+    &[disabled] {
+      resize: none;
+    }
+  }
 }
 
 .input:not(:focus) {
@@ -36,7 +48,6 @@
   input {
     flex-grow: 1;
     padding: 0;
-    // margin-left: size('1x');
     line-height: inherit;
     background-color: transparent;
     border: 0;
@@ -54,6 +65,33 @@
     }
     &-end {
       margin-left: size('1x');
+    }
+  }
+
+  &-textarea {
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    resize: vertical;
+    &.standard {
+      @include mixin-input-text-revamp(
+        'border-bottom',
+        padding('input-text-standard')
+      );
+    }
+    &.bordered {
+      @include mixin-input-text-revamp('border', padding('input.textarea'));
+    }
+    textarea {
+      color: text-color('input.text');
+      resize: none;
+      font-family: Roboto, Helvetica, sans-serif;
+    }
+    &.disable, &.noResize, &.readOnly {
+      resize: none;
+    }
+    &.disable textarea {
+      background-color: transparent;
     }
   }
 }

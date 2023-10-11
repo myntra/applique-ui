@@ -8,7 +8,7 @@
   margin: size('0') size('1x');
 
   @include typography('caption-revamp');
-  color: #3D4152;
+  color: color('background-70');
 }
 
 .required {
@@ -23,8 +23,8 @@
   overflow: hidden;
 
   &-icon {
-    padding-right: 4px;
-    margin-top: 1px;
+    padding-right: size('1x');
+    margin-top: calc(size('1x')/4);
   }
 }
 
@@ -37,7 +37,6 @@
   color: color('text-dark-medium-emphasis'); // TODO: Change to mid-emphasis.
 
   @include typography('caption-revamp-light');
-  font-weight: 200;
 }
 
 .meta > [role='alert'] {
@@ -60,7 +59,7 @@
   color: color('input.error');
 }
 .success {
-  color: color('success-base-new-1');
+  color: color('success-100');
 }
 .icon {
   color: color('primary-base-new');
