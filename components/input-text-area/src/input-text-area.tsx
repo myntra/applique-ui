@@ -1,6 +1,6 @@
 import React from 'react'
-import classnames from './input-text-area.module.scss'
-import Icon, { IconName } from '@applique-ui/icon'
+import { IconName } from '@applique-ui/icon'
+import Input from '@applique-ui/input'
 
 export interface Props extends BaseProps {
   /** @private */
@@ -32,9 +32,6 @@ type FieldContext = {
   error?: boolean
   disabled?: boolean
 }
-function isEmptyValue(value) {
-  return typeof value !== 'string' || !value
-}
 
 /**
  * A large text input component.
@@ -44,44 +41,14 @@ function isEmptyValue(value) {
  * @category input
  * @see http://uikit.myntra.com/components/input-text-area
  */
-export default function InputTextArea({
-  className,
-  noResize,
-  value,
-  onChange,
-  variant = 'bordered',
-  error = false,
-  disabled,
-  __fieldContext = {},
-  adornmentPosition = 'start',
-  icon,
-  ...props
-}: Props) {
-  error = !!(error || __fieldContext.error)
-  disabled = !!(disabled || __fieldContext.disabled)
+export default function InputTextArea({onChange, value, ...props}: Props) {
   return (
-    <div
-      className={classnames(
-        className,
-        'container',
-        { error },
-        { disable: disabled },
-        { standard: variant === 'standard' },
-        { bordered: variant === 'bordered' },
-        { filled: !isEmptyValue(value) },
-        { noResize }
-      )}
-    >
-      {icon && <Icon className={classnames('icon')} name={icon} />}
-
-      <textarea
-        {...props}
-        value={value || ''}
-        disabled={disabled}
-        className={classnames('input')}
-        onChange={(event) => onChange && onChange(event.target.value)}
-      />
-    </div>
+    <Input
+      {...props}
+      value={typeof value !== 'string' ? '' : value}
+      onChange={(event) => onChange?.(event.target.value)}
+      type='textarea'
+    />
   )
 }
 

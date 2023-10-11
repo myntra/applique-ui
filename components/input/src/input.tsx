@@ -4,7 +4,7 @@ import Icon, { IconName } from '@applique-ui/icon'
 
 export interface Props extends BaseProps {
   /** Sets the text format for the field. */
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number'
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number' | 'textarea'
   /** Current value of the text input field. */
   value?: string | number
   /** Displays a disabled text field */
@@ -56,6 +56,7 @@ export default function Input({
   error: propError,
   disabled: propDisabled,
   active,
+  type,
   ...props
 }: Props) {
   const { error, disabled } = {
@@ -69,7 +70,7 @@ export default function Input({
   return (
     <div
       className={classnames(
-        'container',
+        `container${type == "textarea" ? "-textarea" : ""}`,
         {
           disable: !!disabled,
           standard: standard,
@@ -77,6 +78,7 @@ export default function Input({
           filled: !isEmptyValue(props.value),
           error: !!error,
           active: !!active,
+          readOnly: !!readOnly,
         },
         className
       )}
@@ -89,13 +91,23 @@ export default function Input({
           {adornment}
         </div>
       )}
-      <input
-        {...props}
-        readOnly={readOnly || !props.onChange}
-        className={classnames('input')}
-        disabled={!!disabled}
-        placeholder={placeholder}
-      />
+      {type === 'textarea' ? (
+        <textarea
+          {...props}
+          readOnly={readOnly || !props.onChange}
+          className={classnames('input-textarea')}
+          disabled={!!disabled || !!readOnly}
+          placeholder={placeholder}
+        />
+      ) : (
+        <input
+          {...props}
+          readOnly={readOnly || !props.onChange}
+          className={classnames('input')}
+          disabled={!!disabled || !!readOnly}
+          placeholder={placeholder}
+        />
+      )}
       {adornment && adornmentPosition === 'end' && (
         <div className={classnames('input-adornment', `input-adornment-end`)}>
           {adornment}

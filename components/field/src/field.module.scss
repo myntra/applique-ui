@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: size('1x') size('0');
+  margin: size('0') size('1x');
 
   @include typography('caption-revamp');
+  color: color('background-70');
 }
 
 .required {
@@ -20,6 +21,11 @@
   margin-top: margin-top('small');
   margin-bottom: negative(margin-bottom('field') - 1);
   overflow: hidden;
+
+  &-icon {
+    padding-right: size('1x');
+    margin-top: calc(size('1x')/4);
+  }
 }
 
 .meta:hover {
@@ -53,7 +59,7 @@
   color: color('input.error');
 }
 .success {
-  color: color('success-base-new');
+  color: color('success-100');
 }
 .icon {
   color: color('primary-base-new');
