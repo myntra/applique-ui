@@ -1,5 +1,4 @@
 import React from 'react'
-import classnames from './input-text-area.module.scss'
 import { IconName } from '@applique-ui/icon'
 import Input from '@applique-ui/input'
 
@@ -32,9 +31,6 @@ export interface Props extends BaseProps {
 type FieldContext = {
   error?: boolean
   disabled?: boolean
-}
-function isEmptyValue(value) {
-  return typeof value !== 'string' || !value
 }
 
 /**
