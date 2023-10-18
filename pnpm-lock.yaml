@@ -1525,9 +1525,21 @@ importers:
 
   components/pagination:
     dependencies:
+      '@applique-ui/button':
+        specifier: 0.0.*
+        version: link:../button
       '@applique-ui/icon':
         specifier: 0.0.*
         version: link:../icon
+      '@applique-ui/input-number':
+        specifier: 0.0.*
+        version: link:../input-number
+      '@applique-ui/input-select':
+        specifier: 0.0.*
+        version: link:../input-select
+      '@applique-ui/layout':
+        specifier: 0.0.*
+        version: link:../layout
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
         version: link:../../packages/uikit-can-i-use
@@ -14728,7 +14740,7 @@ packages:
     dev: true
 
   /react@16.14.0:
-    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/react/-/react-16.14.0.tgz}
+    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0

@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
-import Icon from '@applique-ui/icon'
-import { range } from '@applique-ui/uikit-utils'
+import InputSelect from '@applique-ui/input-select'
+import InputNumber from '@applique-ui/input-number'
+import Layout from '@applique-ui/layout'
 
+import RevampPagination from './pages'
 import classnames from './pagination.module.scss'
-import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
-import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 
 export interface Props extends BaseProps {
   /** Current selected page */
@@ -32,122 +32,95 @@ export interface Props extends BaseProps {
  @category basic
  @see http://uikit.myntra.com/components/pagination
  */
-export default class Pagination extends PureComponent<Props> {
-  static defaultProps = {
-    page: 1,
-    size: 15,
-    sizes: [10, 15, 30, 50],
-  }
+export default function Pagination(props: Props) {
+  const [pageNumberCustom, setPageNumberCustom] = React.useState(null)
 
-  static propTypes = {
-    __$validation({ sizes }) {
-      if (sizes.some((size) => size > 50))
-        console.warn(
-          'Too many rows rendered at a time. Try using virtualized table. Visit here https://uikit.myntra.com/components/table#very-large-table'
-        )
-    },
-  }
-
-  updatePage = (page) => {
-    const pages = this.totalPages
-    const size = this.props.size
+  const updatePage = (page) => {
+    const pages = Math.ceil(props.total / props.size)
+    const size = props.size
 
     if (page > 0 && page <= pages) {
-      this.props.onChange({ size, page })
+      props.onChange({ size, page })
     }
   }
 
-  get totalPages() {
-    return Math.ceil(this.props.total / this.props.size)
+  const handlePageChange = (event) => {
+    if (event.key === 'Enter') {
+      updatePage(parseInt(event.target.value, 10))
+      setPageNumberCustom(null)
+    }
   }
 
-  handlePageChange = (e) => {
-    this.updatePage(parseInt(e.target.value, 10))
+  const handleSizeChange = (value) => {
+    props.onChange({ size: parseInt(value, 10), page: 1 })
   }
 
-  handleSizeChange = (e) => {
-    // TODO: Should we keep user on current page?
-    this.props.onChange({ size: parseInt(e.target.value, 10), page: 1 })
-  }
+  const {
+    total,
+    size,
+    page,
+    className,
+    sizes,
+    hideSize,
+    pageInputDisabled,
+  } = props
 
-  render() {
-    const {
-      total,
-      size,
-      page,
-      className,
-      sizes,
-      hideSize,
-      pageInputDisabled,
-    } = this.props
-    const totalPages = Math.ceil(total / size)
-    const pages = range(1, pageInputDisabled ? 1 : totalPages).map(
-      (page) => page
-    )
-    const start = (page - 1) * size + 1
-    const end = total < start + size - 1 ? total : start + size - 1
-    return (
-      <div className={classnames('pagination', className)}>
-        {!hideSize && (
-          <div className={classnames('size')}>
-            <span>Rows per page:</span>
-            <div className={classnames('page-size')}>
-              <select value={size} onChange={this.handleSizeChange}>
-                {sizes.map((item) => {
-                  return (
-                    <option value={item} key={item}>
-                      {item}
-                    </option>
-                  )
-                })}
-              </select>
-              <i className={classnames('select-chevron-down')} />
-            </div>
-          </div>
-        )}
-
-        <div className={classnames('size-label')}>
-          <strong>
-            {start} to {end}
-          </strong>{' '}
-          of {total}
-        </div>
-
-        <div
-          role="button"
-          className={classnames('arrow-container')}
-          onClick={() => this.updatePage(page - 1)}
-        >
-          <Icon
-            name={ChevronLeftSolid}
-            className={classnames('pagination-arrow')}
+  return (
+    <div className={classnames('pagination')}>
+      {!hideSize && (
+        <div className={classnames('paginationSelectSizeWrapper')}>
+          <InputSelect
+            variant="bordered"
+            required
+            options={sizes.map((size) => ({
+              label: `${size}/page`,
+              value: size,
+            }))}
+            value={size}
+            onChange={handleSizeChange}
           />
         </div>
-        <select
-          className={classnames('select-page')}
-          value={page}
-          onChange={this.handlePageChange}
-          disabled={!!pageInputDisabled}
-        >
-          {pages.map((pageList) => {
-            return (
-              <option value={pageList} key={pageList}>
-                {pageList}
-              </option>
-            )
-          })}
-        </select>
-        <div
-          role="button"
-          className={classnames('arrow-container')}
-          onClick={() => this.updatePage(page + 1)}
-        >
-          <Icon
-            name={ChevronRightSolid}
-            className={classnames('pagination-arrow')}
+      )}
+      <RevampPagination
+        className={className}
+        currentPage={page}
+        totalCount={total}
+        pageSize={size}
+        onPageChange={updatePage}
+      />
+      <Layout
+        type="stack"
+        distribution="center"
+        alignment="middle"
+        gutter="medium"
+      >
+        <span>Go to</span>
+        <div className={classnames('paginationPageInputWrapper')}>
+          <InputNumber
+            value={pageNumberCustom}
+            onChange={setPageNumberCustom}
+            disabled={!!pageInputDisabled}
+            onKeyDown={handlePageChange}
           />
         </div>
-      </div>
-    )
-  }
+        <span>Page</span>
+      </Layout>
+    </div>
+  )
+}
+
+Pagination.defaultProps = {
+  page: 8,
+  size: 10,
+  total: 200,
+  sizes: [10, 15, 30, 50],
+}
+
+Pagination.propTypes = {
+  __$validation({ sizes }) {
+    if (sizes.some((size) => size > 50))
+      console.warn(
+        'Too many rows rendered at a time. Try using virtualized table. Visit here https://uikit.myntra.com/components/table#very-large-table'
+      )
+  },
 }
