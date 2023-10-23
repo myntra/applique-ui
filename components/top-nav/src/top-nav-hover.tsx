@@ -81,16 +81,14 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                       className={classnames('hover-item-menu')}
                     >
                       <label className={classnames('hover-item-menu-title')}>
-                        <Layout type="stack">
+                        <Layout type="stack" alignment="middle">
                           {menu.title}
                           {menu.tagLabel ? (
                             <AlertTag
                               tagType={menu.tagType}
                               tagLabel={menu.tagLabel}
                             />
-                          ) : (
-                            <></>
-                          )}
+                          ) : null}
                         </Layout>
                       </label>
                       <hr className={classnames('hover-item-menu-hr')} />
@@ -102,16 +100,14 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                             id={replaceSpacesWithUnderscore(it.title)}
                             className={classnames('hover-item-menu-link')}
                           >
-                            <Layout type="stack">
+                            <Layout type="stack" alignment="middle">
                               {it.title}
                               {it.tagLabel ? (
                                 <AlertTag
                                   tagType={it.tagType}
                                   tagLabel={it.tagLabel}
                                 />
-                              ) : (
-                                <></>
-                              )}
+                              ) : null}
                             </Layout>
                           </button>
                         )
@@ -142,9 +138,7 @@ export default class TopNavHover extends PureComponent<TopNavHoverProps, {}> {
                           tagType={directLink.tagType}
                           tagLabel={directLink.tagLabel}
                         />
-                      ) : (
-                        <></>
-                      )}
+                      ) : null}
                     </button>
                   )
                 })}

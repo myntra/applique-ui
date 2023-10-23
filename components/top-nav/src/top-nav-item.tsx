@@ -10,7 +10,6 @@ import {
   getFilteredNavs,
   replaceSpacesWithUnderscore,
 } from './utils'
-import Layout from '@applique-ui/layout'
 import AlertTag from './alert-tag'
 
 export interface TopNavItemProps extends BaseProps {
@@ -91,9 +90,7 @@ export default class TopNavItem extends PureComponent<
           {itemData.label}
           {itemData.tagLabel ? (
             <AlertTag tagType={itemData.tagType} tagLabel={itemData.tagLabel} />
-          ) : (
-            <></>
-          )}
+          ) : null}
           {this.state.isHovering && checkIfNonEmptyMenu(itemData) && (
             <TopNavHover
               navTabConfig={{ menus, directs }}
