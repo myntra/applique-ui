@@ -273,8 +273,8 @@ export default class InputSelect<Value = any, Option = any> extends Component<
               onKeyDown={this.handleKeyDown}
               data-test-id="control"
             >
-              <div className={classnames('button')}>
-                {this.props.isLoading ? (
+              {this.props.isLoading ? (
+                <div className={classnames('button')}>
                   <Icon
                     className={classnames('state-icon')}
                     name={SpinnerSolid}
@@ -282,18 +282,24 @@ export default class InputSelect<Value = any, Option = any> extends Component<
                     spin
                     data-test-id="loading"
                   />
-                ) : (
-                  <Icon
-                    className={classnames('state-icon')}
-                    title={this.state.isOpen ? 'close' : 'open'}
-                    name={this.state.isOpen ? ChevronUpSolid : ChevronDownSolid}
-                    onClick={(event) =>
-                      this.state.isOpen && event.stopPropagation()
-                    }
-                    data-test-id="chevron"
-                  />
-                )}
-              </div>
+                </div>
+              ) : (
+                !this.props.value && (
+                  <div className={classnames('button')}>
+                    <Icon
+                      className={classnames('state-icon')}
+                      title={this.state.isOpen ? 'close' : 'open'}
+                      name={
+                        this.state.isOpen ? ChevronUpSolid : ChevronDownSolid
+                      }
+                      onClick={(event) =>
+                        this.state.isOpen && event.stopPropagation()
+                      }
+                      data-test-id="chevron"
+                    />
+                  </div>
+                )
+              )}
             </InputSelectControl>
           </div>
         )}
