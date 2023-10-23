@@ -6,22 +6,22 @@
   width: 100%;
   border-radius: 100px;
 
-  --u-progress-size: 8px;
+  --u-progress-size: size('2x');
 
   &.small {
-    --u-progress-size: 4px;
+    --u-progress-size: size('1x');
   }
 
   &.medium {
-    --u-progress-size: 16px;
+    --u-progress-size: size('4x');
   }
 
   &.large {
-    --u-progress-size: 32px;
+    --u-progress-size: size('8x');
   }
 
   .title {
-    margin-bottom: 8px;
+    margin-bottom: size('2x');
   }
 
   .background {
@@ -30,6 +30,54 @@
     background-color: color('gray-light');
 
     @include border-radius('button');
+  }
+
+  .stripes-back {
+    position: relative;
+    width: var(--custom-width);
+    height: 100%;
+    background-color: var(--u-progress-color);
+
+    @include border-radius('button');
+  }
+
+  .stripes-fore {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      45deg,
+      var(--u-stripes-color) 25%,
+      transparent 25%,
+      transparent 50%,
+      var(--u-stripes-color) 50%,
+      var(--u-stripes-color) 75%,
+      transparent 75%
+    );
+    background-size: 40px 40px;
+
+    @include border-radius('button');
+  }
+
+  .continuous {
+    animation: moveColoredRegion 6s linear infinite;
+  }
+
+  @keyframes moveColoredRegion {
+    0% {
+      left: 0;
+      animation-direction: normal;
+    }
+    50% {
+      left: var(--movement-width);
+      animation-direction: reverse;
+    }
+    100% {
+      left: 0;
+      animation-direction: normal;
+    }
   }
 
   .foreground {
@@ -46,16 +94,20 @@
 
 .info {
   --u-progress-color: #{color('primary')};
+  --u-stripes-color: #{color('primary-60')};
 }
 
 .success {
   --u-progress-color: #{color('success')};
+  --u-stripes-color: #{color('success-40')};
 }
 
 .warning {
   --u-progress-color: #{color('warning')};
+  --u-stripes-color: #{color('warning-40')};
 }
 
 .danger {
   --u-progress-color: #{color('danger')};
+  --u-stripes-color: #{color('danger-40')};
 }

@@ -5,7 +5,7 @@
 
 ```preview
 return (
-    <Progress type="bar" appearance="info" value={25}/>
+    <Progress type="bar" types="stripes" movement = "continuous" size="20" appearance="info" value={25}/>
 )
 ```
 
@@ -48,10 +48,10 @@ return (
 ```preview
 return (
     <>
-    <Progress type="bar" appearance="success" value={20} style={{ marginBottom: '16px' }} />
-    <Progress type="bar" appearance="info" value={30} style={{ marginBottom: '16px' }} />
-    <Progress type="bar" appearance="warning" value={40} style={{ marginBottom: '16px' }} />
-    <Progress type="bar" appearance="danger" value={50} />
+    <Progress type="bar" types="stripes" appearance="success" value={20} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" types="stripes"  appearance="info" value={30} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" types="stripes"  appearance="warning" value={40} style={{ marginBottom: '16px' }} />
+    <Progress type="bar" types="stripes"  appearance="danger" value={50} />
     </>
 )
 ```
