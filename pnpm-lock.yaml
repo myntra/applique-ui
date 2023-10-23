@@ -70,13 +70,13 @@ importers:
         version: 2.1.5
       '@mdx-js/react':
         specifier: 2.1.5
-        version: 2.1.5(react@16.14.0)
+        version: 2.1.5(react@16.9.0)
       '@mdx-js/rollup':
         specifier: ^2.1.2
         version: 2.3.0(rollup@2.77.0)
       '@mdx-js/tag':
         specifier: 0.20.3
-        version: 0.20.3(react@16.14.0)
+        version: 0.20.3(react@16.9.0)
       '@myntra/uikit-icons':
         specifier: '>=1.0.*'
         version: 1.0.43
@@ -133,7 +133,7 @@ importers:
         version: 3.11.0
       enzyme-adapter-react-16:
         specifier: ^1.11.2
-        version: 1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.14.0)
+        version: 1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.9.0)
       enzyme-to-json:
         specifier: ^3.3.5
         version: 3.6.2(enzyme@3.11.0)
@@ -253,13 +253,13 @@ importers:
         version: 1.0.0(webpack@5.74.0)
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
       react-syntax-highlighter:
         specifier: ^15.5.0
-        version: 15.5.0(react@16.14.0)
+        version: 15.5.0(react@16.9.0)
       remark-autolink-headings:
         specifier: ^5.1.0
         version: 5.2.2
@@ -392,10 +392,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -421,10 +421,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -453,10 +453,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -491,10 +491,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -517,10 +517,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -555,10 +555,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -587,10 +587,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -613,10 +613,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -654,10 +654,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -683,10 +683,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -721,10 +721,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -750,10 +750,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -821,10 +821,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -850,10 +850,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -876,10 +876,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@applique-ui/svg':
         specifier: 0.0.*
@@ -923,10 +923,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -952,10 +952,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -981,10 +981,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1033,14 +1033,14 @@ importers:
         version: 1.11.7
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
-        version: /@applique-ui/uikit-icons@1.0.55
+        version: /@applique-ui/uikit-icons@1.0.49
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1066,10 +1066,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1095,10 +1095,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1133,10 +1133,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1162,10 +1162,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1188,10 +1188,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1229,10 +1229,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1261,10 +1261,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1293,10 +1293,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1316,10 +1316,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1354,10 +1354,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1380,10 +1380,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1412,10 +1412,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1447,10 +1447,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1485,10 +1485,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1511,10 +1511,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1540,10 +1540,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1569,10 +1569,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1598,10 +1598,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1636,10 +1636,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1665,10 +1665,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1703,10 +1703,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1759,10 +1759,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1785,10 +1785,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1808,10 +1808,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1837,10 +1837,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1875,10 +1875,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1913,10 +1913,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1942,10 +1942,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -1971,10 +1971,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -2347,10 +2347,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -2472,11 +2472,11 @@ importers:
         version: link:../uikit-can-i-use
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
     optionalDependencies:
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -2491,10 +2491,10 @@ importers:
     optionalDependencies:
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -2542,15 +2542,7 @@ packages:
     resolution: {integrity: sha512-X7XNBpDxrmivfhlvuFpUDPfMFDIC/lrfkE5hioPOvAk17AAMgz2AtQju+owtzGlDXIvx2PRgceqdCGvCs/K2xg==}
     engines: {node: '>=8.0'}
     optionalDependencies:
-      react: 16.14.0
-    dev: true
-
-  /@applique-ui/uikit-icons@1.0.55:
-    resolution: {integrity: sha512-D30zhA6JDJTCwQoT7RcX9Ni6jwqemR1QJQFf64WXsvM2krQE9l6pNFOH6wt/abI+I0KUIDzrFvPOYX4agDhEgQ==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/@applique-ui/uikit-icons/-/uikit-icons-1.0.55.tgz}
-    engines: {node: '>=8.0'}
-    optionalDependencies:
-      react: 16.14.0
-    dev: false
+      react: 16.9.0
 
   /@babel/code-frame@7.0.0-beta.44:
     resolution: {integrity: sha512-cuAuTTIQ9RqcFRJ/Y8PvTh+paepNcaGxwQwjIDRWPXmzzyAeCO4KqS9ikMvq0MCbRk6GlYKwfzStrcP3/jSL8g==}
@@ -4113,14 +4105,14 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/react@2.1.5(react@16.14.0):
+  /@mdx-js/react@2.1.5(react@16.9.0):
     resolution: {integrity: sha512-3Az1I6SAWA9R38rYjz5rXBrGKeZhq96CSSyQtqY+maPj8stBsoUH5pNcmIixuGkufYsh8F5+ka2CVPo2fycWZw==}
     peerDependencies:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.5
       '@types/react': 17.0.2
-      react: 16.14.0
+      react: 16.9.0
     dev: true
 
   /@mdx-js/rollup@2.3.0(rollup@2.77.0):
@@ -4137,12 +4129,12 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/tag@0.20.3(react@16.14.0):
+  /@mdx-js/tag@0.20.3(react@16.9.0):
     resolution: {integrity: sha512-Co3gUFmNDv9z2LjuvLTpTj2NaOSHFxuoZjohcG0YK/KfECO+Ns9idzThMYjfEDe1vAf4c824rqlBYseedJdFNw==}
     peerDependencies:
       react: ^0.14.x || ^15.x || ^16.x
     dependencies:
-      react: 16.14.0
+      react: 16.9.0
     dev: true
 
   /@mrmlnc/readdir-enhanced@2.2.1:
@@ -4156,7 +4148,7 @@ packages:
     resolution: {integrity: sha512-98hJZPcgtlzcbtdfijCQPhczQcNPhk+r8PIwczoWPI7SDhqgSxOAS8W4CuQOotawa71GGIma/u7kOTE5I+HIUA==}
     engines: {node: '>=8.0'}
     optionalDependencies:
-      react: 16.14.0
+      react: 16.9.0
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -4902,7 +4894,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /airbnb-prop-types@2.16.0(react@16.14.0):
+  /airbnb-prop-types@2.16.0(react@16.9.0):
     resolution: {integrity: sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==}
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
@@ -4915,7 +4907,7 @@ packages:
       object.entries: 1.1.6
       prop-types: 15.8.1
       prop-types-exact: 1.2.0
-      react: 16.14.0
+      react: 16.9.0
       react-is: 16.13.1
     dev: true
 
@@ -8078,7 +8070,7 @@ packages:
     engines: {node: '>=0.12'}
     dev: true
 
-  /enzyme-adapter-react-16@1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.14.0):
+  /enzyme-adapter-react-16@1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.9.0):
     resolution: {integrity: sha512-LtjKgvlTc/H7adyQcj+aq0P0H07LDL480WQl1gU512IUyaDo/sbOaNDdZsJXYW2XaoPqrLLE9KbZS+X2z6BASw==}
     peerDependencies:
       enzyme: ^3.0.0
@@ -8086,31 +8078,31 @@ packages:
       react-dom: ^16.0.0-0
     dependencies:
       enzyme: 3.11.0
-      enzyme-adapter-utils: 1.14.1(react@16.14.0)
+      enzyme-adapter-utils: 1.14.1(react@16.9.0)
       enzyme-shallow-equal: 1.0.5
       has: 1.0.3
       object.assign: 4.1.4
       object.values: 1.1.6
       prop-types: 15.8.1
-      react: 16.14.0
-      react-dom: 16.14.0(react@16.14.0)
+      react: 16.9.0
+      react-dom: 16.14.0(react@16.9.0)
       react-is: 16.13.1
-      react-test-renderer: 16.14.0(react@16.14.0)
+      react-test-renderer: 16.14.0(react@16.9.0)
       semver: 5.7.1
     dev: true
 
-  /enzyme-adapter-utils@1.14.1(react@16.14.0):
+  /enzyme-adapter-utils@1.14.1(react@16.9.0):
     resolution: {integrity: sha512-JZgMPF1QOI7IzBj24EZoDpaeG/p8Os7WeBZWTJydpsH7JRStc7jYbHE4CmNQaLqazaGFyLM8ALWA3IIZvxW3PQ==}
     peerDependencies:
       react: 0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0
     dependencies:
-      airbnb-prop-types: 2.16.0(react@16.14.0)
+      airbnb-prop-types: 2.16.0(react@16.9.0)
       function.prototype.name: 1.1.5
       has: 1.0.3
       object.assign: 4.1.4
       object.fromentries: 2.0.6
       prop-types: 15.8.1
-      react: 16.14.0
+      react: 16.9.0
       semver: 5.7.1
     dev: true
 
@@ -9399,7 +9391,7 @@ packages:
     dev: false
 
   /fsevents@1.2.13:
-    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/fsevents/-/fsevents-1.2.13.tgz}
+    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
     deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
@@ -9410,7 +9402,7 @@ packages:
     optional: true
 
   /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/fsevents/-/fsevents-2.3.2.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -12723,7 +12715,7 @@ packages:
     dev: true
 
   /monaco-editor@0.20.0:
-    resolution: {integrity: sha512-hkvf4EtPJRMQlPC3UbMoRs0vTAFAYdzFQ+gpMb8A+9znae1c43q8Mab9iVsgTcg/4PNiLGGn3SlDIa8uvK1FIQ==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/monaco-editor/-/monaco-editor-0.20.0.tgz}
+    resolution: {integrity: sha512-hkvf4EtPJRMQlPC3UbMoRs0vTAFAYdzFQ+gpMb8A+9znae1c43q8Mab9iVsgTcg/4PNiLGGn3SlDIa8uvK1FIQ==}
     dev: true
 
   /moo@0.5.2:
@@ -14688,21 +14680,21 @@ packages:
       recast: 0.12.9
     dev: false
 
-  /react-dom@16.14.0(react@16.14.0):
-    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/react-dom/-/react-dom-16.14.0.tgz}
+  /react-dom@16.14.0(react@16.9.0):
+    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
     peerDependencies:
       react: ^16.14.0
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.8.1
-      react: 16.14.0
+      react: 16.9.0
       scheduler: 0.19.1
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-syntax-highlighter@15.5.0(react@16.14.0):
+  /react-syntax-highlighter@15.5.0(react@16.9.0):
     resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
     peerDependencies:
       react: '>= 0.14.0'
@@ -14711,24 +14703,24 @@ packages:
       highlight.js: 10.7.3
       lowlight: 1.20.0
       prismjs: 1.29.0
-      react: 16.14.0
+      react: 16.9.0
       refractor: 3.6.0
     dev: true
 
-  /react-test-renderer@16.14.0(react@16.14.0):
+  /react-test-renderer@16.14.0(react@16.9.0):
     resolution: {integrity: sha512-L8yPjqPE5CZO6rKsKXRO/rVPiaCOy0tQQJbC+UjPNlobl5mad59lvPjwFsQHTvL03caVDIVr9x9/OSgDe6I5Eg==}
     peerDependencies:
       react: ^16.14.0
     dependencies:
       object-assign: 4.1.1
       prop-types: 15.8.1
-      react: 16.14.0
+      react: 16.9.0
       react-is: 16.13.1
       scheduler: 0.19.1
     dev: true
 
-  /react@16.14.0:
-    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/react/-/react-16.14.0.tgz}
+  /react@16.9.0:
+    resolution: {integrity: sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -16514,7 +16506,7 @@ packages:
     dev: false
 
   /stylelint@10.1.0:
-    resolution: {integrity: sha512-OmlUXrgzEMLQYj1JPTpyZPR9G4bl0StidfHnGJEMpdiQ0JyTq0MPg1xkHk1/xVJ2rTPESyJCDWjG8Kbpoo7Kuw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/stylelint/-/stylelint-10.1.0.tgz}
+    resolution: {integrity: sha512-OmlUXrgzEMLQYj1JPTpyZPR9G4bl0StidfHnGJEMpdiQ0JyTq0MPg1xkHk1/xVJ2rTPESyJCDWjG8Kbpoo7Kuw==}
     engines: {node: '>=8.7.0'}
     hasBin: true
     requiresBuild: true
@@ -17127,7 +17119,7 @@ packages:
     dev: false
 
   /uglify-js@3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/uglify-js/-/uglify-js-3.17.4.tgz}
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
