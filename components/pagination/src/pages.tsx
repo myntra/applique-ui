@@ -38,7 +38,7 @@ const SkipPages = ({ onPageChange, type, currentPage }) => {
       alignment="middle"
       type="stack"
       gutter="large"
-      className={classnames('pagesItemSkipPages')}
+      className={classnames('pages-item-skip-pages')}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
@@ -98,11 +98,11 @@ const Pages = ({
       alignment="middle"
       gutter="large"
       type="stack"
-      className={classnames('pagesContainer')}
+      className={classnames('pages-container')}
     >
       <Icon
         name={ChevronLeftSolid}
-        className={classnames('pagesItemIcon', {
+        className={classnames('pages-item-icon', {
           pagesItemIconDisabled: currentPage === 1,
         })}
         onClick={onPrevious}
@@ -120,7 +120,7 @@ const Pages = ({
 
         return (
           <Button
-            className={classnames('pagesItem')}
+            className={classnames('pages-item')}
             size="small"
             type={pageNumber === currentPage ? 'secondary' : 'text'}
             onClick={() => onPageChange(pageNumber)}
@@ -131,7 +131,7 @@ const Pages = ({
       })}
       <Icon
         name={ChevronRightSolid}
-        className={classnames('pagesItemIcon', {
+        className={classnames('pages-item-icon', {
           pagesItemIconDisabled: currentPage === lastPage,
         })}
         onClick={onNext}

@@ -3,7 +3,7 @@ import InputSelect from '@applique-ui/input-select'
 import InputNumber from '@applique-ui/input-number'
 import Layout from '@applique-ui/layout'
 
-import RevampPagination from './pages'
+import Pages from './pages'
 import classnames from './pagination.module.scss'
 
 export interface Props extends BaseProps {
@@ -68,7 +68,7 @@ export default function Pagination(props: Props) {
   return (
     <div className={classnames('pagination')}>
       {!hideSize && (
-        <div className={classnames('paginationSelectSizeWrapper')}>
+        <div className={classnames('pagination-select-size-wrapper')}>
           <InputSelect
             variant="bordered"
             required
@@ -81,7 +81,7 @@ export default function Pagination(props: Props) {
           />
         </div>
       )}
-      <RevampPagination
+      <Pages
         className={className}
         currentPage={page}
         totalCount={total}
@@ -95,7 +95,7 @@ export default function Pagination(props: Props) {
         gutter="medium"
       >
         <span>Go to</span>
-        <div className={classnames('paginationPageInputWrapper')}>
+        <div className={classnames('pagination-page-input-wrapper')}>
           <InputNumber
             value={pageNumberCustom}
             onChange={setPageNumberCustom}
@@ -112,7 +112,6 @@ export default function Pagination(props: Props) {
 Pagination.defaultProps = {
   page: 8,
   size: 10,
-  total: 200,
   sizes: [10, 15, 30, 50],
 }
 

@@ -9,33 +9,33 @@
     margin-right: size('8x');
   }
 
-  &SelectSizeWrapper {
+  &-select-size-wrapper {
     width: 120px;
   }
 
-  &PageInputWrapper {
+  &-page-input-wrapper {
     width: size('8x');
   }
 }
 
 .pages {
-  &Container {
+  &-container {
     display: flex;
     list-style-type: none;
   }
 
-  &Item {
+  &-item {
     margin-left: 0 !important;
 
-    &Icon {
+    &-icon {
       color: color('primary');
       cursor: pointer;
 
-      &Disabled {
+      &-disabled {
         cursor: not-allowed;
       }
     }
-    &SkipPages {
+    &-skipPages {
       width: size('3x');
       cursor: pointer;
     }
