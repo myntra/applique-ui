@@ -65,3 +65,13 @@
   display: inline-block;
   padding: 0.25em;
 }
+
+.pagination-new {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
+}

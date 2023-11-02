@@ -1,28 +1,255 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, useState, useCallback, useMemo } from 'react'
 import Icon from '@applique-ui/icon'
 import { range } from '@applique-ui/uikit-utils'
-
-import classnames from './pagination.module.scss'
+import Button from '@applique-ui/button'
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
 
-export interface Props extends BaseProps {
-  /** Current selected page */
-  page: number
-  /** On change handler */
-  onChange(payload: { page: number; size: number }): void
+import classnames from './pagination.module.scss'
+import { generateModel } from './generator'
+import { VisuallyHidden } from "../../../internal/components";
+
+type PaginationElements = {
+    /** Current selected page */
+    page: number
+    /** On change handler */
+    onChange(payload: { page: number; size: number }): void
+    /** Total count of result items */
+    total: number
+    /** Allowed page sizes. Try using virtualized table for sizes > 50 */
+    sizes?: number[]
+
+    adjacentPageCount?: number
+
+    totalPages: number
+
+    pageLimit?: number
+}
+
+export type Props = Omit<React.ComponentPropsWithoutRef<'nav'>, 'onChange'> & BaseProps & {
+  'aria-label': string
   /** Sizes per page */
   size: number
-  /** Total count of result items */
-  total: number
-  /** Allowed page sizes. Try using virtualized table for sizes > 50 */
-  sizes?: number[]
   /** Hide size selector */
   hideSize?: boolean
   /** Hide page selector dropdown */
   pageInputDisabled?: boolean
-  /** @private */
-  className?: string
+  /** Current selected page */
+  page: number
+  /** On change handler */
+  onChange(payload: { page: number; size: number }): void
+  /** Total count of result items */
+  total: number
+  /** Allowed page sizes. Try using virtualized table for sizes > 50 */
+  sizes?: number[]
+
+  adjacentPageCount?: number
+}
+
+const MAX_TRUNCATED_STEP_COUNT = 7
+
+function useGenerateElements(config: PaginationElements) {
+  const {
+    page,
+    onChange,
+    total,
+    sizes,
+    adjacentPageCount,
+    totalPages,
+  } = config
+
+  const selectPreviousPage = useCallback(() => {
+    selectPage(Math.max(1, page - 1))
+  }, [page])
+
+  const selectNextPage = useCallback(() => {
+    selectPage(Math.min(totalPages, page + 1))
+  }, [totalPages, page]);
+
+  const [startIndexOffset, setStartIndexOffset] = useState(() => {
+    if ((page - adjacentPageCount) <= 2) {
+      return 1
+    }
+    return (page - adjacentPageCount) - 1
+  })
+
+  const [model, hasLeadingTruncation, hasEndingTruncation] = React.useMemo(() => {
+    return generateModel({
+      page,
+      total,
+      sizes,
+      adjacentPageCount,
+      totalPages,
+      startIndexOffset
+    })
+  }, [page,
+    total,
+    sizes,
+    adjacentPageCount,
+    totalPages,
+    startIndexOffset
+  ])
+  
+  const children = React.useMemo(() => {
+    return model.map(page => {
+      let props = {}
+      let content = ''
+      let key = ''
+      switch(page.type) {
+        case 'BREAK': {
+          return <TruncationStep key={`page-${page.num}-break`}/>
+        }
+        case 'PREV': {
+          key = 'page-prev'
+          if (page.disabled) {
+            props = { ...props, disabled: true, 'aria-disabled': 'true' }
+          }
+          else {
+            props = { ...props, 'aria-label': 'Previous Page' }
+          }
+          return <PageStep
+            {...props}
+            key={key}
+            onClick={() => {
+              if (page.disabled) {
+                return
+              }
+              if (hasLeadingTruncation && (( (totalPages -  page.num) - adjacentPageCount) > 2)) {
+                setStartIndexOffset(prev => prev - 1)
+              }
+              selectPreviousPage()
+            }}
+            icon={ChevronLeftSolid}
+          >
+            <VisuallyHidden>&nbsp;page</VisuallyHidden>
+          </PageStep>
+        }
+        case 'NEXT': {
+          key = 'page-next'
+          if (page.disabled) {
+            props = { ...props, disabled: true, 'aria-disabled': 'true' }
+          }
+          else {
+            props = { ...props, 'aria-label': 'Next Page' }
+          }
+          return <PageStep
+            {...props}
+            key={key}
+            onClick={() => {
+              if (page.disabled) {
+                return
+              }
+              if (hasEndingTruncation && ((page.num - adjacentPageCount) > 2)) {
+                setStartIndexOffset(prev => prev + 1)
+              }
+              selectNextPage()
+            }}
+            icon={ChevronRightSolid}
+          >
+            <VisuallyHidden>&nbsp;page</VisuallyHidden>
+          </PageStep>
+        }
+        case 'NUM': {
+          key = `page-${page.num}`
+          return <PageStep
+            {...props}
+            key={key}
+            type={page.selected ? 'primary' : 'tertiary'}
+            onClick={() => {
+              if (page.disabled) {
+                return
+              }
+              // if (!(startIndexOffset === 1 && (page.num - adjacentPageCount) <= 2)) {
+              //   setStartIndexOffset((page.num - adjacentPageCount) - 1)
+              // }
+              if (hasEndingTruncation && hasLeadingTruncation) {
+                console.log("ss")
+              }
+              selectPage(parseInt(page.num))
+            }}
+          >
+            {String(page.num)}
+            {page.precedesBreak ? (
+                        <VisuallyHidden>…</VisuallyHidden>
+                      ) : null}
+            <VisuallyHidden>&nbsp;page</VisuallyHidden>
+          </PageStep>
+        }
+      }
+      return {props, content, key}
+    })
+  }, [model, selectPage, selectNextPage, selectPreviousPage])
+
+  function selectPage(newPage: number) {
+    if (page !== newPage) {
+      // logic for changing start and end index
+
+      ////
+      onChange({page: newPage, size: sizes[0]})
+    }
+  } 
+
+  return children
+}
+
+function TruncationStep() {
+  return (
+    /**
+     * aria-hidden attribute indicates that the element and all of its descendants 
+     * are not visible or perceivable and screen readers will skip over this element.
+     */
+    <li className={classnames('truncation-step')}><span aria-hidden="true">...</span></li>
+  )
+}
+
+function PageStep(config) {
+  const {
+    children,
+    ...restProp
+  } = config
+  return (
+    <li className={classnames('page-step')}>
+      <Button {...restProp}>
+        {children}
+      </Button>
+    </li>
+  )
+}
+
+function Step({active, content}) {
+  return (
+    <li className={classnames('pagination-step')}>
+      <Button
+        className={classnames('pagination-page')}
+        type={active ? "secondary" : 'tertiary'}
+      >{content}</Button>
+    </li>
+  )
+}
+
+export function P({
+  page,
+  sizes = [10, 15, 30, 50],
+  total,
+  onChange = noOp,
+  adjacentPageCount = 2,
+  ...props
+}: Props) {
+  const [pageLimit, setPageLimit] = useState<number>(sizes[0])
+  const totalPages: number = total / pageLimit
+}
+
+function Element(config: PaginationElements) {
+  const [temp, setTemp] = React.useState(6)
+  // const model = React.useMemo(() => {}, )
+  const elementsToRender = useGenerateElements(config)
+  return (
+    <div>
+      <ol className={classnames('pagination-new')}>
+      {elementsToRender}
+      </ol>
+    </div>
+  )
 }
 
 /**
@@ -37,6 +264,7 @@ export default class Pagination extends PureComponent<Props> {
     page: 1,
     size: 15,
     sizes: [10, 15, 30, 50],
+    adjacentPageCount: 2
   }
 
   static propTypes = {
@@ -79,15 +307,26 @@ export default class Pagination extends PureComponent<Props> {
       sizes,
       hideSize,
       pageInputDisabled,
+      adjacentPageCount,
+      onChange,
     } = this.props
     const totalPages = Math.ceil(total / size)
     const pages = range(1, pageInputDisabled ? 1 : totalPages).map(
       (page) => page
     )
-    const start = (page - 1) * size + 1
-    const end = total < start + size - 1 ? total : start + size - 1
+    const start = ((page - 1) * size) + 1
+    const end = total < (page * size) ? total : (page * size)
+    const prop = {
+      page,
+      onChange,
+      total,
+      sizes,
+      adjacentPageCount,
+      totalPages,
+    }
     return (
       <div className={classnames('pagination', className)}>
+        <Element {...prop}/>
         {!hideSize && (
           <div className={classnames('size')}>
             <span>Rows per page:</span>
@@ -150,4 +389,8 @@ export default class Pagination extends PureComponent<Props> {
       </div>
     )
   }
+}
+
+const noOp = () => {
+  /*noop*/
 }

@@ -4,7 +4,7 @@
 
 ```preview
 return (
-    <Pagination />
+    <div />
 )
 ```
 
@@ -15,7 +15,7 @@ return (
 ```preview
 const [total] = React.useState(200)
 const [size, setSize] = React.useState(10)
-const [page, setPage] = React.useState(1)
+const [page, setPage] = React.useState(15)
 
 return (
     <Pagination total={total} size={size} page={page} onChange={({page, size}) => { setSize(size); setPage(page) }}/>

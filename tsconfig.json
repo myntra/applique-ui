@@ -1,5 +1,5 @@
 {
-  "include": ["components/", "packages/", "themes/", "@types/"],
+  "include": ["components/", "packages/", "themes/", "@types/", "internal/"],
   "exclude": ["dist", "node_modules", "old-packages"],
   "compilerOptions": {
     "rootDir": ".",
