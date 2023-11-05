@@ -93,7 +93,6 @@ export default class Stepper extends PureComponent<
           {Children.map(children, (child: any, index) =>
             cloneElement(child, {
               'data-index': index,
-              hasSeparator: !(index === children.length - 1),
               orientation,
               active: activeStep === index,
             })

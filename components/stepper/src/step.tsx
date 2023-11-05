@@ -9,7 +9,6 @@ import Text from '@applique-ui/text'
 import Layout from '@applique-ui/layout'
 import Icon from '@applique-ui/icon'
 import classnames from './step.module.scss'
-import StepSeparator from './step-separator'
 
 import TimesSolid from 'uikit-icons/svgs/TimesSolid'
 import CheckSolid from 'uikit-icons/svgs/CheckSolid'
@@ -24,7 +23,7 @@ export interface Props extends BaseProps {
   /** Label or title text */
   label: string
   /** Small description if required */
-  description?: string
+  description?: string | ReactNode
   /** Boolean to set if step error's out */
   error?: boolean
   /** Boolean to set if step is completed */
@@ -43,7 +42,6 @@ export default class Step extends PureComponent<Props> {
   /**
    * Your code goes here
    */
-  static Separator = StepSeparator
   render() {
     const children: any = Children.toArray(
       this.props.children
@@ -56,79 +54,75 @@ export default class Step extends PureComponent<Props> {
       error,
       className,
       orientation,
-      hasSeparator,
       active,
       ...props
     } = this.props
     return (
-      <div className={classnames('step', `step--${orientation}`)}>
-        <div
-          className={classnames('step__item', `step__item--${orientation}`, {
-            'step__item--completed': completed,
-            'step__item--has-small-step': !!children.length,
-            'step__item--active': active,
-            'step__item--error': error,
-          })}
-        >
-          <div className={classnames('step__indicator')}>
-            {completed && (
-              <Icon
-                name={CheckSolid}
-                color="light"
-                className={classnames('step__icon')}
-              />
-            )}
-            {error && (
-              <Icon
-                name={TimesSolid}
-                color="light"
-                className={classnames('step__icon')}
-              />
-            )}
-          </div>
-          {hasSeparator && (
-            <StepSeparator
-              orientation={orientation}
-              hasSmallSteps={!!children.length}
-              completed={completed}
-            >
-              {Children.map(children, (child: any, index) =>
-                cloneElement(child, {
-                  'data-index': `step.${this.props['data-index']}.${index}`,
-                  orientation,
-                  children: null,
-                  active:
-                    active &&
-                    index ===
-                      children.findIndex((child) => !child.props.completed),
-                })
-              )}
-            </StepSeparator>
-          )}
-          {!!children.length && completed && (
-            <div className={classnames('step__half-complete')} />
-          )}
-        </div>
-        <Layout
-          type="row"
-          gutter="none"
-          className={classnames('step__label', `step__label--${orientation}`)}
-        >
-          <Text
-            emphasis={completed || active ? 'high' : 'disabled'}
-            weight={active ? 'bolder' : null}
+      <div className={classnames(
+        'step',
+        `step--${orientation}`, {
+        'step--completed': completed,
+      })
+      }>
+        <Layout type={orientation === 'vertical' ? "stack" : "row"} className={classnames('step__content')}>
+          <div
+            className={classnames('step__indicator', `step__indicator--${orientation}`, {
+              'step__indicator--completed': completed,
+              'step__indicator--has-small-step': !!children.length,
+              'step__indicator--active': active,
+              'step__indicator--error': error,
+            })}
           >
-            {label}
-          </Text>
-          {description && (
-            <Text.p
+            <div className={classnames('step__indicator--icon')}>
+              {completed && (
+                <Icon
+                  name={CheckSolid}
+                  color="light"
+                  className={classnames('step__indicator--icon--design')}
+                />
+              )}
+              {error && (
+                <Icon
+                  name={TimesSolid}
+                  color="light"
+                  className={classnames('step__indicator--icon--design')}
+                />
+              )}
+            </div>
+          </div>
+          <Layout
+            type="row"
+            gutter="none"
+            className={classnames('step__label', `step__label--${orientation}`)}
+          >
+            <Text.H4
               emphasis={completed || active ? 'high' : 'disabled'}
               weight={active ? 'bolder' : null}
+              className={classnames('step__label--heading')}
             >
-              {description}
-            </Text.p>
-          )}
+              {label}
+            </Text.H4>
+            {typeof description === 'string' ? (
+              <Text.p
+                emphasis={completed || active ? 'high' : 'disabled'}
+                weight={active ? 'bolder' : null}
+              >
+                {description}
+              </Text.p>
+            ) : <div className={classnames('step__label--description')}>{description}</div>}
+          </Layout>
         </Layout>
+        {Children.map(children, (child: any, index) =>
+          cloneElement(child, {
+            'data-index': `step.${this.props['data-index']}.${index}`,
+            orientation,
+            children: null,
+            active:
+              active &&
+              index ===
+              children.findIndex((child) => !child.props.completed),
+          })
+        )}
       </div>
     )
   }

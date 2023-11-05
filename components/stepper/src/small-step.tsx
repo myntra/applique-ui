@@ -3,7 +3,6 @@ import classnames from './small-step.module.scss'
 import { Props as StepProps } from './step'
 import Text from '@applique-ui/text'
 import Layout from '@applique-ui/layout'
-import StepSeparator from './step-separator'
 
 export interface Props extends BaseProps, StepProps {
   /** Make label and description always visible */
@@ -40,13 +39,8 @@ export default class SmallStep extends PureComponent<Props> {
           'small-step--error': error,
         })}
       >
-        <StepSeparator
-          orientation={orientation}
-          className={classnames('small-step__left-separator')}
-          completed={completed}
-        />
         <div className={classnames('small-step__tooltip')}>
-          <div className={classnames('small-step__indicator')} />
+          <div className={classnames('small-step__indicator', `small-step__indicator--${orientation}`)} />
           <Layout
             type="row"
             gutter="none"
@@ -61,6 +55,7 @@ export default class SmallStep extends PureComponent<Props> {
             <Text.p
               color={orientation === 'horizontal' ? 'light' : 'dark'}
               weight={active ? 'bolder' : null}
+              className={classnames('small-step__label--heading')}
             >
               {label}
             </Text.p>
@@ -74,11 +69,6 @@ export default class SmallStep extends PureComponent<Props> {
             )}
           </Layout>
         </div>
-        <StepSeparator
-          orientation={orientation}
-          className={classnames('small-step__right-separator')}
-          completed={completed}
-        />
       </div>
     )
   }
