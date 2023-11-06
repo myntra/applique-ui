@@ -10,6 +10,7 @@ import {
   getFilteredNavs,
   replaceSpacesWithUnderscore,
 } from './utils'
+import AlertTag from './alert-tag'
 
 export interface TopNavItemProps extends BaseProps {
   itemData: NAVIGATION_ITEM_L1_INTERFACE
@@ -87,6 +88,9 @@ export default class TopNavItem extends PureComponent<
             />
           )}
           {itemData.label}
+          {itemData.tagLabel ? (
+            <AlertTag tagType={itemData.tagType} tagLabel={itemData.tagLabel} />
+          ) : null}
           {this.state.isHovering && checkIfNonEmptyMenu(itemData) && (
             <TopNavHover
               navTabConfig={{ menus, directs }}

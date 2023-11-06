@@ -4,9 +4,13 @@
   $self: &;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
+
+  min-width: size('3x') * 10;
+  min-height: size('3x') * 10;
+
+
   &:first-child {
     #{ $self }__left-separator {
       flex: 1 1 100%;
@@ -23,7 +27,7 @@
     display: block !important;
     &:hover {
       #{ $self }__indicator {
-        transform: translate(-50%, -50%) #{scale }(0.7);
+        transform: translate(-50%, -50%) #{scale}(0.7);
       }
       #{ $self }__label {
         display: flex;
@@ -45,29 +49,38 @@
     box-shadow: shadow('stepper');
     transform: translate(-50%, -50%) #{scale }(0.5);
     transform-origin: center center;
+
+    &--horizontal {
+      top: -1px;
+    }
+    &--vertical {
+      top: size('3x');
+      left: -1px;
+    }
   }
   &__label {
-    position: absolute;
-    bottom: 0;
-    left: -50px;
     display: none;
-    width: 160px;
-    padding: 12px;
-    margin-bottom: 16px;
+    min-width: 160px;
+    padding: 0 size('3x');
+    margin-bottom: size('4x');
     background: color('black');
     &::after {
       position: absolute;
       bottom: 0;
       left: 50px;
       content: '';
-      border: 8px solid;
+      border: size('2x') solid;
       border-color: color('black') transparent transparent transparent;
       transform: translate(-50%, 100%);
     }
     &--always-open {
       display: flex;
     }
+    &--heading {
+      margin-top: 0 !important;
+    }
   }
+
   &--vertical {
     flex-direction: column;
     #{ $self }__label {
@@ -76,7 +89,6 @@
       display: flex;
       margin-bottom: 0;
       background: transparent;
-      transform: translateY(50%);
       &::after {
         content: none;
       }

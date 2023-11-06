@@ -1,0 +1,23 @@
+@import '@accoutrement';
+
+.tag-border {
+  align-items: center;
+  padding: size('1x');
+  margin-left: size('2x');
+  font-size: font-size('caption');
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: color('white-90');
+  text-transform: uppercase;
+  background: color('warning-100');
+  border-radius: 2px;
+
+  &.beta {
+    background: color('warning-100');
+  }
+
+  &.new {
+    background: color('success-100');
+  }
+}

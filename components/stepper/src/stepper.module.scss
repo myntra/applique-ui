@@ -2,6 +2,8 @@
 
 .stepper {
   height: 100%;
+  padding: size('2x');
+  
   &__pane {
     display: flex;
     padding: size('6x');

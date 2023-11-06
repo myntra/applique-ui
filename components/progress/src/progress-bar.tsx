@@ -23,6 +23,18 @@ export interface Props extends BaseProps {
    * @since 0.11.0
    */
   size?: 'small' | 'medium' | 'large'
+  /**
+   * Stripe or regular type of progress bar.
+   *
+   * @since 0.11.0
+   */
+  types?: 'stripes' | 'regular'
+  /**
+   * movement of progress bar.
+   *
+   * @since 0.11.0
+   */
+  movement?: 'continuous' | 'static'
 }
 
 export default function ProgressBar({
@@ -34,6 +46,8 @@ export default function ProgressBar({
   children,
   size,
   showValue,
+  types = 'regular',
+  movement = 'static',
   ...props
 }: Props) {
   return (
@@ -49,10 +63,24 @@ export default function ProgressBar({
         <div className={classnames('title')}>{children || title}</div>
       ) : null}
       <div className={classnames('background')}>
-        <div
-          className={classnames('foreground')}
-          style={{ width: `${Math.min(100, value)}%` }}
-        />
+        {types === 'stripes' ? (
+          <div
+            className={classnames('stripes-back', movement)}
+            style={
+              {
+                '--custom-width': `${Math.min(100, value)}%`,
+                '--movement-width': `${Math.abs(100 - value)}%`,
+              } as React.CSSProperties
+            }
+          >
+            <div className={classnames('stripes-fore')} />
+          </div>
+        ) : (
+          <div
+            className={classnames('foreground')}
+            style={{ width: `${Math.min(100, value)}%` }}
+          />
+        )}
       </div>
       {showValue && <T className={classnames('value')}>{value}%</T>}
     </div>
@@ -61,4 +89,6 @@ export default function ProgressBar({
 
 ProgressBar.defaultProps = {
   appearance: 'success',
+  types: 'regular',
+  movement: 'static',
 }

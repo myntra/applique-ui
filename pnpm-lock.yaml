@@ -70,13 +70,13 @@ importers:
         version: 2.1.5
       '@mdx-js/react':
         specifier: 2.1.5
-        version: 2.1.5(react@16.14.0)
+        version: 2.1.5(react@16.9.0)
       '@mdx-js/rollup':
         specifier: ^2.1.2
         version: 2.3.0(rollup@2.77.0)
       '@mdx-js/tag':
         specifier: 0.20.3
-        version: 0.20.3(react@16.14.0)
+        version: 0.20.3(react@16.9.0)
       '@myntra/uikit-icons':
         specifier: '>=1.0.*'
         version: 1.0.43
@@ -133,7 +133,7 @@ importers:
         version: 3.11.0
       enzyme-adapter-react-16:
         specifier: ^1.11.2
-        version: 1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.14.0)
+        version: 1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.9.0)
       enzyme-to-json:
         specifier: ^3.3.5
         version: 3.6.2(enzyme@3.11.0)
@@ -229,7 +229,7 @@ importers:
         version: 2.29.4
       monaco-editor-webpack-plugin:
         specifier: ^1.7.0
-        version: 1.9.1(monaco-editor@0.20.0)(webpack@5.74.0)
+        version: 1.9.1(webpack@5.74.0)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -241,7 +241,7 @@ importers:
         version: 8.4.23
       postcss-loader:
         specifier: ^7.2.4
-        version: 7.2.4(@types/node@12.20.55)(postcss@8.4.23)(ts-node@10.9.1)(typescript@3.9.10)(webpack@5.74.0)
+        version: 7.2.4(postcss@8.4.23)(ts-node@10.9.1)(typescript@3.9.10)(webpack@5.74.0)
       prettier:
         specifier: ^1.16.4
         version: 1.19.1
@@ -253,13 +253,13 @@ importers:
         version: 1.0.0(webpack@5.74.0)
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
       react-syntax-highlighter:
         specifier: ^15.5.0
-        version: 15.5.0(react@16.14.0)
+        version: 15.5.0(react@16.9.0)
       remark-autolink-headings:
         specifier: ^5.1.0
         version: 5.2.2
@@ -349,7 +349,7 @@ importers:
         version: 9.4.1(typescript@3.9.10)(webpack@5.74.0)
       ts-node:
         specifier: ~10.9.1
-        version: 10.9.1(@types/node@12.20.55)(typescript@3.9.10)
+        version: 10.9.1(typescript@3.9.10)
       typescript:
         specifier: ^3.9.7
         version: 3.9.10
@@ -373,19 +373,19 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -408,10 +408,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       name-initials:
         specifier: ^0.1.3
         version: 0.1.3
@@ -437,16 +437,16 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -469,22 +469,22 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/text':
         specifier: 0.0.*
-        version: link:../text
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -507,10 +507,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -533,22 +533,22 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/loader':
         specifier: 0.0.*
-        version: link:../loader
+        version: 0.0.54
       '@applique-ui/text':
         specifier: 0.0.*
-        version: link:../text
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -571,16 +571,16 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/list':
         specifier: 0.0.*
-        version: link:../list
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -603,10 +603,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -629,22 +629,22 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/click-away':
         specifier: 0.0.*
-        version: link:../click-away
+        version: 0.0.54
       '@applique-ui/measure':
         specifier: 0.0.*
-        version: link:../measure
+        version: 0.0.54
       '@applique-ui/portal':
         specifier: 0.0.*
-        version: link:../portal
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -670,10 +670,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -699,19 +699,19 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -737,10 +737,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -766,55 +766,55 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/button-group':
         specifier: 0.0.*
-        version: link:../button-group
+        version: 0.0.54
       '@applique-ui/field':
         specifier: 0.0.*
-        version: link:../field
+        version: 0.0.54
       '@applique-ui/grid':
         specifier: 0.0.*
-        version: link:../grid
+        version: 0.0.54
       '@applique-ui/input-checkbox':
         specifier: 0.0.*
-        version: link:../input-checkbox
+        version: 0.0.54
       '@applique-ui/input-date':
         specifier: 0.0.*
-        version: link:../input-date
+        version: 0.0.54
       '@applique-ui/input-file':
         specifier: 0.0.*
-        version: link:../input-file
+        version: 0.0.54
       '@applique-ui/input-masked':
         specifier: 0.0.*
-        version: link:../input-masked
+        version: 0.0.54
       '@applique-ui/input-month':
         specifier: 0.0.*
-        version: link:../input-month
+        version: 0.0.54
       '@applique-ui/input-number':
         specifier: 0.0.*
-        version: link:../input-number
+        version: 0.0.54
       '@applique-ui/input-radio':
         specifier: 0.0.*
-        version: link:../input-radio
+        version: 0.0.54
       '@applique-ui/input-select':
         specifier: 0.0.*
-        version: link:../input-select
+        version: 0.0.54
       '@applique-ui/input-text':
         specifier: 0.0.*
-        version: link:../input-text
+        version: 0.0.54
       '@applique-ui/input-text-area':
         specifier: 0.0.*
-        version: link:../input-text-area
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -837,10 +837,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -866,10 +866,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -883,7 +883,7 @@ importers:
     devDependencies:
       '@applique-ui/svg':
         specifier: 0.0.*
-        version: link:../../packages/svg
+        version: 0.0.54
       '@types/react':
         specifier: 17.0.2
         version: 17.0.2
@@ -907,10 +907,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       intersection-observer-polyfill:
         specifier: ^0.1.0
         version: 0.1.0
@@ -939,13 +939,13 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -968,13 +968,13 @@ importers:
     dependencies:
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -997,34 +997,34 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/button-group':
         specifier: 0.0.*
-        version: link:../button-group
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/input-masked':
         specifier: 0.0.*
-        version: link:../input-masked
+        version: 0.0.54
       '@applique-ui/input-number':
         specifier: 0.0.*
-        version: link:../input-number
+        version: 0.0.54
       '@applique-ui/input-text':
         specifier: 0.0.*
-        version: link:../input-text
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       date-fns:
         specifier: ^2.0.0-alpha.27
         version: 2.30.0
@@ -1053,13 +1053,13 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/input-text':
         specifier: 0.0.*
-        version: link:../input-text
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1082,13 +1082,13 @@ importers:
     dependencies:
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1111,19 +1111,19 @@ importers:
     dependencies:
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/input-date':
         specifier: 0.0.*
-        version: link:../input-date
+        version: 0.0.54
       '@applique-ui/input-masked':
         specifier: 0.0.*
-        version: link:../input-masked
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       luxon:
         specifier: ^1.21.1
         version: 1.28.1
@@ -1149,13 +1149,13 @@ importers:
     dependencies:
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1178,10 +1178,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1204,22 +1204,22 @@ importers:
     dependencies:
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/list':
         specifier: 0.0.*
-        version: link:../list
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       sifter:
         specifier: ^0.5.3
         version: 0.5.4
@@ -1245,16 +1245,16 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1277,16 +1277,16 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/input':
         specifier: 0.0.*
-        version: link:../input
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1309,7 +1309,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1332,19 +1332,19 @@ importers:
     dependencies:
       '@applique-ui/input-checkbox':
         specifier: 0.0.*
-        version: link:../input-checkbox
+        version: 0.0.54
       '@applique-ui/input-radio':
         specifier: 0.0.*
-        version: link:../input-radio
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       '@applique-ui/virtual-list':
         specifier: 0.0.*
-        version: link:../virtual-list
+        version: 0.0.54
       scroll-into-view-if-needed:
         specifier: ^2.2.20
         version: 2.2.31
@@ -1370,10 +1370,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1396,10 +1396,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -1428,19 +1428,19 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/portal':
         specifier: 0.0.*
-        version: link:../portal
+        version: 0.0.54
       '@applique-ui/text':
         specifier: 0.0.*
-        version: link:../text
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1463,22 +1463,22 @@ importers:
     dependencies:
       '@applique-ui/avatar':
         specifier: 0.0.*
-        version: link:../avatar
+        version: 0.0.54
       '@applique-ui/click-away':
         specifier: 0.0.*
-        version: link:../click-away
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1501,10 +1501,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1530,22 +1530,13 @@ importers:
         version: link:../button
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
-      '@applique-ui/input-number':
-        specifier: 0.0.*
-        version: link:../input-number
-      '@applique-ui/input-select':
-        specifier: 0.0.*
-        version: link:../input-select
-      '@applique-ui/layout':
-        specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1568,10 +1559,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -1597,13 +1588,13 @@ importers:
     dependencies:
       '@applique-ui/text':
         specifier: 0.0.*
-        version: link:../text
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1626,22 +1617,22 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/field':
         specifier: 0.0.*
-        version: link:../field
+        version: 0.0.54
       '@applique-ui/form':
         specifier: 0.0.*
-        version: link:../form
+        version: 0.0.54
       '@applique-ui/grid':
         specifier: 0.0.*
-        version: link:../grid
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1664,13 +1655,13 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1693,19 +1684,19 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/text':
         specifier: 0.0.*
-        version: link:../text
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -1731,40 +1722,40 @@ importers:
     dependencies:
       '@applique-ui/button':
         specifier: 0.0.*
-        version: link:../button
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/field':
         specifier: 0.0.*
-        version: link:../field
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/input-text':
         specifier: 0.0.*
-        version: link:../input-text
+        version: 0.0.54
       '@applique-ui/list':
         specifier: 0.0.*
-        version: link:../list
+        version: 0.0.54
       '@applique-ui/measure':
         specifier: 0.0.*
-        version: link:../measure
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       '@applique-ui/virtual-grid':
         specifier: 0.0.*
-        version: link:../virtual-grid
+        version: 0.0.54
       '@applique-ui/virtual-list':
         specifier: 0.0.*
-        version: link:../virtual-list
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1787,10 +1778,10 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1813,7 +1804,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1836,13 +1827,13 @@ importers:
     dependencies:
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1865,22 +1856,22 @@ importers:
     dependencies:
       '@applique-ui/bread-crumb':
         specifier: 0.0.*
-        version: link:../bread-crumb
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: 0.0.*
-        version: link:../dropdown
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/list':
         specifier: 0.0.*
-        version: link:../list
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1903,19 +1894,19 @@ importers:
     dependencies:
       '@applique-ui/icon':
         specifier: 0.0.*
-        version: link:../icon
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: 0.0.*
-        version: link:../layout
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-context':
         specifier: 0.0.*
-        version: link:../../packages/uikit-context
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -1941,13 +1932,13 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       '@applique-ui/virtual-list':
         specifier: 0.0.*
-        version: link:../virtual-list
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -1970,13 +1961,13 @@ importers:
     dependencies:
       '@applique-ui/measure':
         specifier: 0.0.*
-        version: link:../measure
+        version: 0.0.54
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../../packages/uikit-can-i-use
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../../packages/uikit-utils
+        version: 0.0.54
       uikit-icons:
         specifier: npm:@myntra/uikit-icons@latest
         version: /@myntra/uikit-icons@1.0.43
@@ -2008,7 +1999,7 @@ importers:
     dependencies:
       '@applique-ui/uikit-utils':
         specifier: 0.0.*
-        version: link:../uikit-utils
+        version: 0.0.54
       loader-utils:
         specifier: ^1.1.0
         version: 1.4.2
@@ -2017,7 +2008,7 @@ importers:
     dependencies:
       '@applique-ui/eslint-config-standard':
         specifier: 0.0.*
-        version: link:../eslint-config-standard
+        version: 0.0.54
       debug:
         specifier: ^3.1.0
         version: 3.2.7
@@ -2032,7 +2023,7 @@ importers:
         version: 7.2.3
       jscodeshift:
         specifier: ^0.14.0
-        version: 0.14.0(@babel/preset-env@7.21.5)
+        version: 0.14.0
       jsdoc-api:
         specifier: ^4.0.3
         version: 4.0.3
@@ -2199,151 +2190,151 @@ importers:
     dependencies:
       '@applique-ui/accordion':
         specifier: latest
-        version: link:../../components/accordion
+        version: 0.0.54
       '@applique-ui/accoutrement':
         specifier: latest
-        version: link:../accoutrement
+        version: 0.0.54
       '@applique-ui/avatar':
         specifier: latest
-        version: link:../../components/avatar
+        version: 0.0.54
       '@applique-ui/badge':
         specifier: latest
-        version: link:../../components/badge
+        version: 0.0.54
       '@applique-ui/banner':
         specifier: latest
-        version: link:../../components/banner
+        version: 0.0.54
       '@applique-ui/bread-crumb':
         specifier: latest
-        version: link:../../components/bread-crumb
+        version: 0.0.54
       '@applique-ui/button':
         specifier: latest
-        version: link:../../components/button
+        version: 0.0.54
       '@applique-ui/button-group':
         specifier: latest
-        version: link:../../components/button-group
+        version: 0.0.54
       '@applique-ui/click-away':
         specifier: latest
-        version: link:../../components/click-away
+        version: 0.0.54
       '@applique-ui/dropdown':
         specifier: latest
-        version: link:../../components/dropdown
+        version: 0.0.54
       '@applique-ui/error-boundary':
         specifier: latest
-        version: link:../../components/error-boundary
+        version: 0.0.54
       '@applique-ui/fab':
         specifier: latest
-        version: link:../../components/fab
+        version: 0.0.54
       '@applique-ui/field':
         specifier: latest
-        version: link:../../components/field
+        version: 0.0.54
       '@applique-ui/form':
         specifier: latest
-        version: link:../../components/form
+        version: 0.0.54
       '@applique-ui/grid':
         specifier: latest
-        version: link:../../components/grid
+        version: 0.0.54
       '@applique-ui/icon':
         specifier: latest
-        version: link:../../components/icon
+        version: 0.0.54
       '@applique-ui/image':
         specifier: latest
-        version: link:../../components/image
+        version: 0.0.54
       '@applique-ui/input-checkbox':
         specifier: latest
-        version: link:../../components/input-checkbox
+        version: 0.0.54
       '@applique-ui/input-date':
         specifier: latest
-        version: link:../../components/input-date
+        version: 0.0.54
       '@applique-ui/input-file':
         specifier: latest
-        version: link:../../components/input-file
+        version: 0.0.54
       '@applique-ui/input-masked':
         specifier: latest
-        version: link:../../components/input-masked
+        version: 0.0.54
       '@applique-ui/input-month':
         specifier: latest
-        version: link:../../components/input-month
+        version: 0.0.54
       '@applique-ui/input-number':
         specifier: latest
-        version: link:../../components/input-number
+        version: 0.0.54
       '@applique-ui/input-radio':
         specifier: latest
-        version: link:../../components/input-radio
+        version: 0.0.54
       '@applique-ui/input-select':
         specifier: latest
-        version: link:../../components/input-select
+        version: 0.0.54
       '@applique-ui/input-text':
         specifier: latest
-        version: link:../../components/input-text
+        version: 0.0.54
       '@applique-ui/input-text-area':
         specifier: latest
-        version: link:../../components/input-text-area
+        version: 0.0.54
       '@applique-ui/layout':
         specifier: latest
-        version: link:../../components/layout
+        version: 0.0.54
       '@applique-ui/list':
         specifier: latest
-        version: link:../../components/list
+        version: 0.0.54
       '@applique-ui/loader':
         specifier: latest
-        version: link:../../components/loader
+        version: 0.0.54
       '@applique-ui/measure':
         specifier: latest
-        version: link:../../components/measure
+        version: 0.0.54
       '@applique-ui/modal':
         specifier: latest
-        version: link:../../components/modal
+        version: 0.0.54
       '@applique-ui/nav-bar':
         specifier: latest
-        version: link:../../components/nav-bar
+        version: 0.0.54
       '@applique-ui/page':
         specifier: latest
-        version: link:../../components/page
+        version: 0.0.54
       '@applique-ui/pagination':
         specifier: latest
-        version: link:../../components/pagination
+        version: 0.0.54
       '@applique-ui/portal':
         specifier: latest
-        version: link:../../components/portal
+        version: 0.0.54
       '@applique-ui/progress':
         specifier: latest
-        version: link:../../components/progress
+        version: 0.0.54
       '@applique-ui/schema-form':
         specifier: latest
-        version: link:../../components/schema-form
+        version: 0.0.54
       '@applique-ui/section':
         specifier: latest
-        version: link:../../components/section
+        version: 0.0.54
       '@applique-ui/stepper':
         specifier: latest
-        version: link:../../components/stepper
+        version: 0.0.54
       '@applique-ui/table':
         specifier: latest
-        version: link:../../components/table
+        version: 0.0.54
       '@applique-ui/tabs':
         specifier: latest
-        version: link:../../components/tabs
+        version: 0.0.54
       '@applique-ui/text':
         specifier: latest
-        version: link:../../components/text
+        version: 0.0.54
       '@applique-ui/tooltip':
         specifier: latest
-        version: link:../../components/tooltip
+        version: 0.0.54
       '@applique-ui/top-bar':
         specifier: latest
-        version: link:../../components/top-bar
+        version: 0.0.54
       '@applique-ui/top-nav':
         specifier: latest
-        version: link:../../components/top-nav
+        version: 0.0.54
       '@applique-ui/uikit-utils':
         specifier: latest
-        version: link:../uikit-utils
+        version: 0.0.54
       '@applique-ui/virtual-grid':
         specifier: latest
-        version: link:../../components/virtual-grid
+        version: 0.0.54
       '@applique-ui/virtual-list':
         specifier: latest
-        version: link:../../components/virtual-list
+        version: 0.0.54
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -2375,7 +2366,7 @@ importers:
     dependencies:
       '@applique-ui/eslint-config-standard':
         specifier: 0.0.*
-        version: link:../eslint-config-standard
+        version: 0.0.54
       '@babel/core':
         specifier: ^7.18.9
         version: 7.21.8
@@ -2447,7 +2438,7 @@ importers:
         version: 8.0.2
       jscodeshift:
         specifier: ^0.14.0
-        version: 0.14.0(@babel/preset-env@7.21.5)
+        version: 0.14.0
       jsdoc-api:
         specifier: ^4.0.3
         version: 4.0.3
@@ -2481,14 +2472,14 @@ importers:
     dependencies:
       '@applique-ui/uikit-can-i-use':
         specifier: 0.0.*
-        version: link:../uikit-can-i-use
+        version: 0.0.54
       react:
         specifier: ^16.9.0
-        version: 16.14.0
+        version: 16.9.0
     optionalDependencies:
       react-dom:
         specifier: ^16.9.0
-        version: 16.14.0(react@16.14.0)
+        version: 16.14.0(react@16.9.0)
     devDependencies:
       '@types/react':
         specifier: 17.0.2
@@ -2519,27 +2510,27 @@ importers:
     dependencies:
       '@applique-ui/uikit':
         specifier: 0.0.*
-        version: link:../../packages/uikit
+        version: 0.0.54
     devDependencies:
       '@applique-ui/accoutrement':
         specifier: 0.0.*
-        version: link:../../packages/accoutrement
+        version: 0.0.54
       '@applique-ui/tokenizer':
         specifier: 0.0.*
-        version: link:../../packages/tokenizer
+        version: 0.0.54
 
   themes/unity:
     dependencies:
       '@applique-ui/uikit':
         specifier: 0.0.*
-        version: link:../../packages/uikit
+        version: 0.0.54
     devDependencies:
       '@applique-ui/accoutrement':
         specifier: 0.0.*
-        version: link:../../packages/accoutrement
+        version: 0.0.54
       '@applique-ui/tokenizer':
         specifier: 0.0.*
-        version: link:../../packages/tokenizer
+        version: 0.0.54
 
 packages:
 
@@ -2550,6 +2541,696 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
+  /@applique-ui/accordion@0.0.54:
+    resolution: {integrity: sha512-nYc60nJHIrsExEUn6BWkddKnbXB1nRjqxShqlL1J3LSkDJZf0Azwwlyv1BoMzoUwl6i+ZkPXhGpkvZDkmEHi2A==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/accoutrement@0.0.54:
+    resolution: {integrity: sha512-Jj/qByoFpPrWY9iVKvj/ObjbB02gmAXVy9b5e0gY/CAPhpUKcsCn3MpGM0kkD/tcVOk4rZaPozz49jxKb3YbYw==}
+    dependencies:
+      accoutrement: 4.0.4
+      normalize.css: 8.0.1
+
+  /@applique-ui/avatar@0.0.54:
+    resolution: {integrity: sha512-nK+eBzOWnNPvqa9Hv3XgYfNJmEKZ9/bZmnn1gm+a5ed8xHfo0hUQPr/MnFLh2xDKXRDZ9mCd8LbCEZ0Bp4m3qA==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      name-initials: 0.1.3
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/badge@0.0.54:
+    resolution: {integrity: sha512-WvE3qz/X48ckYb0gBEHctHAlBjvsb0irTfTAFAtk1MA7UbqQfSCyZECgulaTtYOmLoSqT+HEFrQsrxeW3GXKLg==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/banner@0.0.54:
+    resolution: {integrity: sha512-qHwkHNbUlJUgbATVmOVaPsEA3bt4twAKqhAeywZazEhgvMtU6CnuwWJI0ogFJQ+T7999PHk7u6LRbR7AuFi1ZQ==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/bread-crumb@0.0.54:
+    resolution: {integrity: sha512-pnY2ZbchTZpw4T+ZgbZhszcq7w/fyfjY1lw1CsNDTBGT/U0lh0jOZnQYIxih8WTrTDWieelorzLBPy/mJYnJKw==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/button-group@0.0.54:
+    resolution: {integrity: sha512-i2qw8wIgcq5rUHvtECjTugu4LrN4i7RkYGDe2JWstawFiWqOk1GJYDq6gm2ONibdtIyvqzF9nZCc3Mr7/ubOMg==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/list': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/button@0.0.54:
+    resolution: {integrity: sha512-Bm76a/tsRcHcL7aRVlDTwykgxhTo9EZYvcl0T3mKOb4ZI7D9exdrJXo0xuAw5UHcy5W4dJqCPkGlwd+Hb/ngBQ==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/loader': 0.0.54
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/click-away@0.0.54:
+    resolution: {integrity: sha512-L2PNBOeAPufeeykYn8M/w6wzpc3V54A+wiQVQVh7uhy+ynZn+XclabIHG8J6UtLvhoOwy49ynNRzdbukrwP5ww==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/dropdown@0.0.54:
+    resolution: {integrity: sha512-/oFm+5O9Dne0GaKQ8YNIzUCDHSk3TVEDA2tK496gK+H4I/18VfF+mWBX0Sr15SbwV4SMFTQkMnwHFCKM3/yUzw==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/click-away': 0.0.54
+      '@applique-ui/measure': 0.0.54
+      '@applique-ui/portal': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/error-boundary@0.0.54:
+    resolution: {integrity: sha512-1T6CSUq6iRGCxtQ/TwUdaxuvMfRlma46zehGq3ufhVsFCbzkcw9j8kL7qW3oTNE2PYNifspbHSJS0MFVgcodeA==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/eslint-config-standard@0.0.54:
+    resolution: {integrity: sha512-4EA7ofxAuuEALHRNWgtiawS2JCqw5AUwo8Fs77bVsACEXCZyCU8WKiwjS906x+ldh2QXlpkIHGq/31Xs2RxInw==}
+    dependencies:
+      babel-eslint: 8.2.6
+      babel-plugin-syntax-jsx: 6.18.0
+      eslint-config-prettier: 2.10.0(eslint@4.19.1)
+      eslint-config-standard: 11.0.0(eslint-plugin-import@2.27.5)(eslint-plugin-node@6.0.1)(eslint-plugin-promise@3.8.0)(eslint-plugin-standard@3.1.0)(eslint@4.19.1)
+      eslint-plugin-babel: 5.3.1(eslint@4.19.1)
+      eslint-plugin-import: 2.27.5(eslint@4.19.1)
+      eslint-plugin-jest: 21.27.2(eslint@4.19.1)
+      eslint-plugin-json: 1.4.0
+      eslint-plugin-jsx-a11y: 6.7.1(eslint@4.19.1)
+      eslint-plugin-node: 6.0.1(eslint@4.19.1)
+      eslint-plugin-prettier: 2.7.0(prettier@1.19.1)
+      eslint-plugin-promise: 3.8.0
+      eslint-plugin-react: 7.32.2(eslint@4.19.1)
+      eslint-plugin-standard: 3.1.0(eslint@4.19.1)
+      prettier: 1.19.1
+    optionalDependencies:
+      eslint: 4.19.1
+    transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: false
+
+  /@applique-ui/fab@0.0.54:
+    resolution: {integrity: sha512-qa1rnkiuxI1i3oix8PYnDlp9pLLHtWsj1+AI7DmJBU1PT3czz8NBZTbjhxQ7jXDUPGOvVoINyv+uC0YDQc9dhA==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/field@0.0.54:
+    resolution: {integrity: sha512-YBPTOJcVbNJNsntZulO7QOqk2iUV+Bw9Y3s99xBTB9/0N6mOi7QIdEa4s53JRzVfObQ/ozDGSJXboSBmsDdtKw==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/form@0.0.54:
+    resolution: {integrity: sha512-WfIP7jqi53C5UcpuH67ZPojFqEInCzzWb4uGk2MgsGb9CkdmbtU4prxw+Ma1EEf6Mozv43rAZ9AeIxyn+DOm9w==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/button-group': 0.0.54
+      '@applique-ui/field': 0.0.54
+      '@applique-ui/grid': 0.0.54
+      '@applique-ui/input-checkbox': 0.0.54
+      '@applique-ui/input-date': 0.0.54
+      '@applique-ui/input-file': 0.0.54
+      '@applique-ui/input-masked': 0.0.54
+      '@applique-ui/input-month': 0.0.54
+      '@applique-ui/input-number': 0.0.54
+      '@applique-ui/input-radio': 0.0.54
+      '@applique-ui/input-select': 0.0.54
+      '@applique-ui/input-text': 0.0.54
+      '@applique-ui/input-text-area': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/grid@0.0.54:
+    resolution: {integrity: sha512-digNE8ce3WkqB0hhOHzAli+gIH0maGxq+o59bw1fiP5LkVWM0vkpj+ypSbxyYWzgR6Cq7fGAMzaKy/F0D/L/9w==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/icon@0.0.54:
+    resolution: {integrity: sha512-9ieG6BW3ugL5dAW8MEpXUuFVhYXMxE5g76dz5KEmkvPj2u8wiDq24Sc3CUHXdX1rQQl6oVr8NsNIAPVwyIRb5Q==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/image@0.0.54:
+    resolution: {integrity: sha512-GmDCNCCWP5s1YK8xgdCFkgN9J9TYNOb0XRSpJFFLpUlHBgqGPhL+5IPSeYK7y9L/JsfPfOxl65ACxHphH3xF6w==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      intersection-observer-polyfill: 0.1.0
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-checkbox@0.0.54:
+    resolution: {integrity: sha512-qof/+komTk3pPUIVjkxreKs+PZybbHUBIweicDiu81TzymTaIn6kyBj79Ty60XxR15kY0MLhOC3v/1x+YadtGw==}
+    dependencies:
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-date@0.0.54:
+    resolution: {integrity: sha512-cYBs3wldrBZt++eYmWSR0eGVHNZu2hp/Ac2JE9w4tC/q0/TezTToNUt0ERm5s7Y9ZcZGUMSNh5Pu6sz4yAj+0w==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/button-group': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/input-masked': 0.0.54
+      '@applique-ui/input-number': 0.0.54
+      '@applique-ui/input-text': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      date-fns: 2.30.0
+      dayjs: 1.11.7
+      uikit-icons: /@applique-ui/uikit-icons@1.0.55
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-file@0.0.54:
+    resolution: {integrity: sha512-x41ErV4kMNNN/C6Dl0HRXQReI4KoR11KjKrtYlh9JQukz4aI1Zy58b/G0NfRkuhN8KxZJShJVzCoAvY+Beea1Q==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/input-text': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-masked@0.0.54:
+    resolution: {integrity: sha512-+TTvhWK1y24Ny2Hif9cUyBJvXcvaHLg6GGRj3KsFl1rhKQKJn2c/mEMe9G7OunTdwyxl7gI0IfyOiIbzYtf/zw==}
+    dependencies:
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-month@0.0.54:
+    resolution: {integrity: sha512-3/FgKvR5TsxNQ/tU+dMds+hC8IHtP8hMvlYF2auzduh8qca21Xp5J2b08RGD6wT9E7UkyZUOYftOq30cupIY3g==}
+    dependencies:
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/input-date': 0.0.54
+      '@applique-ui/input-masked': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      luxon: 1.28.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-number@0.0.54:
+    resolution: {integrity: sha512-t9C8bH03tjs6gN2iW2QTZ50rB2Z04RpqM2yWyb3Ht06wjacxzeGzbKzWBYgoBoRgiksQnpWmEASH0cV1Ln98wg==}
+    dependencies:
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-radio@0.0.54:
+    resolution: {integrity: sha512-TXP5B6WQOqb2wJdIRpqiWH1icGBzg8Zjjipyc51jCzNQXBT8FW2bTjwSbJYrlsU3CWohP1PB/Ad5hdSYIM4I/Q==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-select@0.0.54:
+    resolution: {integrity: sha512-wEZJonmt5hFJ20WTpSBXaoUdZ7nS7MnNo0fKFb1IARDAyGdlrISyoVPL0nstxCpjFgvuNCPo0BRy0QHdjPIhpA==}
+    dependencies:
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/list': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      sifter: 0.5.4
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-text-area@0.0.54:
+    resolution: {integrity: sha512-BowsRyVdIX++OW2lJUY5AKMhwvXAApsqQNhikzayRNaXadeMZTvpxWvcxKUy1sOxHmBfCqqpGNOXFe1NP2fSYA==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input-text@0.0.54:
+    resolution: {integrity: sha512-ttg3u4wWLLHuwobz1ZlQNuRjuXSVomt3k0BdIkcLzNWk7kFBYBulU9R1AIO9PN3hMHgSV7qax606OX7q9XUh2Q==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/input': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/input@0.0.54:
+    resolution: {integrity: sha512-CbY7d/Ucrw2JUUYQz9mJtn16r093u1EgyOG4J6c00QOkdH24WBSiyE2+sVuDYFYrnvAgFIMrCpzi7jOAWqLRnw==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/layout@0.0.54:
+    resolution: {integrity: sha512-UJcxZpytd+qoM22lN9L9XCg7ZeWw2z9XDV3KK31HbXZIl3zVyScHMWpvorhGaK+WLWdnbBLOfwPMm2wzpQvXjg==}
+    dependencies:
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/list@0.0.54:
+    resolution: {integrity: sha512-1dxM1YNyR6COGt3pY3EE/RNf3iaideuvkqJJ/oBDBchw0Fc9kbs4TPteUH0hlmcIGaNooUi+TSq+YyYqOe88IQ==}
+    dependencies:
+      '@applique-ui/input-checkbox': 0.0.54
+      '@applique-ui/input-radio': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      '@applique-ui/virtual-list': 0.0.54
+      scroll-into-view-if-needed: 2.2.31
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/loader@0.0.54:
+    resolution: {integrity: sha512-9ODgcjC0s2PEvBf5WOdQnv182uEpSri+aVsH+9qeyfAsEIwPP5R5Zf7gGDhA/1ulASleDr5vX+5z5+AkvsFTLw==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/measure@0.0.54:
+    resolution: {integrity: sha512-A38FcMJWmT3TUS8v2oSW5/ArSjiHOyCxrQKzMIfO+6KGlrhsM282yd+ncoUUe2Cyb/97JIp823eQVmEsVKbviQ==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      resize-observer-polyfill: 1.5.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/modal@0.0.54:
+    resolution: {integrity: sha512-VwsmKkQMFP9ue4xFzZMM/gVXc8zX9b2ihBLWW/v5vbI6uBf96NtLXHSvkVCt3XedRi1EAJlL6sqyoiOi+20Dlw==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/portal': 0.0.54
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/nav-bar@0.0.54:
+    resolution: {integrity: sha512-1+ky219op9OdSkjJmZRpkXhyGu8Z2nlD1lDQQlqA+TWaPLR+TRKx8bvBPsPIYqRx0k76HH3TEnyVbYh6Ca9ksg==}
+    dependencies:
+      '@applique-ui/avatar': 0.0.54
+      '@applique-ui/click-away': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/page@0.0.54:
+    resolution: {integrity: sha512-L3hg0RDNlDAFTRPV7NaYOTS0BcfCxHClnXL7PSF4qSCeY6xwe6+8ZK2SUMstjHQqzC6ndKUichOOlplQSsuhIA==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/pagination@0.0.54:
+    resolution: {integrity: sha512-MnHlKt/DOgC5S0ZeB1ZJpOmULkxQ5OltsyikIeGvnX+oD1UMU0JOiFIqCB6GAxbI+kXwDuaAxAb4YbRZXG0ZGQ==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/portal@0.0.54:
+    resolution: {integrity: sha512-9KnfIb3oObvGpBFODoPTMVoFV57ziQ3XbdMRJPvfY7MFCSmkid/ZOLqMySmecHbm3o2v8kEPSrL/3GTTLMVfxA==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/progress@0.0.54:
+    resolution: {integrity: sha512-Hqyjj31i7zfvdIGgKS+mcESvu5/LLA9d69wSQlRvusd1gJYn3/3IEjJ0f2SI08ZGPTCiiD352FrB27Iyz3oi+Q==}
+    dependencies:
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/schema-form@0.0.54:
+    resolution: {integrity: sha512-gdyOHhCSlK/FE6rvmr32yi8OihxUIaJOh2YlOlIwu1Hj2pU+HJBt+Eomm7oeJabJqlIyPygD7O/z58GB1aT9Tw==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/field': 0.0.54
+      '@applique-ui/form': 0.0.54
+      '@applique-ui/grid': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/section@0.0.54:
+    resolution: {integrity: sha512-5dSAOCNR9iEVYdAb2T0YSfm2ZXr0oMKbJ8atlu5VgXpCSPqKcOGbYGCJr1elhggwelr7NylE7u8lsk6rwLuNhw==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/stepper@0.0.54:
+    resolution: {integrity: sha512-HMs4ukbCvT1mKpC22lFJi+ErvAiDdHt7VRjXwFXPAi/e49sPcCjYoie5w6Qd8PyZOK/+0NfB2Ih6VNSxLSXJHg==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/svg@0.0.54:
+    resolution: {integrity: sha512-1Rzs5c5e5ys8C3WRniOG0uLqbmnNVSEwvNWQc81kUszePTN2Rh9uhNZRaPOSbGk+5Y+No5HmI+/uOzID/dn+jg==}
+    dependencies:
+      svg-parser: 1.0.6
+    dev: true
+
+  /@applique-ui/table@0.0.54:
+    resolution: {integrity: sha512-Zfme0WXp1RqtEpgU0bHZ2AFfPH/kSoagI8rNpEcnOe8BMiE3m/ou1ItbhN18hfaOmxQjPdPMdZCWXUNSIzMc8w==}
+    dependencies:
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/field': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/input-text': 0.0.54
+      '@applique-ui/list': 0.0.54
+      '@applique-ui/measure': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      '@applique-ui/virtual-grid': 0.0.54
+      '@applique-ui/virtual-list': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/tabs@0.0.54:
+    resolution: {integrity: sha512-xG1bzhUDnOkXuwU28dZseA88v4ZariaH/LTISGnCZS57RjAu9VnJTqYyEYhhjpjw9WtBFuCAZMLr+BL3D+NOqw==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/text@0.0.54:
+    resolution: {integrity: sha512-ESg5Qc26lIdw1Q7x7KmTE0pS/l58P241h13DYapz/dZE39/4rloK0RlmQEZS99iLPKEHIbvKPhcJ+ZM49JsQKA==}
+    dependencies:
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/tokenizer@0.0.54:
+    resolution: {integrity: sha512-/fgda1w+tlS2IEACyl6Kk42K51bQAU/nRS+UoChdyoxB6YnrNvrPeb1fhGcp1OrZwKZuLKqinNp/4ZW2nuVHmQ==}
+    hasBin: true
+    dependencies:
+      ajv: 6.12.6
+      camelcase: 5.3.1
+      js-yaml: 3.14.1
+      lodash.isplainobject: 4.0.6
+      prettier: 1.19.1
+      tidify: 0.3.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@applique-ui/tooltip@0.0.54:
+    resolution: {integrity: sha512-un30hLZoEFjKNIcrs+DAuLGT/+EBf+dyMqOzclfoMK8khggpbOpBe882KXbyvgolw77U6Tl5rMT9etofJbTVug==}
+    dependencies:
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/top-bar@0.0.54:
+    resolution: {integrity: sha512-7XXO3iU/J3cXZFs99JDQPYItgENOVV6zkEFvkZTsPHFOZUzl1et5kRQic7OaH0kMAcxeoxJVsAL37XlTiWxjaw==}
+    dependencies:
+      '@applique-ui/bread-crumb': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/list': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/top-nav@0.0.54:
+    resolution: {integrity: sha512-IpzoGHfizVhS0zJVqkmBcQ+f5RWPW/UERZGB3JPkLmGzmaCo9Ohf8xRbI1hpS3wU5Boiz3L/0nzrUfWaaFXV/A==}
+    dependencies:
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-context': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      prop-types: 15.8.1
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/uikit-can-i-use@0.0.54:
+    resolution: {integrity: sha512-bxBKTXscKuZnVfxkHULK4M8/W8LrwrPgSqMM12JhcUOplCHUB9L2pWeyyJUaNA0Nnmo+IBkNbZc54jcIQOclVw==}
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/uikit-context@0.0.54:
+    resolution: {integrity: sha512-83ylkZBecy0tZW9nt8kRmIRJgVit5YOcW5Bah4n5BKaTBIIvSoPZrAk1d4amKe7bOLpLvqpyWMGJszdpSymvcQ==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      react: 16.14.0
+    optionalDependencies:
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
   /@applique-ui/uikit-icons@1.0.49:
     resolution: {integrity: sha512-X7XNBpDxrmivfhlvuFpUDPfMFDIC/lrfkE5hioPOvAk17AAMgz2AtQju+owtzGlDXIvx2PRgceqdCGvCs/K2xg==}
     engines: {node: '>=8.0'}
@@ -2558,10 +3239,98 @@ packages:
     dev: true
 
   /@applique-ui/uikit-icons@1.0.55:
-    resolution: {integrity: sha512-D30zhA6JDJTCwQoT7RcX9Ni6jwqemR1QJQFf64WXsvM2krQE9l6pNFOH6wt/abI+I0KUIDzrFvPOYX4agDhEgQ==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/@applique-ui/uikit-icons/-/uikit-icons-1.0.55.tgz}
+    resolution: {integrity: sha512-D30zhA6JDJTCwQoT7RcX9Ni6jwqemR1QJQFf64WXsvM2krQE9l6pNFOH6wt/abI+I0KUIDzrFvPOYX4agDhEgQ==}
     engines: {node: '>=8.0'}
     optionalDependencies:
       react: 16.14.0
+    dev: false
+
+  /@applique-ui/uikit-utils@0.0.54:
+    resolution: {integrity: sha512-mCkphtGFvCp2wOJhGvl/DqBUjHe33CEkJoMZo54sug/vKkgIHXEZg+6Ar0L4Nuome0BcSb08t8aXGWqORCGmsQ==}
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/uikit@0.0.54:
+    resolution: {integrity: sha512-Q9qyMaGQcYyLA+4Nf7qXEtLyucJy85/i22zy6NDQP9HnMmiSK8txFRxkHNMwsOJeKPNlDNXYSXzj1e9jKgAIXg==}
+    requiresBuild: true
+    dependencies:
+      '@applique-ui/accordion': 0.0.54
+      '@applique-ui/accoutrement': 0.0.54
+      '@applique-ui/avatar': 0.0.54
+      '@applique-ui/badge': 0.0.54
+      '@applique-ui/banner': 0.0.54
+      '@applique-ui/bread-crumb': 0.0.54
+      '@applique-ui/button': 0.0.54
+      '@applique-ui/button-group': 0.0.54
+      '@applique-ui/click-away': 0.0.54
+      '@applique-ui/dropdown': 0.0.54
+      '@applique-ui/error-boundary': 0.0.54
+      '@applique-ui/fab': 0.0.54
+      '@applique-ui/field': 0.0.54
+      '@applique-ui/form': 0.0.54
+      '@applique-ui/grid': 0.0.54
+      '@applique-ui/icon': 0.0.54
+      '@applique-ui/image': 0.0.54
+      '@applique-ui/input-checkbox': 0.0.54
+      '@applique-ui/input-date': 0.0.54
+      '@applique-ui/input-file': 0.0.54
+      '@applique-ui/input-masked': 0.0.54
+      '@applique-ui/input-month': 0.0.54
+      '@applique-ui/input-number': 0.0.54
+      '@applique-ui/input-radio': 0.0.54
+      '@applique-ui/input-select': 0.0.54
+      '@applique-ui/input-text': 0.0.54
+      '@applique-ui/input-text-area': 0.0.54
+      '@applique-ui/layout': 0.0.54
+      '@applique-ui/list': 0.0.54
+      '@applique-ui/loader': 0.0.54
+      '@applique-ui/measure': 0.0.54
+      '@applique-ui/modal': 0.0.54
+      '@applique-ui/nav-bar': 0.0.54
+      '@applique-ui/page': 0.0.54
+      '@applique-ui/pagination': 0.0.54
+      '@applique-ui/portal': 0.0.54
+      '@applique-ui/progress': 0.0.54
+      '@applique-ui/schema-form': 0.0.54
+      '@applique-ui/section': 0.0.54
+      '@applique-ui/stepper': 0.0.54
+      '@applique-ui/table': 0.0.54
+      '@applique-ui/tabs': 0.0.54
+      '@applique-ui/text': 0.0.54
+      '@applique-ui/tooltip': 0.0.54
+      '@applique-ui/top-bar': 0.0.54
+      '@applique-ui/top-nav': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      '@applique-ui/virtual-grid': 0.0.54
+      '@applique-ui/virtual-list': 0.0.54
+      normalize.css: 8.0.1
+      print-message: 3.0.1
+    dev: false
+
+  /@applique-ui/virtual-grid@0.0.54:
+    resolution: {integrity: sha512-gYlQ5KnOp5DrR0FFtRf9lPAyMG1btH5uvkvYjaMOzDwobkeJ1JpQXc0+Eln0Vwg5y4U1JJtlL+HVuMkxvDy72A==}
+    dependencies:
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      '@applique-ui/virtual-list': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
+    dev: false
+
+  /@applique-ui/virtual-list@0.0.54:
+    resolution: {integrity: sha512-IAIiMdmdQDQTGLOmENADX+IsUOmqD1l9b79rOgw0nDdqOJn0rWewaoyiQGeI/ZxXA77w+jFUfzUJfYk51q0MIg==}
+    dependencies:
+      '@applique-ui/measure': 0.0.54
+      '@applique-ui/uikit-can-i-use': 0.0.54
+      '@applique-ui/uikit-utils': 0.0.54
+      uikit-icons: /@myntra/uikit-icons@1.0.43
+    optionalDependencies:
+      react: 16.14.0
+      react-dom: 16.14.0(react@16.14.0)
     dev: false
 
   /@babel/code-frame@7.0.0-beta.44:
@@ -2632,6 +3401,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.21.5
+    dev: true
 
   /@babel/helper-compilation-targets@7.21.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-1RkbFGUKex4lvsB9yhIfWltJM5cZKUftB2eNajaDv3dCMEp49iBG0K14uH8NnX9IPux2+mK7JGEOB0jn48/J6w==}
@@ -2675,6 +3445,7 @@ packages:
       '@babel/helper-annotate-as-pure': 7.18.6
       regexpu-core: 5.3.2
       semver: 6.3.0
+    dev: true
 
   /@babel/helper-define-polyfill-provider@0.3.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-z5aQKU4IzbqCC1XH0nAqfsFLMVSo22SBKUc0BxGrLkolTdPTructy0ToNnlO2zA4j9Q/7pjMZf0DSY+DSTYzww==}
@@ -2690,6 +3461,7 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/helper-environment-visitor@7.21.5:
     resolution: {integrity: sha512-IYl4gZ3ETsWocUWgsFZLM5i1BYx9SoemminVEXadgLBa9TdeorzgLKm8wWLA6J1N/kT3Kch8XIk1laNzYoHKvQ==}
@@ -2772,6 +3544,7 @@ packages:
       '@babel/types': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/helper-replace-supers@7.21.5:
     resolution: {integrity: sha512-/y7vBgsr9Idu4M6MprbOVUfH3vs7tsIfnVWv/Ml2xgwvyH6LTngdfbf5AdsKwkJy4zgy1X/kuNrEKvhhK28Yrg==}
@@ -2832,6 +3605,7 @@ packages:
       '@babel/types': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/helpers@7.21.5:
     resolution: {integrity: sha512-BSY+JSlHxOmGsPTydUkPf1MdMQ3M81x5xGCOVgWM3G8XH77sJ292Y2oqcp0CbbgxhqBuI46iUz1tT7hqP7EfgA==}
@@ -2874,6 +3648,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-sbr9+wNE5aXMBBFBICk01tt7sBf2Oc9ikRFEcem/ZORup9IMUdNhW7/wVLEbbtlWOsEubJet46mHAL2C8+2jKQ==}
@@ -2885,6 +3660,7 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/plugin-proposal-optional-chaining': 7.21.0(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-async-generator-functions@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-xMbiLsn/8RK7Wq7VeVytytS2L6qE69bXPB10YCmMdDZbKF4okCqY74pI/jJQ/8U0b/F6NrT2+14b8/P9/3AMGA==}
@@ -2899,6 +3675,7 @@ packages:
       '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.21.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
@@ -2924,6 +3701,7 @@ packages:
       '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.21.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-proposal-dynamic-import@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-1auuwmK+Rz13SJj36R+jqFPMJWyKEDd7lLSdOj4oJK0UTgGueSAtkrCvz9ewmgyU/P941Rv2fQwZJN8s6QruXw==}
@@ -2934,6 +3712,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-export-default-from@7.18.10(@babel/core@7.21.8):
     resolution: {integrity: sha512-5H2N3R2aQFxkV4PIBUR/i7PUSwgTZjouJKzI8eKswfIjT0PhvzkPn0t0wIS5zn6maQuvtT0t1oHtMUz61LOuow==}
@@ -2955,6 +3734,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-json-strings@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-lr1peyn9kOdbYc0xr0OdHTZ5FMqS6Di+H0Fz2I/JwMzGmzJETNeOFq2pBySw6X/KFL5EWDjlJuMsUGRFb8fQgQ==}
@@ -2965,6 +3745,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-logical-assignment-operators@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-y7C7cZgpMIjWlKE5T7eJwp+tnRYM89HmRvWM5EQuB5BoHEONjmQ8lSNmBUwOyy/GFRsohJED51YBF79hE1djug==}
@@ -2975,6 +3756,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
@@ -2995,6 +3777,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-numeric-separator': 7.10.4(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-object-rest-spread@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-d2S98yCiLxDVmBmE8UjGcfPvNEUbA1U5q5WxaWFUGRzJSVAZqm5W6MbPct0jxnegUZ0niLeNX+IOzEs7wYg9Dg==}
@@ -3008,6 +3791,7 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.21.8)
       '@babel/plugin-transform-parameters': 7.21.3(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-optional-catch-binding@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-Q40HEhs9DJQyaZfUjjn6vE8Cv4GmMHCYuMGIWUnlxH6400VGxOuwWsPt4FxXxJkC/5eOzgn0z21M9gMT4MOhbw==}
@@ -3018,6 +3802,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/plugin-syntax-optional-catch-binding': 7.8.3(@babel/core@7.21.8)
+    dev: true
 
   /@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-p4zeefM72gpmEe2fkUr/OnOXpWEf8nAgk7ZYVqqfFiyIG7oFfVZcCrU64hWn5xp4tQ9LkV4bTIa5rD0KANpKNA==}
@@ -3041,6 +3826,7 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-proposal-private-property-in-object@7.21.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-ha4zfehbJjc5MmXBlHec1igel5TJXXLDDRbuJ4+XT2TJcyD9/V1919BA8gMvsdHcNMBy4WBUBiRb3nw/EQUtBw==}
@@ -3055,6 +3841,7 @@ packages:
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.21.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
@@ -3065,6 +3852,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-create-regexp-features-plugin': 7.21.8(@babel/core@7.21.8)
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-async-generators@7.8.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-tycmZxkGfZaxhMRbXlPXuVFpdWlXpir2W4AMhSJgRKzk/eDlIXOhb2LHWoLpDF7TEHylV5zNhykX6KAgHJmTNw==}
@@ -3073,6 +3861,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.21.8):
     resolution: {integrity: sha512-fm4idjKla0YahUNgFNLCB0qySdsoPiZP3iQE3rky0mBUtMZ23yDJ9SJdg6dXTSDnulOVqiF3Hgr9nbXvXTQZYA==}
@@ -3081,6 +3870,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-class-static-block@7.14.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-b+YyPmr6ldyNnM6sqYeMWE+bgJcJpO6yS4QD7ymxgH34GBPNDM/THBh8iunyvKIZztiwLH4CJZ0RxTk9emgpjw==}
@@ -3090,6 +3880,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-dynamic-import@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-5gdGbFon+PszYzqs83S3E5mpi7/y/8M9eC90MRTZfduQOYW76ig6SOSPNe41IG5LoP3FGBn2N0RjVDSQiS94kQ==}
@@ -3098,6 +3889,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-export-default-from@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-Kr//z3ujSVNx6E9z9ih5xXXMqK07VVTuqPmqGe6Mss/zW5XPeLZeSDZoP9ab/hT4wPKqAgjl2PnhPrcpk8Seew==}
@@ -3116,6 +3908,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-flow@7.21.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-l9xd3N+XG4fZRxEP3vXdK6RW7vN1Uf5dxzRC/09wV86wqZ/YYQooBIGNsiRdfNR3/q2/5pPzV4B54J/9ctX5jw==}
@@ -3134,6 +3927,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-import-meta@7.10.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-Yqfm+XDx0+Prh3VSeEQCPU81yC+JWZ2pDPFSS4ZdpfZhp4MkFMaDC1UqseovEKwSUpnIL7+vK+Clp7bfh0iD7g==}
@@ -3142,6 +3936,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-json-strings@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-lY6kdGpWHvjoe2vk4WrAapEuBR69EMxZl+RoGRhrFGNYVK8mOPAW8VfbT/ZgrFbXlDNiiaxQnAtgVCZ6jv30EA==}
@@ -3150,6 +3945,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-jsx@7.21.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-5hewiLct5OKyh6PLKEYaFclcqtIgCb6bmELouxjF6up5q3Sov7rOayW4RwhbaBL0dit8rA80GNfY+UuDp2mBbQ==}
@@ -3167,6 +3963,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-aSff4zPII1u2QD7y+F8oDsz19ew4IGEJg9SVW+bqwpwtfFleiQDMdzA/R+UlWDzfnHFCxxleFT0PMIrR36XLNQ==}
@@ -3183,6 +3980,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-XoqMijGZb9y3y2XskN+P1wUGiVwWZ5JmoDRwx5+3GmEplNyVM2s2Dg8ILFQm8rWM48orGy5YpI5Bl8U1y7ydlA==}
@@ -3191,6 +3989,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-6VPD0Pc1lpTqw0aKoeRTMiB+kWhAoT24PA+ksWSBrFtl5SIRVpZlwN3NNPQjehA2E/91FV3RjLWoVTglWcSV3Q==}
@@ -3199,6 +3998,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-KoK9ErH1MBlCPxV0VANkXW2/dw4vlbGDrFgz8bmUsBGYkFRcbRwMh6cIJubdPrkxRwuGdtCk0v/wPTKbQgBjkg==}
@@ -3216,6 +4016,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-top-level-await@7.14.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-hx++upLv5U1rgYfwe1xBQUhRmU41NEvpUvrp8jkrSCdvGSnM5/qdRMtylJ6PG5OFkBaHkbTAKTnd3/YyESRHFw==}
@@ -3225,6 +4026,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-syntax-typescript@7.21.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-xz0D39NvhQn4t4RNsHmDnnsaQizIlUkdtYvLs8La1BlfjQ6JEwxkJGeqJMW2tAXx+q6H+WFuUTXNdYVpEya0YA==}
@@ -3243,6 +4045,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-async-to-generator@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-Uo5gwHPT9vgnSXQxqGtpdufUiWp96gk7yiP4Mp5bm1QMkEmLXBO7PAGYbKoJ6DhAwiNkcHFBol/x5zZZkL/t0Q==}
@@ -3256,6 +4059,7 @@ packages:
       '@babel/helper-remap-async-to-generator': 7.18.9(@babel/core@7.21.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-block-scoped-functions@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-ExUcOqpPWnliRcPqves5HJcJOvHvIIWfuS4sroBUenPuMdmW+SMHDakmtS7qOo13sVppmUijqeTv7qqGsvURpQ==}
@@ -3265,6 +4069,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-block-scoping@7.21.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-Mdrbunoh9SxwFZapeHVrwFmri16+oYotcZysSzhNIVDwIAb1UV+kvnxULSYq9J3/q5MDG+4X6w8QVgD1zhBXNQ==}
@@ -3274,6 +4079,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-classes@7.21.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-RZhbYTCEUAe6ntPehC4hlslPWosNHDox+vAs4On/mCLRLfoDVHf6hVEd7kuxr1RnHwJmxFfUM3cZiZRmPxJPXQ==}
@@ -3293,6 +4099,7 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-computed-properties@7.21.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-TR653Ki3pAwxBxUe8srfF3e4Pe3FTA46uaNHYyQwIoM4oWKSoOZiDNyHJ0oIoDIUPSRQbQG7jzgVBX3FPVne1Q==}
@@ -3303,6 +4110,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/template': 7.20.7
+    dev: true
 
   /@babel/plugin-transform-destructuring@7.21.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-bp6hwMFzuiE4HqYEyoGJ/V2LeIWn+hLVKc4pnj++E5XQptwhtcGmSayM029d/j2X1bPKGTlsyPwAubuU22KhMA==}
@@ -3312,6 +4120,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-dotall-regex@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-6S3jpun1eEbAxq7TdjLotAsl4WpQI9DxfkycRcKrjhQYzU87qpXdknpBg/e+TdcMehqGnLFi7tnFUBR02Vq6wg==}
@@ -3322,6 +4131,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-create-regexp-features-plugin': 7.21.8(@babel/core@7.21.8)
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-duplicate-keys@7.18.9(@babel/core@7.21.8):
     resolution: {integrity: sha512-d2bmXCtZXYc59/0SanQKbiWINadaJXqtvIQIzd4+hNwkWBgyCd5F/2t1kXoUdvPMrxzPvhK6EMQRROxsue+mfw==}
@@ -3331,6 +4141,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-exponentiation-operator@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-wzEtc0+2c88FVR34aQmiz56dxEkxr2g8DQb/KfaFa1JYXOFVsbhvAonFN6PwVWj++fKmku8NP80plJ5Et4wqHw==}
@@ -3341,6 +4152,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-builder-binary-assignment-operator-visitor': 7.21.5
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-flow-strip-types@7.21.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-FlFA2Mj87a6sDkW4gfGrQQqwY/dLlBAyJa2dJEZ+FHXUVHBflO2wyKvg+OOEzXfrKYIa4HWl0mgmbCzt0cMb7w==}
@@ -3360,6 +4172,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-function-name@7.18.9(@babel/core@7.21.8):
     resolution: {integrity: sha512-WvIBoRPaJQ5yVHzcnJFor7oS5Ls0PYixlTYE63lCj2RtdQEl15M68FXQlxnG6wdraJIXRdR7KI+hQ7q/9QjrCQ==}
@@ -3371,6 +4184,7 @@ packages:
       '@babel/helper-compilation-targets': 7.21.5(@babel/core@7.21.8)
       '@babel/helper-function-name': 7.21.0
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-literals@7.18.9(@babel/core@7.21.8):
     resolution: {integrity: sha512-IFQDSRoTPnrAIrI5zoZv73IFeZu2dhu6irxQjY9rNjTT53VmKg9fenjvoiOWOkJ6mm4jKVPtdMzBY98Fp4Z4cg==}
@@ -3380,6 +4194,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-member-expression-literals@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-qSF1ihLGO3q+/g48k85tUjD033C29TNTVB2paCwZPVmOsjn9pClvYYrM2VeJpBY2bcNkuny0YUyTNRyRxJ54KA==}
@@ -3389,6 +4204,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-modules-amd@7.20.11(@babel/core@7.21.8):
     resolution: {integrity: sha512-NuzCt5IIYOW0O30UvqktzHYR2ud5bOWbY0yaxWZ6G+aFzOMJvrs5YHNikrbdaT15+KNO31nPOy5Fim3ku6Zb5g==}
@@ -3401,6 +4217,7 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-modules-commonjs@7.21.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-OVryBEgKUbtqMoB7eG2rs6UFexJi6Zj6FDXx+esBLPTCxCNxAY9o+8Di7IsUGJ+AVhp5ncK0fxWUBd0/1gPhrQ==}
@@ -3428,6 +4245,7 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-modules-umd@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-dcegErExVeXcRqNtkRU/z8WlBLnvD4MRnHgNs3MytRO1Mn1sHRyhbcpYbVMGclAqOjdW+9cfkdZno9dFdfKLfQ==}
@@ -3440,6 +4258,7 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-named-capturing-groups-regex@7.20.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-mOW4tTzi5iTLnw+78iEq3gr8Aoq4WNRGpmSlrogqaiCBoR1HFhpU4JkpQFOHfeYx3ReVIFWOQJS4aZBRvuZ6mA==}
@@ -3450,6 +4269,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-create-regexp-features-plugin': 7.21.8(@babel/core@7.21.8)
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-new-target@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-DjwFA/9Iu3Z+vrAn+8pBUGcjhxKguSMlsFqeCKbhb9BAV756v0krzVK04CRDi/4aqmk8BsHb4a/gFcaA5joXRw==}
@@ -3459,6 +4279,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-object-super@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-uvGz6zk+pZoS1aTZrOvrbj6Pp/kK2mp45t2B+bTDre2UgsZZ8EZLSJtUg7m/no0zOJUWgFONpB7Zv9W2tSaFlA==}
@@ -3471,6 +4292,7 @@ packages:
       '@babel/helper-replace-supers': 7.21.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/plugin-transform-parameters@7.21.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-Wxc+TvppQG9xWFYatvCGPvZ6+SIUxQ2ZdiBP+PHYMIjnPXD+uThCshaz4NZOnODAtBjjcVQQ/3OKs9LW28purQ==}
@@ -3480,6 +4302,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-property-literals@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-cYcs6qlgafTud3PAzrrRNbQtfpQ8+y/+M5tKmksS9+M1ckbH6kzY8MrexEM9mcA6JDsukE19iIRvAyYl463sMg==}
@@ -3489,6 +4312,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-react-display-name@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-TV4sQ+T013n61uMoygyMRm+xf04Bd5oqFpv2jAEQwSZ8NwQA7zeRPg1LMVg2PWi3zWBz+CLKD+v5bcpZ/BS0aA==}
@@ -3540,6 +4364,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       regenerator-transform: 0.15.1
+    dev: true
 
   /@babel/plugin-transform-reserved-words@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-oX/4MyMoypzHjFrT1CdivfKZ+XvIPMFXwwxHp/r0Ddy2Vuomt4HDFGmft1TAY2yiTKiNSsh3kjBAzcM8kSdsjA==}
@@ -3549,6 +4374,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-shorthand-properties@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-eCLXXJqv8okzg86ywZJbRn19YJHU4XUa55oz2wbHhaQVn/MM+XhukiT7SYqp/7o00dg52Rj51Ny+Ecw4oyoygw==}
@@ -3558,6 +4384,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-spread@7.20.7(@babel/core@7.21.8):
     resolution: {integrity: sha512-ewBbHQ+1U/VnH1fxltbJqDeWBU1oNLG8Dj11uIv3xVf7nrQu0bPGe5Rf716r7K5Qz+SqtAOVswoVunoiBtGhxw==}
@@ -3568,6 +4395,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
       '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
+    dev: true
 
   /@babel/plugin-transform-sticky-regex@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-kfiDrDQ+PBsQDO85yj1icueWMfGfJFKN1KCkndygtu/C9+XUfydLC8Iv5UYJqRwy4zk8EcplRxEOeLyjq1gm6Q==}
@@ -3577,6 +4405,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-template-literals@7.18.9(@babel/core@7.21.8):
     resolution: {integrity: sha512-S8cOWfT82gTezpYOiVaGHrCbhlHgKhQt8XH5ES46P2XWmX92yisoZywf5km75wv5sYcXDUCLMmMxOLCtthDgMA==}
@@ -3586,6 +4415,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-typeof-symbol@7.18.9(@babel/core@7.21.8):
     resolution: {integrity: sha512-SRfwTtF11G2aemAZWivL7PD+C9z52v9EvMqH9BuYbabyPuKUvSWks3oCg6041pT925L4zVFqaVBeECwsmlguEw==}
@@ -3595,6 +4425,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-typescript@7.21.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-RQxPz6Iqt8T0uw/WsJNReuBpWpBqs/n7mNo18sKLoTbMp+UrEekhH+pKSVC7gWz+DNjo9gryfV8YzCiT45RgMw==}
@@ -3618,6 +4449,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.8
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/plugin-transform-unicode-regex@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-gE7A6Lt7YLnNOL3Pb9BNeZvi+d8l7tcRrG4+pwJjK9hD2xX4mEvjlQW60G9EEmfXVYRPv9VRQcyegIVHCql/AA==}
@@ -3628,6 +4460,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/helper-create-regexp-features-plugin': 7.21.8(@babel/core@7.21.8)
       '@babel/helper-plugin-utils': 7.21.5
+    dev: true
 
   /@babel/preset-env@7.21.5(@babel/core@7.21.8):
     resolution: {integrity: sha512-wH00QnTTldTbf/IefEVyChtRdw5RJvODT/Vb4Vcxq1AZvtXj6T0YeX0cAcXhI6/BdGuiP3GcNIL4OQbI2DVNxg==}
@@ -3714,6 +4547,7 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/preset-flow@7.21.4(@babel/core@7.21.8):
     resolution: {integrity: sha512-F24cSq4DIBmhq4OzK3dE63NHagb27OPE3eWR+HLekt4Z3Y5MzIIUGF3LlLgV0gN8vzbDViSY7HnrReNVCJXTeA==}
@@ -3737,6 +4571,7 @@ packages:
       '@babel/plugin-transform-dotall-regex': 7.18.6(@babel/core@7.21.8)
       '@babel/types': 7.21.5
       esutils: 2.0.3
+    dev: true
 
   /@babel/preset-react@7.18.6(@babel/core@7.21.8):
     resolution: {integrity: sha512-zXr6atUmyYdiWRVLOZahakYmOBHtWc2WGCkP8PYTgZi0iJXDY2CN180TdrIW4OGOAdLc7TifzDIvtx6izaRIzg==}
@@ -3782,6 +4617,7 @@ packages:
 
   /@babel/regjsgen@0.8.0:
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
+    dev: true
 
   /@babel/runtime@7.21.5:
     resolution: {integrity: sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==}
@@ -4125,14 +4961,14 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/react@2.1.5(react@16.14.0):
+  /@mdx-js/react@2.1.5(react@16.9.0):
     resolution: {integrity: sha512-3Az1I6SAWA9R38rYjz5rXBrGKeZhq96CSSyQtqY+maPj8stBsoUH5pNcmIixuGkufYsh8F5+ka2CVPo2fycWZw==}
     peerDependencies:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.5
       '@types/react': 17.0.2
-      react: 16.14.0
+      react: 16.9.0
     dev: true
 
   /@mdx-js/rollup@2.3.0(rollup@2.77.0):
@@ -4149,12 +4985,12 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/tag@0.20.3(react@16.14.0):
+  /@mdx-js/tag@0.20.3(react@16.9.0):
     resolution: {integrity: sha512-Co3gUFmNDv9z2LjuvLTpTj2NaOSHFxuoZjohcG0YK/KfECO+Ns9idzThMYjfEDe1vAf4c824rqlBYseedJdFNw==}
     peerDependencies:
       react: ^0.14.x || ^15.x || ^16.x
     dependencies:
-      react: 16.14.0
+      react: 16.9.0
     dev: true
 
   /@mrmlnc/readdir-enhanced@2.2.1:
@@ -4914,7 +5750,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /airbnb-prop-types@2.16.0(react@16.14.0):
+  /airbnb-prop-types@2.16.0(react@16.9.0):
     resolution: {integrity: sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==}
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
@@ -4927,7 +5763,7 @@ packages:
       object.entries: 1.1.6
       prop-types: 15.8.1
       prop-types-exact: 1.2.0
-      react: 16.14.0
+      react: 16.9.0
       react-is: 16.13.1
     dev: true
 
@@ -4939,10 +5775,8 @@ packages:
       ajv: 6.12.6
     dev: true
 
-  /ajv-formats@2.1.1(ajv@8.12.0):
+  /ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependencies:
-      ajv: ^8.0.0
     peerDependenciesMeta:
       ajv:
         optional: true
@@ -5095,7 +5929,6 @@ packages:
     dependencies:
       micromatch: 2.3.11
       normalize-path: 2.1.1
-    dev: false
 
   /anymatch@2.0.0:
     resolution: {integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==}
@@ -5145,7 +5978,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       arr-flatten: 1.1.0
-    dev: false
 
   /arr-diff@4.0.0:
     resolution: {integrity: sha512-YVIQ82gZPGBebQV/a8dar4AitzCQs0jjXwMPZllpXMaGjXPYVUawSxQrRsjhjupyVxEvbHgUmIhKVlND+j02kA==}
@@ -5227,7 +6059,6 @@ packages:
   /array-unique@0.2.1:
     resolution: {integrity: sha512-G2n5bG5fSUCpnsXz4+8FUkYsGPkNfLn9YvS66U5qbTIXI2Ynnlo4Bi42bWv+omKUCqz+ejzfClwne0alJWJPhg==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /array-unique@0.3.2:
     resolution: {integrity: sha512-SleRWjh9JUud2wH1hPs9rZBZ33H6T9HOiL0uwGnGx9FpE6wKGyfWugmbkEOIs6qWrZhg0LWeLziLrEwQJhs5mQ==}
@@ -5335,7 +6166,6 @@ packages:
 
   /async-each@1.0.6:
     resolution: {integrity: sha512-c646jH1avxr+aVpndVMeAfYw7wAa6idufrlN3LPA4PmKS0QEGp6PIC9nwz0WQkkvBGAMEki3pFdtxaF39J9vvg==}
-    dev: false
 
   /async-limiter@1.0.1:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==}
@@ -5693,6 +6523,7 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /babel-plugin-polyfill-corejs3@0.6.0(@babel/core@7.21.8):
     resolution: {integrity: sha512-+eHqR6OPcBhJOGgsIar7xoAB1GcSwVUA3XjAd7HJNzOXT4wv6/H7KIdA/Nc60cvUlDbKApmqNvD1B1bzOt4nyA==}
@@ -5704,6 +6535,7 @@ packages:
       core-js-compat: 3.30.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /babel-plugin-polyfill-regenerator@0.4.1(@babel/core@7.21.8):
     resolution: {integrity: sha512-NtQGmyQDXjQqQ+IzRkBVwEOz9lQ4zxAQZgoAYEtU9dJjnl1Oc98qnN7jcp+bE7O7aYzVpavXE3/VKXNzUbh7aw==}
@@ -5714,6 +6546,7 @@ packages:
       '@babel/helper-define-polyfill-provider': 0.3.3(@babel/core@7.21.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /babel-plugin-syntax-async-functions@6.13.0:
     resolution: {integrity: sha512-4Zp4unmHgw30A1eWI5EpACji2qMocisdXhAftfhXoSV9j0Tvj6nRFE3tOmRY912E0FMRm/L5xWE7MGVT2FoLnw==}
@@ -6270,7 +7103,6 @@ packages:
   /binary-extensions@1.13.1:
     resolution: {integrity: sha512-Un7MIEDdUC5gNpcGDV97op1Ywk748MpHcFTHoYs6qnj1Z3j7I53VG3nwZhKzoBZmbdRNnb6WRdFlwl7tSDuZGw==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
@@ -6352,7 +7184,6 @@ packages:
       expand-range: 1.8.2
       preserve: 0.2.0
       repeat-element: 1.1.4
-    dev: false
 
   /braces@2.3.2:
     resolution: {integrity: sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==}
@@ -6687,7 +7518,6 @@ packages:
       fsevents: 1.2.13
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
@@ -7242,6 +8072,7 @@ packages:
     resolution: {integrity: sha512-nriW1nuJjUgvkEjIot1Spwakz52V9YkYHZAQG6A1eCgC8AA1p0zngrQEP9R0+V6hji5XilWKG1Bd0YRppmGimA==}
     dependencies:
       browserslist: 4.21.5
+    dev: true
 
   /core-js@2.6.12:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
@@ -7256,7 +8087,7 @@ packages:
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
-  /cosmiconfig-typescript-loader@4.3.0(@types/node@12.20.55)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@3.9.10):
+  /cosmiconfig-typescript-loader@4.3.0(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@3.9.10):
     resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -7265,9 +8096,8 @@ packages:
       ts-node: '>=10'
       typescript: '>=3'
     dependencies:
-      '@types/node': 12.20.55
       cosmiconfig: 8.1.3
-      ts-node: 10.9.1(@types/node@12.20.55)(typescript@3.9.10)
+      ts-node: 10.9.1(typescript@3.9.10)
       typescript: 3.9.10
     dev: true
 
@@ -7853,7 +8683,6 @@ packages:
   /diff@3.5.0:
     resolution: {integrity: sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==}
     engines: {node: '>=0.3.1'}
-    dev: false
 
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
@@ -8090,7 +8919,7 @@ packages:
     engines: {node: '>=0.12'}
     dev: true
 
-  /enzyme-adapter-react-16@1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.14.0):
+  /enzyme-adapter-react-16@1.15.7(enzyme@3.11.0)(react-dom@16.14.0)(react@16.9.0):
     resolution: {integrity: sha512-LtjKgvlTc/H7adyQcj+aq0P0H07LDL480WQl1gU512IUyaDo/sbOaNDdZsJXYW2XaoPqrLLE9KbZS+X2z6BASw==}
     peerDependencies:
       enzyme: ^3.0.0
@@ -8098,31 +8927,31 @@ packages:
       react-dom: ^16.0.0-0
     dependencies:
       enzyme: 3.11.0
-      enzyme-adapter-utils: 1.14.1(react@16.14.0)
+      enzyme-adapter-utils: 1.14.1(react@16.9.0)
       enzyme-shallow-equal: 1.0.5
       has: 1.0.3
       object.assign: 4.1.4
       object.values: 1.1.6
       prop-types: 15.8.1
-      react: 16.14.0
-      react-dom: 16.14.0(react@16.14.0)
+      react: 16.9.0
+      react-dom: 16.14.0(react@16.9.0)
       react-is: 16.13.1
-      react-test-renderer: 16.14.0(react@16.14.0)
+      react-test-renderer: 16.14.0(react@16.9.0)
       semver: 5.7.1
     dev: true
 
-  /enzyme-adapter-utils@1.14.1(react@16.14.0):
+  /enzyme-adapter-utils@1.14.1(react@16.9.0):
     resolution: {integrity: sha512-JZgMPF1QOI7IzBj24EZoDpaeG/p8Os7WeBZWTJydpsH7JRStc7jYbHE4CmNQaLqazaGFyLM8ALWA3IIZvxW3PQ==}
     peerDependencies:
       react: 0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0
     dependencies:
-      airbnb-prop-types: 2.16.0(react@16.14.0)
+      airbnb-prop-types: 2.16.0(react@16.9.0)
       function.prototype.name: 1.1.5
       has: 1.0.3
       object.assign: 4.1.4
       object.fromentries: 2.0.6
       prop-types: 15.8.1
-      react: 16.14.0
+      react: 16.9.0
       semver: 5.7.1
     dev: true
 
@@ -8915,7 +9744,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       is-posix-bracket: 0.1.1
-    dev: false
 
   /expand-brackets@2.1.4:
     resolution: {integrity: sha512-w/ozOKR9Obk3qoWeY/WDi6MFta9AoMR+zud60mdnbniMcBxRuFJyDt2LdX/14A1UABeqk+Uk+LDfUpvoGKppZA==}
@@ -8936,7 +9764,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       fill-range: 2.2.4
-    dev: false
 
   /expect@24.9.0:
     resolution: {integrity: sha512-wvVAx8XIol3Z5m9zvZXiyZOQ+sRJqNTIm6sGjdWlaZIeupQGO3WbYI+15D/AmEwZywL6wtJkbAbJtzkOfBuR0Q==}
@@ -9029,7 +9856,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       is-extglob: 1.0.0
-    dev: false
 
   /extglob@2.0.4:
     resolution: {integrity: sha512-Nmb6QXkELsuBr24CJSkilo6UHHgbekK5UiZgfE6UHD3Eb27YC6oD+bhcT+tJ6cl8dmsgdQxnWlcry8ksBIBLpw==}
@@ -9185,7 +10011,6 @@ packages:
   /filename-regex@2.0.1:
     resolution: {integrity: sha512-BTCqyBaWBTsauvnHiE8i562+EdJj+oUpkqWp2R1iCoR8f6oo8STRu3of7WJJ0TqWtxN50a5YFpzYK4Jj9esYfQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /fill-range@2.2.4:
     resolution: {integrity: sha512-cnrcCbj01+j2gTG921VZPnHbjmdAf8oQV/iGeV2kZxGSyfYjjTyY79ErsK1WJWMpw6DaApEX72binqJE+/d+5Q==}
@@ -9196,7 +10021,6 @@ packages:
       randomatic: 3.1.1
       repeat-element: 1.1.4
       repeat-string: 1.6.1
-    dev: false
 
   /fill-range@4.0.0:
     resolution: {integrity: sha512-VcpLTWqWDiTerugjj8e3+esbg+skS3M9e54UuR3iCeIDMXCLTsAH8hTSzDQU/X6/6t3eYkOKoZSef2PlU6U1XQ==}
@@ -9327,7 +10151,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       for-in: 1.0.2
-    dev: false
 
   /forever-agent@0.6.1:
     resolution: {integrity: sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw==}
@@ -9411,7 +10234,7 @@ packages:
     dev: false
 
   /fsevents@1.2.13:
-    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/fsevents/-/fsevents-1.2.13.tgz}
+    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
     deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
@@ -9422,7 +10245,7 @@ packages:
     optional: true
 
   /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/fsevents/-/fsevents-2.3.2.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -9596,13 +10419,11 @@ packages:
     dependencies:
       glob-parent: 2.0.0
       is-glob: 2.0.1
-    dev: false
 
   /glob-parent@2.0.0:
     resolution: {integrity: sha512-JDYOvfxio/t42HKdxkAYaCiBN7oYiuxykOxKxdaUW5Qn0zaYN3gRQWolrwdnf0shM9/EP0ebuuTmyoXNr1cC5w==}
     dependencies:
       is-glob: 2.0.1
-    dev: false
 
   /glob-parent@3.1.0:
     resolution: {integrity: sha512-E8Ak/2+dZY6fnzlR7+ueWvhsH1SjHr4jjss4YS/h4py44jY9MhK/VFdaZJAWDz6BbL21KeteKxFSFpq8OS5gVA==}
@@ -10394,7 +11215,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       binary-extensions: 1.13.1
-    dev: false
 
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -10497,14 +11317,12 @@ packages:
   /is-dotfile@1.0.3:
     resolution: {integrity: sha512-9YclgOGtN/f8zx0Pr4FQYMdibBiTaH3sn52vjYip4ZSf6C4/6RfTEZ+MR4GvKhCxdPh21Bg42/WL55f6KSnKpg==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /is-equal-shallow@0.1.3:
     resolution: {integrity: sha512-0EygVC5qPvIyb+gSz7zdD5/AAoS6Qrx1e//6N4yv4oNm30kqvdmG66oZFWVlQHUWe5OjP08FuTw2IdT0EOTcYA==}
     engines: {node: '>=0.10.0'}
     dependencies:
       is-primitive: 2.0.0
-    dev: false
 
   /is-extendable@0.1.1:
     resolution: {integrity: sha512-5BMULNob1vgFX6EjQw5izWDxrecWK9AM72rugNr0TFldMOi0fj6Jk+zeKIt0xGj4cEfQIJth4w3OKWOJ4f+AFw==}
@@ -10519,7 +11337,6 @@ packages:
   /is-extglob@1.0.0:
     resolution: {integrity: sha512-7Q+VbVafe6x2T+Tu6NcOf6sRklazEPmBoB3IWk3WdGZM2iGUwU/Oe3Wtq5lSEkDTTlpp8yx+5t4pzO/i9Ty1ww==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
@@ -10554,7 +11371,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       is-extglob: 1.0.0
-    dev: false
 
   /is-glob@3.1.0:
     resolution: {integrity: sha512-UFpDDrPgM6qpnFNI+rh/p3bUaq9hKLZN8bMUWzxmcnZVS3omf4IPK+BrewlnWjO1WmUsMYuSjKh4UJuV4+Lqmw==}
@@ -10603,7 +11419,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       kind-of: 3.2.2
-    dev: false
 
   /is-number@3.0.0:
     resolution: {integrity: sha512-4cboCqIpliH+mAvFNegjZQ4kgKc3ZUhQVr3HvWbSh5q3WH2v82ct+T2Y1hdU5Gdtorx/cLifQjqCbL7bpznLTg==}
@@ -10614,7 +11429,6 @@ packages:
   /is-number@4.0.0:
     resolution: {integrity: sha512-rSklcAIlf1OmFdyAqbnWTLVelsQ58uvZ66S/ZyawjWqIviTWCjg2PzVGw8WUA+nNuPTqb4wgA+NszrJ+08LlgQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /is-number@7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
@@ -10683,12 +11497,10 @@ packages:
   /is-posix-bracket@0.1.1:
     resolution: {integrity: sha512-Yu68oeXJ7LeWNmZ3Zov/xg/oDBnBK2RNxwYY1ilNJX+tKKZqgPK+qOn/Gs9jEu66KDY9Netf5XLKNGzas/vPfQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /is-primitive@2.0.0:
     resolution: {integrity: sha512-N3w1tFaRfk3UrPfqeRyD+GYDASU3W5VinKhlORy8EWVf/sIdDL9GAcew85XmktCfH+ngG7SRXEVDoO18WMdB/Q==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /is-promise@2.2.2:
     resolution: {integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==}
@@ -11383,6 +12195,35 @@ packages:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
     dev: true
 
+  /jscodeshift@0.14.0:
+    resolution: {integrity: sha512-7eCC1knD7bLUPuSCwXsMZUH51O8jIcoVyKtI6P0XM0IVzlGjckPy3FIwQlorzbN0Sg79oK+RlohN32Mqf/lrYA==}
+    hasBin: true
+    peerDependencies:
+      '@babel/preset-env': ^7.1.6
+    dependencies:
+      '@babel/core': 7.21.8
+      '@babel/parser': 7.21.8
+      '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-optional-chaining': 7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-transform-modules-commonjs': 7.21.5(@babel/core@7.21.8)
+      '@babel/preset-flow': 7.21.4(@babel/core@7.21.8)
+      '@babel/preset-typescript': 7.21.5(@babel/core@7.21.8)
+      '@babel/register': 7.21.0(@babel/core@7.21.8)
+      babel-core: 7.0.0-bridge.0(@babel/core@7.21.8)
+      chalk: 4.1.2
+      flow-parser: 0.206.0
+      graceful-fs: 4.2.11
+      micromatch: 4.0.5
+      neo-async: 2.6.2
+      node-dir: 0.1.17
+      recast: 0.21.5
+      temp: 0.8.4
+      write-file-atomic: 2.4.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /jscodeshift@0.14.0(@babel/preset-env@7.21.5):
     resolution: {integrity: sha512-7eCC1knD7bLUPuSCwXsMZUH51O8jIcoVyKtI6P0XM0IVzlGjckPy3FIwQlorzbN0Sg79oK+RlohN32Mqf/lrYA==}
     hasBin: true
@@ -11411,6 +12252,7 @@ packages:
       write-file-atomic: 2.4.3
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /jsdoc-api@4.0.3:
     resolution: {integrity: sha512-dfYq9JgB+XahY0XfSEw93PmXmocjwYcvJ5aMuQUJ/OdDRGWamf2SSOk3W06Bsj8qdjp/UdefzqpP/mpwsvHuvA==}
@@ -11855,6 +12697,7 @@ packages:
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: true
 
   /lodash.escape@4.0.1:
     resolution: {integrity: sha512-nXEOnb/jK9g0DYMr1/Xvq6l5xMD7GDG55+GSYIYmS0G4tBk/hURD4JR9WCavs04t33WmJx9kCyp9vJ+mr4BOUw==}
@@ -11870,7 +12713,6 @@ packages:
 
   /lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
-    dev: false
 
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -12060,7 +12902,6 @@ packages:
 
   /math-random@1.0.4:
     resolution: {integrity: sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A==}
-    dev: false
 
   /mathml-tag-names@2.1.3:
     resolution: {integrity: sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==}
@@ -12589,7 +13430,6 @@ packages:
       object.omit: 2.0.1
       parse-glob: 3.0.4
       regex-cache: 0.4.4
-    dev: false
 
   /micromatch@3.1.10:
     resolution: {integrity: sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg==}
@@ -12723,19 +13563,14 @@ packages:
     resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: true
 
-  /monaco-editor-webpack-plugin@1.9.1(monaco-editor@0.20.0)(webpack@5.74.0):
+  /monaco-editor-webpack-plugin@1.9.1(webpack@5.74.0):
     resolution: {integrity: sha512-x7fx1w3i/uwZERIgztHAAK3VQMsL8+ku0lFXXbO81hKDg8IieACqjGEa2mqEueg0c/fX+wd0oI+75wB19KJAsA==}
     peerDependencies:
       monaco-editor: 0.19.x || 0.20.x
       webpack: ^4.5.0
     dependencies:
       loader-utils: 1.4.2
-      monaco-editor: 0.20.0
       webpack: 5.74.0
-    dev: true
-
-  /monaco-editor@0.20.0:
-    resolution: {integrity: sha512-hkvf4EtPJRMQlPC3UbMoRs0vTAFAYdzFQ+gpMb8A+9znae1c43q8Mab9iVsgTcg/4PNiLGGn3SlDIa8uvK1FIQ==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/monaco-editor/-/monaco-editor-0.20.0.tgz}
     dev: true
 
   /moo@0.5.2:
@@ -12920,7 +13755,6 @@ packages:
 
   /normalize.css@8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
-    dev: false
 
   /npm-path@2.0.4:
     resolution: {integrity: sha512-IFsj0R9C7ZdR5cP+ET342q77uSRdtWOlWpih5eC+lu29tIDbNEgDbzgVJ5UFvYHWhxDZ5TFkJafFioO0pPQjCw==}
@@ -13084,7 +13918,6 @@ packages:
     dependencies:
       for-own: 0.1.5
       is-extendable: 0.1.1
-    dev: false
 
   /object.pick@1.3.0:
     resolution: {integrity: sha512-tqa/UMy/CCoYmj+H5qc07qvSL9dqcs/WZENZ1JbtWBlATP+iVOe778gE6MSijnyCnORzDuX6hU+LA4SZ09YjFQ==}
@@ -13341,7 +14174,6 @@ packages:
       is-dotfile: 1.0.3
       is-extglob: 1.0.0
       is-glob: 2.0.1
-    dev: false
 
   /parse-json@2.2.0:
     resolution: {integrity: sha512-QR/GGaKCkhwk1ePQNYDRKYZ3mwU9ypsKhB0XyFnLQdomyEqk3e8wpW3V5Jp88zbxK4n5ST1nqo+g9juTpownhQ==}
@@ -13761,11 +14593,11 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       postcss: 8.4.23
-      ts-node: 10.9.1(@types/node@12.20.55)(typescript@3.9.10)
+      ts-node: 10.9.1(typescript@3.9.10)
       yaml: 1.10.2
     dev: true
 
-  /postcss-loader@7.2.4(@types/node@12.20.55)(postcss@8.4.23)(ts-node@10.9.1)(typescript@3.9.10)(webpack@5.74.0):
+  /postcss-loader@7.2.4(postcss@8.4.23)(ts-node@10.9.1)(typescript@3.9.10)(webpack@5.74.0):
     resolution: {integrity: sha512-F88rpxxNspo5hatIc+orYwZDtHFaVFOSIVAx+fBfJC1GmhWbVmPWtmg2gXKE1OxJbneOSGn8PWdIwsZFcruS+w==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -13780,11 +14612,11 @@ packages:
         optional: true
     dependencies:
       cosmiconfig: 8.1.3
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@12.20.55)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@3.9.10)
+      cosmiconfig-typescript-loader: 4.3.0(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@3.9.10)
       klona: 2.0.6
       postcss: 8.4.23
       semver: 7.5.1
-      ts-node: 10.9.1(@types/node@12.20.55)(typescript@3.9.10)
+      ts-node: 10.9.1(typescript@3.9.10)
       typescript: 3.9.10
       webpack: 5.74.0
     transitivePeerDependencies:
@@ -14290,7 +15122,6 @@ packages:
     resolution: {integrity: sha512-4EFYGHcEw+H3E06PT/pQQri06u/1VIIPjeJQaM8skB80vZuXMhp4cSNV5azmdNkontnOID/XYWEvEEELLFB1ww==}
     dependencies:
       postcss: 6.0.23
-    dev: false
 
   /postcss-scss@2.1.1:
     resolution: {integrity: sha512-jQmGnj0hSGLd9RscFw9LyuSVAa5Bl1/KBPqG1NQw9w8ND55nY4ZEsdlVuYJvLPpV+y0nwTV5v/4rHPzZRihQbA==}
@@ -14410,7 +15241,6 @@ packages:
       chalk: 2.4.2
       source-map: 0.6.1
       supports-color: 5.5.0
-    dev: false
 
   /postcss@7.0.39:
     resolution: {integrity: sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==}
@@ -14435,7 +15265,6 @@ packages:
   /preserve@0.2.0:
     resolution: {integrity: sha512-s/46sYeylUfHNjI+sA/78FAHlmIuKqI9wNnzEOGehAlUUYeObv5C2mOinXBjyUyWmJ2SfcS2/ydApH4hTF4WXQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /prettier-linter-helpers@1.0.0:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
@@ -14630,7 +15459,6 @@ packages:
       is-number: 4.0.0
       kind-of: 6.0.3
       math-random: 1.0.4
-    dev: false
 
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
@@ -14701,7 +15529,7 @@ packages:
     dev: false
 
   /react-dom@16.14.0(react@16.14.0):
-    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/react-dom/-/react-dom-16.14.0.tgz}
+    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
     peerDependencies:
       react: ^16.14.0
     dependencies:
@@ -14710,11 +15538,23 @@ packages:
       prop-types: 15.8.1
       react: 16.14.0
       scheduler: 0.19.1
+    optional: true
+
+  /react-dom@16.14.0(react@16.9.0):
+    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
+    peerDependencies:
+      react: ^16.14.0
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+      react: 16.9.0
+      scheduler: 0.19.1
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-syntax-highlighter@15.5.0(react@16.14.0):
+  /react-syntax-highlighter@15.5.0(react@16.9.0):
     resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
     peerDependencies:
       react: '>= 0.14.0'
@@ -14723,24 +15563,24 @@ packages:
       highlight.js: 10.7.3
       lowlight: 1.20.0
       prismjs: 1.29.0
-      react: 16.14.0
+      react: 16.9.0
       refractor: 3.6.0
     dev: true
 
-  /react-test-renderer@16.14.0(react@16.14.0):
+  /react-test-renderer@16.14.0(react@16.9.0):
     resolution: {integrity: sha512-L8yPjqPE5CZO6rKsKXRO/rVPiaCOy0tQQJbC+UjPNlobl5mad59lvPjwFsQHTvL03caVDIVr9x9/OSgDe6I5Eg==}
     peerDependencies:
       react: ^16.14.0
     dependencies:
       object-assign: 4.1.1
       prop-types: 15.8.1
-      react: 16.14.0
+      react: 16.9.0
       react-is: 16.13.1
       scheduler: 0.19.1
     dev: true
 
   /react@16.14.0:
-    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
+    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/react/-/react-16.14.0.tgz}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -14850,7 +15690,6 @@ packages:
       readable-stream: 2.3.8
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -14923,6 +15762,7 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       regenerate: 1.4.2
+    dev: true
 
   /regenerate@1.4.2:
     resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
@@ -14946,13 +15786,13 @@ packages:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
     dependencies:
       '@babel/runtime': 7.21.5
+    dev: true
 
   /regex-cache@0.4.4:
     resolution: {integrity: sha512-nVIZwtCjkC9YgvWkpM55B5rBhBYRZhAaJbgcFYXXsHnbZ9UZI9nnVWYZpBlCqv9ho2eZryPnWrZGsOdPwVWXWQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       is-equal-shallow: 0.1.3
-    dev: false
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
@@ -14996,6 +15836,7 @@ packages:
       regjsparser: 0.9.1
       unicode-match-property-ecmascript: 2.0.0
       unicode-match-property-value-ecmascript: 2.1.0
+    dev: true
 
   /registry-auth-token@3.3.2:
     resolution: {integrity: sha512-JL39c60XlzCVgNrO+qq68FoNb56w/m7JYvGR2jT5iR1xBrUA3Mfx5Twk5rqTThPmQKMWydGmq8oFtDlxfrmxnQ==}
@@ -15027,6 +15868,7 @@ packages:
     hasBin: true
     dependencies:
       jsesc: 0.5.0
+    dev: true
 
   /relateurl@0.2.7:
     resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
@@ -15715,7 +16557,7 @@ packages:
     dependencies:
       '@types/json-schema': 7.0.11
       ajv: 8.12.0
-      ajv-formats: 2.1.1(ajv@8.12.0)
+      ajv-formats: 2.1.1
       ajv-keywords: 5.1.0(ajv@8.12.0)
     dev: true
 
@@ -16200,7 +17042,6 @@ packages:
 
   /stdin@0.0.1:
     resolution: {integrity: sha512-2bacd1TXzqOEsqRa+eEWkRdOSznwptrs4gqFcpMq5tOtmJUGPZd10W5Lam6wQ4YQ/+qjQt4e9u35yXCF6mrlfQ==}
-    dev: false
 
   /stealthy-require@1.1.1:
     resolution: {integrity: sha512-ZnWpYnYugiOVEY5GkcuJK1io5V8QmNYChG62gSit9pQVGErXtrKuPC55ITaVSukmMta5qpMU7vqLt2Lnni4f/g==}
@@ -16526,7 +17367,7 @@ packages:
     dev: false
 
   /stylelint@10.1.0:
-    resolution: {integrity: sha512-OmlUXrgzEMLQYj1JPTpyZPR9G4bl0StidfHnGJEMpdiQ0JyTq0MPg1xkHk1/xVJ2rTPESyJCDWjG8Kbpoo7Kuw==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/stylelint/-/stylelint-10.1.0.tgz}
+    resolution: {integrity: sha512-OmlUXrgzEMLQYj1JPTpyZPR9G4bl0StidfHnGJEMpdiQ0JyTq0MPg1xkHk1/xVJ2rTPESyJCDWjG8Kbpoo7Kuw==}
     engines: {node: '>=8.7.0'}
     hasBin: true
     requiresBuild: true
@@ -16687,7 +17528,6 @@ packages:
 
   /svg-parser@1.0.6:
     resolution: {integrity: sha512-EPd4xbh+MnF0eaiJgQziJHCKEWnrNEYMIuvRoiyPi/XmSO+gb65gMdGid9/JrucsQ80Y84NTChxE5FW0WxuO3w==}
-    dev: false
 
   /svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
@@ -16891,7 +17731,6 @@ packages:
       stdin: 0.0.1
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /timsort@0.3.0:
     resolution: {integrity: sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==}
@@ -17040,7 +17879,7 @@ packages:
       webpack: 5.74.0
     dev: true
 
-  /ts-node@10.9.1(@types/node@12.20.55)(typescript@3.9.10):
+  /ts-node@10.9.1(typescript@3.9.10):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -17059,7 +17898,6 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 12.20.55
       acorn: 8.8.1
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -17139,7 +17977,7 @@ packages:
     dev: false
 
   /uglify-js@3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==, tarball: https://artifactory-ci.myntra.com:443/artifactory/api/npm/npm-registry/uglify-js/-/uglify-js-3.17.4.tgz}
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
@@ -17167,6 +18005,7 @@ packages:
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
+    dev: true
 
   /unicode-match-property-ecmascript@2.0.0:
     resolution: {integrity: sha512-5kaZCrbp5mmbz5ulBkDkbY0SsPOjKqVS35VpL9ulMPfSl0J0Xsm+9Evphv9CoIZFwre7aJoa94AY6seMKGVN5Q==}
@@ -17174,14 +18013,17 @@ packages:
     dependencies:
       unicode-canonical-property-names-ecmascript: 2.0.0
       unicode-property-aliases-ecmascript: 2.1.0
+    dev: true
 
   /unicode-match-property-value-ecmascript@2.1.0:
     resolution: {integrity: sha512-qxkjQt6qjg/mYscYMC0XKRn3Rh0wFPlfxB0xkt9CfyTvpX1Ra0+rAmdX2QyAobptSEvuy4RtpPRui6XkV+8wjA==}
     engines: {node: '>=4'}
+    dev: true
 
   /unicode-property-aliases-ecmascript@2.1.0:
     resolution: {integrity: sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==}
     engines: {node: '>=4'}
+    dev: true
 
   /unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
