@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/text",
-  "version": "0.0.53",
+  "version": "0.0.54",
   "main": "dist/text.cjs.js",
   "module": "dist/text.esm.js",
   "types": "dist/index.d.ts",
