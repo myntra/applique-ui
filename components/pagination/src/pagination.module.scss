@@ -27,17 +27,18 @@
   &-item {
     margin-left: 0 !important;
 
-    &-icon {
-      color: color('primary');
-      cursor: pointer;
-
-      &-disabled {
-        cursor: not-allowed;
-      }
-    }
-    &-skipPages {
+    &-skip-pages {
       width: size('3x');
       cursor: pointer;
+    }
+  }
+
+  &-icon {
+    color: color('primary');
+    cursor: pointer;
+
+    &-disabled {
+      cursor: not-allowed;
     }
   }
 }

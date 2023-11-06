@@ -33,6 +33,6 @@
     "@applique-ui/uikit-utils": "0.0.*",
     "intersection-observer-polyfill": "^0.1.0",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@latest"
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }
