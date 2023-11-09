@@ -33,7 +33,7 @@
     "@applique-ui/uikit-context": "0.0.*",
     "@applique-ui/icon": "0.0.*",
     "@applique-ui/layout": "0.0.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@latest",
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest",
     "@applique-ui/uikit-utils": "0.0.*"
   }
 }

@@ -32,6 +32,6 @@
     "@applique-ui/uikit-can-i-use": "0.0.*",
     "@applique-ui/virtual-list": "0.0.*",
     "@applique-ui/uikit-utils": "0.0.*",
-    "uikit-icons": "npm:@myntra/uikit-icons@latest"
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

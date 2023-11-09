@@ -103,7 +103,7 @@ function createComponentsFile(component) {
       // ...iconImports.map(
       //   (iconName) =>
       //     `
-      //   export { default as ${iconName} } from '@myntra/uikit-icons/svgs/${iconName}'
+      //   export { default as ${iconName} } from '@applique-ui/uikit-icons/svgs/${iconName}'
       //   `
       // ),
     ].join('\n')

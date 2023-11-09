@@ -57,21 +57,21 @@ We provide a basic set of icons for immediate use, as well as the option to util
 Run the following command using npm:
 
 ```bash
-npm install @myntra/uikit-icons --save
+npm install @applique-ui/uikit-icons --save
 ```
 If you prefer Yarn, use the following command instead:
 
 ```bash
-yarn add @myntra/uikit-icons
+yarn add @applique-ui/uikit-icons
 ```
 
 ### Usage
 1. Import any of the provided icons directly in your project:
 
 ```js
-import BarsSolid from "@myntra/uikit-icons/svgs/BarsSolid"
-import Bell from "@myntra/uikit-icons/svgs/Bell"
-import BoxSolid from "@myntra/uikit-icons/svgs/BoxSolid"
+import BarsSolid from "@applique-ui/uikit-icons/svgs/BarsSolid"
+import Bell from "@applique-ui/uikit-icons/svgs/Bell"
+import BoxSolid from "@applique-ui/uikit-icons/svgs/BoxSolid"
 ```
 
 2. Pass this icon element as a prop to the component:

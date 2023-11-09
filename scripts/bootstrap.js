@@ -54,7 +54,7 @@ targets.forEach((name) => {
       '@applique-ui/uikit-can-i-use': '0.0.*',
       '@applique-ui/uikit-utils': '0.0.*',
       'prop-types': '^15.7.2',
-      'uikit-icons': 'npm:@myntra/uikit-icons@^1.0.9',
+      'uikit-icons': 'npm:@applique-ui/uikit-icons@^1.0.56',
     }
   }
 

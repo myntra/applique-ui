@@ -34,6 +34,6 @@
     "@applique-ui/layout": "0.0.*",
     "@applique-ui/icon": "0.0.*",
     "prop-types": "^15.7.2",
-    "uikit-icons": "npm:@myntra/uikit-icons@latest"
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

@@ -5,6 +5,10 @@ import Icon from '@applique-ui/icon'
 
 import ChevronLeftSolid from 'uikit-icons/svgs/ChevronLeftSolid'
 import ChevronRightSolid from 'uikit-icons/svgs/ChevronRightSolid'
+
+import ChevronSkipLeftSolid from 'uikit-icons/svgs/ChevronSkipLeftSolid'
+import ChevronSkipRightSolid from 'uikit-icons/svgs/ChevronSkipRightSolid'
+
 import { usePagination, DOTS } from './usePagination'
 import classnames from './pagination.module.scss'
 
@@ -43,7 +47,13 @@ const SkipPages = ({ onPageChange, type, currentPage }) => {
       onMouseOut={handleMouseOut}
     >
       {isHovering ? (
-        <Icon name={ChevronRightSolid} onClick={onSkipClick} />
+        <Icon
+          className={classnames('pages-icon')}
+          name={
+            type === DOTS.LEFT ? ChevronSkipLeftSolid : ChevronSkipRightSolid
+          }
+          onClick={onSkipClick}
+        />
       ) : (
         <span>&#8230;</span>
       )}
@@ -102,7 +112,7 @@ const Pages = ({
     >
       <Icon
         name={ChevronLeftSolid}
-        className={classnames('pages-item-icon', {
+        className={classnames('pages-icon', {
           pagesItemIconDisabled: currentPage === 1,
         })}
         onClick={onPrevious}
@@ -131,7 +141,7 @@ const Pages = ({
       })}
       <Icon
         name={ChevronRightSolid}
-        className={classnames('pages-item-icon', {
+        className={classnames('pages-icon', {
           pagesItemIconDisabled: currentPage === lastPage,
         })}
         onClick={onNext}
