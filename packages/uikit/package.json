@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "main": "dist/uikit.cjs.js",
   "module": "dist/uikit.esm.js",
   "types": "dist/index.d.ts",
@@ -39,6 +39,7 @@
     "@applique-ui/grid": "latest",
     "@applique-ui/icon": "latest",
     "@applique-ui/image": "latest",
+    "@applique-ui/input": "latest",
     "@applique-ui/input-checkbox": "latest",
     "@applique-ui/input-date": "latest",
     "@applique-ui/input-file": "latest",

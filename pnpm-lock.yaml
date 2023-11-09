@@ -2245,6 +2245,9 @@ importers:
       '@applique-ui/image':
         specifier: latest
         version: link:../../components/image
+      '@applique-ui/input':
+        specifier: latest
+        version: link:../../components/input
       '@applique-ui/input-checkbox':
         specifier: latest
         version: link:../../components/input-checkbox
