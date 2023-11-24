@@ -6,22 +6,22 @@
   width: 100%;
   border-radius: 100px;
 
-  --u-progress-size: size('2x');
+  --u-progress-size: 8px;
 
   &.small {
-    --u-progress-size: size('1x');
+    --u-progress-size: 4px;
   }
 
   &.medium {
-    --u-progress-size: size('4x');
+    --u-progress-size: 16px;
   }
 
   &.large {
-    --u-progress-size: size('8x');
+    --u-progress-size: 32px;
   }
 
   .title {
-    margin-bottom: size('2x');
+    margin-bottom: 8px;
   }
 
   .background {
