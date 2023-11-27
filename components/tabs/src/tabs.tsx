@@ -90,7 +90,7 @@ function Tabs(props: Props) {
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const activeTab = Number(event.currentTarget.dataset.index)
 
-    if (props.children[activeTab].props.disabled) return
+    if (props?.children?.[activeTab]?.props?.disabled) return
     if (!Number.isInteger(activeTab)) return
 
     if (props.onChange) props.onChange(activeTab)
