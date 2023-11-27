@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/layout",
-  "version": "0.0.55",
+  "version": "0.0.56",
   "main": "dist/layout.cjs.js",
   "module": "dist/layout.esm.js",
   "types": "dist/index.d.ts",

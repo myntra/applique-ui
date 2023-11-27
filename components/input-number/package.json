@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-number",
-  "version": "0.0.55",
+  "version": "0.0.56",
   "main": "dist/input-number.cjs.js",
   "module": "dist/input-number.esm.js",
   "types": "dist/index.d.ts",
