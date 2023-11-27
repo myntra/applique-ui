@@ -4,6 +4,7 @@
 .input {
   @include mixin-input-text-revamp(border, padding('input.text'));
 
+  background-color: transparent;
   input {
     font-size: inherit;
   }

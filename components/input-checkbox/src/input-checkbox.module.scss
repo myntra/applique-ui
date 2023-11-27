@@ -5,6 +5,7 @@
   @include mixin-input-component();
 
   display: inline-block;
+  background-color: transparent;
   border-bottom-color: transparent;
 }
 
