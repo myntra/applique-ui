@@ -111,8 +111,8 @@ export default function Pagination(props: Props) {
 }
 
 Pagination.defaultProps = {
-  page: 8,
-  size: 10,
+  page: 1,
+  size: 15,
   sizes: [10, 15, 30, 50],
 }
 
