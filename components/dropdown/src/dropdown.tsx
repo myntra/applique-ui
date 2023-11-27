@@ -265,7 +265,7 @@ export default class Dropdown extends Component<
     const scrollableHeight =
       document.body.scrollHeight - (window.scrollY + window.innerHeight)
     const spaceBelow = window.innerHeight - target.bottom
-    const spaceRight = window.innerWidth - target.left
+    const spaceRight = window.innerWidth - target.right
 
     const down = auto ? spaceBelow + scrollableHeight > height : this.down
     const up = auto ? !down : this.props.up
