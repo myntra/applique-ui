@@ -105,6 +105,11 @@ export interface Props<Value = any, Option = any> extends BaseProps {
    */
   up?: boolean
 
+  /**
+   * Whether to auto compute the position of dropdown options around the input selection.
+   */
+  auto?: boolean
+
   /*** Field Context Passed from parent Field */
   __fieldContext?: FieldContext
   /*** Visually Representing error state of component */
@@ -157,6 +162,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       return <div className={classnames('empty')}>No results found</div>
     },
     up: false,
+    auto: false,
   }
 
   constructor(props) {
@@ -213,6 +219,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
       disabled,
       readOnly,
       up,
+      auto,
       __fieldContext = {},
       error,
       variant = 'bordered',
@@ -227,6 +234,7 @@ export default class InputSelect<Value = any, Option = any> extends Component<
         right
         up={up}
         container
+        auto={auto}
         className={classnames('container', { disabled })}
         isOpen={this.state.isOpen}
         onOpen={disabled ? null : this.handleOpen}

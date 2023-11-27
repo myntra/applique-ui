@@ -262,20 +262,15 @@ export default class Dropdown extends Component<
     const { height, width } = this.state
     const { auto } = this.props
 
-    const maxWidth = reference.width
-    const maxHeight = reference.height
+    const scrollableHeight =
+      document.body.scrollHeight - (window.scrollY + window.innerHeight)
+    const spaceBelow = window.innerHeight - target.bottom
+    const spaceRight = window.innerWidth - target.left
 
-    // Choose:
-    const up = auto
-      ? target.bottom + height > maxHeight && target.top - height >= 0
-      : this.props.up
-    const left = auto ? target.left + width < maxWidth : this.props.left
-    const right = auto
-      ? left
-        ? false
-        : target.right - width > 0
-      : this.props.right
-    const down = auto ? !up : this.down
+    const down = auto ? spaceBelow + scrollableHeight > height : this.down
+    const up = auto ? !down : this.props.up
+    const left = auto ? target.left > 0 : this.props.left
+    const right = auto ? spaceRight > 0 : this.props.right
 
     const layout = { up, left, right, down }
 
