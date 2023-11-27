@@ -2,7 +2,7 @@
   padding: padding('input');
   font-size: inherit;
   color: text-color('dark');
-  background-color: transparent;
+  background-color: color('white');
   border: none;
   border-bottom: 1px solid color('gray-dark');
 
@@ -26,7 +26,7 @@
   font-size: inherit;
   line-height: inherit;
   color: text-color('input.text');
-  background-color: transparent;
+  background-color: color('white');
   #{$border-type}: 1px solid color('input.border');
 
   @if not($border-type == 'border-bottom') {
