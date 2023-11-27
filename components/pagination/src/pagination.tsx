@@ -70,6 +70,7 @@ export default function Pagination(props: Props) {
       {!hideSize && (
         <div className={classnames('pagination-select-size-wrapper')}>
           <InputSelect
+            up
             variant="bordered"
             required
             options={sizes.map((size) => ({
