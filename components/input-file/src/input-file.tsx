@@ -89,6 +89,7 @@ export default class InputFile extends PureComponent<Props> {
       value,
       onError,
       validations,
+      icon,
       ...props
     } = this.props
 
@@ -101,6 +102,7 @@ export default class InputFile extends PureComponent<Props> {
           value={this.filenames}
           title={this.filenames}
           variant={variant}
+          icon={icon}
         />
         <input
           {...props}
