@@ -52,7 +52,6 @@ function Tabs(props: Props) {
   const children: any = Children.toArray(props.children).filter((child) =>
     isValidElement(child)
   )
-  if (!children.length) return null
 
   const getActiveIndex = () => {
     let activeTab =
@@ -96,6 +95,7 @@ function Tabs(props: Props) {
     if (props.onChange) props.onChange(activeTab)
     setState({ activeIndex: activeTab })
   }
+  if (!children.length) return null
 
   const content = children[getActiveIndex()]?.props?.children
   return (
