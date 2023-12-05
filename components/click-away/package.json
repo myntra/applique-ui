@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/click-away",
-  "version": "0.0.56",
+  "version": "0.0.57",
   "main": "dist/click-away.cjs.js",
   "module": "dist/click-away.esm.js",
   "types": "dist/index.d.ts",
