@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/list",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "main": "dist/list.cjs.js",
   "module": "dist/list.esm.js",
   "types": "dist/index.d.ts",

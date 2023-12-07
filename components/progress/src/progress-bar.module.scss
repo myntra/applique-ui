@@ -6,22 +6,22 @@
   width: 100%;
   border-radius: 100px;
 
-  --u-progress-size: size('2x');
+  --u-progress-size: #{size('2x')};
 
   &.small {
-    --u-progress-size: size('1x');
+    --u-progress-size: #{size('1x')};
   }
 
   &.medium {
-    --u-progress-size: size('4x');
+    --u-progress-size: #{size('4x')};
   }
 
   &.large {
-    --u-progress-size: size('8x');
+    --u-progress-size: #{size('8x')};
   }
 
   .title {
-    margin-bottom: size('2x');
+    margin-bottom: #{size('2x')};
   }
 
   .background {
@@ -88,7 +88,7 @@
   }
 
   .value {
-    margin-left: size('2x');
+    margin-left: #{size('2x')};
   }
 }
 
