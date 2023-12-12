@@ -1,27 +1,17 @@
 {
   "name": "@applique-ui/stepper",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",
   "author": "Sunil Jhamnani<sunil.jhamnani@myntra.com>",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/stepper",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/stepper",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/"
-  ],
+  "files": ["src/", "dist/", "bin/"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

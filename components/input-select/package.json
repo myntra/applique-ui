@@ -1,28 +1,17 @@
 {
   "name": "@applique-ui/input-select",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "dist/input-select.cjs.js",
   "module": "dist/input-select.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-select",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/input-select",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

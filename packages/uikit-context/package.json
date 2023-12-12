@@ -1,26 +1,19 @@
 {
   "name": "@applique-ui/uikit-context",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "dist/uikit-context.cjs.js",
   "module": "dist/uikit-context.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/uikit-context",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
   "sideEffects": false,
   "dependencies": {
     "@applique-ui/uikit-can-i-use": "0.0.*",
     "react": "^16.9.0"
   },
-  "optionalDependencies": {
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

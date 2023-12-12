@@ -1,28 +1,17 @@
 {
   "name": "@applique-ui/input-masked",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "dist/input-masked.cjs.js",
   "module": "dist/input-masked.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-masked",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/input-masked",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

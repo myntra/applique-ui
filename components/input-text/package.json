@@ -1,29 +1,17 @@
 {
   "name": "@applique-ui/input-text",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "dist/input-text.cjs.js",
   "module": "dist/input-text.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-text",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/input-text",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js",
-    "*.scss"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js", "*.scss"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

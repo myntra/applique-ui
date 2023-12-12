@@ -1,22 +1,16 @@
 {
   "name": "@applique-ui/tokenizer",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "src/index.js",
   "module": "dist/tokenizer.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/tokenizer",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/"
-  ],
+  "files": ["src/", "dist/", "bin/"],
   "sideEffects": false,
   "description": "@applique-ui/tokenizer",
-  "bin": {
-    "tokenize": "bin/tokenize.js"
-  },
+  "bin": { "tokenize": "bin/tokenize.js" },
   "dependencies": {
     "ajv": "^6.9.2",
     "camelcase": "^5.0.0",

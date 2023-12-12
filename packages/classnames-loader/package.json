@@ -1,17 +1,13 @@
 {
   "name": "@applique-ui/classnames-loader",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "src/index.js",
   "module": "dist/classnames-loader.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/classnames-loader",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/"
-  ],
+  "files": ["src/", "dist/", "bin/"],
   "sideEffects": false,
   "dependencies": {
     "@applique-ui/uikit-utils": "0.0.*",
