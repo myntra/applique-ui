@@ -1,27 +1,32 @@
-name: Release
+name: Release using release-please
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
 jobs:
-  release:
-    name: Publish to npmjs
+  release-please:
     runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
     steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+      # The logic below handles the npm publication:
       - uses: actions/checkout@v4
-      - name: Set user and email
-        run: git config user.name github-actions && git config user.email github-actions@github.com
-      # Setup .npmrc file to publish to npm
+        # these if statements ensure that a publication only occurs when
+        # a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v3
         with:
           node-version: 16.17.1
           registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
       - name: Install pnpm
         run: npm i pnpm@8.5.1 -g
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-      - run: npm run release
+      - run: npm run :publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
+          
