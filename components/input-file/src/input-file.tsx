@@ -3,6 +3,7 @@ import classnames from './input-file.module.scss'
 import Input from '@applique-ui/input-text'
 import Button from '@applique-ui/button'
 import { createRef } from '@applique-ui/uikit-utils'
+import { IconName } from '@applique-ui/icon'
 
 export type InputFileValidationFunction = { (file: FileList): void }
 
@@ -14,6 +15,7 @@ export interface Props extends BaseProps {
   onError?(error: Error): void
   validations?: Array<InputFileValidationFunction> | InputFileValidationFunction
   variant?: 'bordered' | 'standard'
+  icon?: IconName
 }
 
 /**
@@ -89,6 +91,7 @@ export default class InputFile extends PureComponent<Props> {
       value,
       onError,
       validations,
+      icon,
       ...props
     } = this.props
 
@@ -101,6 +104,7 @@ export default class InputFile extends PureComponent<Props> {
           value={this.filenames}
           title={this.filenames}
           variant={variant}
+          icon={icon}
         />
         <input
           {...props}
