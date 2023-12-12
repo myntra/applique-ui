@@ -33,7 +33,7 @@
     "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
     "pre:publish": "CI=true npm run build",
     ":publish": "node ./scripts/publish.js",
-    "pre:release": "git checkout deploy && git pull origin deploy",
+    "pre:release": "git fetch && git checkout deploy && git pull origin deploy",
     ":release": "standard-version -a -r patch",
     "post:release": "npm run :publish && git push --follow-tags && npm run update:master",
     "release": "npm run :release",
