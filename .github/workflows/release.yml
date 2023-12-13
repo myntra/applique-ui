@@ -6,9 +6,6 @@ on:
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .
     steps:
       - uses: google-github-actions/release-please-action@v4
         id: release
@@ -28,12 +25,15 @@ jobs:
       #   run: npm config set //registry.npmjs.org/:authToken="${{ secrets.NODE_AUTH_TOKEN }}"
       - name: Install pnpm
         run: npm i pnpm@8.5.1 -g
+        working-directory: .
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
         working-directory: .
       - name: Update versions
         run: npm run :update:versions
+        working-directory: .
       - run: npm run :publish
+        working-directory: .
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
