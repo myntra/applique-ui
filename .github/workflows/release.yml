@@ -27,6 +27,8 @@ jobs:
         run: npm i pnpm@8.5.1 -g
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
+      - name: Update versions
+        run: npm run :update:versions
       - run: npm run :publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
