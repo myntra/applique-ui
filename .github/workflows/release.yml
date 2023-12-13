@@ -24,16 +24,17 @@ jobs:
       # - name: Set Auth token
       #   run: npm config set //registry.npmjs.org/:authToken="${{ secrets.NODE_AUTH_TOKEN }}"
       - name: Install pnpm
+        working-directory: .
         run: npm i pnpm@8.5.1 -g
-        working-directory: .
       - name: Install dependencies
+        working-directory: .
         run: pnpm i --frozen-lockfile
-        working-directory: .
       - name: Update versions
+        working-directory: .
         run: npm run :update:versions
+      - name: Publish all packages
         working-directory: .
-      - run: npm run :publish
-        working-directory: .
+        run: npm run :publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
