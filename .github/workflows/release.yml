@@ -25,6 +25,7 @@ jobs:
       #   run: npm config set //registry.npmjs.org/:authToken="${{ secrets.NODE_AUTH_TOKEN }}"
       - name: Install pnpm
         run: npm i pnpm@8.5.1 -g
+        working-directory: .
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Update versions
