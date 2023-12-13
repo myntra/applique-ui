@@ -5,6 +5,12 @@
     ".": {
       "initial-version": "0.0.60"
     },
+    "./themes/nuclei": {
+      "initial-version": "0.0.60"
+    },
+    "./themes/unity": {
+      "initial-version": "0.0.60"
+    },
     "./(themes|packages|components)/*/": {
       "initial-version": "0.0.60"
     }
