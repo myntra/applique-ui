@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/fab",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",
   "types": "dist/index.d.ts",
@@ -26,14 +26,13 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
+    "@applique-ui/button": "link:../button",
+    "@applique-ui/dropdown": "link:../dropdown",
+    "@applique-ui/icon": "link:../icon",
     "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "prop-types": "^15.7.2",
-    "@applique-ui/dropdown": "link:../dropdown",
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/button": "link:../button",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/input.cjs.js",
   "module": "dist/input.esm.js",
   "types": "dist/index.d.ts",
@@ -28,10 +28,9 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/icon": "link:../icon",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

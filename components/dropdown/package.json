@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/dropdown",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",
   "types": "dist/index.d.ts",
@@ -26,13 +26,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/button": "link:../button",
     "@applique-ui/click-away": "link:../click-away",
     "@applique-ui/measure": "link:../measure",
     "@applique-ui/portal": "link:../portal",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"

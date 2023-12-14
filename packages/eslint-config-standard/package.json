@@ -1,13 +1,17 @@
 {
   "name": "@applique-ui/eslint-config-standard",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "src/index.js",
   "module": "dist/eslint-config-standard.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/eslint-config-standard",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": false,
   "description": "@applique-ui/eslint-config-standard",
   "dependencies": {
@@ -27,6 +31,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "prettier": "^1.11.1"
   },
-  "optionalDependencies": { "eslint": "^4.19.1" },
-  "devDependencies": {}
+  "optionalDependencies": {
+    "eslint": "^4.19.1"
+  }
 }

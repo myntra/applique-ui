@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/button-group",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/button-group.cjs.js",
   "module": "dist/button-group.esm.js",
   "types": "dist/index.d.ts",
@@ -26,7 +26,6 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
     "@applique-ui/button": "link:../button",
     "@applique-ui/dropdown": "link:../dropdown",

@@ -1,11 +1,17 @@
 {
   "name": "@applique-ui/accoutrement",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "style": "src/index.scss",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/accoutrement",
-  "files": ["src/", "dist/"],
+  "files": [
+    "src/",
+    "dist/"
+  ],
   "sideEffects": false,
-  "dependencies": { "accoutrement": "^4.0.4", "normalize.css": "^8.0.1" }
+  "dependencies": {
+    "accoutrement": "^4.0.4",
+    "normalize.css": "^8.0.1"
+  }
 }

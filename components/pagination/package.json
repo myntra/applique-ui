@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/pagination",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/pagination.cjs.js",
   "module": "dist/pagination.esm.js",
   "types": "dist/index.d.ts",
@@ -27,15 +27,14 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
+    "@applique-ui/button": "link:../button",
+    "@applique-ui/icon": "link:../icon",
+    "@applique-ui/input-number": "link:../input-number",
+    "@applique-ui/input-select": "link:../input-select",
+    "@applique-ui/layout": "link:../layout",
     "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
-    "uikit-icons": "npm:@applique-ui/uikit-icons@latest",
-    "@applique-ui/input-select": "link:../input-select",
-    "@applique-ui/input-number": "link:../input-number",
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/button": "link:../button",
-    "@applique-ui/layout": "link:../layout"
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

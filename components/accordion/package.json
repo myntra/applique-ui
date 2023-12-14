@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/accordion",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/accordion.cjs.js",
   "module": "dist/accordion.esm.js",
   "types": "dist/index.d.ts",
@@ -27,13 +27,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
     "@applique-ui/icon": "link:../icon",
     "@applique-ui/layout": "link:../layout",
-    "uikit-icons": "npm:@applique-ui/uikit-icons@latest",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils"
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

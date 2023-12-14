@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/table",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/table.cjs.js",
   "module": "dist/table.esm.js",
   "types": "dist/index.d.ts",
@@ -27,9 +27,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/button": "link:../button",
     "@applique-ui/dropdown": "link:../dropdown",
     "@applique-ui/field": "link:../field",
@@ -37,10 +35,11 @@
     "@applique-ui/input-text": "link:../input-text",
     "@applique-ui/list": "link:../list",
     "@applique-ui/measure": "link:../measure",
-    "@applique-ui/virtual-grid": "link:../virtual-grid",
-    "@applique-ui/virtual-list": "link:../virtual-list",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-context": "link:../../packages/uikit-context",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/virtual-grid": "link:../virtual-grid",
+    "@applique-ui/virtual-list": "link:../virtual-list",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

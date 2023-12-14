@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/stepper",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "dist/stepper.cjs.js",
   "module": "dist/stepper.esm.js",
   "types": "dist/index.d.ts",
@@ -26,13 +26,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
+    "@applique-ui/icon": "link:../icon",
+    "@applique-ui/layout": "link:../layout",
+    "@applique-ui/text": "link:../text",
     "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
     "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
-    "@applique-ui/text": "link:../text",
-    "@applique-ui/layout": "link:../layout",
-    "@applique-ui/icon": "link:../icon",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
