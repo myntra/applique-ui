@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.0.59"></a>
+## [0.0.60-alpha](https://github.com/myntra/applique-ui/compare/v0.0.59-alpha...v0.0.60-alpha) (2023-12-14)
+
+
+### Bug Fixes
+
+* added initial versions & bootstrap sha for release-please ([20b45b7](https://github.com/myntra/applique-ui/commit/20b45b72e568df5b7abc924453e7c0d6b81af836))
+* Added release please manifest ([ba61123](https://github.com/myntra/applique-ui/commit/ba6112302b4f62980a5284152899e8f71bafb48a))
+* icon component import missing in input-file ([0621b62](https://github.com/myntra/applique-ui/commit/0621b623f06a76d103ad8fadedaf196ae85a574c))
+* Update release.yml - added version update script ([0c6124b](https://github.com/myntra/applique-ui/commit/0c6124b47a459312eb7246dc974fdbf83f385092))
+* updated lockfile for latest version ([7d0090c](https://github.com/myntra/applique-ui/commit/7d0090c5199e819a6657535062a2e77294c1b505))
+
 ## [0.0.59](https://bitbucket.org/myntra/uikit/compare/v0.0.59-alpha...v0.0.59) (2023-12-12)
 
 
