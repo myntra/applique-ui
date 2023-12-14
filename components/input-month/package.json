@@ -7,22 +7,33 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-month",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/input-month",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/dropdown": "0.0.*",
-    "@applique-ui/input-date": "0.0.*",
-    "@applique-ui/input-masked": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/dropdown": "link:../dropdown",
+    "@applique-ui/input-date": "link:../input-date",
+    "@applique-ui/input-masked": "link:../input-masked",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "luxon": "^1.21.1",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

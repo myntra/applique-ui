@@ -7,8 +7,14 @@
   "author": "Sunil Jhamnani <sunil.jhamnani@myntra.com>",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/uikit-cli",
-  "files": ["src/", "dist/", "bin/"],
-  "bin": { "uikit": "bin/uikit-cli.js" },
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
+  "bin": {
+    "uikit": "bin/uikit-cli.js"
+  },
   "sideEffects": false,
   "dependencies": {
     "@babel/core": "^7.18.9",
@@ -20,7 +26,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@babel/register": "^7.18.9",
-    "@applique-ui/eslint-config-standard": "0.0.*",
+    "@applique-ui/eslint-config-standard": "link:../eslint-config-standard",
     "@znck/promised": "^1.0.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -48,7 +54,9 @@
     "copyfiles": "^2.2.0",
     "typescript": "^3.8.3"
   },
-  "engines": { "node": ">8.0.0" },
+  "engines": {
+    "node": ">8.0.0"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc && copyfiles -u 1 'src/**/*.js' 'src/**/*.jsx' dist"
   }

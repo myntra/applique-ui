@@ -6,12 +6,22 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/themes/unity",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js", "*.scss"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js",
+    "*.scss"
+  ],
   "sideEffects": false,
-  "scripts": { "build:tokens": "tokenize src/tokens.yml" },
-  "dependencies": { "@applique-ui/uikit": "0.0.*" },
+  "scripts": {
+    "build:tokens": "tokenize src/tokens.yml"
+  },
+  "dependencies": {
+    "@applique-ui/uikit": "link:../../packages/uikit"
+  },
   "devDependencies": {
-    "@applique-ui/accoutrement": "0.0.*",
-    "@applique-ui/tokenizer": "0.0.*"
+    "@applique-ui/accoutrement": "link:../../packages/accoutrement",
+    "@applique-ui/tokenizer": "link:../../packages/tokenizer"
   }
 }

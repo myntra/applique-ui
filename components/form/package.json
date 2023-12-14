@@ -7,34 +7,45 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/form",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/form",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/button": "0.0.*",
-    "@applique-ui/button-group": "0.0.*",
-    "@applique-ui/field": "0.0.*",
-    "@applique-ui/grid": "0.0.*",
-    "@applique-ui/input-checkbox": "0.0.*",
-    "@applique-ui/input-date": "0.0.*",
-    "@applique-ui/input-masked": "0.0.*",
-    "@applique-ui/input-month": "0.0.*",
-    "@applique-ui/input-number": "0.0.*",
-    "@applique-ui/input-radio": "0.0.*",
-    "@applique-ui/input-select": "0.0.*",
-    "@applique-ui/input-text": "0.0.*",
-    "@applique-ui/input-text-area": "0.0.*",
-    "@applique-ui/input-file": "0.0.*",
-    "@applique-ui/uikit-context": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/button": "link:../button",
+    "@applique-ui/button-group": "link:../button-group",
+    "@applique-ui/field": "link:../field",
+    "@applique-ui/grid": "link:../grid",
+    "@applique-ui/input-checkbox": "link:../input-checkbox",
+    "@applique-ui/input-date": "link:../input-date",
+    "@applique-ui/input-masked": "link:../input-masked",
+    "@applique-ui/input-month": "link:../input-month",
+    "@applique-ui/input-number": "link:../input-number",
+    "@applique-ui/input-radio": "link:../input-radio",
+    "@applique-ui/input-select": "link:../input-select",
+    "@applique-ui/input-text": "link:../input-text",
+    "@applique-ui/input-text-area": "link:../input-text-area",
+    "@applique-ui/input-file": "link:../input-file",
+    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

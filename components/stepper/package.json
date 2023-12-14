@@ -7,22 +7,32 @@
   "author": "Sunil Jhamnani<sunil.jhamnani@myntra.com>",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/stepper",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/stepper",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
-    "@applique-ui/text": "0.0.*",
-    "@applique-ui/layout": "0.0.*",
-    "@applique-ui/icon": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/text": "link:../text",
+    "@applique-ui/layout": "link:../layout",
+    "@applique-ui/icon": "link:../icon",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

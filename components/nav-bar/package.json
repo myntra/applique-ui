@@ -7,23 +7,34 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/nav-bar",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/nav-bar",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/avatar": "0.0.*",
-    "@applique-ui/icon": "0.0.*",
-    "@applique-ui/click-away": "0.0.*",
-    "@applique-ui/uikit-context": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/avatar": "link:../avatar",
+    "@applique-ui/icon": "link:../icon",
+    "@applique-ui/click-away": "link:../click-away",
+    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

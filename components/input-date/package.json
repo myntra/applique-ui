@@ -7,27 +7,38 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-date",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/input-date",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/button": "0.0.*",
-    "@applique-ui/button-group": "0.0.*",
-    "@applique-ui/dropdown": "0.0.*",
-    "@applique-ui/icon": "0.0.*",
-    "@applique-ui/input-masked": "0.0.*",
-    "@applique-ui/input-number": "0.0.*",
-    "@applique-ui/input-text": "0.0.*",
-    "@applique-ui/layout": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/button": "link:../button",
+    "@applique-ui/button-group": "link:../button-group",
+    "@applique-ui/dropdown": "link:../dropdown",
+    "@applique-ui/icon": "link:../icon",
+    "@applique-ui/input-masked": "link:../input-masked",
+    "@applique-ui/input-number": "link:../input-number",
+    "@applique-ui/input-text": "link:../input-text",
+    "@applique-ui/layout": "link:../layout",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "date-fns": "^2.0.0-alpha.27",
     "dayjs": "^1.8.14",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"

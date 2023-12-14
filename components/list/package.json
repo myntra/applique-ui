@@ -7,22 +7,33 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/list",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/list",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/virtual-list": "0.0.*",
-    "@applique-ui/input-checkbox": "0.0.*",
-    "@applique-ui/input-radio": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/virtual-list": "link:../virtual-list",
+    "@applique-ui/input-checkbox": "link:../input-checkbox",
+    "@applique-ui/input-radio": "link:../input-radio",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "react": "^16.9.0",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"

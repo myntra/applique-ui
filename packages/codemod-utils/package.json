@@ -7,11 +7,16 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/codemod-utils",
-  "files": ["src/", "dist/", "bin/", "codemods/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "codemods/"
+  ],
   "sideEffects": false,
   "description": "@applique-ui/codemod-utils",
   "dependencies": {
-    "@applique-ui/eslint-config-standard": "0.0.*",
+    "@applique-ui/eslint-config-standard": "link:../eslint-config-standard",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",

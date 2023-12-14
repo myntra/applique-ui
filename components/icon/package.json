@@ -7,14 +7,24 @@
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/Icon",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/icon",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": true,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
-    "@applique-ui/svg": "0.0.*",
+    "@applique-ui/svg": "link:../svg",
     "@types/react-dom": "^16.9.0",
     "@znck/promised": "^1.0.4",
     "glob": "^7.1.3",
@@ -23,8 +33,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
     "react": "16.*",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
