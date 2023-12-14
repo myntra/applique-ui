@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: 16.17.1
           registry-url: 'https://registry.npmjs.org'
-      - name: Install pnpm
+      - name: Install pnpm & lerna
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
-        run: npm i pnpm@8.5.1 -g
+        run: npm i pnpm@8.5.1 lerna@7.4.2 -g
       - name: Install dependencies
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
@@ -32,7 +32,7 @@ jobs:
       - name: Update versions
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
-        run: npm run :update:versions
+        run: lerna version --yes
       - name: Publish all packages
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
