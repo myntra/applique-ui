@@ -21,7 +21,14 @@ jobs:
         with:
           node-version: 16.17.1
           registry-url: 'https://registry.npmjs.org'
-      - name: Install pnpm & lerna
+      - name: Setup email & Update versions 
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: .
+        run: |
+          git config user.name github-actions && git config user.email github-actions@github.com
+          npm run :update:versions && git add -A && git commit --no-edit --amend
+        # run: lerna version --yes
+      - name: Install pnpm
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
         # run: npm i pnpm@8.5.1 lerna@7.4.2 -g
@@ -30,11 +37,6 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
         run: pnpm i --frozen-lockfile
-      - name: Update versions
-        if: ${{ steps.release.outputs.release_created }}
-        working-directory: .
-        run: npm run :update:versions && git add -A && git commit --no-edit --amend
-        # run: lerna version --yes
       - name: Publish all packages
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
