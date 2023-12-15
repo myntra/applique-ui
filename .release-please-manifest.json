@@ -1,6 +1,4 @@
 {
   ".": "0.0.60",
-  "./themes/nuclei": "0.0.60",
-  "./(themes|packages|components)/*/": "0.0.60",
-  "bootstrap-sha": "df652e3cd03ee96d06ec1cd8e9400ac5faa88ec9"
+  "bootstrap-sha": "5e8b1713b8ffe6f0393cb1bd137a77f88b68eb2f"
 }
