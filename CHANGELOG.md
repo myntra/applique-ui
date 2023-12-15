@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.0.59"></a>
+## [0.0.60](https://github.com/myntra/applique-ui/compare/v0.0.60-alpha...v0.0.60) (2023-12-15)
+
+
+### Bug Fixes
+
+* Dummy commit to check dependency updates ([687542a](https://github.com/myntra/applique-ui/commit/687542afc023af08f9d9743afb6f5e6417adbf75))
+* removed gradle dependencies | dummy commit ([825919c](https://github.com/myntra/applique-ui/commit/825919ca86a8b732771ee4aa707221a8a87f480b))
+
+
+### Miscellaneous Chores
+
+* release 0.0.60 ([3ecb675](https://github.com/myntra/applique-ui/commit/3ecb675658ed9b78b6fd408f432b0b7e41f20548))
+
 ## [0.0.60-alpha](https://github.com/myntra/applique-ui/compare/v0.0.59-alpha...v0.0.60-alpha) (2023-12-14)
 
 
