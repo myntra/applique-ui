@@ -101,7 +101,6 @@
     "jest": "^24.5.0",
     "jscodeshift": "^0.14.0",
     "lazy-compile-webpack-plugin": "^0.1.5",
-    "lerna": "^7.4.2",
     "lint-staged": "^7.0.4",
     "loader-utils": "^1.2.3",
     "lodash.camelcase": "^4.3.0",
