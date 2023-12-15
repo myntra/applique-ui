@@ -33,7 +33,7 @@ jobs:
       - name: Update versions
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
-        run: npm run :update:versions
+        run: npm run :update:versions && git add -A && git commit --no-edit --amend
         # run: lerna version --yes
       - name: Publish all packages
         if: ${{ steps.release.outputs.release_created }}
