@@ -19,7 +19,6 @@ $named-sizes: (
   box-sizing: border-box;
   display: block;
   flex: 1 1 var(--column-width, #{percentage(math.div(1, 12))});
-  max-width: var(--column-width, 100%);
   padding-right: var(--column-inset);
   padding-bottom: var(--column-gap);
   padding-left: var(--column-inset);
