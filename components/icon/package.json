@@ -23,7 +23,7 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@applique-ui/svg": "workspace:../svg",
+    "@applique-ui/svg": "workspace:../../packages/svg",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@znck/promised": "^1.0.4",

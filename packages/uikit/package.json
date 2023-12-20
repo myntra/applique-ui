@@ -23,7 +23,7 @@
   "sideEffects": false,
   "dependencies": {
     "@applique-ui/accordion": "workspace:../../components/accordion",
-    "@applique-ui/accoutrement": "workspace:../../components/accoutrement",
+    "@applique-ui/accoutrement": "workspace:../accoutrement",
     "@applique-ui/avatar": "workspace:../../components/avatar",
     "@applique-ui/badge": "workspace:../../components/badge",
     "@applique-ui/banner": "workspace:../../components/banner",

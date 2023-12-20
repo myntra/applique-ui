@@ -879,8 +879,8 @@ importers:
         version: 16.14.0(react@16.14.0)
     devDependencies:
       '@applique-ui/svg':
-        specifier: workspace:../svg
-        version: link:../svg
+        specifier: workspace:../../packages/svg
+        version: link:../../packages/svg
       '@types/react':
         specifier: 17.0.2
         version: 17.0.2
@@ -2201,8 +2201,8 @@ importers:
         specifier: workspace:../../components/accordion
         version: link:../../components/accordion
       '@applique-ui/accoutrement':
-        specifier: workspace:../../components/accoutrement
-        version: link:../../components/accoutrement
+        specifier: workspace:../accoutrement
+        version: link:../accoutrement
       '@applique-ui/avatar':
         specifier: workspace:../../components/avatar
         version: link:../../components/avatar
