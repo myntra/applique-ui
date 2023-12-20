@@ -19,6 +19,7 @@ $named-sizes: (
   box-sizing: border-box;
   display: block;
   flex: 1 1 var(--column-width, #{percentage(math.div(1, 12))});
+  max-width: var(--column-width, 100%);
   padding-right: var(--column-inset);
   padding-bottom: var(--column-gap);
   padding-left: var(--column-inset);
@@ -30,12 +31,8 @@ $named-sizes: (
   @each $name, $value in $named-sizes {
     &.is-#{$name} {
       --column-width: #{$value};
-
-      flex: none;
-      width: var(--column-width);
     }
 
-    max-width: var(--column-width, 100%);
     &.offset-#{$name} {
       margin-left: $value;
     }
@@ -47,9 +44,6 @@ $named-sizes: (
   @for $i from 1 through 12 {
     &.is-#{$i} {
       --column-width: #{percentage(math.div($i, 12))};
-
-      flex: none;
-      width: var(--column-width);
     }
 
     &.offset-#{$i} {

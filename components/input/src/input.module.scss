@@ -34,9 +34,8 @@
     );
   }
   input {
-    flex-grow: 1;
+    max-width: 100%;
     padding: 0;
-    // margin-left: size('1x');
     line-height: inherit;
     background-color: color('white');
     border: 0;
