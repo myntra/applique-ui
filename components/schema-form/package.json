@@ -28,12 +28,12 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/button": "link:../button",
-    "@applique-ui/field": "link:../field",
-    "@applique-ui/form": "link:../form",
-    "@applique-ui/grid": "link:../grid",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/field": "workspace:../field",
+    "@applique-ui/form": "workspace:../form",
+    "@applique-ui/grid": "workspace:../grid",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

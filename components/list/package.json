@@ -28,11 +28,11 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/input-checkbox": "link:../input-checkbox",
-    "@applique-ui/input-radio": "link:../input-radio",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
-    "@applique-ui/virtual-list": "link:../virtual-list",
+    "@applique-ui/input-checkbox": "workspace:../input-checkbox",
+    "@applique-ui/input-radio": "workspace:../input-radio",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
+    "@applique-ui/virtual-list": "workspace:../virtual-list",
     "react": "^16.9.0",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"

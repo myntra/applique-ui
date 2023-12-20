@@ -27,7 +27,7 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

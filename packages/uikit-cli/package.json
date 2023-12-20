@@ -17,7 +17,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@applique-ui/eslint-config-standard": "link:../eslint-config-standard",
+    "@applique-ui/eslint-config-standard": "workspace:../eslint-config-standard",
     "@babel/core": "^7.18.9",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/plugin-proposal-export-default-from": "^7.18.10",

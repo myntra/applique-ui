@@ -23,7 +23,7 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@applique-ui/svg": "link:../svg",
+    "@applique-ui/svg": "workspace:../svg",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@znck/promised": "^1.0.4",
@@ -32,8 +32,8 @@
     "prettier": "^1.16.4"
   },
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "react": "16.*",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

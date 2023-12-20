@@ -36,12 +36,12 @@
     ":update:versions": "node ./scripts/set-version.js"
   },
   "devDependencies": {
-    "@applique-ui/codemod-utils": "link:packages/codemod-utils",
-    "@applique-ui/docgen": "link:packages/docgen",
-    "@applique-ui/eslint-config-standard": "link:packages/eslint-config-standard",
-    "@applique-ui/rollup-plugin-classnames": "link:packages/rollup-plugin-classnames",
-    "@applique-ui/rollup-plugin-scss": "link:packages/rollup-plugin-scss",
-    "@applique-ui/stylelint-config-standard": "link:packages/stylelint-config-standard",
+    "@applique-ui/codemod-utils": "workspace:./packages/codemod-utils",
+    "@applique-ui/docgen": "workspace:./packages/docgen",
+    "@applique-ui/eslint-config-standard": "workspace:./packages/eslint-config-standard",
+    "@applique-ui/rollup-plugin-classnames": "workspace:./packages/rollup-plugin-classnames",
+    "@applique-ui/rollup-plugin-scss": "workspace:./packages/rollup-plugin-scss",
+    "@applique-ui/stylelint-config-standard": "workspace:./packages/stylelint-config-standard",
     "@applique-ui/uikit-icons": "^1.0.56",
     "@babel/core": "^7.18.9",
     "@babel/plugin-proposal-class-properties": "^7.16.0",

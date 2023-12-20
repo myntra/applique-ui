@@ -28,12 +28,12 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/bread-crumb": "link:../bread-crumb",
-    "@applique-ui/dropdown": "link:../dropdown",
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/list": "link:../list",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/bread-crumb": "workspace:../bread-crumb",
+    "@applique-ui/dropdown": "workspace:../dropdown",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/list": "workspace:../list",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

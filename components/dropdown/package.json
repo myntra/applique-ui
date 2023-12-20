@@ -27,12 +27,12 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/button": "link:../button",
-    "@applique-ui/click-away": "link:../click-away",
-    "@applique-ui/measure": "link:../measure",
-    "@applique-ui/portal": "link:../portal",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/click-away": "workspace:../click-away",
+    "@applique-ui/measure": "workspace:../measure",
+    "@applique-ui/portal": "workspace:../portal",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

@@ -28,12 +28,12 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/loader": "link:../loader",
-    "@applique-ui/text": "link:../text",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/loader": "workspace:../loader",
+    "@applique-ui/text": "workspace:../text",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-context": "workspace:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

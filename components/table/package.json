@@ -28,18 +28,18 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/button": "link:../button",
-    "@applique-ui/dropdown": "link:../dropdown",
-    "@applique-ui/field": "link:../field",
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/input-text": "link:../input-text",
-    "@applique-ui/list": "link:../list",
-    "@applique-ui/measure": "link:../measure",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-context": "link:../../packages/uikit-context",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
-    "@applique-ui/virtual-grid": "link:../virtual-grid",
-    "@applique-ui/virtual-list": "link:../virtual-list",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/dropdown": "workspace:../dropdown",
+    "@applique-ui/field": "workspace:../field",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/input-text": "workspace:../input-text",
+    "@applique-ui/list": "workspace:../list",
+    "@applique-ui/measure": "workspace:../measure",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-context": "workspace:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
+    "@applique-ui/virtual-grid": "workspace:../virtual-grid",
+    "@applique-ui/virtual-list": "workspace:../virtual-list",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

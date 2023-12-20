@@ -28,13 +28,13 @@
     "@types/react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@applique-ui/button": "link:../button",
-    "@applique-ui/icon": "link:../icon",
-    "@applique-ui/input-number": "link:../input-number",
-    "@applique-ui/input-select": "link:../input-select",
-    "@applique-ui/layout": "link:../layout",
-    "@applique-ui/uikit-can-i-use": "link:../../packages/uikit-can-i-use",
-    "@applique-ui/uikit-utils": "link:../../packages/uikit-utils",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/input-number": "workspace:../input-number",
+    "@applique-ui/input-select": "workspace:../input-select",
+    "@applique-ui/layout": "workspace:../layout",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

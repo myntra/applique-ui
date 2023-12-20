@@ -15,7 +15,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "link:../uikit-can-i-use",
+    "@applique-ui/uikit-can-i-use": "workspace:../uikit-can-i-use",
     "react": "^16.9.0"
   },
   "optionalDependencies": {

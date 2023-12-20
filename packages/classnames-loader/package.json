@@ -14,7 +14,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@applique-ui/uikit-utils": "link:../uikit-utils",
+    "@applique-ui/uikit-utils": "workspace:../uikit-utils",
     "loader-utils": "^1.1.0"
   }
 }

@@ -12,22 +12,22 @@ importers:
   .:
     devDependencies:
       '@applique-ui/codemod-utils':
-        specifier: link:packages/codemod-utils
+        specifier: workspace:./packages/codemod-utils
         version: link:packages/codemod-utils
       '@applique-ui/docgen':
-        specifier: link:packages/docgen
+        specifier: workspace:./packages/docgen
         version: link:packages/docgen
       '@applique-ui/eslint-config-standard':
-        specifier: link:packages/eslint-config-standard
+        specifier: workspace:./packages/eslint-config-standard
         version: link:packages/eslint-config-standard
       '@applique-ui/rollup-plugin-classnames':
-        specifier: link:packages/rollup-plugin-classnames
+        specifier: workspace:./packages/rollup-plugin-classnames
         version: link:packages/rollup-plugin-classnames
       '@applique-ui/rollup-plugin-scss':
-        specifier: link:packages/rollup-plugin-scss
+        specifier: workspace:./packages/rollup-plugin-scss
         version: link:packages/rollup-plugin-scss
       '@applique-ui/stylelint-config-standard':
-        specifier: link:packages/stylelint-config-standard
+        specifier: workspace:./packages/stylelint-config-standard
         version: link:packages/stylelint-config-standard
       '@applique-ui/uikit-icons':
         specifier: ^1.0.56
@@ -369,19 +369,19 @@ importers:
   components/accordion:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -404,10 +404,10 @@ importers:
   components/avatar:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       name-initials:
         specifier: ^0.1.3
@@ -433,16 +433,16 @@ importers:
   components/badge:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -465,22 +465,22 @@ importers:
   components/banner:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/text':
-        specifier: link:../text
+        specifier: workspace:../text
         version: link:../text
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -503,10 +503,10 @@ importers:
   components/bread-crumb:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -529,22 +529,22 @@ importers:
   components/button:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/loader':
-        specifier: link:../loader
+        specifier: workspace:../loader
         version: link:../loader
       '@applique-ui/text':
-        specifier: link:../text
+        specifier: workspace:../text
         version: link:../text
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -567,16 +567,16 @@ importers:
   components/button-group:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/list':
-        specifier: link:../list
+        specifier: workspace:../list
         version: link:../list
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -599,10 +599,10 @@ importers:
   components/click-away:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -625,22 +625,22 @@ importers:
   components/dropdown:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/click-away':
-        specifier: link:../click-away
+        specifier: workspace:../click-away
         version: link:../click-away
       '@applique-ui/measure':
-        specifier: link:../measure
+        specifier: workspace:../measure
         version: link:../measure
       '@applique-ui/portal':
-        specifier: link:../portal
+        specifier: workspace:../portal
         version: link:../portal
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -666,10 +666,10 @@ importers:
   components/error-boundary:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -695,19 +695,19 @@ importers:
   components/fab:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -733,10 +733,10 @@ importers:
   components/field:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -762,55 +762,55 @@ importers:
   components/form:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/button-group':
-        specifier: link:../button-group
+        specifier: workspace:../button-group
         version: link:../button-group
       '@applique-ui/field':
-        specifier: link:../field
+        specifier: workspace:../field
         version: link:../field
       '@applique-ui/grid':
-        specifier: link:../grid
+        specifier: workspace:../grid
         version: link:../grid
       '@applique-ui/input-checkbox':
-        specifier: link:../input-checkbox
+        specifier: workspace:../input-checkbox
         version: link:../input-checkbox
       '@applique-ui/input-date':
-        specifier: link:../input-date
+        specifier: workspace:../input-date
         version: link:../input-date
       '@applique-ui/input-file':
-        specifier: link:../input-file
+        specifier: workspace:../input-file
         version: link:../input-file
       '@applique-ui/input-masked':
-        specifier: link:../input-masked
+        specifier: workspace:../input-masked
         version: link:../input-masked
       '@applique-ui/input-month':
-        specifier: link:../input-month
+        specifier: workspace:../input-month
         version: link:../input-month
       '@applique-ui/input-number':
-        specifier: link:../input-number
+        specifier: workspace:../input-number
         version: link:../input-number
       '@applique-ui/input-radio':
-        specifier: link:../input-radio
+        specifier: workspace:../input-radio
         version: link:../input-radio
       '@applique-ui/input-select':
-        specifier: link:../input-select
+        specifier: workspace:../input-select
         version: link:../input-select
       '@applique-ui/input-text':
-        specifier: link:../input-text
+        specifier: workspace:../input-text
         version: link:../input-text
       '@applique-ui/input-text-area':
-        specifier: link:../input-text-area
+        specifier: workspace:../input-text-area
         version: link:../input-text-area
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -833,10 +833,10 @@ importers:
   components/grid:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -862,10 +862,10 @@ importers:
   components/icon:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -879,7 +879,7 @@ importers:
         version: 16.14.0(react@16.14.0)
     devDependencies:
       '@applique-ui/svg':
-        specifier: link:../svg
+        specifier: workspace:../svg
         version: link:../svg
       '@types/react':
         specifier: 17.0.2
@@ -903,10 +903,10 @@ importers:
   components/image:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       intersection-observer-polyfill:
         specifier: ^0.1.0
@@ -935,13 +935,13 @@ importers:
   components/input:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -964,13 +964,13 @@ importers:
   components/input-checkbox:
     dependencies:
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -993,34 +993,34 @@ importers:
   components/input-date:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/button-group':
-        specifier: link:../button-group
+        specifier: workspace:../button-group
         version: link:../button-group
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input-masked':
-        specifier: link:../input-masked
+        specifier: workspace:../input-masked
         version: link:../input-masked
       '@applique-ui/input-number':
-        specifier: link:../input-number
+        specifier: workspace:../input-number
         version: link:../input-number
       '@applique-ui/input-text':
-        specifier: link:../input-text
+        specifier: workspace:../input-text
         version: link:../input-text
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       date-fns:
         specifier: ^2.0.0-alpha.27
@@ -1049,16 +1049,16 @@ importers:
   components/input-file:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input-text':
-        specifier: link:../input-text
+        specifier: workspace:../input-text
         version: link:../input-text
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1081,13 +1081,13 @@ importers:
   components/input-masked:
     dependencies:
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1110,19 +1110,19 @@ importers:
   components/input-month:
     dependencies:
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/input-date':
-        specifier: link:../input-date
+        specifier: workspace:../input-date
         version: link:../input-date
       '@applique-ui/input-masked':
-        specifier: link:../input-masked
+        specifier: workspace:../input-masked
         version: link:../input-masked
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       luxon:
         specifier: ^1.21.1
@@ -1148,13 +1148,13 @@ importers:
   components/input-number:
     dependencies:
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1177,10 +1177,10 @@ importers:
   components/input-radio:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1203,22 +1203,22 @@ importers:
   components/input-select:
     dependencies:
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/list':
-        specifier: link:../list
+        specifier: workspace:../list
         version: link:../list
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       sifter:
         specifier: ^0.5.3
@@ -1244,16 +1244,16 @@ importers:
   components/input-text:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1276,16 +1276,16 @@ importers:
   components/input-text-area:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input':
-        specifier: link:../input
+        specifier: workspace:../input
         version: link:../input
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1308,7 +1308,7 @@ importers:
   components/layout:
     dependencies:
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1331,19 +1331,19 @@ importers:
   components/list:
     dependencies:
       '@applique-ui/input-checkbox':
-        specifier: link:../input-checkbox
+        specifier: workspace:../input-checkbox
         version: link:../input-checkbox
       '@applique-ui/input-radio':
-        specifier: link:../input-radio
+        specifier: workspace:../input-radio
         version: link:../input-radio
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       '@applique-ui/virtual-list':
-        specifier: link:../virtual-list
+        specifier: workspace:../virtual-list
         version: link:../virtual-list
       scroll-into-view-if-needed:
         specifier: ^2.2.20
@@ -1369,10 +1369,10 @@ importers:
   components/loader:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1395,10 +1395,10 @@ importers:
   components/measure:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -1427,19 +1427,19 @@ importers:
   components/modal:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/portal':
-        specifier: link:../portal
+        specifier: workspace:../portal
         version: link:../portal
       '@applique-ui/text':
-        specifier: link:../text
+        specifier: workspace:../text
         version: link:../text
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1462,22 +1462,22 @@ importers:
   components/nav-bar:
     dependencies:
       '@applique-ui/avatar':
-        specifier: link:../avatar
+        specifier: workspace:../avatar
         version: link:../avatar
       '@applique-ui/click-away':
-        specifier: link:../click-away
+        specifier: workspace:../click-away
         version: link:../click-away
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1500,10 +1500,10 @@ importers:
   components/page:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1526,25 +1526,25 @@ importers:
   components/pagination:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input-number':
-        specifier: link:../input-number
+        specifier: workspace:../input-number
         version: link:../input-number
       '@applique-ui/input-select':
-        specifier: link:../input-select
+        specifier: workspace:../input-select
         version: link:../input-select
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1567,10 +1567,10 @@ importers:
   components/portal:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -1596,13 +1596,13 @@ importers:
   components/progress:
     dependencies:
       '@applique-ui/text':
-        specifier: link:../text
+        specifier: workspace:../text
         version: link:../text
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1625,22 +1625,22 @@ importers:
   components/schema-form:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/field':
-        specifier: link:../field
+        specifier: workspace:../field
         version: link:../field
       '@applique-ui/form':
-        specifier: link:../form
+        specifier: workspace:../form
         version: link:../form
       '@applique-ui/grid':
-        specifier: link:../grid
+        specifier: workspace:../grid
         version: link:../grid
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1663,13 +1663,13 @@ importers:
   components/section:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1692,19 +1692,19 @@ importers:
   components/stepper:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/text':
-        specifier: link:../text
+        specifier: workspace:../text
         version: link:../text
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -1730,40 +1730,40 @@ importers:
   components/table:
     dependencies:
       '@applique-ui/button':
-        specifier: link:../button
+        specifier: workspace:../button
         version: link:../button
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/field':
-        specifier: link:../field
+        specifier: workspace:../field
         version: link:../field
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/input-text':
-        specifier: link:../input-text
+        specifier: workspace:../input-text
         version: link:../input-text
       '@applique-ui/list':
-        specifier: link:../list
+        specifier: workspace:../list
         version: link:../list
       '@applique-ui/measure':
-        specifier: link:../measure
+        specifier: workspace:../measure
         version: link:../measure
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       '@applique-ui/virtual-grid':
-        specifier: link:../virtual-grid
+        specifier: workspace:../virtual-grid
         version: link:../virtual-grid
       '@applique-ui/virtual-list':
-        specifier: link:../virtual-list
+        specifier: workspace:../virtual-list
         version: link:../virtual-list
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1786,10 +1786,10 @@ importers:
   components/tabs:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1812,7 +1812,7 @@ importers:
   components/text:
     dependencies:
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1835,13 +1835,13 @@ importers:
   components/tooltip:
     dependencies:
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1864,22 +1864,22 @@ importers:
   components/top-bar:
     dependencies:
       '@applique-ui/bread-crumb':
-        specifier: link:../bread-crumb
+        specifier: workspace:../bread-crumb
         version: link:../bread-crumb
       '@applique-ui/dropdown':
-        specifier: link:../dropdown
+        specifier: workspace:../dropdown
         version: link:../dropdown
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/list':
-        specifier: link:../list
+        specifier: workspace:../list
         version: link:../list
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1902,19 +1902,19 @@ importers:
   components/top-nav:
     dependencies:
       '@applique-ui/icon':
-        specifier: link:../icon
+        specifier: workspace:../icon
         version: link:../icon
       '@applique-ui/layout':
-        specifier: link:../layout
+        specifier: workspace:../layout
         version: link:../layout
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-context':
-        specifier: link:../../packages/uikit-context
+        specifier: workspace:../../packages/uikit-context
         version: link:../../packages/uikit-context
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       prop-types:
         specifier: ^15.7.2
@@ -1940,13 +1940,13 @@ importers:
   components/virtual-grid:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       '@applique-ui/virtual-list':
-        specifier: link:../virtual-list
+        specifier: workspace:../virtual-list
         version: link:../virtual-list
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -1969,13 +1969,13 @@ importers:
   components/virtual-list:
     dependencies:
       '@applique-ui/measure':
-        specifier: link:../measure
+        specifier: workspace:../measure
         version: link:../measure
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../../packages/uikit-can-i-use
+        specifier: workspace:../../packages/uikit-can-i-use
         version: link:../../packages/uikit-can-i-use
       '@applique-ui/uikit-utils':
-        specifier: link:../../packages/uikit-utils
+        specifier: workspace:../../packages/uikit-utils
         version: link:../../packages/uikit-utils
       uikit-icons:
         specifier: npm:@applique-ui/uikit-icons@latest
@@ -2007,7 +2007,7 @@ importers:
   packages/classnames-loader:
     dependencies:
       '@applique-ui/uikit-utils':
-        specifier: link:../uikit-utils
+        specifier: workspace:../uikit-utils
         version: link:../uikit-utils
       loader-utils:
         specifier: ^1.1.0
@@ -2016,7 +2016,7 @@ importers:
   packages/codemod-utils:
     dependencies:
       '@applique-ui/eslint-config-standard':
-        specifier: link:../eslint-config-standard
+        specifier: workspace:../eslint-config-standard
         version: link:../eslint-config-standard
       debug:
         specifier: ^3.1.0
@@ -2198,154 +2198,154 @@ importers:
   packages/uikit:
     dependencies:
       '@applique-ui/accordion':
-        specifier: link:../../components/accordion
+        specifier: workspace:../../components/accordion
         version: link:../../components/accordion
       '@applique-ui/accoutrement':
-        specifier: link:../../components/accoutrement
+        specifier: workspace:../../components/accoutrement
         version: link:../../components/accoutrement
       '@applique-ui/avatar':
-        specifier: link:../../components/avatar
+        specifier: workspace:../../components/avatar
         version: link:../../components/avatar
       '@applique-ui/badge':
-        specifier: link:../../components/badge
+        specifier: workspace:../../components/badge
         version: link:../../components/badge
       '@applique-ui/banner':
-        specifier: link:../../components/banner
+        specifier: workspace:../../components/banner
         version: link:../../components/banner
       '@applique-ui/bread-crumb':
-        specifier: link:../../components/bread-crumb
+        specifier: workspace:../../components/bread-crumb
         version: link:../../components/bread-crumb
       '@applique-ui/button':
-        specifier: link:../../components/button
+        specifier: workspace:../../components/button
         version: link:../../components/button
       '@applique-ui/button-group':
-        specifier: link:../../components/button-group
+        specifier: workspace:../../components/button-group
         version: link:../../components/button-group
       '@applique-ui/click-away':
-        specifier: link:../../components/click-away
+        specifier: workspace:../../components/click-away
         version: link:../../components/click-away
       '@applique-ui/dropdown':
-        specifier: link:../../components/dropdown
+        specifier: workspace:../../components/dropdown
         version: link:../../components/dropdown
       '@applique-ui/error-boundary':
-        specifier: link:../../components/error-boundary
+        specifier: workspace:../../components/error-boundary
         version: link:../../components/error-boundary
       '@applique-ui/fab':
-        specifier: link:../../components/fab
+        specifier: workspace:../../components/fab
         version: link:../../components/fab
       '@applique-ui/field':
-        specifier: link:../../components/field
+        specifier: workspace:../../components/field
         version: link:../../components/field
       '@applique-ui/form':
-        specifier: link:../../components/form
+        specifier: workspace:../../components/form
         version: link:../../components/form
       '@applique-ui/grid':
-        specifier: link:../../components/grid
+        specifier: workspace:../../components/grid
         version: link:../../components/grid
       '@applique-ui/icon':
-        specifier: link:../../components/icon
+        specifier: workspace:../../components/icon
         version: link:../../components/icon
       '@applique-ui/image':
-        specifier: link:../../components/image
+        specifier: workspace:../../components/image
         version: link:../../components/image
       '@applique-ui/input':
-        specifier: link:../../components/input
+        specifier: workspace:../../components/input
         version: link:../../components/input
       '@applique-ui/input-checkbox':
-        specifier: link:../../components/input-checkbox
+        specifier: workspace:../../components/input-checkbox
         version: link:../../components/input-checkbox
       '@applique-ui/input-date':
-        specifier: link:../../components/input-date
+        specifier: workspace:../../components/input-date
         version: link:../../components/input-date
       '@applique-ui/input-file':
-        specifier: link:../../components/input-file
+        specifier: workspace:../../components/input-file
         version: link:../../components/input-file
       '@applique-ui/input-masked':
-        specifier: link:../../components/input-masked
+        specifier: workspace:../../components/input-masked
         version: link:../../components/input-masked
       '@applique-ui/input-month':
-        specifier: link:../../components/input-month
+        specifier: workspace:../../components/input-month
         version: link:../../components/input-month
       '@applique-ui/input-number':
-        specifier: link:../../components/input-number
+        specifier: workspace:../../components/input-number
         version: link:../../components/input-number
       '@applique-ui/input-radio':
-        specifier: link:../../components/input-radio
+        specifier: workspace:../../components/input-radio
         version: link:../../components/input-radio
       '@applique-ui/input-select':
-        specifier: link:../../components/input-select
+        specifier: workspace:../../components/input-select
         version: link:../../components/input-select
       '@applique-ui/input-text':
-        specifier: link:../../components/input-text
+        specifier: workspace:../../components/input-text
         version: link:../../components/input-text
       '@applique-ui/input-text-area':
-        specifier: link:../../components/input-text-area
+        specifier: workspace:../../components/input-text-area
         version: link:../../components/input-text-area
       '@applique-ui/layout':
-        specifier: link:../../components/layout
+        specifier: workspace:../../components/layout
         version: link:../../components/layout
       '@applique-ui/list':
-        specifier: link:../../components/list
+        specifier: workspace:../../components/list
         version: link:../../components/list
       '@applique-ui/loader':
-        specifier: link:../../components/loader
+        specifier: workspace:../../components/loader
         version: link:../../components/loader
       '@applique-ui/measure':
-        specifier: link:../../components/measure
+        specifier: workspace:../../components/measure
         version: link:../../components/measure
       '@applique-ui/modal':
-        specifier: link:../../components/modal
+        specifier: workspace:../../components/modal
         version: link:../../components/modal
       '@applique-ui/nav-bar':
-        specifier: link:../../components/nav-bar
+        specifier: workspace:../../components/nav-bar
         version: link:../../components/nav-bar
       '@applique-ui/page':
-        specifier: link:../../components/page
+        specifier: workspace:../../components/page
         version: link:../../components/page
       '@applique-ui/pagination':
-        specifier: link:../../components/pagination
+        specifier: workspace:../../components/pagination
         version: link:../../components/pagination
       '@applique-ui/portal':
-        specifier: link:../../components/portal
+        specifier: workspace:../../components/portal
         version: link:../../components/portal
       '@applique-ui/progress':
-        specifier: link:../../components/progress
+        specifier: workspace:../../components/progress
         version: link:../../components/progress
       '@applique-ui/schema-form':
-        specifier: link:../../components/schema-form
+        specifier: workspace:../../components/schema-form
         version: link:../../components/schema-form
       '@applique-ui/section':
-        specifier: link:../../components/section
+        specifier: workspace:../../components/section
         version: link:../../components/section
       '@applique-ui/stepper':
-        specifier: link:../../components/stepper
+        specifier: workspace:../../components/stepper
         version: link:../../components/stepper
       '@applique-ui/table':
-        specifier: link:../../components/table
+        specifier: workspace:../../components/table
         version: link:../../components/table
       '@applique-ui/tabs':
-        specifier: link:../../components/tabs
+        specifier: workspace:../../components/tabs
         version: link:../../components/tabs
       '@applique-ui/text':
-        specifier: link:../../components/text
+        specifier: workspace:../../components/text
         version: link:../../components/text
       '@applique-ui/tooltip':
-        specifier: link:../../components/tooltip
+        specifier: workspace:../../components/tooltip
         version: link:../../components/tooltip
       '@applique-ui/top-bar':
-        specifier: link:../../components/top-bar
+        specifier: workspace:../../components/top-bar
         version: link:../../components/top-bar
       '@applique-ui/top-nav':
-        specifier: link:../../components/top-nav
+        specifier: workspace:../../components/top-nav
         version: link:../../components/top-nav
       '@applique-ui/uikit-utils':
-        specifier: link:../uikit-utils
+        specifier: workspace:../uikit-utils
         version: link:../uikit-utils
       '@applique-ui/virtual-grid':
-        specifier: link:../../components/virtual-grid
+        specifier: workspace:../../components/virtual-grid
         version: link:../../components/virtual-grid
       '@applique-ui/virtual-list':
-        specifier: link:../../components/virtual-list
+        specifier: workspace:../../components/virtual-list
         version: link:../../components/virtual-list
       normalize.css:
         specifier: ^8.0.1
@@ -2377,7 +2377,7 @@ importers:
   packages/uikit-cli:
     dependencies:
       '@applique-ui/eslint-config-standard':
-        specifier: link:../eslint-config-standard
+        specifier: workspace:../eslint-config-standard
         version: link:../eslint-config-standard
       '@babel/core':
         specifier: ^7.18.9
@@ -2483,7 +2483,7 @@ importers:
   packages/uikit-context:
     dependencies:
       '@applique-ui/uikit-can-i-use':
-        specifier: link:../uikit-can-i-use
+        specifier: workspace:../uikit-can-i-use
         version: link:../uikit-can-i-use
       react:
         specifier: ^16.9.0
@@ -2521,27 +2521,27 @@ importers:
   themes/nuclei:
     dependencies:
       '@applique-ui/uikit':
-        specifier: link:../../packages/uikit
+        specifier: workspace:../../packages/uikit
         version: link:../../packages/uikit
     devDependencies:
       '@applique-ui/accoutrement':
-        specifier: link:../../packages/accoutrement
+        specifier: workspace:../../packages/accoutrement
         version: link:../../packages/accoutrement
       '@applique-ui/tokenizer':
-        specifier: link:../../packages/tokenizer
+        specifier: workspace:../../packages/tokenizer
         version: link:../../packages/tokenizer
 
   themes/unity:
     dependencies:
       '@applique-ui/uikit':
-        specifier: link:../../packages/uikit
+        specifier: workspace:../../packages/uikit
         version: link:../../packages/uikit
     devDependencies:
       '@applique-ui/accoutrement':
-        specifier: link:../../packages/accoutrement
+        specifier: workspace:../../packages/accoutrement
         version: link:../../packages/accoutrement
       '@applique-ui/tokenizer':
-        specifier: link:../../packages/tokenizer
+        specifier: workspace:../../packages/tokenizer
         version: link:../../packages/tokenizer
 
 packages:

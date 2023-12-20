@@ -16,7 +16,7 @@
   "sideEffects": false,
   "description": "@applique-ui/codemod-utils",
   "dependencies": {
-    "@applique-ui/eslint-config-standard": "link:../eslint-config-standard",
+    "@applique-ui/eslint-config-standard": "workspace:../eslint-config-standard",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",
