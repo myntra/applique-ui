@@ -30,12 +30,8 @@ $named-sizes: (
   @each $name, $value in $named-sizes {
     &.is-#{$name} {
       --column-width: #{$value};
-
-      flex: none;
-      width: var(--column-width);
     }
 
-    max-width: var(--column-width, 100%);
     &.offset-#{$name} {
       margin-left: $value;
     }
@@ -47,9 +43,6 @@ $named-sizes: (
   @for $i from 1 through 12 {
     &.is-#{$i} {
       --column-width: #{percentage(math.div($i, 12))};
-
-      flex: none;
-      width: var(--column-width);
     }
 
     &.offset-#{$i} {
