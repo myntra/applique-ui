@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-radio",
-  "version": "0.0.60",
+  "version": "0.0.62",
   "main": "dist/input-radio.cjs.js",
   "module": "dist/input-radio.esm.js",
   "types": "dist/index.d.ts",
