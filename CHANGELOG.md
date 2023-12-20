@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.0.59"></a>
+## [0.0.63](https://github.com/myntra/applique-ui/compare/v0.0.62...v0.0.63) (2023-12-20)
+
+
+### Bug Fixes
+
+* updated workspace package links ([501c576](https://github.com/myntra/applique-ui/commit/501c57632f7796b29e75f3874a72514a0623c9aa))
+
 ## [0.0.62](https://github.com/myntra/applique-ui/compare/v0.0.61...v0.0.62) (2023-12-18)
 
 
