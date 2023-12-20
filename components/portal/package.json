@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/portal",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "main": "dist/portal.cjs.js",
   "module": "dist/portal.esm.js",
   "types": "dist/index.d.ts",
