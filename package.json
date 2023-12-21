@@ -31,6 +31,7 @@
     "coverage": "jest --coverage",
     "coverage:open": "run-s coverage 'open coverage/lcov-report/index.html'",
     "pre:publish": "CI=true npm run build",
+    "prepublish": "CI=true npm run build",
     ":publish": "node ./scripts/publish.js",
     "update:master": "git checkout master && git rebase deploy && git push origin master && git checkout deploy",
     ":update:versions": "node ./scripts/set-version.js"
