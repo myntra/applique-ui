@@ -4,7 +4,7 @@ on:
     branches:
       - deploy
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
@@ -35,12 +35,11 @@ jobs:
         working-directory: .
         run: |
           git config user.name github-actions && git config user.email github-actions@github.com
-          npm run :update:versions && git add -A && git commit --no-edit --amend
+          lerna version ${{ steps.release.outputs.tag_name }} --yes
         # run: lerna version --yes
       - name: Publish all packages
         if: ${{ steps.release.outputs.release_created }}
         working-directory: .
-        run: npm run :publish
+        run: pnpm publish -r --publish-branch=deploy
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-          
