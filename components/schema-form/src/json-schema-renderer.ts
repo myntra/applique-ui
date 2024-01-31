@@ -26,6 +26,7 @@ export type UI = UIField | UIArrayField | UIObjectField
 export interface SchemaRendererOptions {
   resolveComponent(name: string): ComponentType
   resolveOptions(format: string, schema: any): Array<any> | void // TODO: Accept promise.
+  optionsProcessed: boolean
 }
 
 interface PropPostProcessor {
@@ -44,6 +45,7 @@ interface GeneratorContext {
     props: Record<string, any>
     layout: Record<string, any>
   }
+  optionsProcessed: boolean
 }
 
 export function createRenderFactory(
@@ -128,7 +130,8 @@ function generateAnyField(
 ) {
   schema = normalizeSchema(schema)
 
-  if (schemaToUI.has(schema)) return schemaToUI.get(schema)
+  if (schemaToUI.has(schema) && !context.optionsProcessed)
+    return schemaToUI.get(schema)
 
   const generator =
     'type' in schema
