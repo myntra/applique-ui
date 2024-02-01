@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.66"></a>
+## [0.0.66](https://bitbucket.org/myntra/uikit/compare/v0.0.58...v0.0.66) (2024-02-01)
+
+
+
 <a name="0.0.59"></a>
 ## [0.0.62](https://github.com/myntra/applique-ui/compare/v0.0.61...v0.0.62) (2023-12-18)
 
