@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-month",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/input-month.cjs.js",
   "module": "dist/input-month.esm.js",
   "types": "dist/index.d.ts",
@@ -27,13 +27,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/dropdown": "0.0.*",
-    "@applique-ui/input-date": "0.0.*",
-    "@applique-ui/input-masked": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/dropdown": "workspace:../dropdown",
+    "@applique-ui/input-date": "workspace:../input-date",
+    "@applique-ui/input-masked": "workspace:../input-masked",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "luxon": "^1.21.1",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

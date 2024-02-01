@@ -16,6 +16,10 @@
   &-page-input-wrapper {
     width: size('8x');
   }
+
+  &-page-input-wrapper input {
+    background-color: transparent;
+  }
 }
 
 .pages {

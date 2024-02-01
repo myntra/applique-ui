@@ -74,7 +74,7 @@ function Tabs(props: Props) {
 
   useEffect(() => {
     calcSliderPos()
-  }, [state, activeIndex])
+  }, [state, activeIndex, children])
 
   const calcSliderPos = () => {
     const target = ref.current

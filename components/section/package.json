@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/section",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/section.cjs.js",
   "module": "dist/section.esm.js",
   "types": "dist/index.d.ts",
@@ -27,11 +27,10 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/button": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

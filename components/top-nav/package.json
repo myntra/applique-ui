@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/top-nav",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/top-nav.cjs.js",
   "module": "dist/top-nav.esm.js",
   "types": "dist/index.d.ts",
@@ -29,13 +29,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-context": "0.0.*",
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/icon": "0.0.*",
-    "@applique-ui/layout": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/layout": "workspace:../layout",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-context": "workspace:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "prop-types": "^15.7.2",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

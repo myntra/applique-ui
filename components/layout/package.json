@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/layout",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/layout.cjs.js",
   "module": "dist/layout.esm.js",
   "types": "dist/index.d.ts",
@@ -26,9 +26,8 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

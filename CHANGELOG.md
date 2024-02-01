@@ -2,6 +2,95 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.59"></a>
+## [0.0.62](https://github.com/myntra/applique-ui/compare/v0.0.61...v0.0.62) (2023-12-18)
+
+
+### Bug Fixes
+
+* added initial versions & bootstrap sha for release-please ([20b45b7](https://github.com/myntra/applique-ui/commit/20b45b72e568df5b7abc924453e7c0d6b81af836))
+* Added release please manifest ([ba61123](https://github.com/myntra/applique-ui/commit/ba6112302b4f62980a5284152899e8f71bafb48a))
+* Added small change to optionally load page selector dropdown ([74c721f](https://github.com/myntra/applique-ui/commit/74c721fb5daa43164cc93e4e96b12f61a920ee23))
+* Dummy commit to check dependency updates ([687542a](https://github.com/myntra/applique-ui/commit/687542afc023af08f9d9743afb6f5e6417adbf75))
+* icon component import missing in input-file ([0621b62](https://github.com/myntra/applique-ui/commit/0621b623f06a76d103ad8fadedaf196ae85a574c))
+* removed gradle dependencies | dummy commit ([825919c](https://github.com/myntra/applique-ui/commit/825919ca86a8b732771ee4aa707221a8a87f480b))
+* removed lerna | removed components from release please config ([d555e93](https://github.com/myntra/applique-ui/commit/d555e93edb36c2386663239622c72fbe73ec0e36))
+* Update release.yml - added version update script ([0c6124b](https://github.com/myntra/applique-ui/commit/0c6124b47a459312eb7246dc974fdbf83f385092))
+* updated lockfile for latest version ([7d0090c](https://github.com/myntra/applique-ui/commit/7d0090c5199e819a6657535062a2e77294c1b505))
+
+
+### Miscellaneous Chores
+
+* release 0.0.60 ([3ecb675](https://github.com/myntra/applique-ui/commit/3ecb675658ed9b78b6fd408f432b0b7e41f20548))
+* release 0.0.61 ([449bf34](https://github.com/myntra/applique-ui/commit/449bf3411d79a910bcb740af87c9a642db22399e))
+* release 0.0.61 ([8fb401f](https://github.com/myntra/applique-ui/commit/8fb401f699036912704f9606cdcbee54e8d8075c))
+* release 0.0.61 ([7edf62a](https://github.com/myntra/applique-ui/commit/7edf62afd9db8e59a7bfd7571d53b05a0c844cb9))
+* release 0.0.62 ([7fa0d54](https://github.com/myntra/applique-ui/commit/7fa0d54c0045574722adff7a813272df10c46fc2))
+
+## [0.0.61](https://github.com/myntra/applique-ui/compare/v0.0.61...v0.0.61) (2023-12-15)
+
+
+### Bug Fixes
+
+* added initial versions & bootstrap sha for release-please ([20b45b7](https://github.com/myntra/applique-ui/commit/20b45b72e568df5b7abc924453e7c0d6b81af836))
+* Added release please manifest ([ba61123](https://github.com/myntra/applique-ui/commit/ba6112302b4f62980a5284152899e8f71bafb48a))
+* Added small change to optionally load page selector dropdown ([74c721f](https://github.com/myntra/applique-ui/commit/74c721fb5daa43164cc93e4e96b12f61a920ee23))
+* Dummy commit to check dependency updates ([687542a](https://github.com/myntra/applique-ui/commit/687542afc023af08f9d9743afb6f5e6417adbf75))
+* icon component import missing in input-file ([0621b62](https://github.com/myntra/applique-ui/commit/0621b623f06a76d103ad8fadedaf196ae85a574c))
+* removed gradle dependencies | dummy commit ([825919c](https://github.com/myntra/applique-ui/commit/825919ca86a8b732771ee4aa707221a8a87f480b))
+* removed lerna | removed components from release please config ([d555e93](https://github.com/myntra/applique-ui/commit/d555e93edb36c2386663239622c72fbe73ec0e36))
+* Update release.yml - added version update script ([0c6124b](https://github.com/myntra/applique-ui/commit/0c6124b47a459312eb7246dc974fdbf83f385092))
+* updated lockfile for latest version ([7d0090c](https://github.com/myntra/applique-ui/commit/7d0090c5199e819a6657535062a2e77294c1b505))
+
+
+### Miscellaneous Chores
+
+* release 0.0.60 ([3ecb675](https://github.com/myntra/applique-ui/commit/3ecb675658ed9b78b6fd408f432b0b7e41f20548))
+* release 0.0.61 ([8fb401f](https://github.com/myntra/applique-ui/commit/8fb401f699036912704f9606cdcbee54e8d8075c))
+* release 0.0.61 ([7edf62a](https://github.com/myntra/applique-ui/commit/7edf62afd9db8e59a7bfd7571d53b05a0c844cb9))
+
+## [0.0.61](https://github.com/myntra/applique-ui/compare/v0.0.60...v0.0.61) (2023-12-15)
+
+
+### Bug Fixes
+
+* Dummy commit to check dependency updates ([687542a](https://github.com/myntra/applique-ui/commit/687542afc023af08f9d9743afb6f5e6417adbf75))
+* removed lerna | removed components from release please config ([d555e93](https://github.com/myntra/applique-ui/commit/d555e93edb36c2386663239622c72fbe73ec0e36))
+
+
+### Miscellaneous Chores
+
+* release 0.0.60 ([3ecb675](https://github.com/myntra/applique-ui/commit/3ecb675658ed9b78b6fd408f432b0b7e41f20548))
+* release 0.0.61 ([7edf62a](https://github.com/myntra/applique-ui/commit/7edf62afd9db8e59a7bfd7571d53b05a0c844cb9))
+
+## [0.0.60](https://github.com/myntra/applique-ui/compare/v0.0.60-alpha...v0.0.60) (2023-12-15)
+
+
+### Bug Fixes
+
+* Dummy commit to check dependency updates ([687542a](https://github.com/myntra/applique-ui/commit/687542afc023af08f9d9743afb6f5e6417adbf75))
+* removed gradle dependencies | dummy commit ([825919c](https://github.com/myntra/applique-ui/commit/825919ca86a8b732771ee4aa707221a8a87f480b))
+
+
+### Miscellaneous Chores
+
+* release 0.0.60 ([3ecb675](https://github.com/myntra/applique-ui/commit/3ecb675658ed9b78b6fd408f432b0b7e41f20548))
+
+## [0.0.60-alpha](https://github.com/myntra/applique-ui/compare/v0.0.59-alpha...v0.0.60-alpha) (2023-12-14)
+
+
+### Bug Fixes
+
+* added initial versions & bootstrap sha for release-please ([20b45b7](https://github.com/myntra/applique-ui/commit/20b45b72e568df5b7abc924453e7c0d6b81af836))
+* Added release please manifest ([ba61123](https://github.com/myntra/applique-ui/commit/ba6112302b4f62980a5284152899e8f71bafb48a))
+* icon component import missing in input-file ([0621b62](https://github.com/myntra/applique-ui/commit/0621b623f06a76d103ad8fadedaf196ae85a574c))
+* Update release.yml - added version update script ([0c6124b](https://github.com/myntra/applique-ui/commit/0c6124b47a459312eb7246dc974fdbf83f385092))
+* updated lockfile for latest version ([7d0090c](https://github.com/myntra/applique-ui/commit/7d0090c5199e819a6657535062a2e77294c1b505))
+
+## [0.0.59](https://bitbucket.org/myntra/uikit/compare/v0.0.59-alpha...v0.0.59) (2023-12-12)
+
+
+
 <a name="0.0.58"></a>
 ## [0.0.58](https://bitbucket.org/myntra/uikit/compare/v0.0.57...v0.0.58) (2023-12-07)
 

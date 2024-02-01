@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/icon",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/icon.cjs.js",
   "module": "dist/icon.esm.js",
   "types": "dist/index.d.ts",
@@ -23,18 +23,17 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "@applique-ui/svg": "workspace:../../packages/svg",
     "@types/react": "^16.9.0",
-    "@applique-ui/svg": "0.0.*",
     "@types/react-dom": "^16.9.0",
     "@znck/promised": "^1.0.4",
     "glob": "^7.1.3",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.16.4"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
     "react": "16.*",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }

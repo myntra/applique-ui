@@ -39,6 +39,14 @@
   }
 }
 
+.margin-top {
+  margin-top: size('0.5x');
+}
+
+.margin-bottom {
+  margin-bottom: size('0.5x');
+}
+
 .empty {
   padding: 0.5rem 1rem;
 }

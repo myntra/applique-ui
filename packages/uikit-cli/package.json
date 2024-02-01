@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit-cli",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "description": "A command line utility for @applique-ui/uikit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,6 +17,7 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@applique-ui/eslint-config-standard": "workspace:../eslint-config-standard",
     "@babel/core": "^7.18.9",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/plugin-proposal-export-default-from": "^7.18.10",
@@ -26,7 +27,6 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@babel/register": "^7.18.9",
-    "@applique-ui/eslint-config-standard": "0.0.*",
     "@znck/promised": "^1.0.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",

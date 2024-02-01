@@ -276,7 +276,6 @@ export default class InputSelect<Value = any, Option = any> extends Component<
               {this.props.isLoading ? (
                 <div className={classnames('button')}>
                   <Icon
-                    className={classnames('state-icon')}
                     name={SpinnerSolid}
                     title="loading options"
                     spin
@@ -287,7 +286,9 @@ export default class InputSelect<Value = any, Option = any> extends Component<
                 !this.props.value && (
                   <div className={classnames('button')}>
                     <Icon
-                      className={classnames('state-icon')}
+                      className={classnames(
+                        this.state.isOpen ? 'margin-bottom' : 'margin-top'
+                      )}
                       title={this.state.isOpen ? 'close' : 'open'}
                       name={
                         this.state.isOpen ? ChevronUpSolid : ChevronDownSolid

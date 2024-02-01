@@ -1,0 +1,45 @@
+name: Release using release-please
+on:
+  push:
+    branches:
+      - deploy
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+      # The logic below handles the npm publication:
+      - uses: actions/checkout@v4
+        # these if statements ensure that a publication only occurs when
+        # a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 16.17.1
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install pnpm
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: .
+        # run: npm i pnpm@8.5.1 lerna@7.4.2 -g
+        run: npm i pnpm@8.5.1 -g
+      - name: Install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: .
+        run: pnpm i --frozen-lockfile
+      - name: Setup email & Update versions 
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: .
+        run: |
+          git config user.name github-actions && git config user.email github-actions@github.com
+          lerna version ${{ steps.release.outputs.tag_name }} --yes
+        # run: lerna version --yes
+      - name: Publish all packages
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: .
+        run: pnpm publish -r --publish-branch=deploy
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}

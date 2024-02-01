@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/uikit-context",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/uikit-context.cjs.js",
   "module": "dist/uikit-context.esm.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
+    "@applique-ui/uikit-can-i-use": "workspace:../uikit-can-i-use",
     "react": "^16.9.0"
   },
   "optionalDependencies": {

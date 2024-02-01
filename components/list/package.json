@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/list",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/list.cjs.js",
   "module": "dist/list.esm.js",
   "types": "dist/index.d.ts",
@@ -27,13 +27,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/virtual-list": "0.0.*",
-    "@applique-ui/input-checkbox": "0.0.*",
-    "@applique-ui/input-radio": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/input-checkbox": "workspace:../input-checkbox",
+    "@applique-ui/input-radio": "workspace:../input-radio",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
+    "@applique-ui/virtual-list": "workspace:../virtual-list",
     "react": "^16.9.0",
     "scroll-into-view-if-needed": "^2.2.20",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"

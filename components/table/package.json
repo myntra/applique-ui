@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/table",
-  "version": "0.0.58",
+  "version": "0.0.65",
   "main": "dist/table.cjs.js",
   "module": "dist/table.esm.js",
   "types": "dist/index.d.ts",
@@ -27,20 +27,19 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
   },
-  "peerDependencies": {},
   "dependencies": {
-    "@applique-ui/uikit-can-i-use": "0.0.*",
-    "@applique-ui/button": "0.0.*",
-    "@applique-ui/dropdown": "0.0.*",
-    "@applique-ui/field": "0.0.*",
-    "@applique-ui/icon": "0.0.*",
-    "@applique-ui/input-text": "0.0.*",
-    "@applique-ui/list": "0.0.*",
-    "@applique-ui/measure": "0.0.*",
-    "@applique-ui/virtual-grid": "0.0.*",
-    "@applique-ui/virtual-list": "0.0.*",
-    "@applique-ui/uikit-context": "0.0.*",
-    "@applique-ui/uikit-utils": "0.0.*",
+    "@applique-ui/button": "workspace:../button",
+    "@applique-ui/dropdown": "workspace:../dropdown",
+    "@applique-ui/field": "workspace:../field",
+    "@applique-ui/icon": "workspace:../icon",
+    "@applique-ui/input-text": "workspace:../input-text",
+    "@applique-ui/list": "workspace:../list",
+    "@applique-ui/measure": "workspace:../measure",
+    "@applique-ui/uikit-can-i-use": "workspace:../../packages/uikit-can-i-use",
+    "@applique-ui/uikit-context": "workspace:../../packages/uikit-context",
+    "@applique-ui/uikit-utils": "workspace:../../packages/uikit-utils",
+    "@applique-ui/virtual-grid": "workspace:../virtual-grid",
+    "@applique-ui/virtual-list": "workspace:../virtual-list",
     "uikit-icons": "npm:@applique-ui/uikit-icons@latest"
   }
 }

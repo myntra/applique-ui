@@ -32,10 +32,12 @@ interface Props extends FormProps {
  */
 export default class SchemaForm extends Component<Props, { ui: UI | null }> {
   optionsCache: Record<string, any[]>
+  optionsPromise: Record<string, boolean>
 
   constructor(props) {
     super(props)
-
+    this.optionsCache = {}
+    this.optionsPromise = {}
     this.state = {
       ui: this.createUI(props.schema),
     }
@@ -54,10 +56,11 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
     console.log('Deleting SchemaForm')
   }
 
-  createUI(schema: Schema) {
+  createUI(schema: Schema, optionsProcessed: boolean = false) {
     return createRenderFactory(schema, {
       resolveComponent: this.componentProvider,
       resolveOptions: this.optionsProvider,
+      optionsProcessed,
     })
   }
 
@@ -76,14 +79,15 @@ export default class SchemaForm extends Component<Props, { ui: UI | null }> {
       if (Array.isArray(result)) return result
       if (result === null) return
       if (result.then) {
-        result.then((result) => {
-          if (this.optionsCache[format] !== result) {
+        if (!this.optionsPromise[format]) {
+          result.then((result) => {
+            this.optionsPromise[format] = true
             this.optionsCache[format] = result
-            console.log('Option loaded.')
-            this.forceUpdate() // Options Loaded.
-          }
-        })
-
+            this.setState({
+              ui: this.createUI(this.props.schema, true),
+            })
+          })
+        }
         return this.optionsCache[format] || []
       }
     }
