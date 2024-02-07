@@ -5,7 +5,7 @@
   "author": "Myntra",
   "license": "MIT",
   "private": true,
-  "version": "0.0.68",
+  "version": "0.0.69",
   "engines": {
     "node": ">=16.14.1"
   },
@@ -34,7 +34,7 @@
     "pre:publish": "CI=true npm run build",
     "pre:release": "git checkout deploy && git pull origin deploy && npm run pre:publish",
     ":release": "standard-version -a -r patch",
-    "post:release": "pnpm publish -r --dry-run && git push --follow-tags && npm run update:master",
+    "post:release": "pnpm publish -r && git push --follow-tags && npm run update:master",
     "release": "npm run :release",
     ":update:versions": "node ./scripts/set-version.js"
   },
