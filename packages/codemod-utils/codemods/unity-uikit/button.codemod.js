@@ -1,8 +1,8 @@
 import { createHelper } from '../../src'
 
 /**
- * Replace 'unity-uikit/Button' with '@myntra/uikit'.
- * Upgrade @myntra/uikit version
+ * Replace 'unity-uikit/Button' with '@applique-ui/uikit'.
+ * Upgrade @@applique-ui/uikit version
  * Transform props from unity-uikit to uikit supported.
  *
  * Renamed Props:
@@ -57,7 +57,7 @@ export function migrateFromUnityUikit(file, api, { themeName, nolint }) {
         h.removeNamedImportLocalName(oldImport, name)
       }
     }
-    h.addNamedImport(`@myntra/uikit-theme-${themeName}`, 'Button')
+    h.addNamedImport(`@@applique-ui/uikit-theme-${themeName}`, 'Button')
     return h.toSource(nolint)
   }
 }
