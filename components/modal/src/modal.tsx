@@ -119,7 +119,8 @@ export default class Modal extends PureComponent<Props> {
         />
         <div
           className={classnames('body', {
-            ['drawer-body']: type === MODAL_TYPE.MOBILE_DRAWER,
+            'drawer-body': type === MODAL_TYPE.MOBILE_DRAWER,
+            side_drawer_body: type === MODAL_TYPE.SIDE_DRAWER,
           })}
         >
           {render({
