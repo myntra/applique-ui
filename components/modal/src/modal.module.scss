@@ -28,12 +28,21 @@
   position: relative;
 }
 
+.side_drawer_body{
+  position: relative;
+  position: fixed;
+    right: 0;
+    left: 50%;
+  height: 100vh;
+  background: white;
+}
+
 .close {
   position: absolute;
-  top: negative(size('2x'));
-  right: negative(size('4x'));
+  top: (size('7x'));
+  right: (size('7x'));
   padding-right: 0;
-  color: text-color('light');
+  color: color('gray-dark-base');
 
   svg {
     width: 24px;
