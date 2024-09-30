@@ -5,7 +5,7 @@ import classnames from './text.module.scss'
 
 const mapTagToName = {
   div: 'body',
-  span: 'caption',
+  span: 'caption'
 }
 export interface Props extends BaseProps {
   /**
