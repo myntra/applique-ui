@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/input-text-area",
-  "version": "0.0.71",
+  "version": "0.0.72",
   "main": "dist/input-text-area.cjs.js",
   "module": "dist/input-text-area.esm.js",
   "types": "dist/index.d.ts",

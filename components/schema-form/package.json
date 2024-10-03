@@ -1,6 +1,6 @@
 {
   "name": "@applique-ui/schema-form",
-  "version": "0.0.71",
+  "version": "0.0.72",
   "main": "dist/schema-form.cjs.js",
   "module": "dist/schema-form.esm.js",
   "types": "dist/index.d.ts",

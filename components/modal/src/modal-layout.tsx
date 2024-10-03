@@ -47,7 +47,17 @@ export default function ModalLayout({
     >
       {title && <Text.H2 className={classnames('title')}>{title}</Text.H2>}
 
-      <div className={classnames('content')}>{children}</div>
+      <div
+        className={classnames(
+          type === MODAL_TYPE.SIDE_DRAWER
+            ? title
+              ? 'side_drawer_title'
+              : 'side_drawer'
+            : 'content'
+        )}
+      >
+        {children}
+      </div>
 
       {actions && (
         <div
