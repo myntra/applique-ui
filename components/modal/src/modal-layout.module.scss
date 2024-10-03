@@ -20,6 +20,21 @@
   overflow: auto;
 }
 
+.side_drawer,
+.side_drawer_title {
+  overflow: auto;
+}
+
+.side_drawer {
+  min-height: 85vh;
+  max-height: 85vh;
+}
+
+.side_drawer_title {
+  min-height: 80vh;
+  max-height: 80vh;
+}
+
 .actions {
   padding-top: size('6x');
   margin-top: size('6x');
