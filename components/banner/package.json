@@ -1,26 +1,17 @@
 {
   "name": "@applique-ui/banner",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "dist/banner.cjs.js",
   "module": "dist/banner.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/banner",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/banner",
-  "files": [
-    "src/",
-    "dist/"
-  ],
+  "files": ["src/", "dist/"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

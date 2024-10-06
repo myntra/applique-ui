@@ -1,28 +1,17 @@
 {
   "name": "@applique-ui/input-month",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "dist/input-month.cjs.js",
   "module": "dist/input-month.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-month",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/input-month",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

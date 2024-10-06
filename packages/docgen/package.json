@@ -1,18 +1,13 @@
 {
   "name": "@applique-ui/docgen",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "src/index.js",
   "module": "dist/docgen.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/docgen",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "loader.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "loader.js"],
   "sideEffects": false,
   "description": "@applique-ui/docgen",
   "dependencies": {

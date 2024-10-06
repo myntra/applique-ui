@@ -1,20 +1,14 @@
 {
   "name": "@applique-ui/rollup-plugin-classnames",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "src/index.js",
   "module": "dist/rollup-plugin-classnames.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/rollup-plugin-classnames",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/"
-  ],
+  "files": ["src/", "dist/", "bin/"],
   "sideEffects": false,
   "description": "@applique-ui/rollup-plugin-classnames",
-  "dependencies": {
-    "rollup-pluginutils": "^2.3.3"
-  }
+  "dependencies": { "rollup-pluginutils": "^2.3.3" }
 }

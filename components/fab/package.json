@@ -1,27 +1,17 @@
 {
   "name": "@applique-ui/fab",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "dist/fab.cjs.js",
   "module": "dist/fab.esm.js",
   "types": "dist/index.d.ts",
   "author": "Sunil Jhamnani <sunil.jhamnani@myntra.com>",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/fab",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/fab",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/"
-  ],
+  "files": ["src/", "dist/", "bin/"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

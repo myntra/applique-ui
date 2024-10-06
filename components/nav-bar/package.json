@@ -1,28 +1,17 @@
 {
   "name": "@applique-ui/nav-bar",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "dist/nav-bar.cjs.js",
   "module": "dist/nav-bar.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/nav-bar",
-  "keywords": [
-    "uikit",
-    "component"
-  ],
+  "keywords": ["uikit", "component"],
   "homepage": "https://uikit.myntra.com/components/nav-bar",
-  "files": [
-    "src/",
-    "dist/",
-    "bin/",
-    "*.codemod.js"
-  ],
+  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
   "sideEffects": false,
-  "optionalDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
+  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"
