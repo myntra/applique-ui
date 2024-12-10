@@ -1,16 +1,23 @@
 {
   "name": "@applique-ui/uikit-utils",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "dist/uikit-utils.cjs.js",
   "module": "dist/uikit-utils.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/uikit-utils",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": false,
   "description": "@applique-ui/uikit-utils",
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

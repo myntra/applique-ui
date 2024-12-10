@@ -1,13 +1,18 @@
 {
   "name": "@applique-ui/codemod-utils",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "src/index.js",
   "module": "dist/codemod-utils.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/@myntra/codemod-utils",
-  "files": ["src/", "dist/", "bin/", "codemods/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "codemods/"
+  ],
   "sideEffects": false,
   "description": "@applique-ui/codemod-utils",
   "dependencies": {

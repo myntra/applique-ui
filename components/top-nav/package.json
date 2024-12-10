@@ -1,18 +1,30 @@
 {
   "name": "@applique-ui/top-nav",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "dist/top-nav.cjs.js",
   "module": "dist/top-nav.esm.js",
   "types": "dist/index.d.ts",
   "author": "Sunil Jhamnani<sunil.jhamnani@myntra.com>",
   "license": "UNLICENSED",
   "repository": "https://github.com/myntra/uikit/tree/release/components/top-nav",
-  "publishConfig": { "registry": "https://registry.npmjs.org" },
-  "keywords": ["uikit", "component"],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/top-nav",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

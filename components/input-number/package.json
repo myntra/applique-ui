@@ -1,17 +1,28 @@
 {
   "name": "@applique-ui/input-number",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "dist/input-number.cjs.js",
   "module": "dist/input-number.esm.js",
   "types": "dist/index.d.ts",
   "author": "Akash Suresh <akashzsuresh@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/input-number",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/input-number",
-  "files": ["src/", "dist/", "bin/", "*.codemod.js"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "*.codemod.js"
+  ],
   "sideEffects": false,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0"

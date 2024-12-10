@@ -1,17 +1,27 @@
 {
   "name": "@applique-ui/icon",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "dist/icon.cjs.js",
   "module": "dist/icon.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/components/Icon",
-  "keywords": ["uikit", "component"],
+  "keywords": [
+    "uikit",
+    "component"
+  ],
   "homepage": "https://uikit.myntra.com/components/icon",
-  "files": ["src/", "dist/", "bin/"],
+  "files": [
+    "src/",
+    "dist/",
+    "bin/"
+  ],
   "sideEffects": true,
-  "optionalDependencies": { "react": "^16.9.0", "react-dom": "^16.9.0" },
+  "optionalDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@applique-ui/svg": "workspace:../../packages/svg",
     "@types/react": "^16.9.0",

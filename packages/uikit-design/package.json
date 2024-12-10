@@ -1,12 +1,14 @@
 {
   "name": "@applique-ui/uikit-design",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "main": "design.scss",
   "module": "dist/uikit-design.esm.js",
   "types": "dist/index.d.ts",
   "author": "Myntra",
   "license": "MIT",
   "repository": "https://github.com/myntra/uikit/tree/release/packages/uikit-design",
-  "files": ["*.scss"],
+  "files": [
+    "*.scss"
+  ],
   "sideEffects": false
 }
