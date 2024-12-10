@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import InputSelect from '@applique-ui/input-select'
-import InputNumber from '@applique-ui/input-number'
 import Layout from '@applique-ui/layout'
 
 import Pages from './pages'
@@ -33,9 +32,9 @@ export interface Props extends BaseProps {
  @see http://uikit.myntra.com/components/pagination
  */
 export default function Pagination(props: Props) {
-  const [pageNumberCustom, setPageNumberCustom] = React.useState(null)
+  const [pageNumberCustom, setPageNumberCustom] = useState('')
 
-  const updatePage = (page) => {
+  const updatePage = (page: number) => {
     const pages = Math.ceil(props.total / props.size)
     const size = props.size
 
@@ -44,15 +43,18 @@ export default function Pagination(props: Props) {
     }
   }
 
-  const handlePageChange = (event) => {
+  const handlePageChange = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      updatePage(parseInt(event.target.value, 10))
-      setPageNumberCustom(null)
+      const page = parseInt(pageNumberCustom, 10)
+      if (!isNaN(page)) {
+        updatePage(page)
+        setPageNumberCustom('')
+      }
     }
   }
 
-  const handleSizeChange = (value) => {
-    props.onChange({ size: parseInt(value, 10), page: 1 })
+  const handleSizeChange = (value: number) => {
+    props.onChange({ size: value, page: 1 })
   }
 
   const {
@@ -97,11 +99,13 @@ export default function Pagination(props: Props) {
       >
         <span>Go to</span>
         <div className={classnames('pagination-page-input-wrapper')}>
-          <InputNumber
+          <input
+            type="number"
             value={pageNumberCustom}
-            onChange={setPageNumberCustom}
-            disabled={!!pageInputDisabled}
+            onChange={(e) => setPageNumberCustom(e.target.value)}
             onKeyDown={handlePageChange}
+            disabled={!!pageInputDisabled}
+            className={classnames('pagination-page-input')}
           />
         </div>
         <span>Page</span>
