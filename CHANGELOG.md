@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.0.73"></a>
+## [1.0.0](https://github.com/myntra/applique-ui/compare/v0.0.30...v1.0.0) (2024-12-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Cleaned Deploy branch wrt release-please
+
+### Bug Fixes
+
+* Cleaned Deploy branch wrt release-please ([e760b5b](https://github.com/myntra/applique-ui/commit/e760b5ba139c72ed53aef9e387d2c90bc0f0f8f2))
+
 ## [0.0.73](https://bitbucket.org/myntra/uikit/compare/v0.0.53...v0.0.73) (2024-10-06)
 
 
